@@ -1,47 +1,47 @@
+/* Hero Value Section Styles */
 .hero-value {
-  padding: 4rem 2rem;
+  padding: 2rem 0;
   text-align: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
 }
 
 .hero-inner {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .hero-value h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-weight: 700;
+  line-height: 1.2;
 }
 
 .hero-value p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .hero-value .btn {
   display: inline-block;
-  padding: 1rem 2rem;
-  background: white;
-  color: #667eea;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: 600;
-  transition: transform 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .hero-value .btn:hover {
-  transform: translateY(-2px);
+  background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
   .hero-value h1 {
     font-size: 2rem;
   }
-
+  
   .hero-value p {
     font-size: 1rem;
   }

@@ -32,6 +32,9 @@
   "lint-staged": {
     "*.{json,js,css}": [
       "prettier --write"
+    ],
+    "*.{liquid,json,js,css}": [
+      "prettier --write"
     ]
   }
 }

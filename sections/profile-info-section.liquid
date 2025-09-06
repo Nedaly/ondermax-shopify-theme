@@ -1,0 +1,304 @@
+<div class="profile_info padding-{{ section.id }}">
+    <div class="page-width">
+        <div class="profile_info_wrapper">
+            <div class="profile_info_left">
+                <div class="pil_profile">
+                    {% if section.settings.profile_img != blank %}
+                        {{ section.settings.profile_img | image_url: width: 160 | image_tag  }}
+                    {% else %}
+                        <span class="pil_profile_name">{{ section.settings.profile_name }}</span>
+                    {% endif %}
+                </div>
+                <div class="pil_info">
+                    <p class="pil_name">{{ section.settings.name }}</p>
+                    <p class="pil_role">{{ section.settings.role }}</p>
+                </div>
+            </div>
+            <div class="profile_info_right">
+                <div class="pir_heading">{{ section.settings.heading }}</div>
+                <div class="pir_about">{{ section.settings.about }}</div>
+                <div class="pir_name_role">
+                <h4 class="pir_name">{{ section.settings.r_name }}</h4>
+                <p class="pir_role">{{ section.settings.r_role }}</p>
+                </div>
+                <div class="pir_tags">
+                    {% for block in section.blocks %}
+                        <div class="pir_tag">{{ block.settings.tag_text }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+     .padding-{{ section.id }}{
+        padding-top:{{ section.settings.p_top | times: 0.75 | round: 0 }}px;
+        padding-bottom:{{ section.settings.p_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    .profile_info{
+        background-color: {{ section.settings.bg_color }};
+    }
+
+    .profile_info .profile_info_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 7rem;
+    }
+
+    .profile_info .pil_profile {
+        font-family: 'Poppins';
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 0;
+        min-width: 160px;
+        min-height: 160px;
+        width: 100%;
+        background: #067e7c;
+        max-width: 160px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+    }
+
+    .pil_profile_name {
+        align-self: center;
+        color: #fff;
+    }
+
+    .profile_info_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 50%;
+        align-items: center;
+        gap: 2.5rem;
+        height: 100%;
+        background: color-mix(in oklab, #191f1f 5%, transparent);
+        height: -webkit-fill-available;
+        border: 1px solid #303536;
+        border-radius: 20px;
+        aspect-ratio: 1;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            background-color: #ffffff1a;
+        }
+    }
+
+    .profile_info_right {
+        flex: 50%;
+    }
+
+    .pil_name {
+        font-size: 18px;
+        font-family: 'Poppins';
+        letter-spacing: 0;
+        margin:0;
+        line-height: 100%;
+        margin-bottom: 0.8rem;
+        color: #cfcfcf;
+    }
+
+    .pil_role {
+        font-family: 'Poppins';
+        font-size: 14px;
+        letter-spacing: 0;
+        margin:0;
+        line-height: 100%;
+        color: #cfcfcfc7;
+    }
+
+    .pir_heading {
+        font-family: 'Poppins';
+        font-size: 72px;
+        font-weight: 600;
+        letter-spacing: -0.8px;
+        margin: 0;
+        line-height: 100%;
+        color: #fff;
+    }
+
+    .pir_about > * {
+        font-size: 30px;
+        letter-spacing: 0;
+        line-height: 1.6;
+        font-family: 'Poppins';
+        font-weight: 300;
+        margin: 0;
+        color: #cfcfcf;
+    }
+
+    .pir_name {
+        font-size: 30px;
+        letter-spacing: 0;
+        font-style: italic;
+        font-family: auto;
+        margin: 0;
+        color: #fff;
+        line-height: 100%;
+        margin-bottom: 0.8rem;
+    }
+
+    .pir_role {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 14px;
+        font-family: 'Poppins';
+        margin: 0;
+        color: #cfcfcf;
+    }
+
+    .pir_tags {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 2rem;
+        margin-top: 1rem;
+    }
+
+    .pir_tag {
+        letter-spacing: 0;
+        font-family: 'Poppins';
+        font-size: 16px;
+        color: #cfcfcf;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            background: #1c8e8e;
+            border-radius: 50%;
+            top: 50%;
+            left: -25px;
+            transform: translateY(-50%);
+            box-shadow: 0 0 6px 0px #1c8e8e;
+        }
+    }
+
+    .profile_info_right {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        padding-block: 8rem;
+    }
+
+    .pil_profile img {
+        border-radius: 50%;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media screen and (min-width: 750px){
+        .padding-{{ section.id }}{
+            padding-top:{{ section.settings.p_top }}px;
+            padding-bottom:{{ section.settings.p_bottom }}px;
+        }
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Profile information",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background color"
+        },
+        {
+            "type": "header",
+            "content": "Left section"
+        },
+        {
+            "type": "text",
+            "id": "profile_name",
+            "label": "Profile name",
+        },
+        {
+            "type": "image_picker",
+            "id": "profile_img",
+            "label": "Select profile photo"
+        },
+        {
+            "type": "text",
+            "id": "name",
+            "label": "Full Name"
+        },
+        {
+            "type": "text",
+            "id": "role",
+            "label": "Role"
+        },
+        {
+            "type": "header",
+            "content": "Right section"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "richtext",
+            "id": "about",
+            "label": "About"
+        },
+        {
+            "type": "text",
+            "id": "r_name",
+            "label": "Full Name"
+        },
+        {
+            "type": "text",
+            "id": "r_role",
+            "label": "Role"
+        },
+        {
+            "type": "header",
+            "content": "Padding"
+        },
+        {
+            "type": "range",
+            "id": "p_top",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 0,
+            "label": "Padding top"
+        },
+        {
+            "type": "range",
+            "id": "p_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 0,
+            "label": "Padding bottom"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "Add tag",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "tag_text",
+                    "label": "Text"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Profile information"
+        }
+    ]
+}
+{% endschema %}

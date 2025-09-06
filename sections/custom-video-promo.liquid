@@ -1,0 +1,413 @@
+{% schema %}
+{
+  "name": "Custom Video Promo",
+  "settings": [
+    {
+      "type": "video",
+      "id": "promo_video",
+      "label": "Promo Video"
+    },
+    {
+      "type": "image_picker",
+      "id": "poster_image",
+      "label": "Poster Image (Optional)"
+    },
+    {
+      "type": "text",
+      "id": "poster_gradient",
+      "label": "Poster Gradient (Optional)",
+      "default": "linear-gradient(135deg, #2E777E 0%, #1F4C66 50%, #1B3F58 100%)"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Just Stick It."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "SURGE in the morning. DRIFT at night. Simple as that."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop the Stack → Join the Movement"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_subtext",
+      "label": "Button Subtext",
+      "default": "Transform your routine with thousands of others"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Video Promo",
+      "category": "Video"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="video-promo-section">
+  <div
+    class="video-card"
+    style="
+      {% if section.settings.poster_image != blank and section.settings.poster_gradient != blank %}
+        background-image: {{ section.settings.poster_gradient }}, url('{{ section.settings.poster_image | image_url: width: 1600 }}');
+        background-size: cover;
+        background-position: center;
+      {% elsif section.settings.poster_image != blank %}
+        background-image: url('{{ section.settings.poster_image | image_url: width: 1600 }}');
+        background-size: cover;
+        background-position: center;
+      {% elsif section.settings.poster_gradient != blank %}
+        background-image: {{ section.settings.poster_gradient }};
+      {% else %}
+        background-image: linear-gradient(135deg, #2E777E 0%, #1F4C66 50%, #1B3F58 100%);
+      {% endif %}
+    "
+  >
+    <div class="video-overlay">
+      <div class="video_headings">
+        <h2 class="vps_heading">{{ section.settings.heading }}</h2>
+        <p class="vps_subheading">{{ section.settings.subheading }}</p>
+      </div>
+    </div>
+
+    {% if section.settings.promo_video != blank %}
+      {{
+        section.settings.promo_video
+        | video_tag:
+          id: 'promo-video',
+          class: 'video-element',
+          autoplay: false,
+          controls: false,
+          muted: false,
+          loop: false
+      }}
+    {% endif %}
+
+    <!-- Custom Controls -->
+    <button id="play-pause" class="play-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-play w-8 h-8 text-white ml-1"
+        aria-hidden="true"
+      >
+        <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path>
+      </svg>
+    </button>
+    <div class="video-controls">
+      <span id="current-time">0:00</span>
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+      <span id="duration">0:00</span>
+    </div>
+  </div>
+
+  <div class="video-cta">
+    {% if section.settings.button_link != blank %}
+      <a href="{{ section.settings.button_link }}" class="cta-button">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+    <p class="subtext">{{ section.settings.button_subtext }}</p>
+  </div>
+</div>
+
+<style>
+    .video-promo-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6rem;
+    }
+
+    .video_headings {
+      margin-top: 11rem;
+      max-width: 50%;
+  }
+
+    .video-card {
+      position: relative;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      overflow: hidden;
+      width: 100%;
+      max-width: 896px;
+      &:after{
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        box-shadow: 0 -50px 20px 0px #00000045;
+        z-index: 2;
+        bottom: 0;
+        top: 100%;
+      }
+    }
+
+    .video-controls span {
+      font-family: Inter;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+
+    #play-pause svg {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+    .video-element {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .video-overlay {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: white;
+      z-index: 2;
+      padding: 0 1rem;
+      height: 100%;
+      width: 100%;
+      background-image: {{ section.settings.poster_gradient }};
+      top: 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .video-overlay.hide-overlay {
+    background: none !important;
+  }
+
+
+    .video-overlay .vps_heading {
+      font-size: 36px;
+      font-weight: bold;
+      font-family: 'Inter';
+      letter-spacing: 0;
+      color: white;
+      text-transform: capitalize;
+      margin: 0;
+      margin-bottom: 1rem;
+      animation: slowPulse 2s ease-in-out infinite;
+    }
+
+      /* 🔥 Slow pulse animation only on heading */
+  
+    @keyframes slowPulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+
+    .video-overlay p {
+      font-size: 20px;
+      font-family: 'Inter';
+      letter-spacing: 0;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .video-controls {
+      position: absolute;
+      bottom: 0;
+      left: 0; right: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 15px;
+      color: white;
+      font-size: 14px;
+      z-index: 3;
+      padding: 24px;
+    }
+
+    .play-btn {
+      background: #3b727e;
+      border: 2px solid #f7f7f75e;
+      color: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+      position: absolute;
+      top: 60%;
+      left: 30%;
+      padding: 3.5rem;
+      transform: translate(-50%, -30%);
+      z-index: 2;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        background: #78a5b3a6;
+        transform: translate(-50%, -30%) scale(1.1);
+      }
+    }
+
+    .progress-bar {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,0.4); /* track */
+      border-radius: 2px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    #progress {
+      height: 100%;
+      width: 0%;
+      background: #00908d;
+      border-radius: 2px;
+      position: relative;
+      transition: width 0.1s linear;
+      display: block;
+    }
+
+    .video-cta {
+      text-align: center;
+    }
+
+    .cta-button {
+      display: inline-block;
+      border-radius: 999px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(90deg, #2E777E 0%, #1F4C66 50%, #1B3F58 100%);
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+      font-family: 'Inter';
+      font-size: 18px;
+      letter-spacing: 0;
+      padding: 16px 32px;
+    }
+
+    .cta-button:hover {
+      opacity: 0.85;
+    }
+
+    .subtext {
+      margin-top: 16px;
+      color: #6b7280;
+      font-size: 14px;
+      font-family: Inter;
+      letter-spacing: 0;
+    }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const video = document.getElementById('promo-video');
+    if (!video) return;
+
+    const playPauseBtn = document.getElementById('play-pause');
+    const progress = document.getElementById('progress');
+    const progressBar = document.querySelector('.progress-bar');
+    const currentTimeEl = document.getElementById('current-time');
+    const durationEl = document.getElementById('duration');
+    const overlay = document.querySelector('.video-overlay');
+
+    const playSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round"
+      class="lucide lucide-play w-8 h-8 text-white ml-1" aria-hidden="true">
+      <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path>
+    </svg>`;
+
+    const pauseSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round"
+      class="lucide lucide-pause w-8 h-8 text-white ml-1" aria-hidden="true">
+      <rect x="14" y="3" width="5" height="18" rx="1"></rect>
+      <rect x="5" y="3" width="5" height="18" rx="1"></rect>
+    </svg>`;
+
+    // helper
+    function formatTime(seconds) {
+      if (isNaN(seconds)) return '0:00';
+      const m = Math.floor(seconds / 60);
+      const s = Math.floor(seconds % 60).toString().padStart(2, '0');
+      return `${m}:${s}`;
+    }
+
+    // wait for metadata so duration is available
+    function updateDuration() {
+      if (!isNaN(video.duration)) {
+        durationEl.textContent = formatTime(video.duration);
+      }
+    }
+    video.addEventListener('loadedmetadata', updateDuration);
+    video.addEventListener('loadeddata', updateDuration);
+
+    // set initial button icon
+    playPauseBtn.innerHTML = playSVG;
+
+    playPauseBtn.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        playPauseBtn.innerHTML = pauseSVG;
+        overlay.classList.add('hide-overlay');
+      } else {
+        video.pause();
+        playPauseBtn.innerHTML = playSVG;
+      }
+    });
+
+    video.addEventListener('ended', () => {
+      playPauseBtn.innerHTML = playSVG;
+      progress.style.width = '0%';
+      currentTimeEl.textContent = '0:00';
+      overlay.classList.remove('hide-overlay');
+    });
+
+    video.addEventListener('timeupdate', () => {
+      if (!isNaN(video.duration)) {
+        const percent = (video.currentTime / video.duration) * 100;
+        progress.style.width = percent + '%';
+        currentTimeEl.textContent = formatTime(video.currentTime);
+      }
+    });
+
+    progressBar.addEventListener('click', (e) => {
+      if (!isNaN(video.duration)) {
+        const rect = progressBar.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const percent = clickX / rect.width;
+        video.currentTime = percent * video.duration;
+      }
+    });
+  });
+</script>
+

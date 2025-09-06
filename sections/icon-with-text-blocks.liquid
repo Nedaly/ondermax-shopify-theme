@@ -1,0 +1,307 @@
+<div class="icon_with_text padding-{{ section.id }}">
+    <div class="page-width">
+        <div class="heading">
+            <h2 class="iwt_heading">{{ section.settings.heading }}</h2>
+            <p class="iwt_subheading">{{ section.settings.subheading }}</p>
+        </div>
+        <div class="icon_with_text_blocks">
+            {% for block in section.blocks %}
+                <div class="icon_with_text_block">
+                    <div class="iwt_icon">
+                        {{ block.settings.svg }}
+                        {% comment %} {{ block.settings.icon | image_url: width: 20 | image_tag  }} {% endcomment %}
+                    </div>
+                    <h1 class="iwt_title">{{ block.settings.title }}</h1>
+                    <div class="iwt_desc">{{ block.settings.desc }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<style>
+    .padding-{{ section.id }}{
+        padding-top:{{ section.settings.p_top | times: 0.75 | round: 0 }}px;
+        padding-bottom:{{ section.settings.p_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    .icon_with_text{
+        background: {{ section.settings.bg_color }};
+    }
+
+    .icon_with_text .icon_with_text_blocks {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 5rem;
+        flex-wrap: wrap;
+    }
+
+    .icon_with_text .iwt_heading {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 60px;
+        font-weight: 600;
+        letter-spacing: -2.5px;
+        color: #fff;
+        margin: 0;
+        line-height: 100%;
+        text-transform: capitalize;
+    }
+
+    .icon_with_text .iwt_title {
+        font-size: 22px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        letter-spacing: 0;
+        color: #fff;
+        margin: 0;
+        line-height: 100%;
+        white-space: nowrap;
+        margin-bottom: 16px;
+        transition: 0.3s ease-in-out;
+        margin-top: 20px;
+    }
+
+    .icon_with_text .icon_with_text_block {
+        flex: 0 0 calc(252px);
+        text-align: center;
+        padding: 30px 20px;
+        border: 1px solid #303030;
+        border-radius: 1rem;
+        transition: all 0.3s ease-in-out;
+        background: #262626;
+        position: relative;
+        &:hover{
+            background: #313131;
+                background: #313131;
+                transform: scale(1.05) translateY(-10px);
+                box-shadow: 0 0 6px 0px rgba(0, 144, 141, 0.8);
+                border-color: transparent;
+        }
+        &:before{
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            box-shadow: inset 0 0 20px 20px rgb(0 144 141 / 5%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 1rem;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .icon_with_text .icon_with_text_block:hover:before{
+        opacity: 1;
+    }
+
+    .icon_with_text .iwt_icon {
+        background: #464646;
+        width: fit-content;
+        padding: 10px 12px;
+        border-radius: 1rem;
+        margin: 0 auto;
+        border: 0.5px solid #ffffff26;
+        position: relative;
+        &:before{
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            box-shadow: inset 0 0 20px 20px rgb(0 144 141 / 24%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 1rem;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+        &:after{
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            box-shadow: 0 0 20px 6px rgb(0 144 141 / 24%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 1rem;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .icon_with_text .iwt_icon svg {
+        width: 100%;
+        height: 100%;
+        max-width: 30px;
+        display: flex;
+        aspect-ratio: 1;
+        transition: 0.3s ease-in-out;
+    }
+
+    .icon_with_text .icon_with_text_block:hover .iwt_title{
+        color: #00908d;
+    }
+
+    .icon_with_text .icon_with_text_block:hover .iwt_icon svg path{
+        stroke: #00908d;
+    }
+
+    .icon_with_text .icon_with_text_block:hover .iwt_icon:before, .icon_with_text .icon_with_text_block:hover .iwt_icon:after{
+        opacity: 1;
+    }
+
+    .icon_with_text .iwt_desc > * {
+        color: #cfcfcf;
+        font-family: poppins;
+        font-size: 14px;
+        letter-spacing: 0;
+        margin: 0;
+        line-height: 1.6;
+        font-weight: 600;
+    }
+
+    .icon_with_text .iwt_subheading {
+        color: lightgray;
+        font-family: 'Poppins';
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 0;
+        margin: 0 auto;
+        line-height: 1.6;
+        max-width: 50%;
+        margin-block: 2rem;
+    }
+
+@media screen and (max-width: 768px){
+    .icon_with_text .icon_with_text_blocks {
+        flex-wrap: wrap;
+        margin-top: 3rem;
+    }
+
+    .icon_with_text .iwt_title {
+        font-size: 20px;
+    }
+
+    .icon_with_text .iwt_desc > * {
+        font-size: 16px;
+    }
+
+    .icon_with_text .iwt_heading {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .icon_with_text .iwt_subheading{
+        font-size: 16px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 989px){
+
+    .icon_with_text .icon_with_text_blocks {
+        flex-wrap: wrap;
+    }
+
+    .icon_with_text .iwt_title {
+        font-size: 25px;
+    }
+
+    .icon_with_text .iwt_desc > * {
+        font-size: 20px;
+    }
+
+    .icon_with_text .iwt_heading {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .icon_with_text .iwt_subheading{
+        font-size: 20px;
+        max-width: 100%;
+    }
+}
+
+    @media screen and (min-width: 750px){
+        .padding-{{ section.id }}{
+            padding-top:{{ section.settings.p_top }}px;
+            padding-bottom:{{ section.settings.p_bottom }}px;
+        }
+    }
+</style>
+
+{% schema %}
+    {
+        "name": "Icon with text",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "subheading",
+                "label": "Subheading"
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background color"
+            },
+            {
+                "type": "range",
+                "id": "p_top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "unit": "px",
+                "default": 0,
+                "label": "Padding top"
+            },
+            {
+                "type": "range",
+                "id": "p_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "unit": "px",
+                "default": 0,
+                "label": "Padding bottom"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "text",
+                "name": "Add block",
+                "settings": [
+                    {
+                        "type": "textarea",
+                        "id": "svg",
+                        "label": "Svg code"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "desc",
+                        "label": "Description"
+                    }
+                ]
+            }
+        ],
+        "presets":[
+            {
+                "name": "Icon with text"
+            }
+        ]
+    }   
+{% endschema %}
