@@ -1,0 +1,27 @@
+{% comment %}
+  Basic announcement bar section
+{% endcomment %}
+
+{% if section.settings.message != blank %}
+  <div class="announcement-bar">
+    <div class="page-width">
+      <p class="announcement-bar__message">
+        {{ section.settings.message }}
+      </p>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "message",
+      "default": "Welcome to our store!",
+      "label": "Message"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,18 @@
+{% comment %}
+  Basic footer section
+{% endcomment %}
+
+<footer class="footer">
+  <div class="page-width">
+    <div class="footer__content">
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": []
+}
+{% endschema %}

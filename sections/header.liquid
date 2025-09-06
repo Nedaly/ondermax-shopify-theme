@@ -1,0 +1,22 @@
+{% comment %}
+  Basic header section
+{% endcomment %}
+
+<header class="header">
+  <div class="page-width">
+    <div class="header__content">
+      <h1 class="header__logo">
+        <a href="{{ routes.root_url }}">
+          {{ shop.name }}
+        </a>
+      </h1>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": []
+}
+{% endschema %}

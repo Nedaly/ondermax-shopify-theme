@@ -1,0 +1,256 @@
+/* Base styles for the theme */
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: rgb(var(--color-base-text));
+  background-color: rgb(var(--color-base-background-1));
+}
+
+@media screen and (min-width: 750px) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+}
+
+.h1 {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .h1 {
+    font-size: 4rem;
+  }
+}
+
+.h2 {
+  font-size: 2.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .h2 {
+    font-size: 3rem;
+  }
+}
+
+.h3 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .h3 {
+    font-size: 2.5rem;
+  }
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+/* Links */
+a {
+  color: rgb(var(--color-base-accent-1));
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: var(--buttons-radius);
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button--primary {
+  background-color: rgb(var(--color-base-accent-1));
+  color: rgb(var(--color-base-solid-button-labels));
+}
+
+.button--primary:hover {
+  background-color: rgba(var(--color-base-accent-1), 0.8);
+  text-decoration: none;
+}
+
+.button--secondary {
+  background-color: transparent;
+  color: rgb(var(--color-base-accent-1));
+  border: 1px solid rgb(var(--color-base-accent-1));
+}
+
+.button--secondary:hover {
+  background-color: rgb(var(--color-base-accent-1));
+  color: rgb(var(--color-base-solid-button-labels));
+  text-decoration: none;
+}
+
+/* Layout */
+.page-width {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .page-width {
+    padding: 0 5rem;
+  }
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+@media screen and (min-width: 750px) {
+  .section {
+    padding: 4rem 0;
+  }
+}
+
+/* Utility classes */
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  word-wrap: normal !important;
+}
+
+.skip-to-content-link {
+  position: absolute;
+  z-index: 9999;
+  left: 50%;
+  top: -100px;
+  transform: translateX(-50%);
+  background-color: rgb(var(--color-base-accent-1));
+  color: rgb(var(--color-base-solid-button-labels));
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: var(--buttons-radius);
+  transition: top 0.3s ease;
+}
+
+.skip-to-content-link:focus {
+  top: 1rem;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid rgb(var(--color-base-accent-1));
+  outline-offset: 2px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lists */
+ul, ol {
+  margin: 0 0 1rem 0;
+  padding-left: 2rem;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(var(--color-base-text), 0.1);
+}
+
+th {
+  font-weight: 600;
+}
+
+/* Forms */
+input, textarea, select {
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  padding: 1rem;
+  border: 1px solid rgba(var(--color-base-text), 0.2);
+  border-radius: var(--inputs-radius);
+  background-color: rgb(var(--color-base-background-1));
+  color: rgb(var(--color-base-text));
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: rgb(var(--color-base-accent-1));
+}
+
+/* Gradients */
+.gradient {
+  background: var(--gradient-base-background-1);
+}
+
+/* Color schemes */
+.color-accent-1 {
+  background-color: rgb(var(--color-base-accent-1));
+  color: rgb(var(--color-base-solid-button-labels));
+}
+
+.color-accent-2 {
+  background-color: rgb(var(--color-base-accent-2));
+  color: rgb(var(--color-base-solid-button-labels));
+}
+
+.color-background-1 {
+  background-color: rgb(var(--color-base-background-1));
+  color: rgb(var(--color-base-text));
+}
+
+.color-background-2 {
+  background-color: rgb(var(--color-base-background-2));
+  color: rgb(var(--color-base-text));
+}
+
+.color-inverse {
+  background-color: rgb(var(--color-base-text));
+  color: rgb(var(--color-base-background-1));
+}
