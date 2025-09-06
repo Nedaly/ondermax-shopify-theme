@@ -6,12 +6,12 @@ window.theme = window.theme || {};
 // Utility functions
 theme.utils = {
   // Debounce function
-  debounce: function(func, wait, immediate) {
+  debounce: function (func, wait, immediate) {
     let timeout;
     return function executedFunction() {
       const context = this;
       const args = arguments;
-      const later = function() {
+      const later = function () {
         timeout = null;
         if (!immediate) func.apply(context, args);
       };
@@ -23,38 +23,39 @@ theme.utils = {
   },
 
   // Throttle function
-  throttle: function(func, limit) {
+  throttle: function (func, limit) {
     let inThrottle;
-    return function() {
+    return function () {
       const args = arguments;
       const context = this;
       if (!inThrottle) {
         func.apply(context, args);
         inThrottle = true;
-        setTimeout(() => inThrottle = false, limit);
+        setTimeout(() => (inThrottle = false), limit);
       }
     };
   },
 
   // Check if element is in viewport
-  isInViewport: function(element) {
+  isInViewport: function (element) {
     const rect = element.getBoundingClientRect();
     return (
       rect.top >= 0 &&
       rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   },
 
   // Format currency
-  formatMoney: function(cents, format) {
+  formatMoney: function (cents, format) {
     if (typeof cents === 'string') {
       cents = cents.replace('.', '');
     }
     let value = '';
     const placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
-    const formatString = (format || this.money_format);
+    const formatString = format || this.money_format;
 
     function formatWithDelimiters(number, precision, thousands, decimal) {
       thousands = thousands || ',';
@@ -67,8 +68,11 @@ theme.utils = {
       number = (number / 100.0).toFixed(precision);
 
       const parts = number.split('.');
-      const dollarsAmount = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands);
-      const centsAmount = parts[1] ? (decimal + parts[1]) : '';
+      const dollarsAmount = parts[0].replace(
+        /(\d)(?=(\d\d\d)+(?!\d))/g,
+        '$1' + thousands
+      );
+      const centsAmount = parts[1] ? decimal + parts[1] : '';
 
       return dollarsAmount + centsAmount;
     }
@@ -95,26 +99,26 @@ theme.utils = {
     }
 
     return formatString.replace(placeholderRegex, value);
-  }
+  },
 };
 
 // Initialize theme when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Initialize any global functionality here
   console.log('Theme initialized');
-  
+
   // Example: Initialize smooth scrolling for anchor links
   const anchorLinks = document.querySelectorAll('a[href^="#"]');
-  anchorLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
+  anchorLinks.forEach((link) => {
+    link.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       const targetElement = document.querySelector(targetId);
-      
+
       if (targetElement) {
         e.preventDefault();
         targetElement.scrollIntoView({
           behavior: 'smooth',
-          block: 'start'
+          block: 'start',
         });
       }
     });
@@ -122,16 +126,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Handle window resize events
-window.addEventListener('resize', theme.utils.debounce(function() {
-  // Handle resize events here
-  console.log('Window resized');
-}, 250));
+window.addEventListener(
+  'resize',
+  theme.utils.debounce(function () {
+    // Handle resize events here
+    console.log('Window resized');
+  }, 250)
+);
 
 // Handle scroll events
-window.addEventListener('scroll', theme.utils.throttle(function() {
-  // Handle scroll events here
-  // Example: Add scroll-based animations or effects
-}, 100));
+window.addEventListener(
+  'scroll',
+  theme.utils.throttle(function () {
+    // Handle scroll events here
+    // Example: Add scroll-based animations or effects
+  }, 100)
+);
 
 // Export for use in other scripts
 if (typeof module !== 'undefined' && module.exports) {

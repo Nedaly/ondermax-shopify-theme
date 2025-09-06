@@ -3,6 +3,7 @@
 ## Release Workflow
 
 ### 1. Pre-Release Checklist
+
 ```bash
 # Ensure you're on develop branch
 git checkout develop
@@ -18,6 +19,7 @@ shopify theme dev
 ```
 
 ### 2. Create Release Branch
+
 ```bash
 # Create release branch from develop
 git checkout -b release/v1.0.0
@@ -27,6 +29,7 @@ npm version patch  # or minor, major
 ```
 
 ### 3. Staging Deployment
+
 ```bash
 # Set staging theme name
 STAGING_THEME="staging-v1.0-rc1"
@@ -39,6 +42,7 @@ shopify theme list | grep "$STAGING_THEME"
 ```
 
 ### 4. QA Testing on Staging
+
 ```bash
 # Document staging URL for QA team
 echo "Staging URL: https://yourstore.myshopify.com/?preview_theme_id=STAGING_THEME_ID"
@@ -49,6 +53,7 @@ npx prettier --check .
 ```
 
 ### 5. Production Deployment
+
 ```bash
 # After QA approval, deploy to production
 PRODUCTION_THEME_ID="123456789"  # Replace with actual production theme ID
@@ -61,6 +66,7 @@ shopify theme push --live
 ```
 
 ### 6. Tag and Merge
+
 ```bash
 # Tag the release
 git tag v1.0.0
@@ -84,6 +90,7 @@ git push origin --delete release/v1.0.0
 ## Staging Theme Management
 
 ### Creating Staging Themes
+
 ```bash
 # Create new staging theme
 STAGING_NAME="staging-feature-hero-$(date +%Y%m%d)"
@@ -94,12 +101,14 @@ shopify theme list | grep staging
 ```
 
 ### Staging Theme Naming Convention
+
 - `staging-v1.0-rc1` - Release candidate 1 for version 1.0
 - `staging-feature-hero-20240906` - Feature-specific staging
 - `staging-hotfix-checkout-20240906` - Hotfix staging
 - `staging-qa-final` - Final QA staging
 
 ### Cleaning Up Staging Themes
+
 ```bash
 # List staging themes
 shopify theme list | grep staging
@@ -111,6 +120,7 @@ shopify theme delete --theme-id=STAGING_THEME_ID
 ## QA Process
 
 ### Staging QA Checklist
+
 - [ ] **Visual Testing**
   - [ ] Desktop layout matches design
   - [ ] Mobile layout is responsive
@@ -142,6 +152,7 @@ shopify theme delete --theme-id=STAGING_THEME_ID
   - [ ] Mobile navigation works
 
 ### QA Documentation
+
 ```bash
 # Create QA report
 cat > qa-report.md << EOF
@@ -174,6 +185,7 @@ EOF
 ## Rollback Process
 
 ### Emergency Rollback
+
 ```bash
 # If issues are found in production
 PREVIOUS_THEME_ID="123456789"  # Previous working theme ID
@@ -187,6 +199,7 @@ shopify theme push --theme-id="$PRODUCTION_THEME_ID"
 ```
 
 ### Rollback Documentation
+
 ```bash
 # Document rollback
 cat > rollback-log.md << EOF
@@ -204,6 +217,7 @@ EOF
 ## Release Notes Template
 
 ### Creating Release Notes
+
 ```bash
 # Create release notes
 cat > release-notes-v1.0.0.md << EOF
@@ -253,6 +267,7 @@ EOF
 ## Automated Release Script
 
 ### Release Script Template
+
 ```bash
 #!/bin/bash
 # release.sh - Automated release script
@@ -320,6 +335,7 @@ echo "✅ Release v${VERSION} completed successfully!"
 ```
 
 ### Using the Release Script
+
 ```bash
 # Make script executable
 chmod +x scripts/release.sh
@@ -331,6 +347,7 @@ chmod +x scripts/release.sh
 ## Best Practices
 
 ### Before Release
+
 1. **Complete QA testing** on staging
 2. **Document all changes** in release notes
 3. **Test rollback procedure** if possible
@@ -338,6 +355,7 @@ chmod +x scripts/release.sh
 5. **Prepare monitoring** for post-release
 
 ### During Release
+
 1. **Deploy during low-traffic hours**
 2. **Monitor for issues** immediately after deployment
 3. **Have rollback plan ready**
@@ -345,6 +363,7 @@ chmod +x scripts/release.sh
 5. **Document any issues** encountered
 
 ### After Release
+
 1. **Monitor performance metrics**
 2. **Check for error reports**
 3. **Gather user feedback**

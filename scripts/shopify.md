@@ -3,6 +3,7 @@
 ## Authentication & Setup
 
 ### Login to Shopify Store
+
 ```bash
 # Login to your store
 shopify login --store yourstore.myshopify.com
@@ -12,6 +13,7 @@ shopify auth status
 ```
 
 ### Store Information
+
 ```bash
 # List all themes in your store
 shopify theme list
@@ -23,6 +25,7 @@ shopify store info
 ## Theme Management
 
 ### Pulling Themes
+
 ```bash
 # Pull all themes (will prompt for selection)
 shopify theme pull --store yourstore.myshopify.com
@@ -38,6 +41,7 @@ shopify theme pull --store yourstore.myshopify.com --path ./theme-files
 ```
 
 ### Development Server
+
 ```bash
 # Start development server (recommended)
 shopify theme dev
@@ -56,6 +60,7 @@ shopify theme dev --no-live-reload
 ```
 
 ### Pushing Themes
+
 ```bash
 # Push to unpublished theme
 shopify theme push --unpublished --path . --theme "staging-v1.0-rc1"
@@ -73,6 +78,7 @@ shopify theme push --force
 ## Theme Operations
 
 ### Theme Information
+
 ```bash
 # Get theme details
 shopify theme info
@@ -85,6 +91,7 @@ shopify theme check
 ```
 
 ### Theme Deletion
+
 ```bash
 # Delete a theme (be careful!)
 shopify theme delete --theme-id=123456789
@@ -96,6 +103,7 @@ shopify theme delete --theme-id=123456789 --force
 ## Development Workflow
 
 ### Complete Development Setup
+
 ```bash
 # 1. Login to store
 shopify login --store yourstore.myshopify.com
@@ -116,6 +124,7 @@ shopify theme dev
 ```
 
 ### Staging Deployment
+
 ```bash
 # 1. Create staging theme name
 STAGING_THEME="staging-v1.0-rc1"
@@ -128,6 +137,7 @@ shopify theme list | grep "$STAGING_THEME"
 ```
 
 ### Production Deployment
+
 ```bash
 # 1. Final testing on staging
 # 2. Push to production theme
@@ -142,6 +152,7 @@ shopify theme push --live
 ### Common Issues
 
 **Authentication Problems**
+
 ```bash
 # Re-authenticate
 shopify logout
@@ -149,6 +160,7 @@ shopify login --store yourstore.myshopify.com
 ```
 
 **Theme Not Found**
+
 ```bash
 # Check available themes
 shopify theme list
@@ -158,6 +170,7 @@ shopify theme pull --theme "exact-theme-name"
 ```
 
 **Permission Errors**
+
 ```bash
 # Check your store permissions
 shopify store info
@@ -166,6 +179,7 @@ shopify store info
 ```
 
 **Development Server Issues**
+
 ```bash
 # Clear Shopify CLI cache
 rm -rf .shopify/
@@ -175,6 +189,7 @@ shopify theme dev
 ```
 
 **Port Already in Use**
+
 ```bash
 # Use different port
 shopify theme dev --port 3001
@@ -186,6 +201,7 @@ lsof -ti:9292 | xargs kill -9
 ## Environment Variables
 
 ### Required Variables
+
 ```bash
 # Store URL
 SHOPIFY_FLAG_STORE=yourstore.myshopify.com
@@ -195,6 +211,7 @@ SHOPIFY_CLI_TTY=0
 ```
 
 ### Optional Variables
+
 ```bash
 # Storefront API
 PUBLIC_STOREFRONT_API_TOKEN=your_token_here
@@ -211,18 +228,21 @@ DEV_THEME_NAME=dev-theme-2024-09-06
 ## Best Practices
 
 ### Development
+
 1. **Always work on development themes** - Never work directly on live themes
 2. **Use descriptive theme names** - Include date and purpose (e.g., `dev-theme-2024-09-06`)
 3. **Test locally first** - Use `shopify theme dev` before pushing
 4. **Use staging themes** - Test on staging before production
 
 ### Deployment
+
 1. **Create staging themes** - Use unpublished themes for QA
 2. **Document staging URLs** - Include in PR descriptions
 3. **Test thoroughly** - Verify all functionality on staging
 4. **Use version tags** - Tag releases for easy rollback
 
 ### Security
+
 1. **Never commit .env files** - Use .env.example instead
 2. **Use environment variables** - Store sensitive data securely
 3. **Limit permissions** - Use development-only access when possible
@@ -231,6 +251,7 @@ DEV_THEME_NAME=dev-theme-2024-09-06
 ## Integration with Git Flow
 
 ### Feature Development
+
 ```bash
 # 1. Create feature branch
 git checkout -b feature/hero-value-prop
@@ -251,6 +272,7 @@ shopify theme push --unpublished --path . --theme "staging-hero-v1"
 ```
 
 ### Release Process
+
 ```bash
 # 1. Create release branch
 git checkout -b release/v1.0.0

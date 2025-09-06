@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "hero_value": {
+      "type": "hero-value",
+      "settings": {
+        "heading": "Your Value Proposition",
+        "subheading": "Short, persuasive subcopy.",
+        "cta_label": "Shop Now",
+        "cta_url": "/collections/all"
+      }
+    }
+  },
+  "order": ["hero_value"]
+}

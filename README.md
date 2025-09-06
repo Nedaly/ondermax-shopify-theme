@@ -5,11 +5,13 @@ A modern, conversion-optimized Shopify theme built with performance and user exp
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js LTS (via nvm recommended)
 - Shopify CLI
 - Git
 
 ### Setup
+
 ```bash
 # Clone the repository
 git clone git@github.com:YOUR_ORG_OR_USERNAME/ondermax-shopify-theme.git
@@ -23,13 +25,13 @@ cp .env.example .env
 # Edit .env with your store details
 
 # Login to Shopify
-shopify login --store yourstore.myshopify.com
+shopify theme login --store ondermax.myshopify.com
 
 # Pull development theme
-shopify theme pull --store yourstore.myshopify.com
+shopify theme pull --store ondermax.myshopify.com --theme <THEME_ID>
 
 # Start development server
-shopify theme dev
+npm run dev
 ```
 
 ## 📋 Git Flow
@@ -47,13 +49,15 @@ main (production)
 ```
 
 ### Branch Types
+
 - **main**: Production-ready code, always deployable
 - **develop**: Integration branch for features, always stable
-- **feature/***: New features developed from `develop`
-- **release/***: Release preparation from `develop` to `main`
-- **hotfix/***: Critical fixes directly to `main`
+- **feature/\***: New features developed from `develop`
+- **release/\***: Release preparation from `develop` to `main`
+- **hotfix/\***: Critical fixes directly to `main`
 
 ### Workflow
+
 1. Create feature branch from `develop`
 2. Develop and test locally
 3. Create PR to `develop`
@@ -64,12 +68,11 @@ main (production)
 
 ```bash
 # Development
-shopify theme dev          # Start development server
-shopify theme pull         # Pull theme from store
-shopify theme push         # Push theme to store
+npm run dev               # Start development server
+npm run check             # Run theme-check
+npm run push:staging      # Push to staging theme
 
 # Code Quality
-npm run lint              # Run theme-check
 npm run format            # Format code with Prettier
 npm run format:check      # Check formatting
 
@@ -105,24 +108,28 @@ git commit -m "feat(section): add new hero section"
 Before any feature is considered complete, ensure:
 
 ### Local Development
+
 - [ ] `shopify theme dev` runs without errors
 - [ ] No console errors in browser
 - [ ] All functionality works as expected
 - [ ] Responsive design tested on mobile/desktop
 
 ### Code Quality
+
 - [ ] `theme-check` passes with no warnings
 - [ ] Prettier formatting applied
 - [ ] Code follows project conventions
 - [ ] Performance impact considered
 
 ### Testing & QA
+
 - [ ] Pushed as unpublished staging theme
 - [ ] Staging environment tested thoroughly
 - [ ] Cross-browser compatibility verified
 - [ ] Mobile experience validated
 
 ### Documentation & Process
+
 - [ ] PR created to `develop` with screenshots
 - [ ] PR title references CSV ID: `[CSV-HP-003]`
 - [ ] Staging URL provided for QA
@@ -131,24 +138,28 @@ Before any feature is considered complete, ensure:
 ## 🎯 CRO Focus Areas
 
 ### Homepage Optimization
+
 - Clear value proposition above the fold
 - Prominent and compelling CTAs
 - Strategic social proof placement
 - Fast loading and intuitive navigation
 
 ### Product Experience
+
 - High-quality product imagery
 - Compelling product descriptions
 - Easy add-to-cart process
 - Related product suggestions
 
 ### Checkout Optimization
+
 - Guest checkout available
 - Clear progress indicators
 - Minimal form fields
 - Trust signals throughout
 
 ### Performance
+
 - Core Web Vitals optimized
 - Mobile-first approach
 - Image optimization and lazy loading
@@ -164,12 +175,14 @@ Before any feature is considered complete, ensure:
 ## 🔧 Tools & Configuration
 
 ### Code Quality
+
 - **Prettier**: Code formatting
 - **Theme Check**: Shopify theme validation
 - **Husky**: Git hooks for quality gates
 - **lint-staged**: Pre-commit linting
 
 ### Development
+
 - **Shopify CLI**: Theme development and deployment
 - **Git Flow**: Branching strategy
 - **Conventional Commits**: Standardized commit messages
@@ -177,6 +190,7 @@ Before any feature is considered complete, ensure:
 ## 🚀 Deployment
 
 ### Staging
+
 ```bash
 # Create release branch
 git checkout -b release/v1.0.0
@@ -186,6 +200,7 @@ shopify theme push --unpublished --path . --theme "staging-v1.0-rc1"
 ```
 
 ### Production
+
 ```bash
 # Tag release
 git tag v1.0.0
@@ -206,6 +221,7 @@ shopify theme push --path . --theme "production"
 ## 📞 Support
 
 For questions or issues:
+
 - Check the [Development Guide](docs/dev-guide.md)
 - Review the [CRO Checklist](docs/checklist.md)
 - Create an issue in the repository

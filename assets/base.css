@@ -30,7 +30,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
@@ -186,7 +191,8 @@ img {
 }
 
 /* Lists */
-ul, ol {
+ul,
+ol {
   margin: 0 0 1rem 0;
   padding-left: 2rem;
 }
@@ -198,7 +204,8 @@ table {
   margin-bottom: 1rem;
 }
 
-th, td {
+th,
+td {
   padding: 0.5rem;
   text-align: left;
   border-bottom: 1px solid rgba(var(--color-base-text), 0.1);
@@ -209,7 +216,9 @@ th {
 }
 
 /* Forms */
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: var(--font-body-family);
   font-size: 1.4rem;
   padding: 1rem;
@@ -219,7 +228,9 @@ input, textarea, select {
   color: rgb(var(--color-base-text));
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
   border-color: rgb(var(--color-base-accent-1));
 }
