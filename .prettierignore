@@ -1,0 +1,15 @@
+# Ignore Liquid template files
+*.liquid
+
+# Ignore other template files
+*.html
+*.hbs
+*.mustache
+
+# Ignore minified files
+*.min.js
+*.min.css
+
+# Ignore vendor files
+node_modules/
+vendor/

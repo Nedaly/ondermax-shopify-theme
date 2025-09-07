@@ -1,7 +1,12 @@
 <style>
   header-drawer {
     justify-self: start;
-    margin-left: -1.2rem;
+  }
+  
+  @media screen and (max-width: 749px) {
+    header-drawer {
+      margin-left: 0;
+    }
   }
 
   .header__heading-link.media { 
@@ -111,9 +116,62 @@ static-header.header-wrapper.hide-header {
     padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
   }
 
+  /* Mobile header height constraint and logo centering */
+  @media screen and (max-width: 749px) {
+    .header {
+      min-height: 70px;
+      max-height: 90px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    
+    .header__heading-link.media {
+      max-height: 56px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+    }
+    
+    .header__heading-link.media img {
+      max-height: 56px;
+      width: auto;
+    }
+    
+    /* Ensure hamburger menu stays on the left with proper spacing */
+    header-drawer {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+    
+    /* Ensure cart icon stays on the right with proper spacing */
+    .header__icons {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+  }
+
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+  
+  @media screen and (max-width: 749px) {
+    .section-header {
+      margin-bottom: 0;
+    }
   }
 
   @media screen and (min-width: 750px) {
@@ -309,7 +367,7 @@ static-header.header-wrapper.hide-header {
 
     {%- if section.settings.menu != blank and section.settings.menu_type_desktop != 'drawer' -%}
       {% if section.settings.menu_type_desktop == 'dropdown' %}
-        <nav class="header__inline-menu">
+        <nav class="header__inline-menu small-hide">
           <ul class="list-menu list-menu--inline" role="list">
             {%- for link in section.settings.menu.links -%}
               <li>
@@ -361,12 +419,12 @@ static-header.header-wrapper.hide-header {
               </li>
             {%- endfor -%}
           </ul>
-          <span class="new-btn">
+          <span class="new-btn small-hide">
             <a href="{{ section.settings.btn_link }}">{{ section.settings.new-button }}</a>
           </span>
         </nav>
       {% else %}
-        <nav class="header__inline-menu">
+        <nav class="header__inline-menu small-hide">
           <ul class="list-menu list-menu--inline" role="list">
             {%- for link in section.settings.menu.links -%}
               <li>
