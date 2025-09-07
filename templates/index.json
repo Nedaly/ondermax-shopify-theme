@@ -16,9 +16,9 @@
     "hero": {
       "type": "ondermax-hero",
       "settings": {
-        "kicker": "DOCTOR-BUILT, CLINICALLY-INSPIRED SYSTEM",
+        "kicker": "DOCTOR BUILT\nCLINICALLY INSPIRED SYSTEM",
         "heading": "Just Results.",
-        "subheading": "SURGE + DRIFT — The biohacking system.",
+        "subheading": "SURGE + DRIFT\nThe biohacking system.",
         "use_video": true,
         "video": "",
         "video_cdn_url": "https://cdn.shopify.com/videos/c/o/v/9c6b6b3fde704cb189ca9fc6334ddc41.mp4",
