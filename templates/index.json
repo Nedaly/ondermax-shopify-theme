@@ -36,7 +36,7 @@
       "type": "home-value-props",
       "settings": {}
     },
-    "multicolumn_ww3yME": {
+    "multicolumn_ww3yME_DISABLED": {
       "type": "multicolumn",
       "blocks": {
         "column_3cQckD": {
@@ -112,7 +112,7 @@
         "transparent_arrows": true,
         "dots_color_scheme": "inverse",
         "desktop_full_page": false,
-        "columns_desktop": 3,
+        "columns_desktop": 1,
         "slider_desktop": false,
         "per_move_desktop": 1,
         "desktop_spacing": 40,
@@ -121,7 +121,7 @@
         "desktop_adaptive_height": false,
         "desktop_dots_position": "under",
         "desktop_arrows_position": "sides",
-        "columns_mobile": "3",
+        "columns_mobile": "1",
         "slider_mobile": false,
         "enable_mobile_preview": false,
         "mobile_adaptive_height": false,
@@ -135,9 +135,17 @@
         "custom_colors_solid_button_background": "#dd1d1d",
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#dd1d1d",
-        "custom_cards_colors_background": "#ffffff",
+        "custom_cards_colors_background": "transparent",
         "custom_cards_colors_heading": "#222126",
         "custom_cards_colors_text": "#2e2a39"
+      }
+    },
+    "benefits_story": {
+      "type": "benefits-story",
+      "settings": {
+        "heading": "How It Works",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "testimonials_3EzwNj": {
@@ -598,7 +606,7 @@
   "order": [
     "hero",
     "props",
-    "multicolumn_ww3yME",
+    "benefits_story",
     "testimonials_3EzwNj",
     "result_count_8CDFa3",
     "icon_with_text_blocks_GERKNa",
