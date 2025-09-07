@@ -155,7 +155,7 @@
 <!--                 end secondary nav -->
           <!-- Trust Footer -->
           <div class="menu-drawer__trust-footer">
-            <p class="menu-drawer__trust-text">★ 500+ results · Free shipping · 30-day guarantee</p>
+            <p class="menu-drawer__trust-text">★ <strong>500+</strong> verified results · 🚚 <strong>Free</strong> express shipping · 🛡️ <strong>30-day</strong> money-back guarantee</p>
           </div>
 
           <!-- Locale/Currency Selector -->
@@ -187,8 +187,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }
       
-      // Disable background scroll
+      // Disable background scroll and add class
       document.body.style.overflow = 'hidden';
+      document.body.classList.add('drawer-open');
       
       // Focus trap
       const focusableElements = drawer.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])');
@@ -196,8 +197,9 @@ document.addEventListener('DOMContentLoaded', function() {
         focusableElements[0].focus();
       }
     } else {
-      // Re-enable background scroll
+      // Re-enable background scroll and remove class
       document.body.style.overflow = '';
+      document.body.classList.remove('drawer-open');
     }
   });
 
@@ -219,6 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Close drawer on link click
       drawerContainer.removeAttribute('open');
       document.body.style.overflow = '';
+      document.body.classList.remove('drawer-open');
       
       // Track time to PDP if it's a product link
       if (this.href.includes('/products/')) {
