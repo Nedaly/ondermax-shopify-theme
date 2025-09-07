@@ -4,7 +4,156 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 45px;
+  height: 32px;
+  z-index: 1001;
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border-bottom: 1px solid rgba(28, 142, 142, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.announcement-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(28, 142, 142, 0.1), transparent);
+  transition: left 2s ease-in-out;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+.announcement-bar:hover {
+  background: linear-gradient(135deg, #1c1c1c 0%, #2d2d2d 100%);
+  border-bottom-color: #2D9CDB;
+  transform: translateY(1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.announcement-bar:active {
+  transform: translateY(0);
+  transition: transform 0.1s ease;
+}
+
+/* Mobile optimizations */
+@media screen and (max-width: 749px) {
+  .announcement-bar {
+    height: 28px;
+    font-size: 10px;
+    padding: 0 12px;
+  }
+}
+
+/* Desktop enhancements */
+@media screen and (min-width: 750px) {
+  .announcement-bar {
+    height: 40px;
+    font-size: 13px;
+    padding: 0 24px;
+  }
+}
+
+/* Conversion-optimized text styling */
+.announcement-bar,
+.announcement-bar * {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.announcement-bar .announcement__text,
+.announcement-bar .announcement__text * {
+  color: #ffffff !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* Urgency and scarcity indicators */
+.announcement-bar .announcement__text::after {
+  content: '⚡';
+  margin-left: 8px;
+  animation: pulse 2s infinite;
+  font-size: 14px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+/* Highlight key words for conversion */
+.announcement-bar .announcement__text strong,
+.announcement-bar .announcement__text b {
+  color: #2D9CDB !important;
+  text-shadow: 0 0 8px rgba(45, 156, 219, 0.3);
+  font-weight: 800;
+}
+
+/* Mobile conversion optimizations */
+@media screen and (max-width: 749px) {
+  .announcement-bar {
+    height: 38px;
+    font-size: 11px;
+    padding: 0 12px;
+    border-bottom-width: 3px;
+  }
+  
+  .announcement-bar,
+  .announcement-bar * {
+    font-size: 11px !important;
+    letter-spacing: 0.6px;
+  }
+  
+  .announcement-bar .announcement__text::after {
+    font-size: 12px;
+    margin-left: 6px;
+  }
+  
+  /* Touch-friendly interaction */
+  .announcement-bar:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* Accessibility and performance */
+.announcement-bar:focus {
+  outline: 2px solid #2D9CDB;
+  outline-offset: 2px;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .announcement-bar::before,
+  .announcement-bar .announcement__text::after {
+    animation: none;
+  }
+  
+  .announcement-bar {
+    transition: none;
+  }
 } 
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
