@@ -957,6 +957,20 @@
   overflow: hidden;
 }
 
+/* Ensure all text is white/light for better readability */
+.testimonials,
+.testimonials * {
+  color: #ffffff !important;
+}
+
+/* Override any dark text colors */
+.testimonials .multicolumn-card,
+.testimonials .multicolumn-card *,
+.testimonials .testimonial-card,
+.testimonials .testimonial-card * {
+  color: #ffffff !important;
+}
+
 /* Add decorative elements like SURGE/DRIFT sections */
 .testimonials::before {
   content: '';
@@ -1030,8 +1044,11 @@
 
 /* Enhanced testimonial text */
 .testimonials .multicolumn-card .rte {
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.95) !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 /* Enhanced author names */
@@ -1042,18 +1059,34 @@
 }
 
 /* Enhanced section heading */
-.testimonials .section-header h2 {
-  background: linear-gradient(135deg, #ffffff 0%, #ffd700 50%, #ffffff 100%);
+.testimonials .section-header h2,
+.testimonials h2,
+.testimonials .section-title {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #ffd700 50%,
+    #ffffff 100%
+  ) !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 1rem !important;
 }
 
 /* Enhanced subheading */
-.testimonials .section-header .rte {
-  color: rgba(255, 255, 255, 0.8);
+.testimonials .section-header .rte,
+.testimonials .section-sub,
+.testimonials .rte {
+  color: rgba(255, 255, 255, 0.9) !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem !important;
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+  margin-bottom: 2rem !important;
 }
 
 /* Enhanced navigation arrows */
@@ -1083,36 +1116,95 @@
   box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
 }
 
+/* Enhanced UX improvements */
+.testimonials .multicolumn-card {
+  padding: 2rem !important;
+  margin-bottom: 1rem;
+}
+
+.testimonials .multicolumn-card h3 {
+  font-size: 1.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.testimonials .multicolumn-card .rte p {
+  margin-bottom: 1.5rem !important;
+  font-size: 1.1rem !important;
+  line-height: 1.7 !important;
+}
+
+.testimonials .multicolumn-card .author {
+  font-size: 1rem !important;
+  margin-top: 1rem !important;
+  padding-top: 1rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Better star rating visibility */
+.testimonials .star-rating {
+  margin-bottom: 1rem !important;
+}
+
+.testimonials .star-rating svg {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 2px !important;
+}
+
 /* === Testimonials Section Mobile Fixes ================================ */
 @media (max-width: 990px) {
   .testimonials {
     overflow-x: hidden;
   }
 
-  .testimonials-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .testimonials-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-
-  .testimonials-card__content {
+  .testimonials .multicolumn-card {
     padding: 1.5rem !important;
+    margin-bottom: 1rem;
   }
 
-  .testimonials-card h3 {
-    font-size: clamp(18px, 4vw, 22px) !important;
+  .testimonials .multicolumn-card h3 {
+    font-size: 1.3rem !important;
   }
 
-  .testimonials-card .rte {
-    font-size: clamp(14px, 3vw, 16px) !important;
-    line-height: 1.5;
+  .testimonials .multicolumn-card .rte p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
   }
+
+  .testimonials .multicolumn-card .author {
+    font-size: 0.9rem !important;
+  }
+
+  .testimonials .star-rating svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+
+/* Additional testimonials styling */
+.testimonials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.testimonials-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+.testimonials-card__content {
+  padding: 1.5rem !important;
+}
+
+.testimonials-card h3 {
+  font-size: clamp(18px, 4vw, 22px) !important;
+}
+
+.testimonials-card .rte {
+  font-size: clamp(14px, 3vw, 16px) !important;
+  line-height: 1.5;
 }
 
 /* === Icon with Text Blocks Mobile Fixes ============================== */
