@@ -1299,6 +1299,60 @@
     font-size: 0.9rem !important;
   }
 
+  /* Footer Payment Methods Styling */
+  .footer .list-payment {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .footer .list-payment__item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    padding: 0.5rem !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  }
+
+  .footer .list-payment__item:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .footer .list-payment__item .icon {
+    width: 32px !important;
+    height: 20px !important;
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.9 !important;
+  }
+
+  .footer .list-payment__item:hover .icon {
+    opacity: 1 !important;
+  }
+
+  @media (max-width: 990px) {
+    .footer .list-payment {
+      gap: 0.75rem !important;
+      margin-top: 1rem !important;
+    }
+
+    .footer .list-payment__item {
+      padding: 0.4rem !important;
+    }
+
+    .footer .list-payment__item .icon {
+      width: 28px !important;
+      height: 18px !important;
+    }
+  }
+
   .testimonials .section-padding,
   .testimonials [class*='section-'][class*='-padding'] {
     padding-top: 0 !important;

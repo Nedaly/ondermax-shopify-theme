@@ -371,9 +371,7 @@
               "stacking": "row",
               "accent_color": "accent-1",
               "color_scheme": "background-1",
-              "product_list": [
-                "high-energy-stack-copy"
-              ],
+              "product_list": ["high-energy-stack-copy"],
               "collection": "",
               "prdouct_1_preselected": false,
               "product_1_desc": "",
@@ -591,7 +589,7 @@
           "enable_country_selector": false,
           "enable_language_selector": true,
           "payment_enable": true,
-          "enabled_payment_types": "",
+          "enabled_payment_types": "visa,master,american_express,paypal,apple_pay,google_pay,shopify_pay",
           "show_policy": false,
           "branding_text": "Powered by <a href=\"https://shrinetheme.com/\" target=\"_blank\" title=\"Shrine theme\">Shrine</a>",
           "margin_top": 0,
