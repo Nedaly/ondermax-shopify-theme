@@ -1204,7 +1204,7 @@
 /* Flat teal bullets in one row */
 .profile_info .pir_tags {
   display: flex !important;
-  justify-content: center !important;
+  justify-content: flex-end !important;
   gap: 2rem !important;
   margin-top: 2rem !important;
   flex-wrap: nowrap !important;
@@ -1287,6 +1287,7 @@
   .profile_info .pir_tags {
     gap: 1rem !important;
     flex-wrap: wrap !important;
+    justify-content: flex-end !important;
   }
 
   .profile_info .pir_tag {
