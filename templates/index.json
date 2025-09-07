@@ -14,28 +14,13 @@
       "settings": {}
     },
     "hero": {
-      "type": "ondermax-hero",
+      "type": "home-hero",
       "settings": {
-        "kicker": "Doctor-built, clinically-inspired system",
         "heading": "Just Results.",
         "subheading": "SURGE + DRIFT — The biohacking system.",
-        "primary_label": "Shop the Stack",
-        "primary_link": "#",
-        "secondary_label": "Learn more",
-        "secondary_link": "#",
-        "use_video": true,
-        "video": "shopify://files/videos/premium-health-and-wellness-background-v-38f0a651-20250829225729.mp4",
-        "image": "",
-        "image_alt": "Ondermax hero background",
-        "overlay_strength": 40,
-        "align": "center",
-        "badge_enable": true,
-        "badge_1": "98% satisfaction",
-        "badge_2": "Doctor built",
-        "badge_3": "Clean formulation",
-        "badge_4": "No crash / No grogginess",
-        "mobile_sticky_cta": true,
-        "sticky_label": "Shop the Stack"
+        "cta_label": "Shop the Stack",
+        "cta_url": "#",
+        "hero_image": ""
       }
     },
     "props": {
@@ -79,11 +64,7 @@
           }
         }
       },
-      "block_order": [
-        "column_3cQckD",
-        "column_HhJWYj",
-        "column_TRJfte"
-      ],
+      "block_order": ["column_3cQckD", "column_HhJWYj", "column_TRJfte"],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "display_id": false,
@@ -423,10 +404,7 @@
           }
         }
       },
-      "block_order": [
-        "plan_xmDMdP",
-        "plan_MtAR4q"
-      ],
+      "block_order": ["plan_xmDMdP", "plan_MtAR4q"],
       "name": "Pricing table",
       "settings": {
         "display_id": false,
@@ -484,10 +462,7 @@
           }
         }
       },
-      "block_order": [
-        "text_GzBpnz",
-        "text_DkN7rF"
-      ],
+      "block_order": ["text_GzBpnz", "text_DkN7rF"],
       "name": "Two products section",
       "settings": {
         "p_top": 80,
@@ -516,11 +491,7 @@
           }
         }
       },
-      "block_order": [
-        "text_YBWJWN",
-        "text_G4EaEN",
-        "text_8EMxTF"
-      ],
+      "block_order": ["text_YBWJWN", "text_G4EaEN", "text_8EMxTF"],
       "name": "Profile information",
       "settings": {
         "bg_color": "#1a1a1a",
