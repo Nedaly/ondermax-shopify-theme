@@ -123,17 +123,17 @@
 }
 
 .omx-hero-cta-primary {
-  background: #007bff;
+  background: #1c8e8e;
   color: white;
-  border-color: #007bff;
+  border-color: #1c8e8e;
 }
 
 .omx-hero-cta-primary:hover,
 .omx-hero-cta-primary:focus {
-  background: #0056b3;
-  border-color: #0056b3;
+  background: #156b6b;
+  border-color: #156b6b;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(28, 142, 142, 0.3);
 }
 
 .omx-hero-cta-secondary {
@@ -197,7 +197,7 @@
   display: block;
   width: 100%;
   padding: 1rem;
-  background: #007bff;
+  background: #1c8e8e;
   color: white;
   text-decoration: none;
   text-align: center;
@@ -209,7 +209,7 @@
 
 .omx-hero-sticky-button:hover,
 .omx-hero-sticky-button:focus {
-  background: #0056b3;
+  background: #156b6b;
 }
 
 /* Responsive Design */
@@ -288,7 +288,7 @@
 .omx-hero-cta-primary:focus,
 .omx-hero-cta-secondary:focus,
 .omx-hero-sticky-button:focus {
-  outline: 2px solid #007bff;
+  outline: 2px solid #1c8e8e;
   outline-offset: 2px;
 }
 
