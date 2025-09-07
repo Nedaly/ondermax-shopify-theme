@@ -1,0 +1,43 @@
+{% comment %} H-03 • Ondermax Benefits {% endcomment %}
+<section class="omx-container omx-benefits">
+  <div class="omx-inner">
+    {% if section.settings.heading != blank %}
+      <h2 class="omx-h2">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="omx-benefit-grid">
+      {% for block in section.blocks %}
+        <div class="omx-benefit" {{ block.shopify_attributes }}>
+          {% if block.settings.icon != blank %}
+            <img class="omx-icon" src="{{ block.settings.icon | image_url: width: 96 }}" alt="" loading="lazy" width="96" height="96">
+          {% endif %}
+          <h3 class="omx-bh">{{ block.settings.title }}</h3>
+          <p class="omx-bp">{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ondermax • Benefits",
+  "class": "section-omx-benefits",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Designed for High Performance" }
+  ],
+  "blocks": [
+    {
+      "type": "omx_benefit",
+      "name": "Benefit",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icon (optional)" },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "textarea", "id": "text", "label": "Short description" }
+      ]
+    }
+  ],
+  "max_blocks": 5,
+  "presets": [{ "name": "Benefits (3–5)" }]
+}
+{% endschema %}
