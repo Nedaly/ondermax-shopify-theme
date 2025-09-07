@@ -1,0 +1,110 @@
+{% comment %} H-01 • Ondermax Hero (CRO + CLS-safe) {% endcomment %}
+<section class="section-omx-hero" role="banner" aria-label="Ondermax hero">
+  <div class="omx-hero-media" style="aspect-ratio: 16/9; width: 100%;">
+    {% if section.settings.use_video and section.settings.video != blank %}
+      {% assign mp4 = section.settings.video | file_url %}
+      <video class="omx-hero-media-element" autoplay muted loop playsinline preload="metadata"
+             aria-hidden="true" width="1920" height="1080" poster="{{ section.settings.fallback | image_url: width:1920 }}">
+        <source src="{{ mp4 }}" type="video/mp4">
+      </video>
+    {% elsif section.settings.image != blank %}
+      {% assign img = section.settings.image %}
+      <img class="omx-hero-media-element"
+           src="{{ img | image_url: width: 1920 }}"
+           srcset="
+             {{ img | image_url: width: 768 }} 768w,
+             {{ img | image_url: width: 1280 }} 1280w,
+             {{ img | image_url: width: 1600 }} 1600w,
+             {{ img | image_url: width: 1920 }} 1920w"
+           sizes="(max-width: 768px) 100vw, 100vw"
+           width="1920" height="1080" alt="{{ section.settings.image_alt | escape }}"
+           loading="eager" fetchpriority="high">
+    {% endif %}
+    <div class="omx-hero-overlay" style="--overlay-opacity: {{ section.settings.overlay_strength | divided_by: 100.0 }};"></div>
+  </div>
+
+  <div class="omx-hero-content omx-hero-content--{{ section.settings.align }}">
+    {% if section.settings.kicker != blank %}
+      <div class="omx-hero-kicker" aria-hidden="true">{{ section.settings.kicker }}</div>
+    {% endif %}
+    <h1 class="omx-hero-title">{{ section.settings.heading }}</h1>
+    {% if section.settings.subheading != blank %}
+      <p class="omx-hero-sub">{{ section.settings.subheading }}</p>
+    {% endif %}
+
+    <div class="omx-hero-cta">
+      {% if section.settings.primary_label != blank and section.settings.primary_link != blank %}
+        <a class="omx-hero-cta-primary" href="{{ section.settings.primary_link }}" 
+           data-analytics="hero_cta_primary" aria-label="{{ section.settings.primary_label }}">
+          {{ section.settings.primary_label }}
+        </a>
+      {% endif %}
+      {% if section.settings.secondary_label != blank and section.settings.secondary_link != blank %}
+        <a class="omx-hero-cta-secondary" href="{{ section.settings.secondary_link }}" 
+           data-analytics="hero_cta_secondary" aria-label="{{ section.settings.secondary_label }}">
+          {{ section.settings.secondary_label }}
+        </a>
+      {% endif %}
+    </div>
+
+    {% if section.settings.badge_enable %}
+      <ul class="omx-hero-badges" aria-label="Key results">
+        {% if section.settings.badge_1 != blank %}<li class="omx-hero-badge"><strong>{{ section.settings.badge_1 }}</strong></li>{% endif %}
+        {% if section.settings.badge_2 != blank %}<li class="omx-hero-badge"><strong>{{ section.settings.badge_2 }}</strong></li>{% endif %}
+        {% if section.settings.badge_3 != blank %}<li class="omx-hero-badge"><strong>{{ section.settings.badge_3 }}</strong></li>{% endif %}
+        {% if section.settings.badge_4 != blank %}<li class="omx-hero-badge"><strong>{{ section.settings.badge_4 }}</strong></li>{% endif %}
+      </ul>
+    {% endif %}
+  </div>
+
+  {% if section.settings.mobile_sticky_cta %}
+    <div class="omx-hero-sticky-cta" data-sticky-cta>
+      <a class="omx-hero-sticky-button" href="{{ section.settings.primary_link | default: '#shop' }}" 
+         data-analytics="hero_sticky_cta">
+        {{ section.settings.sticky_label | default: section.settings.primary_label | default: 'Shop now' }}
+      </a>
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Ondermax • Hero",
+  "class": "section-omx-hero",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Just Results." },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Elevate energy by day. Sleep deeper by night." },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "SURGE • DRIFT — The Complete System" },
+
+    { "type": "checkbox", "id": "use_video", "label": "Use background video", "default": false },
+    { "type": "video", "id": "video", "label": "Background video (mp4)" },
+    { "type": "image_picker", "id": "fallback", "label": "Fallback poster (optional)" },
+    { "type": "image_picker", "id": "image", "label": "Background image (if video off)" },
+    { "type": "text", "id": "image_alt", "label": "Background alt text", "default": "Ondermax background" },
+    { "type": "range", "id": "overlay_strength", "label": "Overlay strength", "min": 0, "max": 90, "step": 5, "default": 40 },
+
+    { "type": "select", "id": "align", "label": "Content alignment", "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+
+    { "type": "url", "id": "primary_link", "label": "Primary CTA link" },
+    { "type": "text", "id": "primary_label", "label": "Primary CTA label", "default": "Shop the stack" },
+    { "type": "url", "id": "secondary_link", "label": "Secondary CTA link" },
+    { "type": "text", "id": "secondary_label", "label": "Secondary CTA label", "default": "Learn more" },
+
+    { "type": "checkbox", "id": "badge_enable", "label": "Show results badges", "default": true },
+    { "type": "text", "id": "badge_1", "label": "Badge 1", "default": "98% satisfaction" },
+    { "type": "text", "id": "badge_2", "label": "Badge 2", "default": "500+ positive reviews" },
+    { "type": "text", "id": "badge_3", "label": "Badge 3", "default": "Clinically-inspired" },
+    { "type": "text", "id": "badge_4", "label": "Badge 4", "default": "Doctor Built" },
+
+    { "type": "checkbox", "id": "mobile_sticky_cta", "label": "Enable mobile sticky CTA", "default": true },
+    { "type": "text", "id": "sticky_label", "label": "Sticky CTA label", "default": "Shop now" }
+  ],
+  "presets": [{ "name": "Ondermax Hero" }]
+}
+{% endschema %}
