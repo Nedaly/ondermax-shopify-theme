@@ -1163,11 +1163,13 @@
 
 .two-products-sec {
   padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .two-products-sec .section-padding,
 .two-products-sec [class*='section-'][class*='-padding'] {
   padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* === Testimonials Section Mobile Fixes ================================ */
@@ -1188,11 +1190,13 @@
 
   .two-products-sec {
     padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 
   .two-products-sec .section-padding,
   .two-products-sec [class*='section-'][class*='-padding'] {
     padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 
   .testimonials .multicolumn-card {
