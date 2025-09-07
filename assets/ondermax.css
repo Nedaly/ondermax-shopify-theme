@@ -1156,6 +1156,17 @@
   padding-top: 0 !important;
 }
 
+/* Force benefits-story cards to stack vertically on all screen sizes */
+.benefits-story__grid {
+  grid-template-columns: 1fr !important;
+  gap: 3rem !important;
+}
+
+.benefit-card {
+  max-width: 400px !important;
+  margin: 0 auto !important;
+}
+
 .testimonials .section-padding,
 .testimonials [class*='section-'][class*='-padding'] {
   padding-top: 0 !important;
@@ -1181,6 +1192,17 @@
   /* Ensure no top padding on mobile */
   .benefits-story {
     padding-top: 0 !important;
+  }
+
+  /* Force benefits-story cards to stack on mobile */
+  .benefits-story__grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .benefit-card {
+    max-width: 100% !important;
+    margin: 0 auto !important;
   }
 
   .testimonials .section-padding,
