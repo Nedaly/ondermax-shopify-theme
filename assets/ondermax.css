@@ -1161,6 +1161,15 @@
   padding-top: 0 !important;
 }
 
+.two-products-sec {
+  padding-top: 0 !important;
+}
+
+.two-products-sec .section-padding,
+.two-products-sec [class*='section-'][class*='-padding'] {
+  padding-top: 0 !important;
+}
+
 /* === Testimonials Section Mobile Fixes ================================ */
 @media (max-width: 990px) {
   .testimonials {
@@ -1174,6 +1183,15 @@
 
   .testimonials .section-padding,
   .testimonials [class*='section-'][class*='-padding'] {
+    padding-top: 0 !important;
+  }
+
+  .two-products-sec {
+    padding-top: 0 !important;
+  }
+
+  .two-products-sec .section-padding,
+  .two-products-sec [class*='section-'][class*='-padding'] {
     padding-top: 0 !important;
   }
 

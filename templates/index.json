@@ -286,7 +286,7 @@
       "block_order": ["text_GzBpnz", "text_DkN7rF"],
       "name": "Two products section",
       "settings": {
-        "p_top": 80,
+        "p_top": 0,
         "p_bottom": 80
       }
     },
