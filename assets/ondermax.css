@@ -1192,6 +1192,66 @@
   text-align: center !important;
 }
 
+/* Make Dr. Nedal Yassin look like a signature */
+.profile_info .pir_name {
+  font-family: 'Brush Script MT', 'Lucida Handwriting', cursive !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: 2.2rem !important;
+  color: #cff3f3 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  margin-bottom: 0.5rem !important;
+  transform: rotate(-2deg) !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Enhance the colorful dots */
+.profile_info .pir_tags {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 2rem !important;
+  margin-top: 2rem !important;
+}
+
+.profile_info .pir_tag {
+  position: relative !important;
+  padding-left: 1.5rem !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  color: #ffffff !important;
+}
+
+.profile_info .pir_tag::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 12px !important;
+  height: 12px !important;
+  background: linear-gradient(
+    135deg,
+    #1c8e8e 0%,
+    #0f3460 50%,
+    #7209b7 100%
+  ) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 8px rgba(28, 142, 142, 0.4) !important;
+  animation: pulse 2s infinite !important;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translateY(-50%) scale(1);
+    box-shadow: 0 2px 8px rgba(28, 142, 142, 0.4);
+  }
+  50% {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 12px rgba(28, 142, 142, 0.6);
+  }
+}
+
 .testimonials .section-padding,
 .testimonials [class*='section-'][class*='-padding'] {
   padding-top: 0 !important;
@@ -1237,6 +1297,23 @@
 
   .profile_info_left {
     max-width: 100% !important;
+  }
+
+  /* Signature styling on mobile */
+  .profile_info .pir_name {
+    font-size: 1.8rem !important;
+    transform: rotate(-1deg) !important;
+  }
+
+  /* Colorful dots on mobile */
+  .profile_info .pir_tags {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    align-items: center !important;
+  }
+
+  .profile_info .pir_tag {
+    font-size: 0.9rem !important;
   }
 
   .testimonials .section-padding,
