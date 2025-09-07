@@ -80,15 +80,124 @@
     --color-foreground: {{ section.settings.custom_cards_colors_heading.red }}, {{ section.settings.custom_cards_colors_heading.green }}, {{ section.settings.custom_cards_colors_heading.blue }};
   }
 
-  /* CUSTOM CSS */
+  /* CUSTOM CSS - Enhanced UX for Stick it Absorb it Feel it */
+
+  /* Enhanced card hover effects */
+  .multicolumn-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .multicolumn-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(109, 56, 139, 0.1) 0%, rgba(109, 56, 139, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .multicolumn-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .multicolumn-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Enhanced image animations */
+  .multicolumn-card .multicolumn-card__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  }
 
   .multicolumn-card .multicolumn-card__image-wrapper .media img {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
   }
 
   .multicolumn-card:hover .multicolumn-card__image-wrapper .media img {
+    transform: scale(1.1);
+    filter: brightness(1.1) saturate(1.2);
+  }
+
+  /* Enhanced text animations */
+  .multicolumn-card h3 {
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+  }
+
+  .multicolumn-card:hover h3 {
+    color: rgb(109, 56, 139);
+    transform: translateY(-2px);
+  }
+
+  .multicolumn-card .rte {
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+  }
+
+  .multicolumn-card:hover .rte {
+    transform: translateY(-2px);
+  }
+
+  /* Pulse animation for icons */
+  .multicolumn-card .multicolumn-card__image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(109, 56, 139, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+    z-index: 1;
+  }
+
+  .multicolumn-card:hover .multicolumn-card__image-wrapper::after {
+    width: 120%;
+    height: 120%;
     opacity: 0;
   }
+
+  /* Enhanced mobile interactions */
+  @media (max-width: 749px) {
+    .multicolumn-card:active {
+      transform: translateY(-4px) scale(0.98);
+    }
+    
+    .multicolumn-card .multicolumn-card__image-wrapper .media img {
+      transition: all 0.3s ease;
+    }
+    
+    .multicolumn-card:active .multicolumn-card__image-wrapper .media img {
+      transform: scale(1.05);
+    }
+  }
+
+  /* Improved focus states for accessibility */
+  .multicolumn-card:focus-within {
+    outline: 2px solid rgb(109, 56, 139);
+    outline-offset: 4px;
+  }
+
+  /* Staggered animation for cards */
+  .multicolumn-card:nth-child(1) { animation-delay: 0.1s; }
+  .multicolumn-card:nth-child(2) { animation-delay: 0.2s; }
+  .multicolumn-card:nth-child(3) { animation-delay: 0.3s; }
 {%- endstyle -%}
 
 <div id="multicolumn-{{ section.id }}" class="multicolumn animate-section animate--hidden color-scheme-{{ section.id }} color-{{ section.settings.color_scheme }} gradient{% if section.settings.title == blank %} no-heading{% endif %} content-for-grouping {{ section.settings.visibility }}" data-mobile-columns="{{ section.settings.columns_mobile }}">
@@ -195,7 +304,11 @@
               {%- endif -%}
               <li class="splide__slide">
                 <div class="splide__slide__container" style="--index:{{ forloop.index0 | plus: content_index }};" {{ block.shopify_attributes }}>
-                  <div class="multicolumn-card multicolumn-card--media-{{ section.settings.media_position }} content-container color-{{ section.settings.cards_color_scheme }} cards-color-scheme-{{ section.id }} gradient{{ bg_diff_class }} {{ section.settings.column_alignment }} animate-item animate-item--child">
+                  <div class="multicolumn-card multicolumn-card--media-{{ section.settings.media_position }} content-container color-{{ section.settings.cards_color_scheme }} cards-color-scheme-{{ section.id }} gradient{{ bg_diff_class }} {{ section.settings.column_alignment }} animate-item animate-item--child" 
+                       role="button" 
+                       tabindex="0" 
+                       aria-label="Learn more about {{ block.settings.title | escape }}"
+                       data-card-index="{{ forloop.index0 }}">
                     {%- if block.settings.image != blank or block.settings.video != blank -%}
                       {% if section.settings.image_ratio == 'circle' %}
                         {% assign spaced_image = true %}
@@ -358,6 +471,118 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Enhanced interactions for multicolumn cards
+    const cards = document.querySelectorAll('#multicolumn-{{ section.id }} .multicolumn-card[role="button"]');
+    
+    cards.forEach((card, index) => {
+      // Add click/tap functionality
+      card.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Add ripple effect
+        const ripple = document.createElement('div');
+        ripple.style.cssText = `
+          position: absolute;
+          border-radius: 50%;
+          background: rgba(109, 56, 139, 0.3);
+          transform: scale(0);
+          animation: ripple 0.6s linear;
+          pointer-events: none;
+          z-index: 10;
+        `;
+        
+        const rect = card.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+        ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+        
+        card.style.position = 'relative';
+        card.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+        
+        // Handle card interaction (could link to product, scroll to section, etc.)
+        const cardIndex = card.dataset.cardIndex;
+        console.log(`Card ${cardIndex} clicked - ${card.querySelector('h3')?.textContent}`);
+        
+        // Add haptic feedback for mobile
+        if (navigator.vibrate) {
+          navigator.vibrate(50);
+        }
+      });
+      
+      // Enhanced keyboard navigation
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
+        }
+      });
+      
+      // Add intersection observer for scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationDelay = `${index * 0.1}s`;
+            entry.target.classList.add('animate-in');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      observer.observe(card);
+    });
+  });
+</script>
+
+<style>
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+  
+  .multicolumn-card.animate-in {
+    animation: slideInUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .multicolumn-card {
+      transition: none;
+    }
+    
+    .multicolumn-card:hover {
+      transform: none;
+    }
+    
+    .multicolumn-card .multicolumn-card__image-wrapper .media img {
+      transition: none;
+    }
+    
+    .multicolumn-card:hover .multicolumn-card__image-wrapper .media img {
+      transform: none;
+      filter: none;
+    }
+  }
+</style>
 
 {% schema %}
 {

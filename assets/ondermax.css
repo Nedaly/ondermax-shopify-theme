@@ -721,30 +721,68 @@
     overflow-x: hidden;
   }
 
+  /* Show all 3 columns on mobile for "Stick it Absorb it Feel it" section */
   .multicolumn-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1rem !important;
+    flex-direction: row !important;
   }
 
   .multicolumn-card {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
+    /* Enhanced mobile touch targets */
+    min-height: 180px;
+    touch-action: manipulation;
   }
 
   .multicolumn-card__info {
-    padding: 1.5rem !important;
+    padding: 1rem !important;
   }
 
   .multicolumn-card h3 {
-    font-size: clamp(18px, 4vw, 24px) !important;
+    font-size: clamp(14px, 3vw, 18px) !important;
     line-height: 1.2;
+    /* Better mobile typography for 3-column layout */
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
   }
 
   .multicolumn-card .rte {
-    font-size: clamp(14px, 3vw, 16px) !important;
-    line-height: 1.5;
+    font-size: clamp(11px, 2.5vw, 13px) !important;
+    line-height: 1.4;
+    /* Improved readability for smaller cards */
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Enhanced mobile interactions */
+  .multicolumn-card:active {
+    transform: translateY(-2px) scale(0.98) !important;
+    transition: transform 0.1s ease !important;
+  }
+
+  /* Better mobile image handling */
+  .multicolumn-card__image-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .multicolumn-card__image-wrapper .media img {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Improved mobile spacing */
+  .multicolumn .title-wrapper-with-link {
+    margin-bottom: 2rem;
+  }
+
+  .multicolumn .title {
+    font-size: clamp(24px, 6vw, 32px) !important;
+    line-height: 1.1;
+    margin-bottom: 1rem;
   }
 }
 
