@@ -1,3 +1,112 @@
+/* === OMx • Trusted Results — Contrast & Readability ===================== */
+/* On-dark tokens (safe fallbacks) */
+.section-omx-testimonials {
+  --on-dark-100: #f8fcfc; /* headings / names */
+  --on-dark-90: rgba(255, 255, 255, 0.92); /* primary body */
+  --on-dark-80: rgba(255, 255, 255, 0.86); /* secondary body */
+  --on-dark-70: rgba(255, 255, 255, 0.78); /* subhead */
+  --on-dark-rule: rgba(255, 255, 255, 0.14);
+  background: #0d1314; /* slightly lighter than before for contrast */
+  color: var(--on-dark-90);
+}
+
+/* Title + subhead */
+.section-omx-testimonials .section-title,
+.section-omx-testimonials h2 {
+  color: var(--on-dark-100);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.18); /* subtle lift on very dark bg */
+}
+.section-omx-testimonials .section-sub {
+  color: var(--on-dark-70);
+  font-weight: 600;
+  line-height: 1.45;
+  max-width: 56ch;
+  margin-inline: auto;
+}
+
+/* Card */
+.omx-quote {
+  background: #152023; /* lift card vs section */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border-radius: 18px;
+  padding: clamp(18px, 3.4vw, 26px);
+}
+
+/* Product tag + stars */
+.omx-quote .omx-product {
+  color: var(--on-dark-100);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.omx-quote .stars {
+  margin-top: 2px;
+}
+.omx-quote .stars svg,
+.omx-quote .stars .rating-star {
+  width: 18px;
+  height: 18px;
+  color: #ffd34d;
+  fill: #ffd34d;
+}
+
+/* Quote copy + author */
+.omx-quote .quote-text {
+  color: var(--on-dark-90);
+  font-weight: 650; /* a touch lighter than 700 */
+  font-size: clamp(17px, 1.95vw, 19px);
+  line-height: 1.58;
+  letter-spacing: 0;
+  margin: 10px 0 14px;
+  text-wrap: pretty;
+}
+.omx-quote .rule {
+  height: 1px;
+  background: var(--on-dark-rule);
+  margin: 10px 0 12px;
+}
+.omx-quote .author {
+  color: var(--on-dark-100);
+  font-weight: 850;
+  letter-spacing: 0.01em;
+}
+
+/* Quote badge */
+.omx-quote .badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  background: #1c8e8e;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 24px rgba(28, 142, 142, 0.45);
+}
+
+/* Dots visible on dark */
+.section-omx-testimonials .dots button {
+  background: rgba(255, 255, 255, 0.42);
+}
+.section-omx-testimonials .dots button[aria-current='true'] {
+  background: #1c8e8e;
+}
+
+/* Safety for ultra-dark displays: force min contrast for any dimmed copy */
+.section-omx-testimonials [data-dim],
+.section-omx-testimonials .muted {
+  color: var(--on-dark-80) !important;
+}
+
+/* Respect reduced-motion users; keep styles intact */
+@media (prefers-reduced-motion: reduce) {
+  .section-omx-testimonials * {
+    text-shadow: none;
+  }
+}
+
 /* ===== HERO • Concise React-match ======================================= */
 :root {
   --omx: #1c8e8e;
