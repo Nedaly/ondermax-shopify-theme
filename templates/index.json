@@ -14,13 +14,26 @@
       "settings": {}
     },
     "hero": {
-      "type": "home-hero",
+      "type": "ondermax-hero",
       "settings": {
+        "kicker": "DOCTOR-BUILT, CLINICALLY-INSPIRED SYSTEM",
         "heading": "Just Results.",
         "subheading": "SURGE + DRIFT — The biohacking system.",
-        "cta_label": "Shop the Stack",
-        "cta_url": "#",
-        "hero_image": ""
+        "use_video": true,
+        "video": "",
+        "video_cdn_url": "https://cdn.shopify.com/videos/c/o/v/9c6b6b3fde704cb189ca9fc6334ddc41.mp4",
+        "fallback": "",
+        "image": "",
+        "overlay_strength": 30,
+        "primary_link": "#",
+        "primary_label": "Shop the Stack",
+        "secondary_link": "#",
+        "secondary_label": "How it Works ↓",
+        "learn_anchor": "science-authority",
+        "enable_smooth_scroll": true,
+        "badge_enable": true,
+        "mobile_sticky_cta": false,
+        "sticky_label": "Shop now"
       }
     },
     "props": {
@@ -332,98 +345,6 @@
         "p_bottom": 80
       }
     },
-    "pricing_table_fpHQc4": {
-      "type": "pricing-table",
-      "blocks": {
-        "plan_xmDMdP": {
-          "type": "plan",
-          "settings": {
-            "product": "",
-            "variant_index": 1,
-            "card_style": "style-1",
-            "color_scheme": "background-1",
-            "accent_color": "accent-1",
-            "badge": "",
-            "badge_color_scheme": "inverse",
-            "displayed_image": "hidden",
-            "title": "Individual Patches",
-            "price": "$27",
-            "price_text": "each patch",
-            "icon": "",
-            "filled_icon": false,
-            "description": "",
-            "desc_alignment": "center",
-            "benefits": "<p>Choose SURGE or DRIFT, 30-day supply, Free shipping, 30-day guarantee</p>",
-            "button_function": "link",
-            "button_label": "Shop Individual",
-            "link": "#",
-            "button_style_secondary": true,
-            "button_full_width": true,
-            "custom_colors_background": "#ffffff",
-            "custom_gradient_background": "",
-            "custom_colors_text": "#2e2a39",
-            "custom_colors_solid_button_background": "#dd1d1d",
-            "custom_colors_solid_button_text": "#ffffff",
-            "custom_colors_outline_button": "#dd1d1d",
-            "custom_accent_color": "#dd1d1d",
-            "custom_accent_text_color": "#ffffff"
-          }
-        },
-        "plan_MtAR4q": {
-          "type": "plan",
-          "settings": {
-            "product": "",
-            "variant_index": 1,
-            "card_style": "style-1",
-            "color_scheme": "background-1",
-            "accent_color": "accent-1",
-            "badge": "",
-            "badge_color_scheme": "inverse",
-            "displayed_image": "hidden",
-            "title": "Stack Bundle",
-            "price": "$47",
-            "price_text": "complete system(Save $7)",
-            "icon": "local fire department",
-            "filled_icon": false,
-            "description": "",
-            "desc_alignment": "center",
-            "benefits": "<p>Both SURGE + DRIFT patches,Complete 24/7 system,30-day supply each,Free priority shipping,30-day money-back guarantee</p>",
-            "button_function": "link",
-            "button_label": "Shop the Stack",
-            "link": "#",
-            "button_style_secondary": false,
-            "button_full_width": true,
-            "custom_colors_background": "#ffffff",
-            "custom_gradient_background": "",
-            "custom_colors_text": "#2e2a39",
-            "custom_colors_solid_button_background": "#dd1d1d",
-            "custom_colors_solid_button_text": "#ffffff",
-            "custom_colors_outline_button": "#dd1d1d",
-            "custom_accent_color": "#dd1d1d",
-            "custom_accent_text_color": "#ffffff"
-          }
-        }
-      },
-      "block_order": ["plan_xmDMdP", "plan_MtAR4q"],
-      "name": "Pricing table",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "The Complete System – SURGE + DRIFT.",
-        "title_highlight_color": "#6d388b",
-        "heading_size": "h1",
-        "text": "<p>Best Value · Free Shipping · 30-Day Guarantee.</p>",
-        "icon_size": "medium",
-        "color_scheme": "background-1",
-        "desktop_spacing": 40,
-        "cards_alignment": "flex-start",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#121212"
-      }
-    },
     "two_products_sec_pypD4z": {
       "type": "two-products-sec",
       "blocks": {
@@ -686,7 +607,6 @@
     "testimonials_3EzwNj",
     "result_count_8CDFa3",
     "icon_with_text_blocks_GERKNa",
-    "pricing_table_fpHQc4",
     "two_products_sec_pypD4z",
     "profile_info_section_ykCnyb",
     "testimonial_grid_section_Bk6fah",

@@ -1,0 +1,170 @@
+{% comment %}
+HERO • Ondermax (concise, matches React spec; image-first, video optional)
+- Left-aligned column (~560px), clean teal mood, no heavy shadows
+- Primary pill CTA + "How it Works ↓" text link (smooth scroll)
+- Trust row: ★★★★★ 500+ results · Free worldwide shipping · 30-Day Guarantee
+- CLS-safe; a11y; analytics hooks
+{% endcomment %}
+
+<section class="section-omx-hero rx" role="banner" aria-label="Ondermax hero"
+  style="--overlay: {{ section.settings.overlay_strength | divided_by: 100.0 }}; --omx:#1C8E8E; --omx-deep:#167777;">
+  <!-- Media -->
+  <div class="omx-hero-media" aria-hidden="true">
+    {%- assign mp4_url = nil -%}
+
+    {%- if section.settings.use_video -%}
+      {%- if section.settings.video != blank -%}
+        {%- comment -%} If editor picked a video asset {%- endcomment -%}
+        {%- assign mp4_url = section.settings.video | file_url -%}
+      {%- elsif section.settings.video_cdn_url != blank -%}
+        {%- comment -%} Use explicit Shopify CDN URL you provided {%- endcomment -%}
+        {%- assign mp4_url = section.settings.video_cdn_url -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if mp4_url -%}
+      <video
+        class="hero-media hero-abs"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="{{ section.settings.fallback | image_url: width: 1920 }}"
+      >
+        <source src="{{ mp4_url }}" type="video/mp4">
+      </video>
+    {%- elsif section.settings.image != blank -%}
+      {%- assign img = section.settings.image -%}
+      <img
+        class="hero-media hero-abs"
+        src="{{ img | image_url: width: 1600 }}"
+        srcset="
+          {{ img | image_url: width: 768 }} 768w,
+          {{ img | image_url: width: 1280 }} 1280w,
+          {{ img | image_url: width: 1600 }} 1600w,
+          {{ img | image_url: width: 1920 }} 1920w"
+        sizes="100vw"
+        width="1920"
+        height="1080"
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+      >
+    {%- else -%}
+      <div class="hero-media hero-abs hero-gradient"></div>
+    {%- endif -%}
+
+    <div class="hero-mood"></div>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="omx-container">
+    <div class="hero-grid">
+      <div class="hero-col">
+        <div class="hero-scrim" aria-hidden="true"></div>
+
+        {% if section.settings.kicker != blank %}
+          <div class="kicker">{{ section.settings.kicker }}</div>
+        {% endif %}
+
+        <h1 class="title">{{ section.settings.heading | default: 'Just Results.' }}</h1>
+
+        {% if section.settings.subheading != blank %}
+          <p class="sub">{{ section.settings.subheading }}</p>
+        {% endif %}
+
+        <div class="cta-row">
+          {% if section.settings.primary_label and section.settings.primary_link %}
+            <a class="btn btn-teal" href="{{ section.settings.primary_link }}" data-hero-cta="primary">
+              {{ section.settings.primary_label }}
+            </a>
+          {% endif %}
+          {% if section.settings.secondary_label %}
+            <a class="btn-link"
+               {% if section.settings.enable_smooth_scroll and section.settings.learn_anchor != blank %}
+                 href="#{{ section.settings.learn_anchor | escape }}"
+                 data-scrollto="{{ section.settings.learn_anchor | escape }}"
+               {% else %}
+                 href="{{ section.settings.secondary_link | default: '#' }}"
+               {% endif %}
+               data-hero-cta="secondary">
+              {{ section.settings.secondary_label }}
+            </a>
+          {% endif %}
+        </div>
+
+        {% if section.settings.badge_enable %}
+          <ul class="trust" aria-label="Trust indicators">
+            <li class="trust-item stars" aria-label="5 star rating">
+              {% for i in (1..5) %}
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.3 4.7 5.2.8-3.8 3.7.9 5.2L10 13.7l-4.6 2.3.9-5.2L2.5 7.1l5.2-.8L10 1.6z"/></svg>
+              {% endfor %}
+              <span>500+ results</span>
+            </li>
+            <li class="dot" aria-hidden="true">·</li>
+            <li class="trust-item">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 12h2l2-3 3 4 3-5 4 7H2z"/></svg>
+              <span>Free worldwide shipping</span>
+            </li>
+            <li class="dot" aria-hidden="true">·</li>
+            <li class="trust-item">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2l6 3v5c0 4.4-2.9 6.7-6 8-3.1-1.3-6-3.6-6-8V5l6-3zm0 5a3 3 0 100 6 3 3 0 000-6z"/></svg>
+              <span>30-Day Guarantee</span>
+            </li>
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% if section.settings.mobile_sticky_cta and section.settings.primary_label and section.settings.primary_link %}
+    <div class="cta-sticky" data-hero-cta="sticky">
+      <a class="btn btn-teal" href="{{ section.settings.primary_link }}">{{ section.settings.sticky_label | default: section.settings.primary_label }}</a>
+    </div>
+  {% endif %}
+
+  {% if section.settings.enable_smooth_scroll %}
+    <script>
+      document.addEventListener('click',function(e){
+        var t=e.target.closest('[data-scrollto]'); if(!t) return;
+        var id=t.getAttribute('data-scrollto'), el=id && document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+      },{passive:false});
+    </script>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Ondermax • Hero (concise)",
+  "class": "section-omx-hero",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "DOCTOR-BUILT, CLINICALLY-INSPIRED SYSTEM" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Just Results." },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "SURGE + DRIFT — The biohacking system." },
+
+    { "type": "checkbox", "id": "use_video", "label": "Use background video (keep OFF for now)", "default": false },
+    { "type": "video", "id": "video", "label": "Background video (mp4)" },
+    { "type": "text", "id": "video_cdn_url", "label": "Video CDN URL (alternative to upload)" },
+    { "type": "image_picker", "id": "fallback", "label": "Video poster (fallback image)" },
+    { "type": "image_picker", "id": "image", "label": "Background image (when video OFF)" },
+
+    { "type": "range", "id": "overlay_strength", "label": "Overlay strength", "min": 0, "max": 90, "step": 5, "default": 30 },
+
+    { "type": "url", "id": "primary_link", "label": "Primary CTA link" },
+    { "type": "text", "id": "primary_label", "label": "Primary CTA label", "default": "Shop the Stack" },
+    { "type": "url", "id": "secondary_link", "label": "Secondary link (fallback when no anchor)" },
+    { "type": "text", "id": "secondary_label", "label": "Secondary label", "default": "How it Works ↓" },
+    { "type": "text", "id": "learn_anchor", "label": "Anchor id for 'Learn more'", "default": "science-authority" },
+    { "type": "checkbox", "id": "enable_smooth_scroll", "label": "Enable smooth scroll", "default": true },
+
+    { "type": "checkbox", "id": "badge_enable", "label": "Show trust row", "default": true },
+
+    { "type": "checkbox", "id": "mobile_sticky_cta", "label": "Enable mobile sticky CTA", "default": true },
+    { "type": "text", "id": "sticky_label", "label": "Sticky CTA label", "default": "Shop now" }
+  ],
+  "presets": [{ "name": "Ondermax Hero" }]
+}
+{% endschema %}
