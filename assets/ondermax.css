@@ -721,12 +721,11 @@
     overflow-x: hidden;
   }
 
-  /* Show all 3 columns on mobile for "Stick it Absorb it Feel it" section */
+  /* Show all 3 columns stacked on mobile for "Stick it Absorb it Feel it" section */
   .multicolumn-list {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 1rem !important;
-    flex-direction: row !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
   }
 
   .multicolumn-card {
@@ -743,18 +742,18 @@
   }
 
   .multicolumn-card h3 {
-    font-size: clamp(14px, 3vw, 18px) !important;
+    font-size: clamp(20px, 5vw, 28px) !important;
     line-height: 1.2;
-    /* Better mobile typography for 3-column layout */
+    /* Better mobile typography for stacked layout */
     font-weight: 600;
     letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
   }
 
   .multicolumn-card .rte {
-    font-size: clamp(11px, 2.5vw, 13px) !important;
-    line-height: 1.4;
-    /* Improved readability for smaller cards */
+    font-size: clamp(16px, 4vw, 18px) !important;
+    line-height: 1.5;
+    /* Improved readability for stacked cards */
     color: rgba(0, 0, 0, 0.8);
   }
 
