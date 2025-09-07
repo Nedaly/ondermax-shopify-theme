@@ -75,10 +75,10 @@
         "sections--21450414096679__fe1c8c67-b84c-4466-a515-70df3134c1c0-announcement-1": {
           "type": "announcement",
           "settings": {
-            "text": "🚚Free express shipping · 🔒30‑day money‑back guarantee · ⚡Secure checkout.",
+            "text": "🚚 Free shipping · 🔒 30-day guarantee",
             "text_alignment": "center",
-            "mobile_text_size": 15,
-            "desktop_text_size": 15,
+            "mobile_text_size": 10,
+            "desktop_text_size": 12,
             "icons": "",
             "icon": "",
             "filled_icon": false,
@@ -95,13 +95,13 @@
       "block_order": [
         "sections--21450414096679__fe1c8c67-b84c-4466-a515-70df3134c1c0-announcement-1"
       ],
-      "disabled": true,
+      "disabled": false,
       "settings": {
         "visibility": "always-display",
         "columns_desktop": 1,
         "columns_mobile": 1,
         "desktop_spacing": 32,
-        "mobile_spacing": 0,
+        "mobile_spacing": 8,
         "show_separator": false,
         "color_scheme": "inverse",
         "slider_mobile": true,

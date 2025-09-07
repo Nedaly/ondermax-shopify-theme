@@ -90,16 +90,28 @@
   }
   static-header.header-wrapper {
     position: fixed; /* keep it fixed so hiding works */
-    top: 0;
+    top: 32px; /* position below announcement bar */
     left: 0;
     right: 0;
     transition: transform 0.3s ease;
     z-index: 1000; /* make sure it stays on top */
   }
+  
+  @media screen and (min-width: 750px) {
+    static-header.header-wrapper {
+      top: 40px; /* position below announcement bar on desktop */
+    }
+  }
 
 static-header.header-wrapper.hide-header {
   transform: translateY(-100%);
-  top: 0;
+  top: 32px; /* maintain announcement bar offset when hiding */
+}
+
+@media screen and (min-width: 750px) {
+  static-header.header-wrapper.hide-header {
+    top: 40px; /* maintain announcement bar offset when hiding on desktop */
+  }
 }
 
   @media screen and (min-width: 750px) {

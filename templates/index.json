@@ -9,10 +9,6 @@
  */
 {
   "sections": {
-    "announcement": {
-      "type": "announcement-free-shipping",
-      "settings": {}
-    },
     "hero": {
       "type": "ondermax-hero",
       "settings": {
@@ -600,7 +596,6 @@
     }
   },
   "order": [
-    "announcement",
     "hero",
     "props",
     "multicolumn_ww3yME",
