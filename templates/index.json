@@ -42,19 +42,6 @@
       "type": "home-value-props",
       "settings": {}
     },
-    "custom_video_k6igPY": {
-      "type": "custom-video",
-      "name": "Custom Video",
-      "settings": {
-        "video_url": "",
-        "video": "shopify://files/videos/premium-health-and-wellness-background-v-38f0a651-20250829225729.mp4",
-        "enable_video_looping": true,
-        "video_ttl": "Just Results.",
-        "sub_title": "SURGE + DRIFT — The biohacking <br>system.",
-        "video_btn": "Shop The Stock",
-        "video_btn_link": "#"
-      }
-    },
     "multicolumn_ww3yME": {
       "type": "multicolumn",
       "blocks": {
