@@ -1168,6 +1168,30 @@
   margin: 0 auto !important;
 }
 
+/* Profile Info Section - Stack vertically */
+.profile_info .profile_info_wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3rem !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.profile_info_left {
+  order: 1 !important;
+  flex: none !important;
+  width: 100% !important;
+  max-width: 400px !important;
+  margin: 0 auto !important;
+}
+
+.profile_info_right {
+  order: 2 !important;
+  flex: none !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
 .testimonials .section-padding,
 .testimonials [class*='section-'][class*='-padding'] {
   padding-top: 0 !important;
@@ -1204,6 +1228,15 @@
   .benefit-card {
     max-width: 100% !important;
     margin: 0 auto !important;
+  }
+
+  /* Profile Info Section - Stack vertically on mobile */
+  .profile_info .profile_info_wrapper {
+    gap: 2rem !important;
+  }
+
+  .profile_info_left {
+    max-width: 100% !important;
   }
 
   .testimonials .section-padding,
