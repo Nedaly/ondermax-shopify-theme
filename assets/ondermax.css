@@ -851,7 +851,29 @@
   }
 }
 
-/* === Multicolumn Section Mobile Fixes ================================== */
+/* === Multicolumn Section Improvements ================================== */
+
+/* Bigger icons for all screen sizes */
+.multicolumn-card .icon-bar-card__icon img {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+/* Remove colored background boxes */
+.multicolumn-card,
+.multicolumn-card .multicolumn-card__info,
+.multicolumn-card .icon-bar-card,
+.multicolumn-card .icon-bar-card__icon {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure no background colors from theme settings */
+.multicolumn-card[style*='background'] {
+  background: transparent !important;
+}
+
 @media (max-width: 990px) {
   .multicolumn {
     overflow-x: hidden;
@@ -899,26 +921,32 @@
     transition: transform 0.1s ease !important;
   }
 
-  /* Better mobile image handling */
-  .multicolumn-card__image-wrapper {
-    margin-bottom: 1rem;
+  /* Bigger icons for stacked layout */
+  .multicolumn-card .icon-bar-card__icon img {
+    width: 80px !important;
+    height: 80px !important;
   }
+}
 
-  .multicolumn-card__image-wrapper .media img {
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
+/* Better mobile image handling */
+.multicolumn-card__image-wrapper {
+  margin-bottom: 1rem;
+}
 
-  /* Improved mobile spacing */
-  .multicolumn .title-wrapper-with-link {
-    margin-bottom: 2rem;
-  }
+.multicolumn-card__image-wrapper .media img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-  .multicolumn .title {
-    font-size: clamp(24px, 6vw, 32px) !important;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-  }
+/* Improved mobile spacing */
+.multicolumn .title-wrapper-with-link {
+  margin-bottom: 2rem;
+}
+
+.multicolumn .title {
+  font-size: clamp(24px, 6vw, 32px) !important;
+  line-height: 1.1;
+  margin-bottom: 1rem;
 }
 
 /* === Testimonials Section Mobile Fixes ================================ */
