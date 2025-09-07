@@ -14,25 +14,33 @@
       "settings": {}
     },
     "hero": {
-      "type": "home-hero",
-      "settings": {}
+      "type": "ondermax-hero",
+      "settings": {
+        "kicker": "Doctor-built, clinically-inspired system",
+        "heading": "Just Results.",
+        "subheading": "SURGE + DRIFT — The biohacking system.",
+        "primary_label": "Shop the Stack",
+        "primary_link": "#",
+        "secondary_label": "Learn more",
+        "secondary_link": "#",
+        "use_video": true,
+        "video": "shopify://files/videos/premium-health-and-wellness-background-v-38f0a651-20250829225729.mp4",
+        "image": "",
+        "image_alt": "Ondermax hero background",
+        "overlay_strength": 40,
+        "align": "center",
+        "badge_enable": true,
+        "badge_1": "98% satisfaction",
+        "badge_2": "Doctor built",
+        "badge_3": "Clean formulation",
+        "badge_4": "No crash / No grogginess",
+        "mobile_sticky_cta": true,
+        "sticky_label": "Shop the Stack"
+      }
     },
     "props": {
       "type": "home-value-props",
       "settings": {}
-    },
-    "custom_video_k6igPY": {
-      "type": "custom-video",
-      "name": "Custom Video",
-      "settings": {
-        "video_url": "",
-        "video": "shopify://files/videos/premium-health-and-wellness-background-v-38f0a651-20250829225729.mp4",
-        "enable_video_looping": true,
-        "video_ttl": "Just Results.",
-        "sub_title": "SURGE + DRIFT — The biohacking <br>system.",
-        "video_btn": "Shop The Stock",
-        "video_btn_link": "#"
-      }
     },
     "multicolumn_ww3yME": {
       "type": "multicolumn",
@@ -594,19 +602,6 @@
         "p_bottom": 80
       }
     },
-    "custom_video_promo_rVwcWT": {
-      "type": "custom-video-promo",
-      "name": "Custom Video Promo",
-      "settings": {
-        "promo_video": "shopify://files/videos/premium-health-and-wellness-background-v-38f0a651-20250829225729.mp4",
-        "poster_gradient": "linear-gradient(135deg, rgba(46, 119, 126, 1), rgba(46, 119, 126, 1) 12%, rgba(31, 76, 102, 1) 50%, rgba(27, 63, 88, 1) 88%, rgba(27, 63, 88, 1) 100%)",
-        "heading": "Just Stick It.",
-        "subheading": "SURGE in the morning. DRIFT at night. Simple as that.",
-        "button_text": "Shop the Stack → Join the Movement",
-        "button_link": "#",
-        "button_subtext": "Transform your routine with thousands of others"
-      }
-    },
     "collapsible_content_XGKDTp": {
       "type": "collapsible-content",
       "blocks": {
@@ -716,7 +711,6 @@
     "announcement",
     "hero",
     "props",
-    "custom_video_k6igPY",
     "multicolumn_ww3yME",
     "testimonials_3EzwNj",
     "result_count_8CDFa3",
@@ -725,7 +719,6 @@
     "two_products_sec_pypD4z",
     "profile_info_section_ykCnyb",
     "testimonial_grid_section_Bk6fah",
-    "custom_video_promo_rVwcWT",
     "collapsible_content_XGKDTp"
   ]
 }
