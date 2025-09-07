@@ -231,10 +231,11 @@
   letter-spacing: 0.12em;
   font-weight: 700;
   color: #cff3f3;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   white-space: pre-line;
   line-height: 1.4;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: clamp(14px, 2vw, 18px);
 }
 .title {
   font-weight: 900;
@@ -242,14 +243,14 @@
   line-height: 0.9;
   letter-spacing: -0.03em;
   color: #fff;
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .sub {
   font-size: clamp(18px, 2.5vw, 24px);
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.85);
-  margin: 0 0 24px;
+  margin: 0 0 32px;
   white-space: pre-line;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   font-weight: 500;
@@ -259,12 +260,13 @@
 .cta-row {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   align-items: flex-start;
   align-self: flex-start;
   width: 100%;
   margin-left: 0;
   padding-left: 0;
+  margin-bottom: 40px;
 }
 .btn {
   display: inline-flex;
@@ -490,7 +492,9 @@
   gap: 20px;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-top: 28px;
+  justify-content: flex-start;
+  margin-top: 24px;
+  margin-bottom: 32px;
   color: rgba(255, 255, 255, 0.95);
   font-weight: 700;
   font-size: 0.9em;
@@ -568,6 +572,17 @@
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   transition: transform 0.3s ease;
 }
+
+/* Colored icons for specific badges */
+.trust-item:nth-child(2) svg {
+  fill: #4caf50; /* Green for shipping */
+  filter: drop-shadow(0 2px 4px rgba(76, 175, 80, 0.4));
+}
+
+.trust-item:nth-child(3) svg {
+  fill: #2196f3; /* Blue for guarantee */
+  filter: drop-shadow(0 2px 4px rgba(33, 150, 243, 0.4));
+}
 .trust-item:hover svg {
   transform: scale(1.1);
 }
@@ -644,21 +659,21 @@
   }
 
   .kicker {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
     line-height: 1.4;
     letter-spacing: 0.1em;
   }
 
   .title {
     font-size: clamp(42px, 12vw, 56px);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     line-height: 0.9;
     letter-spacing: -0.02em;
   }
 
   .sub {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-size: clamp(16px, 4vw, 20px);
     line-height: 1.5;
     opacity: 0.9;
@@ -707,7 +722,8 @@
 
   .trust {
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
     gap: 12px;
     flex-wrap: wrap;
     padding: 0 1rem;
@@ -741,6 +757,17 @@
 
   .trust-item.stars svg {
     color: #ffd700;
+  }
+
+  /* Colored icons for mobile */
+  .trust-item:nth-child(2) svg {
+    fill: #4caf50; /* Green for shipping */
+    filter: drop-shadow(0 2px 4px rgba(76, 175, 80, 0.4));
+  }
+
+  .trust-item:nth-child(3) svg {
+    fill: #2196f3; /* Blue for guarantee */
+    filter: drop-shadow(0 2px 4px rgba(33, 150, 243, 0.4));
   }
 
   /* Enhanced mobile touch targets */
