@@ -1337,6 +1337,17 @@
     opacity: 1 !important;
   }
 
+  /* Footer Policy Links - Separate Line */
+  .footer__copyright {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .footer__copyright .policies {
+    margin-bottom: 0.5rem !important;
+  }
+
   @media (max-width: 990px) {
     .footer .list-payment {
       gap: 0.75rem !important;
