@@ -1151,10 +1151,30 @@
   margin-right: 2px !important;
 }
 
+/* Remove top padding from sections on mobile */
+.benefits-story {
+  padding-top: 0 !important;
+}
+
+.testimonials .section-padding,
+.testimonials [class*='section-'][class*='-padding'] {
+  padding-top: 0 !important;
+}
+
 /* === Testimonials Section Mobile Fixes ================================ */
 @media (max-width: 990px) {
   .testimonials {
     overflow-x: hidden;
+  }
+
+  /* Ensure no top padding on mobile */
+  .benefits-story {
+    padding-top: 0 !important;
+  }
+
+  .testimonials .section-padding,
+  .testimonials [class*='section-'][class*='-padding'] {
+    padding-top: 0 !important;
   }
 
   .testimonials .multicolumn-card {
