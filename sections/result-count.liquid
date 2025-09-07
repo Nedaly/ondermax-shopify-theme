@@ -1,0 +1,210 @@
+<div class="result_count padding-{{ section.id }}">
+    <div class="page-width">
+        <div class="heading">{{ section.settings.heading }}</div>
+        <div class="result_count_blocks">
+            {% for block in section.blocks %}
+                <div class="result_count_block">
+                    <h1 class="rcb_title">{{ block.settings.title }}</h1>
+                    <div class="rcb_desc">{{ block.settings.desc }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<style>
+    .padding-{{ section.id }}{
+        padding-top:{{ section.settings.p_top | times: 0.75 | round: 0 }}px;
+        padding-bottom:{{ section.settings.p_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    .result_count{
+        background: {{ section.settings.bg_color }};
+    }
+
+    .result_count .result_count_blocks {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .result_count .heading {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 60px;
+        font-weight: 600;
+        letter-spacing: -2.5px;
+        color: #fff;
+        margin: 0;
+        line-height: 100%;
+        margin-bottom: 80px;
+        text-transform: capitalize;
+    }
+
+    .result_count .rcb_title {
+        font-size: 72px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        letter-spacing: 0;
+        color: #fff;
+        margin: 0;
+        line-height: 100%;
+        white-space: nowrap;
+        margin-bottom: 16px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .result_count .result_count_block {
+        flex: 0 0 calc(252px);
+        text-align: center;
+        padding: 40px;
+        border: 1px solid #303030;
+        border-radius: 1rem;
+        transition: 0.3s ease-in-out;
+        background: #262626;
+        &:hover{
+            background: #313131;
+            border-color: transparent;
+            box-shadow: 0 0 6px 0px rgba(0, 144, 141, 0.8);
+            transform: translateY(-10px);
+        }
+         &:before{
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            box-shadow: inset 0 0 20px 20px rgb(0 144 141 / 5%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 1rem;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .result_count .result_count_block:hover:before{
+        opacity: 1;
+    }
+
+    .result_count .result_count_block:hover .rcb_title{
+        color: #00908d;
+    }
+
+    .result_count .rcb_desc > * {
+        color: #cfcfcf;
+        font-family: poppins;
+        font-size: 18px;
+        letter-spacing: 0;
+        margin: 0;
+        line-height: 1.6;
+        font-weight: 600;
+    }
+
+    @media screen and (max-width: 768px){
+    .result_count .result_count_blocks {
+        flex-wrap: wrap;
+    }
+
+    .result_count .rcb_title {
+        font-size: 40px;
+    }
+
+    .result_count .rcb_desc > * {
+        font-size: 16px;
+    }
+
+    .result_count .heading {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 989px){
+
+    .result_count .rcb_title {
+        font-size: 50px;
+    }
+
+    .result_count .rcb_desc > * {
+        font-size: 20px;
+    }
+
+    .result_count .heading {
+        font-size: 40px;
+        margin-bottom: 60px;
+    }
+}
+
+    @media screen and (min-width: 750px){
+        .padding-{{ section.id }}{
+            padding-top:{{ section.settings.p_top }}px;
+            padding-bottom:{{ section.settings.p_bottom }}px;
+        }
+
+        .result_count .result_count_blocks{
+            flex-wrap: wrap;
+        }
+    }
+</style>
+
+{% schema %}
+    {
+        "name": "Result speak",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading"
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background color"
+            },
+            {
+                "type": "range",
+                "id": "p_top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "unit": "px",
+                "default": 0,
+                "label": "Padding top"
+            },
+            {
+                "type": "range",
+                "id": "p_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "unit": "px",
+                "default": 0,
+                "label": "Padding bottom"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "text",
+                "name": "Add block",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "desc",
+                        "label": "Description"
+                    }
+                ]
+            }
+        ],
+        "presets":[
+            {
+                "name": "Result count"
+            }
+        ]
+    }   
+{% endschema %}

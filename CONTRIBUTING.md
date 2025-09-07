@@ -5,15 +5,18 @@
 This project follows Git Flow branching strategy:
 
 ### Main Branches
+
 - **main**: Production-ready code, always deployable
 - **develop**: Integration branch for features, always stable
 
 ### Supporting Branches
-- **feature/***: New features developed from `develop`
-- **release/***: Release preparation from `develop` to `main`
-- **hotfix/***: Critical fixes directly to `main`
+
+- **feature/\***: New features developed from `develop`
+- **release/\***: Release preparation from `develop` to `main`
+- **hotfix/\***: Critical fixes directly to `main`
 
 ### Branch Naming Convention
+
 ```
 feature/hero-value-prop
 feature/navigation-redesign
@@ -26,6 +29,7 @@ hotfix/critical-checkout-bug
 All commit messages must follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
 
 ### Format
+
 ```
 <type>[optional scope]: <description>
 
@@ -35,6 +39,7 @@ All commit messages must follow the [Conventional Commits](https://www.conventio
 ```
 
 ### Types
+
 - **feat**: A new feature
 - **fix**: A bug fix
 - **chore**: Changes to build process or auxiliary tools
@@ -44,6 +49,7 @@ All commit messages must follow the [Conventional Commits](https://www.conventio
 - **perf**: A code change that improves performance
 
 ### Examples
+
 ```
 feat(hero): add value proposition section with CTA
 fix(checkout): resolve payment form validation error
@@ -57,13 +63,16 @@ perf(images): optimize hero banner loading
 ## Pull Request Requirements
 
 ### PR Title Format
+
 Include CSV ID reference in every PR title:
+
 ```
 [CSV-HP-003] feat(hero): add value proposition section
 [CSV-NAV-001] fix(navigation): resolve mobile menu toggle
 ```
 
 ### Definition of Done
+
 - [ ] Local preview works without console errors
 - [ ] `theme-check` passes with no warnings
 - [ ] Prettier formatting applied
@@ -97,7 +106,11 @@ While we don't enforce commitlint automatically yet, please follow the conventio
 {
   "extends": ["@commitlint/config-conventional"],
   "rules": {
-    "type-enum": [2, "always", ["feat", "fix", "chore", "refactor", "docs", "style", "perf"]]
+    "type-enum": [
+      2,
+      "always",
+      ["feat", "fix", "chore", "refactor", "docs", "style", "perf"]
+    ]
   }
 }
 ```

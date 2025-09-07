@@ -1,0 +1,40 @@
+{
+  "name": "ondermax-shopify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "shopify theme dev",
+    "check": "shopify theme check",
+    "push:staging": "shopify theme push --unpublished",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_ORG_OR_USERNAME/ondermax-shopify-theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YOUR_ORG_OR_USERNAME/ondermax-shopify-theme/issues"
+  },
+  "homepage": "https://github.com/YOUR_ORG_OR_USERNAME/ondermax-shopify-theme#readme",
+  "devDependencies": {
+    "@shopify/theme-check-node": "^3.21.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "prettier": "^3.6.2",
+    "prettier-plugin-liquid": "^0.0.1-security"
+  },
+  "lint-staged": {
+    "*.{json,js,css}": [
+      "prettier --write"
+    ],
+    "*.{liquid,json,js,css}": [
+      "prettier --write"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+<section class="home-value-props">
+  <div class="grid">
+    {% for block in section.blocks %}
+      <div class="card">
+        {% if block.settings.icon != blank %}
+          <img class="icon" src="{{ block.settings.icon | image_url: width: 96 }}" alt="" loading="lazy">
+        {% endif %}
+        <h3>{{ block.settings.title }}</h3>
+        <p>{{ block.settings.text }}</p>
+      </div>
+    {% endfor %}
+  </div>
+  <style>
+    .home-value-props{padding:36px 0}
+    .home-value-props .grid{display:grid;gap:16px;grid-template-columns:repeat(3,minmax(0,1fr))}
+    .home-value-props .card{padding:18px;border:1px solid #eaeaea;border-radius:14px}
+    .home-value-props .card h3{margin:8px 0 6px;font-size:1.05rem}
+    .home-value-props .icon{height:36px;width:auto}
+    @media(max-width:900px){.home-value-props .grid{grid-template-columns:1fr}}
+  </style>
+  {% schema %}
+  {
+    "name": "Home — Value Props (3–6)",
+    "blocks": [
+      { "type": "prop", "name": "Prop", "settings": [
+        { "id": "icon", "type": "image_picker", "label": "Icon" },
+        { "id": "title", "type": "text", "label": "Title", "default": "No crash. Clean focus." },
+        { "id": "text", "type": "textarea", "label": "Text", "default": "Formulated with NAD+, B-complex, Creatine, and Glutathione." }
+      ]}
+    ],
+    "max_blocks": 6,
+    "presets": [{ "name": "Home — Value Props" }]
+  }
+  {% endschema %}
+</section>

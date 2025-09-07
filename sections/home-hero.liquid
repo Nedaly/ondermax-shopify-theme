@@ -1,0 +1,75 @@
+{{ 'hero-value.css' | asset_url | stylesheet_tag }}
+
+<section class="home-hero">
+  <div class="container">
+    <div class="copy">
+      <h1>{{ section.settings.heading }}</h1>
+      <p class="sub">{{ section.settings.subheading }}</p>
+      {% if section.settings.cta_label != blank and section.settings.cta_url != blank %}
+        <a class="btn" href="{{ section.settings.cta_url }}">{{ section.settings.cta_label }}</a>
+      {% endif %}
+      {% render 'home-social-proof', logos: section.blocks %}
+    </div>
+    {% if section.settings.hero_image != blank %}
+      <div class="media">
+        <img src="{{ section.settings.hero_image | image_url: width: 1400 }}" alt="{{ section.settings.heading | escape }}" loading="eager">
+      </div>
+    {% endif %}
+  </div>
+  <style>
+    .home-hero {
+      padding: 56px 0;
+    }
+    .home-hero .container {
+      display: grid;
+      gap: 32px;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+    }
+    .home-hero .copy h1 {
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.1;
+      margin: 0 0 12px;
+    }
+    .home-hero .copy .sub {
+      font-size: 1.05rem;
+      opacity: .85;
+      margin: 0 0 20px;
+    }
+    .home-hero .btn {
+      display:inline-block;
+      padding:12px 20px;
+      border-radius:10px;
+      font-weight:600;
+    }
+    .home-hero .media img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+    @media (max-width: 900px){
+      .home-hero .container{grid-template-columns:1fr;}
+      .home-hero{padding:32px 0;}
+    }
+  </style>
+  {% schema %}
+  {
+    "name": "Home — Hero",
+    "settings": [
+      { "id": "heading", "type": "text", "label": "Heading", "default": "Elevate energy by day. Sleep deeper by night." },
+      { "id": "subheading", "type": "textarea", "label": "Subheading", "default": "SURGE (day) and DRIFT (night) — biohacking patches for clean focus and clean sleep." },
+      { "id": "cta_label", "type": "text", "label": "CTA label", "default": "Shop the stacks" },
+      { "id": "cta_url", "type": "url", "label": "CTA link" },
+      { "id": "hero_image", "type": "image_picker", "label": "Hero image" }
+    ],
+    "blocks": [
+      { "type": "logo", "name": "Logo", "settings": [
+        { "id": "logo", "type": "image_picker", "label": "Logo image" },
+        { "id": "alt", "type": "text", "label": "Alt text", "default": "Brand" }
+      ]}
+    ],
+    "max_blocks": 6,
+    "presets": [{ "name": "Home — Hero" }]
+  }
+  {% endschema %}
+</section>

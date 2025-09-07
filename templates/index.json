@@ -1,0 +1,731 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "announcement": {
+      "type": "announcement-free-shipping",
+      "settings": {}
+    },
+    "hero": {
+      "type": "home-hero",
+      "settings": {}
+    },
+    "props": {
+      "type": "home-value-props",
+      "settings": {}
+    },
+    "custom_video_k6igPY": {
+      "type": "custom-video",
+      "name": "Custom Video",
+      "settings": {
+        "video_url": "",
+        "video": "shopify://files/videos/premium-health-and-wellness-background-v-38f0a651-20250829225729.mp4",
+        "enable_video_looping": true,
+        "video_ttl": "Just Results.",
+        "sub_title": "SURGE + DRIFT — The biohacking <br>system.",
+        "video_btn": "Shop The Stock",
+        "video_btn_link": "#"
+      }
+    },
+    "multicolumn_ww3yME": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3cQckD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/palm.png",
+            "muted_autoplay": true,
+            "title": "Stick It",
+            "text": "<p>Apply in seconds. No pills, no swallowing.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HhJWYj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/lightning.png",
+            "muted_autoplay": true,
+            "title": "Absorb It",
+            "text": "<p>Transdermal delivery for faster absorption and steady release.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TRJfte": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/heart.png",
+            "muted_autoplay": true,
+            "title": "Feel It",
+            "text": "<p>Clean energy by day. Deep recovery by night.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_3cQckD",
+        "column_HhJWYj",
+        "column_TRJfte"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "",
+        "title_highlight_color": "#6d388b",
+        "heading_size": "h1",
+        "button_label": "",
+        "button_link": "",
+        "atc_button_label": "",
+        "atc_product": "",
+        "atc_skip_cart": false,
+        "color_scheme": "custom",
+        "cards_color_scheme": "custom",
+        "cards_corner_radius": 0,
+        "stretch_cards": false,
+        "stretched_cards_content_alignment": "center",
+        "image_width": "third",
+        "image_ratio": "square",
+        "media_position": "top",
+        "column_alignment": "center",
+        "desktop_heading_size": 24,
+        "mobile_heading_size": 22,
+        "desktop_text_size": 16,
+        "mobile_text_size": 15,
+        "desktop_text_top_margin": 10,
+        "mobile_text_top_margin": 10,
+        "desktop_container_padding_y": 24,
+        "desktop_container_padding_x": 24,
+        "mobile_container_padding_y": 24,
+        "mobile_container_padding_x": 24,
+        "type": "slide",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": true,
+        "dots_color_scheme": "inverse",
+        "desktop_full_page": false,
+        "columns_desktop": 3,
+        "slider_desktop": false,
+        "per_move_desktop": 1,
+        "desktop_spacing": 40,
+        "desktop_side_padding": 0,
+        "desktop_padding_calc": true,
+        "desktop_adaptive_height": false,
+        "desktop_dots_position": "under",
+        "desktop_arrows_position": "sides",
+        "columns_mobile": "1",
+        "slider_mobile": true,
+        "enable_mobile_preview": false,
+        "mobile_adaptive_height": false,
+        "mobile_dots_position": "under",
+        "mobile_arrows_position": "under",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "custom_cards_colors_background": "#ffffff",
+        "custom_cards_colors_heading": "#222126",
+        "custom_cards_colors_text": "#2e2a39"
+      }
+    },
+    "testimonials_3EzwNj": {
+      "type": "testimonials",
+      "blocks": {
+        "column_d4g63A": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "SURGE",
+            "text": "<p><strong>\"SURGE completely changed my morning routine. No more coffee crashes!\"</strong></p>",
+            "author": "<strong>Sarah Chen</strong>"
+          }
+        },
+        "column_KEniVi": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "DRIFT",
+            "text": "<p>\"<strong>DRIFT helps me fall asleep in minutes. Game changer for recovery.\"</strong></p>",
+            "author": "<strong>Marcus Torres</strong>"
+          }
+        },
+        "column_BMU97e": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "DRIFT",
+            "text": "<p><strong>\"Finally ditched all my pills. These patches just work.\"</strong></p>",
+            "author": "<strong>Dr. Lisa Park</strong>"
+          }
+        },
+        "column_HxK7Yb": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "SURGE",
+            "text": "<p><strong>\"Clean energy all day, perfect sleep at night. Love this system.\"</strong></p>",
+            "author": "<strong>James Wilson</strong>"
+          }
+        }
+      },
+      "block_order": [
+        "column_d4g63A",
+        "column_KEniVi",
+        "column_BMU97e",
+        "column_HxK7Yb"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "Trusted Results.",
+        "title_highlight_color": "#6d388b",
+        "heading_size": "h1",
+        "text": "<p>High performers choose Ondermax for effortless transformation.</p>",
+        "color_scheme": "background-2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "column_alignment": "center",
+        "show_stars": true,
+        "inactive_stars_style": "solid",
+        "star_color": "#ffcc00",
+        "bg_star_color": "#ececec",
+        "show_quotes": true,
+        "quotes_color_scheme": "accent-2",
+        "cards_color_scheme": "inverse",
+        "type": "slide",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": true,
+        "dots_color_scheme": "inverse",
+        "desktop_full_page": false,
+        "columns_desktop": 2,
+        "slider_desktop": true,
+        "per_move_desktop": 1,
+        "desktop_spacing": 40,
+        "desktop_side_padding": 0,
+        "desktop_padding_calc": true,
+        "desktop_adaptive_height": false,
+        "desktop_dots_position": "under",
+        "desktop_arrows_position": "sides",
+        "slider_mobile": true,
+        "enable_mobile_preview": false,
+        "mobile_adaptive_height": false,
+        "mobile_dots_position": "under",
+        "mobile_arrows_position": "under",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff",
+        "custom_cards_colors_background": "#f3f3f3",
+        "custom_cards_colors_text": "#ffffff"
+      }
+    },
+    "result_count_8CDFa3": {
+      "type": "result-count",
+      "blocks": {
+        "text_zUEPbD": {
+          "type": "text",
+          "settings": {
+            "title": "500+",
+            "desc": "<p>patches shipped this month</p>"
+          }
+        },
+        "text_DbWnd6": {
+          "type": "text",
+          "settings": {
+            "title": "98%",
+            "desc": "<p>satisfaction</p>"
+          }
+        },
+        "text_EVN7Eq": {
+          "type": "text",
+          "settings": {
+            "title": "15k+",
+            "desc": "<p>happy customers</p>"
+          }
+        },
+        "text_WCDnnF": {
+          "type": "text",
+          "settings": {
+            "title": "180+",
+            "desc": "<p>countries</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_zUEPbD",
+        "text_DbWnd6",
+        "text_EVN7Eq",
+        "text_WCDnnF"
+      ],
+      "name": "Result count",
+      "settings": {
+        "heading": "Results Speak.",
+        "bg_color": "#1a1a1a",
+        "p_top": 80,
+        "p_bottom": 80
+      }
+    },
+    "icon_with_text_blocks_GERKNa": {
+      "type": "icon-with-text-blocks",
+      "blocks": {
+        "text_RUjkiP": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 31 45\" height=\"45\" width=\"31\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.38623\" stroke=\"white\" d=\"M2.43958 20.9557L15.98 2.70391C17.041 1.27718 19.0231 2.16437 19.0231 4.06518V18.1925C19.0231 19.3326 19.8019 20.2536 20.7614 20.2536H27.3487C28.8454 20.2536 29.6423 22.3463 28.6535 23.6805L15.1131 41.93C14.0521 43.3568 12.07 42.4696 12.07 40.5688V26.4414C12.07 25.3014 11.2912 24.3803 10.3318 24.3803H3.74216C2.24544 24.3803 1.4508 22.2876 2.43958 20.9557Z\"></path>\n</svg>",
+            "title": "NAD+",
+            "desc": "<p>Cellular energy and anti-aging support</p>"
+          }
+        },
+        "text_qNxfqp": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
+            "title": "Glutathione",
+            "desc": "<p>Master antioxidant for recovery</p>"
+          }
+        },
+        "text_hL3K3x": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
+            "title": "Creatine",
+            "desc": "<p>Enhanced strenth and performance</p>"
+          }
+        },
+        "text_PrEYJ8": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 31 45\" height=\"45\" width=\"31\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.38623\" stroke=\"white\" d=\"M2.43958 20.9557L15.98 2.70391C17.041 1.27718 19.0231 2.16437 19.0231 4.06518V18.1925C19.0231 19.3326 19.8019 20.2536 20.7614 20.2536H27.3487C28.8454 20.2536 29.6423 22.3463 28.6535 23.6805L15.1131 41.93C14.0521 43.3568 12.07 42.4696 12.07 40.5688V26.4414C12.07 25.3014 11.2912 24.3803 10.3318 24.3803H3.74216C2.24544 24.3803 1.4508 22.2876 2.43958 20.9557Z\"></path>\n</svg>",
+            "title": "Magnesium",
+            "desc": "<p>Muscle function and relaxation</p>"
+          }
+        },
+        "text_NjyLP3": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 39 37\" height=\"37\" width=\"39\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.86111\" stroke=\"white\" d=\"M2 27.0972H36.75M2 34.8194H36.75M12.2242 27.0972C7.84572 24.3944 5.27808 19.207 5.97501 13.7455C6.83025 7.02717 12.3613 2.00193 18.9059 2V2.01158H19.4773C15.6336 5.71053 14.8884 11.7223 17.7051 16.3073C20.5218 20.8924 26.0953 22.7361 30.9583 20.6994C29.9029 23.3513 28.0235 25.594 25.5972 27.0972\"></path>\n</svg>",
+            "title": "Melatonin",
+            "desc": "<p>Natural sleep cycle regulation</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_RUjkiP",
+        "text_qNxfqp",
+        "text_hL3K3x",
+        "text_PrEYJ8",
+        "text_NjyLP3"
+      ],
+      "name": "Icon with text",
+      "settings": {
+        "heading": "Science backed.",
+        "subheading": "Premium ingredients, precisely dosed for optimal performance.",
+        "bg_color": "#1a1a1a",
+        "p_top": 80,
+        "p_bottom": 80
+      }
+    },
+    "pricing_table_fpHQc4": {
+      "type": "pricing-table",
+      "blocks": {
+        "plan_xmDMdP": {
+          "type": "plan",
+          "settings": {
+            "product": "",
+            "variant_index": 1,
+            "card_style": "style-1",
+            "color_scheme": "background-1",
+            "accent_color": "accent-1",
+            "badge": "",
+            "badge_color_scheme": "inverse",
+            "displayed_image": "hidden",
+            "title": "Individual Patches",
+            "price": "$27",
+            "price_text": "each patch",
+            "icon": "",
+            "filled_icon": false,
+            "description": "",
+            "desc_alignment": "center",
+            "benefits": "<p>Choose SURGE or DRIFT, 30-day supply, Free shipping, 30-day guarantee</p>",
+            "button_function": "link",
+            "button_label": "Shop Individual",
+            "link": "#",
+            "button_style_secondary": true,
+            "button_full_width": true,
+            "custom_colors_background": "#ffffff",
+            "custom_gradient_background": "",
+            "custom_colors_text": "#2e2a39",
+            "custom_colors_solid_button_background": "#dd1d1d",
+            "custom_colors_solid_button_text": "#ffffff",
+            "custom_colors_outline_button": "#dd1d1d",
+            "custom_accent_color": "#dd1d1d",
+            "custom_accent_text_color": "#ffffff"
+          }
+        },
+        "plan_MtAR4q": {
+          "type": "plan",
+          "settings": {
+            "product": "",
+            "variant_index": 1,
+            "card_style": "style-1",
+            "color_scheme": "background-1",
+            "accent_color": "accent-1",
+            "badge": "",
+            "badge_color_scheme": "inverse",
+            "displayed_image": "hidden",
+            "title": "Stack Bundle",
+            "price": "$47",
+            "price_text": "complete system(Save $7)",
+            "icon": "local fire department",
+            "filled_icon": false,
+            "description": "",
+            "desc_alignment": "center",
+            "benefits": "<p>Both SURGE + DRIFT patches,Complete 24/7 system,30-day supply each,Free priority shipping,30-day money-back guarantee</p>",
+            "button_function": "link",
+            "button_label": "Shop the Stack",
+            "link": "#",
+            "button_style_secondary": false,
+            "button_full_width": true,
+            "custom_colors_background": "#ffffff",
+            "custom_gradient_background": "",
+            "custom_colors_text": "#2e2a39",
+            "custom_colors_solid_button_background": "#dd1d1d",
+            "custom_colors_solid_button_text": "#ffffff",
+            "custom_colors_outline_button": "#dd1d1d",
+            "custom_accent_color": "#dd1d1d",
+            "custom_accent_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "plan_xmDMdP",
+        "plan_MtAR4q"
+      ],
+      "name": "Pricing table",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "The Complete System – SURGE + DRIFT.",
+        "title_highlight_color": "#6d388b",
+        "heading_size": "h1",
+        "text": "<p>Best Value · Free Shipping · 30-Day Guarantee.</p>",
+        "icon_size": "medium",
+        "color_scheme": "background-1",
+        "desktop_spacing": 40,
+        "cards_alignment": "flex-start",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#121212"
+      }
+    },
+    "two_products_sec_pypD4z": {
+      "type": "two-products-sec",
+      "blocks": {
+        "text_GzBpnz": {
+          "type": "text",
+          "settings": {
+            "bg_color": "#00908d",
+            "product": "surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+            "pro_img_title": "surge",
+            "pro_img_bg_color": "#2fa9a7",
+            "pro_title": "All-Day Energy",
+            "pro_desc": "<p>NAD+ Creatine, B-Vitamins for sustained performance.</p>",
+            "atc_btn": "Shop Surge",
+            "btn_text2": "Learn more",
+            "btn_url2": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+            "show_btn_outline": false,
+            "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-sun w-16 h-16 text-yellow-300/30 animate-spin\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:14:14\" data-orchids-name=\"Sun\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M12 2v2\"></path><path d=\"M12 20v2\"></path><path d=\"m4.93 4.93 1.41 1.41\"></path><path d=\"m17.66 17.66 1.41 1.41\"></path><path d=\"M2 12h2\"></path><path d=\"M20 12h2\"></path><path d=\"m6.34 17.66-1.41 1.41\"></path><path d=\"m19.07 4.93-1.41 1.41\"></path></svg>",
+            "icon_animation": "bounce_rotate"
+          }
+        },
+        "text_DkN7rF": {
+          "type": "text",
+          "settings": {
+            "bg_color": "linear-gradient(306deg, rgba(127, 72, 176, 1) 1%, rgba(127, 72, 176, 0.94) 9%, rgba(67, 48, 211, 0.96) 88%)",
+            "product": "surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "pro_img_title": "Drift",
+            "pro_img_bg_color": "#7950cf",
+            "pro_title": "All-Night Rest",
+            "pro_desc": "<p>Magnesium, Melatonin for deeper rest and restoration.</p>",
+            "atc_btn": "Shop Drift",
+            "btn_text2": "Learn more",
+            "btn_url2": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "show_btn_outline": true,
+            "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-moon w-16 h-16 text-blue-100/30 animate-pulse\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:83:14\" data-orchids-name=\"Moon\"><path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\"></path></svg>",
+            "icon_animation": "pulse_bounce"
+          }
+        }
+      },
+      "block_order": [
+        "text_GzBpnz",
+        "text_DkN7rF"
+      ],
+      "name": "Two products section",
+      "settings": {
+        "p_top": 80,
+        "p_bottom": 80
+      }
+    },
+    "profile_info_section_ykCnyb": {
+      "type": "profile-info-section",
+      "blocks": {
+        "text_YBWJWN": {
+          "type": "text",
+          "settings": {
+            "tag_text": "Clinically inspired"
+          }
+        },
+        "text_G4EaEN": {
+          "type": "text",
+          "settings": {
+            "tag_text": "Backed by science"
+          }
+        },
+        "text_8EMxTF": {
+          "type": "text",
+          "settings": {
+            "tag_text": "Doctor formulated"
+          }
+        }
+      },
+      "block_order": [
+        "text_YBWJWN",
+        "text_G4EaEN",
+        "text_8EMxTF"
+      ],
+      "name": "Profile information",
+      "settings": {
+        "bg_color": "#1a1a1a",
+        "profile_name": "Dr. NY",
+        "name": "Dr. Nedal Yassin",
+        "role": "Chief Medical Officer",
+        "heading": "Doctor Built.",
+        "about": "<p>Clinically inspired patches for effortless optimization.</p>",
+        "r_name": "Dr. Nedal Yassin",
+        "r_role": "Founder & Chief Medical Officer",
+        "p_top": 100,
+        "p_bottom": 100
+      }
+    },
+    "testimonial_grid_section_Bk6fah": {
+      "type": "testimonial-grid-section",
+      "blocks": {
+        "testimonial_qq8xkd": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
+            "name": "Sarah Chen",
+            "role": "Tech Entrepreneur, 32",
+            "review": "\"SURGE gives me that clean energy boost I need for my 6 AM workouts. No crash, just sustained focus all morning.\"",
+            "badge_text": "SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_9FjfA6": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg",
+            "name": "Marcus Johnson",
+            "role": "Professional Athlete, 28",
+            "review": "\"DRIFT has completely transformed my recovery. I wake up feeling like I actually slept 8 hours instead of tossing and turning.\"",
+            "badge_text": "DRIFT USER",
+            "badge_color": "#262b2b"
+          }
+        },
+        "testimonial_qdA48g": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
+            "name": "Emily Rodriguez",
+            "role": "Working Mom, 35",
+            "review": "\"Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything the day throws at me.\"",
+            "badge_text": "SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_zAqFnP": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg",
+            "name": "David Park",
+            "role": "Finance Director, 41",
+            "review": "\"DRIFT helps me wind down from high-stress days. I stick it on during my evening routine and sleep like a baby.\"",
+            "badge_text": "DRIFT USER",
+            "badge_color": "#262b2b"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_qq8xkd",
+        "testimonial_9FjfA6",
+        "testimonial_qdA48g",
+        "testimonial_zAqFnP"
+      ],
+      "name": "Testimonial Grid",
+      "settings": {
+        "heading": "Already Transforming Daily Routines.",
+        "subheading": "Real people. Real results. Real patches.",
+        "bg_color": "#fcfeff",
+        "heading_color": "#0d0d33",
+        "subheading_color": "#666666",
+        "card_background": "#ffffff",
+        "badge_bg": "#1a1b4b",
+        "p_top": 80,
+        "p_bottom": 80
+      }
+    },
+    "custom_video_promo_rVwcWT": {
+      "type": "custom-video-promo",
+      "name": "Custom Video Promo",
+      "settings": {
+        "promo_video": "shopify://files/videos/premium-health-and-wellness-background-v-38f0a651-20250829225729.mp4",
+        "poster_gradient": "linear-gradient(135deg, rgba(46, 119, 126, 1), rgba(46, 119, 126, 1) 12%, rgba(31, 76, 102, 1) 50%, rgba(27, 63, 88, 1) 88%, rgba(27, 63, 88, 1) 100%)",
+        "heading": "Just Stick It.",
+        "subheading": "SURGE in the morning. DRIFT at night. Simple as that.",
+        "button_text": "Shop the Stack → Join the Movement",
+        "button_link": "#",
+        "button_subtext": "Transform your routine with thousands of others"
+      }
+    },
+    "collapsible_content_XGKDTp": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Xk4BFM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes Ondermax patches different from pills or powders?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Our transdermal patches deliver nutrients directly into your bloodstream—no digestion required. That means faster absorption, no gut irritation, and zero effort. Just peel, stick, and go.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PTETHM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to feel the effects?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Most users feel the High Energy patch within 20–30 minutes. Sleep patches work gently in the background—expect deeper, smoother sleep by night one.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bjpTbn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are the patches safe?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Yes. All our patches are produced in GMP-certified labs, are third-party tested, and free of toxins, allergens, and synthetic binders.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_RY9Czz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use more than one patch at a time?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Yes. Our stacks are designed to be used together: High Energy for daytime, Sleep Tight for nighttime. No overlap, no interaction risk—just synergy.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_fRL6Bn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When will my order ship?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>DRIFT and SURGE are currently available via preorder as part of our Founder Stack launch. Your order will ship between July 7–12 from our U.S. fulfillment center.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_B7MNQk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Ondermax patches vegan and cruelty-free?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>100% yes. No gelatin. No animal testing. Just clean performance.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Xk4BFM",
+        "collapsible_row_PTETHM",
+        "collapsible_row_bjpTbn",
+        "collapsible_row_RY9Czz",
+        "collapsible_row_fRL6Bn",
+        "collapsible_row_B7MNQk"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "caption": "",
+        "title": "Everything You Need to Know.",
+        "title_highlight_color": "#1c8e8e",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-1",
+        "open_first_collapsible_row": false,
+        "video_muted_autoplay": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "row_heading_size": "medium",
+        "collapse_icon": "plus",
+        "display_top_border": true,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_contaner_colors_background": "#ffffff",
+        "custom_container_gradient_background": "",
+        "custom_contaner_colors_text": "#2e2a39",
+        "btn_url": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy",
+        "btn": "Contact Support",
+        "btn_subheading": "Still have questions?"
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "hero",
+    "props",
+    "custom_video_k6igPY",
+    "multicolumn_ww3yME",
+    "testimonials_3EzwNj",
+    "result_count_8CDFa3",
+    "icon_with_text_blocks_GERKNa",
+    "pricing_table_fpHQc4",
+    "two_products_sec_pypD4z",
+    "profile_info_section_ykCnyb",
+    "testimonial_grid_section_Bk6fah",
+    "custom_video_promo_rVwcWT",
+    "collapsible_content_XGKDTp"
+  ]
+}
