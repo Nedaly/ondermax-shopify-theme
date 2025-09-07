@@ -91,7 +91,6 @@
                 <button class="tps_btn {% if block.settings.show_btn_outline == true %}tps_btn2{% endif %}" type="submit">{{ block.settings.atc_btn }}</button>
                 {% endform %}
                 </div>
-                <a class="tps_btn" href="{{ block.settings.btn_url2 }}" class="product_desc">{{ block.settings.btn_text2 }}</a>
                 </div>
             </div>
         {% endfor %}
@@ -104,8 +103,35 @@
     padding-bottom:{{ section.settings.p_bottom | times: 0.75 | round: 0 }}px;  
 }
 
+/* Remove section padding on desktop for full-height split screen */
+@media (min-width: 768px) {
+    .padding-{{ section.id }}{
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+
 .two_products_sec_wrapper {
     display: flex;
+    flex-direction: column; /* Mobile: stacked vertically */
+    gap: 0; /* No gap between cards */
+}
+
+/* Desktop: Split screen layout */
+@media (min-width: 768px) {
+    .two_products_sec_wrapper {
+        flex-direction: row; /* Desktop: side by side */
+        min-height: 100vh; /* Full viewport height */
+    }
+    
+    .two_products_sec_wrapper > div {
+        flex: 1; /* Each product takes 50% width */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
 }
 
 .tps_product {
@@ -114,6 +140,14 @@
     text-align: center;
     flex: 1;
     position: relative;
+}
+
+/* Adjust padding for split screen on desktop */
+@media (min-width: 768px) {
+    .tps_product {
+        padding: 0; /* Remove all padding for full split screen */
+        max-width: none; /* Remove any max-width constraints */
+    }
 }
 
 .tps_product_img {
@@ -173,36 +207,138 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
 }
 
 .tps_btn {
     font-family: 'Inter';
     font-size: 18px;
     padding: 22px 40px;
-    background: #000000;
-    color: #fff;
+    background: #ffffff;
+    color: #00908d;
     border-radius: 40px;
     line-height: 1.6;
     font-weight: 600;
     text-transform: capitalize;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    &:hover{
-        background-color: #fff;
-        border-left-color: rgb(28, 142, 142);
-        border-right-color: rgb(28, 142, 142);
-        color: #000;
-        border-top-color: rgb(28, 142, 142);
-        border-bottom-color: rgb(28, 142, 142);
-        box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(28, 142, 142, 0.4) 0px 0px 30px 0px;
-        scale: 1.05;
+    border: 2px solid #00908d;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 
+        0 0 20px rgba(0, 144, 141, 0.3),
+        0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Glow effect - Surge teal colors */
+    &::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, #00908d, #00b8b5, #00908d);
+        border-radius: 42px;
+        z-index: -1;
+        opacity: 0.4;
+        transition: opacity 0.4s ease;
+        animation: glow-pulse-surge 2s ease-in-out infinite;
+    }
+    
+    /* Shimmer effect */
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(0, 144, 141, 0.2), transparent);
+        transition: left 0.6s ease;
+    }
+    
+    &:hover {
+        background: #00908d;
+        color: #fff;
+        border-color: #00b8b5;
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 
+            0 8px 25px rgba(0, 144, 141, 0.4),
+            0 0 40px rgba(0, 184, 181, 0.3);
+        
+        &::before {
+            opacity: 0.8;
+        }
+        
+        &::after {
+            left: 100%;
+        }
+    }
+    
+    &:active {
+        transform: translateY(0) scale(0.98);
+        transition: all 0.1s ease;
     }
 }
 
 .tps_btn2 {
-    border: 2px solid #008c8a;
-    box-shadow: 0 0 20px 0px #008c8a;
+    border: 2px solid #7f48b0;
+    background: linear-gradient(135deg, #7f48b0, #4f46e5);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 0 25px rgba(127, 72, 176, 0.4),
+        0 4px 15px rgba(0, 0, 0, 0.2);
+    
+    /* Enhanced glow effect for Drift */
+    &::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, #7f48b0, #4f46e5, #8b5cf6, #4f46e5, #7f48b0);
+        border-radius: 42px;
+        z-index: -1;
+        opacity: 0.6;
+        animation: glow-pulse-drift 2s ease-in-out infinite;
+    }
+    
+    /* Enhanced shimmer effect for Drift */
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transition: left 0.6s ease;
+    }
+    
+    &:hover {
+        background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+        border-color: #8b5cf6;
+        color: #fff;
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 
+            0 8px 30px rgba(127, 72, 176, 0.6),
+            0 0 50px rgba(79, 70, 229, 0.5);
+        
+        &::before {
+            opacity: 1;
+        }
+        
+        &::after {
+            left: 100%;
+        }
+    }
+    
+    &:active {
+        transform: translateY(0) scale(0.98);
+        transition: all 0.1s ease;
+    }
 }
 
 .tps_animated_icon{
@@ -315,6 +451,30 @@
 @keyframes bounce-sun {
   from { transform: translateY(0); }
   to   { transform: translateY(-20px); }
+}
+
+/* Button glow pulse animation - Surge theme */
+@keyframes glow-pulse-surge {
+  0%, 100% { 
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.7;
+    transform: scale(1.02);
+  }
+}
+
+/* Button glow pulse animation - Drift theme */
+@keyframes glow-pulse-drift {
+  0%, 100% { 
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
 }
 
 
