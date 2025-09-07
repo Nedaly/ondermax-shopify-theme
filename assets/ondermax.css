@@ -1190,6 +1190,10 @@
   flex: none !important;
   width: 100% !important;
   text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  min-height: 200px !important;
 }
 
 /* Revert Dr. Nedal Yassin to normal styling */
@@ -1204,9 +1208,9 @@
 /* Flat teal bullets in one row */
 .profile_info .pir_tags {
   display: flex !important;
-  justify-content: flex-end !important;
+  justify-content: center !important;
   gap: 2rem !important;
-  margin-top: 2rem !important;
+  margin-top: auto !important;
   flex-wrap: nowrap !important;
 }
 
@@ -1287,7 +1291,8 @@
   .profile_info .pir_tags {
     gap: 1rem !important;
     flex-wrap: wrap !important;
-    justify-content: flex-end !important;
+    justify-content: center !important;
+    margin-top: auto !important;
   }
 
   .profile_info .pir_tag {
