@@ -564,14 +564,6 @@
     </div>
     <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
-        <div class="footer_copyright">
-        <small class="copyright__content">
-          &copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}.
-        </small>
-        {% unless section.settings.branding_text == blank %}
-          <small class="copyright__content">{{ section.settings.branding_text }}</small>
-        {% endunless %}
-        </div>
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
@@ -585,6 +577,14 @@
             {%- endfor -%}
           </ul>
         {%- endif -%}
+        <div class="footer_copyright">
+        <small class="copyright__content">
+          &copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}.
+        </small>
+        {% unless section.settings.branding_text == blank %}
+          <small class="copyright__content">{{ section.settings.branding_text }}</small>
+        {% endunless %}
+        </div>
       </div>
     </div>
   </div>
