@@ -24,6 +24,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## v1.0.0-i18n-rtl
+
+### Added
+
+- Full Arabic & Hebrew RTL support
+- Self-hosted PlexArabic + Heebo fonts (locale-scoped, zero EN impact)
+- .rtl-num helper for stock messages
+- Conditional preloads & lang CSS
+- Playwright tests for i18n, UI RTL, stock messages, and font loading
+- Lighthouse CI thresholds applied
+
 ## [1.0.0] - 2024-XX-XX
 
 ### Added

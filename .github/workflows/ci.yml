@@ -1,0 +1,81 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Shopify CLI (global)
+        run: |
+          npm i -g @shopify/cli @shopify/theme
+
+      - name: Validate locales
+        run: npm run lint:locales
+
+      - name: Theme check
+        run: npm run test:theme
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      # Prefer PREVIEW_URL if you have one (public or tunnelled)
+      - name: Use preview URL from secret (optional)
+        if: ${{ secrets.PREVIEW_URL != '' }}
+        run: echo "BASE_URL=${{ secrets.PREVIEW_URL }}" >> $GITHUB_ENV
+
+      # Otherwise start a local dev server for Playwright & Lighthouse
+      - name: Start local preview server
+        if: ${{ secrets.PREVIEW_URL == '' }}
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+          SHOPIFY_STORE_DOMAIN: ${{ secrets.SHOPIFY_STORE_DOMAIN }}
+        run: |
+          # Start server in background
+          shopify theme dev --store "$SHOPIFY_STORE_DOMAIN" --no-update --host 0.0.0.0 --port 9292 &
+          # Wait for port
+          for i in {1..30}; do
+            nc -z 127.0.0.1 9292 && echo "Server up" && break
+            sleep 2
+          done
+          echo "BASE_URL=http://localhost:9292" >> $GITHUB_ENV
+
+      - name: Run E2E tests
+        run: npm run test:e2e
+        env: { BASE_URL: ${{ env.BASE_URL }} }
+
+      - name: Run E2E tests (no JS)
+        run: npm run test:e2e:nojs
+        env: { BASE_URL: ${{ env.BASE_URL }} }
+
+      - name: Run Lighthouse CI
+        run: npm run lighthouse
+        env: { BASE_URL: ${{ env.BASE_URL }} }
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+
+      - name: Upload Lighthouse results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-results
+          path: .lighthouseci/

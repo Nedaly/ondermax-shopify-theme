@@ -1,0 +1,56 @@
+/* TODO: upload the WOFF2 files to assets/ if not present */
+@font-face {
+  font-family: 'HeeboLocal';
+  src: url('{{ "heebo-400.woff2" | asset_url }}') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+FB1D-FB4F, U+0020-007E;
+}
+@font-face {
+  font-family: 'HeeboLocal';
+  src: url('{{ "heebo-600.woff2" | asset_url }}') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+FB1D-FB4F, U+0020-007E;
+}
+
+/* Hebrew typography & micro-tweaks */
+html:lang(he) body {
+  font-family:
+    'HeeboLocal',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Noto Sans Hebrew',
+    sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0;
+  font-feature-settings: 'kern';
+}
+html:lang(he) h1,
+html:lang(he) h2 {
+  font-weight: 600;
+}
+/* Buttons / CTAs slightly heavier */
+html:lang(he) .btn,
+html:lang(he) .button,
+html:lang(he) .cta {
+  font-weight: 600;
+}
+/* Inputs & placeholders */
+[dir='rtl'] input,
+[dir='rtl'] textarea,
+[dir='rtl'] select {
+  text-align: start;
+}
+/* Optional Hebrew webfont
+@font-face {
+  font-family: 'YourHebrewFont';
+  src: url('{{ "YourHebrewFont.woff2" | asset_url }}') format('woff2');
+  font-display: swap;
+}
+html:lang(he) body { font-family: 'YourHebrewFont', system-ui, sans-serif; }
+*/
