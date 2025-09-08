@@ -1,0 +1,26 @@
+/* Arabic typography & micro-tweaks */
+html:lang(ar) body {
+  line-height: 1.8;
+  letter-spacing: 0;
+  font-feature-settings: 'kern';
+}
+/* Buttons / CTAs a touch bolder for Arabic legibility */
+html:lang(ar) .btn,
+html:lang(ar) .button,
+html:lang(ar) .cta {
+  font-weight: 600;
+}
+/* Inputs & placeholders align properly in RTL */
+[dir='rtl'] input,
+[dir='rtl'] textarea,
+[dir='rtl'] select {
+  text-align: start;
+}
+/* Optional Arabic webfont
+@font-face {
+  font-family: 'YourArabicFont';
+  src: url('{{ "YourArabicFont.woff2" | asset_url }}') format('woff2');
+  font-display: swap;
+}
+html:lang(ar) body { font-family: 'YourArabicFont', Cairo, system-ui, sans-serif; }
+*/

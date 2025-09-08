@@ -1,0 +1,26 @@
+/* Hebrew typography & micro-tweaks */
+html:lang(he) body {
+  line-height: 1.7;
+  letter-spacing: 0;
+  font-feature-settings: 'kern';
+}
+/* Buttons / CTAs slightly heavier */
+html:lang(he) .btn,
+html:lang(he) .button,
+html:lang(he) .cta {
+  font-weight: 600;
+}
+/* Inputs & placeholders */
+[dir='rtl'] input,
+[dir='rtl'] textarea,
+[dir='rtl'] select {
+  text-align: start;
+}
+/* Optional Hebrew webfont
+@font-face {
+  font-family: 'YourHebrewFont';
+  src: url('{{ "YourHebrewFont.woff2" | asset_url }}') format('woff2');
+  font-display: swap;
+}
+html:lang(he) body { font-family: 'YourHebrewFont', system-ui, sans-serif; }
+*/
