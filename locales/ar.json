@@ -1,0 +1,18 @@
+{
+  "products": {
+    "product": {
+      "fake_stock_message_html": "تبقّى فقط <span id=\"fake-stock-count\">{{ count }}</span> في المخزون"
+    }
+  },
+  "hero": {
+    "heading": "رفاهية عالية الأداء بسهولة",
+    "subheading": "لصقات سريرية تمنح طاقة نظيفة سريعة ونوماً عميقاً",
+    "cta_primary": "تسوّق الآن"
+  },
+  "cart": { "free_shipping_badge": "شحن مجاني للطلبات فوق {{ amount }}" },
+  "checkout": {
+    "trust_row_1": "دفع آمن",
+    "trust_row_2": "استرجاع خلال 30 يوماً"
+  },
+  "pdp": { "benefits_title": "ليش رح تحس بالفرق" }
+}
