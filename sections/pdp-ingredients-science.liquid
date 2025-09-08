@@ -20,7 +20,7 @@
       <div class="pdp-ingredients-grid">
         {% for block in section.blocks %}
           {% case block.type %}
-            {% when 'ingredient' %}
+            {% when 'pdp_ingredient' %}
               <div class="pdp-ingredient-card" {{ block.shopify_attributes }} data-ingredient-card>
                 <div class="ingredient-card-header" data-ingredient-toggle>
                   <div class="ingredient-icon">
@@ -594,7 +594,7 @@
   ],
   "blocks": [
     {
-      "type": "ingredient",
+      "type": "pdp_ingredient",
       "name": "Ingredient",
       "settings": [
         {
@@ -672,7 +672,7 @@
       "name": "PDP Ingredients & Science",
       "blocks": [
         {
-          "type": "ingredient",
+          "type": "pdp_ingredient",
           "settings": {
             "name": "NAD+",
             "brief_description": "Restores mitochondrial energy",
@@ -683,7 +683,7 @@
           }
         },
         {
-          "type": "ingredient",
+          "type": "pdp_ingredient",
           "settings": {
             "name": "B-Vitamins",
             "brief_description": "Supports neurotransmitter health",
@@ -694,7 +694,7 @@
           }
         },
         {
-          "type": "ingredient",
+          "type": "pdp_ingredient",
           "settings": {
             "name": "Creatine",
             "brief_description": "Boosts focus & brain power",
@@ -705,7 +705,7 @@
           }
         },
         {
-          "type": "ingredient",
+          "type": "pdp_ingredient",
           "settings": {
             "name": "Glutathione",
             "brief_description": "Master antioxidant",

@@ -331,7 +331,7 @@
       "type": "pdp-benefits-row",
       "blocks": {
         "benefit-1": {
-          "type": "benefit",
+          "type": "pdp_benefit",
           "settings": {
             "title": "⚡ Instant Energy",
             "description": "Feel it in minutes, lasts all day.",
@@ -339,7 +339,7 @@
           }
         },
         "benefit-2": {
-          "type": "benefit",
+          "type": "pdp_benefit",
           "settings": {
             "title": "🧠 Sharper Focus",
             "description": "Clinically-backed NAD+ synergy.",
@@ -347,7 +347,7 @@
           }
         },
         "benefit-3": {
-          "type": "benefit",
+          "type": "pdp_benefit",
           "settings": {
             "title": "🌿 Clean Ingredients",
             "description": "No sugar. No fillers. Just results.",
@@ -355,7 +355,7 @@
           }
         },
         "benefit-4": {
-          "type": "benefit",
+          "type": "pdp_benefit",
           "settings": {
             "title": "🛡 Trusted by Pros",
             "description": "1,200+ biohackers rely on it.",
@@ -363,7 +363,7 @@
           }
         },
         "benefit-5": {
-          "type": "benefit",
+          "type": "pdp_benefit",
           "settings": {
             "title": "💊 No Pills Needed",
             "description": "Patch = simplicity.",
@@ -454,7 +454,7 @@
       "type": "pdp-ingredients-science",
       "blocks": {
         "ingredient-1": {
-          "type": "ingredient",
+          "type": "pdp_ingredient",
           "settings": {
             "name": "NAD+",
             "brief_description": "Restores mitochondrial energy",
@@ -465,7 +465,7 @@
           }
         },
         "ingredient-2": {
-          "type": "ingredient",
+          "type": "pdp_ingredient",
           "settings": {
             "name": "B-Vitamins",
             "brief_description": "Supports neurotransmitter health",
@@ -476,7 +476,7 @@
           }
         },
         "ingredient-3": {
-          "type": "ingredient",
+          "type": "pdp_ingredient",
           "settings": {
             "name": "Creatine",
             "brief_description": "Boosts focus & brain power",
@@ -487,7 +487,7 @@
           }
         },
         "ingredient-4": {
-          "type": "ingredient",
+          "type": "pdp_ingredient",
           "settings": {
             "name": "Glutathione",
             "brief_description": "Master antioxidant",

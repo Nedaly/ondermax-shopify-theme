@@ -16,7 +16,7 @@
         <div class="pdp-benefits-track" data-benefits-track>
           {% for block in section.blocks %}
             {% case block.type %}
-              {% when 'benefit' %}
+              {% when 'pdp_benefit' %}
                 <div class="pdp-benefit-card" {{ block.shopify_attributes }}>
                   <div class="pdp-benefit-icon">
                     {% if block.settings.icon != blank %}
