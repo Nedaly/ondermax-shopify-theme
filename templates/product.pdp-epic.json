@@ -1,0 +1,755 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "text_size": "h1",
+            "title_alignment": "left",
+            "uppercase_title": false,
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "rating_stars": {
+          "type": "rating_stars",
+          "settings": {
+            "rating": 4.4,
+            "star_color": "#ffcc00",
+            "bg_stars_style": "full",
+            "bg_star_color": "#ececec",
+            "label": "(1,200+ Reviews)",
+            "size": 16,
+            "alignment": "flex-start",
+            "scroll_id": "",
+            "margin_top": 0,
+            "margin_bottom": 9
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "layout": "price_first",
+            "price_color": "accent-1",
+            "compare_price_color": "text",
+            "displayed_badge": "sale",
+            "icon_scale": 140,
+            "custom_badge_text": "[icon_1] SPECIAL OFFER",
+            "icon_1": "redeem",
+            "filled_icon_1": false,
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "margin_top": 9,
+            "margin_bottom": 15
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_types": "pills, dropdown, dropdown",
+            "custom_labels": "[name] - [selected]",
+            "skip_unavailable": false,
+            "swatches_size": "medium",
+            "swatches_custom_colors": "disabled",
+            "swatches_custom_colors_list": "#000000, #6D388B, #0000FF, #FFCC00",
+            "full_width_dropdowns": false,
+            "breaks_style": "normal",
+            "breaks_headline": "BUNDLE & SAVE",
+            "breaks_display_selected_indicator": true,
+            "breaks_border_radius": 10,
+            "breaks_border_width": 2,
+            "breaks_color_scheme": "accent-1",
+            "breaks_badges": "[empty], Most popular, [empty]",
+            "breaks_badge_style": "1",
+            "breaks_badge_color": "accent-1",
+            "breaks_displayed_images": "variant_images",
+            "breaks_custom_images": "",
+            "breaks_image_width": 70,
+            "breaks_space_images": true,
+            "breaks_vertical_images_position": "top",
+            "breaks_vertical_prices_layout": "vertical",
+            "breaks_labels": "[name], [name], [name]",
+            "breaks_benefits": "[empty], Free Shipping, Free Shipping",
+            "breaks_benefit_position": "top",
+            "breaks_benefit_style": "outlined",
+            "breaks_benefit_color": "accent-1",
+            "breaks_captions": "Variant 1 caption, Variant 2 caption, Variant 3 caption",
+            "breaks_price_texts": "[price], [price], [price]",
+            "breaks_compare_price_texts": "[compare_price], [compare_price], [compare_price]",
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "full_width_classic": false,
+            "atc_append": "none",
+            "atc_append_heights": "stretch-quantity",
+            "enable_quantity_discounts": false,
+            "style": "normal",
+            "headline": "BUNDLE & SAVE",
+            "preselected": "option_1",
+            "display_selected_indicator": true,
+            "border_radius": 10,
+            "border_width": 2,
+            "color_scheme": "accent-1",
+            "enable_variant_selectors": true,
+            "enable_variant_selectors_on_quantity_of_1": false,
+            "update_prices": false,
+            "skip_unavailable": false,
+            "full_width_pickers": false,
+            "hide_pickers_overlay": true,
+            "pickers_label": "",
+            "image_width": 70,
+            "space_images": true,
+            "vertical_images_position": "top",
+            "vertical_prices_layout": "vertical",
+            "option_1_quantity": 1,
+            "option_1_badge": "",
+            "option_1_badge_style": "1",
+            "option_1_badge_color": "accent-1",
+            "option_1_label": "Buy [quantity]",
+            "option_1_benefit": "",
+            "option_1_benefit_position": "top",
+            "option_1_benefit_style": "outlined",
+            "option_1_benefit_color": "accent-1",
+            "option_1_caption": "You save [amount_saved]",
+            "option_1_percentage_off_text": "0",
+            "option_1_fixed_amount_off": "0",
+            "option_1_price_text": "[price]",
+            "option_1_compare_price": "compare_price",
+            "option_1_compare_price_text": "[compare_price]",
+            "option_2_quantity": 2,
+            "option_2_badge": "",
+            "option_2_badge_style": "1",
+            "option_2_badge_color": "accent-1",
+            "option_2_label": "Buy [quantity]",
+            "option_2_benefit": "",
+            "option_2_benefit_position": "top",
+            "option_2_benefit_style": "outlined",
+            "option_2_benefit_color": "accent-1",
+            "option_2_caption": "You save [amount_saved]",
+            "option_2_percentage_off_text": "0",
+            "option_2_fixed_amount_off": "0",
+            "option_2_price_text": "[price]",
+            "option_2_compare_price": "compare_price",
+            "option_2_compare_price_text": "[compare_price]",
+            "option_3_quantity": 3,
+            "option_3_badge": "",
+            "option_3_badge_style": "1",
+            "option_3_badge_color": "accent-1",
+            "option_3_label": "Buy [quantity]",
+            "option_3_benefit": "",
+            "option_3_benefit_position": "top",
+            "option_3_benefit_style": "outlined",
+            "option_3_benefit_color": "accent-1",
+            "option_3_caption": "You save [amount_saved]",
+            "option_3_percentage_off_text": "0",
+            "option_3_fixed_amount_off": "0",
+            "option_3_price_text": "[price]",
+            "option_3_compare_price": "compare_price",
+            "option_3_compare_price_text": "[compare_price]",
+            "option_4_quantity": 4,
+            "option_4_badge": "",
+            "option_4_badge_style": "1",
+            "option_4_badge_color": "accent-1",
+            "option_4_label": "Buy [quantity]",
+            "option_4_benefit": "",
+            "option_4_benefit_position": "top",
+            "option_4_benefit_style": "outlined",
+            "option_4_benefit_color": "accent-1",
+            "option_4_caption": "You save [amount_saved]",
+            "option_4_percentage_off_text": "0",
+            "option_4_fixed_amount_off": "0",
+            "option_4_price_text": "[price]",
+            "option_4_compare_price": "compare_price",
+            "option_4_compare_price_text": "[compare_price]",
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "skip_cart": false,
+            "uppercase_text": true,
+            "icon_scale": 120,
+            "icon_spacing": 10,
+            "atc_custom_label": "",
+            "display_price": false,
+            "enable_custom_color": false,
+            "custom_color": "#1C8E8E",
+            "enable_secondary_btn": false,
+            "secondary_btn_label": "Buy It Now",
+            "secondary_btn_enable_custom_color": false,
+            "secondary_btn_custom_color": "#dd1d1d",
+            "margin_top": 24,
+            "margin_bottom": 24
+          }
+        },
+        "shipping_checkpoints": {
+          "type": "shipping_checkpoints",
+          "settings": {
+            "icon_1": "add_shopping_cart",
+            "filled_icon_1": false,
+            "top_text_1": "<strong>[start_date]</strong>",
+            "bottom_text_1": "Ordered",
+            "min_days_1": 0,
+            "max_days_1": 0,
+            "icon_2": "local_shipping",
+            "filled_icon_2": false,
+            "top_text_2": "<strong>[start_date] - [end_date]</strong>",
+            "bottom_text_2": "Order Ready",
+            "min_days_2": 1,
+            "max_days_2": 2,
+            "icon_3": "redeem",
+            "filled_icon_3": false,
+            "top_text_3": "<strong>[start_date] - [end_date]</strong>",
+            "bottom_text_3": "Delivered",
+            "min_days_3": 10,
+            "max_days_3": 12,
+            "icon_4": "",
+            "filled_icon_4": false,
+            "top_text_4": "",
+            "bottom_text_4": "",
+            "date_format": "mm_dd",
+            "days_labels": "Mon, Tue, Wed, Thu, Fri, Sat, Sun",
+            "months_labels": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec",
+            "color_scheme": "inverse",
+            "margin_top": 24,
+            "margin_bottom": 24
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky_atc",
+          "settings": {
+            "function": "add_to_cart",
+            "display_when": "after_scroll",
+            "button_label": "Add to cart",
+            "enable_custom_btn_color": false,
+            "custom_btn_color": "#1C8E8E",
+            "color_scheme": "background-1",
+            "star_color": "#ffcc00",
+            "stars_label": "(1,200+ Reviews)",
+            "picker_type": "combined",
+            "desktop_show_image": true,
+            "desktop_show_title": true,
+            "desktop_rating_stars": false,
+            "desktop_show_price": true,
+            "desktop_show_sale_badge": true,
+            "desktop_variant_picker": true,
+            "desktop_full_button_width": false,
+            "desktop_show_price_in_button": false,
+            "desktop_transparent_bg": false,
+            "mobile_show_image": false,
+            "mobile_show_title": true,
+            "mobile_rating_stars": false,
+            "mobile_show_price": true,
+            "mobile_show_sale_badge": false,
+            "mobile_variant_picker": false,
+            "mobile_full_button_width": false,
+            "mobile_show_price_in_button": false,
+            "mobile_transparent_bg": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "margin_top": 24,
+            "margin_bottom": 24
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "rating_stars",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "shipping_checkpoints",
+        "sticky_atc",
+        "description"
+      ],
+      "custom_css": [],
+      "settings": {
+        "display_id": false,
+        "enable_sticky_info": true,
+        "display_variant_image_first": false,
+        "disable_prepend": true,
+        "hide_variants": false,
+        "variant_image_filtering": "none",
+        "image_zoom": "none",
+        "thumbnails_ratio": "square",
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": false,
+        "dots_color_scheme": "inverse",
+        "video_player": "play_btn",
+        "enable_video_looping": false,
+        "autoplay_videos_pause_btn": false,
+        "video_sound_btn": false,
+        "video_timeline": false,
+        "play_btn_color_scheme": "accent-1",
+        "sound_btn_color_scheme": "inverse",
+        "timeline_color": "accent-1",
+        "media_size": "medium",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "desktop_thumbnails_position": "bottom",
+        "desktop_thumbnails_count": 5,
+        "desktop_vertical_thumbnails_width": 16,
+        "desktop_vertical_thumbnails_hide_arrows": false,
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "desktop_arrows_position": "hidden",
+        "mobile_media_corner_radius": 0,
+        "mobile_spacing_pixels": 0,
+        "mobile_arrows_position": "sides",
+        "mobile_pagination": "dots_overlay",
+        "mobile_thumbnails_position": "hidden",
+        "mobile_thumbnails_count": 5,
+        "mobile_vertical_thumbnails_width": 22,
+        "mobile_vertical_thumbnails_hide_arrows": true,
+        "mobile_scroll_padding_percentage": 0,
+        "mobile_scroll_padding_pixels": 14,
+        "enable_mobile_outher_spacing": false,
+        "mobile_slides_container_width": 100,
+        "mobile_slides_inner_width": 100,
+        "trust_badge_position": "top-right",
+        "trust_badge_size": "medium",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 16,
+        "desktop_padding_top": 36,
+        "desktop_padding_bottom": 36
+      }
+    },
+    "pdp-benefits-row": {
+      "type": "pdp-benefits-row",
+      "blocks": {
+        "benefit-1": {
+          "type": "benefit",
+          "settings": {
+            "title": "⚡ Instant Energy",
+            "description": "Feel it in minutes, lasts all day.",
+            "icon": "flash_on"
+          }
+        },
+        "benefit-2": {
+          "type": "benefit",
+          "settings": {
+            "title": "🧠 Sharper Focus",
+            "description": "Clinically-backed NAD+ synergy.",
+            "icon": "psychology"
+          }
+        },
+        "benefit-3": {
+          "type": "benefit",
+          "settings": {
+            "title": "🌿 Clean Ingredients",
+            "description": "No sugar. No fillers. Just results.",
+            "icon": "eco"
+          }
+        },
+        "benefit-4": {
+          "type": "benefit",
+          "settings": {
+            "title": "🛡 Trusted by Pros",
+            "description": "1,200+ biohackers rely on it.",
+            "icon": "verified"
+          }
+        },
+        "benefit-5": {
+          "type": "benefit",
+          "settings": {
+            "title": "💊 No Pills Needed",
+            "description": "Patch = simplicity.",
+            "icon": "medication"
+          }
+        }
+      },
+      "block_order": [
+        "benefit-1",
+        "benefit-2",
+        "benefit-3",
+        "benefit-4",
+        "benefit-5"
+      ],
+      "settings": {
+        "heading": "Why Choose Our Product",
+        "heading_size": "h2",
+        "color_scheme": "background-1",
+        "cta_text": "Upgrade Your Routine. Subscribe Today.",
+        "cta_link": "#subscription",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "pdp-ugc-carousel": {
+      "type": "pdp-ugc-carousel",
+      "blocks": {
+        "ugc-1": {
+          "type": "ugc_item",
+          "settings": {
+            "customer_name": "Sarah M.",
+            "rating": 5,
+            "review_text": "No more coffee jitters – subscription was a no-brainer."
+          }
+        },
+        "ugc-2": {
+          "type": "ugc_item",
+          "settings": {
+            "customer_name": "Mike R.",
+            "rating": 5,
+            "review_text": "Game-changer for my morning routine. Energy lasts all day!"
+          }
+        },
+        "ugc-3": {
+          "type": "ugc_item",
+          "settings": {
+            "customer_name": "Lisa K.",
+            "rating": 5,
+            "review_text": "Finally found something that works without the crash."
+          }
+        },
+        "ugc-4": {
+          "type": "ugc_item",
+          "settings": {
+            "customer_name": "David T.",
+            "rating": 4,
+            "review_text": "Almost perfect. Great results, easy to use."
+          }
+        },
+        "ugc-5": {
+          "type": "ugc_item",
+          "settings": {
+            "customer_name": "Emma W.",
+            "rating": 5,
+            "review_text": "Love the subscription model. Never run out!"
+          }
+        },
+        "ugc-6": {
+          "type": "ugc_item",
+          "settings": {
+            "customer_name": "Alex P.",
+            "rating": 5,
+            "review_text": "Best investment in my health and productivity."
+          }
+        }
+      },
+      "block_order": ["ugc-1", "ugc-2", "ugc-3", "ugc-4", "ugc-5", "ugc-6"],
+      "settings": {
+        "heading": "Real People. Real Stories.",
+        "heading_size": "h2",
+        "subheading": "From busy entrepreneurs to biohackers, thousands rely daily.",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "pdp-ingredients-science": {
+      "type": "pdp-ingredients-science",
+      "blocks": {
+        "ingredient-1": {
+          "type": "ingredient",
+          "settings": {
+            "name": "NAD+",
+            "brief_description": "Restores mitochondrial energy",
+            "description": "NAD+ (Nicotinamide Adenine Dinucleotide) is a coenzyme found in all living cells. It plays a crucial role in energy metabolism and cellular repair processes.",
+            "benefits": "Boosts cellular energy, Supports DNA repair, Enhances cognitive function, Promotes healthy aging",
+            "dosage": "50mg per patch",
+            "icon": "science"
+          }
+        },
+        "ingredient-2": {
+          "type": "ingredient",
+          "settings": {
+            "name": "B-Vitamins",
+            "brief_description": "Supports neurotransmitter health",
+            "description": "Essential B-vitamins work synergistically to support brain function, energy production, and nervous system health.",
+            "benefits": "Enhances mental clarity, Supports energy metabolism, Promotes nerve health, Reduces fatigue",
+            "dosage": "Complex blend",
+            "icon": "psychology"
+          }
+        },
+        "ingredient-3": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Creatine",
+            "brief_description": "Boosts focus & brain power",
+            "description": "Creatine is not just for muscles - it's also crucial for brain energy and cognitive performance.",
+            "benefits": "Improves mental performance, Enhances memory, Supports brain energy, Reduces mental fatigue",
+            "dosage": "2g per patch",
+            "icon": "flash_on"
+          }
+        },
+        "ingredient-4": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Glutathione",
+            "brief_description": "Master antioxidant",
+            "description": "The body's most powerful antioxidant, essential for detoxification and cellular protection.",
+            "benefits": "Powerful antioxidant, Supports detoxification, Protects cells, Promotes healthy aging",
+            "dosage": "25mg per patch",
+            "icon": "security"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient-1",
+        "ingredient-2",
+        "ingredient-3",
+        "ingredient-4"
+      ],
+      "settings": {
+        "heading": "What's Inside: Clean, Powerful Ingredients",
+        "heading_size": "h2",
+        "subheading": "Scientifically-formulated ingredients for maximum effectiveness",
+        "show_infographic": true,
+        "infographic_title": "How It Works",
+        "show_authority": true,
+        "authority_text": "Backed by 300+ studies",
+        "color_scheme": "background-1"
+      }
+    },
+    "pdp-comparison-table": {
+      "type": "pdp-comparison-table",
+      "blocks": {
+        "competitor-1": {
+          "type": "competitor",
+          "settings": {
+            "name": "Ondermax Patches",
+            "badge": "Best Choice",
+            "is_our_product": true
+          }
+        },
+        "competitor-2": {
+          "type": "competitor",
+          "settings": {
+            "name": "Competitor Pills"
+          }
+        },
+        "competitor-3": {
+          "type": "competitor",
+          "settings": {
+            "name": "Energy Drinks"
+          }
+        },
+        "feature-1": {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Fast Absorption",
+            "icon": "⚡",
+            "feature_0": "check",
+            "feature_1": "cross",
+            "feature_2": "cross"
+          }
+        },
+        "feature-2": {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "No Crash",
+            "icon": "🛡️",
+            "feature_0": "check",
+            "feature_1": "cross",
+            "feature_2": "cross"
+          }
+        },
+        "feature-3": {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Sugar-Free",
+            "icon": "🌿",
+            "feature_0": "check",
+            "feature_1": "check",
+            "feature_2": "cross"
+          }
+        },
+        "feature-4": {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Subscription",
+            "icon": "🔄",
+            "feature_0": "check",
+            "feature_1": "cross",
+            "feature_2": "cross"
+          }
+        },
+        "feature-5": {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Ingredient Purity",
+            "icon": "✨",
+            "feature_0": "check",
+            "feature_1": "partial",
+            "feature_2": "cross"
+          }
+        }
+      },
+      "block_order": [
+        "competitor-1",
+        "competitor-2",
+        "competitor-3",
+        "feature-1",
+        "feature-2",
+        "feature-3",
+        "feature-4",
+        "feature-5"
+      ],
+      "settings": {
+        "heading": "Why Choose Ondermax Patches?",
+        "heading_size": "h2",
+        "subheading": "See how we compare to the competition",
+        "color_scheme": "background-1",
+        "cta_text": "Ditch the Pills. Upgrade to Patches.",
+        "cta_link": "#subscription",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "pdp-behavioral-nudges": {
+      "type": "pdp-behavioral-nudges",
+      "blocks": {
+        "perk-1": {
+          "type": "perk",
+          "settings": {
+            "perk_text": "20% off every order"
+          }
+        },
+        "perk-2": {
+          "type": "perk",
+          "settings": {
+            "perk_text": "Free shipping worldwide"
+          }
+        },
+        "perk-3": {
+          "type": "perk",
+          "settings": {
+            "perk_text": "Cancel anytime"
+          }
+        },
+        "perk-4": {
+          "type": "perk",
+          "settings": {
+            "perk_text": "Priority customer support"
+          }
+        }
+      },
+      "block_order": ["perk-1", "perk-2", "perk-3", "perk-4"],
+      "settings": {
+        "enable_scarcity_banner": true,
+        "scarcity_text": "1,200+ subscribers upgraded today",
+        "enable_stock_alert": true,
+        "stock_percentage": 25,
+        "enable_shipping_bar": true,
+        "shipping_text": "Spend $47 → Free Shipping Worldwide",
+        "shipping_subtext": "Add $12 more to qualify",
+        "shipping_progress": 75,
+        "enable_subscription_perks": true,
+        "perks_title": "Subscription Perks",
+        "color_scheme": "background-1"
+      }
+    },
+    "pdp-faq-accordion": {
+      "type": "pdp-faq-accordion",
+      "blocks": {
+        "faq-1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How fast will I see results?",
+            "answer": "<p>Most customers feel the effects within 15-30 minutes of application. Full benefits are typically experienced within the first week of consistent use.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is it safe for daily use?",
+            "answer": "<p>Yes, our patches are dermatologist-tested and safe for daily use. The transdermal delivery system is gentle on your skin while providing consistent results.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I cancel my subscription anytime?",
+            "answer": "<p>Absolutely! You can cancel your subscription at any time with just one click. No questions asked, no hidden fees.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I use the patches?",
+            "answer": "<p>Simply apply the patch to clean, dry skin in the morning. Wear for 8-12 hours, then remove and dispose. Each patch is designed for single use.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are the patches waterproof?",
+            "answer": "<p>Yes, our patches are waterproof and sweat-resistant, so you can wear them during workouts, showers, and daily activities without worry.</p>"
+          }
+        },
+        "faq-6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What if I'm not satisfied?",
+            "answer": "<p>We offer a 30-day money-back guarantee. If you're not completely satisfied with your results, contact us for a full refund.</p>"
+          }
+        }
+      },
+      "block_order": ["faq-1", "faq-2", "faq-3", "faq-4", "faq-5", "faq-6"],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h2",
+        "subheading": "Got questions? We've got answers.",
+        "color_scheme": "background-1",
+        "cta_text": "Still unsure? Try risk-free today.",
+        "cta_link": "#subscription",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "settings": {
+        "color_scheme": "background-1",
+        "show_custom_bg": false,
+        "custom_bg_color": "#f2f2f2",
+        "corner_radius": 12,
+        "border_width": 0,
+        "border_color": "#b7b7b7",
+        "avatar_alignment": "top",
+        "avatar_corner_radius": 40,
+        "star_color": "#ffcc00",
+        "stars_translate": 0,
+        "checkmark_color": "#6d388b",
+        "checkmark_icon_color": "#ffffff",
+        "slider_type": "slide",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "display_arrows": false,
+        "display_dots": true,
+        "author_1": "<em>Sarah M.</em> [stars]",
+        "text_1": "<p>No more coffee jitters – subscription was a no-brainer. The energy lasts all day without any crash.</p>",
+        "author_2": "<em>Mike R.</em> [stars]",
+        "text_2": "<p>Game-changer for my morning routine. I feel more focused and productive throughout the day.</p>",
+        "author_3": "<em>Lisa K.</em> [stars]",
+        "text_3": "<p>Finally found something that works without the side effects. Love the convenience of patches over pills.</p>",
+        "margin_top": 24,
+        "margin_bottom": 24
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pdp-benefits-row",
+    "pdp-ugc-carousel",
+    "pdp-ingredients-science",
+    "pdp-comparison-table",
+    "pdp-behavioral-nudges",
+    "pdp-faq-accordion",
+    "testimonials"
+  ]
+}

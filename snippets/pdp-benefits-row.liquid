@@ -1,0 +1,312 @@
+{% comment %}
+  PDP Benefits Row - Mobile-first swipeable carousel
+  Displays key product benefits with micro-interactions
+{% endcomment %}
+
+<div class="pdp-benefits-row color-{{ section.settings.color_scheme | default: 'background-1' }}">
+  <div class="page-width">
+    <div class="pdp-benefits-container">
+      {% if section.settings.heading != blank %}
+        <h2 class="pdp-benefits-heading {{ section.settings.heading_size | default: 'h2' }}">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+      
+      <div class="pdp-benefits-carousel" data-benefits-carousel>
+        <div class="pdp-benefits-track" data-benefits-track>
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'benefit' %}
+                <div class="pdp-benefit-card" {{ block.shopify_attributes }}>
+                  <div class="pdp-benefit-icon">
+                    {% if block.settings.icon != blank %}
+                      <span class="icon icon-{{ block.settings.icon }}"></span>
+                    {% elsif block.settings.custom_icon != blank %}
+                      <img src="{{ block.settings.custom_icon | image_url: width: 40 }}" alt="{{ block.settings.title }}" loading="lazy">
+                    {% endif %}
+                  </div>
+                  <h3 class="pdp-benefit-title">{{ block.settings.title }}</h3>
+                  <p class="pdp-benefit-description">{{ block.settings.description }}</p>
+                </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+        
+        <div class="pdp-benefits-dots" data-benefits-dots>
+          {% for block in section.blocks %}
+            <button class="pdp-benefit-dot" data-dot="{{ forloop.index0 }}" aria-label="Go to benefit {{ forloop.index }}"></button>
+          {% endfor %}
+        </div>
+      </div>
+      
+      {% if section.settings.cta_text != blank and section.settings.cta_link != blank %}
+        <div class="pdp-benefits-cta">
+          <a href="{{ section.settings.cta_link }}" class="button button--primary pdp-benefits-button">
+            {{ section.settings.cta_text }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .pdp-benefits-row {
+    padding: 2rem 0;
+    background: rgb(var(--color-background));
+  }
+  
+  .pdp-benefits-container {
+    text-align: center;
+  }
+  
+  .pdp-benefits-heading {
+    margin-bottom: 2rem;
+    color: rgb(var(--color-foreground));
+  }
+  
+  .pdp-benefits-carousel {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  
+  .pdp-benefits-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    gap: 1rem;
+  }
+  
+  .pdp-benefit-card {
+    flex: 0 0 100%;
+    padding: 1.5rem;
+    background: rgb(var(--color-background));
+    border: 1px solid rgba(var(--color-foreground), 0.1);
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .pdp-benefit-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(var(--color-foreground), 0.1);
+  }
+  
+  .pdp-benefit-icon {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #1C8E8E; /* Ondermax Teal */
+  }
+  
+  .pdp-benefit-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .pdp-benefit-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: rgb(var(--color-foreground));
+  }
+  
+  .pdp-benefit-description {
+    font-size: 1rem;
+    color: rgba(var(--color-foreground), 0.7);
+    line-height: 1.4;
+  }
+  
+  .pdp-benefits-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .pdp-benefit-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(var(--color-foreground), 0.3);
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .pdp-benefit-dot.active {
+    background: #1C8E8E; /* Ondermax Teal */
+  }
+  
+  .pdp-benefits-cta {
+    margin-top: 2rem;
+  }
+  
+  .pdp-benefits-button {
+    background: #1C8E8E; /* Ondermax Teal */
+    color: white;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+  }
+  
+  .pdp-benefits-button:hover {
+    background: #156B6B;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(28, 142, 142, 0.3);
+  }
+  
+  /* Desktop styles */
+  @media screen and (min-width: 750px) {
+    .pdp-benefits-row {
+      padding: 3rem 0;
+    }
+    
+    .pdp-benefits-track {
+      gap: 2rem;
+    }
+    
+    .pdp-benefit-card {
+      flex: 0 0 calc(33.333% - 1.33rem);
+      min-height: 220px;
+    }
+    
+    .pdp-benefit-icon {
+      font-size: 3rem;
+    }
+    
+    .pdp-benefit-icon img {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .pdp-benefit-title {
+      font-size: 1.6rem;
+    }
+    
+    .pdp-benefit-description {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media screen and (min-width: 990px) {
+    .pdp-benefit-card {
+      flex: 0 0 calc(25% - 1.5rem);
+    }
+  }
+</style>
+
+<script>
+  class PDPBenefitsCarousel {
+    constructor(container) {
+      this.container = container;
+      this.track = container.querySelector('[data-benefits-track]');
+      this.dots = container.querySelectorAll('[data-benefits-dots] button');
+      this.currentIndex = 0;
+      this.totalSlides = this.dots.length;
+      this.isAnimating = false;
+      
+      this.init();
+    }
+    
+    init() {
+      this.setupEventListeners();
+      this.updateDots();
+      this.startAutoplay();
+    }
+    
+    setupEventListeners() {
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => this.goToSlide(index));
+      });
+      
+      // Touch/swipe support
+      let startX = 0;
+      let startY = 0;
+      
+      this.track.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+      });
+      
+      this.track.addEventListener('touchend', (e) => {
+        if (this.isAnimating) return;
+        
+        const endX = e.changedTouches[0].clientX;
+        const endY = e.changedTouches[0].clientY;
+        const diffX = startX - endX;
+        const diffY = startY - endY;
+        
+        // Only handle horizontal swipes
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+          if (diffX > 0) {
+            this.nextSlide();
+          } else {
+            this.prevSlide();
+          }
+        }
+      });
+      
+      // Pause autoplay on hover
+      this.container.addEventListener('mouseenter', () => this.pauseAutoplay());
+      this.container.addEventListener('mouseleave', () => this.startAutoplay());
+    }
+    
+    goToSlide(index) {
+      if (this.isAnimating || index === this.currentIndex) return;
+      
+      this.isAnimating = true;
+      this.currentIndex = index;
+      
+      this.track.style.transform = `translateX(-${index * 100}%)`;
+      this.updateDots();
+      
+      setTimeout(() => {
+        this.isAnimating = false;
+      }, 300);
+    }
+    
+    nextSlide() {
+      const nextIndex = (this.currentIndex + 1) % this.totalSlides;
+      this.goToSlide(nextIndex);
+    }
+    
+    prevSlide() {
+      const prevIndex = this.currentIndex === 0 ? this.totalSlides - 1 : this.currentIndex - 1;
+      this.goToSlide(prevIndex);
+    }
+    
+    updateDots() {
+      this.dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === this.currentIndex);
+      });
+    }
+    
+    startAutoplay() {
+      this.autoplayInterval = setInterval(() => {
+        this.nextSlide();
+      }, 5000);
+    }
+    
+    pauseAutoplay() {
+      if (this.autoplayInterval) {
+        clearInterval(this.autoplayInterval);
+      }
+    }
+  }
+  
+  // Initialize carousel when DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('[data-benefits-carousel]');
+    if (carousel) {
+      new PDPBenefitsCarousel(carousel);
+    }
+  });
+</script>

@@ -1,0 +1,600 @@
+{% comment %}
+  Enhanced Sticky ATC - Subscription-first design with animations
+  Mobile pinned bottom with product image thumbnail and subscription toggle
+{% endcomment %}
+
+<sticky-atc-enhanced 
+  id="sticky-atc-enhanced-{{ section.id }}"
+  class="sticky-atc-enhanced color-{{ section.settings.color_scheme | default: 'background-1' }}"
+  data-product-id="{{ product.id }}"
+  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+>
+  <div class="sticky-atc-enhanced-container">
+    <div class="sticky-atc-enhanced-left">
+      {% if section.settings.show_product_image %}
+        <div class="sticky-atc-enhanced-image">
+          {% if product.featured_image %}
+            <img 
+              src="{{ product.featured_image | image_url: width: 60 }}" 
+              alt="{{ product.title }}"
+              loading="lazy"
+            >
+          {% endif %}
+        </div>
+      {% endif %}
+      
+      <div class="sticky-atc-enhanced-info">
+        {% if section.settings.show_product_title %}
+          <h3 class="sticky-atc-enhanced-title">{{ product.title }}</h3>
+        {% endif %}
+        
+        {% if section.settings.show_price %}
+          <div class="sticky-atc-enhanced-price">
+            <span class="price">
+              {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
+                <span class="price-item price-item--sale">{{ product.selected_or_first_available_variant.price | money }}</span>
+                <span class="price-item price-item--regular">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
+              {% else %}
+                <span class="price-item price-item--regular">{{ product.selected_or_first_available_variant.price | money }}</span>
+              {% endif %}
+            </span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    
+    <div class="sticky-atc-enhanced-right">
+      {% if section.settings.enable_subscription_toggle %}
+        <div class="sticky-atc-subscription-toggle">
+          <div class="subscription-toggle">
+            <label class="subscription-toggle-label">
+              <input 
+                type="radio" 
+                name="purchase-type" 
+                value="one-time" 
+                class="subscription-toggle-input"
+                data-purchase-type="one-time"
+              >
+              <span class="subscription-toggle-text">One-time</span>
+            </label>
+            
+            <label class="subscription-toggle-label subscription-toggle-label--primary">
+              <input 
+                type="radio" 
+                name="purchase-type" 
+                value="subscription" 
+                class="subscription-toggle-input"
+                data-purchase-type="subscription"
+                checked
+              >
+              <span class="subscription-toggle-text">
+                Subscribe
+                <span class="subscription-save-badge">Save 20%</span>
+              </span>
+            </label>
+          </div>
+        </div>
+      {% endif %}
+      
+      <div class="sticky-atc-enhanced-actions">
+        {% if section.settings.show_variant_picker %}
+          <div class="sticky-atc-variant-picker">
+            <select class="sticky-atc-select" data-variant-select>
+              {% for variant in product.variants %}
+                <option 
+                  value="{{ variant.id }}" 
+                  {% if variant == product.selected_or_first_available_variant %}selected{% endif %}
+                  {% unless variant.available %}disabled{% endunless %}
+                >
+                  {{ variant.title }}
+                  {% unless variant.available %} - Sold out{% endunless %}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
+        {% endif %}
+        
+        <button 
+          class="sticky-atc-enhanced-button button button--primary"
+          data-add-to-cart
+          {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}
+        >
+          <span class="button-text">
+            {% if product.selected_or_first_available_variant.available %}
+              {% if section.settings.enable_subscription_toggle %}
+                <span class="button-text-subscription">Subscribe Now</span>
+                <span class="button-text-one-time" style="display: none;">Add to Cart</span>
+              {% else %}
+                Add to Cart
+              {% endif %}
+            {% else %}
+              Sold Out
+            {% endif %}
+          </span>
+          <span class="button-loading" style="display: none;">
+            <svg class="spinner" width="20" height="20" viewBox="0 0 20 20">
+              <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="50" stroke-dashoffset="50">
+                <animate attributeName="stroke-dashoffset" dur="1s" values="50;0" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  {% if section.settings.show_trust_badges %}
+    <div class="sticky-atc-trust-badges">
+      <div class="trust-badge">
+        <span class="icon icon-local_shipping"></span>
+        <span>Free Shipping</span>
+      </div>
+      <div class="trust-badge">
+        <span class="icon icon-security"></span>
+        <span>Secure Checkout</span>
+      </div>
+      <div class="trust-badge">
+        <span class="icon icon-verified"></span>
+        <span>Money-Back Guarantee</span>
+      </div>
+    </div>
+  {% endif %}
+</sticky-atc-enhanced>
+
+<style>
+  .sticky-atc-enhanced {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(var(--color-background));
+    border-top: 1px solid rgba(var(--color-foreground), 0.1);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 1rem 0;
+  }
+  
+  .sticky-atc-enhanced.visible {
+    transform: translateY(0);
+  }
+  
+  .sticky-atc-enhanced-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .sticky-atc-enhanced-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+  }
+  
+  .sticky-atc-enhanced-image {
+    flex-shrink: 0;
+  }
+  
+  .sticky-atc-enhanced-image img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .sticky-atc-enhanced-info {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .sticky-atc-enhanced-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    color: rgb(var(--color-foreground));
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .sticky-atc-enhanced-price {
+    font-size: 1rem;
+    color: rgb(var(--color-foreground));
+  }
+  
+  .sticky-atc-enhanced-price .price-item--sale {
+    color: #1C8E8E; /* Ondermax Teal */
+    font-weight: 600;
+  }
+  
+  .sticky-atc-enhanced-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .subscription-toggle {
+    display: flex;
+    background: rgba(var(--color-foreground), 0.1);
+    border-radius: 8px;
+    padding: 2px;
+    gap: 2px;
+  }
+  
+  .subscription-toggle-label {
+    position: relative;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    min-width: 80px;
+  }
+  
+  .subscription-toggle-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .subscription-toggle-text {
+    display: block;
+    color: rgba(var(--color-foreground), 0.7);
+    transition: color 0.2s ease;
+  }
+  
+  .subscription-toggle-label--primary .subscription-toggle-text {
+    color: white;
+  }
+  
+  .subscription-save-badge {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 0.1rem;
+    opacity: 0.9;
+  }
+  
+  .subscription-toggle-input:checked + .subscription-toggle-text {
+    color: white;
+  }
+  
+  .subscription-toggle-label:has(.subscription-toggle-input:checked) {
+    background: #1C8E8E; /* Ondermax Teal */
+    box-shadow: 0 2px 4px rgba(28, 142, 142, 0.3);
+  }
+  
+  .sticky-atc-variant-picker {
+    flex-shrink: 0;
+  }
+  
+  .sticky-atc-select {
+    padding: 0.5rem;
+    border: 1px solid rgba(var(--color-foreground), 0.2);
+    border-radius: 6px;
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    font-size: 0.9rem;
+    min-width: 120px;
+  }
+  
+  .sticky-atc-enhanced-button {
+    background: #1C8E8E; /* Ondermax Teal */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 140px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .sticky-atc-enhanced-button:hover:not(:disabled) {
+    background: #156B6B;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(28, 142, 142, 0.3);
+  }
+  
+  .sticky-atc-enhanced-button:disabled {
+    background: rgba(var(--color-foreground), 0.3);
+    cursor: not-allowed;
+  }
+  
+  .sticky-atc-enhanced-button.loading .button-text {
+    display: none;
+  }
+  
+  .sticky-atc-enhanced-button.loading .button-loading {
+    display: block;
+  }
+  
+  .spinner {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .sticky-atc-trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.75rem 1rem 0;
+    border-top: 1px solid rgba(var(--color-foreground), 0.1);
+    margin-top: 0.75rem;
+  }
+  
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: rgba(var(--color-foreground), 0.7);
+  }
+  
+  .trust-badge .icon {
+    font-size: 1rem;
+    color: #1C8E8E; /* Ondermax Teal */
+  }
+  
+  /* Mobile styles */
+  @media screen and (max-width: 749px) {
+    .sticky-atc-enhanced-container {
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 0 1rem;
+    }
+    
+    .sticky-atc-enhanced-left {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .sticky-atc-enhanced-right {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .sticky-atc-enhanced-title {
+      font-size: 1rem;
+    }
+    
+    .sticky-atc-enhanced-price {
+      font-size: 0.9rem;
+    }
+    
+    .subscription-toggle {
+      flex: 1;
+    }
+    
+    .sticky-atc-enhanced-button {
+      flex: 1;
+      min-width: auto;
+    }
+    
+    .sticky-atc-trust-badges {
+      gap: 1rem;
+      font-size: 0.7rem;
+    }
+    
+    .trust-badge {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.25rem;
+    }
+  }
+  
+  /* Desktop styles */
+  @media screen and (min-width: 750px) {
+    .sticky-atc-enhanced {
+      padding: 1.25rem 0;
+    }
+    
+    .sticky-atc-enhanced-container {
+      padding: 0 2rem;
+    }
+    
+    .sticky-atc-enhanced-image img {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .sticky-atc-enhanced-title {
+      font-size: 1.2rem;
+    }
+    
+    .sticky-atc-enhanced-price {
+      font-size: 1.1rem;
+    }
+    
+    .sticky-atc-enhanced-button {
+      padding: 0.875rem 2rem;
+      font-size: 1.1rem;
+    }
+  }
+</style>
+
+<script>
+  class StickyATCEnhanced extends HTMLElement {
+    constructor() {
+      super();
+      this.isVisible = false;
+      this.isLoading = false;
+      this.purchaseType = 'subscription';
+      this.currentVariantId = null;
+      
+      this.init();
+    }
+    
+    init() {
+      this.setupEventListeners();
+      this.setupScrollListener();
+      this.updateVariant();
+    }
+    
+    setupEventListeners() {
+      // Subscription toggle
+      const purchaseTypeInputs = this.querySelectorAll('[data-purchase-type]');
+      purchaseTypeInputs.forEach(input => {
+        input.addEventListener('change', (e) => {
+          this.purchaseType = e.target.value;
+          this.updateButtonText();
+          this.animateToggle();
+        });
+      });
+      
+      // Variant selection
+      const variantSelect = this.querySelector('[data-variant-select]');
+      if (variantSelect) {
+        variantSelect.addEventListener('change', (e) => {
+          this.currentVariantId = e.target.value;
+          this.updateVariant();
+        });
+      }
+      
+      // Add to cart
+      const addToCartButton = this.querySelector('[data-add-to-cart]');
+      if (addToCartButton) {
+        addToCartButton.addEventListener('click', () => this.addToCart());
+      }
+    }
+    
+    setupScrollListener() {
+      let ticking = false;
+      
+      const updateVisibility = () => {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        
+        // Show sticky ATC after scrolling 300px or when near bottom
+        const shouldShow = scrollY > 300 || (scrollY + windowHeight) > (documentHeight - 100);
+        
+        if (shouldShow !== this.isVisible) {
+          this.isVisible = shouldShow;
+          this.classList.toggle('visible', shouldShow);
+        }
+        
+        ticking = false;
+      };
+      
+      const requestTick = () => {
+        if (!ticking) {
+          requestAnimationFrame(updateVisibility);
+          ticking = true;
+        }
+      };
+      
+      window.addEventListener('scroll', requestTick, { passive: true });
+    }
+    
+    updateVariant() {
+      const variantSelect = this.querySelector('[data-variant-select]');
+      if (variantSelect) {
+        this.currentVariantId = variantSelect.value;
+      } else {
+        this.currentVariantId = this.dataset.variantId;
+      }
+    }
+    
+    updateButtonText() {
+      const subscriptionText = this.querySelector('.button-text-subscription');
+      const oneTimeText = this.querySelector('.button-text-one-time');
+      
+      if (subscriptionText && oneTimeText) {
+        if (this.purchaseType === 'subscription') {
+          subscriptionText.style.display = 'block';
+          oneTimeText.style.display = 'none';
+        } else {
+          subscriptionText.style.display = 'none';
+          oneTimeText.style.display = 'block';
+        }
+      }
+    }
+    
+    animateToggle() {
+      const button = this.querySelector('.sticky-atc-enhanced-button');
+      if (button) {
+        button.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          button.style.transform = 'scale(1)';
+        }, 150);
+      }
+    }
+    
+    async addToCart() {
+      if (this.isLoading) return;
+      
+      this.isLoading = true;
+      const button = this.querySelector('[data-add-to-cart]');
+      button.classList.add('loading');
+      button.disabled = true;
+      
+      try {
+        const formData = {
+          'items': [{
+            'id': this.currentVariantId,
+            'quantity': 1,
+            'properties': {
+              'Purchase Type': this.purchaseType
+            }
+          }]
+        };
+        
+        const response = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+        
+        if (response.ok) {
+          // Show success animation
+          button.style.background = '#4CAF50';
+          button.querySelector('.button-text').textContent = 'Added!';
+          
+          // Dispatch cart update event
+          document.dispatchEvent(new CustomEvent('cart:updated'));
+          
+          setTimeout(() => {
+            button.style.background = '';
+            this.updateButtonText();
+          }, 2000);
+        } else {
+          throw new Error('Failed to add to cart');
+        }
+      } catch (error) {
+        console.error('Error adding to cart:', error);
+        button.style.background = '#f44336';
+        button.querySelector('.button-text').textContent = 'Error';
+        
+        setTimeout(() => {
+          button.style.background = '';
+          this.updateButtonText();
+        }, 2000);
+      } finally {
+        this.isLoading = false;
+        button.classList.remove('loading');
+        button.disabled = false;
+      }
+    }
+  }
+  
+  customElements.define('sticky-atc-enhanced', StickyATCEnhanced);
+</script>

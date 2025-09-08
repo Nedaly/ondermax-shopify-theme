@@ -1,0 +1,259 @@
+{% comment %}
+  PDP FAQ Accordion - Objections handling with smooth animations
+  Mobile-friendly collapsible content
+{% endcomment %}
+
+<div class="pdp-faq-accordion color-{{ section.settings.color_scheme | default: 'background-1' }}">
+  <div class="page-width">
+    <div class="pdp-faq-container">
+      {% if section.settings.heading != blank %}
+        <h2 class="pdp-faq-heading {{ section.settings.heading_size | default: 'h2' }}">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+      
+      {% if section.settings.subheading != blank %}
+        <p class="pdp-faq-subheading">{{ section.settings.subheading }}</p>
+      {% endif %}
+      
+      <div class="pdp-faq-list" data-faq-accordion>
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'faq_item' %}
+              <div class="pdp-faq-item" {{ block.shopify_attributes }}>
+                <button 
+                  class="pdp-faq-question" 
+                  data-faq-toggle="{{ forloop.index0 }}"
+                  aria-expanded="false"
+                  aria-controls="faq-answer-{{ forloop.index0 }}"
+                >
+                  <span class="pdp-faq-question-text">{{ block.settings.question }}</span>
+                  <span class="pdp-faq-icon" data-faq-icon>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </button>
+                
+                <div 
+                  class="pdp-faq-answer" 
+                  id="faq-answer-{{ forloop.index0 }}"
+                  data-faq-answer
+                  style="max-height: 0;"
+                >
+                  <div class="pdp-faq-answer-content">
+                    {{ block.settings.answer }}
+                  </div>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+      
+      {% if section.settings.cta_text != blank and section.settings.cta_link != blank %}
+        <div class="pdp-faq-cta">
+          <a href="{{ section.settings.cta_link }}" class="button button--primary pdp-faq-button">
+            {{ section.settings.cta_text }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .pdp-faq-accordion {
+    padding: 2rem 0;
+    background: rgb(var(--color-background));
+  }
+  
+  .pdp-faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .pdp-faq-heading {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-foreground));
+  }
+  
+  .pdp-faq-subheading {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: rgba(var(--color-foreground), 0.7);
+    font-size: 1.1rem;
+  }
+  
+  .pdp-faq-list {
+    margin-bottom: 2rem;
+  }
+  
+  .pdp-faq-item {
+    border: 1px solid rgba(var(--color-foreground), 0.1);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .pdp-faq-item:hover {
+    box-shadow: 0 2px 8px rgba(var(--color-foreground), 0.1);
+  }
+  
+  .pdp-faq-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .pdp-faq-question {
+    width: 100%;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: background-color 0.2s ease;
+    min-height: 60px;
+  }
+  
+  .pdp-faq-question:hover {
+    background: rgba(var(--color-foreground), 0.05);
+  }
+  
+  .pdp-faq-question-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(var(--color-foreground));
+    line-height: 1.4;
+  }
+  
+  .pdp-faq-icon {
+    flex-shrink: 0;
+    color: #1C8E8E; /* Ondermax Teal */
+    transition: transform 0.3s ease;
+  }
+  
+  .pdp-faq-question[aria-expanded="true"] .pdp-faq-icon {
+    transform: rotate(180deg);
+  }
+  
+  .pdp-faq-answer {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .pdp-faq-answer-content {
+    padding: 0 1.5rem 1.5rem;
+    color: rgba(var(--color-foreground), 0.8);
+    line-height: 1.6;
+  }
+  
+  .pdp-faq-answer-content p {
+    margin-bottom: 1rem;
+  }
+  
+  .pdp-faq-answer-content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .pdp-faq-cta {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .pdp-faq-button {
+    background: #1C8E8E; /* Ondermax Teal */
+    color: white;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+  }
+  
+  .pdp-faq-button:hover {
+    background: #156B6B;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(28, 142, 142, 0.3);
+  }
+  
+  /* Desktop styles */
+  @media screen and (min-width: 750px) {
+    .pdp-faq-accordion {
+      padding: 3rem 0;
+    }
+    
+    .pdp-faq-question {
+      padding: 2rem;
+    }
+    
+    .pdp-faq-question-text {
+      font-size: 1.2rem;
+    }
+    
+    .pdp-faq-answer-content {
+      padding: 0 2rem 2rem;
+      font-size: 1.1rem;
+    }
+  }
+</style>
+
+<script>
+  class PDPFAQAccordion {
+    constructor(container) {
+      this.container = container;
+      this.questions = container.querySelectorAll('[data-faq-toggle]');
+      this.answers = container.querySelectorAll('[data-faq-answer]');
+      this.icons = container.querySelectorAll('[data-faq-icon]');
+      
+      this.init();
+    }
+    
+    init() {
+      this.setupEventListeners();
+    }
+    
+    setupEventListeners() {
+      this.questions.forEach((question, index) => {
+        question.addEventListener('click', () => this.toggleFAQ(index));
+      });
+    }
+    
+    toggleFAQ(index) {
+      const question = this.questions[index];
+      const answer = this.answers[index];
+      const icon = this.icons[index];
+      const isExpanded = question.getAttribute('aria-expanded') === 'true';
+      
+      // Close all other FAQs
+      this.questions.forEach((q, i) => {
+        if (i !== index) {
+          q.setAttribute('aria-expanded', 'false');
+          this.answers[i].style.maxHeight = '0';
+        }
+      });
+      
+      // Toggle current FAQ
+      if (isExpanded) {
+        question.setAttribute('aria-expanded', 'false');
+        answer.style.maxHeight = '0';
+      } else {
+        question.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    }
+  }
+  
+  // Initialize accordion when DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const accordion = document.querySelector('[data-faq-accordion]');
+    if (accordion) {
+      new PDPFAQAccordion(accordion);
+    }
+  });
+</script>

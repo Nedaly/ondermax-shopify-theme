@@ -1,0 +1,203 @@
+{% comment %}
+  PDP Benefits Row Section
+  Mobile-first swipeable carousel of key product benefits
+{% endcomment %}
+
+{% render 'pdp-benefits-row', section: section %}
+
+{% schema %}
+{
+  "name": "PDP Benefits Row",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why Choose Our Product"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading Size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Call to Action"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Button Text",
+      "default": "Upgrade Your Routine. Subscribe Today."
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Benefit Title",
+          "default": "Key Benefit"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Benefit Description",
+          "default": "Describe the key benefit of your product here."
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            {
+              "value": "flash_on",
+              "label": "Lightning (Energy)"
+            },
+            {
+              "value": "psychology",
+              "label": "Brain (Focus)"
+            },
+            {
+              "value": "eco",
+              "label": "Leaf (Natural)"
+            },
+            {
+              "value": "verified",
+              "label": "Checkmark (Trusted)"
+            },
+            {
+              "value": "medication",
+              "label": "Pill (No Pills)"
+            },
+            {
+              "value": "schedule",
+              "label": "Clock (Fast)"
+            },
+            {
+              "value": "security",
+              "label": "Shield (Safe)"
+            },
+            {
+              "value": "favorite",
+              "label": "Heart (Love)"
+            }
+          ],
+          "default": "flash_on"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom Icon (overrides icon above)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PDP Benefits Row",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "title": "⚡ Instant Energy",
+            "description": "Feel it in minutes, lasts all day.",
+            "icon": "flash_on"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "title": "🧠 Sharper Focus",
+            "description": "Clinically-backed NAD+ synergy.",
+            "icon": "psychology"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "title": "🌿 Clean Ingredients",
+            "description": "No sugar. No fillers. Just results.",
+            "icon": "eco"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "title": "🛡 Trusted by Pros",
+            "description": "1,200+ biohackers rely on it.",
+            "icon": "verified"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "title": "💊 No Pills Needed",
+            "description": "Patch = simplicity.",
+            "icon": "medication"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

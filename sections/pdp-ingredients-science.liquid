@@ -1,0 +1,722 @@
+{% comment %}
+  PDP Ingredients & Science Section
+  Expandable ingredient cards with scientific backing
+{% endcomment %}
+
+<div class="pdp-ingredients-science color-{{ section.settings.color_scheme | default: 'background-1' }}">
+  <div class="page-width">
+    <div class="pdp-ingredients-container">
+      
+      {% if section.settings.heading != blank %}
+        <h2 class="pdp-ingredients-heading {{ section.settings.heading_size | default: 'h2' }}">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+      
+      {% if section.settings.subheading != blank %}
+        <p class="pdp-ingredients-subheading">{{ section.settings.subheading }}</p>
+      {% endif %}
+      
+      <div class="pdp-ingredients-grid">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'ingredient' %}
+              <div class="pdp-ingredient-card" {{ block.shopify_attributes }} data-ingredient-card>
+                <div class="ingredient-card-header" data-ingredient-toggle>
+                  <div class="ingredient-icon">
+                    {% if block.settings.icon != blank %}
+                      <span class="icon icon-{{ block.settings.icon }}"></span>
+                    {% elsif block.settings.custom_icon != blank %}
+                      <img src="{{ block.settings.custom_icon | image_url: width: 40 }}" alt="{{ block.settings.name }}" loading="lazy">
+                    {% endif %}
+                  </div>
+                  <div class="ingredient-info">
+                    <h3 class="ingredient-name">{{ block.settings.name }}</h3>
+                    <p class="ingredient-brief">{{ block.settings.brief_description }}</p>
+                  </div>
+                  <div class="ingredient-arrow">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+                
+                <div class="ingredient-card-content" data-ingredient-content>
+                  <div class="ingredient-details">
+                    <p class="ingredient-description">{{ block.settings.description }}</p>
+                    
+                    {% if block.settings.benefits != blank %}
+                      <div class="ingredient-benefits">
+                        <h4 class="benefits-title">Key Benefits:</h4>
+                        <ul class="benefits-list">
+                          {% assign benefits = block.settings.benefits | split: ',' %}
+                          {% for benefit in benefits %}
+                            <li class="benefit-item">{{ benefit | strip }}</li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    {% endif %}
+                    
+                    {% if block.settings.dosage != blank %}
+                      <div class="ingredient-dosage">
+                        <span class="dosage-label">Dosage:</span>
+                        <span class="dosage-value">{{ block.settings.dosage }}</span>
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+      
+      {% if section.settings.show_infographic %}
+        <div class="pdp-how-it-works">
+          <h3 class="how-it-works-title">{{ section.settings.infographic_title | default: 'How It Works' }}</h3>
+          <div class="how-it-works-steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4 class="step-title">Apply</h4>
+                <p class="step-description">Place patch on clean, dry skin</p>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4 class="step-title">Absorb</h4>
+                <p class="step-description">Transdermal delivery begins</p>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4 class="step-title">Feel</h4>
+                <p class="step-description">Experience sustained energy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      
+      {% if section.settings.show_authority %}
+        <div class="pdp-authority-footer">
+          <div class="authority-content">
+            <span class="authority-icon">🔬</span>
+            <span class="authority-text">{{ section.settings.authority_text | default: 'Backed by 300+ studies' }}</span>
+          </div>
+        </div>
+      {% endif %}
+      
+    </div>
+  </div>
+</div>
+
+<style>
+  .pdp-ingredients-science {
+    padding: 2rem 0;
+    background: rgb(var(--color-background));
+  }
+  
+  .pdp-ingredients-container {
+    text-align: center;
+  }
+  
+  .pdp-ingredients-heading {
+    margin-bottom: 1rem;
+    color: rgb(var(--color-foreground));
+  }
+  
+  .pdp-ingredients-subheading {
+    margin-bottom: 2rem;
+    color: rgba(var(--color-foreground), 0.7);
+    font-size: 1.1rem;
+  }
+  
+  .pdp-ingredients-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .pdp-ingredient-card {
+    background: rgb(var(--color-background));
+    border: 1px solid rgba(var(--color-foreground), 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .pdp-ingredient-card:hover {
+    box-shadow: 0 4px 20px rgba(var(--color-foreground), 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .pdp-ingredient-card.expanded {
+    border-color: #1C8E8E;
+    box-shadow: 0 4px 20px rgba(28, 142, 142, 0.2);
+  }
+  
+  .ingredient-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .ingredient-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: rgba(28, 142, 142, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1C8E8E;
+    font-size: 1.5rem;
+  }
+  
+  .ingredient-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+  
+  .ingredient-info {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .ingredient-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    color: rgb(var(--color-foreground));
+  }
+  
+  .ingredient-brief {
+    font-size: 0.9rem;
+    color: rgba(var(--color-foreground), 0.7);
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  .ingredient-arrow {
+    flex-shrink: 0;
+    color: rgba(var(--color-foreground), 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .pdp-ingredient-card.expanded .ingredient-arrow {
+    transform: rotate(180deg);
+    color: #1C8E8E;
+  }
+  
+  .ingredient-card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .pdp-ingredient-card.expanded .ingredient-card-content {
+    max-height: 500px;
+  }
+  
+  .ingredient-details {
+    padding: 0 1.5rem 1.5rem;
+    text-align: left;
+  }
+  
+  .ingredient-description {
+    color: rgba(var(--color-foreground), 0.8);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .ingredient-benefits {
+    margin-bottom: 1rem;
+  }
+  
+  .benefits-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(var(--color-foreground));
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .benefit-item {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: rgba(var(--color-foreground), 0.8);
+    font-size: 0.9rem;
+  }
+  
+  .benefit-item::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #1C8E8E;
+    font-weight: bold;
+  }
+  
+  .ingredient-dosage {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(28, 142, 142, 0.1);
+    border-radius: 6px;
+  }
+  
+  .dosage-label {
+    font-weight: 600;
+    color: rgb(var(--color-foreground));
+    font-size: 0.9rem;
+  }
+  
+  .dosage-value {
+    color: #1C8E8E;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  /* How It Works */
+  .pdp-how-it-works {
+    margin-bottom: 2rem;
+  }
+  
+  .how-it-works-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(var(--color-foreground));
+    margin-bottom: 2rem;
+  }
+  
+  .how-it-works-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .step-number {
+    width: 50px;
+    height: 50px;
+    background: #1C8E8E;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .step-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(var(--color-foreground));
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .step-description {
+    font-size: 0.9rem;
+    color: rgba(var(--color-foreground), 0.7);
+    margin: 0;
+  }
+  
+  .step-arrow {
+    font-size: 1.5rem;
+    color: #1C8E8E;
+    font-weight: bold;
+  }
+  
+  /* Authority Footer */
+  .pdp-authority-footer {
+    text-align: center;
+  }
+  
+  .authority-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: rgba(28, 142, 142, 0.1);
+    border-radius: 8px;
+    color: rgb(var(--color-foreground));
+    font-weight: 600;
+  }
+  
+  .authority-icon {
+    font-size: 1.2rem;
+  }
+  
+  /* Mobile styles */
+  @media screen and (max-width: 749px) {
+    .pdp-ingredients-science {
+      padding: 1.5rem 0;
+    }
+    
+    .pdp-ingredients-grid {
+      gap: 0.75rem;
+    }
+    
+    .ingredient-card-header {
+      padding: 1rem;
+    }
+    
+    .ingredient-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+    
+    .ingredient-icon img {
+      width: 25px;
+      height: 25px;
+    }
+    
+    .ingredient-name {
+      font-size: 1.1rem;
+    }
+    
+    .ingredient-brief {
+      font-size: 0.8rem;
+    }
+    
+    .ingredient-details {
+      padding: 0 1rem 1rem;
+    }
+    
+    .how-it-works-steps {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .step-arrow {
+      transform: rotate(90deg);
+    }
+  }
+  
+  /* Desktop styles */
+  @media screen and (min-width: 750px) {
+    .pdp-ingredients-science {
+      padding: 3rem 0;
+    }
+    
+    .pdp-ingredients-grid {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .ingredient-card-header {
+      padding: 2rem;
+    }
+    
+    .ingredient-icon {
+      width: 60px;
+      height: 60px;
+      font-size: 1.8rem;
+    }
+    
+    .ingredient-icon img {
+      width: 35px;
+      height: 35px;
+    }
+    
+    .ingredient-name {
+      font-size: 1.3rem;
+    }
+    
+    .ingredient-brief {
+      font-size: 1rem;
+    }
+    
+    .ingredient-details {
+      padding: 0 2rem 2rem;
+    }
+  }
+</style>
+
+<script>
+  class PDPIngredientsScience {
+    constructor(container) {
+      this.container = container;
+      this.ingredientCards = container.querySelectorAll('[data-ingredient-card]');
+      this.init();
+    }
+    
+    init() {
+      this.setupEventListeners();
+    }
+    
+    setupEventListeners() {
+      this.ingredientCards.forEach(card => {
+        const toggle = card.querySelector('[data-ingredient-toggle]');
+        if (toggle) {
+          toggle.addEventListener('click', () => this.toggleCard(card));
+        }
+      });
+    }
+    
+    toggleCard(card) {
+      const isExpanded = card.classList.contains('expanded');
+      
+      // Close all other cards
+      this.ingredientCards.forEach(otherCard => {
+        if (otherCard !== card) {
+          otherCard.classList.remove('expanded');
+        }
+      });
+      
+      // Toggle current card
+      if (isExpanded) {
+        card.classList.remove('expanded');
+      } else {
+        card.classList.add('expanded');
+      }
+    }
+  }
+  
+  // Initialize ingredients science when DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const ingredients = document.querySelector('.pdp-ingredients-science');
+    if (ingredients) {
+      new PDPIngredientsScience(ingredients);
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "PDP Ingredients & Science",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What's Inside: Clean, Powerful Ingredients"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading Size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Scientifically-formulated ingredients for maximum effectiveness"
+    },
+    {
+      "type": "header",
+      "content": "Infographic"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_infographic",
+      "label": "Show How It Works",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "infographic_title",
+      "label": "Infographic Title",
+      "default": "How It Works"
+    },
+    {
+      "type": "header",
+      "content": "Authority"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_authority",
+      "label": "Show Authority Footer",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "authority_text",
+      "label": "Authority Text",
+      "default": "Backed by 300+ studies"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Ingredient",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Ingredient Name",
+          "default": "NAD+"
+        },
+        {
+          "type": "text",
+          "id": "brief_description",
+          "label": "Brief Description",
+          "default": "Restores mitochondrial energy"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Full Description",
+          "default": "NAD+ (Nicotinamide Adenine Dinucleotide) is a coenzyme found in all living cells. It plays a crucial role in energy metabolism and cellular repair processes."
+        },
+        {
+          "type": "textarea",
+          "id": "benefits",
+          "label": "Benefits (comma-separated)",
+          "default": "Boosts cellular energy, Supports DNA repair, Enhances cognitive function, Promotes healthy aging"
+        },
+        {
+          "type": "text",
+          "id": "dosage",
+          "label": "Dosage",
+          "default": "50mg per patch"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            {
+              "value": "science",
+              "label": "Science"
+            },
+            {
+              "value": "eco",
+              "label": "Natural"
+            },
+            {
+              "value": "psychology",
+              "label": "Brain"
+            },
+            {
+              "value": "favorite",
+              "label": "Heart"
+            },
+            {
+              "value": "flash_on",
+              "label": "Energy"
+            },
+            {
+              "value": "security",
+              "label": "Shield"
+            }
+          ],
+          "default": "science"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom Icon (overrides icon above)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PDP Ingredients & Science",
+      "blocks": [
+        {
+          "type": "ingredient",
+          "settings": {
+            "name": "NAD+",
+            "brief_description": "Restores mitochondrial energy",
+            "description": "NAD+ (Nicotinamide Adenine Dinucleotide) is a coenzyme found in all living cells. It plays a crucial role in energy metabolism and cellular repair processes.",
+            "benefits": "Boosts cellular energy, Supports DNA repair, Enhances cognitive function, Promotes healthy aging",
+            "dosage": "50mg per patch",
+            "icon": "science"
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "name": "B-Vitamins",
+            "brief_description": "Supports neurotransmitter health",
+            "description": "Essential B-vitamins work synergistically to support brain function, energy production, and nervous system health.",
+            "benefits": "Enhances mental clarity, Supports energy metabolism, Promotes nerve health, Reduces fatigue",
+            "dosage": "Complex blend",
+            "icon": "psychology"
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "name": "Creatine",
+            "brief_description": "Boosts focus & brain power",
+            "description": "Creatine is not just for muscles - it's also crucial for brain energy and cognitive performance.",
+            "benefits": "Improves mental performance, Enhances memory, Supports brain energy, Reduces mental fatigue",
+            "dosage": "2g per patch",
+            "icon": "flash_on"
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "name": "Glutathione",
+            "brief_description": "Master antioxidant",
+            "description": "The body's most powerful antioxidant, essential for detoxification and cellular protection.",
+            "benefits": "Powerful antioxidant, Supports detoxification, Protects cells, Promotes healthy aging",
+            "dosage": "25mg per patch",
+            "icon": "security"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

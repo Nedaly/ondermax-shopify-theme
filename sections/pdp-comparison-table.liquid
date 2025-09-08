@@ -1,0 +1,635 @@
+{% comment %}
+  PDP Comparison Table Section
+  Differentiator section showing why our product is better
+{% endcomment %}
+
+<div class="pdp-comparison-table color-{{ section.settings.color_scheme | default: 'background-1' }}">
+  <div class="page-width">
+    <div class="pdp-comparison-container">
+      {% if section.settings.heading != blank %}
+        <h2 class="pdp-comparison-heading {{ section.settings.heading_size | default: 'h2' }}">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+      
+      {% if section.settings.subheading != blank %}
+        <p class="pdp-comparison-subheading">{{ section.settings.subheading }}</p>
+      {% endif %}
+      
+      <div class="pdp-comparison-wrapper">
+        <div class="pdp-comparison-table-container" data-comparison-table>
+          <div class="pdp-comparison-table-scroll">
+            <table class="pdp-comparison-table">
+              <thead>
+                <tr>
+                  <th class="pdp-comparison-feature-header">Feature</th>
+                  {% for block in section.blocks %}
+                    {% case block.type %}
+                      {% when 'competitor' %}
+                        <th class="pdp-comparison-competitor-header {% if block.settings.is_our_product %}our-product{% endif %}">
+                          <div class="competitor-header-content">
+                            {% if block.settings.logo != blank %}
+                              <img src="{{ block.settings.logo | image_url: width: 40 }}" alt="{{ block.settings.name }}" class="competitor-logo">
+                            {% endif %}
+                            <span class="competitor-name">{{ block.settings.name }}</span>
+                            {% if block.settings.badge != blank %}
+                              <span class="competitor-badge">{{ block.settings.badge }}</span>
+                            {% endif %}
+                          </div>
+                        </th>
+                    {% endcase %}
+                  {% endfor %}
+                </tr>
+              </thead>
+              <tbody>
+                {% for feature_block in section.blocks %}
+                  {% case feature_block.type %}
+                    {% when 'feature_row' %}
+                      <tr class="pdp-comparison-feature-row">
+                        <td class="pdp-comparison-feature-name">
+                          <span class="feature-icon">{{ feature_block.settings.icon }}</span>
+                          {{ feature_block.settings.feature_name }}
+                        </td>
+                        {% for competitor_block in section.blocks %}
+                          {% case competitor_block.type %}
+                            {% when 'competitor' %}
+                              <td class="pdp-comparison-feature-value {% if competitor_block.settings.is_our_product %}our-product{% endif %}">
+                                {% assign feature_key = 'feature_' | append: forloop.index0 %}
+                                {% assign feature_value = feature_block.settings[feature_key] %}
+                                
+                                {% if feature_value == 'check' %}
+                                  <span class="feature-check">✅</span>
+                                {% elsif feature_value == 'cross' %}
+                                  <span class="feature-cross">❌</span>
+                                {% elsif feature_value == 'partial' %}
+                                  <span class="feature-partial">⚠️</span>
+                                {% else %}
+                                  <span class="feature-text">{{ feature_value }}</span>
+                                {% endif %}
+                              </td>
+                          {% endcase %}
+                        {% endfor %}
+                      </tr>
+                  {% endcase %}
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div class="pdp-comparison-cta">
+          <a href="{{ section.settings.cta_link | default: '#' }}" class="button button--primary pdp-comparison-button">
+            {{ section.settings.cta_text | default: 'Ditch the Pills. Upgrade to Patches.' }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .pdp-comparison-table {
+    padding: 2rem 0;
+    background: rgb(var(--color-background));
+  }
+  
+  .pdp-comparison-container {
+    text-align: center;
+  }
+  
+  .pdp-comparison-heading {
+    margin-bottom: 1rem;
+    color: rgb(var(--color-foreground));
+  }
+  
+  .pdp-comparison-subheading {
+    margin-bottom: 2rem;
+    color: rgba(var(--color-foreground), 0.7);
+    font-size: 1.1rem;
+  }
+  
+  .pdp-comparison-wrapper {
+    margin-bottom: 2rem;
+  }
+  
+  .pdp-comparison-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(var(--color-foreground), 0.1);
+  }
+  
+  .pdp-comparison-table-scroll {
+    min-width: 600px;
+  }
+  
+  .pdp-comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgb(var(--color-background));
+  }
+  
+  .pdp-comparison-table th,
+  .pdp-comparison-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgba(var(--color-foreground), 0.1);
+  }
+  
+  .pdp-comparison-table th {
+    background: rgba(var(--color-foreground), 0.05);
+    font-weight: 600;
+    color: rgb(var(--color-foreground));
+  }
+  
+  .pdp-comparison-feature-header {
+    text-align: left;
+    font-size: 1.1rem;
+  }
+  
+  .pdp-comparison-competitor-header {
+    position: relative;
+    min-width: 120px;
+  }
+  
+  .pdp-comparison-competitor-header.our-product {
+    background: linear-gradient(135deg, #1C8E8E, #156B6B);
+    color: white;
+  }
+  
+  .competitor-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .competitor-logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+  
+  .competitor-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .competitor-badge {
+    font-size: 0.7rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+  
+  .pdp-comparison-feature-row:nth-child(even) {
+    background: rgba(var(--color-foreground), 0.02);
+  }
+  
+  .pdp-comparison-feature-name {
+    text-align: left;
+    font-weight: 500;
+    color: rgb(var(--color-foreground));
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .feature-icon {
+    font-size: 1.2rem;
+  }
+  
+  .pdp-comparison-feature-value {
+    font-size: 1.2rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .pdp-comparison-feature-value.our-product {
+    background: rgba(28, 142, 142, 0.1);
+    font-weight: 600;
+  }
+  
+  .pdp-comparison-feature-value:hover {
+    background: rgba(var(--color-foreground), 0.05);
+  }
+  
+  .pdp-comparison-feature-value.our-product:hover {
+    background: rgba(28, 142, 142, 0.15);
+  }
+  
+  .feature-check {
+    color: #4CAF50;
+    font-size: 1.5rem;
+  }
+  
+  .feature-cross {
+    color: #f44336;
+    font-size: 1.5rem;
+  }
+  
+  .feature-partial {
+    color: #ff9800;
+    font-size: 1.5rem;
+  }
+  
+  .feature-text {
+    font-size: 0.9rem;
+    color: rgb(var(--color-foreground));
+  }
+  
+  .pdp-comparison-cta {
+    margin-top: 2rem;
+  }
+  
+  .pdp-comparison-button {
+    background: #1C8E8E; /* Ondermax Teal */
+    color: white;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+  }
+  
+  .pdp-comparison-button:hover {
+    background: #156B6B;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(28, 142, 142, 0.3);
+  }
+  
+  /* Mobile styles */
+  @media screen and (max-width: 749px) {
+    .pdp-comparison-table {
+      padding: 1.5rem 0;
+    }
+    
+    .pdp-comparison-table th,
+    .pdp-comparison-table td {
+      padding: 0.75rem 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .competitor-name {
+      font-size: 0.8rem;
+    }
+    
+    .feature-icon {
+      font-size: 1rem;
+    }
+    
+    .feature-check,
+    .feature-cross,
+    .feature-partial {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Desktop styles */
+  @media screen and (min-width: 750px) {
+    .pdp-comparison-table {
+      padding: 3rem 0;
+    }
+    
+    .pdp-comparison-table-container {
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+    
+    .pdp-comparison-table-scroll {
+      min-width: auto;
+    }
+  }
+</style>
+
+<script>
+  class PDPComparisonTable {
+    constructor(container) {
+      this.container = container;
+      this.table = container.querySelector('.pdp-comparison-table');
+      this.init();
+    }
+    
+    init() {
+      this.setupEventListeners();
+    }
+    
+    setupEventListeners() {
+      // Add hover effects for columns
+      const headers = this.table.querySelectorAll('th');
+      const rows = this.table.querySelectorAll('tbody tr');
+      
+      headers.forEach((header, index) => {
+        if (index === 0) return; // Skip feature header
+        
+        header.addEventListener('mouseenter', () => {
+          this.highlightColumn(index);
+        });
+        
+        header.addEventListener('mouseleave', () => {
+          this.removeHighlight();
+        });
+      });
+    }
+    
+    highlightColumn(columnIndex) {
+      const cells = this.table.querySelectorAll(`td:nth-child(${columnIndex + 1})`);
+      cells.forEach(cell => {
+        cell.style.backgroundColor = 'rgba(28, 142, 142, 0.1)';
+      });
+    }
+    
+    removeHighlight() {
+      const cells = this.table.querySelectorAll('td');
+      cells.forEach(cell => {
+        cell.style.backgroundColor = '';
+      });
+    }
+  }
+  
+  // Initialize comparison table when DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const table = document.querySelector('[data-comparison-table]');
+    if (table) {
+      new PDPComparisonTable(table);
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "PDP Comparison Table",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why Choose Ondermax Patches?"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading Size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "See how we compare to the competition"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Call to Action"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Button Text",
+      "default": "Ditch the Pills. Upgrade to Patches."
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "competitor",
+      "name": "Competitor",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Competitor Name",
+          "default": "Competitor"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge Text",
+          "info": "Optional badge text (e.g., 'Most Popular')"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_our_product",
+          "label": "This is our product",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "feature_row",
+      "name": "Feature Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature_name",
+          "label": "Feature Name",
+          "default": "Feature"
+        },
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Feature Icon",
+          "default": "⚡",
+          "info": "Emoji or icon for the feature"
+        },
+        {
+          "type": "select",
+          "id": "feature_0",
+          "label": "Feature Value for Competitor 1",
+          "options": [
+            {
+              "value": "check",
+              "label": "✅ Yes"
+            },
+            {
+              "value": "cross",
+              "label": "❌ No"
+            },
+            {
+              "value": "partial",
+              "label": "⚠️ Partial"
+            }
+          ],
+          "default": "check"
+        },
+        {
+          "type": "select",
+          "id": "feature_1",
+          "label": "Feature Value for Competitor 2",
+          "options": [
+            {
+              "value": "check",
+              "label": "✅ Yes"
+            },
+            {
+              "value": "cross",
+              "label": "❌ No"
+            },
+            {
+              "value": "partial",
+              "label": "⚠️ Partial"
+            }
+          ],
+          "default": "cross"
+        },
+        {
+          "type": "select",
+          "id": "feature_2",
+          "label": "Feature Value for Competitor 3",
+          "options": [
+            {
+              "value": "check",
+              "label": "✅ Yes"
+            },
+            {
+              "value": "cross",
+              "label": "❌ No"
+            },
+            {
+              "value": "partial",
+              "label": "⚠️ Partial"
+            }
+          ],
+          "default": "cross"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PDP Comparison Table",
+      "blocks": [
+        {
+          "type": "competitor",
+          "settings": {
+            "name": "Ondermax Patches",
+            "badge": "Best Choice",
+            "is_our_product": true
+          }
+        },
+        {
+          "type": "competitor",
+          "settings": {
+            "name": "Competitor Pills"
+          }
+        },
+        {
+          "type": "competitor",
+          "settings": {
+            "name": "Energy Drinks"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Fast Absorption",
+            "icon": "⚡",
+            "feature_0": "check",
+            "feature_1": "cross",
+            "feature_2": "cross"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "No Crash",
+            "icon": "🛡️",
+            "feature_0": "check",
+            "feature_1": "cross",
+            "feature_2": "cross"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Sugar-Free",
+            "icon": "🌿",
+            "feature_0": "check",
+            "feature_1": "check",
+            "feature_2": "cross"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Subscription",
+            "icon": "🔄",
+            "feature_0": "check",
+            "feature_1": "cross",
+            "feature_2": "cross"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Ingredient Purity",
+            "icon": "✨",
+            "feature_0": "check",
+            "feature_1": "partial",
+            "feature_2": "cross"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

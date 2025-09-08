@@ -1,0 +1,591 @@
+{% comment %}
+  PDP Behavioral Nudges Section
+  Scarcity banners, stock alerts, and progress bars with animations
+{% endcomment %}
+
+<div class="pdp-behavioral-nudges color-{{ section.settings.color_scheme | default: 'background-1' }}">
+  <div class="page-width">
+    <div class="pdp-nudges-container">
+      
+      {% if section.settings.enable_scarcity_banner %}
+        <div class="pdp-scarcity-banner" data-scarcity-banner>
+          <div class="scarcity-banner-content">
+            <span class="scarcity-icon">🔥</span>
+            <span class="scarcity-text">{{ section.settings.scarcity_text | default: '1,200+ subscribers upgraded today' }}</span>
+          </div>
+        </div>
+      {% endif %}
+      
+      {% if section.settings.enable_stock_alert %}
+        <div class="pdp-stock-alert" data-stock-alert>
+          <div class="stock-alert-header">
+            <span class="stock-icon">📦</span>
+            <span class="stock-text">Limited Stock Available</span>
+          </div>
+          <div class="stock-progress-container">
+            <div class="stock-progress-bar">
+              <div class="stock-progress-fill" data-stock-progress style="width: {{ section.settings.stock_percentage | default: 25 }}%"></div>
+            </div>
+            <span class="stock-percentage">{{ section.settings.stock_percentage | default: 25 }}% remaining</span>
+          </div>
+        </div>
+      {% endif %}
+      
+      {% if section.settings.enable_shipping_bar %}
+        <div class="pdp-shipping-bar" data-shipping-bar>
+          <div class="shipping-bar-content">
+            <div class="shipping-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M20 8H17V4H3C1.9 4 1 4.9 1 6V17H3C3 18.66 4.34 20 6 20S9 18.66 9 17H15C15 18.66 16.34 20 18 20S21 18.66 21 17H23V12L20 8ZM6 18.5C5.17 18.5 4.5 17.83 4.5 17S5.17 15.5 6 15.5 7.5 16.17 7.5 17 6.83 18.5 6 18.5ZM18 18.5C17.17 18.5 16.5 17.83 16.5 17S17.17 15.5 18 15.5 19.5 16.17 19.5 17 18.83 18.5 18 18.5ZM17 12V9.5H19.5L21.46 12H17Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="shipping-text">
+              <span class="shipping-main-text">{{ section.settings.shipping_text | default: 'Spend $47 → Free Shipping Worldwide' }}</span>
+              <span class="shipping-sub-text">{{ section.settings.shipping_subtext | default: 'Add $12 more to qualify' }}</span>
+            </div>
+            <div class="shipping-progress">
+              <div class="shipping-progress-bar">
+                <div class="shipping-progress-fill" data-shipping-progress style="width: {{ section.settings.shipping_progress | default: 75 }}%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      
+      {% if section.settings.enable_subscription_perks %}
+        <div class="pdp-subscription-perks" data-subscription-perks>
+          <div class="subscription-perks-header">
+            <h3 class="perks-title">{{ section.settings.perks_title | default: 'Subscription Perks' }}</h3>
+            <span class="perks-badge">Save 20%</span>
+          </div>
+          <div class="subscription-perks-list">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'perk' %}
+                  <div class="subscription-perk" {{ block.shopify_attributes }}>
+                    <span class="perk-icon">✓</span>
+                    <span class="perk-text">{{ block.settings.perk_text }}</span>
+                  </div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      
+    </div>
+  </div>
+</div>
+
+<style>
+  .pdp-behavioral-nudges {
+    padding: 1rem 0;
+    background: rgb(var(--color-background));
+  }
+  
+  .pdp-nudges-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Scarcity Banner */
+  .pdp-scarcity-banner {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    animation: pulse 2s infinite;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+  }
+  
+  .scarcity-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .scarcity-icon {
+    font-size: 1.2rem;
+    animation: bounce 1s infinite;
+  }
+  
+  /* Stock Alert */
+  .pdp-stock-alert {
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .stock-alert-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: rgb(var(--color-foreground));
+  }
+  
+  .stock-icon {
+    font-size: 1.2rem;
+  }
+  
+  .stock-progress-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .stock-progress-bar {
+    flex: 1;
+    height: 8px;
+    background: rgba(var(--color-foreground), 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .stock-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b6b, #ff8e53);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    animation: shimmer 2s infinite;
+  }
+  
+  .stock-percentage {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ff6b6b;
+    white-space: nowrap;
+  }
+  
+  /* Shipping Bar */
+  .pdp-shipping-bar {
+    background: linear-gradient(135deg, #1C8E8E, #156B6B);
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .shipping-bar-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .shipping-icon {
+    flex-shrink: 0;
+    color: white;
+  }
+  
+  .shipping-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .shipping-main-text {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .shipping-sub-text {
+    font-size: 0.8rem;
+    opacity: 0.9;
+  }
+  
+  .shipping-progress {
+    flex-shrink: 0;
+    width: 80px;
+  }
+  
+  .shipping-progress-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  .shipping-progress-fill {
+    height: 100%;
+    background: white;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Subscription Perks */
+  .pdp-subscription-perks {
+    background: rgba(28, 142, 142, 0.1);
+    border: 1px solid rgba(28, 142, 142, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .subscription-perks-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  
+  .perks-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(var(--color-foreground));
+    margin: 0;
+  }
+  
+  .perks-badge {
+    background: #1C8E8E;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  
+  .subscription-perks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .subscription-perk {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: rgb(var(--color-foreground));
+  }
+  
+  .perk-icon {
+    color: #1C8E8E;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  /* Animations */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-3px); }
+    60% { transform: translateY(-2px); }
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: calc(200px + 100%) 0; }
+  }
+  
+  /* Mobile styles */
+  @media screen and (max-width: 749px) {
+    .pdp-behavioral-nudges {
+      padding: 0.75rem 0;
+    }
+    
+    .pdp-nudges-container {
+      gap: 0.75rem;
+    }
+    
+    .pdp-scarcity-banner {
+      padding: 0.5rem 0.75rem;
+    }
+    
+    .scarcity-banner-content {
+      font-size: 0.8rem;
+    }
+    
+    .pdp-stock-alert,
+    .pdp-shipping-bar,
+    .pdp-subscription-perks {
+      padding: 0.75rem;
+    }
+    
+    .stock-progress-container {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: stretch;
+    }
+    
+    .shipping-bar-content {
+      flex-direction: column;
+      gap: 0.75rem;
+      text-align: center;
+    }
+    
+    .shipping-progress {
+      width: 100%;
+    }
+  }
+  
+  /* Desktop styles */
+  @media screen and (min-width: 750px) {
+    .pdp-behavioral-nudges {
+      padding: 1.5rem 0;
+    }
+    
+    .pdp-nudges-container {
+      gap: 1.25rem;
+    }
+    
+    .pdp-scarcity-banner {
+      padding: 1rem 1.5rem;
+    }
+    
+    .scarcity-banner-content {
+      font-size: 1rem;
+    }
+    
+    .pdp-stock-alert,
+    .pdp-shipping-bar,
+    .pdp-subscription-perks {
+      padding: 1.25rem;
+    }
+    
+    .subscription-perks-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+  }
+</style>
+
+<script>
+  class PDPBehavioralNudges {
+    constructor(container) {
+      this.container = container;
+      this.init();
+    }
+    
+    init() {
+      this.setupAnimations();
+      this.setupProgressBars();
+      this.setupCountdown();
+    }
+    
+    setupAnimations() {
+      // Intersection Observer for fade-in animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      const elements = this.container.querySelectorAll('.pdp-scarcity-banner, .pdp-stock-alert, .pdp-shipping-bar, .pdp-subscription-perks');
+      elements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+      });
+    }
+    
+    setupProgressBars() {
+      // Animate progress bars on scroll
+      const progressBars = this.container.querySelectorAll('[data-stock-progress], [data-shipping-progress]');
+      
+      const progressObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const progressBar = entry.target;
+            const targetWidth = progressBar.style.width;
+            
+            progressBar.style.width = '0%';
+            setTimeout(() => {
+              progressBar.style.width = targetWidth;
+            }, 100);
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      progressBars.forEach(bar => {
+        progressObserver.observe(bar);
+      });
+    }
+    
+    setupCountdown() {
+      // Update scarcity banner with dynamic numbers
+      const scarcityBanner = this.container.querySelector('[data-scarcity-banner]');
+      if (scarcityBanner) {
+        this.updateScarcityNumbers();
+        setInterval(() => this.updateScarcityNumbers(), 30000); // Update every 30 seconds
+      }
+    }
+    
+    updateScarcityNumbers() {
+      const scarcityText = this.container.querySelector('.scarcity-text');
+      if (scarcityText) {
+        const baseNumber = 1200;
+        const randomIncrement = Math.floor(Math.random() * 50) + 1;
+        const newNumber = baseNumber + randomIncrement;
+        
+        scarcityText.textContent = `${newNumber.toLocaleString()}+ subscribers upgraded today`;
+      }
+    }
+  }
+  
+  // Initialize behavioral nudges when DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const nudges = document.querySelector('.pdp-behavioral-nudges');
+    if (nudges) {
+      new PDPBehavioralNudges(nudges);
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "PDP Behavioral Nudges",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Scarcity Banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_scarcity_banner",
+      "label": "Enable Scarcity Banner",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "scarcity_text",
+      "label": "Scarcity Text",
+      "default": "1,200+ subscribers upgraded today"
+    },
+    {
+      "type": "header",
+      "content": "Stock Alert"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_stock_alert",
+      "label": "Enable Stock Alert",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "stock_percentage",
+      "label": "Stock Percentage",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "unit": "%",
+      "default": 25
+    },
+    {
+      "type": "header",
+      "content": "Shipping Bar"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_shipping_bar",
+      "label": "Enable Shipping Bar",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "shipping_text",
+      "label": "Shipping Text",
+      "default": "Spend $47 → Free Shipping Worldwide"
+    },
+    {
+      "type": "text",
+      "id": "shipping_subtext",
+      "label": "Shipping Subtext",
+      "default": "Add $12 more to qualify"
+    },
+    {
+      "type": "range",
+      "id": "shipping_progress",
+      "label": "Shipping Progress",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 75
+    },
+    {
+      "type": "header",
+      "content": "Subscription Perks"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_subscription_perks",
+      "label": "Enable Subscription Perks",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "perks_title",
+      "label": "Perks Title",
+      "default": "Subscription Perks"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "perk",
+      "name": "Subscription Perk",
+      "settings": [
+        {
+          "type": "text",
+          "id": "perk_text",
+          "label": "Perk Text",
+          "default": "20% off every order"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PDP Behavioral Nudges",
+      "blocks": [
+        {
+          "type": "perk",
+          "settings": {
+            "perk_text": "20% off every order"
+          }
+        },
+        {
+          "type": "perk",
+          "settings": {
+            "perk_text": "Free shipping worldwide"
+          }
+        },
+        {
+          "type": "perk",
+          "settings": {
+            "perk_text": "Cancel anytime"
+          }
+        },
+        {
+          "type": "perk",
+          "settings": {
+            "perk_text": "Priority customer support"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
