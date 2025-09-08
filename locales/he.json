@@ -1,7 +1,7 @@
 {
   "products": {
     "product": {
-      "fake_stock_message_html": "נשארו רק <span id=\"fake-stock-count\">{{ count }}</span> במלאי"
+      "fake_stock_message_html": "נשארו רק <span id=\"fake-stock-count\" class=\"rtl-num\">{{ count }}</span> במלאי"
     }
   },
   "hero": {

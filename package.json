@@ -9,7 +9,12 @@
     "push:staging": "shopify theme push --unpublished",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:e2e": "playwright test",
+    "test:e2e:nojs": "cross-env NO_JS=1 playwright test",
+    "test:theme": "shopify theme check",
+    "lint:locales": "node scripts/validate-locales.js",
+    "lighthouse": "lhci autorun --config=lhci.config.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +28,12 @@
   },
   "homepage": "https://github.com/YOUR_ORG_OR_USERNAME/ondermax-shopify-theme#readme",
   "devDependencies": {
+    "@lhci/cli": "^0.12.0",
+    "@playwright/test": "^1.40.0",
     "@shopify/theme-check-node": "^3.21.0",
+    "cross-env": "^7.0.3",
     "husky": "^9.1.7",
+    "lighthouse": "^11.4.0",
     "lint-staged": "^16.1.6",
     "prettier": "^3.6.2",
     "prettier-plugin-liquid": "^0.0.1-security"

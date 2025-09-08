@@ -1,7 +1,7 @@
 {
   "products": {
     "product": {
-      "fake_stock_message_html": "تبقّى فقط <span id=\"fake-stock-count\">{{ count }}</span> في المخزون"
+      "fake_stock_message_html": "تبقّى فقط <span id=\"fake-stock-count\" class=\"rtl-num\">{{ count }}</span> في المخزون"
     }
   },
   "hero": {

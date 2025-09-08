@@ -175,7 +175,7 @@
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "include_taxes": "Tax included.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
-      "fake_stock_message_html": "Only <span id=\"fake-stock-count\">{{ count }}</span> left in stock"
+      "fake_stock_message_html": "Only <span id=\"fake-stock-count\" class=\"rtl-num\">{{ count }}</span> left in stock"
     },
     "modal": {
       "label": "Media gallery"
