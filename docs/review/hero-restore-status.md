@@ -8,6 +8,7 @@
 ## Files Changed
 
 ### 1. `sections/home-hero.liquid`
+
 - **Action:** Enhanced existing hero section in-place
 - **Changes:**
   - Added video background support with conditional rendering
@@ -20,6 +21,7 @@
   - Maintained existing class structure while adding `omx-*` namespaced classes
 
 ### 2. `templates/index.json`
+
 - **Action:** Updated hero section settings
 - **Changes:**
   - Populated hero section with comprehensive settings
@@ -29,6 +31,7 @@
   - Maintained single hero in order array
 
 ### 3. `assets/ondermax.css`
+
 - **Action:** Created comprehensive hero enhancement styles
 - **Changes:**
   - Mobile-first responsive design
@@ -40,21 +43,25 @@
   - Mobile sticky CTA styling
 
 ### 4. `layout/theme.liquid`
+
 - **Action:** Verified CSS linking
 - **Changes:** Confirmed `ondermax.css` is properly linked
 
 ## Settings Added
 
 ### Text Settings
+
 - `kicker` - Optional kicker text
 - `heading` - Main headline (6-10 words)
 - `subheading` - Supporting description
 
 ### CTA Settings
+
 - `cta_label` / `cta_url` - Primary CTA
 - `secondary_label` / `secondary_link` - Secondary CTA
 
 ### Media Settings
+
 - `use_video` - Toggle video vs image
 - `video` - Video file picker
 - `fallback` - Video poster image
@@ -62,21 +69,24 @@
 - `image_alt` - Alt text for accessibility
 
 ### Visual Settings
+
 - `overlay_strength` - Range slider (0-90%)
 - `align` - Content alignment (left/center/right)
 
 ### Trust Badges
+
 - `badge_enable` - Toggle badges
 - `badge_1` through `badge_4` - Individual badge text
 
 ### Mobile Settings
+
 - `mobile_sticky_cta` - Toggle sticky CTA
 - `sticky_label` - Sticky CTA text
 
 ## Analytics Hooks Implemented
 
 - `data-analytics="hero_cta_primary"` - Primary CTA tracking
-- `data-analytics="hero_cta_secondary"` - Secondary CTA tracking  
+- `data-analytics="hero_cta_secondary"` - Secondary CTA tracking
 - `data-analytics="hero_sticky_cta"` - Mobile sticky CTA tracking
 
 ## Performance Features
@@ -113,7 +123,7 @@ The hero section itself has no theme check violations. Other errors in the theme
 ✅ **Typography:** Existing theme fonts preserved  
 ✅ **Spacing:** 48px desktop / 32px mobile maintained  
 ✅ **Buttons:** 48px minimum height, proper contrast  
-✅ **Media:** Video preferred, overlay for contrast  
+✅ **Media:** Video preferred, overlay for contrast
 
 ## CRO Features Implemented
 
@@ -121,7 +131,7 @@ The hero section itself has no theme check violations. Other errors in the theme
 ✅ **Primary CTA Above Fold:** "Shop the Stack" prominently placed  
 ✅ **Trust Badges:** 4 micro-proofs configured  
 ✅ **Mobile Sticky CTA:** Toggleable, non-blocking  
-✅ **Analytics Tracking:** All CTAs instrumented  
+✅ **Analytics Tracking:** All CTAs instrumented
 
 ## Next Steps
 
@@ -132,7 +142,7 @@ The hero section itself has no theme check violations. Other errors in the theme
 
 ## Screenshots
 
-*Note: Screenshots would be captured during local testing with `shopify theme dev`*
+_Note: Screenshots would be captured during local testing with `shopify theme dev`_
 
 ---
 

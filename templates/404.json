@@ -33,11 +33,7 @@
           "settings": {}
         }
       },
-      "block_order": [
-        "heading",
-        "paragraph",
-        "email-form"
-      ],
+      "block_order": ["heading", "paragraph", "email-form"],
       "settings": {
         "color_scheme": "background-2",
         "full_width": true,
@@ -46,8 +42,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "newsletter"
-  ]
+  "order": ["main", "newsletter"]
 }

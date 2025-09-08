@@ -87,13 +87,13 @@
   transform: rotate(180deg);
 }
 
-[data-rtl="true"] .article-template__link .icon-wrap {
+[data-rtl='true'] .article-template__link .icon-wrap {
   transform: none;
   margin-right: 0;
   margin-left: 1rem;
 }
 
-[data-rtl="true"] .article-template__link .icon-wrap svg {
+[data-rtl='true'] .article-template__link .icon-wrap svg {
   overflow: visible;
 }
 

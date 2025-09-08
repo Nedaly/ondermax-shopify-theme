@@ -476,9 +476,7 @@
           }
         }
       },
-      "block_order": [
-        "judge_me_reviews_review_widget_QKTi3r"
-      ],
+      "block_order": ["judge_me_reviews_review_widget_QKTi3r"],
       "settings": {
         "display_id": false,
         "include_margins": true
@@ -506,11 +504,7 @@
           }
         }
       },
-      "block_order": [
-        "text_9AwAeq",
-        "text_qRNrWm",
-        "text_TMnB97"
-      ],
+      "block_order": ["text_9AwAeq", "text_qRNrWm", "text_TMnB97"],
       "name": "Horizontal Ticker",
       "settings": {
         "display_id": false,
@@ -601,11 +595,7 @@
           }
         }
       },
-      "block_order": [
-        "column_YWbE3J",
-        "column_DWdLUw",
-        "column_4KnXEX"
-      ],
+      "block_order": ["column_YWbE3J", "column_DWdLUw", "column_4KnXEX"],
       "name": "Core Hook Section",
       "settings": {
         "display_id": false,
@@ -691,10 +681,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_dBkTyB",
-        "text_Fje6Pt"
-      ],
+      "block_order": ["heading_dBkTyB", "text_Fje6Pt"],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "display_id": false,
@@ -760,10 +747,7 @@
           }
         }
       },
-      "block_order": [
-        "tab_q6hxLN",
-        "tab_ixKA77"
-      ],
+      "block_order": ["tab_q6hxLN", "tab_ixKA77"],
       "name": "Drift / Surge Tabs",
       "settings": {
         "back": "#28233f",
@@ -1004,9 +988,7 @@
           }
         }
       },
-      "block_order": [
-        "judge_me_reviews_review_widget_FtyNak"
-      ],
+      "block_order": ["judge_me_reviews_review_widget_FtyNak"],
       "settings": {
         "display_id": false,
         "include_margins": true
@@ -1039,9 +1021,7 @@
           }
         }
       },
-      "block_order": [
-        "atc_button_KmDUcf"
-      ],
+      "block_order": ["atc_button_KmDUcf"],
       "name": "Urgency + Scarcity",
       "settings": {
         "display_id": false,

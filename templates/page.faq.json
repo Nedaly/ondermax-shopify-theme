@@ -82,8 +82,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "9c121ec4-42cd-4c8e-82a2-935e073db7d7"
-  ]
+  "order": ["main", "9c121ec4-42cd-4c8e-82a2-935e073db7d7"]
 }

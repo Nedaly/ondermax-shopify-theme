@@ -42,7 +42,7 @@
   .collection .slider--tablet.product-grid {
     scroll-padding-left: 1.5rem;
   }
-  [data-rtl="true"] .collection .slider--tablet.product-grid {
+  [data-rtl='true'] .collection .slider--tablet.product-grid {
     scroll-padding-left: unset;
     scroll-padding-right: 1.5rem;
   }

@@ -18,6 +18,7 @@ No hero keys were removed from order. The `hero` key was already the only hero i
 ## Settings Present
 
 ### Media Controls
+
 - ✅ **Video/Image Switch:** `use_video` (checkbox, default: true)
 - ✅ **Video File:** `video` (video picker)
 - ✅ **Video Poster:** `fallback` (image picker)
@@ -25,23 +26,28 @@ No hero keys were removed from order. The `hero` key was already the only hero i
 - ✅ **Image Alt Text:** `image_alt` (text field)
 
 ### Visual Controls
+
 - ✅ **Overlay Strength:** `overlay_strength` (range 0-90%, default: 40)
 - ✅ **Content Alignment:** `align` (select: left/center/right, default: center)
 
 ### Content Settings
+
 - ✅ **Kicker:** `kicker` (optional text)
 - ✅ **Heading:** `heading` (main headline)
 - ✅ **Subheading:** `subheading` (supporting text)
 
 ### CTA Settings
+
 - ✅ **Primary CTA:** `cta_label` + `cta_url`
 - ✅ **Secondary CTA:** `secondary_label` + `secondary_link`
 
 ### Trust Badges
+
 - ✅ **Badge Toggle:** `badge_enable` (checkbox, default: true)
 - ✅ **Badge 1-4:** `badge_1` through `badge_4` (text fields)
 
 ### Mobile Features
+
 - ✅ **Mobile Sticky CTA:** `mobile_sticky_cta` (checkbox, default: true)
 - ✅ **Sticky Label:** `sticky_label` (text field)
 
@@ -61,6 +67,7 @@ No hero keys were removed from order. The `hero` key was already the only hero i
 ## Files Changed
 
 ### 1. `sections/ondermax-hero.liquid` (CREATED)
+
 - **Action:** Created brand hero section with full functionality
 - **Features:**
   - Video/image background with proper fallback
@@ -73,12 +80,14 @@ No hero keys were removed from order. The `hero` key was already the only hero i
   - RTL-safe layout
 
 ### 2. `templates/index.json`
+
 - **Action:** Updated hero section type
 - **Changes:**
   - Changed hero type from `home-hero` to `ondermax-hero`
   - Maintained all existing settings and content
 
 ### 3. `assets/ondermax.css`
+
 - **Action:** Enhanced CSS for new hero section
 - **Changes:**
   - Added `.section-omx-hero` selector support
@@ -93,12 +102,14 @@ No hero keys were removed from order. The `hero` key was already the only hero i
 ## Technical Implementation
 
 ### Media Rendering
+
 - ✅ **Video Support:** Conditional rendering with `file_url`, proper attributes
 - ✅ **Image Fallback:** Responsive `srcset` with explicit dimensions
 - ✅ **CLS Prevention:** Aspect-ratio container + min-height reservation
 - ✅ **Poster Support:** Conditional video poster from fallback image
 
 ### Accessibility
+
 - ✅ **ARIA Roles:** `role="banner"` on section
 - ✅ **Alt Text:** Meaningful descriptions for images
 - ✅ **Decorative Video:** `aria-hidden="true"`
@@ -106,11 +117,13 @@ No hero keys were removed from order. The `hero` key was already the only hero i
 - ✅ **Contrast:** ≥4.5:1 ratio maintained
 
 ### Analytics Hooks
+
 - ✅ **Primary CTA:** `data-hero-cta="primary"`
 - ✅ **Secondary CTA:** `data-hero-cta="secondary"`
 - ✅ **Sticky CTA:** `data-hero-cta="sticky"`
 
 ### Mobile Optimization
+
 - ✅ **Above Fold:** Primary CTA visible on common mobile widths
 - ✅ **Sticky CTA:** Non-blocking, 48px+ tap targets
 - ✅ **Responsive:** Mobile-first design with proper breakpoints
@@ -121,7 +134,7 @@ No hero keys were removed from order. The `hero` key was already the only hero i
 ✅ **Typography:** Existing theme fonts preserved  
 ✅ **Spacing:** Proper section padding and margins  
 ✅ **Buttons:** 48px minimum height, brand styling  
-✅ **Media:** Video preferred with overlay for contrast  
+✅ **Media:** Video preferred with overlay for contrast
 
 ## TODOs
 

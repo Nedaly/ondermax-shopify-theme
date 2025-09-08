@@ -19,9 +19,7 @@
           }
         }
       },
-      "block_order": [
-        "text_tet97j"
-      ],
+      "block_order": ["text_tet97j"],
       "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -441,9 +439,7 @@
           }
         }
       },
-      "block_order": [
-        "judge_me_reviews_review_widget_bACCLK"
-      ],
+      "block_order": ["judge_me_reviews_review_widget_bACCLK"],
       "settings": {
         "display_id": false,
         "include_margins": true
@@ -471,11 +467,7 @@
           }
         }
       },
-      "block_order": [
-        "text_EEXyiX",
-        "text_V7RMqT",
-        "text_8QmnpH"
-      ],
+      "block_order": ["text_EEXyiX", "text_V7RMqT", "text_8QmnpH"],
       "name": "Power Bar Under Hero",
       "settings": {
         "display_id": false,
@@ -544,11 +536,7 @@
           }
         }
       },
-      "block_order": [
-        "column_kybYW3",
-        "column_MrwLqB",
-        "column_7tRWRd"
-      ],
+      "block_order": ["column_kybYW3", "column_MrwLqB", "column_7tRWRd"],
       "name": "Core Hook Section",
       "settings": {
         "display_id": false,
@@ -634,10 +622,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_j9DQyf",
-        "text_4Prgc7"
-      ],
+      "block_order": ["heading_j9DQyf", "text_4Prgc7"],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "display_id": false,
@@ -703,10 +688,7 @@
           }
         }
       },
-      "block_order": [
-        "tab_Hakbzd",
-        "tab_UhtMqw"
-      ],
+      "block_order": ["tab_Hakbzd", "tab_UhtMqw"],
       "name": "Drift / Surge Tabs",
       "settings": {
         "back": "#28233f",
@@ -1342,11 +1324,7 @@
           }
         }
       },
-      "block_order": [
-        "column_e6NmPJ",
-        "column_NJzBMy",
-        "column_UDwEF8"
-      ],
+      "block_order": ["column_e6NmPJ", "column_NJzBMy", "column_UDwEF8"],
       "disabled": true,
       "name": "Facebook testimonials",
       "settings": {
@@ -1407,9 +1385,7 @@
           }
         }
       },
-      "block_order": [
-        "atc_button_eUhC4P"
-      ],
+      "block_order": ["atc_button_eUhC4P"],
       "name": "Urgency + Scarcity",
       "settings": {
         "display_id": false,

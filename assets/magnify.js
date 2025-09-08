@@ -6,7 +6,7 @@ function createOverlay(image) {
   overlay.style.backgroundImage = `url('${image.src}')`;
   image.parentElement.insertBefore(overlay, image);
   return overlay;
-};
+}
 
 function moveWithHover(image, event, zoomRatio) {
   // calculate mouse position
@@ -20,7 +20,7 @@ function moveWithHover(image, event, zoomRatio) {
   // determine what to show in the frame
   overlay.style.backgroundPosition = `${xPercent} ${yPercent}`;
   overlay.style.backgroundSize = `${image.width * zoomRatio}px`;
-};
+}
 
 function magnify(image, zoomRatio) {
   const overlay = createOverlay(image);
@@ -31,7 +31,7 @@ function magnify(image, zoomRatio) {
 
 function enableZoomOnHover(zoomRatio) {
   const images = document.querySelectorAll('.image-magnify-hover');
-  images.forEach(image => {
+  images.forEach((image) => {
     image.onclick = (event) => {
       magnify(image, zoomRatio);
       moveWithHover(image, event, zoomRatio);

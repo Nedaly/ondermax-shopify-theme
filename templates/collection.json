@@ -59,10 +59,7 @@
           }
         }
       },
-      "block_order": [
-        "product",
-        "collection"
-      ],
+      "block_order": ["product", "collection"],
       "disabled": true,
       "settings": {
         "display_id": false,
@@ -103,11 +100,7 @@
           "settings": {}
         }
       },
-      "block_order": [
-        "heading",
-        "paragraph",
-        "email-form"
-      ],
+      "block_order": ["heading", "paragraph", "email-form"],
       "settings": {
         "display_id": false,
         "visibility": "always-display",

@@ -2831,47 +2831,47 @@
       }
     ]
   },
-   {
+  {
     "name": "Upsell",
     "settings": [
       {
-     "type": "checkbox",
-       "id": "enable_upsell",
-       "label": "Enable upsell",
+        "type": "checkbox",
+        "id": "enable_upsell",
+        "label": "Enable upsell",
         "default": true
-     },
-     {
-     "type": "product",
-       "id": "upsell_product",
-       "label": "Upsell Product"
-     },
-    {
-     "type": "image_picker",
-       "id": "upsell_image",
-       "label": "Upsell Image"
-     },
+      },
       {
-     "type": "text",
-       "id": "upsell_title",
-       "label": "Upsell Title"
-     },
+        "type": "product",
+        "id": "upsell_product",
+        "label": "Upsell Product"
+      },
       {
-     "type": "richtext",
-       "id": "upsell_description",
-       "label": "Upsell description"
-     },
-    {
-     "type": "text",
-       "id": "add_btn",
-       "label": "Add Button text",
-      "default": "Yes, Add it"
-     },
-     {
-     "type": "text",
-       "id": "decline_btn",
-       "label": "Decline btn text",
-       "default": "No, Thanks"
-     },
+        "type": "image_picker",
+        "id": "upsell_image",
+        "label": "Upsell Image"
+      },
+      {
+        "type": "text",
+        "id": "upsell_title",
+        "label": "Upsell Title"
+      },
+      {
+        "type": "richtext",
+        "id": "upsell_description",
+        "label": "Upsell description"
+      },
+      {
+        "type": "text",
+        "id": "add_btn",
+        "label": "Add Button text",
+        "default": "Yes, Add it"
+      },
+      {
+        "type": "text",
+        "id": "decline_btn",
+        "label": "Decline btn text",
+        "default": "No, Thanks"
+      }
     ]
   }
 ]

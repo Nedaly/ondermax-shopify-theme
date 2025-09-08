@@ -70,11 +70,7 @@
           "settings": {}
         }
       },
-      "block_order": [
-        "heading",
-        "paragraph",
-        "email-form"
-      ],
+      "block_order": ["heading", "paragraph", "email-form"],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -93,8 +89,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "newsletter"
-  ]
+  "order": ["main", "newsletter"]
 }
