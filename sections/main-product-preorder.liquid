@@ -107,7 +107,8 @@
         data-url="{{ product.url }}"
         class="product__info-container main-product__info-container"
       >
-        <div class="fake-stock-message">Only <span id="fake-stock-count">250</span> left in stock</div>
+        {% assign fake_stock_count = section.settings.fake_stock_count | default: 25 %}
+        <div class="fake-stock-message">{{ 'products.product.fake_stock_message_html' | t: count: fake_stock_count }}</div>
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         {%- for block in section.blocks -%}
@@ -10164,6 +10165,15 @@
       "unit": "px",
       "label": "Bottom padding",
       "default": 36
+    },
+    {
+      "type": "range",
+      "id": "fake_stock_count",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "label": "Fake stock count",
+      "default": 25
     }
   ]
 }

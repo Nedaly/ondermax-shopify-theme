@@ -1,5 +1,5 @@
 <!doctype html>  
-<html lang="{{ request.locale.iso_code }}" {% if request.locale.iso_code == 'he' or request.locale.iso_code == 'ar' %}dir="rtl"{% else %}dir="ltr"{% endif %} class="no-js">
+<html class="locale-{{ request.locale.iso_code }} no-js" lang="{{ request.locale.iso_code }}" dir="{% if request.locale.iso_code contains 'ar' or request.locale.iso_code contains 'he' %}rtl{% else %}ltr{% endif %}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -449,8 +449,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'ondermax.css' | asset_url | stylesheet_tag }}
-    {% if is_rtl %}
+    {% comment %} Locale-specific styles {% endcomment %}
+    {% if request.locale.iso_code contains 'ar' or request.locale.iso_code contains 'he' %}
       {{ 'rtl.css' | asset_url | stylesheet_tag: preload: true }}
+    {% endif %}
+    {% if request.locale.iso_code contains 'ar' %}
+      {{ 'lang-ar.css' | asset_url | stylesheet_tag }}
+    {% endif %}
+    {% if request.locale.iso_code contains 'he' %}
+      {{ 'lang-he.css' | asset_url | stylesheet_tag }}
+    {% endif %}
+    {% comment %} Locale-specific fonts {% endcomment %}
+    {% if request.locale.iso_code contains 'ar' %}
+      <link rel="preload" as="font" href="{{ 'ibm-plex-sans-arabic-400.woff2' | asset_url }}" type="font/woff2" crossorigin>
+      <link rel="preload" as="font" href="{{ 'ibm-plex-sans-arabic-600.woff2' | asset_url }}" type="font/woff2" crossorigin>
+    {% endif %}
+    {% if request.locale.iso_code contains 'he' %}
+      <link rel="preload" as="font" href="{{ 'heebo-400.woff2' | asset_url }}" type="font/woff2" crossorigin>
+      <link rel="preload" as="font" href="{{ 'heebo-600.woff2' | asset_url }}" type="font/woff2" crossorigin>
     {% endif %}
 
     {%- unless settings.type_body_font.system? -%}
