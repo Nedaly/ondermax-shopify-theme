@@ -3,3 +3,9 @@ node_modules
 .DS_Store
 .cache
 dist
+
+# Test artifacts
+playwright-report/
+test-results/
+.lighthouseci/
+playwright/.cache/

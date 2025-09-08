@@ -1906,3 +1906,9 @@ h3 .icon-arrow,
 [dir='rtl'] .rtl-flip {
   transform: scaleX(-1);
 }
+
+/* Utility for numeric fragments in RTL strings */
+.rtl-num {
+  direction: ltr;
+  unicode-bidi: isolate;
+}

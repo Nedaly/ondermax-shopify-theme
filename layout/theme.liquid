@@ -459,6 +459,15 @@
     {% if request.locale.iso_code contains 'he' %}
       {{ 'lang-he.css' | asset_url | stylesheet_tag }}
     {% endif %}
+    {% comment %} Locale-specific fonts {% endcomment %}
+    {% if request.locale.iso_code contains 'ar' %}
+      <link rel="preload" as="font" href="{{ 'ibm-plex-sans-arabic-400.woff2' | asset_url }}" type="font/woff2" crossorigin>
+      <link rel="preload" as="font" href="{{ 'ibm-plex-sans-arabic-600.woff2' | asset_url }}" type="font/woff2" crossorigin>
+    {% endif %}
+    {% if request.locale.iso_code contains 'he' %}
+      <link rel="preload" as="font" href="{{ 'heebo-400.woff2' | asset_url }}" type="font/woff2" crossorigin>
+      <link rel="preload" as="font" href="{{ 'heebo-600.woff2' | asset_url }}" type="font/woff2" crossorigin>
+    {% endif %}
 
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
