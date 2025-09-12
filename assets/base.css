@@ -17555,7 +17555,6 @@ nav.header__inline-menu {
   text-transform: uppercase;
   font-size: 16px;
   min-height: 40px;
-  padding: 1.0rem 2.8rem;
   border: 2px solid transparent;
   /* background-clip: padding-box; */
   transform: scale(1.02);
@@ -17602,7 +17601,6 @@ nav.header__inline-menu {
   animation: gradientShift 4s ease-in-out infinite;
   filter: blur(1px);
 }
-.new-btn a:hover{
   text-decoration: none;
 }
 
@@ -17768,7 +17766,6 @@ nav.header__inline-menu {
   }
 }
 .splide__arrow svg {
-    fill: #fff;
 }
 @media screen and (min-width: 750px) {
   .footer .footer__blocks-wrapper {
@@ -17795,45 +17792,6 @@ nav.header__inline-menu {
   }
 }
 /* Additional CSS */
-.splide__arrow svg{
-      fill: #fff;
-}
-.short-desc {
-    padding-top: 15px;
-}
-.cart-drawer-item .quantity .quantity__button, .cart-drawer-item .quantity .quantity__input, .cart-drawer-item .quantity{
-  background: #fff;
-}
-.collection-hero__title, cart-items .title, .collection__title .title{
-  font-family: "Poppins", sans-serif;
-  font-size: 60px;
-  font-weight: 600;
-}
-@media screen and ( max-width: 989px ){
-  nav.header__inline-menu, .header__heading{
-    display: none;
-  }
-  .benefits-story__heading, cart-items .title, .collection__title .title{
-    font-size: 40px !important;
-  }
-  .multicolumn .title, .title, .collection-hero__title{
-    font-size: 40px !important;
-  }
-  .splide__arrow.color-inverse.splide__arrow--prev{
-    left: 0rem;
-  }
-  .splide__arrow.color-inverse.splide__arrow--next{
-    right: 0rem;
-  }
-  .testimonial .multicolumn-card__info p{
-    color: #fff;
-  }
-}
-@media screen and ( max-width: 767px ){
-  .benefits-story__heading, .collection-hero__title, cart-items .title, .collection__title .title{
-    font-size: 30px !important;
-  }
-  .multicolumn .title, .title, .collapsible-content__heading{
     font-size: 30px !important;
   }
   .splide__arrow.color-inverse.splide__arrow--next {
@@ -17842,19 +17800,16 @@ nav.header__inline-menu {
   .splide__arrow.color-inverse.splide__arrow--prev {
     left: -3rem;
   }
-  .footer .footer__newsletter{
     max-width: fit-content;
   }
   .footer_tag {
     flex-direction: column;
   }
-  .footer .footer_tags_wrapper{
     justify-content: center;
   }
   .footer .footer-block {
     flex-basis: 438px !important;
   }
-  .collapsible-content .accordion__summary{
     padding: 22px 18px !important;
   }
 }

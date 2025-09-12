@@ -1898,17 +1898,3 @@ h3 .icon-arrow,
     }
   }
 }
-
-/* Utility for arrows/chevrons fix in RTL */
-.rtl-flip {
-  transform: scaleX(-1);
-}
-[dir='rtl'] .rtl-flip {
-  transform: scaleX(-1);
-}
-
-/* Utility for numeric fragments in RTL strings */
-.rtl-num {
-  direction: ltr;
-  unicode-bidi: isolate;
-}

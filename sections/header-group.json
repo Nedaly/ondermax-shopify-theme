@@ -90,12 +90,31 @@
             "enable_specific_display": false,
             "displayed_products": ""
           }
+        },
+        "announcement_QpeNQQ": {
+          "type": "announcement",
+          "settings": {
+            "text": "🚚 Free shipping · 🔒 30-day guarantee",
+            "text_alignment": "center",
+            "mobile_text_size": 10,
+            "desktop_text_size": 12,
+            "icons": "",
+            "icon": "",
+            "filled_icon": false,
+            "mobile_icon_size": 20,
+            "desktop_icon_size": 26,
+            "desktop_layout": "horizontal",
+            "mobile_layout": "horizontal",
+            "hidden_products": "",
+            "enable_specific_display": false,
+            "displayed_products": ""
+          }
         }
       },
       "block_order": [
-        "sections--21450414096679__fe1c8c67-b84c-4466-a515-70df3134c1c0-announcement-1"
+        "sections--21450414096679__fe1c8c67-b84c-4466-a515-70df3134c1c0-announcement-1",
+        "announcement_QpeNQQ"
       ],
-      "disabled": false,
       "settings": {
         "visibility": "always-display",
         "columns_desktop": 1,
@@ -105,7 +124,7 @@
         "show_separator": false,
         "color_scheme": "inverse",
         "slider_mobile": true,
-        "slider_desktop": false,
+        "slider_desktop": true,
         "type": "loop",
         "autoplay": false,
         "autoplay_speed": 3,

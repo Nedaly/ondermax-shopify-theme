@@ -1980,11 +1980,11 @@
     display: none !important;
   }
 }
-@media screen and ( max-width: 767px ){
-  .collapsible-content__heading{
+@media screen and (max-width: 767px) {
+  .collapsible-content__heading {
     font-size: 30px !important;
   }
 }
 .omx-container.page-width {
-    padding-left: 0;
+  padding-left: 0;
 }

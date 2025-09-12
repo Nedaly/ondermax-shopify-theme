@@ -63,6 +63,23 @@
             "margin_bottom": 0
           }
         },
+        "price": {
+          "type": "price",
+          "settings": {
+            "layout": "price_first",
+            "price_color": "accent-1",
+            "compare_price_color": "text",
+            "displayed_badge": "custom",
+            "icon_scale": 140,
+            "custom_badge_text": "🔥 SAVE 10% TODAY",
+            "icon_1": "redeem",
+            "filled_icon_1": false,
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "margin_top": 9,
+            "margin_bottom": 15
+          }
+        },
         "a6eb81db-40e4-43e0-972f-32db010a4a56": {
           "type": "rating_stars",
           "settings": {
@@ -78,8 +95,15 @@
             "margin_bottom": 9
           }
         },
+        "custom_liquid_pEABcq": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"short-desc\">{{product.metafields.custom.short_descriptions}}</div>"
+          }
+        },
         "text_9pdHee": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "mobile_text_size": 14,
             "desktop_text_size": 13,
@@ -109,26 +133,9 @@
             "margin_bottom": 15
           }
         },
-        "price": {
-          "type": "price",
-          "disabled": true,
-          "settings": {
-            "layout": "price_first",
-            "price_color": "accent-1",
-            "compare_price_color": "text",
-            "displayed_badge": "custom",
-            "icon_scale": 140,
-            "custom_badge_text": "🔥 SAVE 10% TODAY",
-            "icon_1": "redeem",
-            "filled_icon_1": false,
-            "icon_2": "check_circle",
-            "filled_icon_2": false,
-            "margin_top": 9,
-            "margin_bottom": 15
-          }
-        },
         "icon_with_text_cDULek": {
           "type": "icon_with_text",
+          "disabled": true,
           "settings": {
             "layout": "vertical",
             "icon_color": "accent-1",
@@ -153,6 +160,7 @@
         },
         "emoji_benefits_xHP8nY": {
           "type": "emoji_benefits",
+          "disabled": true,
           "settings": {
             "benefits": "<p>🚫 <strong>No Swallowing Needed / Just Results</strong></p><p>🚀 <strong>Fast Absorption</strong></p><p>👨‍⚕️ <strong>Doctor Formulated</strong></p><p>🌱 <strong>Vegan Friendly</strong></p>",
             "margin_top": 24,
@@ -168,6 +176,7 @@
         },
         "description_EfDwFT": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "margin_top": 24,
             "margin_bottom": 24
@@ -279,8 +288,8 @@
             "secondary_btn_label": "Buy It Now",
             "secondary_btn_enable_custom_color": false,
             "secondary_btn_custom_color": "#dd1d1d",
-            "margin_top": 39,
-            "margin_bottom": 39
+            "margin_top": 15,
+            "margin_bottom": 36
           }
         },
         "e0a0b690-50df-4ca4-acfd-ce2980696cce": {
@@ -357,9 +366,10 @@
       "block_order": [
         "urgency_cG7B3q",
         "title",
-        "a6eb81db-40e4-43e0-972f-32db010a4a56",
-        "text_9pdHee",
         "price",
+        "a6eb81db-40e4-43e0-972f-32db010a4a56",
+        "custom_liquid_pEABcq",
+        "text_9pdHee",
         "icon_with_text_cDULek",
         "emoji_benefits_xHP8nY",
         "custom_liquid_cD6zKU",
@@ -499,673 +509,176 @@
         "custom_colors_text": "#2e2a39"
       }
     },
-    "multicolumn_HcBWFD": {
-      "type": "multicolumn",
+    "icon_with_text_blocks_NBERpg": {
+      "type": "icon-with-text-blocks",
       "blocks": {
-        "column_kybYW3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/finger-snap_3.png",
-            "muted_autoplay": true,
-            "title": "Easy to apply",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_MrwLqB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/sustainable-travel.png",
-            "muted_autoplay": true,
-            "title": "Travel-friendly",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_7tRWRd": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/medical-team.png",
-            "muted_autoplay": true,
-            "title": "Doctor-curated formula",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": ["column_kybYW3", "column_MrwLqB", "column_7tRWRd"],
-      "name": "Core Hook Section",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "Feel the Upgrade. No pills. No crash.<strong> Just performance.</strong>",
-        "title_highlight_color": "#1c8e8e",
-        "heading_size": "h1",
-        "button_label": "",
-        "button_link": "",
-        "atc_button_label": "",
-        "atc_product": "",
-        "atc_skip_cart": false,
-        "color_scheme": "custom",
-        "cards_color_scheme": "custom",
-        "cards_corner_radius": 20,
-        "stretch_cards": false,
-        "stretched_cards_content_alignment": "center",
-        "image_width": "third",
-        "image_ratio": "square",
-        "media_position": "top",
-        "column_alignment": "center",
-        "desktop_heading_size": 20,
-        "mobile_heading_size": 22,
-        "desktop_text_size": 16,
-        "mobile_text_size": 15,
-        "desktop_text_top_margin": 10,
-        "mobile_text_top_margin": 10,
-        "desktop_container_padding_y": 24,
-        "desktop_container_padding_x": 24,
-        "mobile_container_padding_y": 24,
-        "mobile_container_padding_x": 24,
-        "type": "slide",
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "arrows_color_scheme": "inverse",
-        "transparent_arrows": true,
-        "dots_color_scheme": "inverse",
-        "desktop_full_page": false,
-        "columns_desktop": 3,
-        "slider_desktop": false,
-        "per_move_desktop": 1,
-        "desktop_spacing": 40,
-        "desktop_side_padding": 0,
-        "desktop_padding_calc": true,
-        "desktop_adaptive_height": false,
-        "desktop_dots_position": "under",
-        "desktop_arrows_position": "sides",
-        "columns_mobile": "1",
-        "slider_mobile": true,
-        "enable_mobile_preview": false,
-        "mobile_adaptive_height": false,
-        "mobile_dots_position": "under",
-        "mobile_arrows_position": "under",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#333333",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "custom_cards_colors_background": "#e7fafa",
-        "custom_cards_gradient_background": "",
-        "custom_cards_colors_heading": "#333333",
-        "custom_cards_colors_text": "#333333"
-      }
-    },
-    "rich_text_DajYrb": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_j9DQyf": {
-          "type": "heading",
-          "settings": {
-            "title": "Just powerful, clean energy <strong>— no fluff.</strong>",
-            "title_highlight_color": "#1b8887",
-            "heading_size": "h1"
-          }
-        },
-        "text_4Prgc7": {
+        "text_VwPtCh": {
           "type": "text",
           "settings": {
-            "text": "<p>Each ingredient is <strong>science-backed</strong>and carefully dosed to deliver steady, clean energy without the crash or side effects of traditional pills. It’s everything you need — and nothing you don’t.</p>"
-          }
-        }
-      },
-      "block_order": ["heading_j9DQyf", "text_4Prgc7"],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "full_width": true,
-        "mobile_narrow_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
-    "custom_tab_bEhJXz": {
-      "type": "custom-tab",
-      "blocks": {
-        "tab_Hakbzd": {
-          "type": "tab",
-          "settings": {
-            "tab_id": "drift",
-            "heading": "Just powerful, clean energy — no fluff.",
-            "subheading": "Each ingredient is science-backedand carefully dosed to deliver steady, clean energy without the crash or side effects of traditional pills. It’severything you need — and nothing you don’t.",
-            "center_image": "shopify://shop_images/product_1.png",
-            "left_icon": "shopify://shop_images/Container.svg",
-            "left_heading": "L-Theanine",
-            "left_text": "A calm mind fuels better performance. L-\nTheanine promotes relaxed focus, helping\nbalance the energy boost from caffeine — so\nyou stay sharp, not jittery.",
-            "left_icon2": "shopify://shop_images/Vector_17.svg",
-            "left_heading2": "Glycine",
-            "left_text2": "This premium form of B12 helps convert food\ninto lasting energy. It supports brain\nfunction, stamina, and cellular health —\nperfect for all-day performance.",
-            "right_icon": "shopify://shop_images/Vector_18.svg",
-            "right_heading": "Magnesium",
-            "right_text": "A time-tested adaptogen that helps your\nbody handle stress and fatigue. It keeps you\nresilient, improving endurance and mental\nclarity under pressure.",
-            "right_icon2": "shopify://shop_images/Vector_19.svg",
-            "right_heading2": "Melatonin",
-            "right_text2": "Often called the “sunshine vitamin,” D3\nsupports mood, immunity, and overall\nvitality. It’s essential for energy balance and\ndaily wellness — no pills needed."
-          }
-        },
-        "tab_UhtMqw": {
-          "type": "tab",
-          "settings": {
-            "tab_id": "surge",
-            "heading": "Just powerful, clean energy — no fluff.",
-            "subheading": "Each ingredient is science-backedand carefully dosed to deliver steady, clean energy without the crash or side effects of traditional pills. It’severything you need — and nothing you don’t.",
-            "center_image": "shopify://shop_images/product_2.png",
-            "left_icon": "shopify://shop_images/Vector_20.svg",
-            "left_heading": "NAD+",
-            "left_text": "A calm mind fuels better performance. L-\nTheanine promotes relaxed focus, helping\nbalance the energy boost from caffeine — so\nyou stay sharp, not jittery.",
-            "left_icon2": "shopify://shop_images/Container_1.svg",
-            "left_heading2": "B Vitamins",
-            "left_text2": "This premium form of B12 helps convert food\ninto lasting energy. It supports brain\nfunction, stamina, and cellular health —\nperfect for all-day performance.",
-            "right_icon": "shopify://shop_images/Vector_21.svg",
-            "right_heading": "CREATINE",
-            "right_text": "A time-tested adaptogen that helps your\nbody handle stress and fatigue. It keeps you\nresilient, improving endurance and mental\nclarity under pressure.",
-            "right_icon2": "shopify://shop_images/hugeicons_shield-energy.svg",
-            "right_heading2": "Glutathione",
-            "right_text2": "Often called the “sunshine vitamin,” D3\nsupports mood, immunity, and overall\nvitality. It’s essential for energy balance and\ndaily wellness — no pills needed."
-          }
-        }
-      },
-      "block_order": ["tab_Hakbzd", "tab_UhtMqw"],
-      "name": "Drift / Surge Tabs",
-      "settings": {
-        "back": "#28233f",
-        "text-color": "#ffffff",
-        "drift_label": "DRIFT",
-        "surge_label": "SURGE",
-        "default_tab": "drift",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "custom_columns_Ldw6XN": {
-      "type": "custom-columns",
-      "blocks": {
-        "heading_EkM7d7": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "column": "col_1",
-            "visibility": "always-display",
-            "heading": "Just powerful, clean energy <strong>— no fluff.</strong>",
-            "title_highlight_color": "#ffffff",
-            "heading_size": "h1",
-            "alignment": "center",
-            "mobile_alignment": "mobile-center",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "richtext_zjBNyE": {
-          "type": "richtext",
-          "disabled": true,
-          "settings": {
-            "column": "col_1",
-            "visibility": "always-display",
-            "text": "<p>Each ingredient is <strong>science-backed</strong>and carefully dosed to deliver steady, clean energy without the crash or side effects of traditional pills. It’s everything you need — and nothing you don’t.</p>",
-            "text_style": "body",
-            "alignment": "center",
-            "mobile_alignment": "mobile-center",
-            "margin_top": 20,
-            "margin_bottom": 40
-          }
-        },
-        "icon_with_text_xgKVDY": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "self_improvement",
-            "filled_icon": false,
-            "icon_size": "xl",
-            "icon_position": "next-to-title",
-            "icon_color": "background-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "L-Theanine",
-            "text": "<p>A calm mind fuels better performance. L- Theanine promotes relaxed focus, helping balance the energy boost from caffeine — so you stay sharp, not jittery.</p>",
-            "margin_top": 20,
-            "margin_bottom": 30
-          }
-        },
-        "icon_with_text_9yh6KU": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "metabolism",
-            "filled_icon": false,
-            "icon_size": "xl",
-            "icon_position": "next-to-title",
-            "icon_color": "background-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "Glycine",
-            "text": "<p>This premium form of B12 helps convert foodinto lasting energy. It supports brainfunction, stamina, and cellular health —perfect for all-day performance.</p>",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "image_k7bxcA": {
-          "type": "image",
-          "settings": {
-            "column": "col_3",
-            "visibility": "always-display",
-            "image": "shopify://shop_images/Untitled_design_31.png",
-            "width": 100,
-            "alignment": "center",
-            "mobile_alignment": "center",
-            "border_radius": 0,
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "icon_with_text_dzM7Ga": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_4",
-            "visibility": "always-display",
-            "icon": "relax",
-            "filled_icon": false,
-            "icon_size": "xl",
-            "icon_position": "next-to-title",
-            "icon_color": "background-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "Magnesium",
-            "text": "<p>A time-tested adaptogen that helps yourbody handle stress and fatigue. It keeps youresilient, improving endurance and mentalclarity under pressure.</p>",
-            "margin_top": 20,
-            "margin_bottom": 30
-          }
-        },
-        "icon_with_text_3JJVip": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_4",
-            "visibility": "always-display",
-            "icon": "sunny",
-            "filled_icon": false,
-            "icon_size": "xl",
-            "icon_position": "next-to-title",
-            "icon_color": "background-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "Melatonin",
-            "text": "<p>Often called the “sunshine vitamin,” D3supports mood, immunity, and overallvitality. It’s essential for energy balance anddaily wellness — no pills needed.</p>",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        }
-      },
-      "block_order": [
-        "heading_EkM7d7",
-        "richtext_zjBNyE",
-        "icon_with_text_xgKVDY",
-        "icon_with_text_9yh6KU",
-        "image_k7bxcA",
-        "icon_with_text_dzM7Ga",
-        "icon_with_text_3JJVip"
-      ],
-      "disabled": true,
-      "name": "Ingredients Breakdown",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "color_scheme": "custom",
-        "columns_count": 6,
-        "desktop_page_width": "normal",
-        "column_gap_desktop": 40,
-        "row_gap_desktop": 40,
-        "desktop_vertical_alignment": "center",
-        "mobile_full_page": false,
-        "column_gap_mobile": 20,
-        "row_gap_mobile": 30,
-        "mobile_vertical_alignment": "flex-start",
-        "col_1_desktop_width": 12,
-        "col_1_mobile_width": 4,
-        "col_1_visibility": "always-display",
-        "col_2_desktop_width": 4,
-        "col_2_mobile_width": 4,
-        "col_2_visibility": "always-display",
-        "col_3_desktop_width": 4,
-        "col_3_mobile_width": 4,
-        "col_3_visibility": "always-display",
-        "col_4_desktop_width": 4,
-        "col_4_mobile_width": 4,
-        "col_4_visibility": "always-display",
-        "col_5_desktop_width": 3,
-        "col_5_mobile_width": 4,
-        "col_5_visibility": "always-display",
-        "col_6_desktop_width": 3,
-        "col_6_mobile_width": 4,
-        "col_6_visibility": "always-display",
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "custom_colors_background": "#28233f",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
-    "custom_columns_cE38d8": {
-      "type": "custom-columns",
-      "blocks": {
-        "heading_WLGQaM": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "column": "col_1",
-            "visibility": "always-display",
-            "heading": "Just powerful, clean energy <strong>— no fluff.</strong>",
-            "title_highlight_color": "#ffffff",
-            "heading_size": "h1",
-            "alignment": "center",
-            "mobile_alignment": "mobile-center",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "richtext_9wxa8t": {
-          "type": "richtext",
-          "disabled": true,
-          "settings": {
-            "column": "col_1",
-            "visibility": "always-display",
-            "text": "<p>Each ingredient is <strong>science-backed</strong>and carefully dosed to deliver steady, clean energy without the crash or side effects of traditional pills. It’s everything you need — and nothing you don’t.</p>",
-            "text_style": "body",
-            "alignment": "center",
-            "mobile_alignment": "mobile-center",
-            "margin_top": 20,
-            "margin_bottom": 40
-          }
-        },
-        "icon_with_text_3ARQmQ": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "bolt",
-            "filled_icon": false,
-            "icon_size": "xl",
-            "icon_position": "next-to-title",
-            "icon_color": "background-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 31 45\" height=\"45\" width=\"31\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.38623\" stroke=\"white\" d=\"M2.43958 20.9557L15.98 2.70391C17.041 1.27718 19.0231 2.16437 19.0231 4.06518V18.1925C19.0231 19.3326 19.8019 20.2536 20.7614 20.2536H27.3487C28.8454 20.2536 29.6423 22.3463 28.6535 23.6805L15.1131 41.93C14.0521 43.3568 12.07 42.4696 12.07 40.5688V26.4414C12.07 25.3014 11.2912 24.3803 10.3318 24.3803H3.74216C2.24544 24.3803 1.4508 22.2876 2.43958 20.9557Z\"></path>\n</svg>",
             "title": "NAD+",
-            "text": "<p>A calm mind fuels better performance. L-Theanine promotes relaxed focus, helpingbalance the energy boost from caffeine — soyou stay sharp, not jittery.</p>",
-            "margin_top": 20,
-            "margin_bottom": 30
+            "desc": "<p>Cellular energy and anti-aging support</p>"
           }
         },
-        "icon_with_text_mq8fyw": {
-          "type": "icon_with_text",
+        "text_kxbakH": {
+          "type": "text",
           "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "metabolism",
-            "filled_icon": false,
-            "icon_size": "xl",
-            "icon_position": "next-to-title",
-            "icon_color": "background-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "B Vitamins",
-            "text": "<p>This premium form of B12 helps convert foodinto lasting energy. It supports brainfunction, stamina, and cellular health —perfect for all-day performance.</p>",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "image_RCGD3T": {
-          "type": "image",
-          "settings": {
-            "column": "col_3",
-            "visibility": "always-display",
-            "image": "shopify://shop_images/Untitled_design_31_8cb8240f-9ae5-461d-a843-f1fd85995306.png",
-            "width": 100,
-            "alignment": "center",
-            "mobile_alignment": "center",
-            "border_radius": 0,
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "icon_with_text_UCkrCt": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_4",
-            "visibility": "always-display",
-            "icon": "charger",
-            "filled_icon": false,
-            "icon_size": "xl",
-            "icon_position": "next-to-title",
-            "icon_color": "background-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "CREATINE",
-            "text": "<p>A time-tested adaptogen that helps yourbody handle stress and fatigue. It keeps youresilient, improving endurance and mentalclarity under pressure.</p>",
-            "margin_top": 20,
-            "margin_bottom": 30
-          }
-        },
-        "icon_with_text_tMdDdU": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_4",
-            "visibility": "always-display",
-            "icon": "sunny",
-            "filled_icon": false,
-            "icon_size": "xl",
-            "icon_position": "next-to-title",
-            "icon_color": "background-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
             "title": "Glutathione",
-            "text": "<p>Often called the “sunshine vitamin,” D3supports mood, immunity, and overallvitality. It’s essential for energy balance anddaily wellness — no pills needed.</p>",
-            "margin_top": 20,
-            "margin_bottom": 20
+            "desc": "<p>Master antioxidant for recovery</p>"
+          }
+        },
+        "text_JJ4JV8": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
+            "title": "Creatine",
+            "desc": "<p>Enhanced strenth and performance</p>"
+          }
+        },
+        "text_cDyTQM": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 31 45\" height=\"45\" width=\"31\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.38623\" stroke=\"white\" d=\"M2.43958 20.9557L15.98 2.70391C17.041 1.27718 19.0231 2.16437 19.0231 4.06518V18.1925C19.0231 19.3326 19.8019 20.2536 20.7614 20.2536H27.3487C28.8454 20.2536 29.6423 22.3463 28.6535 23.6805L15.1131 41.93C14.0521 43.3568 12.07 42.4696 12.07 40.5688V26.4414C12.07 25.3014 11.2912 24.3803 10.3318 24.3803H3.74216C2.24544 24.3803 1.4508 22.2876 2.43958 20.9557Z\"></path>\n</svg>",
+            "title": "Magnesium",
+            "desc": "<p>Muscle function and relaxation</p>"
+          }
+        },
+        "text_xcrNai": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 39 37\" height=\"37\" width=\"39\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.86111\" stroke=\"white\" d=\"M2 27.0972H36.75M2 34.8194H36.75M12.2242 27.0972C7.84572 24.3944 5.27808 19.207 5.97501 13.7455C6.83025 7.02717 12.3613 2.00193 18.9059 2V2.01158H19.4773C15.6336 5.71053 14.8884 11.7223 17.7051 16.3073C20.5218 20.8924 26.0953 22.7361 30.9583 20.6994C29.9029 23.3513 28.0235 25.594 25.5972 27.0972\"></path>\n</svg>",
+            "title": "Melatonin",
+            "desc": "<p>Natural sleep cycle regulation</p>"
           }
         }
       },
       "block_order": [
-        "heading_WLGQaM",
-        "richtext_9wxa8t",
-        "icon_with_text_3ARQmQ",
-        "icon_with_text_mq8fyw",
-        "image_RCGD3T",
-        "icon_with_text_UCkrCt",
-        "icon_with_text_tMdDdU"
+        "text_VwPtCh",
+        "text_kxbakH",
+        "text_JJ4JV8",
+        "text_cDyTQM",
+        "text_xcrNai"
       ],
-      "disabled": true,
-      "name": "Ingredients Breakdown",
+      "name": "Icon with text",
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "color_scheme": "custom",
-        "columns_count": 6,
-        "desktop_page_width": "normal",
-        "column_gap_desktop": 40,
-        "row_gap_desktop": 40,
-        "desktop_vertical_alignment": "center",
-        "mobile_full_page": false,
-        "column_gap_mobile": 20,
-        "row_gap_mobile": 30,
-        "mobile_vertical_alignment": "flex-start",
-        "col_1_desktop_width": 12,
-        "col_1_mobile_width": 4,
-        "col_1_visibility": "always-display",
-        "col_2_desktop_width": 4,
-        "col_2_mobile_width": 4,
-        "col_2_visibility": "always-display",
-        "col_3_desktop_width": 4,
-        "col_3_mobile_width": 4,
-        "col_3_visibility": "always-display",
-        "col_4_desktop_width": 4,
-        "col_4_mobile_width": 4,
-        "col_4_visibility": "always-display",
-        "col_5_desktop_width": 3,
-        "col_5_mobile_width": 4,
-        "col_5_visibility": "always-display",
-        "col_6_desktop_width": 3,
-        "col_6_mobile_width": 4,
-        "col_6_visibility": "always-display",
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "custom_colors_background": "#1c8e8e",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
+        "heading": "Science backed.",
+        "subheading": "Premium ingredients, precisely dosed for optimal performance.",
+        "bg_color": "#1a1a1a",
+        "p_top": 80,
+        "p_bottom": 80
       }
     },
-    "comparison_table_LFFT9d": {
-      "type": "comparison-table",
+    "two_products_sec_aX69DT": {
+      "type": "two-products-sec",
       "blocks": {
-        "row_DiQKCe": {
-          "type": "row",
+        "text_78hKmU": {
+          "type": "text",
           "settings": {
-            "benefit": "<strong>Easy To Apply</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
+            "bg_color": "#00908d",
+            "product": "surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+            "pro_img_title": "surge",
+            "pro_img_bg_color": "#2fa9a7",
+            "pro_title": "All-Day Energy",
+            "pro_desc": "<p>NAD+ Creatine, B-Vitamins for sustained performance.</p>",
+            "atc_btn": "Shop Surge",
+            "btn_text2": "Learn more",
+            "btn_url2": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+            "show_btn_outline": false,
+            "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-sun w-16 h-16 text-yellow-300/30 animate-spin\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:14:14\" data-orchids-name=\"Sun\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M12 2v2\"></path><path d=\"M12 20v2\"></path><path d=\"m4.93 4.93 1.41 1.41\"></path><path d=\"m17.66 17.66 1.41 1.41\"></path><path d=\"M2 12h2\"></path><path d=\"M20 12h2\"></path><path d=\"m6.34 17.66-1.41 1.41\"></path><path d=\"m19.07 4.93-1.41 1.41\"></path></svg>",
+            "icon_animation": "bounce_rotate"
           }
         },
-        "row_gxJCz7": {
-          "type": "row",
+        "text_Vh7Cyj": {
+          "type": "text",
           "settings": {
-            "benefit": "<strong>No Crashes</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
+            "bg_color": "linear-gradient(306deg, rgba(127, 72, 176, 1) 1%, rgba(127, 72, 176, 0.94) 9%, rgba(67, 48, 211, 0.96) 88%)",
+            "product": "surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "pro_img_title": "Drift",
+            "pro_img_bg_color": "#7950cf",
+            "pro_title": "All-Night Rest",
+            "pro_desc": "<p>Magnesium, Melatonin for deeper rest and restoration.</p>",
+            "atc_btn": "Shop Drift",
+            "btn_text2": "Learn more",
+            "btn_url2": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "show_btn_outline": true,
+            "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-moon w-16 h-16 text-blue-100/30 animate-pulse\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:83:14\" data-orchids-name=\"Moon\"><path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\"></path></svg>",
+            "icon_animation": "pulse_bounce"
+          }
+        }
+      },
+      "block_order": ["text_78hKmU", "text_Vh7Cyj"],
+      "name": "Two products section",
+      "settings": {
+        "p_top": 75,
+        "p_bottom": 75
+      }
+    },
+    "testimonial_grid_section_HCXCTM": {
+      "type": "testimonial-grid-section",
+      "blocks": {
+        "testimonial_pWTDVU": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
+            "name": "Sarah Chen",
+            "role": "Tech Entrepreneur, 32",
+            "review": "\"SURGE gives me that clean energy boost I need for my 6 AM workouts. No crash, just sustained focus all morning.\"",
+            "badge_text": "SURGE USER",
+            "badge_color": "#1c8e8e"
           }
         },
-        "row_RdK7Aw": {
-          "type": "row",
+        "testimonial_3dyCnt": {
+          "type": "testimonial",
           "settings": {
-            "benefit": "<strong>High Energy</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
+            "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg",
+            "name": "Marcus Johnson",
+            "role": "Professional Athlete, 28",
+            "review": "\"DRIFT has completely transformed my recovery. I wake up feeling like I actually slept 8 hours instead of tossing and turning.\"",
+            "badge_text": "DRIFT USER",
+            "badge_color": "#262b2b"
           }
         },
-        "row_9JUz4k": {
-          "type": "row",
+        "testimonial_CT3Rw4": {
+          "type": "testimonial",
           "settings": {
-            "benefit": "<strong>Stomach Impact</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
+            "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
+            "name": "Emily Rodriguez",
+            "role": "Working Mom, 35",
+            "review": "\"Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything the day throws at me.\"",
+            "badge_text": "SURGE USER",
+            "badge_color": "#1c8e8e"
           }
         },
-        "row_aQd7Te": {
-          "type": "row",
+        "testimonial_4NnrJU": {
+          "type": "testimonial",
           "settings": {
-            "benefit": "<strong>Expensive</strong>",
-            "us": false,
-            "others": true,
-            "others_2": false,
-            "others_3": false
+            "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg",
+            "name": "David Park",
+            "role": "Finance Director, 41",
+            "review": "\"DRIFT helps me wind down from high-stress days. I stick it on during my evening routine and sleep like a baby.\"",
+            "badge_text": "DRIFT USER",
+            "badge_color": "#262b2b"
           }
         }
       },
       "block_order": [
-        "row_DiQKCe",
-        "row_gxJCz7",
-        "row_RdK7Aw",
-        "row_9JUz4k",
-        "row_aQd7Te"
+        "testimonial_pWTDVU",
+        "testimonial_3dyCnt",
+        "testimonial_CT3Rw4",
+        "testimonial_4NnrJU"
       ],
-      "name": "What Is Ondermax?",
+      "name": "Testimonial Grid",
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "Not Just a Product — It’s a <strong>Lifestyle Upgrade</strong>",
-        "title_highlight_color": "#1c8e8e",
-        "heading_size": "h1",
-        "text": "<p>Why stick with outdated pills when you can wear your energy? Ondermax is effortless, powerful, and built for your life — not your medicine cabinet.</p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "atc_button_label": "",
-        "atc_product": "",
-        "atc_skip_cart": false,
-        "desktop_alignment": "left",
-        "mobile_alignment": "center",
-        "color_scheme": "background-1",
-        "layout": "table_second",
-        "style": "minimal",
-        "corner_radius": 20,
-        "number_of_competitors": 1,
-        "us_label": "[shop_name]",
-        "us_label_size": 18,
-        "logo_width": 150,
-        "mobile_logo_width": 60,
-        "others_label": "PILLS",
-        "others_label_size": 16,
-        "others_logo_width": 90,
-        "others_mobile_logo_width": 60,
-        "others_2_label": "Competitor 2",
-        "others_2_label_size": 18,
-        "others_2_logo_width": 90,
-        "others_2_mobile_logo_width": 60,
-        "others_3_label": "Competitor 3",
-        "others_3_label_size": 18,
-        "others_3_logo_width": 90,
-        "others_3_mobile_logo_width": 60,
-        "checkmark_style": "solid",
-        "checkmark_color": "#ffffff",
-        "checkmark_bg_color": "#2ecc71",
-        "x_style": "regular",
-        "x_color": "#ffffff",
-        "x_bg_color": "#c61414",
-        "opposite_icon_colors": "original",
-        "highlighted_color_scheme": "accent-1",
-        "highlighted_separator_opacity": 0,
-        "highlighted_overlay_opacity": 0,
-        "other_cells_color_scheme": "background-1",
-        "regular_separator_opacity": 10,
-        "regular_overlay_opacity": 0,
-        "minimalistic_border_opacity": 16,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "custom_colors_highlighted_background": "#2e2a39",
-        "custom_colors_highlighted_text": "#ffffff",
-        "custom_colors_others_background": "#ffffff",
-        "custom_colors_others_text": "#2e2a39"
+        "heading": "Already Transforming Daily Routines.",
+        "subheading": "Real people. Real results. Real patches.",
+        "bg_color": "#ffffff",
+        "heading_color": "#0d0d33",
+        "subheading_color": "#666666",
+        "card_background": "#ffffff",
+        "badge_bg": "#0d0d33",
+        "p_top": 80,
+        "p_bottom": 80
       }
     },
     "collapsible_content_3EgUQF": {
@@ -1234,13 +747,13 @@
         "display_id": false,
         "visibility": "always-display",
         "caption": "",
-        "title": "No Guesswork. Just <strong>the Truth.</strong>",
+        "title": "Everything You Need to Know.",
         "title_highlight_color": "#1c8e8e",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "row",
         "color_scheme": "background-1",
-        "container_color_scheme": "background-2",
+        "container_color_scheme": "background-1",
         "open_first_collapsible_row": false,
         "video_muted_autoplay": true,
         "image_ratio": "adapt",
@@ -1257,7 +770,8 @@
         "custom_container_gradient_background": "",
         "custom_contaner_colors_text": "#2e2a39",
         "btn_url": "",
-        "btn": ""
+        "btn": "",
+        "btn_subheading": ""
       }
     },
     "facebook_testimonials_iTDVad": {
@@ -1386,6 +900,7 @@
         }
       },
       "block_order": ["atc_button_eUhC4P"],
+      "disabled": true,
       "name": "Urgency + Scarcity",
       "settings": {
         "display_id": false,
@@ -1578,12 +1093,9 @@
     "main",
     "17555867747161cde6",
     "horizontal_ticker_HcDLNg",
-    "multicolumn_HcBWFD",
-    "rich_text_DajYrb",
-    "custom_tab_bEhJXz",
-    "custom_columns_Ldw6XN",
-    "custom_columns_cE38d8",
-    "comparison_table_LFFT9d",
+    "icon_with_text_blocks_NBERpg",
+    "two_products_sec_aX69DT",
+    "testimonial_grid_section_HCXCTM",
     "collapsible_content_3EgUQF",
     "facebook_testimonials_iTDVad",
     "rich_text_PxXa6P",
