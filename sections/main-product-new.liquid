@@ -1202,7 +1202,7 @@
   "name": "{{ product.title | escape }}",
   "image": [
     {% for image in product.images %}
-      "{{ image | img_url: '800x800' | prepend: 'https:' }}"{% unless forloop.last %},{% endunless %}
+      "{{ image | image_url: '800x800' | prepend: 'https:' }}"{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ],
   "description": "{{ product.description | strip_html | truncate: 250 | escape }}",

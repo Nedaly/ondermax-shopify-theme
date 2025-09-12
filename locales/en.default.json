@@ -87,6 +87,55 @@
     "total_reviews": "total reviews",
     "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
     "collapsible_content_title": "Collapsible content",
+    "collapsible_content": {
+      "blocks": {
+        "collapsible_row": {
+          "settings": {
+            "icon": {
+              "options__33": {
+                "label": "Icon 33"
+              },
+              "options__34": {
+                "label": "Icon 34"
+              },
+              "options__35": {
+                "label": "Icon 35"
+              },
+              "options__36": {
+                "label": "Icon 36"
+              },
+              "options__37": {
+                "label": "Icon 37"
+              },
+              "options__38": {
+                "label": "Icon 38"
+              },
+              "options__39": {
+                "label": "Icon 39"
+              },
+              "options__40": {
+                "label": "Icon 40"
+              },
+              "options__41": {
+                "label": "Icon 41"
+              },
+              "options__42": {
+                "label": "Icon 42"
+              },
+              "options__43": {
+                "label": "Icon 43"
+              },
+              "options__44": {
+                "label": "Icon 44"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Collapsible content"
+      }
+    },
     "complementary_products": "Complementary products"
   },
   "blogs": {

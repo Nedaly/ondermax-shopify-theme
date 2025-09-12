@@ -3,7 +3,7 @@
   <ul class="logos" role="list">
     {% for b in logo_blocks %}
       {% if b.settings.logo != blank %}
-        <li><img src="{{ b.settings.logo | image_url: width: 160 }}" alt="{{ b.settings.alt | escape }}" loading="lazy"></li>
+        <li><img src="{{ b.settings.logo | image_url: width: 160 }}" alt="{{ b.settings.alt | escape }}" loading="lazy" width="160" height="auto"></li>
       {% endif %}
     {% endfor %}
   </ul>
