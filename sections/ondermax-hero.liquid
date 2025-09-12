@@ -30,7 +30,7 @@ HERO • Ondermax (concise, matches React spec; image-first, video optional)
         loop
         playsinline
         preload="metadata"
-        poster="{{ section.settings.fallback | image_url: width: 1920 }}"
+        {%- if section.settings.fallback != blank -%}poster="{{ section.settings.fallback | image_url: width: 1920 }}"{%- endif -%}
       >
         <source src="{{ mp4_url }}" type="video/mp4">
       </video>
