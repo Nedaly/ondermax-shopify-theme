@@ -1,8 +1,8 @@
-<div class="two_product_section padding-{{ section.id }}">
+<div class="two_product_section">
     <div class="two_products_sec_wrapper">
         {% for block in section.blocks %}
             {% assign product = block.settings.product %}
-            <div class="tps_product" style="background: {{ block.settings.bg_color }};">
+            <div class="tps_product padding-{{ section.id }}" style="background: {{ block.settings.bg_color }};">
                 {% if block.settings.svg_code != blank %}
                 <div class="tps_animated_icon {% if block.settings.icon_animation == 'bounce_rotate' %} sun-wrapper one{%else %}moon-wrapper moon_one{%endif %}">
                     {% assign svg_code = block.settings.svg_code %}
@@ -101,14 +101,6 @@
 .padding-{{ section.id }}{
     padding-top:{{ section.settings.p_top | times: 0.75 | round: 0 }}px;
     padding-bottom:{{ section.settings.p_bottom | times: 0.75 | round: 0 }}px;  
-}
-
-/* Remove section padding on desktop for full-height split screen */
-@media (min-width: 768px) {
-    .padding-{{ section.id }}{
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
 }
 
 .two_products_sec_wrapper {
@@ -550,6 +542,33 @@
     .padding-{{ section.id }}{
         padding-top:{{ section.settings.p_top }}px;
         padding-bottom:{{ section.settings.p_bottom }}px;
+    }
+}
+@media screen and ( max-width: 989px ){
+    .product_title{
+        font-size: 45px;
+    }
+}
+@media screen and ( max-width: 767px ){
+    .tps_product{
+        width: 100%;
+    }
+    .product_title{
+        font-size: 40px;
+    }
+    .tps_product{
+        padding: 80px 30px;
+    }
+    .tps_pro_desc > *{
+        font-size: 20px;
+    }
+    .tps_btn{
+        padding: 16px 36px;
+    }
+}
+@media screen and ( max-width: 484px ){
+    .product_title{
+        font-size: 30px;
     }
 }
 </style>

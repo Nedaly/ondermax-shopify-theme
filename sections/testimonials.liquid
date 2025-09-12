@@ -73,7 +73,7 @@
       endunless
     endif
   -%}
-  <div class="page-width{% if section.settings.desktop_full_page %} desktop-full-page{% endif %}{% if has_mobile_slider %} mobile-full-page{% endif %} section-{{ section.id }}-padding isolate" style="--columns-desktop: {{ section.settings.columns_desktop }};--columns-mobile:1;--gap-desktop:{{ section.settings.desktop_spacing | divided_by: 10.0 }}rem;--gap-mobile:1.5rem;">
+  <div class="testimonial page-width{% if section.settings.desktop_full_page %} desktop-full-page{% endif %}{% if has_mobile_slider %} mobile-full-page{% endif %} section-{{ section.id }}-padding isolate" style="--columns-desktop: {{ section.settings.columns_desktop }};--columns-mobile:1;--gap-desktop:{{ section.settings.desktop_spacing | divided_by: 10.0 }}rem;--gap-mobile:1.5rem;">
     <div class='animate-item animate-item--child index-0'>
       {% assign content_index = 0 %}
       {%- unless section.settings.title == blank -%}

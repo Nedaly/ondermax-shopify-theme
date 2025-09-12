@@ -16,10 +16,7 @@
         "heading": "Just Results.",
         "subheading": "SURGE + DRIFT\nThe biohacking system.",
         "use_video": true,
-        "video": "",
         "video_cdn_url": "https://cdn.shopify.com/videos/c/o/v/9c6b6b3fde704cb189ca9fc6334ddc41.mp4",
-        "fallback": "",
-        "image": "",
         "overlay_strength": 30,
         "primary_link": "#",
         "primary_label": "Shop the Stack",
@@ -82,13 +79,33 @@
             "text": "<p><strong>\"Clean energy all day, perfect sleep at night. Love this system.\"</strong></p>",
             "author": "<strong>James Wilson</strong>"
           }
+        },
+        "column_REhJax": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "Best product I’ve tried!",
+            "text": "<p>SURGE has really made a positive impact on my routine. The results are noticeable and I feel healthier. The quality is top-notch, and I will definitely continue using it.</p>",
+            "author": "<em><strong>Henry R.</strong></em>"
+          }
+        },
+        "column_fAANed": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "Absolutely love this product!",
+            "text": "<p>Drift helps me unwind after a long day. I feel more calm and relaxed without feeling groggy in the morning. This is exactly what I needed!</p>",
+            "author": "<em><strong>Nancy M.</strong></em>"
+          }
         }
       },
       "block_order": [
         "column_d4g63A",
         "column_KEniVi",
         "column_BMU97e",
-        "column_HxK7Yb"
+        "column_HxK7Yb",
+        "column_REhJax",
+        "column_fAANed"
       ],
       "name": "Testimonials",
       "settings": {
@@ -114,7 +131,7 @@
         "autoplay_speed": 5,
         "arrows_color_scheme": "inverse",
         "transparent_arrows": true,
-        "dots_color_scheme": "inverse",
+        "dots_color_scheme": "background-1",
         "desktop_full_page": false,
         "columns_desktop": 2,
         "slider_desktop": true,
@@ -130,12 +147,13 @@
         "mobile_adaptive_height": false,
         "mobile_dots_position": "under",
         "mobile_arrows_position": "under",
-        "padding_top": 0,
-        "padding_bottom": 60,
+        "padding_top": 80,
+        "padding_bottom": 80,
         "custom_colors_background": "#1a1a2e",
-        "custom_gradient_background": "linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #7209b7 100%)",
+        "custom_gradient_background": "linear-gradient(135deg, rgba(26, 26, 46, 1), rgba(22, 33, 62, 1) 25%, rgba(15, 52, 96, 1) 50%, rgba(83, 52, 131, 1) 75%, rgba(114, 9, 183, 1) 100%)",
         "custom_colors_text": "#ffffff",
-        "custom_cards_colors_background": "rgba(255, 255, 255, 0.1)",
+        "custom_cards_colors_background": "#ffffff1a",
+        "custom_cards_gradient_background": "",
         "custom_cards_colors_text": "#ffffff"
       }
     },
@@ -286,8 +304,8 @@
       "block_order": ["text_GzBpnz", "text_DkN7rF"],
       "name": "Two products section",
       "settings": {
-        "p_top": 0,
-        "p_bottom": 0
+        "p_top": 75,
+        "p_bottom": 75
       }
     },
     "profile_info_section_ykCnyb": {
@@ -317,6 +335,7 @@
       "settings": {
         "bg_color": "#1a1a1a",
         "profile_name": "Dr. NY",
+        "profile_img": "shopify://shop_images/110825_-_Acne_and_Insulin_-_Reel_Cover_7_1.png",
         "name": "Dr. Nedal Yassin",
         "role": "Chief Medical Officer",
         "heading": "Doctor Built.",
@@ -492,7 +511,10 @@
         "custom_colors_text": "#2e2a39",
         "custom_contaner_colors_background": "#ffffff",
         "custom_container_gradient_background": "",
-        "custom_contaner_colors_text": "#2e2a39"
+        "custom_contaner_colors_text": "#2e2a39",
+        "btn_url": "",
+        "btn": "",
+        "btn_subheading": ""
       }
     }
   },

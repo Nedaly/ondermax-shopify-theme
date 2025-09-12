@@ -22,21 +22,6 @@
             "margin_bottom": 0
           }
         },
-        "a6eb81db-40e4-43e0-972f-32db010a4a56": {
-          "type": "rating_stars",
-          "settings": {
-            "rating": 4.4,
-            "star_color": "#ffcc00",
-            "bg_stars_style": "full",
-            "bg_star_color": "#ececec",
-            "label": "(xxxx Reviews)",
-            "size": 16,
-            "alignment": "flex-start",
-            "scroll_id": "",
-            "margin_top": 0,
-            "margin_bottom": 9
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -54,8 +39,30 @@
             "margin_bottom": 15
           }
         },
+        "a6eb81db-40e4-43e0-972f-32db010a4a56": {
+          "type": "rating_stars",
+          "settings": {
+            "rating": 4.4,
+            "star_color": "#ffcc00",
+            "bg_stars_style": "full",
+            "bg_star_color": "#ececec",
+            "label": "(xxxx Reviews)",
+            "size": 16,
+            "alignment": "flex-start",
+            "scroll_id": "",
+            "margin_top": 0,
+            "margin_bottom": 9
+          }
+        },
+        "custom_liquid_KkUfVA": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"short-desc\">{{product.metafields.custom.short_descriptions}}</div>"
+          }
+        },
         "5fcc0428-e768-4cb7-bea3-eb0274198dd1": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_types": "pills, dropdown, dropdown",
             "custom_labels": "[name] - [selected]",
@@ -93,6 +100,7 @@
         },
         "04ba004e-2f54-4936-8b1c-8bcadf6573f6": {
           "type": "quantity_selector",
+          "disabled": true,
           "settings": {
             "full_width_classic": false,
             "atc_append": "none",
@@ -196,7 +204,7 @@
             "secondary_btn_label": "Buy It Now",
             "secondary_btn_enable_custom_color": false,
             "secondary_btn_custom_color": "#dd1d1d",
-            "margin_top": 24,
+            "margin_top": 15,
             "margin_bottom": 24
           }
         },
@@ -267,70 +275,24 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "margin_top": 24,
             "margin_bottom": 24
-          }
-        },
-        "reviews_8UgFbe": {
-          "type": "reviews",
-          "settings": {
-            "color_scheme": "background-1",
-            "show_custom_bg": false,
-            "custom_bg_color": "#f2f2f2",
-            "corner_radius": 12,
-            "border_width": 0,
-            "border_color": "#b7b7b7",
-            "avatar_alignment": "top",
-            "avatar_corner_radius": 40,
-            "star_color": "#ffcc00",
-            "stars_translate": 0,
-            "checkmark_color": "#6d388b",
-            "checkmark_icon_color": "#ffffff",
-            "slider_type": "slide",
-            "autoplay": false,
-            "autoplay_speed": 5,
-            "display_arrows": false,
-            "display_dots": true,
-            "author_1": "<em>Author</em> [stars]",
-            "text_1": "<p>Share positive thoughts and feedback from your customer.</p>",
-            "author_2": "<em>Author</em> [stars]",
-            "text_2": "<p>Share positive thoughts and feedback from your customer.</p>",
-            "author_3": "<em>Author</em> [stars]",
-            "text_3": "<p>Share positive thoughts and feedback from your customer.</p>",
-            "margin_top": 24,
-            "margin_bottom": 24
-          }
-        },
-        "de158e68-5d0d-4819-a625-e2dabdff87d1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Collapsible row",
-            "heading_size": "medium",
-            "icon": "check_box",
-            "filled_icon": false,
-            "collapse_icon": "carret",
-            "display_top_border": true,
-            "open": false,
-            "content": "",
-            "page": "",
-            "margin_top": 24,
-            "margin_bottom": 0
           }
         }
       },
       "block_order": [
         "title",
-        "a6eb81db-40e4-43e0-972f-32db010a4a56",
         "price",
+        "a6eb81db-40e4-43e0-972f-32db010a4a56",
+        "custom_liquid_KkUfVA",
         "5fcc0428-e768-4cb7-bea3-eb0274198dd1",
         "04ba004e-2f54-4936-8b1c-8bcadf6573f6",
         "buy_buttons",
         "e0a0b690-50df-4ca4-acfd-ce2980696cce",
         "e7a28cbe-03cb-4c9d-a2c4-0e3e76ffb3e5",
-        "description",
-        "reviews_8UgFbe",
-        "de158e68-5d0d-4819-a625-e2dabdff87d1"
+        "description"
       ],
       "custom_css": [],
       "settings": {
@@ -406,430 +368,323 @@
         "padding_bottom": 24
       }
     },
-    "8beb6911-28c6-482c-976a-e5421ad3e8df": {
-      "type": "custom-columns",
+    "horizontal_ticker_EtHFGU": {
+      "type": "horizontal-ticker",
       "blocks": {
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-heading-1": {
-          "type": "heading",
-          "settings": {
-            "column": "col_1",
-            "visibility": "always-display",
-            "heading": "Custom columns",
-            "title_highlight_color": "#6d388b",
-            "heading_size": "h1",
-            "alignment": "center",
-            "mobile_alignment": "mobile-center",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-richtext-1": {
-          "type": "richtext",
-          "settings": {
-            "column": "col_1",
-            "visibility": "always-display",
-            "text": "<p>Use the flexible grid system to create any layout. Each block can be placed in any of the columns.</p>",
-            "text_style": "body",
-            "alignment": "center",
-            "mobile_alignment": "mobile-center",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-icon_with_text-1": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "check_circle",
-            "filled_icon": false,
-            "icon_size": "m",
-            "icon_position": "next-to-title",
-            "icon_color": "accent-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>",
-            "margin_top": 20,
-            "margin_bottom": 30
-          }
-        },
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-icon_with_text-2": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "check_circle",
-            "filled_icon": false,
-            "icon_size": "m",
-            "icon_position": "next-to-title",
-            "icon_color": "accent-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-image-1": {
-          "type": "image",
-          "settings": {
-            "column": "col_3",
-            "visibility": "always-display",
-            "width": 100,
-            "alignment": "center",
-            "mobile_alignment": "center",
-            "border_radius": 0,
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-icon_with_text-3": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_4",
-            "visibility": "always-display",
-            "icon": "check_circle",
-            "filled_icon": false,
-            "icon_size": "m",
-            "icon_position": "next-to-title",
-            "icon_color": "accent-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>",
-            "margin_top": 20,
-            "margin_bottom": 30
-          }
-        },
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-icon_with_text-4": {
-          "type": "icon_with_text",
-          "settings": {
-            "column": "col_4",
-            "visibility": "always-display",
-            "icon": "check_circle",
-            "filled_icon": false,
-            "icon_size": "m",
-            "icon_position": "next-to-title",
-            "icon_color": "accent-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
-            "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        }
-      },
-      "block_order": [
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-heading-1",
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-richtext-1",
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-icon_with_text-1",
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-icon_with_text-2",
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-image-1",
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-icon_with_text-3",
-        "template--21507361800487__8beb6911-28c6-482c-976a-e5421ad3e8df-icon_with_text-4"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "color_scheme": "background-1",
-        "columns_count": 4,
-        "desktop_page_width": "normal",
-        "column_gap_desktop": 40,
-        "row_gap_desktop": 40,
-        "desktop_vertical_alignment": "center",
-        "mobile_full_page": false,
-        "column_gap_mobile": 20,
-        "row_gap_mobile": 30,
-        "mobile_vertical_alignment": "flex-start",
-        "col_1_desktop_width": 12,
-        "col_1_mobile_width": 4,
-        "col_1_visibility": "always-display",
-        "col_2_desktop_width": 4,
-        "col_2_mobile_width": 4,
-        "col_2_visibility": "always-display",
-        "col_3_desktop_width": 4,
-        "col_3_mobile_width": 4,
-        "col_3_visibility": "always-display",
-        "col_4_desktop_width": 4,
-        "col_4_mobile_width": 4,
-        "col_4_visibility": "always-display",
-        "col_5_desktop_width": 3,
-        "col_5_mobile_width": 4,
-        "col_5_visibility": "always-display",
-        "col_6_desktop_width": 3,
-        "col_6_mobile_width": 4,
-        "col_6_visibility": "always-display",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
-    "eba88da5-80ac-47fc-aa75-997cfe7b2e59": {
-      "type": "image-slider",
-      "blocks": {
-        "template--21507361800487__eba88da5-80ac-47fc-aa75-997cfe7b2e59-image_slide-1": {
-          "type": "image_slide",
-          "settings": {
-            "link": "",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "template--21507361800487__eba88da5-80ac-47fc-aa75-997cfe7b2e59-image_slide-2": {
-          "type": "image_slide",
-          "settings": {
-            "link": "",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "template--21507361800487__eba88da5-80ac-47fc-aa75-997cfe7b2e59-image_slide-3": {
-          "type": "image_slide",
-          "settings": {
-            "link": "",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "template--21507361800487__eba88da5-80ac-47fc-aa75-997cfe7b2e59-image_slide-4": {
-          "type": "image_slide",
-          "settings": {
-            "link": "",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        }
-      },
-      "block_order": [
-        "template--21507361800487__eba88da5-80ac-47fc-aa75-997cfe7b2e59-image_slide-1",
-        "template--21507361800487__eba88da5-80ac-47fc-aa75-997cfe7b2e59-image_slide-2",
-        "template--21507361800487__eba88da5-80ac-47fc-aa75-997cfe7b2e59-image_slide-3",
-        "template--21507361800487__eba88da5-80ac-47fc-aa75-997cfe7b2e59-image_slide-4"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "Image/Video Slider",
-        "title_highlight_color": "#6d388b",
-        "heading_size": "h1",
-        "color_scheme": "background-1",
-        "type": "slide",
-        "drag": "enabled",
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "center_mode": false,
-        "arrows_color_scheme": "inverse",
-        "transparent_arrows": false,
-        "dots_color_scheme": "inverse",
-        "desktop_page_width": "normal",
-        "desktop_border_radius": 0,
-        "slides_desktop": 3,
-        "per_move_desktop": 1,
-        "desktop_spacing": 28,
-        "desktop_side_padding": 0,
-        "desktop_padding_calc": true,
-        "desktop_adaptive_height": false,
-        "desktop_dots_position": "under",
-        "desktop_arrows_position": "sides",
-        "mobile_full_page": false,
-        "mobile_border_radius": 0,
-        "slides_mobile": 2,
-        "per_move_mobile": 1,
-        "mobile_spacing": 12,
-        "mobile_side_padding": 0,
-        "mobile_padding_calc": true,
-        "mobile_adaptive_height": false,
-        "mobile_dots_position": "under",
-        "mobile_arrows_position": "sides",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#121212"
-      }
-    },
-    "4fc05ee5-1c30-4863-b88f-81cb6fa7c41a": {
-      "type": "icons-with-content",
-      "blocks": {
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-icon-1": {
-          "type": "icon",
-          "settings": {
-            "icon": "check_circle",
-            "filled_icon": false,
-            "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>"
-          }
-        },
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-icon-2": {
-          "type": "icon",
-          "settings": {
-            "icon": "check_circle",
-            "filled_icon": false,
-            "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>"
-          }
-        },
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-icon-3": {
-          "type": "icon",
-          "settings": {
-            "icon": "check_circle",
-            "filled_icon": false,
-            "title": "Icon with text",
-            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post</p>"
-          }
-        },
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-heading-1": {
-          "type": "heading",
-          "settings": {
-            "title": "Content heading",
-            "title_highlight_color": "#6d388b",
-            "heading_size": "h1"
-          }
-        },
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-text-1": {
+        "text_EQetAz": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair icons with content to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
+            "title": "⚡ High Energy All Day"
           }
         },
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-button-1": {
-          "type": "button",
+        "text_iJdm9B": {
+          "type": "text",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
+            "title": "✈️ Fast Worldwide Shipping"
+          }
+        },
+        "text_4RMXpL": {
+          "type": "text",
+          "settings": {
+            "title": "💧 No Pills, Just Patches"
           }
         }
       },
-      "block_order": [
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-icon-1",
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-icon-2",
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-icon-3",
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-heading-1",
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-text-1",
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-button-1"
-      ],
+      "block_order": ["text_EQetAz", "text_iJdm9B", "text_4RMXpL"],
+      "name": "Power Bar Under Hero",
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "color_scheme": "background-1",
-        "icon_size": "m",
-        "icon_position": "next-to-title",
-        "icon_color": "accent-1",
-        "icon_heading_size": "h3",
-        "icon_text_alignment": "left",
-        "icons_desktop_layout": "1-column",
-        "icons_mobile_layout": "1-column",
-        "desktop_content_alignment": "left",
-        "layout": "image_first",
-        "mobile_layout": "text_first",
-        "hide_content_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "speed": 1,
+        "direction": "normal",
+        "stop_on_hover": false,
+        "mobile_spacing": 60,
+        "desktop_spacing": 100,
+        "color_scheme": "accent-1",
+        "mobile_text_size": 16,
+        "desktop_text_size": 18,
+        "italic_text": false,
+        "uppercase_text": false,
+        "bold_text": false,
+        "mobile_image_height": 26,
+        "desktop_image_height": 40,
+        "mobile_reviews_width": 300,
+        "desktop_reviews_width": 400,
+        "hidden_products": "",
+        "enable_specific_display": false,
+        "displayed_products": "",
+        "mobile_padding_top": 12,
+        "mobile_padding_bottom": 12,
+        "desktop_padding_top": 16,
+        "desktop_padding_bottom": 16,
         "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
+        "custom_colors_text": "#2e2a39"
       }
     },
-    "55bd100e-3bbd-426c-a5cf-eed7b2a3706f": {
-      "type": "testimonials",
+    "icon_with_text_blocks_f6U6rW": {
+      "type": "icon-with-text-blocks",
       "blocks": {
-        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-1": {
-          "type": "column",
+        "text_B9AKRy": {
+          "type": "text",
           "settings": {
-            "star_rating": 5,
-            "title": "Heading",
-            "text": "<p>Share positive thoughts and feedback from your customer..</p>",
-            "author": "<em><strong>Author</strong></em>"
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 31 45\" height=\"45\" width=\"31\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.38623\" stroke=\"white\" d=\"M2.43958 20.9557L15.98 2.70391C17.041 1.27718 19.0231 2.16437 19.0231 4.06518V18.1925C19.0231 19.3326 19.8019 20.2536 20.7614 20.2536H27.3487C28.8454 20.2536 29.6423 22.3463 28.6535 23.6805L15.1131 41.93C14.0521 43.3568 12.07 42.4696 12.07 40.5688V26.4414C12.07 25.3014 11.2912 24.3803 10.3318 24.3803H3.74216C2.24544 24.3803 1.4508 22.2876 2.43958 20.9557Z\"></path>\n</svg>",
+            "title": "NAD+",
+            "desc": "<p>Cellular energy and anti-aging support</p>"
           }
         },
-        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-2": {
-          "type": "column",
+        "text_rKVdcE": {
+          "type": "text",
           "settings": {
-            "star_rating": 5,
-            "title": "Heading",
-            "text": "<p>Share positive thoughts and feedback from your customer..</p>",
-            "author": "<em><strong>Author</strong></em>"
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
+            "title": "Glutathione",
+            "desc": "<p>Master antioxidant for recovery</p>"
           }
         },
-        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-3": {
-          "type": "column",
+        "text_dtYMRC": {
+          "type": "text",
           "settings": {
-            "star_rating": 5,
-            "title": "Heading",
-            "text": "<p>Share positive thoughts and feedback from your customer..</p>",
-            "author": "<em><strong>Author</strong></em>"
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
+            "title": "Creatine",
+            "desc": "<p>Enhanced strenth and performance</p>"
+          }
+        },
+        "text_cFMPiy": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 31 45\" height=\"45\" width=\"31\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.38623\" stroke=\"white\" d=\"M2.43958 20.9557L15.98 2.70391C17.041 1.27718 19.0231 2.16437 19.0231 4.06518V18.1925C19.0231 19.3326 19.8019 20.2536 20.7614 20.2536H27.3487C28.8454 20.2536 29.6423 22.3463 28.6535 23.6805L15.1131 41.93C14.0521 43.3568 12.07 42.4696 12.07 40.5688V26.4414C12.07 25.3014 11.2912 24.3803 10.3318 24.3803H3.74216C2.24544 24.3803 1.4508 22.2876 2.43958 20.9557Z\"></path>\n</svg>",
+            "title": "Magnesium",
+            "desc": "<p>Muscle function and relaxation</p>"
+          }
+        },
+        "text_Q8nfAV": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 39 37\" height=\"37\" width=\"39\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.86111\" stroke=\"white\" d=\"M2 27.0972H36.75M2 34.8194H36.75M12.2242 27.0972C7.84572 24.3944 5.27808 19.207 5.97501 13.7455C6.83025 7.02717 12.3613 2.00193 18.9059 2V2.01158H19.4773C15.6336 5.71053 14.8884 11.7223 17.7051 16.3073C20.5218 20.8924 26.0953 22.7361 30.9583 20.6994C29.9029 23.3513 28.0235 25.594 25.5972 27.0972\"></path>\n</svg>",
+            "title": "Melatonin",
+            "desc": "<p>Natural sleep cycle regulation</p>"
           }
         }
       },
       "block_order": [
-        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-1",
-        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-2",
-        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-3"
+        "text_B9AKRy",
+        "text_rKVdcE",
+        "text_dtYMRC",
+        "text_cFMPiy",
+        "text_Q8nfAV"
       ],
+      "name": "Icon with text",
+      "settings": {
+        "heading": "Science backed.",
+        "subheading": "Premium ingredients, precisely dosed for optimal performance.",
+        "bg_color": "#1a1a1a",
+        "p_top": 80,
+        "p_bottom": 80
+      }
+    },
+    "two_products_sec_qamNnV": {
+      "type": "two-products-sec",
+      "blocks": {
+        "text_6LHAxB": {
+          "type": "text",
+          "settings": {
+            "bg_color": "#00908d",
+            "product": "surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+            "pro_img_title": "surge",
+            "pro_img_bg_color": "#2fa9a7",
+            "pro_title": "All-Day Energy",
+            "pro_desc": "<p>NAD+ Creatine, B-Vitamins for sustained performance.</p>",
+            "atc_btn": "Shop Surge",
+            "btn_text2": "Learn more",
+            "btn_url2": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+            "show_btn_outline": false,
+            "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-sun w-16 h-16 text-yellow-300/30 animate-spin\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:14:14\" data-orchids-name=\"Sun\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M12 2v2\"></path><path d=\"M12 20v2\"></path><path d=\"m4.93 4.93 1.41 1.41\"></path><path d=\"m17.66 17.66 1.41 1.41\"></path><path d=\"M2 12h2\"></path><path d=\"M20 12h2\"></path><path d=\"m6.34 17.66-1.41 1.41\"></path><path d=\"m19.07 4.93-1.41 1.41\"></path></svg>",
+            "icon_animation": "bounce_rotate"
+          }
+        },
+        "text_JUfpkQ": {
+          "type": "text",
+          "settings": {
+            "bg_color": "linear-gradient(306deg, rgba(127, 72, 176, 1) 1%, rgba(127, 72, 176, 0.94) 9%, rgba(67, 48, 211, 0.96) 88%)",
+            "product": "surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "pro_img_title": "Drift",
+            "pro_img_bg_color": "#7950cf",
+            "pro_title": "All-Night Rest",
+            "pro_desc": "<p>Magnesium, Melatonin for deeper rest and restoration.</p>",
+            "atc_btn": "Shop Drift",
+            "btn_text2": "Learn more",
+            "btn_url2": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "show_btn_outline": true,
+            "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-moon w-16 h-16 text-blue-100/30 animate-pulse\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:83:14\" data-orchids-name=\"Moon\"><path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\"></path></svg>",
+            "icon_animation": "pulse_bounce"
+          }
+        }
+      },
+      "block_order": ["text_6LHAxB", "text_JUfpkQ"],
+      "name": "Two products section",
+      "settings": {
+        "p_top": 75,
+        "p_bottom": 75
+      }
+    },
+    "testimonial_grid_section_U7DabT": {
+      "type": "testimonial-grid-section",
+      "blocks": {
+        "testimonial_nTJY7e": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
+            "name": "Sarah Chen",
+            "role": "Tech Entrepreneur, 32",
+            "review": "\"SURGE gives me that clean energy boost I need for my 6 AM workouts. No crash, just sustained focus all morning.\"",
+            "badge_text": "SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_NDRJBN": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg",
+            "name": "Marcus Johnson",
+            "role": "Professional Athlete, 28",
+            "review": "\"DRIFT has completely transformed my recovery. I wake up feeling like I actually slept 8 hours instead of tossing and turning.\"",
+            "badge_text": "DRIFT USER",
+            "badge_color": "#262b2b"
+          }
+        },
+        "testimonial_C8eWxb": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
+            "name": "Emily Rodriguez",
+            "role": "Working Mom, 35",
+            "review": "\"Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything the day throws at me.\"",
+            "badge_text": "SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_XKmHBk": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg",
+            "name": "David Park",
+            "role": "Finance Director, 41",
+            "review": "\"DRIFT helps me wind down from high-stress days. I stick it on during my evening routine and sleep like a baby.\"",
+            "badge_text": "DRIFT USER",
+            "badge_color": "#262b2b"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_nTJY7e",
+        "testimonial_NDRJBN",
+        "testimonial_C8eWxb",
+        "testimonial_XKmHBk"
+      ],
+      "name": "Testimonial Grid",
+      "settings": {
+        "heading": "Already Transforming Daily Routines.",
+        "subheading": "Real people. Real results. Real patches.",
+        "bg_color": "#ffffff",
+        "heading_color": "#0d0d33",
+        "subheading_color": "#666666",
+        "card_background": "#ffffff",
+        "badge_bg": "#0d0d33",
+        "p_top": 80,
+        "p_bottom": 80
+      }
+    },
+    "collapsible_content_Gw66Um": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_8YcQkM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes Ondermax patches different from pills or powders?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Our transdermal patches deliver nutrients directly into your bloodstream—no digestion required. That means faster absorption, no gut irritation, and zero effort. Just peel, stick, and go.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_apwLqa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to feel the effects?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Most users feel the High Energy patch within 20–30 minutes. Sleep patches work gently in the background—expect deeper, smoother sleep by night one.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_gnPrFp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are the patches safe?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Yes. All our patches are produced in GMP-certified labs, are third-party tested, and free of toxins, allergens, and synthetic binders.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tPXq6b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use more than one patch at a time?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Yes. Our stacks are designed to be used together: High Energy for daytime, Sleep Tight for nighttime. No overlap, no interaction risk—just synergy.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_gJpGA9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Ondermax patches vegan and cruelty-free?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>100% yes. No gelatin. No animal testing. Just clean performance.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_8YcQkM",
+        "collapsible_row_apwLqa",
+        "collapsible_row_gnPrFp",
+        "collapsible_row_tPXq6b",
+        "collapsible_row_gJpGA9"
+      ],
+      "name": "FAQ",
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "Testimonials",
-        "title_highlight_color": "#6d388b",
+        "caption": "",
+        "title": "Everything You Need to Know.",
+        "title_highlight_color": "#1c8e8e",
         "heading_size": "h1",
-        "text": "",
+        "heading_alignment": "center",
+        "layout": "row",
         "color_scheme": "background-1",
-        "image_width": "full",
-        "image_ratio": "square",
-        "column_alignment": "center",
-        "show_stars": true,
-        "inactive_stars_style": "solid",
-        "star_color": "#ffcc00",
-        "bg_star_color": "#ececec",
-        "show_quotes": true,
-        "quotes_color_scheme": "accent-2",
-        "cards_color_scheme": "bg-overlay",
-        "type": "slide",
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "arrows_color_scheme": "inverse",
-        "transparent_arrows": true,
-        "dots_color_scheme": "inverse",
-        "desktop_full_page": false,
-        "columns_desktop": 3,
-        "slider_desktop": false,
-        "per_move_desktop": 1,
-        "desktop_spacing": 40,
-        "desktop_side_padding": 0,
-        "desktop_padding_calc": true,
-        "desktop_adaptive_height": false,
-        "desktop_dots_position": "under",
-        "desktop_arrows_position": "sides",
-        "slider_mobile": true,
-        "enable_mobile_preview": false,
-        "mobile_adaptive_height": false,
-        "mobile_dots_position": "under",
-        "mobile_arrows_position": "under",
+        "container_color_scheme": "background-1",
+        "open_first_collapsible_row": false,
+        "video_muted_autoplay": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "row_heading_size": "medium",
+        "collapse_icon": "plus",
+        "display_top_border": true,
         "padding_top": 36,
         "padding_bottom": 36,
         "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
         "custom_colors_text": "#2e2a39",
-        "custom_cards_colors_background": "#f3f3f3",
-        "custom_cards_gradient_background": "",
-        "custom_cards_colors_text": "#2e2a39"
+        "custom_contaner_colors_background": "#ffffff",
+        "custom_container_gradient_background": "",
+        "custom_contaner_colors_text": "#2e2a39",
+        "btn_url": "",
+        "btn": "",
+        "btn_subheading": ""
       }
     },
     "b321ab88-2b59-4dba-bade-54885c874ca5": {
@@ -851,10 +706,11 @@
   "order": [
     "main",
     "related-products",
-    "8beb6911-28c6-482c-976a-e5421ad3e8df",
-    "eba88da5-80ac-47fc-aa75-997cfe7b2e59",
-    "4fc05ee5-1c30-4863-b88f-81cb6fa7c41a",
-    "55bd100e-3bbd-426c-a5cf-eed7b2a3706f",
+    "horizontal_ticker_EtHFGU",
+    "icon_with_text_blocks_f6U6rW",
+    "two_products_sec_qamNnV",
+    "testimonial_grid_section_U7DabT",
+    "collapsible_content_Gw66Um",
     "b321ab88-2b59-4dba-bade-54885c874ca5"
   ]
 }

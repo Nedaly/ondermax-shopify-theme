@@ -93,7 +93,7 @@
     }
 
     .pil_name {
-        font-size: 18px;
+        font-size: 25px;
         font-family: 'Poppins';
         letter-spacing: 0;
         margin:0;
@@ -104,7 +104,7 @@
 
     .pil_role {
         font-family: 'Poppins';
-        font-size: 14px;
+        font-size: 20px;
         letter-spacing: 0;
         margin:0;
         line-height: 100%;
@@ -198,6 +198,56 @@
             padding-bottom:{{ section.settings.p_bottom }}px;
         }
     }
+.profile_info .pir_tag {
+    font-weight: bold;
+    font-size: 1.5rem;
+    background: linear-gradient(
+    45deg,
+    #1c8e8e 0%,
+    #2d9cdb 25%,
+    #4a2e8e 50%,
+    #6b46c1 75%,
+    #8b5cf6 100%
+  );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textHighlight 3s ease-in-out infinite alternate;
+}
+
+@keyframes textHighlight {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+@media screen and ( max-width: 989px ){
+    .pir_heading{
+        font-size: 45px;
+    }
+    .profile_info .pir_tag{
+        font-size: 18px;
+    }
+}
+@media screen and ( max-width: 767px ){
+    .padding-{{ section.id }}{
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+    .pir_heading{
+        font-size: 35px;
+    }
+    .profile_info_right {
+        gap: 2rem;
+        padding-block: 4rem;
+    }   
+    .pil_name, .pir_about > * {
+        font-size: 20px;
+    }
+    .pil_role{ font-size: 18px; }
+}
 </style>
 
 {% schema %}

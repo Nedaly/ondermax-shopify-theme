@@ -60,7 +60,7 @@ HERO • Ondermax (concise, matches React spec; image-first, video optional)
   </div>
 
   <!-- Content -->
-  <div class="omx-container">
+  <div class="omx-container page-width">
     <div class="hero-grid">
       <div class="hero-col">
         <div class="hero-scrim" aria-hidden="true"></div>
@@ -73,25 +73,6 @@ HERO • Ondermax (concise, matches React spec; image-first, video optional)
 
         {% if section.settings.subheading != blank %}
           <p class="sub">{{ section.settings.subheading }}</p>
-        {% endif %}
-
-        {% if section.settings.badge_enable %}
-          <ul class="trust" aria-label="Trust indicators">
-            <li class="trust-item stars" aria-label="5 star rating">
-              {% for i in (1..5) %}
-                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.3 4.7 5.2.8-3.8 3.7.9 5.2L10 13.7l-4.6 2.3.9-5.2L2.5 7.1l5.2-.8L10 1.6z"/></svg>
-              {% endfor %}
-              <span>500+ Results</span>
-            </li>
-            <li class="trust-item">
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5zM10 4.5L15 8H5l5-3.5z"/></svg>
-              <span>Free Worldwide Shipping</span>
-            </li>
-            <li class="trust-item">
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2l6 3v5c0 4.4-2.9 6.7-6 8-3.1-1.3-6-3.6-6-8V5l6-3zm0 5a3 3 0 100 6 3 3 0 000-6z"/></svg>
-              <span>30-Day Guarantee</span>
-            </li>
-          </ul>
         {% endif %}
 
         <div class="cta-row">
@@ -114,6 +95,25 @@ HERO • Ondermax (concise, matches React spec; image-first, video optional)
             </a>
           {% endif %}
         </div>
+
+        {% if section.settings.badge_enable %}
+          <ul class="trust" aria-label="Trust indicators">
+            <li class="trust-item stars" aria-label="5 star rating">
+              {% for i in (1..5) %}
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.3 4.7 5.2.8-3.8 3.7.9 5.2L10 13.7l-4.6 2.3.9-5.2L2.5 7.1l5.2-.8L10 1.6z"/></svg>
+              {% endfor %}
+              <span>500+ Results</span>
+            </li>
+            <li class="trust-item">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5zM10 4.5L15 8H5l5-3.5z"/></svg>
+              <span>Free Worldwide Shipping</span>
+            </li>
+            <li class="trust-item">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2l6 3v5c0 4.4-2.9 6.7-6 8-3.1-1.3-6-3.6-6-8V5l6-3zm0 5a3 3 0 100 6 3 3 0 000-6z"/></svg>
+              <span>30-Day Guarantee</span>
+            </li>
+          </ul>
+        {% endif %}
       </div>
     </div>
   </div>

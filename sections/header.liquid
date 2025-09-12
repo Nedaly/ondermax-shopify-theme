@@ -22,7 +22,11 @@
   .header__heading-link.media .header__heading-logo--secondary {
     display: none !important;
   }
-  
+  @media screen and ( max-width: 989px ){
+    nav.header__inline-menu.small-hide {
+    display: none;
+    }
+  }
   @media screen and (max-width: 749px) {
     .header__heading-link.media {
       width: {{ settings.mobile_logo_width }}px;
@@ -88,32 +92,7 @@
     padding-top: 1rem;
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
-  static-header.header-wrapper {
-    position: fixed; /* keep it fixed so hiding works */
-    top: 32px; /* position below announcement bar */
-    left: 0;
-    right: 0;
-    transition: transform 0.3s ease;
-    z-index: 1000; /* make sure it stays on top */
-  }
   
-  @media screen and (min-width: 750px) {
-    static-header.header-wrapper {
-      top: 40px; /* position below announcement bar on desktop */
-    }
-  }
-
-static-header.header-wrapper.hide-header {
-  transform: translateY(-100%);
-  top: 32px; /* maintain announcement bar offset when hiding */
-}
-
-@media screen and (min-width: 750px) {
-  static-header.header-wrapper.hide-header {
-    top: 40px; /* maintain announcement bar offset when hiding on desktop */
-  }
-}
-
   @media screen and (min-width: 750px) {
     .list-menu__item--link {
       padding-bottom: 0.5rem;
@@ -156,7 +135,6 @@ static-header.header-wrapper.hide-header {
       width: auto;
     }
     
-    /* Position hamburger to the left of the centered logo - properly vertically centered */
     header-drawer {
       position: absolute;
       left: 16px;
@@ -168,7 +146,6 @@ static-header.header-wrapper.hide-header {
       justify-content: center;
     }
 
-    /* Override base CSS for proper hamburger centering */
     header-drawer .header__icon {
       height: auto !important;
       width: auto !important;
@@ -187,7 +164,6 @@ static-header.header-wrapper.hide-header {
       height: 100% !important;
     }
     
-    /* Hide cart icon on mobile - we'll add sticky cart later */
     .header__icons {
       display: none;
     }
@@ -266,7 +242,7 @@ static-header.header-wrapper.hide-header {
   </symbol>
 </svg>
 
-<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}static-header{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}{% if section.settings.sticky_header_type == 'none' %} header-wrapper--not-sticky{% endif %}">
+<{% if section.settings.sticky_header_type == 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}static-header{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}{% if section.settings.sticky_header_type == 'none' %} header-wrapper--not-sticky{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}">
     {%- if section.settings.menu != blank -%}
       {% render 'header-drawer', section: section %}
@@ -779,37 +755,21 @@ static-header.header-wrapper.hide-header {
 
       observer.observe(this.header);
     }
-
     onScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
-      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-        this.header.classList.add('scrolled-past-header');
-        if (this.preventHide) return;
-        requestAnimationFrame(this.hide.bind(this));
-      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-        this.header.classList.add('scrolled-past-header');
-        if (!this.preventReveal) {
-          requestAnimationFrame(this.reveal.bind(this));
-        } else {
-          window.clearTimeout(this.isScrolling);
-
-          this.isScrolling = setTimeout(() => {
-            this.preventReveal = false;
-          }, 66);
-
-          requestAnimationFrame(this.hide.bind(this));
-        }
-      } else if (scrollTop <= this.headerBounds.top) {
-        this.header.classList.remove('scrolled-past-header');
-        requestAnimationFrame(this.reset.bind(this));
+      // Always keep header sticky when scrolled past header's bottom
+      if (scrollTop > this.headerBounds.bottom) {
+        this.header.classList.add('scrolled-past-header', 'shopify-section-header-sticky');
+      } else {
+        this.header.classList.remove('scrolled-past-header', 'shopify-section-header-sticky');
       }
-
+      
       this.currentScrollTop = scrollTop;
     }
-
+    
     hide() {
       if (this.headerIsAlwaysSticky) return;
       this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
@@ -901,28 +861,6 @@ static-header.header-wrapper.hide-header {
   </script>
 {%- endif -%}
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector("static-header.header-wrapper");
-  if (!header) return;
-
-  let lastScrollY = window.scrollY;
-
-  window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY && currentScrollY > 50) {
-      // Scrolling down — hide header
-      header.classList.add("hide-header");
-    } else if (currentScrollY < lastScrollY) {
-      // Scrolling up — show header
-      header.classList.remove("hide-header");
-    }
-
-    lastScrollY = currentScrollY;
-  });
-});
-</script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {

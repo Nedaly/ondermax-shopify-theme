@@ -174,8 +174,7 @@
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "include_taxes": "Tax included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
-      "fake_stock_message_html": "Only <span id=\"fake-stock-count\" class=\"rtl-num\">{{ count }}</span> left in stock"
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
     },
     "modal": {
       "label": "Media gallery"
@@ -488,16 +487,5 @@
         "shipping_address": "Shipping Address"
       }
     }
-  },
-  "hero": {
-    "heading": "High-performance wellness, simplified",
-    "subheading": "Clinically-minded patches with fast, clean energy and deep sleep",
-    "cta_primary": "Shop now"
-  },
-  "cart": { "free_shipping_badge": "Free shipping over {{ amount }}" },
-  "checkout": {
-    "trust_row_1": "Secure checkout",
-    "trust_row_2": "30-day returns"
-  },
-  "pdp": { "benefits_title": "Why you'll feel the difference" }
+  }
 }
