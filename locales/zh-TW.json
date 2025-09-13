@@ -87,6 +87,55 @@
     "total_reviews": "評論總次數",
     "star_reviews_info": "{{ rating_value }} 顆星 (最高 {{ rating_max }} 顆星)",
     "collapsible_content_title": "可摺疊的內容",
+    "collapsible_content": {
+      "blocks": {
+        "collapsible_row": {
+          "settings": {
+            "icon": {
+              "options__33": {
+                "label": "圖標 33"
+              },
+              "options__34": {
+                "label": "圖標 34"
+              },
+              "options__35": {
+                "label": "圖標 35"
+              },
+              "options__36": {
+                "label": "圖標 36"
+              },
+              "options__37": {
+                "label": "圖標 37"
+              },
+              "options__38": {
+                "label": "圖標 38"
+              },
+              "options__39": {
+                "label": "圖標 39"
+              },
+              "options__40": {
+                "label": "圖標 40"
+              },
+              "options__41": {
+                "label": "圖標 41"
+              },
+              "options__42": {
+                "label": "圖標 42"
+              },
+              "options__43": {
+                "label": "圖標 43"
+              },
+              "options__44": {
+                "label": "圖標 44"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "可摺疊的內容"
+      }
+    },
     "complementary_products": "配套商品"
   },
   "blogs": {
