@@ -31,8 +31,7 @@
   endif
 %}
 
-{% if is_recommendation %}<product-recommendations{% else %}<div{% endif %}
-  class='{{ type }}-upsells-container upsells-container{% if item_count > 1 and block.settings.stacking == 'column' %} upsells-container--stacked-columns{% endif %}{% if item_count > 1 and block.settings.stacking == 'slider' %} side-margins-negative{% endif %}{% if is_recommendation %} display-block{% endif %}'
+{% if is_recommendation %}<product-recommendations class='{{ type }}-upsells-container upsells-container{% if item_count > 1 and block.settings.stacking == 'column' %} upsells-container--stacked-columns{% endif %}{% if item_count > 1 and block.settings.stacking == 'slider' %} side-margins-negative{% endif %}{% if is_recommendation %} display-block{% endif %}'{% else %}<div class='{{ type }}-upsells-container upsells-container{% if item_count > 1 and block.settings.stacking == 'column' %} upsells-container--stacked-columns{% endif %}{% if item_count > 1 and block.settings.stacking == 'slider' %} side-margins-negative{% endif %}{% if is_recommendation %} display-block{% endif %}'{% endif %}
   style="
     --item-count: {{ item_count }};
     --image-size: {{ block.settings.images_size }}rem;

@@ -139,7 +139,6 @@ if (!customElements.get('media-gallery')) {
           return;
 
         if (this.elements.thumbnails.vertical) {
-          console.log('setActiveThumbnail');
           this.elements.thumbnails.slider.scrollTo({
             top: thumbnail.offsetTop,
           });

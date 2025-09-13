@@ -47,7 +47,6 @@ if (!customElements.get('quick-add-modal')) {
                   '.product__media-item.hidden, .thumbnail-list__item.hidden'
                 )
                 .forEach((item) => {
-                  console.log(item);
                   item.classList.remove('hidden');
                 });
             }

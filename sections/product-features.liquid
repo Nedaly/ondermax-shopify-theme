@@ -39,7 +39,7 @@
     --gradient-background: {% if section.settings.custom_section_gradient_background != blank %}{{ section.settings.custom_section_gradient_background }}{% else %}{{ section.settings.custom_section_colors_background }}{% endif %};
     {% if section.settings.custom_image_background != blank %}
       {% # theme-check-disable %}
-      --gradient-background: url('{{ section.settings.custom_image_background | img_url: 'master' }}') center center / cover no-repeat;
+      --gradient-background: url('{{ section.settings.custom_image_background | image_url: 'master' }}') center center / cover no-repeat;
       {% # theme-check-enable %}
     {% endif %}
   }
@@ -47,7 +47,7 @@
     @media screen and (max-width: 740px) {
       .color-scheme-{{ section.id }}.color-custom {
         {% # theme-check-disable %}
-        --gradient-background: url('{{ section.settings.custom_mobile_image_background | img_url: 'master' }}') center center / cover no-repeat;
+        --gradient-background: url('{{ section.settings.custom_mobile_image_background | image_url: 'master' }}') center center / cover no-repeat;
         {% # theme-check-enable %}
       }
     }
