@@ -87,6 +87,55 @@
     "total_reviews": "toplam değerlendirme",
     "star_reviews_info": "{{ rating_value }}/{{ rating_max }} yıldız",
     "collapsible_content_title": "Daraltılabilir içerik",
+    "collapsible_content": {
+      "blocks": {
+        "collapsible_row": {
+          "settings": {
+            "icon": {
+              "options__33": {
+                "label": "İkon 33"
+              },
+              "options__34": {
+                "label": "İkon 34"
+              },
+              "options__35": {
+                "label": "İkon 35"
+              },
+              "options__36": {
+                "label": "İkon 36"
+              },
+              "options__37": {
+                "label": "İkon 37"
+              },
+              "options__38": {
+                "label": "İkon 38"
+              },
+              "options__39": {
+                "label": "İkon 39"
+              },
+              "options__40": {
+                "label": "İkon 40"
+              },
+              "options__41": {
+                "label": "İkon 41"
+              },
+              "options__42": {
+                "label": "İkon 42"
+              },
+              "options__43": {
+                "label": "İkon 43"
+              },
+              "options__44": {
+                "label": "İkon 44"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Daraltılabilir içerik"
+      }
+    },
     "complementary_products": "Tamamlayıcı ürünler"
   },
   "blogs": {

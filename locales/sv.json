@@ -87,6 +87,55 @@
     "total_reviews": "totalt antal recensioner",
     "star_reviews_info": "{{ rating_value }} av {{ rating_max }} stjärnor",
     "collapsible_content_title": "Innehåll som kan döljas",
+    "collapsible_content": {
+      "blocks": {
+        "collapsible_row": {
+          "settings": {
+            "icon": {
+              "options__33": {
+                "label": "Ikon 33"
+              },
+              "options__34": {
+                "label": "Ikon 34"
+              },
+              "options__35": {
+                "label": "Ikon 35"
+              },
+              "options__36": {
+                "label": "Ikon 36"
+              },
+              "options__37": {
+                "label": "Ikon 37"
+              },
+              "options__38": {
+                "label": "Ikon 38"
+              },
+              "options__39": {
+                "label": "Ikon 39"
+              },
+              "options__40": {
+                "label": "Ikon 40"
+              },
+              "options__41": {
+                "label": "Ikon 41"
+              },
+              "options__42": {
+                "label": "Ikon 42"
+              },
+              "options__43": {
+                "label": "Ikon 43"
+              },
+              "options__44": {
+                "label": "Ikon 44"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Innehåll som kan döljas"
+      }
+    },
     "complementary_products": "Kompletterande produkter"
   },
   "blogs": {

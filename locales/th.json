@@ -87,6 +87,55 @@
     "total_reviews": "รีวิวทั้งหมด",
     "star_reviews_info": "{{ rating_value }} จาก {{ rating_max }} ดาว",
     "collapsible_content_title": "เนื้อหาที่ย่อได้",
+    "collapsible_content": {
+      "blocks": {
+        "collapsible_row": {
+          "settings": {
+            "icon": {
+              "options__33": {
+                "label": "ไอคอน 33"
+              },
+              "options__34": {
+                "label": "ไอคอน 34"
+              },
+              "options__35": {
+                "label": "ไอคอน 35"
+              },
+              "options__36": {
+                "label": "ไอคอน 36"
+              },
+              "options__37": {
+                "label": "ไอคอน 37"
+              },
+              "options__38": {
+                "label": "ไอคอน 38"
+              },
+              "options__39": {
+                "label": "ไอคอน 39"
+              },
+              "options__40": {
+                "label": "ไอคอน 40"
+              },
+              "options__41": {
+                "label": "ไอคอน 41"
+              },
+              "options__42": {
+                "label": "ไอคอน 42"
+              },
+              "options__43": {
+                "label": "ไอคอน 43"
+              },
+              "options__44": {
+                "label": "ไอคอน 44"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "เนื้อหาที่ย่อได้"
+      }
+    },
     "complementary_products": "สินค้าเสริม"
   },
   "blogs": {

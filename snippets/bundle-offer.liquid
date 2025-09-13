@@ -39,10 +39,9 @@
     </h3>
   {% endif %}
   {% if is_separate %}
-    <bundle-deals id="bundle-deals-{{ section.id }}-{{ block.id }}"
+    <bundle-deals id="bundle-deals-{{ section.id }}-{{ block.id }}">
   {% else %}
-    <main-bundle-offer id="MainBundleOffer-{{ section.id }}-{{ block.id }}"
-  {% endif %} 
+    <main-bundle-offer id="MainBundleOffer-{{ section.id }}-{{ block.id }}">
     data-section="{{ section.id }}-{{ block.id }}"
     data-percentage-left="{{ total_percentage_left_multiplier }}" 
     data-fixed-discount="{{ total_fixed_discount }}" 

@@ -87,6 +87,55 @@
     "total_reviews": "tổng số lượt đánh giá",
     "star_reviews_info": "{{ rating_value }}/{{ rating_max }} sao",
     "collapsible_content_title": "Nội dung có thể thu gọn",
+    "collapsible_content": {
+      "blocks": {
+        "collapsible_row": {
+          "settings": {
+            "icon": {
+              "options__33": {
+                "label": "Biểu tượng 33"
+              },
+              "options__34": {
+                "label": "Biểu tượng 34"
+              },
+              "options__35": {
+                "label": "Biểu tượng 35"
+              },
+              "options__36": {
+                "label": "Biểu tượng 36"
+              },
+              "options__37": {
+                "label": "Biểu tượng 37"
+              },
+              "options__38": {
+                "label": "Biểu tượng 38"
+              },
+              "options__39": {
+                "label": "Biểu tượng 39"
+              },
+              "options__40": {
+                "label": "Biểu tượng 40"
+              },
+              "options__41": {
+                "label": "Biểu tượng 41"
+              },
+              "options__42": {
+                "label": "Biểu tượng 42"
+              },
+              "options__43": {
+                "label": "Biểu tượng 43"
+              },
+              "options__44": {
+                "label": "Biểu tượng 44"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Nội dung có thể thu gọn"
+      }
+    },
     "complementary_products": "Sản phẩm bổ sung"
   },
   "blogs": {
