@@ -242,7 +242,7 @@
   </symbol>
 </svg>
 
-<{% if section.settings.sticky_header_type == 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}static-header{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}{% if section.settings.sticky_header_type == 'none' %} header-wrapper--not-sticky{% endif %}">
+{% if section.settings.sticky_header_type == 'none' %}<sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}<static-header{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}{% if section.settings.sticky_header_type == 'none' %} header-wrapper--not-sticky{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}">
     {%- if section.settings.menu != blank -%}
       {% render 'header-drawer', section: section %}
@@ -336,7 +336,7 @@
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
       {%- endif -%}
-          <{% if section.settings.logo_link != blank %}a href="{{ section.settings.logo_link }}"{% else %}div{% endif %}
+          {% if section.settings.logo_link != blank %}<a href="{{ section.settings.logo_link }}"{% else %}<div{% endif %}
             class="header__heading-link{% if section.settings.logo_link != blank %} link link--text focus-inset{% endif %}{% if settings.logo != blank %} media media--transparent ratio{% endif %}"
             {%- if settings.logo != blank -%}
               style="--ratio-percent: {{ 1 | divided_by: settings.logo.aspect_ratio | times: 100 }}%"
@@ -365,7 +365,7 @@
             {%- else -%}
               <span class="h2">{{ shop.name }}</span>
             {%- endif -%}
-          </{% if section.settings.logo_link != blank %}a{% else %}div{% endif %}>
+          {% if section.settings.logo_link != blank %}</a>{% else %}</div>{% endif %}
       {%- if request.page_type == 'index' -%}
         </h1>
       {%- endif -%}
@@ -528,7 +528,7 @@
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
       {%- endif -%}
-          <{% if section.settings.logo_link != blank %}a href="{{ section.settings.logo_link }}"{% else %}div{% endif %}
+          {% if section.settings.logo_link != blank %}<a href="{{ section.settings.logo_link }}"{% else %}<div{% endif %}
             class="header__heading-link{% if section.settings.logo_link != blank %} link link--text focus-inset{% endif %}{% if settings.logo != blank %} media media--transparent ratio{% endif %}"
             {%- if settings.logo != blank -%}
               style="--ratio-percent: {{ 1 | divided_by: settings.logo.aspect_ratio | times: 100 }}%"
@@ -557,7 +557,7 @@
             {%- else -%}
               <span class="h2">{{ shop.name }}</span>
             {%- endif -%}
-          </{% if section.settings.logo_link != blank %}a{% else %}div{% endif %}>
+          {% if section.settings.logo_link != blank %}</a>{% else %}</div>{% endif %}
       {%- if request.page_type == 'index' -%}
         </h1>
       {%- endif -%}
@@ -699,7 +699,7 @@
       </div>
     </div>
   </header>
-</{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}static-header{% endif %}>
+{% if section.settings.sticky_header_type != 'none' %}</sticky-header>{% else %}</static-header>{% endif %}
 
 
 {%- if settings.cart_type == "notification" -%}

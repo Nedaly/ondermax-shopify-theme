@@ -1,0 +1,13 @@
+=== assets/*.js ===
+assets/quick-add.js:50:                  console.log(item);
+assets/media-gallery.js:142:          console.log('setActiveThumbnail');
+
+=== liquid DEBUG crumbs (DEBUG/TODO/FIXME) in sections/snippets ===
+sections/multicolumn.liquid:543:        console.log(`Card ${cardIndex} clicked - ${card.querySelector('h3')?.textContent}`);
+sections/featured-product.liquid:31:{% comment %} TODO: assign `product.selected_or_first_available_variant` to variable and replace usage to reduce verbosity {% endcomment %}
+sections/featured-product.liquid:282:                      {% comment %} TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter {% endcomment %}
+sections/main-product-preorder.liquid:330:                    {% comment %} TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter {% endcomment %}
+sections/main-product-new.liquid:331:                    {% comment %} TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter {% endcomment %}
+sections/main-product.liquid:331:                    {% comment %} TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter {% endcomment %}
+snippets/sizing-chart.liquid:109:    console.log(sizingChart, targetLabel)
+snippets/product-variant-picker.liquid:172:              # TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter

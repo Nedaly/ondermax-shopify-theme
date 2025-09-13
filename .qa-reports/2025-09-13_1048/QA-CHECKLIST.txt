@@ -1,0 +1,35 @@
+ONDERMAX — Local QA Checklist
+--------------------------------
+1) Header & Logo
+   - Homepage: logo visible immediately (desktop + mobile)
+   - Product PDP: logo visible and consistent
+   - No overlap: header above hero (z-index ok)
+
+2) Core Journeys
+   - Homepage → PDP → Cart → Checkout path
+   - Bundle deals / variant selection / sticky ATC
+   - Cart drawer and Buy Buttons function
+
+3) RTL & Typography
+   - Arabic/Hebrew: fonts load, numerals correct, spacing/mirroring OK
+   - No layout shift when fonts load
+
+4) Trust & Content
+   - Returns, shipping times, UGC/reviews visible
+   - Payment icons / trust badges present at PDP & checkout entry
+
+5) Tracking & Compliance
+   - Consent state respected
+   - Pixels fire once (Meta, GA4, etc.) — check console/network
+
+6) Performance (quick)
+   - No console errors or warnings spam
+   - Images lazy-load; videos not blocking first paint
+   - No >1.5MB assets on critical path (see large-assets.txt)
+
+7) Visual polish
+   - Spacing consistent with design system
+   - CTA hierarchy clear (primary > secondary)
+   - No text clipping/overlaps on iPhone 12/13 and common Android widths
+
+If all pass → proceed to staging/release flow (separate script).
