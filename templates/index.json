@@ -20,6 +20,7 @@
         "overlay_strength": 30,
         "primary_link": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy-1",
         "primary_label": "Shop the Stack",
+        "stack_url": "/products/stack",
         "secondary_link": "#",
         "secondary_label": "How it Works ↓",
         "learn_anchor": "science-authority",
