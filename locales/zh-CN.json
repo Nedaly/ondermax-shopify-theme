@@ -87,6 +87,55 @@
     "total_reviews": "总评论数",
     "star_reviews_info": "{{ rating_value }}/{{ rating_max }} 星",
     "collapsible_content_title": "可折叠内容",
+    "collapsible_content": {
+      "blocks": {
+        "collapsible_row": {
+          "settings": {
+            "icon": {
+              "options__33": {
+                "label": "图标 33"
+              },
+              "options__34": {
+                "label": "图标 34"
+              },
+              "options__35": {
+                "label": "图标 35"
+              },
+              "options__36": {
+                "label": "图标 36"
+              },
+              "options__37": {
+                "label": "图标 37"
+              },
+              "options__38": {
+                "label": "图标 38"
+              },
+              "options__39": {
+                "label": "图标 39"
+              },
+              "options__40": {
+                "label": "图标 40"
+              },
+              "options__41": {
+                "label": "图标 41"
+              },
+              "options__42": {
+                "label": "图标 42"
+              },
+              "options__43": {
+                "label": "图标 43"
+              },
+              "options__44": {
+                "label": "图标 44"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "可折叠内容"
+      }
+    },
     "complementary_products": "互补产品"
   },
   "blogs": {
