@@ -186,11 +186,12 @@
   display: grid;
   align-items: center;
   min-height: inherit;
+  height: 100vh;
 }
 .hero-col {
   position: relative;
   z-index: 1;
-  max-width: min(560px, 92vw);
+  max-width: min(100%, 92vw);
   padding: clamp(16px, 4vw, 32px);
   transform: translateZ(0);
   will-change: transform;
@@ -237,9 +238,9 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   font-size: clamp(14px, 2vw, 18px);
 }
-.title {
+.omx-container .title {
   font-weight: 900;
-  font-size: clamp(48px, 8vw, 96px);
+  font-size: 75px;
   line-height: 0.9;
   letter-spacing: -0.03em;
   color: #fff;
@@ -381,7 +382,7 @@
   font-weight: 800;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  font-size: 1.15em;
+  font-size: 18px;
   min-height: 60px;
   padding: 1.3rem 2.8rem;
   border: 2px solid transparent;
@@ -1217,7 +1218,7 @@
 .profile_info .pir_tag {
   position: relative !important;
   padding-left: 1.5rem !important;
-  font-size: 1rem !important;
+  font-size: 1.5rem !important;
   font-weight: 500 !important;
   color: #ffffff !important;
   white-space: nowrap !important;
@@ -1278,10 +1279,6 @@
     gap: 2rem !important;
   }
 
-  .profile_info_left {
-    max-width: 100% !important;
-  }
-
   /* Normal styling on mobile */
   .profile_info .pir_name {
     font-size: 1.3rem !important;
@@ -1296,7 +1293,7 @@
   }
 
   .profile_info .pir_tag {
-    font-size: 0.9rem !important;
+    font-size: 1.5rem !important;
   }
 
   /* Footer Payment Methods Styling */
@@ -1982,4 +1979,12 @@
   .menu-drawer {
     display: none !important;
   }
+}
+@media screen and ( max-width: 767px ){
+  .collapsible-content__heading{
+    font-size: 30px !important;
+  }
+}
+.omx-container.page-width {
+    padding-left: 0;
 }

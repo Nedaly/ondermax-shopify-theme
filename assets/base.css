@@ -17533,13 +17533,77 @@ nav.header__inline-menu {
   flex-direction: column;
 }
 .new-btn {
-  background: linear-gradient(90deg, #00c6a7 0%, #5d5dfb 100%);
+  background: linear-gradient(
+    45deg,
+    #1c8e8e 0%,
+    #2d9cdb 25%,
+    #4a2e8e 50%,
+    #6b46c1 75%,
+    #8b5cf6 100%
+  );
+  background-size: 300% 300%;
+  animation:
+    gradientShift 4s ease-in-out infinite,
+    pulseGlow 3s ease-in-out infinite;
   color: #fff;
-  font-weight: bold;
-  border-radius: 8px;
-  padding: 10px 30px;
-  border: none;
-  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  min-height: 40px;
+  padding: 1.0rem 2.8rem;
+  border: 2px solid transparent;
+  /* background-clip: padding-box; */
+  transform: scale(1.02);
+}
+.new-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    #1c8e8e 0%,
+    #2d9cdb 25%,
+    #4a2e8e 50%,
+    #6b46c1 75%,
+    #8b5cf6 100%
+  );
+  background-size: 300% 300%;
+  border-radius: 50px;
+  z-index: -1;
+  animation: gradientShift 4s ease-in-out infinite;
+}
+
+.new-btn::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    #1c8e8e 0%,
+    #2d9cdb 25%,
+    #4a2e8e 50%,
+    #6b46c1 75%,
+    #8b5cf6 100%
+  );
+  background-size: 300% 300%;
+  border-radius: 50px;
+  z-index: -2;
+  animation: gradientShift 4s ease-in-out infinite;
+  filter: blur(1px);
+}
+.new-btn a:hover{
+  text-decoration: none;
 }
 
 /* CUSTOM CSS */
@@ -17703,7 +17767,9 @@ nav.header__inline-menu {
     border-radius: 3.40282e38px;
   }
 }
-
+.splide__arrow svg {
+    fill: #fff;
+}
 @media screen and (min-width: 750px) {
   .footer .footer__blocks-wrapper {
     justify-content: start;
@@ -17726,6 +17792,69 @@ nav.header__inline-menu {
 
   .footer .footer_tags_div.page-width {
     max-width: 1470px;
-    padding-inline: 0;
+  }
+}
+/* Additional CSS */
+.splide__arrow svg{
+      fill: #fff;
+}
+.short-desc {
+    padding-top: 15px;
+}
+.cart-drawer-item .quantity .quantity__button, .cart-drawer-item .quantity .quantity__input, .cart-drawer-item .quantity{
+  background: #fff;
+}
+.collection-hero__title, cart-items .title, .collection__title .title{
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+}
+@media screen and ( max-width: 989px ){
+  nav.header__inline-menu, .header__heading{
+    display: none;
+  }
+  .benefits-story__heading, cart-items .title, .collection__title .title{
+    font-size: 40px !important;
+  }
+  .multicolumn .title, .title, .collection-hero__title{
+    font-size: 40px !important;
+  }
+  .splide__arrow.color-inverse.splide__arrow--prev{
+    left: 0rem;
+  }
+  .splide__arrow.color-inverse.splide__arrow--next{
+    right: 0rem;
+  }
+  .testimonial .multicolumn-card__info p{
+    color: #fff;
+  }
+}
+@media screen and ( max-width: 767px ){
+  .benefits-story__heading, .collection-hero__title, cart-items .title, .collection__title .title{
+    font-size: 30px !important;
+  }
+  .multicolumn .title, .title, .collapsible-content__heading{
+    font-size: 30px !important;
+  }
+  .splide__arrow.color-inverse.splide__arrow--next {
+    right: -3rem;
+  }
+  .splide__arrow.color-inverse.splide__arrow--prev {
+    left: -3rem;
+  }
+  .footer .footer__newsletter{
+    max-width: fit-content;
+  }
+  .footer_tag {
+    flex-direction: column;
+  }
+  .footer .footer_tags_wrapper{
+    justify-content: center;
+  }
+  .footer .footer-block {
+    flex-basis: 438px !important;
+  }
+  .collapsible-content .accordion__summary{
+    padding: 22px 18px !important;
   }
 }

@@ -107,7 +107,7 @@
         data-url="{{ product.url }}"
         class="product__info-container main-product__info-container"
       >
-        <div class="fake-stock-message">Only <span id="fake-stock-count">250</span> left in stock</div>
+        {% comment %} <div class="fake-stock-message">Only <span id="fake-stock-count">250</span> left in stock</div> {% endcomment %}
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         {%- for block in section.blocks -%}
@@ -119,7 +119,7 @@
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }} style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;">
                 <h1 class="{{ block.settings.text_size }}{% if block.settings.uppercase_title %} product-title--uppercase{% endif %}{% if block.settings.title_alignment == 'center' %} center{% endif %}">
-                  {{ product.title }}
+                  {{ product.title | slice: 0, 20 }}
                 </h1>
                 <a href="{{ product.url }}" class="product__title">
                   <h2 class="h1">
@@ -613,7 +613,7 @@
                       <button
                         id='SectionAtcBtn-{{ section.id }}' 
                         type="button"
-                        class="button main-product-atc button--has-spinner"
+                        class="new-btn button main-product-atc button--has-spinner"
                         form="{{ product_form_id }}"
                         {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
                           disabled

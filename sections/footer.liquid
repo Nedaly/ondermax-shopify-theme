@@ -9,7 +9,25 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
+  .footer {
+    overflow: hidden;
+  }
+  @media screen and ( max-width: 1300px ){
+    .footer .footer-block {
+      flex-basis: 600px;
+    } 
+  }
+   @media screen and ( max-width: 1200px ){
+    .footer__blocks-wrapper.grid{
+      flex-wrap: wrap;
+    }
+    .grid__item.footer-block--desktop-3{
+      order: 3;
+    }
+    .grid__item.footer-block--menu.footer-block--desktop-3{
+      order: 1;
+    }
+  }
   @media screen and (min-width: 750px) {
     .footer {
       margin-top: {{ section.settings.margin_top }}px;
