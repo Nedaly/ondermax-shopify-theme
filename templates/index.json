@@ -116,6 +116,30 @@
         "padding_bottom": 36
       }
     },
+    "product_showcase_gifs": {
+      "type": "product-showcase-gifs",
+      "blocks": {
+        "gif_1": {
+          "type": "gif",
+          "settings": {
+            "alt_text": "SURGE Energy Patch in action"
+          }
+        },
+        "gif_2": {
+          "type": "gif",
+          "settings": {
+            "alt_text": "DRIFT Sleep Patch in action"
+          }
+        }
+      },
+      "block_order": ["gif_1", "gif_2"],
+      "name": "Product Showcase GIFs",
+      "settings": {
+        "background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "testimonials_3EzwNj": {
       "type": "testimonials",
       "blocks": {
@@ -617,6 +641,7 @@
     "image_slider_cgrJmQ",
     "props",
     "benefits_story",
+    "product_showcase_gifs",
     "testimonials_3EzwNj",
     "result_count_8CDFa3",
     "icon_with_text_blocks_GERKNa",
