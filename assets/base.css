@@ -17643,7 +17643,8 @@ nav.header__inline-menu {
   color: #000;
 }
 
-.footer .footer__newsletter .button {
+.footer .footer__newsletter .button,
+.footer .newsletter__solid-btn {
   width: fit-content;
   margin: 0;
   max-height: 50px;
@@ -17653,6 +17654,7 @@ nav.header__inline-menu {
   font-family: Inter;
   letter-spacing: 0;
   font-weight: 600;
+  padding: 0 1.5rem;
 }
 
 .footer .footer-block--menu .list-menu__item {
@@ -17665,8 +17667,19 @@ nav.header__inline-menu {
 }
 
 .footer .newsletter-form {
+  display: flex;
   flex-direction: row;
   gap: 1rem;
+  align-items: flex-end;
+}
+
+.footer .newsletter-form__field-wrapper {
+  flex: 1;
+}
+
+.footer .newsletter__solid-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .footer .footer-block__brand-info .rte > * {
