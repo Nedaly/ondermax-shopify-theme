@@ -17684,21 +17684,28 @@ nav.header__inline-menu {
 
 /* Position newsletter form at bottom of its column on desktop */
 @media screen and (min-width: 750px) {
-  .footer .footer-block--newsletter {
+  /* Target the brand information block that contains the newsletter */
+  .footer .footer-block[data-block-type='brand_information'] {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: space-between;
     height: 100%;
+  }
+
+  .footer
+    .footer-block[data-block-type='brand_information']
+    .footer__newsletter {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+
+  /* Ensure the newsletter form container is positioned at bottom */
+  .footer .footer-block--newsletter {
     margin-top: auto;
   }
 
   .footer .footer-block--newsletter .footer-block__heading {
     margin-bottom: 1rem;
-  }
-
-  .footer .footer-block--newsletter .footer__newsletter {
-    margin-top: auto;
   }
 }
 
