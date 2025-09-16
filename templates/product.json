@@ -22,6 +22,21 @@
             "margin_bottom": 0
           }
         },
+        "a6eb81db-40e4-43e0-972f-32db010a4a56": {
+          "type": "rating_stars",
+          "settings": {
+            "rating": 4.4,
+            "star_color": "#ffcc00",
+            "bg_stars_style": "full",
+            "bg_star_color": "#ececec",
+            "label": "(xxxx Reviews)",
+            "size": 16,
+            "alignment": "flex-start",
+            "scroll_id": "",
+            "margin_top": 0,
+            "margin_bottom": 9
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -39,25 +54,78 @@
             "margin_bottom": 15
           }
         },
-        "a6eb81db-40e4-43e0-972f-32db010a4a56": {
-          "type": "rating_stars",
-          "settings": {
-            "rating": 4.4,
-            "star_color": "#ffcc00",
-            "bg_stars_style": "full",
-            "bg_star_color": "#ececec",
-            "label": "(xxxx Reviews)",
-            "size": 16,
-            "alignment": "flex-start",
-            "scroll_id": "",
-            "margin_top": 0,
-            "margin_bottom": 9
-          }
-        },
         "custom_liquid_KkUfVA": {
           "type": "custom_liquid",
           "settings": {
             "custom_liquid": "<div class=\"short-desc\">{{product.metafields.custom.short_descriptions}}</div>"
+          }
+        },
+        "text_dfEiwT": {
+          "type": "text",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "left",
+            "text_color": "#121212",
+            "text_1": "🌍 Free Worldwide Shipping",
+            "text_2": "🧑‍⚕️ Doctor Developed",
+            "text_3": "🔬 Backed by Science",
+            "text_4": "🔄 30-Day Money Back Guarantee",
+            "icon_scale": 120,
+            "icon_color": "#121212",
+            "icon_1": "",
+            "filled_icon_1": false,
+            "icon_2": "",
+            "filled_icon_2": false,
+            "icon_3": "",
+            "filled_icon_3": false,
+            "icon_4": "",
+            "filled_icon_4": false,
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "enable_bg": false,
+            "bg_color": "#f3f3f3",
+            "corner_radius": 40,
+            "padding": 3,
+            "border_size": 0,
+            "border_color": "#b7b7b7",
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "text_4NMkBW": {
+          "type": "text",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "left",
+            "text_color": "#121212",
+            "text_1": "✅ Doctor Developed",
+            "text_2": "✅ Backed by Science",
+            "text_3": "✅ Steady Energy, Deep Rest",
+            "text_4": "",
+            "icon_scale": 120,
+            "icon_color": "#121212",
+            "icon_1": "",
+            "filled_icon_1": false,
+            "icon_2": "",
+            "filled_icon_2": false,
+            "icon_3": "",
+            "filled_icon_3": false,
+            "icon_4": "",
+            "filled_icon_4": false,
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "enable_bg": false,
+            "bg_color": "#f3f3f3",
+            "corner_radius": 40,
+            "padding": 3,
+            "border_size": 0,
+            "border_color": "#b7b7b7",
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         },
         "5fcc0428-e768-4cb7-bea3-eb0274198dd1": {
@@ -284,9 +352,11 @@
       },
       "block_order": [
         "title",
-        "price",
         "a6eb81db-40e4-43e0-972f-32db010a4a56",
+        "price",
         "custom_liquid_KkUfVA",
+        "text_dfEiwT",
+        "text_4NMkBW",
         "5fcc0428-e768-4cb7-bea3-eb0274198dd1",
         "04ba004e-2f54-4936-8b1c-8bcadf6573f6",
         "buy_buttons",
@@ -490,13 +560,13 @@
           "settings": {
             "bg_color": "#00908d",
             "product": "surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+            "pro_img": "shopify://shop_images/mock-up-new1_2dba329d-7295-4cc8-a516-f8adfb7237a8.png",
             "pro_img_title": "surge",
             "pro_img_bg_color": "#2fa9a7",
             "pro_title": "All-Day Energy",
             "pro_desc": "<p>NAD+ Creatine, B-Vitamins for sustained performance.</p>",
             "atc_btn": "Shop Surge",
-            "btn_text2": "Learn more",
-            "btn_url2": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+            "btn_ulr": "",
             "show_btn_outline": false,
             "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-sun w-16 h-16 text-yellow-300/30 animate-spin\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:14:14\" data-orchids-name=\"Sun\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M12 2v2\"></path><path d=\"M12 20v2\"></path><path d=\"m4.93 4.93 1.41 1.41\"></path><path d=\"m17.66 17.66 1.41 1.41\"></path><path d=\"M2 12h2\"></path><path d=\"M20 12h2\"></path><path d=\"m6.34 17.66-1.41 1.41\"></path><path d=\"m19.07 4.93-1.41 1.41\"></path></svg>",
             "icon_animation": "bounce_rotate"
@@ -507,13 +577,13 @@
           "settings": {
             "bg_color": "linear-gradient(306deg, rgba(127, 72, 176, 1) 1%, rgba(127, 72, 176, 0.94) 9%, rgba(67, 48, 211, 0.96) 88%)",
             "product": "surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "pro_img": "shopify://shop_images/mock-up-new2_53439dcb-7fe5-461f-bc80-ac8082ddacd6.png",
             "pro_img_title": "Drift",
             "pro_img_bg_color": "#7950cf",
             "pro_title": "All-Night Rest",
             "pro_desc": "<p>Magnesium, Melatonin for deeper rest and restoration.</p>",
             "atc_btn": "Shop Drift",
-            "btn_text2": "Learn more",
-            "btn_url2": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "btn_ulr": "",
             "show_btn_outline": true,
             "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-moon w-16 h-16 text-blue-100/30 animate-pulse\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:83:14\" data-orchids-name=\"Moon\"><path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\"></path></svg>",
             "icon_animation": "pulse_bounce"
@@ -675,15 +745,15 @@
         "collapse_icon": "plus",
         "display_top_border": true,
         "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_bottom": 44,
         "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
         "custom_colors_text": "#2e2a39",
         "custom_contaner_colors_background": "#ffffff",
         "custom_container_gradient_background": "",
         "custom_contaner_colors_text": "#2e2a39",
-        "btn_url": "",
-        "btn": "",
+        "btn_url": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy",
+        "btn": "SHOP NOW",
         "btn_subheading": ""
       }
     },
@@ -698,7 +768,7 @@
         "custom_shape_color": "#dd1d1d",
         "background_color": "background-1",
         "custom_background_color": "#ffffff",
-        "padding_top": 0,
+        "padding_top": 40,
         "padding_bottom": 0
       }
     }

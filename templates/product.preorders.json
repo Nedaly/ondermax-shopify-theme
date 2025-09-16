@@ -22,6 +22,21 @@
             "margin_bottom": 0
           }
         },
+        "a6eb81db-40e4-43e0-972f-32db010a4a56": {
+          "type": "rating_stars",
+          "settings": {
+            "rating": 4.4,
+            "star_color": "#ffcc00",
+            "bg_stars_style": "full",
+            "bg_star_color": "#ececec",
+            "label": "(xxxx Reviews)",
+            "size": 16,
+            "alignment": "flex-start",
+            "scroll_id": "",
+            "margin_top": 0,
+            "margin_bottom": 9
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -39,39 +54,25 @@
             "margin_bottom": 15
           }
         },
-        "a6eb81db-40e4-43e0-972f-32db010a4a56": {
-          "type": "rating_stars",
+        "custom_liquid_JfG3PC": {
+          "type": "custom_liquid",
           "settings": {
-            "rating": 4.4,
-            "star_color": "#ffcc00",
-            "bg_stars_style": "full",
-            "bg_star_color": "#ececec",
-            "label": "(xxxx Reviews)",
-            "size": 16,
-            "alignment": "flex-start",
-            "scroll_id": "",
-            "margin_top": 0,
-            "margin_bottom": 9
+            "custom_liquid": "<div class=\"short-desc\">{{product.metafields.custom.short_descriptions}}</div>"
           }
         },
-        "appstle_subscription_appstle_subscription_product_page_widget_Rq7JBc": {
-          "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
-          "disabled": true,
-          "settings": {}
-        },
-        "text_MGQ6R8": {
+        "text_tc6zdw": {
           "type": "text",
           "settings": {
             "mobile_text_size": 14,
-            "desktop_text_size": 13,
+            "desktop_text_size": 16,
             "alignment": "left",
-            "text_color": "#1c8e8e",
-            "text_1": "<strong>\"Brilliant! Makes me feel energised without feeling jittery or manic. Will definitely buy again!\"</strong>",
-            "text_2": "",
-            "text_3": "",
+            "text_color": "#121212",
+            "text_1": "🌍 Free Worldwide Shipping",
+            "text_2": "🧑‍⚕️ Doctor Developed",
+            "text_3": "🔬 Backed by Science",
             "icon_scale": 120,
             "icon_color": "#121212",
-            "icon_1": "",
+            "icon_1": "check_circle",
             "filled_icon_1": false,
             "icon_2": "check_circle",
             "filled_icon_2": false,
@@ -90,137 +91,14 @@
             "margin_bottom": 15
           }
         },
-        "icon_with_text_k8WGwH": {
-          "type": "icon_with_text",
-          "settings": {
-            "layout": "vertical",
-            "icon_color": "accent-1",
-            "desktop_icon_size": 16,
-            "desktop_spacing": 2,
-            "desktop_text_size": 18,
-            "mobile_icon_size": 20,
-            "mobile_spacing": 2,
-            "mobile_text_size": 14,
-            "icon_1": "",
-            "icon_1_fill": false,
-            "heading_1": "Why You'll Love It",
-            "icon_2": "",
-            "icon_2_fill": false,
-            "heading_2": "",
-            "icon_3": "",
-            "icon_3_fill": false,
-            "heading_3": "",
-            "margin_top": 24,
-            "margin_bottom": 24
-          }
-        },
-        "emoji_benefits_8ca8Jr": {
-          "type": "emoji_benefits",
-          "settings": {
-            "benefits": "<p>✅ <strong>No Swallowing Needed / Just Results</strong></p><p>✅ <strong>Fast Absorption</strong></p><p>✅ <strong>Doctor Formulated</strong></p><p>✅  <strong>Vegan Friendly</strong></p>",
-            "margin_top": 15,
-            "margin_bottom": 15
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "margin_top": 24,
-            "margin_bottom": 24
-          }
-        },
-        "04ba004e-2f54-4936-8b1c-8bcadf6573f6": {
-          "type": "quantity_selector",
+        "appstle_subscription_appstle_subscription_product_page_widget_Rq7JBc": {
+          "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "disabled": true,
-          "settings": {
-            "full_width_classic": false,
-            "atc_append": "none",
-            "atc_append_heights": "stretch-quantity",
-            "enable_quantity_discounts": false,
-            "style": "normal",
-            "headline": "BUNDLE & SAVE",
-            "preselected": "option_1",
-            "display_selected_indicator": true,
-            "border_radius": 10,
-            "border_width": 2,
-            "color_scheme": "accent-1",
-            "enable_variant_selectors": true,
-            "enable_variant_selectors_on_quantity_of_1": false,
-            "update_prices": false,
-            "skip_unavailable": false,
-            "full_width_pickers": false,
-            "hide_pickers_overlay": true,
-            "pickers_label": "",
-            "image_width": 70,
-            "space_images": true,
-            "vertical_images_position": "top",
-            "vertical_prices_layout": "vertical",
-            "option_1_quantity": 1,
-            "option_1_badge": "",
-            "option_1_badge_style": "1",
-            "option_1_badge_color": "accent-1",
-            "option_1_label": "Buy [quantity]",
-            "option_1_benefit": "",
-            "option_1_benefit_position": "top",
-            "option_1_benefit_style": "outlined",
-            "option_1_benefit_color": "accent-1",
-            "option_1_caption": "You save [amount_saved]",
-            "option_1_percentage_off_text": "0",
-            "option_1_fixed_amount_off": "0",
-            "option_1_price_text": "[price]",
-            "option_1_compare_price": "compare_price",
-            "option_1_compare_price_text": "[compare_price]",
-            "option_2_quantity": 2,
-            "option_2_badge": "",
-            "option_2_badge_style": "1",
-            "option_2_badge_color": "accent-1",
-            "option_2_label": "Buy [quantity]",
-            "option_2_benefit": "",
-            "option_2_benefit_position": "top",
-            "option_2_benefit_style": "outlined",
-            "option_2_benefit_color": "accent-1",
-            "option_2_caption": "You save [amount_saved]",
-            "option_2_percentage_off_text": "0",
-            "option_2_fixed_amount_off": "0",
-            "option_2_price_text": "[price]",
-            "option_2_compare_price": "compare_price",
-            "option_2_compare_price_text": "[compare_price]",
-            "option_3_quantity": 3,
-            "option_3_badge": "",
-            "option_3_badge_style": "1",
-            "option_3_badge_color": "accent-1",
-            "option_3_label": "Buy [quantity]",
-            "option_3_benefit": "",
-            "option_3_benefit_position": "top",
-            "option_3_benefit_style": "outlined",
-            "option_3_benefit_color": "accent-1",
-            "option_3_caption": "You save [amount_saved]",
-            "option_3_percentage_off_text": "0",
-            "option_3_fixed_amount_off": "0",
-            "option_3_price_text": "[price]",
-            "option_3_compare_price": "compare_price",
-            "option_3_compare_price_text": "[compare_price]",
-            "option_4_quantity": 4,
-            "option_4_badge": "",
-            "option_4_badge_style": "1",
-            "option_4_badge_color": "accent-1",
-            "option_4_label": "Buy [quantity]",
-            "option_4_benefit": "",
-            "option_4_benefit_position": "top",
-            "option_4_benefit_style": "outlined",
-            "option_4_benefit_color": "accent-1",
-            "option_4_caption": "You save [amount_saved]",
-            "option_4_percentage_off_text": "0",
-            "option_4_fixed_amount_off": "0",
-            "option_4_price_text": "[price]",
-            "option_4_compare_price": "compare_price",
-            "option_4_compare_price_text": "[compare_price]",
-            "margin_top": 15,
-            "margin_bottom": 15
-          }
+          "settings": {}
         },
         "text_rzewGk": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "mobile_text_size": 14,
             "desktop_text_size": 16,
@@ -399,14 +277,11 @@
       },
       "block_order": [
         "title",
-        "price",
         "a6eb81db-40e4-43e0-972f-32db010a4a56",
+        "price",
+        "custom_liquid_JfG3PC",
+        "text_tc6zdw",
         "appstle_subscription_appstle_subscription_product_page_widget_Rq7JBc",
-        "text_MGQ6R8",
-        "icon_with_text_k8WGwH",
-        "emoji_benefits_8ca8Jr",
-        "description",
-        "04ba004e-2f54-4936-8b1c-8bcadf6573f6",
         "text_rzewGk",
         "buy_buttons",
         "e0a0b690-50df-4ca4-acfd-ce2980696cce",
@@ -974,7 +849,8 @@
         "custom_container_gradient_background": "",
         "custom_contaner_colors_text": "#2e2a39",
         "btn_url": "",
-        "btn": ""
+        "btn": "",
+        "btn_subheading": ""
       }
     },
     "1755928354499a79c2": {

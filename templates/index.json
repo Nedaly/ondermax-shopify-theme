@@ -12,15 +12,15 @@
     "hero": {
       "type": "ondermax-hero",
       "settings": {
-        "kicker": "DOCTOR BUILT\nCLINICALLY INSPIRED SYSTEM",
-        "heading": "Just Results.",
-        "subheading": "SURGE + DRIFT\nThe biohacking system.",
+        "kicker": "Take Control of Your 24 Hours",
+        "heading": "Real Results.",
+        "subheading": "Maximum Day.\n Awake when you want, asleep when you need.",
         "use_video": true,
-        "video_cdn_url": "https://cdn.shopify.com/videos/c/o/v/9c6b6b3fde704cb189ca9fc6334ddc41.mp4",
+        "video_cdn_url": "https://cdn.shopify.com/videos/c/o/v/6f036483135b4d3d8f375016a8ed00a5.mp4",
         "overlay_strength": 30,
         "primary_link": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy-1",
         "primary_label": "Shop the Stack",
-        "secondary_link": "#",
+        "secondary_link": "#shopify-section-template--26495401165131__benefits_story",
         "secondary_label": "How it Works ↓",
         "learn_anchor": "science-authority",
         "enable_smooth_scroll": true,
@@ -37,6 +37,12 @@
       "type": "benefits-story",
       "settings": {
         "heading": "How It Works",
+        "step_1": "Morning Boost",
+        "detail_1": "<p>Start strong with <strong>SURGE</strong>.</p>",
+        "step_2": "Work Focus",
+        "detail_2": "<p>Stay sharp, all day.</p>",
+        "step_3": "Night Reset",
+        "detail_3": "<p>Drift into deep rest.</p>",
         "padding_top": 0,
         "padding_bottom": 36
       }
@@ -49,7 +55,7 @@
           "settings": {
             "star_rating": 5,
             "title": "SURGE",
-            "text": "<p><strong>\"SURGE completely changed my morning routine. No more coffee crashes!\"</strong></p>",
+            "text": "<p><strong>\"SURGE </strong>replaced my 3 cups of coffee — without the crash.<strong>\"</strong></p>",
             "author": "<strong>Sarah Chen</strong>"
           }
         },
@@ -58,7 +64,7 @@
           "settings": {
             "star_rating": 5,
             "title": "DRIFT",
-            "text": "<p>\"<strong>DRIFT helps me fall asleep in minutes. Game changer for recovery.\"</strong></p>",
+            "text": "<p>\"I fall asleep faster and wake up fresher with <strong>DRIFT.\"</strong></p>",
             "author": "<strong>Marcus Torres</strong>"
           }
         },
@@ -85,7 +91,7 @@
           "settings": {
             "star_rating": 5,
             "title": "Best product I’ve tried!",
-            "text": "<p>SURGE has really made a positive impact on my routine. The results are noticeable and I feel healthier. The quality is top-notch, and I will definitely continue using it.</p>",
+            "text": "<p>Finally, something that works with my day AND night.</p>",
             "author": "<em><strong>Henry R.</strong></em>"
           }
         },
@@ -111,8 +117,8 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "Trusted Results.",
-        "title_highlight_color": "#6d388b",
+        "title": "<strong>What Real Users Are Saying</strong>",
+        "title_highlight_color": "#ffffff",
         "heading_size": "h1",
         "text": "<p>High performers choose Ondermax for effortless transformation.</p>",
         "color_scheme": "custom",
@@ -271,13 +277,13 @@
           "settings": {
             "bg_color": "#00908d",
             "product": "surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+            "pro_img": "shopify://shop_images/mock-up-new1_2dba329d-7295-4cc8-a516-f8adfb7237a8.png",
             "pro_img_title": "surge",
-            "pro_img_bg_color": "#2fa9a7",
+            "pro_img_bg_color": "rgba(0,0,0,0)",
             "pro_title": "All-Day Energy",
             "pro_desc": "<p>NAD+ Creatine, B-Vitamins for sustained performance.</p>",
             "atc_btn": "Shop Surge",
-            "btn_text2": "Learn more",
-            "btn_url2": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+            "btn_ulr": "shopify://products/high-energy-stack",
             "show_btn_outline": false,
             "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-sun w-16 h-16 text-yellow-300/30 animate-spin\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:14:14\" data-orchids-name=\"Sun\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M12 2v2\"></path><path d=\"M12 20v2\"></path><path d=\"m4.93 4.93 1.41 1.41\"></path><path d=\"m17.66 17.66 1.41 1.41\"></path><path d=\"M2 12h2\"></path><path d=\"M20 12h2\"></path><path d=\"m6.34 17.66-1.41 1.41\"></path><path d=\"m19.07 4.93-1.41 1.41\"></path></svg>",
             "icon_animation": "bounce_rotate"
@@ -288,13 +294,13 @@
           "settings": {
             "bg_color": "linear-gradient(306deg, rgba(127, 72, 176, 1) 1%, rgba(127, 72, 176, 0.94) 9%, rgba(67, 48, 211, 0.96) 88%)",
             "product": "surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "pro_img": "shopify://shop_images/mock-up-new2_53439dcb-7fe5-461f-bc80-ac8082ddacd6.png",
             "pro_img_title": "Drift",
-            "pro_img_bg_color": "#7950cf",
+            "pro_img_bg_color": "rgba(0,0,0,0)",
             "pro_title": "All-Night Rest",
             "pro_desc": "<p>Magnesium, Melatonin for deeper rest and restoration.</p>",
             "atc_btn": "Shop Drift",
-            "btn_text2": "Learn more",
-            "btn_url2": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "btn_ulr": "shopify://products/high-energy-stack-copy",
             "show_btn_outline": true,
             "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-moon w-16 h-16 text-blue-100/30 animate-pulse\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:83:14\" data-orchids-name=\"Moon\"><path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\"></path></svg>",
             "icon_animation": "pulse_bounce"
@@ -512,9 +518,165 @@
         "custom_contaner_colors_background": "#ffffff",
         "custom_container_gradient_background": "",
         "custom_contaner_colors_text": "#2e2a39",
-        "btn_url": "",
-        "btn": "",
+        "btn_url": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy",
+        "btn": "SHOP NOW",
         "btn_subheading": ""
+      }
+    },
+    "image_slider_cgrJmQ": {
+      "type": "image-slider",
+      "blocks": {
+        "image_slide_3aWT3r": {
+          "type": "image_slide",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_5px7xn5px7xn5px7.png",
+            "link": "",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        },
+        "video_slide_yFkmer": {
+          "type": "video_slide",
+          "settings": {
+            "video": "shopify://files/videos/_project_title_surge_202509150016.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        },
+        "image_slide_L9J9qL": {
+          "type": "image_slide",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_a5389ja5389ja538.png",
+            "link": "",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        },
+        "video_slide_VWWYmU": {
+          "type": "video_slide",
+          "settings": {
+            "video": "shopify://files/videos/_project_title_surge_202509150018.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        },
+        "image_slide_xdhAUN": {
+          "type": "image_slide",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_bpjq36bpjq36bpjq.png",
+            "link": "",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        },
+        "video_slide_ir7LVR": {
+          "type": "video_slide",
+          "settings": {
+            "video": "shopify://files/videos/Json__project_title_202509150011.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        }
+      },
+      "block_order": [
+        "image_slide_3aWT3r",
+        "video_slide_yFkmer",
+        "image_slide_L9J9qL",
+        "video_slide_VWWYmU",
+        "image_slide_xdhAUN",
+        "video_slide_ir7LVR"
+      ],
+      "name": "Image/Video Slider",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "<strong>See It. Wear It. Live It.</strong>",
+        "title_highlight_color": "#121212",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "type": "slide",
+        "drag": "disabled",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "center_mode": false,
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": false,
+        "dots_color_scheme": "inverse",
+        "desktop_page_width": "desktop-full-page-no-padding",
+        "desktop_border_radius": 0,
+        "slides_desktop": 3,
+        "per_move_desktop": 1,
+        "desktop_spacing": 28,
+        "desktop_side_padding": 0,
+        "desktop_padding_calc": true,
+        "desktop_adaptive_height": false,
+        "desktop_dots_position": "under",
+        "desktop_arrows_position": "sides",
+        "mobile_full_page": false,
+        "mobile_border_radius": 0,
+        "slides_mobile": 2,
+        "per_move_mobile": 1,
+        "mobile_spacing": 12,
+        "mobile_side_padding": 0,
+        "mobile_padding_calc": true,
+        "mobile_adaptive_height": false,
+        "mobile_dots_position": "hidden",
+        "mobile_arrows_position": "hidden",
+        "padding_top": 72,
+        "padding_bottom": 36,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#121212"
+      }
+    },
+    "mosaic_gallery_tBUXFG": {
+      "type": "mosaic-gallery",
+      "blocks": {
+        "image_QxtVcG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_0071.heic"
+          }
+        }
+      },
+      "block_order": ["image_QxtVcG"],
+      "disabled": true,
+      "name": "Mosaic Gallery",
+      "settings": {
+        "grid_gap": 10
       }
     }
   },
@@ -528,6 +690,8 @@
     "two_products_sec_pypD4z",
     "profile_info_section_ykCnyb",
     "testimonial_grid_section_Bk6fah",
-    "collapsible_content_XGKDTp"
+    "collapsible_content_XGKDTp",
+    "image_slider_cgrJmQ",
+    "mosaic_gallery_tBUXFG"
   ]
 }

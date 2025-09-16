@@ -63,6 +63,21 @@
             "margin_bottom": 0
           }
         },
+        "a6eb81db-40e4-43e0-972f-32db010a4a56": {
+          "type": "rating_stars",
+          "settings": {
+            "rating": 4.7,
+            "star_color": "#ffcc00",
+            "bg_stars_style": "full",
+            "bg_star_color": "#ececec",
+            "label": "(1023 Reviews)",
+            "size": 16,
+            "alignment": "flex-start",
+            "scroll_id": "",
+            "margin_top": 9,
+            "margin_bottom": 9
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -80,21 +95,6 @@
             "margin_bottom": 15
           }
         },
-        "a6eb81db-40e4-43e0-972f-32db010a4a56": {
-          "type": "rating_stars",
-          "settings": {
-            "rating": 4.7,
-            "star_color": "#ffcc00",
-            "bg_stars_style": "full",
-            "bg_star_color": "#ececec",
-            "label": "(1023 Reviews)",
-            "size": 16,
-            "alignment": "flex-start",
-            "scroll_id": "",
-            "margin_top": 9,
-            "margin_bottom": 9
-          }
-        },
         "custom_liquid_pEABcq": {
           "type": "custom_liquid",
           "settings": {
@@ -103,23 +103,25 @@
         },
         "text_9pdHee": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "mobile_text_size": 14,
             "desktop_text_size": 13,
             "alignment": "left",
-            "text_color": "#1c8e8e",
-            "text_1": "\"Brilliant! Makes me feel energised without feeling jittery or manic. Will definitely buy again!\"",
-            "text_2": "",
-            "text_3": "",
+            "text_color": "#262b2b",
+            "text_1": "🌍 Free Worldwide Shipping",
+            "text_2": "🧑‍⚕️ Doctor Developed",
+            "text_3": "🔬 Backed by Science",
+            "text_4": "🔄 30-Day Money Back Guarantee",
             "icon_scale": 120,
             "icon_color": "#121212",
             "icon_1": "",
             "filled_icon_1": false,
-            "icon_2": "check_circle",
+            "icon_2": "",
             "filled_icon_2": false,
-            "icon_3": "check_circle",
+            "icon_3": "",
             "filled_icon_3": false,
+            "icon_4": "",
+            "filled_icon_4": false,
             "width": "100%",
             "direction": "horizontal",
             "column_gap": 3,
@@ -366,8 +368,8 @@
       "block_order": [
         "urgency_cG7B3q",
         "title",
-        "price",
         "a6eb81db-40e4-43e0-972f-32db010a4a56",
+        "price",
         "custom_liquid_pEABcq",
         "text_9pdHee",
         "icon_with_text_cDULek",
@@ -577,13 +579,13 @@
           "settings": {
             "bg_color": "#00908d",
             "product": "surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+            "pro_img": "shopify://shop_images/mock-up-new1_2dba329d-7295-4cc8-a516-f8adfb7237a8.png",
             "pro_img_title": "surge",
             "pro_img_bg_color": "#2fa9a7",
             "pro_title": "All-Day Energy",
             "pro_desc": "<p>NAD+ Creatine, B-Vitamins for sustained performance.</p>",
             "atc_btn": "Shop Surge",
-            "btn_text2": "Learn more",
-            "btn_url2": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+            "btn_ulr": "shopify://products/high-energy-stack",
             "show_btn_outline": false,
             "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-sun w-16 h-16 text-yellow-300/30 animate-spin\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:14:14\" data-orchids-name=\"Sun\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M12 2v2\"></path><path d=\"M12 20v2\"></path><path d=\"m4.93 4.93 1.41 1.41\"></path><path d=\"m17.66 17.66 1.41 1.41\"></path><path d=\"M2 12h2\"></path><path d=\"M20 12h2\"></path><path d=\"m6.34 17.66-1.41 1.41\"></path><path d=\"m19.07 4.93-1.41 1.41\"></path></svg>",
             "icon_animation": "bounce_rotate"
@@ -594,13 +596,13 @@
           "settings": {
             "bg_color": "linear-gradient(306deg, rgba(127, 72, 176, 1) 1%, rgba(127, 72, 176, 0.94) 9%, rgba(67, 48, 211, 0.96) 88%)",
             "product": "surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "pro_img": "shopify://shop_images/mock-up-new2_53439dcb-7fe5-461f-bc80-ac8082ddacd6.png",
             "pro_img_title": "Drift",
             "pro_img_bg_color": "#7950cf",
             "pro_title": "All-Night Rest",
             "pro_desc": "<p>Magnesium, Melatonin for deeper rest and restoration.</p>",
             "atc_btn": "Shop Drift",
-            "btn_text2": "Learn more",
-            "btn_url2": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "btn_ulr": "shopify://products/high-energy-stack-copy",
             "show_btn_outline": true,
             "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-moon w-16 h-16 text-blue-100/30 animate-pulse\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:83:14\" data-orchids-name=\"Moon\"><path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\"></path></svg>",
             "icon_animation": "pulse_bounce"
@@ -769,285 +771,9 @@
         "custom_contaner_colors_background": "#ffffff",
         "custom_container_gradient_background": "",
         "custom_contaner_colors_text": "#2e2a39",
-        "btn_url": "",
-        "btn": "",
+        "btn_url": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy",
+        "btn": "SHOP NOW",
         "btn_subheading": ""
-      }
-    },
-    "facebook_testimonials_iTDVad": {
-      "type": "facebook-testimonials",
-      "blocks": {
-        "column_e6NmPJ": {
-          "type": "column",
-          "settings": {
-            "post_author": "Author name",
-            "post_author_verified": false,
-            "post_time": "2h ago",
-            "post_text": "<p>Shrine theme has made a huge impact on my store's CVR!</p>",
-            "post_reactions": "like, love, care",
-            "post_reactions_text": "1.1k",
-            "post_comments_text": "26 Comments",
-            "comment_1_author": "Comment author",
-            "comment_1_author_verified": false,
-            "comment_1_time": "2h ago",
-            "comment_1_text": "",
-            "comment_2_author": "Comment author",
-            "comment_2_author_verified": false,
-            "comment_2_time": "3h ago",
-            "comment_2_text": ""
-          }
-        },
-        "column_NJzBMy": {
-          "type": "column",
-          "settings": {
-            "post_author": "Author name",
-            "post_author_verified": false,
-            "post_time": "2h ago",
-            "post_text": "<p>Shrine theme has made a huge impact on my store's CVR!</p>",
-            "post_reactions": "like, love, care",
-            "post_reactions_text": "1.1k",
-            "post_comments_text": "26 Comments",
-            "comment_1_author": "Comment author",
-            "comment_1_author_verified": false,
-            "comment_1_time": "2h ago",
-            "comment_1_text": "",
-            "comment_2_author": "Comment author",
-            "comment_2_author_verified": false,
-            "comment_2_time": "3h ago",
-            "comment_2_text": ""
-          }
-        },
-        "column_UDwEF8": {
-          "type": "column",
-          "settings": {
-            "post_author": "Author name",
-            "post_author_verified": false,
-            "post_time": "2h ago",
-            "post_text": "<p>Shrine theme has made a huge impact on my store's CVR!</p>",
-            "post_reactions": "like, love, care",
-            "post_reactions_text": "1.1k",
-            "post_comments_text": "26 Comments",
-            "comment_1_author": "Comment author",
-            "comment_1_author_verified": false,
-            "comment_1_time": "2h ago",
-            "comment_1_text": "",
-            "comment_2_author": "Comment author",
-            "comment_2_author_verified": false,
-            "comment_2_time": "3h ago",
-            "comment_2_text": ""
-          }
-        }
-      },
-      "block_order": ["column_e6NmPJ", "column_NJzBMy", "column_UDwEF8"],
-      "disabled": true,
-      "name": "Facebook testimonials",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "Feel the Difference — <strong>Hear Their Stories</strong>",
-        "title_highlight_color": "#1c8e8e",
-        "heading_size": "h1",
-        "text": "",
-        "color_scheme": "background-1",
-        "type": "slide",
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "arrows_color_scheme": "inverse",
-        "transparent_arrows": true,
-        "dots_color_scheme": "inverse",
-        "desktop_full_page": false,
-        "columns_desktop": 3,
-        "slider_desktop": false,
-        "per_move_desktop": 1,
-        "desktop_spacing": 24,
-        "desktop_side_padding": 0,
-        "desktop_padding_calc": true,
-        "desktop_adaptive_height": false,
-        "desktop_dots_position": "under",
-        "desktop_arrows_position": "sides",
-        "slider_mobile": true,
-        "enable_mobile_preview": false,
-        "mobile_adaptive_height": false,
-        "mobile_dots_position": "under",
-        "mobile_arrows_position": "under",
-        "post_bg_color": "#ffffff",
-        "post_text_color": "#101010",
-        "comments_bg_color": "#f0f2f5",
-        "separators_color": "#a4b0be",
-        "post_border_color": "#dfdfdf",
-        "border_width": 1,
-        "like_label": "Like",
-        "comment_label": "Comment",
-        "reply_label": "Reply",
-        "share_label": "Share",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#f3f3f3",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39"
-      }
-    },
-    "rich_text_PxXa6P": {
-      "type": "rich-text",
-      "blocks": {
-        "atc_button_eUhC4P": {
-          "type": "atc_button",
-          "settings": {
-            "button_label": "Ditch the Pills – Patch In",
-            "atc_product": "high-energy-stack",
-            "atc_skip_cart": false
-          }
-        }
-      },
-      "block_order": ["atc_button_eUhC4P"],
-      "disabled": true,
-      "name": "Urgency + Scarcity",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "full_width": true,
-        "mobile_narrow_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 12,
-        "padding_bottom": 40,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
-    "image_with_text_4byzwi": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_w8ez7D": {
-          "type": "heading",
-          "settings": {
-            "title": "The Patch That<strong> Changes Everything</strong>",
-            "title_highlight_color": "#1c8e8e",
-            "heading_size": "h1"
-          }
-        },
-        "text_ppCQxD": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Transdermal delivery. Clinical ingredients. No pills. No nonsense</p>",
-            "text_style": "body"
-          }
-        },
-        "text_with_icon_TwVBVr": {
-          "type": "text_with_icon",
-          "settings": {
-            "mobile_text_size": 14,
-            "desktop_text_size": 18,
-            "alignment": "left",
-            "mobile_alignment": "left",
-            "text_color": "#333333",
-            "text_1": "Science-backed ingredients",
-            "text_2": "Continuous absorption via skin",
-            "text_3": "",
-            "icon_scale": 140,
-            "icon_color": "#2ecc71",
-            "icon_1": "select_check_box",
-            "filled_icon_1": false,
-            "icon_2": "select_check_box",
-            "filled_icon_2": false,
-            "icon_3": "check_circle",
-            "filled_icon_3": false,
-            "width": "100%",
-            "direction": "vertical",
-            "column_gap": 3,
-            "enable_bg": false,
-            "bg_color": "#f3f3f3",
-            "corner_radius": 40,
-            "padding": 3,
-            "border_size": 0,
-            "border_color": "#b7b7b7"
-          }
-        },
-        "text_with_icon_nPLVcY": {
-          "type": "text_with_icon",
-          "settings": {
-            "mobile_text_size": 14,
-            "desktop_text_size": 18,
-            "alignment": "left",
-            "mobile_alignment": "left",
-            "text_color": "#333333",
-            "text_1": "No pills or powders to remember",
-            "text_2": "Works while you live your life",
-            "text_3": "",
-            "icon_scale": 140,
-            "icon_color": "#2ecc71",
-            "icon_1": "select_check_box",
-            "filled_icon_1": false,
-            "icon_2": "select_check_box",
-            "filled_icon_2": false,
-            "icon_3": "check_circle",
-            "filled_icon_3": false,
-            "width": "100%",
-            "direction": "vertical",
-            "column_gap": 3,
-            "enable_bg": false,
-            "bg_color": "#f3f3f3",
-            "corner_radius": 40,
-            "padding": 3,
-            "border_size": 0,
-            "border_color": "#b7b7b7"
-          }
-        },
-        "button_mEj7BY": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_w8ez7D",
-        "text_ppCQxD",
-        "text_with_icon_TwVBVr",
-        "text_with_icon_nPLVcY",
-        "button_mEj7BY"
-      ],
-      "disabled": true,
-      "name": "What Ondermax Solves",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "image": "shopify://shop_images/2_a68703d7-9ee1-410e-98d6-4a356ca246d6.png",
-        "video_autoplay": true,
-        "video_loop": true,
-        "height": "adapt",
-        "color_scheme": "background-1",
-        "section_color_scheme": "background-1",
-        "full_desktop_width": false,
-        "content_layout": "no-overlap",
-        "desktop_media_width": 50,
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_full_media_width": false,
-        "mobile_direction": "normal",
-        "mobile_image_quanlity": "2",
-        "mobile_content_alignment": "left",
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 16,
-        "desktop_padding_top": 36,
-        "desktop_padding_bottom": 36,
-        "custom_colors_background": "#2e2a39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "custom_section_colors_background": "#ffffff",
-        "custom_section_gradient_background": ""
       }
     },
     "related-products": {
@@ -1083,7 +809,7 @@
         "custom_shape_color": "#e7fafa",
         "background_color": "background-1",
         "custom_background_color": "#ffffff",
-        "padding_top": 0,
+        "padding_top": 40,
         "padding_bottom": 0
       }
     }
@@ -1097,9 +823,6 @@
     "two_products_sec_aX69DT",
     "testimonial_grid_section_HCXCTM",
     "collapsible_content_3EgUQF",
-    "facebook_testimonials_iTDVad",
-    "rich_text_PxXa6P",
-    "image_with_text_4byzwi",
     "related-products",
     "b321ab88-2b59-4dba-bade-54885c874ca5"
   ]
