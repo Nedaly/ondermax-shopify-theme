@@ -120,13 +120,13 @@
       "type": "product-showcase-gifs",
       "blocks": {
         "gif_1": {
-          "type": "gif",
+          "type": "product_gif",
           "settings": {
             "alt_text": "SURGE Energy Patch in action"
           }
         },
         "gif_2": {
-          "type": "gif",
+          "type": "product_gif",
           "settings": {
             "alt_text": "DRIFT Sleep Patch in action"
           }
