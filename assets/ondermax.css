@@ -297,6 +297,17 @@
   }
 }
 
+/* FAQ Button - Larger Size */
+.faq-btn-large {
+  min-height: 75px !important;
+  padding: 1.3rem 2.8rem !important;
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  transform: scale(1.02) !important;
+}
+
 @keyframes pulseGlow {
   0%,
   100% {
