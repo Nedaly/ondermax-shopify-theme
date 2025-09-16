@@ -452,6 +452,14 @@
     {% if is_rtl %}
       {{ 'rtl.css' | asset_url | stylesheet_tag: preload: true }}
     {% endif %}
+    
+    {% comment %} Language-specific CSS files {% endcomment %}
+    {% if request.locale.iso_code == 'ar' %}
+      {{ 'lang-ar.css' | asset_url | stylesheet_tag }}
+    {% endif %}
+    {% if request.locale.iso_code == 'he' %}
+      {{ 'lang-he.css' | asset_url | stylesheet_tag }}
+    {% endif %}
 
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
