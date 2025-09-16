@@ -1,34 +1,21 @@
 {% comment %}
-Product Showcase GIFs Section
-- 2 GIFs in a row, full-width, no padding
+Single Product GIF Section
+- 1 GIF, full-width, no padding
 - Showcases product functionality
 - Responsive design
 {% endcomment %}
 
-<div class="product-showcase-gifs section-{{ section.id }}-padding">
-  <div class="product-showcase-gifs__container">
-    <div class="product-showcase-gifs__grid">
-      {% for block in section.blocks limit: 2 %}
-        <div class="product-showcase-gifs__item" {{ block.shopify_attributes }}>
-          <div class="product-showcase-gifs__gif">
-            {% if forloop.index == 1 %}
-              <img src="{{ 'ezgif-1c16be4e7b5dee.gif' | asset_url }}" 
-                   alt="{{ block.settings.alt_text | default: 'Product showcase' }}"
-                   loading="lazy"
-                   width="800"
-                   height="450"
-                   style="width: 100%; height: 100%; object-fit: cover; display: block;">
-            {% elsif forloop.index == 2 %}
-              <img src="{{ 'ezgif-14cc8c86a229a1.gif' | asset_url }}" 
-                   alt="{{ block.settings.alt_text | default: 'Product showcase' }}"
-                   loading="lazy"
-                   width="800"
-                   height="450"
-                   style="width: 100%; height: 100%; object-fit: cover; display: block;">
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
+<div class="single-product-gif section-{{ section.id }}-padding">
+  <div class="single-product-gif__container">
+    <div class="single-product-gif__item">
+      <div class="single-product-gif__gif">
+        <img src="{{ 'ezgif-14cc8c86a229a1.gif' | asset_url }}" 
+             alt="{{ section.settings.alt_text | default: 'Product showcase' }}"
+             loading="lazy"
+             width="800"
+             height="450"
+             style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
     </div>
   </div>
 </div>
@@ -39,7 +26,7 @@ Product Showcase GIFs Section
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  .product-showcase-gifs {
+  .single-product-gif {
     background-color: {{ section.settings.background_color }};
     width: 100vw !important;
     margin-left: calc(-50vw + 50%) !important;
@@ -49,27 +36,20 @@ Product Showcase GIFs Section
     max-width: none !important;
   }
 
-  .product-showcase-gifs__container {
+  .single-product-gif__container {
     width: 100%;
     max-width: none !important;
     padding: 0 !important;
     margin: 0 !important;
   }
 
-  .product-showcase-gifs__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
-    width: 100%;
-    height: auto;
-  }
-
-  .product-showcase-gifs__item {
+  .single-product-gif__item {
     position: relative;
     overflow: hidden;
+    width: 100%;
   }
 
-  .product-showcase-gifs__gif {
+  .single-product-gif__gif {
     position: relative;
     width: 100%;
     height: 0;
@@ -77,7 +57,7 @@ Product Showcase GIFs Section
     overflow: hidden;
   }
 
-  .product-showcase-gifs__gif img {
+  .single-product-gif__gif img {
     position: absolute;
     top: 0;
     left: 0;
@@ -93,10 +73,6 @@ Product Showcase GIFs Section
       padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px !important;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px !important;
     }
-    
-    .product-showcase-gifs__grid {
-      grid-template-columns: 1fr;
-    }
   }
 
   /* Desktop responsive */
@@ -110,10 +86,9 @@ Product Showcase GIFs Section
 
 {% schema %}
 {
-  "name": "Product Showcase GIFs",
+  "name": "Single Product GIF",
   "tag": "section",
   "class": "section",
-  "max_blocks": 2,
   "settings": [
     {
       "type": "header",
@@ -124,6 +99,12 @@ Product Showcase GIFs Section
       "id": "background_color",
       "label": "Background color",
       "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "alt_text",
+      "label": "Alt text",
+      "default": "Product showcase"
     },
     {
       "type": "range",
@@ -146,31 +127,9 @@ Product Showcase GIFs Section
       "default": 0
     }
   ],
-  "blocks": [
-    {
-      "type": "product_gif",
-      "name": "Product GIF",
-      "settings": [
-        {
-          "type": "text",
-          "id": "alt_text",
-          "label": "Alt text",
-          "default": "Product showcase"
-        }
-      ]
-    }
-  ],
   "presets": [
     {
-      "name": "Product Showcase GIFs",
-      "blocks": [
-        {
-          "type": "product_gif"
-        },
-        {
-          "type": "product_gif"
-        }
-      ]
+      "name": "Single Product GIF"
     }
   ]
 }
