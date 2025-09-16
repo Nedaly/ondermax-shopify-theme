@@ -8,4 +8,4 @@ dist
 playwright-report/
 test-results/
 .lighthouseci/
-playwright/.cache/
+assets/mock-up-new*.png
