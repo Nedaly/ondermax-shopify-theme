@@ -29,6 +29,145 @@
         "sticky_label": "Shop now"
       }
     },
+    "image_slider_cgrJmQ": {
+      "type": "image-slider",
+      "blocks": {
+        "image_slide_3aWT3r": {
+          "type": "image_slide",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_5px7xn5px7xn5px7.png",
+            "link": "",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        },
+        "video_slide_yFkmer": {
+          "type": "video_slide",
+          "settings": {
+            "video": "shopify://files/videos/_project_title_surge_202509150016.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        },
+        "image_slide_L9J9qL": {
+          "type": "image_slide",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_a5389ja5389ja538.png",
+            "link": "",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        },
+        "video_slide_VWWYmU": {
+          "type": "video_slide",
+          "settings": {
+            "video": "shopify://files/videos/_project_title_surge_202509150018.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        },
+        "image_slide_xdhAUN": {
+          "type": "image_slide",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_bpjq36bpjq36bpjq.png",
+            "link": "",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        },
+        "video_slide_ir7LVR": {
+          "type": "video_slide",
+          "settings": {
+            "video": "shopify://files/videos/Json__project_title_202509150011.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        }
+      },
+      "block_order": [
+        "image_slide_3aWT3r",
+        "video_slide_yFkmer",
+        "image_slide_L9J9qL",
+        "video_slide_VWWYmU",
+        "image_slide_xdhAUN",
+        "video_slide_ir7LVR"
+      ],
+      "name": "Image/Video Slider",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "",
+        "title_highlight_color": "#121212",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "type": "slide",
+        "drag": "disabled",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "center_mode": false,
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": false,
+        "dots_color_scheme": "inverse",
+        "desktop_page_width": "desktop-full-page",
+        "desktop_border_radius": 0,
+        "slides_desktop": 3,
+        "per_move_desktop": 1,
+        "desktop_spacing": 0,
+        "desktop_side_padding": 0,
+        "desktop_padding_calc": true,
+        "desktop_adaptive_height": false,
+        "desktop_dots_position": "hidden",
+        "desktop_arrows_position": "sides",
+        "mobile_full_page": false,
+        "mobile_border_radius": 0,
+        "slides_mobile": 2,
+        "per_move_mobile": 1,
+        "mobile_spacing": 0,
+        "mobile_side_padding": 0,
+        "mobile_padding_calc": true,
+        "mobile_adaptive_height": false,
+        "mobile_dots_position": "hidden",
+        "mobile_arrows_position": "hidden",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#121212"
+      }
+    },
     "props": {
       "type": "home-value-props",
       "settings": {}
@@ -519,145 +658,6 @@
         "btn_subheading": ""
       }
     },
-    "image_slider_cgrJmQ": {
-      "type": "image-slider",
-      "blocks": {
-        "image_slide_3aWT3r": {
-          "type": "image_slide",
-          "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_5px7xn5px7xn5px7.png",
-            "link": "",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "video_slide_yFkmer": {
-          "type": "video_slide",
-          "settings": {
-            "video": "shopify://files/videos/_project_title_surge_202509150016.mp4",
-            "loop": true,
-            "muted_autoplay": true,
-            "display_play_btn": true,
-            "btn_animation": false,
-            "btn_color_scheme": "accent-1",
-            "display_sound_btn": false,
-            "sound_btn_color_scheme": "inverse",
-            "display_timeline": false,
-            "timeline_color": "accent-1",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "image_slide_L9J9qL": {
-          "type": "image_slide",
-          "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_a5389ja5389ja538.png",
-            "link": "",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "video_slide_VWWYmU": {
-          "type": "video_slide",
-          "settings": {
-            "video": "shopify://files/videos/_project_title_surge_202509150018.mp4",
-            "loop": true,
-            "muted_autoplay": true,
-            "display_play_btn": true,
-            "btn_animation": false,
-            "btn_color_scheme": "accent-1",
-            "display_sound_btn": false,
-            "sound_btn_color_scheme": "inverse",
-            "display_timeline": false,
-            "timeline_color": "accent-1",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "image_slide_xdhAUN": {
-          "type": "image_slide",
-          "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_bpjq36bpjq36bpjq.png",
-            "link": "",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "video_slide_ir7LVR": {
-          "type": "video_slide",
-          "settings": {
-            "video": "shopify://files/videos/Json__project_title_202509150011.mp4",
-            "loop": true,
-            "muted_autoplay": true,
-            "display_play_btn": true,
-            "btn_animation": false,
-            "btn_color_scheme": "accent-1",
-            "display_sound_btn": false,
-            "sound_btn_color_scheme": "inverse",
-            "display_timeline": false,
-            "timeline_color": "accent-1",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        }
-      },
-      "block_order": [
-        "image_slide_3aWT3r",
-        "video_slide_yFkmer",
-        "image_slide_L9J9qL",
-        "video_slide_VWWYmU",
-        "image_slide_xdhAUN",
-        "video_slide_ir7LVR"
-      ],
-      "name": "Image/Video Slider",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "",
-        "title_highlight_color": "#121212",
-        "heading_size": "h1",
-        "color_scheme": "background-1",
-        "type": "slide",
-        "drag": "disabled",
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "center_mode": false,
-        "arrows_color_scheme": "inverse",
-        "transparent_arrows": false,
-        "dots_color_scheme": "inverse",
-        "desktop_page_width": "desktop-full-page",
-        "desktop_border_radius": 0,
-        "slides_desktop": 3,
-        "per_move_desktop": 1,
-        "desktop_spacing": 0,
-        "desktop_side_padding": 0,
-        "desktop_padding_calc": true,
-        "desktop_adaptive_height": false,
-        "desktop_dots_position": "hidden",
-        "desktop_arrows_position": "sides",
-        "mobile_full_page": false,
-        "mobile_border_radius": 0,
-        "slides_mobile": 2,
-        "per_move_mobile": 1,
-        "mobile_spacing": 0,
-        "mobile_side_padding": 0,
-        "mobile_padding_calc": true,
-        "mobile_adaptive_height": false,
-        "mobile_dots_position": "hidden",
-        "mobile_arrows_position": "hidden",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#121212"
-      }
-    },
     "mosaic_gallery_tBUXFG": {
       "type": "mosaic-gallery",
       "blocks": {
@@ -678,6 +678,7 @@
   },
   "order": [
     "hero",
+    "image_slider_cgrJmQ",
     "props",
     "benefits_story",
     "testimonials_3EzwNj",
@@ -687,7 +688,6 @@
     "profile_info_section_ykCnyb",
     "testimonial_grid_section_Bk6fah",
     "collapsible_content_XGKDTp",
-    "image_slider_cgrJmQ",
     "mosaic_gallery_tBUXFG"
   ]
 }
