@@ -604,9 +604,9 @@
           "type": "testimonial",
           "settings": {
             "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
-            "name": "Sarah Chen",
-            "role": "Tech Entrepreneur, 32",
-            "review": "\"SURGE gives me that clean energy boost I need for my 6 AM workouts. No crash, just sustained focus all morning.\"",
+            "name": "Ahmed Al-Rashid",
+            "role": "Software Engineer, 29",
+            "review": "\"SURGE gives me that clean energy boost I need for my 6 AM workouts. No crash, just sustained focus all morning. Perfect for my busy schedule.\"",
             "badge_text": "SURGE USER",
             "badge_color": "#1c8e8e"
           }
@@ -615,9 +615,9 @@
           "type": "testimonial",
           "settings": {
             "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg",
-            "name": "Marcus Johnson",
-            "role": "Professional Athlete, 28",
-            "review": "\"DRIFT has completely transformed my recovery. I wake up feeling like I actually slept 8 hours instead of tossing and turning.\"",
+            "name": "Khalid Al-Sabah",
+            "role": "Fitness Trainer, 31",
+            "review": "\"DRIFT has completely transformed my recovery. I wake up feeling like I actually slept 8 hours instead of tossing and turning. My clients ask what changed!\"",
             "badge_text": "DRIFT USER",
             "badge_color": "#262b2b"
           }
@@ -626,9 +626,9 @@
           "type": "testimonial",
           "settings": {
             "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
-            "name": "Emily Rodriguez",
-            "role": "Working Mom, 35",
-            "review": "\"Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything the day throws at me.\"",
+            "name": "Fatima Hassan",
+            "role": "Working Mother, 33",
+            "review": "\"Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything the day throws at me. My energy levels are consistent all day long.\"",
             "badge_text": "SURGE USER",
             "badge_color": "#1c8e8e"
           }
@@ -637,9 +637,9 @@
           "type": "testimonial",
           "settings": {
             "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg",
-            "name": "David Park",
-            "role": "Finance Director, 41",
-            "review": "\"DRIFT helps me wind down from high-stress days. I stick it on during my evening routine and sleep like a baby.\"",
+            "name": "Dr. Omar Al-Zahra",
+            "role": "Medical Director, 38",
+            "review": "\"DRIFT helps me wind down from high-stress days. I stick it on during my evening routine and sleep like a baby. As a doctor, I appreciate the natural approach.\"",
             "badge_text": "DRIFT USER",
             "badge_color": "#262b2b"
           }

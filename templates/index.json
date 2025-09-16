@@ -124,8 +124,8 @@
           "settings": {
             "star_rating": 5,
             "title": "SURGE",
-            "text": "<p><strong>\"SURGE </strong>replaced my 3 cups of coffee — without the crash.<strong>\"</strong></p>",
-            "author": "<strong>Sarah Chen</strong>"
+            "text": "<p><strong>\"SURGE replaced my 3 cups of coffee — without the crash. As a software engineer working long hours, this gives me clean energy that lasts all day.\"</strong></p>",
+            "author": "<strong>Ahmed Al-Rashid</strong>"
           }
         },
         "column_KEniVi": {
@@ -133,8 +133,8 @@
           "settings": {
             "star_rating": 5,
             "title": "DRIFT",
-            "text": "<p>\"I fall asleep faster and wake up fresher with <strong>DRIFT.\"</strong></p>",
-            "author": "<strong>Marcus Torres</strong>"
+            "text": "<p>\"I fall asleep faster and wake up fresher with <strong>DRIFT. As a working mother of three, I finally get the rest I need without feeling groggy.\"</strong></p>",
+            "author": "<strong>Fatima Hassan</strong>"
           }
         },
         "column_BMU97e": {
@@ -142,8 +142,8 @@
           "settings": {
             "star_rating": 5,
             "title": "DRIFT",
-            "text": "<p><strong>\"Finally ditched all my pills. These patches just work.\"</strong></p>",
-            "author": "<strong>Dr. Lisa Park</strong>"
+            "text": "<p><strong>\"Finally ditched all my pills. These patches just work. Natural ingredients, no side effects, and I sleep like a baby every night.\"</strong></p>",
+            "author": "<strong>Dr. Omar Al-Zahra</strong>"
           }
         },
         "column_HxK7Yb": {
@@ -151,17 +151,17 @@
           "settings": {
             "star_rating": 5,
             "title": "SURGE",
-            "text": "<p><strong>\"Clean energy all day, perfect sleep at night. Love this system.\"</strong></p>",
-            "author": "<strong>James Wilson</strong>"
+            "text": "<p><strong>\"Clean energy all day, perfect sleep at night. Love this system. My productivity has increased dramatically since using both patches.\"</strong></p>",
+            "author": "<strong>Khalid Al-Sabah</strong>"
           }
         },
         "column_REhJax": {
           "type": "column",
           "settings": {
             "star_rating": 5,
-            "title": "Best product I’ve tried!",
-            "text": "<p>Finally, something that works with my day AND night.</p>",
-            "author": "<em><strong>Henry R.</strong></em>"
+            "title": "Best product I've tried!",
+            "text": "<p>Finally, something that works with my day AND night. As a fitness trainer, I need energy for workouts and recovery for sleep. This system delivers both perfectly.</p>",
+            "author": "<em><strong>Layla Al-Mansouri</strong></em>"
           }
         },
         "column_fAANed": {
@@ -169,8 +169,8 @@
           "settings": {
             "star_rating": 5,
             "title": "Absolutely love this product!",
-            "text": "<p>Drift helps me unwind after a long day. I feel more calm and relaxed without feeling groggy in the morning. This is exactly what I needed!</p>",
-            "author": "<em><strong>Nancy M.</strong></em>"
+            "text": "<p>DRIFT helps me unwind after a long day. I feel more calm and relaxed without feeling groggy in the morning. This is exactly what I needed! My husband even noticed how much more patient I am now.</p>",
+            "author": "<em><strong>Nour Al-Din</strong></em>"
           }
         }
       },
@@ -430,9 +430,9 @@
           "type": "testimonial",
           "settings": {
             "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
-            "name": "Sarah Chen",
-            "role": "Tech Entrepreneur, 32",
-            "review": "\"SURGE gives me that clean energy boost I need for my 6 AM workouts. No crash, just sustained focus all morning.\"",
+            "name": "Ahmed Al-Rashid",
+            "role": "Software Engineer, 29",
+            "review": "\"SURGE gives me that clean energy boost I need for my 6 AM workouts. No crash, just sustained focus all morning. Perfect for my busy schedule.\"",
             "badge_text": "SURGE USER",
             "badge_color": "#1c8e8e"
           }
@@ -441,9 +441,9 @@
           "type": "testimonial",
           "settings": {
             "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg",
-            "name": "Marcus Johnson",
-            "role": "Professional Athlete, 28",
-            "review": "\"DRIFT has completely transformed my recovery. I wake up feeling like I actually slept 8 hours instead of tossing and turning.\"",
+            "name": "Khalid Al-Sabah",
+            "role": "Fitness Trainer, 31",
+            "review": "\"DRIFT has completely transformed my recovery. I wake up feeling like I actually slept 8 hours instead of tossing and turning. My clients ask what changed!\"",
             "badge_text": "DRIFT USER",
             "badge_color": "#262b2b"
           }
@@ -452,9 +452,9 @@
           "type": "testimonial",
           "settings": {
             "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
-            "name": "Emily Rodriguez",
-            "role": "Working Mom, 35",
-            "review": "\"Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything the day throws at me.\"",
+            "name": "Fatima Hassan",
+            "role": "Working Mother, 33",
+            "review": "\"Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything the day throws at me. My energy levels are consistent all day long.\"",
             "badge_text": "SURGE USER",
             "badge_color": "#1c8e8e"
           }
@@ -463,9 +463,9 @@
           "type": "testimonial",
           "settings": {
             "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg",
-            "name": "David Park",
-            "role": "Finance Director, 41",
-            "review": "\"DRIFT helps me wind down from high-stress days. I stick it on during my evening routine and sleep like a baby.\"",
+            "name": "Dr. Omar Al-Zahra",
+            "role": "Medical Director, 38",
+            "review": "\"DRIFT helps me wind down from high-stress days. I stick it on during my evening routine and sleep like a baby. As a doctor, I appreciate the natural approach.\"",
             "badge_text": "DRIFT USER",
             "badge_color": "#262b2b"
           }
