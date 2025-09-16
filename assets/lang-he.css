@@ -46,6 +46,16 @@ html:lang(he) .cta {
 [dir='rtl'] select {
   text-align: start;
 }
+
+/* Ensure Inter font is used in footer even for Hebrew */
+html:lang(he) .footer .footer__newsletter .button,
+html:lang(he) .footer .footer-block--menu .list-menu__item,
+html:lang(he) .footer .footer-block__brand-info .rte > *,
+html:lang(he) .footer .newsletter-form__field-wrapper .field__label,
+html:lang(he) .footer_tag,
+html:lang(he) .footer .footer__copyright .copyright__content {
+  font-family: 'Inter', 'HeeboLocal', system-ui, sans-serif !important;
+}
 /* Optional Hebrew webfont
 @font-face {
   font-family: 'YourHebrewFont';
