@@ -30,102 +30,38 @@
       }
     },
     "image_slider_cgrJmQ": {
-      "type": "image-slider",
+      "type": "static-image-grid",
       "blocks": {
-        "image_slide_3aWT3r": {
+        "image_slide_1": {
           "type": "image_slide",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_5px7xn5px7xn5px7.png",
             "link": "",
             "description": "",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
           }
         },
-        "video_slide_yFkmer": {
-          "type": "video_slide",
-          "settings": {
-            "video": "shopify://files/videos/_project_title_surge_202509150016.mp4",
-            "loop": true,
-            "muted_autoplay": true,
-            "display_play_btn": true,
-            "btn_animation": false,
-            "btn_color_scheme": "accent-1",
-            "display_sound_btn": false,
-            "sound_btn_color_scheme": "inverse",
-            "display_timeline": false,
-            "timeline_color": "accent-1",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "image_slide_L9J9qL": {
+        "image_slide_2": {
           "type": "image_slide",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_a5389ja5389ja538.png",
             "link": "",
             "description": "",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
           }
         },
-        "video_slide_VWWYmU": {
-          "type": "video_slide",
-          "settings": {
-            "video": "shopify://files/videos/_project_title_surge_202509150018.mp4",
-            "loop": true,
-            "muted_autoplay": true,
-            "display_play_btn": true,
-            "btn_animation": false,
-            "btn_color_scheme": "accent-1",
-            "display_sound_btn": false,
-            "sound_btn_color_scheme": "inverse",
-            "display_timeline": false,
-            "timeline_color": "accent-1",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "image_slide_xdhAUN": {
+        "image_slide_3": {
           "type": "image_slide",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_bpjq36bpjq36bpjq.png",
             "link": "",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "video_slide_ir7LVR": {
-          "type": "video_slide",
-          "settings": {
-            "video": "shopify://files/videos/Json__project_title_202509150011.mp4",
-            "loop": true,
-            "muted_autoplay": true,
-            "display_play_btn": true,
-            "btn_animation": false,
-            "btn_color_scheme": "accent-1",
-            "display_sound_btn": false,
-            "sound_btn_color_scheme": "inverse",
-            "display_timeline": false,
-            "timeline_color": "accent-1",
             "description": "",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
           }
         }
       },
-      "block_order": [
-        "image_slide_3aWT3r",
-        "video_slide_yFkmer",
-        "image_slide_L9J9qL",
-        "video_slide_VWWYmU",
-        "image_slide_xdhAUN",
-        "video_slide_ir7LVR"
-      ],
-      "name": "Image/Video Slider",
+      "block_order": ["image_slide_1", "image_slide_2", "image_slide_3"],
+      "name": "Static Image Grid",
       "settings": {
         "display_id": false,
         "visibility": "always-display",
