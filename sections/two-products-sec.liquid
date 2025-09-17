@@ -66,11 +66,11 @@
             {% endif %}
                 <div class="tps_product_img" style="background: {{ block.settings.pro_img_bg_color }}">
                     {% if block.settings.pro_img != blank %}
-                        {{ block.settings.pro_img | image_url: width: 500 | image_tag: style: 'max-width: 100%; height: auto; object-fit: contain; display: block;' }}
+                        {{ block.settings.pro_img | image_url: width: 250, height: 300 | image_tag }}
                     {% elsif block.settings.pro_img_title != blank %}
                         {{ block.settings.pro_img_title }}
                     {% else %}
-                        {{ product.featured_media | image_url: width: 200, height: 200 | image_tag  }}
+                        {{ product.featured_media | image_url: width: 250, height: 300 | image_tag  }}
                     {% endif %}
                 </div>
                 <div class="tps_product_title">
@@ -85,11 +85,12 @@
                 </div>
                 <div class="tps_btn_wrapper">
                     <div class="add_cart_btn">
-                {% form 'product', product %}
+                        <a href="{{ block.settings.atc_btn_link }}"><button class="tps_btn">{{ block.settings.atc_btn }}</button></a>
+                {% comment %} {% form 'product', product %}
                   <input type="hidden" value="1" name="quantity">
                   <input type="hidden" value="{{ product.selected_or_first_available_variant.id }}" name="id">
                 <button class="tps_btn {% if block.settings.show_btn_outline == true %}tps_btn2{% endif %}" type="submit">{{ block.settings.atc_btn }}</button>
-                {% endform %}
+                {% endform %} {% endcomment %}
                 </div>
                 </div>
             </div>
@@ -132,10 +133,6 @@
     text-align: center;
     flex: 1;
     position: relative;
-    transition: all 0.3s ease;
-    &:hover {
-        transform: translateY(-2px);
-    }
 }
 
 /* Adjust padding for split screen on desktop */
@@ -148,8 +145,11 @@
 
 .tps_product_img {
     width: fit-content;
-    margin: 0 auto 2rem auto;
-    max-width: 320px;
+    margin: 0 auto;
+    max-width: 250px;
+    max-height: 300px;
+    min-width: 250px;
+    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,30 +161,14 @@
     color: #fff;
     font-size: 30px;
     letter-spacing: 2px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    &:before{
+    {% comment %} &:before{
         box-shadow: 0 0 20px 0px #00000047;
         content: '';
         position: absolute;
         height: 100%;
         width: 100%;
         border-radius: 20px;
-        transition: box-shadow 0.3s ease;
-    }
-    &:hover {
-        transform: translateY(-5px) scale(1.02);
-        &:before {
-            box-shadow: 0 10px 30px 0px #00000060;
-        }
-    }
-}
-
-.tps_product_img img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 20px;
-    display: block;
+    } {% endcomment %}
 }
 
 .product_title {
@@ -197,14 +181,12 @@
 
 .tps_product_title {
     max-width: 350px;
-    margin: 0 auto 1.5rem auto;
-    transition: all 0.3s ease;
+    margin: 0 auto;
 }
 
 .tps_pro_desc {
     max-width: 420px;
-    margin: 0 auto 2rem auto;
-    transition: all 0.3s ease;
+    margin: 0 auto;
 }
 
 .tps_pro_desc > * {
@@ -660,17 +642,12 @@
                 {
                     "type": "text",
                     "id": "atc_btn",
-                    "label": "ATC button label"
-                },
-                {
-                    "type": "text",
-                    "id": "btn_text2",
-                    "label": "Button 2 label"
+                    "label": "Button Label"
                 },
                 {
                     "type": "url",
-                    "id": "btn_url2",
-                    "label": "Button 2 url"
+                    "id": "atc_btn_link",
+                    "label": "Link"
                 },
                 {
                     "type": "checkbox",

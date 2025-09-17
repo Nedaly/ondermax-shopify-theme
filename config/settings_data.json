@@ -34,7 +34,7 @@
     "type_body_font": "montserrat_n4",
     "body_scale": 110,
     "enable_rtl": false,
-    "rtl_enabled_languages": "ar,he",
+    "rtl_enabled_languages": "arabic",
     "display_store_languages": false,
     "enable_load_animations": true,
     "repeat_section_animations": false,

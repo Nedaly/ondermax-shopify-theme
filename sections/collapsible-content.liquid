@@ -219,11 +219,8 @@
     </div>
     {% endif %}
     {% if section.settings.btn_url %}
-    <div class="text-center faq_btn_outer" style="margin-bottom: 3rem;">
-    <a href="{{ section.settings.btn_url }}" class="btn btn-teal faq-btn-large" data-hero-cta="faq">
-      <span class="shimmer"></span>
-      {{ section.settings.btn }}
-    </a>
+    <div class="text-center faq_btn_outer">
+    <a href="{{ section.settings.btn_url }}" class="new-btn buttons">{{ section.settings.btn }}</a>
     </div>
       {% endif %}
   </div>

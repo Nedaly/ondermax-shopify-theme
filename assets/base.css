@@ -14360,7 +14360,7 @@ h2 + .trustpilot-stars {
     column-gap: 3rem;
     row-gap: 3rem;
   }
-  .icon-with-content__icons--desktop-2-columns ..icons-with-text__icon-item {
+  .icon-with-content__icons--desktop-2-columns .icons-with-text__icon-item {
     margin-bottom: 0;
   }
 }
@@ -17707,7 +17707,6 @@ nav.header__inline-menu {
   .footer .footer-block--newsletter .footer-block__heading {
     margin-bottom: 1rem;
   }
-}
 
 .footer .footer-block__brand-info .rte > * {
   font-family: Inter;
@@ -17853,6 +17852,18 @@ cart-items .title,
   font-size: 60px;
   font-weight: 600;
 }
+.new-btn.atc-button{
+  min-height: 55px;
+}
+a.new-btn.buttons{
+  padding: 1.6rem 2.8rem;
+}
+a.new-btn.buttons:hover{
+  text-decoration: none;
+}
+.product__text-container{
+    padding-top: 20px;
+}
 @media screen and (max-width: 989px) {
   nav.header__inline-menu,
   .header__heading {
@@ -17876,6 +17887,9 @@ cart-items .title,
   }
   .testimonial .multicolumn-card__info p {
     color: #fff;
+  }
+  header.header.header--middle-left.header--mobile-center{
+    display: grid;
   }
 }
 @media screen and (max-width: 767px) {

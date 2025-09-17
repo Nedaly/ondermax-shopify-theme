@@ -1701,7 +1701,7 @@
   .menu-drawer-container,
   details#Details-menu-drawer-container {
     position: static !important;
-    width: 100vw !important;
+    /* width: 100vw !important; */
     max-width: none !important;
     overflow: visible !important;
   }

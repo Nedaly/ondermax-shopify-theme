@@ -1189,7 +1189,7 @@ cart-remove-button .button {
     .collapsible-content__grid:not(.collapsible-content__grid--reverse)
       .grid__item:last-child,
     .collapsible-content__grid--reverse .collapsible-content__grid-item {
-      padding-rigth: 5rem;
+      padding-right: 5rem;
       padding-left: 0;
     }
   }
@@ -1197,7 +1197,7 @@ cart-remove-button .button {
     .collapsible-content__grid:not(.collapsible-content__grid--reverse)
       .grid__item:last-child,
     .collapsible-content__grid--reverse .collapsible-content__grid-item {
-      padding-rigth: 7rem;
+      padding-right: 7rem;
     }
   }
 }
