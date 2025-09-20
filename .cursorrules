@@ -1,0 +1,221 @@
+# Ondermax Shopify Theme Development Rules
+
+## 🎯 Project Overview
+This is a Shopify theme for Ondermax, a health and wellness brand specializing in energy patches and sleep solutions. The theme supports multiple languages (English, Arabic, Hebrew) with RTL support.
+
+## 🏗️ Architecture & Structure
+
+### Theme Structure
+- **Sections**: `sections/` - Reusable theme sections
+- **Templates**: `templates/` - Page templates (product, collection, etc.)
+- **Snippets**: `snippets/` - Reusable code snippets
+- **Assets**: `assets/` - CSS, JS, images, fonts
+- **Locales**: `locales/` - Translation files
+- **Layout**: `layout/` - Theme layout files
+
+### Key Files
+- `assets/base.css` - Main stylesheet
+- `assets/ondermax.css` - Brand-specific styles
+- `sections/header-group.json` - Header configuration
+- `sections/announcement-bar.liquid` - Announcement bar
+- `locales/ar.json` - Arabic translations
+- `locales/he.json` - Hebrew translations
+
+## 🎨 Design System
+
+### Brand Colors
+- **Primary**: #1c8e8e (Teal)
+- **Secondary**: #067e7c (Dark Teal)
+- **Accent**: #2d9cdb (Blue)
+- **Text**: #121212 (Dark Gray)
+- **Background**: #ffffff (White)
+
+### Typography
+- **Primary Font**: Poppins (English)
+- **Arabic Font**: PlexArabic (Arabic)
+- **Hebrew Font**: HeeboLocal (Hebrew)
+- **Fallback**: system-ui, sans-serif
+
+### Button Styles
+- **Primary**: Teal background, white text, 2rem padding
+- **Secondary**: White background, teal text, 2px border
+- **Height**: 60px for consistency
+
+## 🌍 Internationalization (i18n)
+
+### Supported Languages
+- **English** (en.default.json) - Default
+- **Arabic** (ar.json) - RTL support
+- **Hebrew** (he.json) - RTL support
+
+### RTL Support
+- Use `[dir='rtl']` selectors for RTL-specific styles
+- Arabic and Hebrew have dedicated CSS files (`lang-ar.css`, `lang-he.css`)
+- Font fallbacks are language-specific
+
+### Translation Keys
+- Use descriptive keys: `announcements.free_shipping`
+- Avoid hardcoded text in templates
+- Always provide fallbacks
+
+## 🚀 Theme Rotation Strategy
+
+### Naming Convention
+```
+ondermax-shopify-theme-{environment}-{version}
+```
+
+### Environments
+- **production**: Live theme for customers
+- **staging**: Pre-production testing  
+- **develop**: Development environment
+- **feature**: Feature branch themes
+
+### Development Workflow
+1. **Create theme**: `./scripts/theme-rotation.sh create feature v1.2.5`
+2. **Develop**: `shopify theme dev --theme "ondermax-shopify-theme-feature-{branch}-v1.2.5"`
+3. **Test**: Verify changes work correctly
+4. **Clean up**: `./scripts/theme-rotation.sh delete feature v1.2.5`
+
+### Safety Rules
+- ✅ Always create new themes for development
+- ✅ Use version numbers for tracking
+- ✅ Test on staging before production
+- ❌ Never overwrite production themes
+- ❌ Don't use generic names like "test"
+
+## 📝 Code Standards
+
+### CSS Guidelines
+- Use BEM methodology for class naming
+- Mobile-first responsive design
+- Use CSS custom properties for theming
+- Include RTL support where needed
+
+### Liquid Guidelines
+- Use semantic HTML5 elements
+- Include proper accessibility attributes
+- Use translation filters (`| t`) for all text
+- Validate with Shopify's theme-check
+
+### JavaScript Guidelines
+- Use modern ES6+ syntax
+- Include error handling
+- Optimize for performance
+- Test across browsers
+
+## 🧪 Testing Requirements
+
+### Before Deployment
+- [ ] Test on mobile devices
+- [ ] Verify RTL languages (Arabic/Hebrew)
+- [ ] Check announcement bar autoplay
+- [ ] Validate button styling
+- [ ] Test subscription functionality
+- [ ] Run theme-check for errors
+
+### Cross-Browser Testing
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
+
+## 🔧 Development Tools
+
+### Required Tools
+- **Shopify CLI**: For theme development
+- **Git**: Version control
+- **Node.js**: For build tools
+- **Prettier**: Code formatting
+- **Husky**: Git hooks
+
+### Scripts
+- `./scripts/theme-rotation.sh` - Theme management
+- `npm run format` - Format code
+- `npm run lint` - Lint code
+- `npm run test` - Run tests
+
+## 📊 Performance Standards
+
+### Lighthouse Scores
+- **Performance**: >90
+- **Accessibility**: >95
+- **Best Practices**: >90
+- **SEO**: >95
+
+### Optimization
+- Minimize CSS/JS bundles
+- Optimize images (WebP format)
+- Use lazy loading for images
+- Implement critical CSS
+
+## 🚨 Emergency Procedures
+
+### Rollback Process
+1. List current themes: `./scripts/theme-rotation.sh list`
+2. Publish previous version: `shopify theme publish --theme "ondermax-shopify-theme-production-v1.2.1"`
+3. Verify rollback worked
+4. Document the issue
+
+### Hotfix Process
+1. Create hotfix theme: `./scripts/theme-rotation.sh create production v1.2.2-hotfix`
+2. Apply emergency fix
+3. Deploy: `shopify theme push --theme "ondermax-shopify-theme-production-v1.2.2-hotfix"`
+4. Publish: `shopify theme publish --theme "ondermax-shopify-theme-production-v1.2.2-hotfix"`
+
+## 📋 Commit Standards
+
+### Commit Message Format
+```
+type(scope): description
+
+- Bullet point for changes
+- Include CSV-ID for tracking
+
+CSV-ID: Brief description for tracking
+```
+
+### Types
+- **feat**: New features
+- **fix**: Bug fixes
+- **style**: CSS/styling changes
+- **refactor**: Code refactoring
+- **docs**: Documentation updates
+- **test**: Test additions/changes
+
+### Examples
+```
+feat(buttons): apply Taha's button styling enhancements
+
+- Enhanced .new-btn.buttons with improved padding (2rem 2.5rem)
+- Added font-size: 21px for better readability
+- Added white border (2px solid #fff) for better visibility
+
+CSV-ID: Button styling improvements from Taha's changes
+```
+
+## 🎯 Business Context
+
+### Product Focus
+- **SURGE**: Day energy patches
+- **DRIFT**: Night sleep patches
+- **Bundles**: Combined day/night solutions
+
+### Key Features
+- Subscription functionality
+- Bundle & save options
+- Multilingual support
+- Mobile-optimized design
+- Trust signals (doctor developed, backed by science)
+
+### Conversion Optimization
+- Clear CTAs with proper styling
+- Trust badges and guarantees
+- Social proof elements
+- Optimized checkout flow
+
+---
+
+**Last Updated**: September 20, 2025  
+**Version**: 2.0.0
