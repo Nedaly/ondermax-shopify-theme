@@ -49,16 +49,6 @@ html:lang(ar) .cta {
 [dir='rtl'] select {
   text-align: start;
 }
-
-/* Ensure Inter font is used in footer even for Arabic */
-html:lang(ar) .footer .footer__newsletter .button,
-html:lang(ar) .footer .footer-block--menu .list-menu__item,
-html:lang(ar) .footer .footer-block__brand-info .rte > *,
-html:lang(ar) .footer .newsletter-form__field-wrapper .field__label,
-html:lang(ar) .footer_tag,
-html:lang(ar) .footer .footer__copyright .copyright__content {
-  font-family: 'Inter', 'PlexArabic', Cairo, system-ui, sans-serif !important;
-}
 /* Optional Arabic webfont
 @font-face {
   font-family: 'YourArabicFont';

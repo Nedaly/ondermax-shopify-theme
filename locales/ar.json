@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "products": {
     "product": {
@@ -14,10 +23,5 @@
     "trust_row_1": "دفع آمن",
     "trust_row_2": "استرجاع خلال 30 يوماً"
   },
-  "pdp": { "benefits_title": "ليش رح تحس بالفرق" },
-  "announcements": {
-    "free_shipping": "🚚 شحن مجاني",
-    "guarantee": "🔒 ضمان 30 يوم",
-    "motivational": "تحكم في 24 ساعة من يومك"
-  }
+  "pdp": { "benefits_title": "ليش رح تحس بالفرق" }
 }
