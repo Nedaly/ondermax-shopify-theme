@@ -513,6 +513,11 @@
       "print_gift_card": "Print"
     }
   },
+  "announcements": {
+    "free_shipping": "🚚 Free shipping",
+    "guarantee": "🔒 30-day guarantee",
+    "motivational": "Take Control of Your 24 Hours"
+  },
   "shopify": {
     "checkout": {
       "contact": {

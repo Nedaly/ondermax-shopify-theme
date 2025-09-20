@@ -75,7 +75,7 @@
         "sections--21450414096679__fe1c8c67-b84c-4466-a515-70df3134c1c0-announcement-1": {
           "type": "announcement",
           "settings": {
-            "text": "🚚 Free shipping",
+            "text": "{{ 'announcements.free_shipping' | t }}",
             "text_alignment": "center",
             "mobile_text_size": 10,
             "desktop_text_size": 12,
@@ -94,7 +94,7 @@
         "announcement_QpeNQQ": {
           "type": "announcement",
           "settings": {
-            "text": "🔒 30-day guarantee",
+            "text": "{{ 'announcements.guarantee' | t }}",
             "text_alignment": "center",
             "mobile_text_size": 10,
             "desktop_text_size": 12,
@@ -113,7 +113,7 @@
         "announcement_JYxgwz": {
           "type": "announcement",
           "settings": {
-            "text": "Take Control of Your 24 Hours",
+            "text": "{{ 'announcements.motivational' | t }}",
             "text_alignment": "center",
             "mobile_text_size": 10,
             "desktop_text_size": 12,
