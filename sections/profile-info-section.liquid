@@ -161,7 +161,7 @@
     .pir_tag {
         letter-spacing: 0;
         font-family: 'Poppins';
-        font-size: 20px;
+        font-size: 16px;
         color: #cfcfcf;
         position: relative;
         &:before{
@@ -191,7 +191,13 @@
         width: 100%;
         height: 100%;
     }
-
+    .pir_about {
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .pir_about p{
+        text-align: center;
+    }
     @media screen and (min-width: 750px){
         .padding-{{ section.id }}{
             padding-top:{{ section.settings.p_top }}px;
@@ -228,7 +234,7 @@
         font-size: 45px;
     }
     .profile_info .pir_tag{
-        font-size: 22px;
+        font-size: 18px;
     }
 }
 @media screen and ( max-width: 767px ){
