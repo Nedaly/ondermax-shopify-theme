@@ -75,7 +75,7 @@
         "sections--21450414096679__fe1c8c67-b84c-4466-a515-70df3134c1c0-announcement-1": {
           "type": "announcement",
           "settings": {
-            "text": "🚚 Free shipping · 🔒 30-day guarantee",
+            "text": "🚚 Free shipping",
             "text_alignment": "center",
             "mobile_text_size": 10,
             "desktop_text_size": 12,
@@ -94,7 +94,26 @@
         "announcement_QpeNQQ": {
           "type": "announcement",
           "settings": {
-            "text": "🚚 Free shipping · 🔒 30-day guarantee",
+            "text": "🔒 30-day guarantee",
+            "text_alignment": "center",
+            "mobile_text_size": 10,
+            "desktop_text_size": 12,
+            "icons": "",
+            "icon": "",
+            "filled_icon": false,
+            "mobile_icon_size": 20,
+            "desktop_icon_size": 26,
+            "desktop_layout": "horizontal",
+            "mobile_layout": "horizontal",
+            "hidden_products": "",
+            "enable_specific_display": false,
+            "displayed_products": ""
+          }
+        },
+        "announcement_JYxgwz": {
+          "type": "announcement",
+          "settings": {
+            "text": "Take Control of Your 24 Hours",
             "text_alignment": "center",
             "mobile_text_size": 10,
             "desktop_text_size": 12,
@@ -113,7 +132,8 @@
       },
       "block_order": [
         "sections--21450414096679__fe1c8c67-b84c-4466-a515-70df3134c1c0-announcement-1",
-        "announcement_QpeNQQ"
+        "announcement_QpeNQQ",
+        "announcement_JYxgwz"
       ],
       "settings": {
         "visibility": "always-display",
@@ -126,8 +146,8 @@
         "slider_mobile": true,
         "slider_desktop": true,
         "type": "loop",
-        "autoplay": false,
-        "autoplay_speed": 3,
+        "autoplay": true,
+        "autoplay_speed": 3.5,
         "hidden_products": "",
         "enable_specific_display": false,
         "displayed_products": "",
@@ -151,8 +171,8 @@
         "logo_position": "middle-left",
         "menu": "new-menu",
         "menu_type_desktop": "dropdown",
-        "new-button": "Shop Now",
-        "btn_link": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+        "new-button": "Shop The Stack",
+        "btn_link": "shopify://products/high-energy-stack",
         "highlight_active_link": false,
         "highlighted_link_color_scheme": "accent-1",
         "products_mega_menu_links": "",
