@@ -55,7 +55,7 @@ generate_theme_name() {
 list_themes() {
     log_info "Listing all themes for store: ${STORE}"
     echo
-    shopify theme list --store "${STORE}" | grep -E "${BASE_NAME}" || log_warning "No themes found matching pattern"
+    shopify theme list | grep -E "${BASE_NAME}" || log_warning "No themes found matching pattern"
 }
 
 # Create new theme
@@ -69,13 +69,13 @@ create_theme() {
     log_info "Creating new theme: ${theme_name}"
     
     # Check if theme already exists
-    if shopify theme list --store "${STORE}" | grep -q "${theme_name}"; then
+    if shopify theme list | grep -q "${theme_name}"; then
         log_error "Theme ${theme_name} already exists!"
         exit 1
     fi
     
-    # Create theme
-    shopify theme init "${theme_name}" --store "${STORE}"
+    # Create theme by pushing current local files
+    shopify theme push --theme "${theme_name}" --unpublished
     
     log_success "Theme created: ${theme_name}"
     log_info "You can now work on this theme safely without affecting production"
@@ -94,7 +94,7 @@ delete_theme() {
     
     if [[ "$confirmation" == "yes" ]]; then
         log_info "Deleting theme: ${theme_name}"
-        shopify theme delete --store "${STORE}" --theme "${theme_name}"
+        shopify theme delete --theme "${theme_name}"
         log_success "Theme deleted: ${theme_name}"
     else
         log_info "Deletion cancelled"
