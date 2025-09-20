@@ -17813,17 +17813,26 @@ cart-items .title,
   font-size: 60px;
   font-weight: 600;
 }
-.new-btn.atc-button{
+.new-btn.atc-button {
   min-height: 60px;
 }
-a.new-btn.buttons{
-  padding: 1.8rem 2.8rem;
+a.new-btn.buttons {
+  padding: 2rem 2.5rem !important;
+  font-size: 21px !important;
+  border: 2px solid #fff;
 }
-a.new-btn.buttons:hover{
+a.new-btn.buttons:hover {
   text-decoration: none;
 }
-.product__text-container{
-    padding-top: 20px;
+.product__text-container {
+  padding-top: 20px;
+}
+.collapsible-content {
+  margin-bottom: 4rem !important;
+}
+button#Subscribe,
+.contact__button .new-btn {
+  height: 60px;
 }
 @media screen and (max-width: 989px) {
   nav.header__inline-menu,
@@ -17849,7 +17858,7 @@ a.new-btn.buttons:hover{
   .testimonial .multicolumn-card__info p {
     color: #fff;
   }
-  header.header.header--middle-left.header--mobile-center{
+  header.header.header--middle-left.header--mobile-center {
     display: grid;
   }
 }
