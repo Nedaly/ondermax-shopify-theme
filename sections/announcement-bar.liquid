@@ -307,7 +307,15 @@
                                 {% elsif block.settings.icon != blank %}
                                   {% render 'material-icon', icon: block.settings.icon, filled: block.settings.filled_icon %}
                                 {% endif %}
-                                <span>{{ block.settings.text }}</span>
+                                <span>
+                                  {%- liquid
+                                    assign announcement_text = block.settings.text
+                                    if announcement_text contains 'announcements.'
+                                      assign announcement_text = announcement_text | t
+                                    endif
+                                  -%}
+                                  {{ announcement_text }}
+                                </span>
                               </p>
                             {%- endif -%}
                           {% when 'discount' %}
