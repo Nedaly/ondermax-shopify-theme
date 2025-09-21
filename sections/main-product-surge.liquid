@@ -130,7 +130,7 @@
               </div>
             {% when 'rating_stars' %}
               {%- comment -%} Judge.me reviews - only show if real reviews exist {%- endcomment -%}
-              {%- if shop.metafields.judgeme and product.metafields.judgeme.review_count | default: 0 > 0 -%}
+              {%- if shop.metafields.judgeme and product.metafields.judgeme.review_count > 0 -%}
                 <div class="product__rating" {{ block.shopify_attributes }}>
                   {%- render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product -%}
                 </div>
