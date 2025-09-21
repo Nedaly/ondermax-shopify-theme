@@ -215,70 +215,42 @@
       }
     },
     "icon_with_text_blocks": {
-      "type": "icon-with-text-blocks",
+      "type": "multicolumn",
       "blocks": {
         "surge_ingredient_1": {
-          "type": "icon_with_text",
+          "type": "column",
           "settings": {
-            "icon": "bolt",
-            "filled_icon": false,
-            "icon_size": "xl",
-            "icon_position": "next-to-title",
-            "icon_color": "background-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
             "title": "SURGE: NAD+",
             "text": "<p>Essential coenzyme that supports cellular energy production and helps combat fatigue naturally.</p>",
-            "margin_top": 20,
-            "margin_bottom": 30
+            "link_label": "",
+            "link": ""
           }
         },
         "surge_ingredient_2": {
-          "type": "icon_with_text",
+          "type": "column",
           "settings": {
-            "icon": "metabolism",
-            "filled_icon": false,
-            "icon_size": "xl",
-            "icon_position": "next-to-title",
-            "icon_color": "background-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
             "title": "SURGE: Creatine",
             "text": "<p>Supports muscle energy and cognitive function for sustained performance throughout the day.</p>",
-            "margin_top": 20,
-            "margin_bottom": 30
+            "link_label": "",
+            "link": ""
           }
         },
         "drift_ingredient_1": {
-          "type": "icon_with_text",
+          "type": "column",
           "settings": {
-            "icon": "bedtime",
-            "filled_icon": false,
-            "icon_size": "xl",
-            "icon_position": "next-to-title",
-            "icon_color": "background-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
             "title": "DRIFT: Melatonin",
             "text": "<p>Natural sleep hormone that helps regulate your circadian rhythm for deeper, more restful sleep.</p>",
-            "margin_top": 20,
-            "margin_bottom": 30
+            "link_label": "",
+            "link": ""
           }
         },
         "drift_ingredient_2": {
-          "type": "icon_with_text",
+          "type": "column",
           "settings": {
-            "icon": "relax",
-            "filled_icon": false,
-            "icon_size": "xl",
-            "icon_position": "next-to-title",
-            "icon_color": "background-1",
-            "icon_heading_size": "h3",
-            "icon_text_alignment": "left",
             "title": "DRIFT: Magnesium",
             "text": "<p>Essential mineral that helps relax muscles and calm the nervous system for better sleep quality.</p>",
-            "margin_top": 20,
-            "margin_bottom": 30
+            "link_label": "",
+            "link": ""
           }
         }
       },
@@ -289,9 +261,55 @@
         "drift_ingredient_2"
       ],
       "settings": {
-        "heading": "Complete Day & Night Formula",
-        "subheading": "SURGE for energy, DRIFT for rest. Premium ingredients for optimal performance and recovery.",
+        "title": "Complete Day & Night Formula",
+        "title_highlight_color": "#1c8e8e",
+        "heading_size": "h1",
+        "button_label": "",
+        "button_link": "",
+        "atc_button_label": "",
+        "atc_product": "",
+        "atc_skip_cart": false,
         "color_scheme": "background-1",
+        "cards_color_scheme": "background-1",
+        "cards_corner_radius": 20,
+        "stretch_cards": false,
+        "stretched_cards_content_alignment": "center",
+        "image_width": "third",
+        "image_ratio": "square",
+        "media_position": "top",
+        "column_alignment": "center",
+        "desktop_heading_size": 20,
+        "mobile_heading_size": 22,
+        "desktop_text_size": 16,
+        "mobile_text_size": 15,
+        "desktop_text_top_margin": 10,
+        "mobile_text_top_margin": 10,
+        "desktop_container_padding_y": 24,
+        "desktop_container_padding_x": 24,
+        "mobile_container_padding_y": 24,
+        "mobile_container_padding_x": 24,
+        "type": "slide",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": true,
+        "dots_color_scheme": "inverse",
+        "desktop_full_page": false,
+        "columns_desktop": 4,
+        "slider_desktop": false,
+        "per_move_desktop": 1,
+        "desktop_spacing": 40,
+        "desktop_side_padding": 0,
+        "desktop_padding_calc": true,
+        "desktop_adaptive_height": false,
+        "desktop_dots_position": "under",
+        "desktop_arrows_position": "sides",
+        "columns_mobile": "1",
+        "slider_mobile": true,
+        "enable_mobile_preview": false,
+        "mobile_adaptive_height": false,
+        "mobile_dots_position": "under",
+        "mobile_arrows_position": "under",
         "padding_top": 36,
         "padding_bottom": 36
       }
