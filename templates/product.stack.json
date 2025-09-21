@@ -1,0 +1,443 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-stack",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "text_size": "h1",
+            "title_alignment": "left",
+            "uppercase_title": false,
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "layout": "price_first",
+            "price_color": "accent-1",
+            "compare_price_color": "text",
+            "displayed_badge": "custom",
+            "icon_scale": 140,
+            "custom_badge_text": "🔥 SAVE 15% TODAY",
+            "icon_1": "redeem",
+            "filled_icon_1": false,
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "margin_top": 9,
+            "margin_bottom": 15
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "margin_top": 12,
+            "margin_bottom": 24
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "skip_cart": false,
+            "uppercase_text": true,
+            "icon_scale": 120,
+            "icon_spacing": 10,
+            "atc_custom_label": "",
+            "display_price": false,
+            "enable_custom_color": false,
+            "custom_color": "#53af01",
+            "enable_secondary_btn": false,
+            "secondary_btn_label": "Buy It Now",
+            "secondary_btn_enable_custom_color": false,
+            "secondary_btn_custom_color": "#dd1d1d",
+            "margin_top": 39,
+            "margin_bottom": 39
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky_atc",
+          "settings": {
+            "function": "add_to_cart",
+            "display_when": "after_scroll",
+            "button_label": "ADD BOTH",
+            "enable_custom_btn_color": false,
+            "custom_btn_color": "#dd1d1d",
+            "color_scheme": "background-1",
+            "star_color": "#ffcc00",
+            "stars_label": "",
+            "picker_type": "combined",
+            "desktop_show_image": true,
+            "desktop_show_title": true,
+            "desktop_rating_stars": false,
+            "desktop_show_price": true,
+            "desktop_show_sale_badge": true,
+            "desktop_variant_picker": true,
+            "desktop_full_button_width": false,
+            "desktop_show_price_in_button": false,
+            "desktop_transparent_bg": false,
+            "mobile_show_image": false,
+            "mobile_show_title": true,
+            "mobile_rating_stars": false,
+            "mobile_show_price": true,
+            "mobile_show_sale_badge": false,
+            "mobile_variant_picker": false,
+            "mobile_full_button_width": false,
+            "mobile_show_price_in_button": false,
+            "mobile_transparent_bg": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "sticky_atc"
+      ],
+      "settings": {
+        "display_id": false,
+        "enable_sticky_info": true,
+        "display_variant_image_first": false,
+        "disable_prepend": true,
+        "hide_variants": false,
+        "variant_image_filtering": "none",
+        "image_zoom": "none",
+        "thumbnails_ratio": "square",
+        "arrows_color_scheme": "accent-1",
+        "transparent_arrows": false,
+        "dots_color_scheme": "inverse",
+        "video_player": "play_btn",
+        "enable_video_looping": false,
+        "autoplay_videos_pause_btn": false,
+        "video_sound_btn": false,
+        "video_timeline": false,
+        "play_btn_color_scheme": "accent-1",
+        "sound_btn_color_scheme": "inverse",
+        "timeline_color": "accent-1",
+        "media_size": "medium",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "desktop_thumbnails_position": "bottom",
+        "desktop_thumbnails_count": 5,
+        "desktop_vertical_thumbnails_width": 16,
+        "desktop_vertical_thumbnails_hide_arrows": false,
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "desktop_arrows_position": "hidden",
+        "mobile_media_corner_radius": 0,
+        "mobile_spacing_pixels": 0,
+        "mobile_arrows_position": "sides",
+        "mobile_pagination": "dots_overlay",
+        "mobile_thumbnails_position": "hidden",
+        "mobile_thumbnails_count": 5,
+        "mobile_vertical_thumbnails_width": 22,
+        "mobile_vertical_thumbnails_hide_arrows": true,
+        "mobile_scroll_padding_percentage": 0,
+        "mobile_scroll_padding_pixels": 14,
+        "enable_mobile_outher_spacing": false,
+        "mobile_slides_container_width": 100,
+        "mobile_slides_inner_width": 100,
+        "trust_badge_position": "top-right",
+        "trust_badge_size": "medium",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 16,
+        "desktop_padding_top": 20,
+        "desktop_padding_bottom": 36
+      }
+    },
+    "static_power_bar": {
+      "type": "static-power-bar",
+      "blocks": {
+        "power_badge_1": {
+          "type": "power_badge",
+          "settings": {
+            "icon": "⚡",
+            "text": "All-Day Energy"
+          }
+        },
+        "power_badge_2": {
+          "type": "power_badge",
+          "settings": {
+            "icon": "🌙",
+            "text": "All-Night Rest"
+          }
+        },
+        "power_badge_3": {
+          "type": "power_badge",
+          "settings": {
+            "icon": "🧪",
+            "text": "Doctor Developed"
+          }
+        },
+        "power_badge_4": {
+          "type": "power_badge",
+          "settings": {
+            "icon": "🌍",
+            "text": "Free Worldwide Shipping"
+          }
+        }
+      },
+      "block_order": [
+        "power_badge_1",
+        "power_badge_2",
+        "power_badge_3",
+        "power_badge_4"
+      ],
+      "settings": {
+        "mobile_padding_top": 12,
+        "mobile_padding_bottom": 12,
+        "desktop_padding_top": 16,
+        "desktop_padding_bottom": 16,
+        "mobile_text_size": 14,
+        "desktop_text_size": 16,
+        "custom_colors_background": "#1c8e8e",
+        "custom_colors_text": "#ffffff"
+      }
+    },
+    "icon_with_text_blocks": {
+      "type": "icon-with-text-blocks",
+      "blocks": {
+        "surge_ingredient_1": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "bolt",
+            "filled_icon": false,
+            "icon_size": "xl",
+            "icon_position": "next-to-title",
+            "icon_color": "background-1",
+            "icon_heading_size": "h3",
+            "icon_text_alignment": "left",
+            "title": "SURGE: NAD+",
+            "text": "<p>Essential coenzyme that supports cellular energy production and helps combat fatigue naturally.</p>",
+            "margin_top": 20,
+            "margin_bottom": 30
+          }
+        },
+        "surge_ingredient_2": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "metabolism",
+            "filled_icon": false,
+            "icon_size": "xl",
+            "icon_position": "next-to-title",
+            "icon_color": "background-1",
+            "icon_heading_size": "h3",
+            "icon_text_alignment": "left",
+            "title": "SURGE: Creatine",
+            "text": "<p>Supports muscle energy and cognitive function for sustained performance throughout the day.</p>",
+            "margin_top": 20,
+            "margin_bottom": 30
+          }
+        },
+        "drift_ingredient_1": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "bedtime",
+            "filled_icon": false,
+            "icon_size": "xl",
+            "icon_position": "next-to-title",
+            "icon_color": "background-1",
+            "icon_heading_size": "h3",
+            "icon_text_alignment": "left",
+            "title": "DRIFT: Melatonin",
+            "text": "<p>Natural sleep hormone that helps regulate your circadian rhythm for deeper, more restful sleep.</p>",
+            "margin_top": 20,
+            "margin_bottom": 30
+          }
+        },
+        "drift_ingredient_2": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "relax",
+            "filled_icon": false,
+            "icon_size": "xl",
+            "icon_position": "next-to-title",
+            "icon_color": "background-1",
+            "icon_heading_size": "h3",
+            "icon_text_alignment": "left",
+            "title": "DRIFT: Magnesium",
+            "text": "<p>Essential mineral that helps relax muscles and calm the nervous system for better sleep quality.</p>",
+            "margin_top": 20,
+            "margin_bottom": 30
+          }
+        }
+      },
+      "block_order": [
+        "surge_ingredient_1",
+        "surge_ingredient_2",
+        "drift_ingredient_1",
+        "drift_ingredient_2"
+      ],
+      "settings": {
+        "heading": "Complete Day & Night Formula",
+        "subheading": "SURGE for energy, DRIFT for rest. Premium ingredients for optimal performance and recovery.",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "two_products_sec": {
+      "type": "two-products-sec",
+      "blocks": {
+        "surge_tile": {
+          "type": "text",
+          "settings": {
+            "text": "⚡ All-Day Energy",
+            "text_style": "body"
+          }
+        },
+        "drift_tile": {
+          "type": "text",
+          "settings": {
+            "text": "🌙 All-Night Rest",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": ["surge_tile", "drift_tile"],
+      "settings": {
+        "p_top": 75,
+        "p_bottom": 75
+      }
+    },
+    "testimonial_grid_section": {
+      "type": "testimonial-grid-section",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "heading": "Real Results from Real People",
+        "subheading": "Join thousands who've transformed their daily routine with the SURGE & DRIFT stack.",
+        "bg_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I use the SURGE & DRIFT stack?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Apply SURGE first thing in the morning for all-day energy, then apply DRIFT 30-60 minutes before bedtime for deep, restful sleep. The patches work synergistically to optimize your daily rhythm.</p>",
+            "page": ""
+          }
+        },
+        "faq_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use SURGE and DRIFT together?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Yes! SURGE and DRIFT are designed to work together. SURGE provides daytime energy without affecting your sleep, while DRIFT helps you wind down naturally at night.</p>",
+            "page": ""
+          }
+        },
+        "faq_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What's the difference between buying individually vs. the stack?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>The stack saves you 15% compared to buying SURGE and DRIFT separately. Plus, you get the complete day-and-night system designed to work together for optimal results.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3"],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "caption": "",
+        "title": "Frequently Asked Questions",
+        "title_highlight_color": "#1c8e8e",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "video_muted_autoplay": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "row_heading_size": "medium",
+        "collapse_icon": "plus",
+        "display_top_border": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_divider": {
+      "type": "section-divider",
+      "settings": {
+        "visibility": "always-display",
+        "shape": "waves_3",
+        "flip_horizontal": false,
+        "flip_vertical": false,
+        "shape_color": "custom",
+        "custom_shape_color": "#e7fafa",
+        "background_color": "background-1",
+        "custom_background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "atc_button": {
+          "type": "atc_button",
+          "settings": {
+            "button_label": "Ditch the Pills — Patch In",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        }
+      },
+      "block_order": ["atc_button"],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "full_width": true,
+        "mobile_narrow_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 12,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "static_power_bar",
+    "icon_with_text_blocks",
+    "two_products_sec",
+    "testimonial_grid_section",
+    "collapsible_content",
+    "section_divider",
+    "rich_text_cta"
+  ]
+}
