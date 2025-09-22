@@ -1,0 +1,788 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "text_size": "h1",
+            "title_alignment": "left",
+            "uppercase_title": false,
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "layout": "price_first",
+            "price_color": "accent-1",
+            "compare_price_color": "text",
+            "displayed_badge": "custom",
+            "icon_scale": 140,
+            "custom_badge_text": "🔥 SAVE [percentage]% TODAY",
+            "icon_1": "redeem",
+            "filled_icon_1": false,
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "margin_top": 9,
+            "margin_bottom": 15
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": { "margin_top": 12, "margin_bottom": 24 }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "skip_cart": false,
+            "uppercase_text": true,
+            "icon_scale": 120,
+            "icon_spacing": 10,
+            "display_price": false,
+            "enable_custom_color": false,
+            "margin_top": 15,
+            "margin_bottom": 30
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky_atc",
+          "settings": {
+            "function": "add_to_cart",
+            "display_when": "after_scroll",
+            "button_label": "ADD DRIFT",
+            "enable_custom_btn_color": false,
+            "color_scheme": "background-1",
+            "picker_type": "combined",
+            "desktop_show_image": true,
+            "desktop_show_title": true,
+            "desktop_show_price": true,
+            "desktop_show_sale_badge": true,
+            "desktop_variant_picker": true,
+            "desktop_full_button_width": false
+          }
+        },
+        "custom_css": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>.price__badge-custom { background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%) !important; }</style>"
+          }
+        },
+        "subscription_options": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>@keyframes slideInUp {from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);}}@keyframes pulse {0%, 100% {transform: scale(1);} 50% {transform: scale(1.05);}}@keyframes shimmer {0% {background-position: -200px 0;} 100% {background-position: calc(200px + 100%) 0;}}.modern-radio {appearance: none; width: 20px; height: 20px; border: 2px solid #e5e7eb; border-radius: 50%; background: white; cursor: pointer; position: relative; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);}.modern-radio:checked {border-color: #1C8E8E; background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%); animation: pulse 0.6s ease-in-out;}.modern-radio:checked::after {content: ''; position: absolute; top: 50%; left: 50%; width: 8px; height: 8px; background: white; border-radius: 50%; transform: translate(-50%, -50%);}.modern-card {border: 2px solid transparent; border-radius: 16px; padding: 24px; margin-bottom: 16px; background: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;}.modern-card::before {content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(28, 142, 142, 0.1), transparent); transition: left 0.6s ease;}.modern-card:hover::before {left: 100%;}.modern-card.selected {border-color: #1C8E8E; background: linear-gradient(135deg, rgba(28, 142, 142, 0.02) 0%, rgba(109, 56, 179, 0.02) 100%); box-shadow: 0 10px 25px -3px rgba(28, 142, 142, 0.1), 0 4px 6px -2px rgba(28, 142, 142, 0.05); transform: translateY(-2px);}.modern-card.unselected {opacity: 0.6; background: #f8fafc; border-color: #e2e8f0;}.modern-badge {background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%); color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 4px rgba(28, 142, 142, 0.3);}.modern-btn {padding: 10px 20px; border: 2px solid transparent; border-radius: 25px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;}.modern-btn::before {content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); transition: left 0.5s ease;}.modern-btn:hover::before {left: 100%;}.modern-btn.active {background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%); color: white; border-color: #1C8E8E; box-shadow: 0 4px 12px rgba(28, 142, 142, 0.3);}.modern-btn.inactive {background: white; color: #64748b; border-color: #e2e8f0;}.modern-btn.inactive:hover {border-color: #1C8E8E; color: #1C8E8E; transform: translateY(-1px);}.supply-selector {animation: slideInUp 0.4s ease-out;}</style><div class=\"purchase-options\" style=\"margin: 24px 0;\"><input type=\"hidden\" name=\"quantity\" id=\"custom-quantity\" value=\"1\"><div id=\"subscription-card\" class=\"modern-card selected\"><div style=\"display: flex; align-items: center; justify-content: space-between;\"><div style=\"display: flex; align-items: center; flex: 1;\"><input type=\"radio\" name=\"purchase_type\" value=\"subscription\" id=\"subscription\" class=\"modern-radio\" checked style=\"margin-right: 16px;\"><label for=\"subscription\" style=\"font-weight: 700; color: #1C8E8E; font-size: 18px; cursor: pointer; transition: all 0.3s ease;\">Subscribe and save</label></div><div style=\"display: flex; align-items: center; gap: 12px;\"><div class=\"modern-badge\">SAVE 20%</div><div style=\"text-align: right;\"><div style=\"font-weight: 800; color: #1C8E8E; font-size: 18px;\">${{ product.price | money_without_currency | times: 0.8 | round: 2 }}</div><div style=\"font-size: 14px; color: #9ca3af; text-decoration: line-through;\">${{ product.price | money_without_currency }}</div></div></div></div><div style=\"margin-left: 36px; margin-top: 8px; color: #6b7280; font-size: 14px; font-weight: 500;\">Monthly Subscription</div></div><div id=\"one-time-card\" class=\"modern-card unselected\"><div style=\"display: flex; align-items: center; justify-content: space-between;\"><div style=\"display: flex; align-items: center; flex: 1;\"><input type=\"radio\" name=\"purchase_type\" value=\"one-time\" id=\"one-time\" class=\"modern-radio\" style=\"margin-right: 16px;\"><label for=\"one-time\" style=\"font-weight: 700; color: #9ca3af; font-size: 18px; cursor: pointer; flex: 1; transition: all 0.3s ease;\">One Time Purchase</label></div><div style=\"font-weight: 800; color: #9ca3af; font-size: 18px; transition: all 0.3s ease;\">${{ product.price | money_without_currency }}</div></div><div id=\"supply-selector\" class=\"supply-selector\" style=\"margin-left: 36px; margin-top: 16px; display: none;\"><div style=\"margin-bottom: 12px; color: #374151; font-size: 15px; font-weight: 600;\">Supply:</div><div style=\"display: flex; gap: 12px; flex-wrap: wrap;\"><button type=\"button\" class=\"modern-btn active\" data-supply=\"1\" data-price=\"{{ product.price | money_without_currency }}\">1 Month</button><button type=\"button\" class=\"modern-btn inactive\" data-supply=\"3\" data-price=\"{{ product.price | money_without_currency | times: 3 | round: 2 }}\">3 Month</button><button type=\"button\" class=\"modern-btn inactive\" data-supply=\"6\" data-price=\"{{ product.price | money_without_currency | times: 6 | round: 2 }}\">6 Month</button></div></div></div></div><script>document.addEventListener('DOMContentLoaded', function() {const purchaseTypeRadios = document.querySelectorAll('input[name=\"purchase_type\"]');const supplyButtons = document.querySelectorAll('.modern-btn');const oneTimePrice = document.getElementById('one-time-price');const subscriptionPrice = document.getElementById('subscription-price');const supplySelector = document.getElementById('supply-selector');const subscriptionCard = document.getElementById('subscription-card');const oneTimeCard = document.getElementById('one-time-card');const oneTimeLabel = document.querySelector('label[for=\"one-time\"]');const oneTimePriceSpan = document.querySelector('#one-time-card div[style*=\"font-weight: 800; color: #9ca3af\"]');const buyButton = document.querySelector('.product-form__buttons button, .btn, [data-testid=\"add-to-cart-button\"]');const quantityInput = document.getElementById('custom-quantity');let currentPrice = '{{ product.price | money_without_currency }}';let currentSupply = '1';const originalPrice = {{ product.price | money_without_currency }};const subPrice = {{ product.price | money_without_currency | times: 0.8 | round: 2 }};function updateSelection() {const isSubscription = document.querySelector('input[name=\"purchase_type\"][value=\"subscription\"]').checked;if (isSubscription) {subscriptionCard.classList.remove('unselected');subscriptionCard.classList.add('selected');oneTimeCard.classList.remove('selected');oneTimeCard.classList.add('unselected');oneTimeLabel.style.color = '#9ca3af';oneTimePriceSpan.style.color = '#9ca3af';} else {oneTimeCard.classList.remove('unselected');oneTimeCard.classList.add('selected');subscriptionCard.classList.remove('selected');subscriptionCard.classList.add('unselected');oneTimeLabel.style.color = '#1C8E8E';oneTimePriceSpan.style.color = '#1C8E8E';}}function updateButton() {if (buyButton) {const isSubscription = document.querySelector('input[name=\"purchase_type\"][value=\"subscription\"]').checked;if (isSubscription) {buyButton.innerHTML = `SUBSCRIBE & SAVE – $${subPrice}`;buyButton.style.background = 'linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%)';} else {buyButton.innerHTML = `BUY NOW – $${currentPrice}`;buyButton.style.background = 'linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%)';}}}function updateQuantity() {if (quantityInput) {quantityInput.value = currentSupply;quantityInput.dispatchEvent(new Event('change', { bubbles: true }));}}function updateSupplyButtons(activeBtn) {supplyButtons.forEach(btn => {btn.classList.remove('active');btn.classList.add('inactive');});activeBtn.classList.remove('inactive');activeBtn.classList.add('active');}purchaseTypeRadios.forEach(radio => {radio.addEventListener('change', function() {if (this.value === 'one-time') {supplySelector.style.display = 'block';} else {supplySelector.style.display = 'none';}updateSelection();updateButton();});});supplyButtons.forEach(btn => {btn.addEventListener('click', function() {currentPrice = this.dataset.price;currentSupply = this.dataset.supply;oneTimePriceSpan.textContent = `$${currentPrice}`;updateSupplyButtons(this);updateButton();updateQuantity();});});updateSelection();updateButton();});</script>"
+          }
+        },
+        "free_shipping_notice": {
+          "type": "text",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "center",
+            "text_color": "#1c8e8e",
+            "text_1": "🌍 Free shipping on all orders",
+            "text_2": "",
+            "text_3": "",
+            "icon_scale": 120,
+            "icon_color": "#1c8e8e",
+            "icon_1": "",
+            "filled_icon_1": false,
+            "icon_2": "",
+            "filled_icon_2": false,
+            "icon_3": "",
+            "filled_icon_3": false,
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "enable_bg": false,
+            "bg_color": "#f5f5f5",
+            "corner_radius": 10,
+            "padding": 5,
+            "border_size": 0,
+            "border_color": "#b7b7b7",
+            "margin_top": 12,
+            "margin_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "variant_picker",
+        "subscription_options",
+        "buy_buttons",
+        "free_shipping_notice",
+        "sticky_atc",
+        "custom_css"
+      ],
+      "disabled_blocks": [
+        "@app",
+        "quantity_selector",
+        "quantity_gifts",
+        "rating_stars",
+        "trustpilot_stars",
+        "clickable_discount",
+        "sku",
+        "inventory",
+        "reviews",
+        "share",
+        "collapsible_tab",
+        "popup",
+        "rating",
+        "complementary_products",
+        "sizing_chart",
+        "product_upsells",
+        "image",
+        "video",
+        "divider",
+        "payment_badges",
+        "urgency_text",
+        "emoji_benefits"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "display_variant_image_first": false,
+        "image_zoom": "none",
+        "media_size": "medium",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "desktop_thumbnails_position": "bottom",
+        "desktop_padding_top": 20,
+        "desktop_padding_bottom": 36
+      }
+    },
+    "horizontal_ticker": {
+      "type": "horizontal-ticker",
+      "blocks": {
+        "text_EEXyiX": {
+          "type": "text",
+          "settings": {
+            "title": "🌙 Deep Sleep All Night"
+          }
+        },
+        "text_V7RMqT": {
+          "type": "text",
+          "settings": {
+            "title": "✈️ Fast Worldwide Shipping"
+          }
+        },
+        "text_8QmnpH": {
+          "type": "text",
+          "settings": {
+            "title": "💤 Natural Sleep Support"
+          }
+        }
+      },
+      "block_order": ["text_EEXyiX", "text_V7RMqT", "text_8QmnpH"],
+      "name": "Power Bar Under Hero",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "speed": 1,
+        "direction": "normal",
+        "stop_on_hover": false,
+        "mobile_spacing": 60,
+        "desktop_spacing": 100,
+        "color_scheme": "custom",
+        "mobile_text_size": 16,
+        "desktop_text_size": 18,
+        "italic_text": false,
+        "uppercase_text": false,
+        "bold_text": false,
+        "mobile_image_height": 26,
+        "desktop_image_height": 40,
+        "mobile_reviews_width": 300,
+        "desktop_reviews_width": 400,
+        "hidden_products": "",
+        "enable_specific_display": false,
+        "displayed_products": "",
+        "mobile_padding_top": 12,
+        "mobile_padding_bottom": 12,
+        "desktop_padding_top": 16,
+        "desktop_padding_bottom": 16,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "linear-gradient(135deg,#1C8E8E 0%,#6D38B3 100%)",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d"
+      }
+    },
+    "science_backed": {
+      "type": "icon-with-text-blocks",
+      "blocks": {
+        "text_VwPtCh": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 31 45\" height=\"45\" width=\"31\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.38623\" stroke=\"white\" d=\"M2.43958 20.9557L15.98 2.70391C17.041 1.27718 19.0231 2.16437 19.0231 4.06518V18.1925C19.0231 19.3326 19.8019 20.2536 20.7614 20.2536H27.3487C28.8454 20.2536 29.6423 22.3463 28.6535 23.6805L15.1131 41.93C14.0521 43.3568 12.07 42.4696 12.07 40.5688V26.4414C12.07 25.3014 11.2912 24.3803 10.3318 24.3803H3.74216C2.24544 24.3803 1.4508 22.2876 2.43958 20.9557Z\"></path>\n</svg>",
+            "title": "NAD+",
+            "desc": "<p>Cellular energy and anti-aging support</p>"
+          }
+        },
+        "text_kxbakH": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
+            "title": "Glutathione",
+            "desc": "<p>Master antioxidant for recovery</p>"
+          }
+        },
+        "text_JJ4JV8": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
+            "title": "Creatine",
+            "desc": "<p>Enhanced strenth and performance</p>"
+          }
+        },
+        "text_bVitamins": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" height=\"24\" width=\"24\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2\" stroke=\"white\" d=\"M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z\"></path>\n</svg>",
+            "title": "B-Vitamins",
+            "desc": "<p>Energy metabolism and mental clarity</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_VwPtCh",
+        "text_kxbakH",
+        "text_JJ4JV8",
+        "text_bVitamins"
+      ],
+      "name": "Icon with text",
+      "settings": {
+        "heading": "Science backed energy.",
+        "subheading": "SURGE combines clinically studied ingredients, precisely dosed for all-day energy and mental clarity—without pills or crash.",
+        "bg_color": "#1a1a1a",
+        "p_top": 80,
+        "p_bottom": 80
+      }
+    },
+    "surge_day_only": {
+      "type": "two-products-sec",
+      "blocks": {
+        "text_78hKmU": {
+          "type": "text",
+          "settings": {
+            "bg_color": "#00908d",
+            "product": "surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+            "pro_img": "shopify://shop_images/mock-up-new1_2dba329d-7295-4cc8-a516-f8adfb7237a8.png",
+            "pro_img_title": "surge",
+            "pro_img_bg_color": "#2fa9a7",
+            "pro_title": "All-Day Energy",
+            "pro_desc": "<p>NAD+ Creatine, B-Vitamins for sustained performance.</p>",
+            "atc_btn": "",
+            "btn_ulr": "",
+            "show_btn_outline": false,
+            "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-sun w-16 h-16 text-yellow-300/30 animate-spin\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:14:14\" data-orchids-name=\"Sun\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M12 2v2\"></path><path d=\"M12 20v2\"></path><path d=\"m4.93 4.93 1.41 1.41\"></path><path d=\"m17.66 17.66 1.41 1.41\"></path><path d=\"M2 12h2\"></path><path d=\"M20 12h2\"></path><path d=\"m6.34 17.66-1.41 1.41\"></path><path d=\"m19.07 4.93-1.41 1.41\"></path></svg>",
+            "icon_animation": "bounce_rotate"
+          }
+        }
+      },
+      "block_order": ["text_78hKmU"],
+      "name": "Two products section",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "bg_color": "#ffffff",
+        "p_top": 80,
+        "p_bottom": 80
+      }
+    },
+    "static_image_grid": {
+      "type": "static-image-grid",
+      "blocks": {
+        "image_slide_1": {
+          "type": "image_slide",
+          "settings": {
+            "link": "",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        },
+        "image_slide_2": {
+          "type": "image_slide",
+          "settings": {
+            "link": "",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        },
+        "image_slide_3": {
+          "type": "image_slide",
+          "settings": {
+            "link": "",
+            "description": "",
+            "desc_alignment": "center",
+            "desc_color_scheme": "background-2"
+          }
+        }
+      },
+      "block_order": ["image_slide_1", "image_slide_2", "image_slide_3"],
+      "name": "Static Image Grid",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "",
+        "title_highlight_color": "#121212",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "desktop_border_radius": 0,
+        "mobile_border_radius": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#121212"
+      }
+    },
+    "testimonial_grid": {
+      "type": "testimonial-grid-section",
+      "blocks": {
+        "testimonial_pWTDVU": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg",
+            "name": "Ahmed Al-Rashid",
+            "role": "Software Engineer, 29",
+            "review": "\"SURGE gives me that clean energy boost I need for my 6 AM workouts. No crash, just sustained focus all morning. Perfect for my busy schedule.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_CT3Rw4": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1534528741775-53994a69daeb.jpg",
+            "name": "Fatima Hassan",
+            "role": "Working Mother, 33",
+            "review": "\"Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything the day throws at me. My energy levels are consistent all day long.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_3dyCnt": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1500648767791-00dcc994a43e.jpg",
+            "name": "Khalid Al-Sabah",
+            "role": "Fitness Trainer, 31",
+            "review": "\"SURGE has completely transformed my morning routine. I wake up feeling energized and ready to tackle my day. My clients ask what changed!\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_4NnrJU": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg",
+            "name": "Dr. Omar Al-Zahra",
+            "role": "Medical Director, 38",
+            "review": "\"SURGE helps me maintain focus during long surgery days. I stick it on during my morning routine and stay sharp all day. As a doctor, I appreciate the natural approach.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Sarah": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1494790108755-2616b612b786.jpg",
+            "name": "Sarah Johnson",
+            "role": "Marketing Manager, 28",
+            "review": "\"I was skeptical about patches vs coffee, but SURGE actually works better. No jitters, no crash, just steady energy from 8 AM to 6 PM. My productivity has never been higher.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Mike": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1500648767791-00dcc994a43e.jpg",
+            "name": "Mike Chen",
+            "role": "Startup Founder, 32",
+            "review": "\"Running a startup means 16-hour days. SURGE keeps me alert and focused without the anxiety I used to get from energy drinks. It's become my secret weapon.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Elena": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1534528741775-53994a69daeb.jpg",
+            "name": "Elena Rodriguez",
+            "role": "Nurse, 35",
+            "review": "\"12-hour shifts were killing me until I found SURGE. Now I have consistent energy throughout my entire shift. My patients notice I'm more alert and attentive too.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_David": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg",
+            "name": "David Thompson",
+            "role": "Sales Director, 41",
+            "review": "\"I travel constantly for work and SURGE is perfect for jet lag recovery. One patch and I'm ready to close deals in any time zone. Game changer for my career.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Lisa": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
+            "name": "Lisa Park",
+            "role": "Graphic Designer, 26",
+            "review": "\"Creative work requires sustained focus, and SURGE delivers exactly that. No more afternoon slumps or creative blocks. I'm producing my best work consistently.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_James": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg",
+            "name": "James Wilson",
+            "role": "Construction Manager, 44",
+            "review": "\"Physical work all day used to drain me by noon. SURGE keeps me going strong until the end of my shift. My crew can't believe how much energy I have.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Maria": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1494790108755-2616b612b786.jpg",
+            "name": "Maria Garcia",
+            "role": "Teacher, 29",
+            "review": "\"Managing 30 kids all day requires endless energy. SURGE helps me stay patient and engaged with my students from first bell to last. My classroom has never been more dynamic.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Youssef": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg",
+            "name": "Youssef Al-Mansouri",
+            "role": "Business Analyst, 31",
+            "review": "\"SURGE has revolutionized my work performance. I can analyze complex data for hours without mental fatigue. My manager noticed the improvement immediately.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Layla": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1494790108755-2616b612b786.jpg",
+            "name": "Layla Al-Zahra",
+            "role": "Pharmacist, 27",
+            "review": "\"As a pharmacist, I appreciate SURGE's natural approach. No side effects, just clean energy that lasts my entire 10-hour shift. My patients trust my recommendation.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Hassan": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg",
+            "name": "Hassan Al-Rashid",
+            "role": "Software Developer, 33",
+            "review": "\"Coding marathons used to drain me by 3 PM. SURGE keeps me sharp and focused until late evening. My code quality has improved significantly.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Amina": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1534528741775-53994a69daeb.jpg",
+            "name": "Amina Al-Sabah",
+            "role": "Project Manager, 35",
+            "review": "\"Managing multiple projects requires sustained mental energy. SURGE helps me stay organized and focused throughout chaotic workdays. Game changer!\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Khalil": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1500648767791-00dcc994a43e.jpg",
+            "name": "Khalil Al-Mahmoud",
+            "role": "Financial Advisor, 39",
+            "review": "\"Client meetings back-to-back used to exhaust me. SURGE gives me the energy to stay sharp and attentive with every client. My performance reviews have never been better.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Nour": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
+            "name": "Nour Al-Din",
+            "role": "Marketing Specialist, 26",
+            "review": "\"Creative campaigns require fresh ideas all day. SURGE eliminates my afternoon creative blocks. I'm producing my most innovative work consistently.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Tariq": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg",
+            "name": "Tariq Al-Hassan",
+            "role": "Consultant, 42",
+            "review": "\"Traveling between clients across the city was draining. SURGE keeps me energized and professional from first meeting to last. My clients appreciate my consistent energy.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Mahmoud": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg",
+            "name": "Mahmoud Abu-Rashid",
+            "role": "Engineer, 34",
+            "review": "\"Long engineering projects require sustained focus. SURGE helps me stay sharp during complex calculations and design work. My team notices my improved performance.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Rana": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1534528741775-53994a69daeb.jpg",
+            "name": "Rana Mansour",
+            "role": "Accountant, 28",
+            "review": "\"Tax season used to be exhausting with 12-hour days. SURGE keeps me alert and accurate throughout the busiest periods. My clients trust my attention to detail.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Sami": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1500648767791-00dcc994a43e.jpg",
+            "name": "Sami Khoury",
+            "role": "Restaurant Owner, 37",
+            "review": "\"Running a busy restaurant means being on your feet all day. SURGE gives me the energy to stay focused on customer service from opening to closing.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Lina": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1494790108755-2616b612b786.jpg",
+            "name": "Lina Nasser",
+            "role": "Social Worker, 31",
+            "review": "\"Helping families requires emotional and mental energy. SURGE helps me stay present and empathetic throughout long client sessions. My work quality has improved significantly.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Khaled": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg",
+            "name": "Khaled Jabari",
+            "role": "IT Manager, 40",
+            "review": "\"Managing IT systems across multiple locations requires constant attention. SURGE keeps me alert and responsive to technical issues throughout the day.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Maya": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
+            "name": "Maya Asmar",
+            "role": "Graphic Designer, 25",
+            "review": "\"Creative deadlines can be intense. SURGE helps me maintain my creative flow and meet tight project timelines without burning out. My designs have never been better.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Omar": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg",
+            "name": "Omar Salameh",
+            "role": "Sales Representative, 29",
+            "review": "\"Meeting clients across different cities requires consistent energy. SURGE helps me stay enthusiastic and persuasive from first meeting to last. My sales numbers have improved dramatically.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_pWTDVU",
+        "testimonial_CT3Rw4",
+        "testimonial_3dyCnt",
+        "testimonial_4NnrJU",
+        "testimonial_Sarah",
+        "testimonial_Mike",
+        "testimonial_Elena",
+        "testimonial_David",
+        "testimonial_Lisa",
+        "testimonial_James",
+        "testimonial_Maria",
+        "testimonial_Youssef",
+        "testimonial_Layla",
+        "testimonial_Hassan",
+        "testimonial_Amina",
+        "testimonial_Khalil",
+        "testimonial_Nour",
+        "testimonial_Tariq",
+        "testimonial_Mahmoud",
+        "testimonial_Rana",
+        "testimonial_Sami",
+        "testimonial_Lina",
+        "testimonial_Khaled",
+        "testimonial_Maya",
+        "testimonial_Omar"
+      ],
+      "name": "Testimonial Grid",
+      "settings": {
+        "heading": "Join 10,000+ Professionals Who Choose SURGE.",
+        "subheading": "Real users. Real energy. Real results. See why doctors, engineers, and entrepreneurs trust SURGE for sustained performance.",
+        "bg_color": "#ffffff",
+        "heading_color": "#0d0d33",
+        "subheading_color": "#666666",
+        "card_background": "#ffffff",
+        "badge_bg": "#0d0d33",
+        "p_top": 80,
+        "p_bottom": 80
+      }
+    },
+    "faq_section": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes SURGE different from energy drinks or coffee?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>SURGE delivers clean, sustained energy through transdermal absorption—no jitters, no crash, no digestive issues. While coffee gives you a quick spike and crash, SURGE provides 8-12 hours of steady energy that builds gradually and fades naturally.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does SURGE energy last?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Most users feel SURGE's effects within 20-30 minutes, with peak energy lasting 6-8 hours. The patch continues working for up to 12 hours, providing sustained focus without the crash you get from caffeine or energy drinks.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is SURGE safe for daily use?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Yes. SURGE is made with clinically-studied ingredients in GMP-certified facilities. All patches are third-party tested for purity and potency. The transdermal delivery system is gentle on your body and doesn't stress your digestive system like pills or drinks.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use SURGE with other supplements?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Yes, SURGE is designed to work synergistically with your existing supplement routine. The transdermal delivery means it won't interfere with oral supplements. However, we recommend consulting with your healthcare provider if you have specific health concerns.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I apply SURGE patches?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Simply clean and dry your skin, peel off the backing, and apply to a hairless area like your upper arm, shoulder, or thigh. Press firmly for 10 seconds. The patch will stay secure for 8-12 hours, even during exercise or showering.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if SURGE doesn't work for me?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>We're confident in SURGE's effectiveness, which is why we offer a 30-day money-back guarantee. If you're not completely satisfied with your energy levels and focus, simply return the unused patches for a full refund—no questions asked.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_1",
+        "collapsible_row_2",
+        "collapsible_row_3",
+        "collapsible_row_4",
+        "collapsible_row_5",
+        "collapsible_row_6"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "caption": "",
+        "title": "SURGE Energy Patches: Your Questions Answered.",
+        "title_highlight_color": "#1c8e8e",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-1",
+        "open_first_collapsible_row": false,
+        "video_muted_autoplay": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "no_image",
+        "row_heading_size": "medium",
+        "collapse_icon": "plus",
+        "display_top_border": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_contaner_colors_background": "#ffffff",
+        "custom_container_gradient_background": "",
+        "custom_contaner_colors_text": "#2e2a39",
+        "btn_url": "#pdp-top",
+        "btn": "GET SURGE NOW",
+        "btn_subheading": "Join 10,000+ professionals who trust SURGE"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "horizontal_ticker",
+    "science_backed",
+    "surge_day_only",
+    "static_image_grid",
+    "testimonial_grid",
+    "faq_section"
+  ]
+}

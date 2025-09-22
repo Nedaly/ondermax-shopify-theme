@@ -1,5 +1,5 @@
 <section
-  id="pdp-top"
+  id="MainProduct-{{ section.id }}"
   class="page-width section-{{ section.id }}-padding"
   data-section="{{ section.id }}"
 >
@@ -129,7 +129,12 @@
                 </a>
               </div>
             {% when 'rating_stars' %}
-              {% render 'rating-stars-block', block: block, margins: true, block_attributes: true %}
+              {%- comment -%} Judge.me reviews - only show if real reviews exist {%- endcomment -%}
+              {%- if shop.metafields.judgeme and product.metafields.judgeme.review_count > 0 -%}
+                <div class="product__rating" {{ block.shopify_attributes }}>
+                  {%- render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product -%}
+                </div>
+              {%- endif -%}
             {% when 'trustpilot_stars' %}
               {% render 'trustpilot-stars-block', block: block, margins: true, block_attributes: true %}
             {%- when 'price' -%}
@@ -260,6 +265,9 @@
             {%- when 'description' -%}
               {%- if product.description != blank -%}
                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }} style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;">
+                  <div class="product__core-promise" style="font-size: 0.9rem; color: #666; margin-bottom: 1rem; font-style: italic;">
+                    Clean performance. No pills. No crash. Just results.
+                  </div>
                   {{ product.description }}
                 </div>
               {%- endif -%}
