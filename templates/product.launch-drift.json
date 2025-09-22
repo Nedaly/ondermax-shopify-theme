@@ -61,7 +61,7 @@
           "settings": {
             "function": "add_to_cart",
             "display_when": "after_scroll",
-            "button_label": "ADD SURGE",
+            "button_label": "ADD DRIFT",
             "enable_custom_btn_color": false,
             "color_scheme": "background-1",
             "picker_type": "combined",
@@ -76,7 +76,7 @@
         "custom_css": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<style>.price__badge-custom { background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%) !important; }/* Hide Appstle subscription widgets only */[data-appstle-widget], .appstle-subscription-widget, .appstle-widget, [class*=\"appstle\"], [id*=\"appstle\"] { display: none !important; }</style>"
+            "custom_liquid": "<style>.price__badge-custom { background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%) !important; }</style>"
           }
         },
         "subscription_options": {
@@ -170,7 +170,7 @@
         "text_EEXyiX": {
           "type": "text",
           "settings": {
-            "title": "⚡ High Energy All Day"
+            "title": "🌙 Deep Sleep All Night"
           }
         },
         "text_V7RMqT": {
@@ -182,7 +182,7 @@
         "text_8QmnpH": {
           "type": "text",
           "settings": {
-            "title": "💧 No Pills, Just Patches"
+            "title": "💤 Natural Sleep Support"
           }
         }
       },
