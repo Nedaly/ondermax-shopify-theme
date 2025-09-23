@@ -23,5 +23,20 @@
     "trust_row_1": "دفع آمن",
     "trust_row_2": "استرجاع خلال 30 يوماً"
   },
-  "pdp": { "benefits_title": "ليش رح تحس بالفرق" }
+  "pdp": { "benefits_title": "ليش رح تحس بالفرق" },
+  "home": {
+    "blocks": {
+      "science": "طاقة مدعومة بالعلم",
+      "allday": "طاقة طوال اليوم",
+      "join": "انضم إلى 10,000+ محترف يثقون بـ SURGE",
+      "faq": "لصقات طاقة SURGE: إجابات على أسئلتك",
+      "cta": "اطلب SURGE الآن"
+    }
+  },
+  "power_bar": {
+    "high_energy": "طاقة عالية",
+    "doctor_developed": "مطوّر من قبل طبيب",
+    "backed_by_science": "مدعوم بالعلم",
+    "free_worldwide_shipping": "شحن مجاني عالمي"
+  }
 }

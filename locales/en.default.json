@@ -541,5 +541,20 @@
         "shipping_address": "Shipping Address"
       }
     }
+  },
+  "home": {
+    "blocks": {
+      "science": "Science Backed Energy",
+      "allday": "All-Day Energy",
+      "join": "Join 10,000+ Professionals Who Choose SURGE",
+      "faq": "SURGE Energy Patches: Your Questions Answered",
+      "cta": "Get SURGE Now"
+    }
+  },
+  "power_bar": {
+    "high_energy": "High Energy",
+    "doctor_developed": "Doctor Developed",
+    "backed_by_science": "Backed by Science",
+    "free_worldwide_shipping": "Free Worldwide Shipping"
   }
 }

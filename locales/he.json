@@ -14,5 +14,20 @@
     "trust_row_1": "תשלום מאובטח",
     "trust_row_2": "החזרה עד 30 יום"
   },
-  "pdp": { "benefits_title": "למה תרגישו את ההבדל" }
+  "pdp": { "benefits_title": "למה תרגישו את ההבדל" },
+  "home": {
+    "blocks": {
+      "science": "אנרגיה מבוססת מדע",
+      "allday": "אנרגיה לכל היום",
+      "join": "הצטרפו ל-10,000+ מקצוענים שבוחרים ב-SURGE",
+      "faq": "מדבקות האנרגיה SURGE: שאלות ותשובות",
+      "cta": "להזמין SURGE עכשיו"
+    }
+  },
+  "power_bar": {
+    "high_energy": "אנרגיה גבוהה",
+    "doctor_developed": "פותח על ידי רופא",
+    "backed_by_science": "מבוסס על מדע",
+    "free_worldwide_shipping": "משלוח חינם עולמי"
+  }
 }

@@ -15,6 +15,12 @@
         "id": "animations_type",
         "label": "Authentication token",
         "info": "Refresh the page if the error message doesnt disappear after entering your token."
+      },
+      {
+        "type": "text",
+        "id": "shrine_auth_token",
+        "label": "Shrine Authentication Token",
+        "info": "Paste token from Shrine dashboard. Do NOT translate."
       }
     ]
   },
