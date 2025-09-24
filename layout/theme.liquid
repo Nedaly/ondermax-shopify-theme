@@ -453,6 +453,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    {{ 'fonts-arabic.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'ondermax.css' | asset_url | stylesheet_tag }}
     {{ 'omx-subscriptions.css' | asset_url | stylesheet_tag }}
@@ -496,6 +497,17 @@
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
       }
+    </script>
+    <script>
+      window.publishSafe = function(eventName, payload) {
+        try {
+          if (!window.Shopify || !window.Shopify.analytics || !payload) return;
+          if (typeof eventName !== "string" || !Object.keys(payload).length) return;
+          if (typeof window.Shopify.analytics.publish === "function") {
+            window.Shopify.analytics.publish(eventName, payload);
+          }
+        } catch(e) { /* no-op */ }
+      };
     </script>
     <script type="text/javascript">
       (function(c,l,a,r,i,t,y){
