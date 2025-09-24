@@ -1,19 +1,19 @@
-/* TODO: upload the WOFF2 files to assets/ if not present */
+/* Hebrew font support - Heebo WOFF2 files available */
+
 @font-face {
   font-family: 'HeeboLocal';
   src: url('{{ "heebo-400.woff2" | asset_url }}') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0590-05FF, U+FB1D-FB4F, U+0020-007E;
 }
+
 @font-face {
   font-family: 'HeeboLocal';
   src: url('{{ "heebo-600.woff2" | asset_url }}') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0590-05FF, U+FB1D-FB4F, U+0020-007E;
 }
 
 /* Hebrew typography & micro-tweaks */
@@ -30,27 +30,48 @@ html:lang(he) body {
   letter-spacing: 0;
   font-feature-settings: 'kern';
 }
-html:lang(he) h1,
-html:lang(he) h2 {
-  font-weight: 600;
+
+/* --- Ensure theme variables use Hebrew family globally --- */
+:root:lang(he) {
+  --font-body-family:
+    'HeeboLocal', system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Noto Sans Hebrew', sans-serif;
+  --font-heading-family:
+    'HeeboLocal', system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Noto Sans Hebrew', sans-serif;
 }
-/* Buttons / CTAs slightly heavier */
-html:lang(he) .btn,
-html:lang(he) .button,
-html:lang(he) .cta {
-  font-weight: 600;
+
+/* --- Footer enforcement (catches components that force a font) --- */
+:root:lang(he) footer,
+:root:lang(he) .footer,
+:root:lang(he) #shopify-section-footer {
+  font-family: var(--font-body-family) !important;
 }
-/* Inputs & placeholders */
-[dir='rtl'] input,
-[dir='rtl'] textarea,
-[dir='rtl'] select {
-  text-align: start;
+
+:root:lang(he) footer *,
+:root:lang(he) .footer *,
+:root:lang(he) #shopify-section-footer * {
+  font-family: inherit !important;
 }
-/* Optional Hebrew webfont
-@font-face {
-  font-family: 'YourHebrewFont';
-  src: url('{{ "YourHebrewFont.woff2" | asset_url }}') format('woff2');
-  font-display: swap;
+
+/* Headings inside footer use heading family explicitly */
+:root:lang(he) footer h1,
+:root:lang(he) footer h2,
+:root:lang(he) footer h3,
+:root:lang(he) footer h4,
+:root:lang(he) footer h5,
+:root:lang(he) footer h6,
+:root:lang(he) .footer h1,
+:root:lang(he) .footer h2,
+:root:lang(he) .footer h3,
+:root:lang(he) .footer h4,
+:root:lang(he) .footer h5,
+:root:lang(he) .footer h6,
+:root:lang(he) #shopify-section-footer h1,
+:root:lang(he) #shopify-section-footer h2,
+:root:lang(he) #shopify-section-footer h3,
+:root:lang(he) #shopify-section-footer h4,
+:root:lang(he) #shopify-section-footer h5,
+:root:lang(he) #shopify-section-footer h6 {
+  font-family: var(--font-heading-family) !important;
 }
-html:lang(he) body { font-family: 'YourHebrewFont', system-ui, sans-serif; }
-*/

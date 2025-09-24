@@ -1,0 +1,137 @@
+diff --git a/assets/lang-ar.css b/assets/lang-ar.css
+new file mode 100644
+index 0000000..1234567
+--- /dev/null
++++ b/assets/lang-ar.css
+@@ -0,0 +1,59 @@
++/* Arabic font support */
++@font-face {
++  font-family: 'PlexArabic';
++  src: url('{{ "ibm-plex-sans-arabic-400.woff2" | asset_url }}') format('woff2');
++  font-weight: 400;
++  font-style: normal;
++  font-display: swap;
++  unicode-range:
++    U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+0020-007E;
++}
++@font-face {
++  font-family: 'PlexArabic';
++  src: url('{{ "ibm-plex-sans-arabic-600.woff2" | asset_url }}') format('woff2');
++  font-weight: 600;
++  font-style: normal;
++  font-display: swap;
++  unicode-range:
++    U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+0020-007E;
++}
++
++/* Arabic typography & micro-tweaks */
++html:lang(ar) body {
++  font-family:
++    'PlexArabic',
++    Cairo,
++    system-ui,
++    -apple-system,
++    'Segoe UI',
++    Roboto,
++    'Noto Sans Arabic',
++    sans-serif;
++  line-height: 1.75;
++  letter-spacing: 0;
++  font-feature-settings: 'kern';
++}
++html:lang(ar) h1,
++html:lang(ar) h2 {
++  font-weight: 600;
++}
++/* Buttons / CTAs a touch bolder for Arabic legibility */
++html:lang(ar) .btn,
++html:lang(ar) .button,
++html:lang(ar) .cta {
++  font-weight: 600;
++}
++/* Inputs & placeholders align properly in RTL */
++[dir='rtl'] input,
++[dir='rtl'] textarea,
++[dir='rtl'] select {
++  text-align: start;
++}
++
++diff --git a/assets/lang-he.css b/assets/lang-he.css
++new file mode 100644
++index 0000000..1234567
++--- /dev/null
++++ b/assets/lang-he.css
+@@ -0,0 +1,56 @@
++/* Hebrew font support */
++@font-face {
++  font-family: 'HeeboLocal';
++  src: url('{{ "heebo-400.woff2" | asset_url }}') format('woff2');
++  font-weight: 400;
++  font-style: normal;
++  font-display: swap;
++  unicode-range: U+0590-05FF, U+FB1D-FB4F, U+0020-007E;
++}
++@font-face {
++  font-family: 'HeeboLocal';
++  src: url('{{ "heebo-600.woff2" | asset_url }}') format('woff2');
++  font-weight: 600;
++  font-style: normal;
++  font-display: swap;
++  unicode-range: U+0590-05FF, U+FB1D-FB4F, U+0020-007E;
++}
++
++/* Hebrew typography & micro-tweaks */
++html:lang(he) body {
++  font-family:
++    'HeeboLocal',
++    system-ui,
++    -apple-system,
++    'Segoe UI',
++    Roboto,
++    'Noto Sans Hebrew',
++    sans-serif;
++  line-height: 1.7;
++  letter-spacing: 0;
++  font-feature-settings: 'kern';
++}
++html:lang(he) h1,
++html:lang(he) h2 {
++  font-weight: 600;
++}
++/* Buttons / CTAs slightly heavier */
++html:lang(he) .btn,
++html:lang(he) .button,
++html:lang(he) .cta {
++  font-weight: 600;
++}
++/* Inputs & placeholders */
++[dir='rtl'] input,
++[dir='rtl'] textarea,
++[dir='rtl'] select {
++  text-align: start;
++}
++
++diff --git a/assets/rtl.css b/assets/rtl.css
++new file mode 100644
++index 0000000..1234567
++--- /dev/null
++++ b/assets/rtl.css
+@@ -0,0 +1,14 @@
++/* RTL utility classes */
++html[dir='rtl'] body {
++  direction: rtl;
++}
++
++/* Utility for arrows/chevrons fix in RTL */
++.rtl-flip {
++  transform: scaleX(-1);
++}
++[dir='rtl'] .rtl-flip {
++  transform: scaleX(-1);
++}
++
++/* Utility for numeric fragments in RTL strings */
++.rtl-num {
++  direction: ltr;
++  unicode-bidi: isolate;
++}

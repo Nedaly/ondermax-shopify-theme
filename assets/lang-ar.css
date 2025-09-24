@@ -1,21 +1,19 @@
-/* TODO: upload the WOFF2 files to assets/ if not present */
+/* Arabic font support - IBM Plex Sans Arabic WOFF2 files available */
+
 @font-face {
   font-family: 'PlexArabic';
   src: url('{{ "ibm-plex-sans-arabic-400.woff2" | asset_url }}') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  unicode-range:
-    U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+0020-007E;
 }
+
 @font-face {
   font-family: 'PlexArabic';
   src: url('{{ "ibm-plex-sans-arabic-600.woff2" | asset_url }}') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-  unicode-range:
-    U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+0020-007E;
 }
 
 /* Arabic typography & micro-tweaks */
@@ -33,27 +31,48 @@ html:lang(ar) body {
   letter-spacing: 0;
   font-feature-settings: 'kern';
 }
-html:lang(ar) h1,
-html:lang(ar) h2 {
-  font-weight: 600;
+
+/* --- Ensure theme variables use Arabic family globally --- */
+:root:lang(ar) {
+  --font-body-family:
+    'PlexArabic', Cairo, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Noto Sans Arabic', sans-serif;
+  --font-heading-family:
+    'PlexArabic', Cairo, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Noto Sans Arabic', sans-serif;
 }
-/* Buttons / CTAs a touch bolder for Arabic legibility */
-html:lang(ar) .btn,
-html:lang(ar) .button,
-html:lang(ar) .cta {
-  font-weight: 600;
+
+/* --- Footer enforcement (catches components that force a font) --- */
+:root:lang(ar) footer,
+:root:lang(ar) .footer,
+:root:lang(ar) #shopify-section-footer {
+  font-family: var(--font-body-family) !important;
 }
-/* Inputs & placeholders align properly in RTL */
-[dir='rtl'] input,
-[dir='rtl'] textarea,
-[dir='rtl'] select {
-  text-align: start;
+
+:root:lang(ar) footer *,
+:root:lang(ar) .footer *,
+:root:lang(ar) #shopify-section-footer * {
+  font-family: inherit !important;
 }
-/* Optional Arabic webfont
-@font-face {
-  font-family: 'YourArabicFont';
-  src: url('{{ "YourArabicFont.woff2" | asset_url }}') format('woff2');
-  font-display: swap;
+
+/* Headings inside footer use heading family explicitly */
+:root:lang(ar) footer h1,
+:root:lang(ar) footer h2,
+:root:lang(ar) footer h3,
+:root:lang(ar) footer h4,
+:root:lang(ar) footer h5,
+:root:lang(ar) footer h6,
+:root:lang(ar) .footer h1,
+:root:lang(ar) .footer h2,
+:root:lang(ar) .footer h3,
+:root:lang(ar) .footer h4,
+:root:lang(ar) .footer h5,
+:root:lang(ar) .footer h6,
+:root:lang(ar) #shopify-section-footer h1,
+:root:lang(ar) #shopify-section-footer h2,
+:root:lang(ar) #shopify-section-footer h3,
+:root:lang(ar) #shopify-section-footer h4,
+:root:lang(ar) #shopify-section-footer h5,
+:root:lang(ar) #shopify-section-footer h6 {
+  font-family: var(--font-heading-family) !important;
 }
-html:lang(ar) body { font-family: 'YourArabicFont', Cairo, system-ui, sans-serif; }
-*/
