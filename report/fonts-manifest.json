@@ -1,7 +1,0 @@
-{
-  "status": "manual_required",
-  "css_urls": {
-    "Heebo": "https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&display=swap",
-    "IBM Plex Sans Arabic": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap"
-  }
-}
