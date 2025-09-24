@@ -17386,9 +17386,6 @@ div#shopify-section-template--25244740550987__comparison_slider_VRhxib
   .comparison-slider__after-text {
   display: none;
 }
-div#transcySwitcherContainer {
-  /* display: none !important; */
-}
 .product__info-wrapper .product__description hr {
   margin: 0;
 }
@@ -17516,6 +17513,20 @@ html[dir='rtl'] body {
   direction: rtl;
   text-align: right;
 }
+html[dir='rtl'] .text-start {
+  text-align: right;
+}
+html[dir='rtl'] .text-end {
+  text-align: left;
+}
+html[dir='rtl'] .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+html[dir='rtl'] .mr-auto {
+  margin-right: 0;
+  margin-left: auto;
+}
 
 html[dir='rtl'] .site-header {
   flex-direction: row-reverse;
@@ -17618,7 +17629,13 @@ nav.header__inline-menu {
 
 /* This is for footer */
 .footer .footer-block__heading {
-  font-family: 'Inter';
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0;
@@ -17650,14 +17667,26 @@ nav.header__inline-menu {
   min-height: unset;
   height: 50px;
   font-size: 16px;
-  font-family: Inter;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
   letter-spacing: 0;
   font-weight: 600;
 }
 
 .footer .footer-block--menu .list-menu__item {
   letter-spacing: 0;
-  font-family: 'Inter';
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
   font-size: 16px !important;
   color: #ffffffa3 !important;
   font-weight: 500;
@@ -17670,7 +17699,13 @@ nav.header__inline-menu {
 }
 
 .footer .footer-block__brand-info .rte > * {
-  font-family: Inter;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
   letter-spacing: 0;
   font-size: 18px;
   color: #ffffffa3;
@@ -17684,7 +17719,13 @@ nav.header__inline-menu {
 .footer .newsletter-form__field-wrapper .field__label {
   font-size: 16px;
   letter-spacing: 0;
-  font-family: 'Inter';
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
   color: #ffffffa3;
   text-transform: capitalize;
 }
@@ -17699,7 +17740,13 @@ nav.header__inline-menu {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  font-family: 'Inter';
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
   font-size: 14px;
   letter-spacing: 0;
   color: #ffffffc7;
@@ -17722,7 +17769,13 @@ nav.header__inline-menu {
 }
 
 .footer .footer__copyright .copyright__content {
-  font-family: Inter;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
   font-size: 14px;
   letter-spacing: 0;
 }

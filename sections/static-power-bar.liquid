@@ -58,7 +58,14 @@
               {%- if block.settings.icon != blank -%}
                 <span class="power-badge__icon">{{ block.settings.icon }}</span>
               {%- endif -%}
-              <span class="power-badge__text">{{ block.settings.text }}</span>
+              <span class="power-badge__text">
+                {% capture __maybe %}{{ block.settings.text | t }}{% endcapture %}
+                {% if __maybe contains 'Translation missing' %}
+                  {{ block.settings.text }}
+                {% else %}
+                  {{ __maybe }}
+                {% endif %}
+              </span>
             </div>
         {%- endcase -%}
       {%- endfor -%}
@@ -172,7 +179,7 @@
           "type": "text",
           "id": "text",
           "label": "Text",
-          "default": "High Energy"
+          "default": "power_bar.high_energy"
         }
       ]
     }
@@ -185,28 +192,28 @@
           "type": "power_badge",
           "settings": {
             "icon": "⚡",
-            "text": "High Energy"
+            "text": "power_bar.high_energy"
           }
         },
         {
           "type": "power_badge",
           "settings": {
             "icon": "🧪",
-            "text": "Doctor Developed"
+            "text": "power_bar.doctor_developed"
           }
         },
         {
           "type": "power_badge",
           "settings": {
             "icon": "🧬",
-            "text": "Backed by Science"
+            "text": "power_bar.backed_by_science"
           }
         },
         {
           "type": "power_badge",
           "settings": {
             "icon": "🌍",
-            "text": "Free Worldwide Shipping"
+            "text": "power_bar.free_worldwide_shipping"
           }
         }
       ]

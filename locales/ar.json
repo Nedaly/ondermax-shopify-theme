@@ -23,5 +23,41 @@
     "trust_row_1": "دفع آمن",
     "trust_row_2": "استرجاع خلال 30 يوماً"
   },
-  "pdp": { "benefits_title": "ليش رح تحس بالفرق" }
+  "pdp": { "benefits_title": "ليش رح تحس بالفرق" },
+  "home": {
+    "blocks": {
+      "science": "طاقة مدعومة بالعلم",
+      "allday": "طاقة طوال اليوم",
+      "join": "انضم إلى 10,000+ محترف يثقون بـ SURGE",
+      "faq": "لصقات طاقة SURGE: إجابات على أسئلتك",
+      "cta": "اطلب SURGE الآن"
+    }
+  },
+  "power_bar": {
+    "high_energy": "طاقة عالية",
+    "doctor_developed": "مطوّر من قبل طبيب",
+    "backed_by_science": "مدعوم بالعلم",
+    "free_worldwide_shipping": "شحن مجاني عالمي"
+  },
+  "ui": {
+    "ondermax_hero": {
+      "five_hundred_plus_results": "500+ نتيجة",
+      "thirty_day_guarantee": "ضمان 30 يوم",
+      "just_results": "النتائج فقط.",
+      "doctor_built_system": "نظام مطوّر من قبل طبيب، مستوحى سريرياً",
+      "surge_drift_system": "SURGE + DRIFT — نظام البيوهكينغ.",
+      "shop_the_stack": "تسوق المجموعة",
+      "how_it_works": "كيف يعمل ↓",
+      "shop_now": "تسوق الآن"
+    },
+    "benefits_story": {
+      "stick_it": "Stick It",
+      "absorb_it": "Absorb It",
+      "feel_it": "Feel It"
+    },
+    "header_drawer": {
+      "results_and_reviews": "Results & Reviews",
+      "trust_text": "★ <strong>500+</strong> verified results · 🚚 <strong>Free</strong> express shipping · 🛡️ <strong>30-day</strong> money-back guarantee"
+    }
+  }
 }

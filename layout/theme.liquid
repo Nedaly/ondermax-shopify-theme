@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
+    
+    <meta name="shrine-auth"
+          content="{{ settings.shrine_auth_token | default: settings.authentication_token | escape }}"
+          class="notranslate"
+          data-i18n-lock
+          translate="no">
    
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     <link rel="preconnect" href="https://js.shrinetheme.com" crossorigin>
@@ -114,7 +120,6 @@
           --font-body-weight-bold: {{ settings.custom_body_font_weight | plus: 300 | at_most: 1000 }};
         }
       {% endif %}
-      {% if settings.animations_type == blank or settings.animations_type.size < 196 %}main{visibility:hidden !important;}{% endif %}
       {% if settings.custom_header_font_link == blank %}
         {{ settings.type_header_font | font_face: font_display: 'swap' }}
         :root {
@@ -455,12 +460,15 @@
       {{ 'rtl.css' | asset_url | stylesheet_tag: preload: true }}
     {% endif %}
     
-    {% comment %} Language-specific CSS files {% endcomment %}
-    {% if request.locale.iso_code == 'ar' %}
+    {%- comment -%} Arabic / Hebrew font & RTL bundles {%- endcomment -%}
+    {% if request.locale.iso_code contains 'ar' %}
       {{ 'lang-ar.css' | asset_url | stylesheet_tag }}
     {% endif %}
-    {% if request.locale.iso_code == 'he' %}
+    {% if request.locale.iso_code contains 'he' %}
       {{ 'lang-he.css' | asset_url | stylesheet_tag }}
+    {% endif %}
+    {% if request.locale.iso_code contains 'ar' or request.locale.iso_code contains 'he' %}
+      {{ 'rtl.css' | asset_url | stylesheet_tag }}
     {% endif %}
 
     {%- unless settings.type_body_font.system? -%}
