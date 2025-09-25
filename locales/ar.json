@@ -1,0 +1,42 @@
+{
+  "products": {
+    "product": {
+      "fake_stock_message_html": "تبقّى فقط <span id=\"fake-stock-count\" class=\"rtl-num\">{{ count }}</span> في المخزون"
+    }
+  },
+  "cart": {
+    "general": {
+      "continue_shopping": "متابعة التسوق",
+      "note": "ملاحظة",
+      "remove": "إزالة",
+      "subtotal": "المجموع الفرعي",
+      "taxes_included": "الضرائب مشمولة",
+      "total": "المجموع"
+    }
+  },
+  "general": {
+    "accessibility": {
+      "close": "إغلاق",
+      "skip_to_content": "الانتقال إلى المحتوى"
+    },
+    "meta": {
+      "tags": "العلامات",
+      "page": "صفحة {{ page }}"
+    },
+    "pagination": {
+      "current_page": "الصفحة الحالية",
+      "page": "صفحة {{ page }}"
+    },
+    "search": {
+      "no_results": "لم يتم العثور على نتائج لـ \"{{ terms }}\"",
+      "results_with_count": "{{ count }} نتيجة لـ \"{{ terms }}\"",
+      "results_with_count_and_term": "{{ count }} نتيجة لـ \"{{ terms }}\""
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "مشاركة على فيسبوك",
+        "share_on_twitter": "مشاركة على تويتر"
+      }
+    }
+  }
+}
