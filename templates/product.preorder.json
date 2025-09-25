@@ -19,7 +19,9 @@
           }
         }
       },
-      "block_order": ["text_tet97j"],
+      "block_order": [
+        "text_tet97j"
+      ],
       "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -111,7 +113,6 @@
             "text_1": "🌍 Free Worldwide Shipping",
             "text_2": "🧑‍⚕️ Doctor Developed",
             "text_3": "🔬 Backed by Science",
-            "text_4": "🔄 30-Day Money Back Guarantee",
             "icon_scale": 120,
             "icon_color": "#121212",
             "icon_1": "",
@@ -120,8 +121,6 @@
             "filled_icon_2": false,
             "icon_3": "",
             "filled_icon_3": false,
-            "icon_4": "",
-            "filled_icon_4": false,
             "width": "100%",
             "direction": "horizontal",
             "column_gap": 3,
@@ -451,7 +450,9 @@
           }
         }
       },
-      "block_order": ["judge_me_reviews_review_widget_bACCLK"],
+      "block_order": [
+        "judge_me_reviews_review_widget_bACCLK"
+      ],
       "settings": {
         "display_id": false,
         "include_margins": true
@@ -479,7 +480,11 @@
           }
         }
       },
-      "block_order": ["text_EEXyiX", "text_V7RMqT", "text_8QmnpH"],
+      "block_order": [
+        "text_EEXyiX",
+        "text_V7RMqT",
+        "text_8QmnpH"
+      ],
       "name": "Power Bar Under Hero",
       "settings": {
         "display_id": false,
@@ -585,7 +590,6 @@
             "pro_title": "All-Day Energy",
             "pro_desc": "<p>NAD+ Creatine, B-Vitamins for sustained performance.</p>",
             "atc_btn": "Shop Surge",
-            "btn_ulr": "shopify://products/high-energy-stack",
             "show_btn_outline": false,
             "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-sun w-16 h-16 text-yellow-300/30 animate-spin\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:14:14\" data-orchids-name=\"Sun\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M12 2v2\"></path><path d=\"M12 20v2\"></path><path d=\"m4.93 4.93 1.41 1.41\"></path><path d=\"m17.66 17.66 1.41 1.41\"></path><path d=\"M2 12h2\"></path><path d=\"M20 12h2\"></path><path d=\"m6.34 17.66-1.41 1.41\"></path><path d=\"m19.07 4.93-1.41 1.41\"></path></svg>",
             "icon_animation": "bounce_rotate"
@@ -602,14 +606,16 @@
             "pro_title": "All-Night Rest",
             "pro_desc": "<p>Magnesium, Melatonin for deeper rest and restoration.</p>",
             "atc_btn": "Shop Drift",
-            "btn_ulr": "shopify://products/high-energy-stack-copy",
             "show_btn_outline": true,
             "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-moon w-16 h-16 text-blue-100/30 animate-pulse\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:83:14\" data-orchids-name=\"Moon\"><path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\"></path></svg>",
             "icon_animation": "pulse_bounce"
           }
         }
       },
-      "block_order": ["text_78hKmU", "text_Vh7Cyj"],
+      "block_order": [
+        "text_78hKmU",
+        "text_Vh7Cyj"
+      ],
       "name": "Two products section",
       "settings": {
         "p_top": 75,

@@ -60,7 +60,11 @@
           }
         }
       },
-      "block_order": ["image_slide_1", "image_slide_2", "image_slide_3"],
+      "block_order": [
+        "image_slide_1",
+        "image_slide_2",
+        "image_slide_3"
+      ],
       "name": "Static Image Grid",
       "settings": {
         "display_id": false,
@@ -69,34 +73,8 @@
         "title_highlight_color": "#121212",
         "heading_size": "h1",
         "color_scheme": "background-1",
-        "type": "slide",
-        "drag": "disabled",
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "center_mode": false,
-        "arrows_color_scheme": "inverse",
-        "transparent_arrows": false,
-        "dots_color_scheme": "inverse",
-        "desktop_page_width": "desktop-full-page",
         "desktop_border_radius": 0,
-        "slides_desktop": 3,
-        "per_move_desktop": 1,
-        "desktop_spacing": 0,
-        "desktop_side_padding": 0,
-        "desktop_padding_calc": true,
-        "desktop_adaptive_height": false,
-        "desktop_dots_position": "hidden",
-        "desktop_arrows_position": "sides",
-        "mobile_full_page": false,
         "mobile_border_radius": 0,
-        "slides_mobile": 2,
-        "per_move_mobile": 1,
-        "mobile_spacing": 0,
-        "mobile_side_padding": 0,
-        "mobile_padding_calc": true,
-        "mobile_adaptive_height": false,
-        "mobile_dots_position": "hidden",
-        "mobile_arrows_position": "hidden",
         "padding_top": 0,
         "padding_bottom": 0,
         "custom_colors_background": "#ffffff",
@@ -126,7 +104,9 @@
           }
         }
       },
-      "block_order": ["gif_1"],
+      "block_order": [
+        "gif_1"
+      ],
       "name": "Product Showcase GIFs",
       "settings": {
         "background_color": "#ffffff",
@@ -404,7 +384,10 @@
           }
         }
       },
-      "block_order": ["text_GzBpnz", "text_DkN7rF"],
+      "block_order": [
+        "text_GzBpnz",
+        "text_DkN7rF"
+      ],
       "name": "Two products section",
       "settings": {
         "p_top": 75,
@@ -433,7 +416,11 @@
           }
         }
       },
-      "block_order": ["text_YBWJWN", "text_G4EaEN", "text_8EMxTF"],
+      "block_order": [
+        "text_YBWJWN",
+        "text_G4EaEN",
+        "text_8EMxTF"
+      ],
       "name": "Profile information",
       "settings": {
         "bg_color": "#1a1a1a",
@@ -630,7 +617,9 @@
           }
         }
       },
-      "block_order": ["image_QxtVcG"],
+      "block_order": [
+        "image_QxtVcG"
+      ],
       "disabled": true,
       "name": "Mosaic Gallery",
       "settings": {
