@@ -186,7 +186,7 @@
   display: grid;
   align-items: center;
   min-height: inherit;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .hero-col {
   position: relative;

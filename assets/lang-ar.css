@@ -17,7 +17,7 @@
 }
 
 /* Arabic typography & micro-tweaks */
-html:lang(ar) body {
+html:lang(ar) body *{
   font-family:
     'PlexArabic',
     Cairo,
