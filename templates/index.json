@@ -12,14 +12,14 @@
     "hero": {
       "type": "ondermax-hero",
       "settings": {
-        "kicker": "{{ settings.hero_kicker_text | default: 'Take Control of Your 24 Hours' }}",
+        "kicker": "Take Control of Your 24 Hours",
         "heading": "Real Results.",
         "subheading": "Maximum Day.\n Awake when you want, asleep when you need.",
         "use_video": true,
         "video_cdn_url": "https://cdn.shopify.com/videos/c/o/v/6f036483135b4d3d8f375016a8ed00a5.mp4",
         "overlay_strength": 30,
-        "primary_link": "shopify://products/{{ settings.stack_product_handle | default: 'high-energy-and-sleep-stack' }}",
-        "primary_label": "{{ settings.shop_stack_label | default: 'Shop the Stack' }}",
+        "primary_link": "shopify://products/high-energy-and-sleep-stack",
+        "primary_label": "Shop the Stack",
         "secondary_link": "#shopify-section-template--26495401165131__benefits_story",
         "secondary_label": "How it Works ↓",
         "learn_anchor": "science-authority",
@@ -602,7 +602,7 @@
         "custom_contaner_colors_background": "#ffffff",
         "custom_container_gradient_background": "",
         "custom_contaner_colors_text": "#2e2a39",
-        "btn_url": "shopify://products/{{ settings.stack_product_handle | default: 'high-energy-and-sleep-stack' }}",
+        "btn_url": "shopify://products/high-energy-and-sleep-stack",
         "btn": "SHOP NOW",
         "btn_subheading": ""
       }
