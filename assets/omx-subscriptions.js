@@ -36,15 +36,12 @@
   const manualOverride =
     manualUrlParam || manualDataAttr || productId || productHandle || autoDetectedId || '';
   
-  // Debug logging
+  // Debug logging (production)
   if (DEBUG) {
     console.log('OMX Subscription Debug:', {
       productId,
       productHandle,
       variantId,
-      manualUrlParam,
-      manualDataAttr,
-      autoDetectedId,
       manualOverride,
       allocs: allocs.length,
       groups: groups.length
@@ -61,6 +58,15 @@
       allocsRaw,
       groupsRaw
     );
+    
+  // Debug the resolution result (production)
+  if (DEBUG) {
+    console.log('OMX Subscription Resolution:', {
+      sellingPlanId,
+      subscriptionPriceCents,
+      resolvedFrom
+    });
+  }
 
   // expose for console checks
   window.__OMX_LAST_PLAN_ID = sellingPlanId;
@@ -200,10 +206,9 @@
       sp.value = sellingPlanId || '';
       form.appendChild(sp);
       
-      // Debug logging
+      // Debug logging (production)
       if (DEBUG) {
         console.log('OMX Subscription: Injecting selling plan', {
-          mode: state.mode,
           sellingPlanId,
           form: form.tagName
         });
@@ -286,12 +291,41 @@
 
   // hook both click & submit so we survive themes that serialize manually
   if (cta) {
-    const form = cta.closest('form[action^="/cart/add"]');
+    const form = cta.closest('form[action^="/cart/add"]') || 
+                 cta.closest('form') || 
+                 document.querySelector('form[action*="/cart/add"]') ||
+                 document.querySelector('form[action*="cart"]');
     const attach = () => {
-      if (form) injectPayloadInto(form);
+      if (form) {
+        injectPayloadInto(form);
+        if (DEBUG) {
+          console.log('OMX Subscription: Form found and payload injected', {
+            form: form.tagName,
+            action: form.action,
+            sellingPlanId
+          });
+        }
+      } else {
+        console.warn('OMX Subscription: No form found for CTA', cta);
+        // Try to find any form on the page
+        const allForms = document.querySelectorAll('form');
+        console.log('Available forms on page:', Array.from(allForms).map(f => ({
+          tagName: f.tagName,
+          action: f.action,
+          method: f.method
+        })));
+      }
     };
     cta.addEventListener('click', attach, opt);
     form && form.addEventListener('submit', attach, opt);
+    
+    // Debug form detection (production)
+    if (DEBUG) {
+      console.log('OMX Subscription: CTA and form detection', {
+        cta: cta ? cta.tagName : 'not found',
+        form: form ? form.tagName : 'not found'
+      });
+    }
   }
 
   // variant change → re-resolve plan from fresh DOM data attrs
