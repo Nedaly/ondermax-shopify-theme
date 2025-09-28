@@ -12,7 +12,7 @@
   const opt = { signal: ac.signal };
 
   // ----- seeds from DOM -----
-  const moneyFormat = root.dataset.moneyFormat || '{{ shop.money_format }}';
+  const moneyFormat = root.dataset.moneyFormat || '${{amount}}';
   const basePriceCents = Number(root.dataset.basePriceCents || 0);
   let variantId = root.dataset.variantId || null;
   const productId = root.dataset.productId || null;
