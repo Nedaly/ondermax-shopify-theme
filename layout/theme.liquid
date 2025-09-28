@@ -81,6 +81,18 @@
     {% else %}
       <link rel="canonical" href="{{ canonical_url }}">
     {% endif %}
+    
+    <!-- Development override to prevent locale redirects -->
+    {% if request.host contains '127.0.0.1' or request.host contains 'localhost' %}
+      <script>
+        // Prevent locale redirects in development
+        if (window.location.href.includes('ondermax.store') && !window.location.href.includes('127.0.0.1')) {
+          const newUrl = window.location.href.replace('ondermax.store', '127.0.0.1:9292');
+          console.log('Development: Redirecting from', window.location.href, 'to', newUrl);
+          window.location.href = newUrl;
+        }
+      </script>
+    {% endif %}
 
 
     {% if page_description %}
