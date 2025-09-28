@@ -1999,3 +1999,13 @@
 .omx-container.page-width {
   padding-left: 0;
 }
+
+/* Product Title Fix - Prevent Truncation */
+.product-title {
+  white-space: normal;
+  overflow: visible;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.2;
+}

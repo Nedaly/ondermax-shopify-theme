@@ -15,6 +15,8 @@
   const moneyFormat = root.dataset.moneyFormat || '${{amount}}';
   const basePriceCents = Number(root.dataset.basePriceCents || 0);
   let variantId = root.dataset.variantId || null;
+  const productId = root.dataset.productId || null;
+  const productHandle = root.dataset.productHandle || null;
   const allocsRaw = root.dataset.spAllocJson || '[]';
   const groupsRaw = root.dataset.spGroupsJson || '[]';
   const manualDataAttr = root.dataset.sellingPlanId || '';
@@ -29,8 +31,25 @@
     !manualUrlParam && !manualDataAttr
       ? extractPlanIdFromString(allocsRaw) || extractPlanIdFromString(groupsRaw)
       : '';
+  
+  // Enhanced fallback: try product ID, handle, then auto-detect
   const manualOverride =
-    manualUrlParam || manualDataAttr || autoDetectedId || '';
+    manualUrlParam || manualDataAttr || productId || productHandle || autoDetectedId || '';
+  
+  // Debug logging
+  if (DEBUG) {
+    console.log('OMX Subscription Debug:', {
+      productId,
+      productHandle,
+      variantId,
+      manualUrlParam,
+      manualDataAttr,
+      autoDetectedId,
+      manualOverride,
+      allocs: allocs.length,
+      groups: groups.length
+    });
+  }
 
   // resolve plan id + price
   let { sellingPlanId, subscriptionPriceCents, resolvedFrom } =
@@ -180,6 +199,15 @@
       sp.name = 'selling_plan';
       sp.value = sellingPlanId || '';
       form.appendChild(sp);
+      
+      // Debug logging
+      if (DEBUG) {
+        console.log('OMX Subscription: Injecting selling plan', {
+          mode: state.mode,
+          sellingPlanId,
+          form: form.tagName
+        });
+      }
       let q = form.querySelector('input[name="quantity"]');
       if (!q) q = hidden(form, 'omx-qty', 'quantity', '1');
       q.value = '1';
@@ -215,6 +243,10 @@
         if (state.mode === 'subscription') {
           state.months = 1;
           qtyInput.value = '1';
+          // Ensure selling plan is available for subscription
+          if (!sellingPlanId) {
+            console.warn('OMX Subscription: No selling plan ID found for subscription mode');
+          }
         }
         setCardSelection();
         setMonthsVisibility();
