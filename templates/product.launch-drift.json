@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -32,12 +41,14 @@
         },
         "description": {
           "type": "description",
-          "settings": { "margin_top": 12, "margin_bottom": 24 }
+          "settings": {
+            "margin_top": 12,
+            "margin_bottom": 24
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button",
             "margin_top": 15,
             "margin_bottom": 15
           }
@@ -128,30 +139,6 @@
         "sticky_atc",
         "custom_css"
       ],
-      "disabled_blocks": [
-        "@app",
-        "quantity_selector",
-        "quantity_gifts",
-        "rating_stars",
-        "trustpilot_stars",
-        "clickable_discount",
-        "sku",
-        "inventory",
-        "reviews",
-        "share",
-        "collapsible_tab",
-        "popup",
-        "rating",
-        "complementary_products",
-        "sizing_chart",
-        "product_upsells",
-        "image",
-        "video",
-        "divider",
-        "payment_badges",
-        "urgency_text",
-        "emoji_benefits"
-      ],
       "settings": {
         "enable_sticky_info": true,
         "display_variant_image_first": false,
@@ -186,7 +173,11 @@
           }
         }
       },
-      "block_order": ["text_EEXyiX", "text_V7RMqT", "text_8QmnpH"],
+      "block_order": [
+        "text_EEXyiX",
+        "text_V7RMqT",
+        "text_8QmnpH"
+      ],
       "name": "Power Bar Under Hero",
       "settings": {
         "display_id": false,
@@ -215,10 +206,7 @@
         "desktop_padding_bottom": 16,
         "custom_colors_background": "#ffffff",
         "custom_gradient_background": "linear-gradient(135deg,#1C8E8E 0%,#6D38B3 100%)",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
+        "custom_colors_text": "#ffffff"
       }
     },
     "science_backed": {
@@ -286,19 +274,17 @@
             "pro_title": "All-Day Energy",
             "pro_desc": "<p>NAD+ Creatine, B-Vitamins for sustained performance.</p>",
             "atc_btn": "",
-            "btn_ulr": "",
             "show_btn_outline": false,
             "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-sun w-16 h-16 text-yellow-300/30 animate-spin\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:14:14\" data-orchids-name=\"Sun\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M12 2v2\"></path><path d=\"M12 20v2\"></path><path d=\"m4.93 4.93 1.41 1.41\"></path><path d=\"m17.66 17.66 1.41 1.41\"></path><path d=\"M2 12h2\"></path><path d=\"M20 12h2\"></path><path d=\"m6.34 17.66-1.41 1.41\"></path><path d=\"m19.07 4.93-1.41 1.41\"></path></svg>",
             "icon_animation": "bounce_rotate"
           }
         }
       },
-      "block_order": ["text_78hKmU"],
+      "block_order": [
+        "text_78hKmU"
+      ],
       "name": "Two products section",
       "settings": {
-        "heading": "",
-        "subheading": "",
-        "bg_color": "#ffffff",
         "p_top": 80,
         "p_bottom": 80
       }
@@ -334,7 +320,11 @@
           }
         }
       },
-      "block_order": ["image_slide_1", "image_slide_2", "image_slide_3"],
+      "block_order": [
+        "image_slide_1",
+        "image_slide_2",
+        "image_slide_3"
+      ],
       "name": "Static Image Grid",
       "settings": {
         "display_id": false,
