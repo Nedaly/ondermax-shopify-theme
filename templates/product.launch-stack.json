@@ -279,102 +279,6 @@
         "p_bottom": 80
       }
     },
-    "launch_stack_compare": {
-      "type": "launch-stack-compare",
-      "blocks": {
-        "energy_duration": {
-          "type": "row",
-          "settings": {
-            "row_label": "Energy Duration",
-            "col_a_state": "check",
-            "col_b_state": "minus",
-            "col_c_state": "cross"
-          }
-        },
-        "delivery_method": {
-          "type": "row",
-          "settings": {
-            "row_label": "Delivery Method",
-            "col_a_state": "check",
-            "col_b_state": "cross",
-            "col_c_state": "cross"
-          }
-        },
-        "digestive_impact": {
-          "type": "row",
-          "settings": {
-            "row_label": "Digestive Impact",
-            "col_a_state": "check",
-            "col_b_state": "minus",
-            "col_c_state": "cross"
-          }
-        },
-        "consistency": {
-          "type": "row",
-          "settings": {
-            "row_label": "Consistency/Compliance",
-            "col_a_state": "check",
-            "col_b_state": "minus",
-            "col_c_state": "cross"
-          }
-        },
-        "crash_anxiety": {
-          "type": "row",
-          "settings": {
-            "row_label": "Crash/Anxiety",
-            "col_a_state": "check",
-            "col_b_state": "minus",
-            "col_c_state": "cross"
-          }
-        },
-        "convenience": {
-          "type": "row",
-          "settings": {
-            "row_label": "Convenience",
-            "col_a_state": "check",
-            "col_b_state": "minus",
-            "col_c_state": "cross"
-          }
-        },
-        "price_per_day": {
-          "type": "row",
-          "settings": {
-            "row_label": "Price per day",
-            "col_a_text": "$1.56/day",
-            "col_b_text": "$2–4/day",
-            "col_c_text": "$3–6/day",
-            "col_a_state": "text",
-            "col_b_state": "text",
-            "col_c_state": "text"
-          }
-        }
-      },
-      "block_order": [
-        "energy_duration",
-        "delivery_method",
-        "digestive_impact",
-        "consistency",
-        "crash_anxiety",
-        "convenience",
-        "price_per_day"
-      ],
-      "name": "Launch Stack Compare",
-      "settings": {
-        "title": "Why the Launch Stack Beats the Alternatives",
-        "subtitle": "See how our transdermal patches outperform traditional supplements",
-        "theme_style": "light",
-        "col_a_label": "Launch Stack (Patches)",
-        "col_b_label": "Pills",
-        "col_c_label": "Energy Drinks",
-        "show_badges": true,
-        "show_caption": true,
-        "caption_text": "Results may vary. Consult your healthcare provider before starting any supplement regimen.",
-        "corner_radius": 20,
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "color_scheme": "background-1"
-      }
-    },
     "comparison_table": {
       "type": "comparison-table",
       "blocks": {
@@ -998,7 +902,6 @@
         "main",
         "horizontal_ticker",
         "science_backed",
-        "launch_stack_compare",
         "comparison_table",
         "surge_day_only",
         "drift_night_only",
