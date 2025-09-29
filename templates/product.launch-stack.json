@@ -809,69 +809,6 @@
         "p_bottom": 80
       }
     },
-    "ugc_gallery": {
-      "type": "ugc-video-gallery",
-      "blocks": {
-        "ugc_video_1": {
-          "type": "ugc_video",
-          "settings": {
-            "customer_name": "Ahmed Al-Rashid",
-            "customer_role": "Software Engineer",
-            "description": "SURGE gives me that clean energy boost I need for my 6 AM workouts. No crash, just sustained focus all morning.",
-            "show_rating": true,
-            "rating": 5
-          }
-        },
-        "ugc_video_2": {
-          "type": "ugc_video",
-          "settings": {
-            "customer_name": "Fatima Hassan",
-            "customer_role": "Working Mother",
-            "description": "Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything.",
-            "show_rating": true,
-            "rating": 5
-          }
-        },
-        "ugc_video_3": {
-          "type": "ugc_video",
-          "settings": {
-            "customer_name": "Khalid Al-Sabah",
-            "customer_role": "Fitness Trainer",
-            "description": "SURGE has completely transformed my morning routine. I wake up feeling energized and ready to tackle my day.",
-            "show_rating": true,
-            "rating": 5
-          }
-        },
-        "ugc_video_4": {
-          "type": "ugc_video",
-          "settings": {
-            "customer_name": "Dr. Omar Al-Zahra",
-            "customer_role": "Medical Director",
-            "description": "SURGE helps me maintain focus during long surgery days. I stick it on during my morning routine and stay sharp all day.",
-            "show_rating": true,
-            "rating": 5
-          }
-        }
-      },
-      "block_order": [
-        "ugc_video_1",
-        "ugc_video_2",
-        "ugc_video_3",
-        "ugc_video_4"
-      ],
-      "name": "UGC Video Gallery",
-      "settings": {
-        "heading": "Real Results from Real People",
-        "subheading": "See how SURGE is transforming lives every day with authentic customer stories",
-        "bg_color": "#0f0f0f",
-        "show_badge": true,
-        "badge_text": "🎥 Real Results",
-        "badge_style": "primary",
-        "badge_size": "badge--medium",
-        "p_top": 80,
-        "p_bottom": 80
-      }
-    },
     "faq_section": {
       "type": "collapsible-content",
       "blocks": {
@@ -977,16 +914,15 @@
       }
     }
   },
-  "order": [
-    "main",
-    "horizontal_ticker",
-    "science_backed",
-    "problem_solution",
-    "comparison_table",
-    "surge_day_only",
-    "static_image_grid",
-    "testimonial_grid",
-    "ugc_gallery",
-    "faq_section"
-  ]
+      "order": [
+        "main",
+        "horizontal_ticker",
+        "science_backed",
+        "problem_solution",
+        "comparison_table",
+        "surge_day_only",
+        "static_image_grid",
+        "testimonial_grid",
+        "faq_section"
+      ]
 }
