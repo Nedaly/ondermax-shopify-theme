@@ -652,6 +652,25 @@
       "button_label": "ADD BOTH",
       "added": "Added!",
       "on_sale": "On Sale"
+    },
+    "compare": {
+      "title": "Why the Launch Stack Beats the Alternatives",
+      "subtitle": "See how our transdermal patches outperform traditional supplements",
+      "feature": "Feature",
+      "col_a": "Launch Stack (Patches)",
+      "col_b": "Pills",
+      "col_c": "Energy Drinks",
+      "caption": "Results may vary. Consult your healthcare provider before starting any supplement regimen.",
+      "badge": {
+        "patch": "No Pills",
+        "pills": "Oral",
+        "drinks": "Caffeinated"
+      },
+      "legend": {
+        "check": "Yes",
+        "cross": "No",
+        "minus": "Partial"
+      }
     }
   }
 }

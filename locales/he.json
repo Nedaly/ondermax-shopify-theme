@@ -125,6 +125,25 @@
         "added": "נוסף!",
         "on_sale": "במבצע"
       }
+    },
+    "compare": {
+      "title": "",
+      "subtitle": "",
+      "feature": "",
+      "col_a": "",
+      "col_b": "",
+      "col_c": "",
+      "caption": "",
+      "badge": {
+        "patch": "",
+        "pills": "",
+        "drinks": ""
+      },
+      "legend": {
+        "check": "",
+        "cross": "",
+        "minus": ""
+      }
     }
   }
 }

@@ -43,23 +43,23 @@
             <caption class="sr-only">{{ section.settings.title | default: 'Product comparison table' }}</caption>
             <thead>
               <tr>
-                <th scope="col" class="feature-column">Feature</th>
+                <th scope="col" class="feature-column">{{ 'compare.feature' | t | default: 'Feature' }}</th>
                 <th scope="col" class="column-a">
-                  {{ section.settings.col_a_label | default: 'Launch Stack (Patches)' }}
+                  {{ section.settings.col_a_label | default: 'compare.col_a' | t }}
                   {%- if section.settings.show_badges -%}
-                    <span class="column-badge">No Pills</span>
+                    <span class="column-badge">{{ 'compare.badge.patch' | t | default: 'No Pills' }}</span>
                   {%- endif -%}
                 </th>
                 <th scope="col" class="column-b">
-                  {{ section.settings.col_b_label | default: 'Pills' }}
+                  {{ section.settings.col_b_label | default: 'compare.col_b' | t }}
                   {%- if section.settings.show_badges -%}
-                    <span class="column-badge">Oral</span>
+                    <span class="column-badge">{{ 'compare.badge.pills' | t | default: 'Oral' }}</span>
                   {%- endif -%}
                 </th>
                 <th scope="col" class="column-c">
-                  {{ section.settings.col_c_label | default: 'Energy Drinks' }}
+                  {{ section.settings.col_c_label | default: 'compare.col_c' | t }}
                   {%- if section.settings.show_badges -%}
-                    <span class="column-badge">Caffeinated</span>
+                    <span class="column-badge">{{ 'compare.badge.drinks' | t | default: 'Caffeinated' }}</span>
                   {%- endif -%}
                 </th>
               </tr>
@@ -73,19 +73,19 @@
                       <td class="column-a-cell">
                         {%- case block.settings.col_a_state -%}
                           {%- when 'check' -%}
-                            <span class="icon-check" aria-label="Yes">
+                            <span class="icon-check" aria-label="{{ 'compare.legend.check' | t | default: 'Yes' }}">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
                             </span>
                           {%- when 'cross' -%}
-                            <span class="icon-cross" aria-label="No">
+                            <span class="icon-cross" aria-label="{{ 'compare.legend.cross' | t | default: 'No' }}">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
                             </span>
                           {%- when 'minus' -%}
-                            <span class="icon-minus" aria-label="Partial">
+                            <span class="icon-minus" aria-label="{{ 'compare.legend.minus' | t | default: 'Partial' }}">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 10H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
@@ -97,19 +97,19 @@
                       <td class="column-b-cell">
                         {%- case block.settings.col_b_state -%}
                           {%- when 'check' -%}
-                            <span class="icon-check" aria-label="Yes">
+                            <span class="icon-check" aria-label="{{ 'compare.legend.check' | t | default: 'Yes' }}">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
                             </span>
                           {%- when 'cross' -%}
-                            <span class="icon-cross" aria-label="No">
+                            <span class="icon-cross" aria-label="{{ 'compare.legend.cross' | t | default: 'No' }}">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
                             </span>
                           {%- when 'minus' -%}
-                            <span class="icon-minus" aria-label="Partial">
+                            <span class="icon-minus" aria-label="{{ 'compare.legend.minus' | t | default: 'Partial' }}">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 10H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
@@ -121,19 +121,19 @@
                       <td class="column-c-cell">
                         {%- case block.settings.col_c_state -%}
                           {%- when 'check' -%}
-                            <span class="icon-check" aria-label="Yes">
+                            <span class="icon-check" aria-label="{{ 'compare.legend.check' | t | default: 'Yes' }}">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
                             </span>
                           {%- when 'cross' -%}
-                            <span class="icon-cross" aria-label="No">
+                            <span class="icon-cross" aria-label="{{ 'compare.legend.cross' | t | default: 'No' }}">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
                             </span>
                           {%- when 'minus' -%}
-                            <span class="icon-minus" aria-label="Partial">
+                            <span class="icon-minus" aria-label="{{ 'compare.legend.minus' | t | default: 'Partial' }}">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 10H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
