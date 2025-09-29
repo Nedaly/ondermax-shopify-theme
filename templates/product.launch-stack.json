@@ -283,7 +283,7 @@
       "type": "launch-stack-compare",
       "blocks": {
         "energy_duration": {
-          "type": "feature_row",
+          "type": "compare_row",
           "settings": {
             "row_label": "Energy Duration",
             "col_a_state": "check",
@@ -292,7 +292,7 @@
           }
         },
         "delivery_method": {
-          "type": "feature_row",
+          "type": "compare_row",
           "settings": {
             "row_label": "Delivery Method",
             "col_a_state": "check",
@@ -301,7 +301,7 @@
           }
         },
         "digestive_impact": {
-          "type": "feature_row",
+          "type": "compare_row",
           "settings": {
             "row_label": "Digestive Impact",
             "col_a_state": "check",
@@ -310,7 +310,7 @@
           }
         },
         "consistency": {
-          "type": "feature_row",
+          "type": "compare_row",
           "settings": {
             "row_label": "Consistency/Compliance",
             "col_a_state": "check",
@@ -319,7 +319,7 @@
           }
         },
         "crash_anxiety": {
-          "type": "feature_row",
+          "type": "compare_row",
           "settings": {
             "row_label": "Crash/Anxiety",
             "col_a_state": "check",
@@ -328,7 +328,7 @@
           }
         },
         "convenience": {
-          "type": "feature_row",
+          "type": "compare_row",
           "settings": {
             "row_label": "Convenience",
             "col_a_state": "check",
@@ -337,7 +337,7 @@
           }
         },
         "price_per_day": {
-          "type": "feature_row",
+          "type": "compare_row",
           "settings": {
             "row_label": "Price per day",
             "col_a_text": "$1.56/day",
