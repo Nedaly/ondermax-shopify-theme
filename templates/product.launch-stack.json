@@ -354,6 +354,7 @@
         "minimalistic_border_opacity": 20,
         "color_scheme": "custom",
         "custom_colors_background": "#1a1a1a",
+        "custom_gradient_background": "linear-gradient(135deg, #0D1320 0%, #1a1a1a 50%, #2D1B69 100%)",
         "custom_colors_text": "#ffffff",
         "custom_colors_solid_button_background": "#00908d",
         "custom_colors_solid_button_text": "#ffffff",
