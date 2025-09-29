@@ -73,15 +73,17 @@
   }
 
   .color-scheme-{{ section.id }} .button--primary {
-    background: linear-gradient(135deg, #0D1320 0%, #1a1a1a 50%, #2D1B69 100%) !important;
-    border: none !important;
-    box-shadow: 0 4px 15px rgba(13, 19, 32, 0.3);
+    background: #ffffff !important;
+    color: #0D1320 !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
   }
 
   .color-scheme-{{ section.id }} .button--primary:hover {
-    background: linear-gradient(135deg, #2D1B69 0%, #1a1a1a 50%, #0D1320 100%) !important;
-    box-shadow: 0 6px 20px rgba(13, 19, 32, 0.4);
+    background: #f8f9fa !important;
+    color: #0D1320 !important;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
     transform: translateY(-2px);
   }
 {%- endstyle -%}
