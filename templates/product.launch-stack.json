@@ -285,7 +285,7 @@
         "row_1": {
           "type": "row",
           "settings": {
-            "benefit": "Energy Duration",
+            "benefit": "Energy Duration (hours of clean energy)",
             "us": "Lasts all day & night",
             "them": "Peaks, then fades"
           }
@@ -293,41 +293,41 @@
         "row_2": {
           "type": "row",
           "settings": {
-            "benefit": "Delivery Method",
-            "us": "Transdermal patch; no swallowing",
-            "them": "Oral; harder to digest"
+            "benefit": "Delivery Method (how it enters your body)",
+            "us": "Transdermal patch, no swallowing",
+            "them": "Oral / sugary"
           }
         },
         "row_3": {
           "type": "row",
           "settings": {
-            "benefit": "Digestive Impact",
-            "us": "Gentle; bypasses stomach",
-            "them": "Can irritate gut"
+            "benefit": "Digestive Impact (gut friendliness)",
+            "us": "Gentle on stomach",
+            "them": "Irritates gut"
           }
         },
         "row_4": {
           "type": "row",
           "settings": {
-            "benefit": "Consistency",
-            "us": "Auto-release; zero effort",
-            "them": "Easy to forget"
+            "benefit": "Consistency (daily compliance)",
+            "us": "Set & forget",
+            "them": "Easy to miss"
           }
         },
         "row_5": {
           "type": "row",
           "settings": {
-            "benefit": "Convenience",
+            "benefit": "Convenience (ease of use)",
             "us": "Peel & apply anywhere",
-            "them": "Carry & plan"
+            "them": "Cans/pills to carry"
           }
         },
         "row_6": {
           "type": "row",
           "settings": {
-            "benefit": "Price per day",
+            "benefit": "Price per Day",
             "us": "$1.56/day",
-            "them": "$2–4/day"
+            "them": "$3–6/day"
           }
         }
       },
@@ -344,7 +344,7 @@
         "display_id": false,
         "visibility": "always-display",
         "heading": "Why the Launch Stack Wins Every Time",
-        "subheading": "Stop wasting time on short fixes. See how patches outperform pills and energy drinks.",
+        "subheading": "Patches deliver what pills and drinks can't — clean, steady energy without the crash.",
         "style": "modern",
         "corner_radius": 16,
         "highlighted_separator_opacity": 40,
