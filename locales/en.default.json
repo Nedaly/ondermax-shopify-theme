@@ -652,6 +652,46 @@
       "button_label": "ADD BOTH",
       "added": "Added!",
       "on_sale": "On Sale"
+    },
+    "compare": {
+      "title": "Why the Launch Stack Wins Every Time",
+      "subtitle": "Stop wasting time on short fixes. See how patches outperform pills and energy drinks.",
+      "col_a": "Launch Stack (Patches)",
+      "col_b": "Pills",
+      "col_c": "Energy Drinks",
+      "caption": "Patches = steady, clean performance. Pills & drinks = ups, downs, and guesswork.",
+      "row": {
+        "energy_duration": "Energy Duration",
+        "delivery_method": "Delivery Method",
+        "digestive_impact": "Digestive Impact",
+        "consistency": "Consistency",
+        "convenience": "Convenience",
+        "price_per_day": "Price per Day",
+        "crash": "Crash & Anxiety"
+      },
+      "cell": {
+        "patches_energy": "Lasts all day & night",
+        "patches_delivery": "Transdermal patch; no swallowing",
+        "patches_digestive": "Gentle; bypasses stomach",
+        "patches_consistency": "Auto-release; zero effort",
+        "patches_crash": "Clean biology; no crash",
+        "patches_convenience": "Peel & apply anywhere",
+        "patches_price": "$1.56/day",
+        "pills_energy": "Peaks, then fades",
+        "pills_delivery": "Oral; harder to digest",
+        "pills_digestive": "Can irritate gut",
+        "pills_consistency": "Easy to forget",
+        "pills_crash": "Sometimes jittery",
+        "pills_convenience": "Carry & plan",
+        "pills_price": "$2–4/day",
+        "drinks_energy": "Spike & crash",
+        "drinks_delivery": "Sugary/high caffeine",
+        "drinks_digestive": "Acidic, bloating",
+        "drinks_consistency": "Short-term only",
+        "drinks_crash": "Common crash & anxiety",
+        "drinks_convenience": "Bulky cans; not discreet",
+        "drinks_price": "$3–6/day"
+      }
     }
   }
 }

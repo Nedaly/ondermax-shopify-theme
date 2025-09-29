@@ -286,48 +286,48 @@
           "type": "row",
           "settings": {
             "benefit": "Energy Duration",
-            "us": "8-12 hours sustained",
-            "them": "2-4 hours with crash"
+            "us": "Lasts all day & night",
+            "them": "Peaks, then fades"
           }
         },
         "row_2": {
           "type": "row",
           "settings": {
             "benefit": "Delivery Method",
-            "us": "Transdermal patch",
-            "them": "Pills & drinks"
+            "us": "Transdermal patch; no swallowing",
+            "them": "Oral; harder to digest"
           }
         },
         "row_3": {
           "type": "row",
           "settings": {
             "benefit": "Digestive Impact",
-            "us": "No stomach issues",
-            "them": "Bloating & discomfort"
+            "us": "Gentle; bypasses stomach",
+            "them": "Can irritate gut"
           }
         },
         "row_4": {
           "type": "row",
           "settings": {
             "benefit": "Consistency",
-            "us": "Same results every time",
-            "them": "Hit or miss"
+            "us": "Auto-release; zero effort",
+            "them": "Easy to forget"
           }
         },
         "row_5": {
           "type": "row",
           "settings": {
             "benefit": "Convenience",
-            "us": "Stick & forget",
-            "them": "Remember to take"
+            "us": "Peel & apply anywhere",
+            "them": "Carry & plan"
           }
         },
         "row_6": {
           "type": "row",
           "settings": {
             "benefit": "Price per day",
-            "us": "$2.50",
-            "them": "$5-8"
+            "us": "$1.56/day",
+            "them": "$2–4/day"
           }
         }
       },
@@ -343,8 +343,8 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "heading": "SURGE vs. Everything Else",
-        "subheading": "See why thousands choose SURGE over traditional energy solutions",
+        "heading": "Why the Launch Stack Wins Every Time",
+        "subheading": "Stop wasting time on short fixes. See how patches outperform pills and energy drinks.",
         "style": "modern",
         "corner_radius": 16,
         "highlighted_separator_opacity": 40,
