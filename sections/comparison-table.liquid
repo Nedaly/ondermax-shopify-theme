@@ -74,7 +74,7 @@
 
   .comparison-table-{{ section.id }} {
     background: linear-gradient(135deg, #0D1320 0%, #1a1a1a 30%, #2D1B69 70%, #4A3B8A 100%) !important;
-    border-radius: var(--border-radius);
+    border-radius: 0 !important;
     box-shadow: 0 8px 32px rgba(13, 19, 32, 0.3);
     overflow: hidden;
   }
@@ -83,6 +83,10 @@
     background: rgba(255, 255, 255, 0.1) !important;
     color: #ffffff !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  }
+
+  .comparison-table-{{ section.id }} th:first-child {
+    display: none !important;
   }
 
   .comparison-table-{{ section.id }} td {
