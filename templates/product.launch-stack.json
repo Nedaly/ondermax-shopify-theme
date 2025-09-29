@@ -285,49 +285,49 @@
         "row_1": {
           "type": "row",
           "settings": {
-            "benefit": "Energy Duration (hours of clean energy)",
-            "us": "Lasts all day & night",
-            "them": "Peaks, then fades"
+            "benefit": "Duration",
+            "us": "8-12 hours",
+            "them": "Less than 4 hours"
           }
         },
         "row_2": {
           "type": "row",
           "settings": {
-            "benefit": "Delivery Method (how it enters your body)",
-            "us": "Transdermal patch, no swallowing",
-            "them": "Oral / sugary"
+            "benefit": "Delivery",
+            "us": "Skin - easy",
+            "them": "Swallowing"
           }
         },
         "row_3": {
           "type": "row",
           "settings": {
-            "benefit": "Digestive Impact (gut friendliness)",
-            "us": "Gentle on stomach",
-            "them": "Irritates gut"
+            "benefit": "Digestive",
+            "us": "No effect",
+            "them": "Bloating & discomfort"
           }
         },
         "row_4": {
           "type": "row",
           "settings": {
-            "benefit": "Consistency (daily compliance)",
-            "us": "Set & forget",
-            "them": "Easy to miss"
+            "benefit": "Consistency",
+            "us": "Use anywhere",
+            "them": "Hard to use"
           }
         },
         "row_5": {
           "type": "row",
           "settings": {
-            "benefit": "Convenience (ease of use)",
-            "us": "Peel & apply anywhere",
-            "them": "Cans/pills to carry"
+            "benefit": "Convenience",
+            "us": "Use anywhere",
+            "them": "Hard to use"
           }
         },
         "row_6": {
           "type": "row",
           "settings": {
             "benefit": "Price per Day",
-            "us": "$1.56/day",
-            "them": "$3–6/day"
+            "us": "Less than a cup of coffee",
+            "them": "Expensive"
           }
         }
       },
@@ -343,8 +343,8 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "heading": "Patches Beat Pills & Drinks — Every Time",
-        "subheading": "Forget sugar spikes and pill fatigue. The Launch Stack gives you steady all-day energy and deep nightly recovery — no crash, no gut load, just results.",
+        "heading": "Why Patches Beat Everything Else",
+        "subheading": "Stop wasting time on pills that upset your stomach and drinks that crash you hard. The Launch Stack delivers steady 8-12 hour energy through your skin — no swallowing, no gut issues, just clean performance.",
         "style": "modern",
         "corner_radius": 16,
         "highlighted_separator_opacity": 40,
@@ -360,7 +360,9 @@
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#1C8E8E",
         "padding_top": 80,
-        "padding_bottom": 80
+        "padding_bottom": 80,
+        "us_label": "Ondermax 24 Stack",
+        "them_label": "Pills & Powders"
       }
     },
     "surge_day_only": {
