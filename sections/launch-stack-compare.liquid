@@ -1,0 +1,681 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .launch-stack-compare-{{ section.id }} {
+    --border-radius: {{ section.settings.corner_radius | divided_by: 10.0 }}rem;
+    --theme-bg: {% if section.settings.theme_style == 'dark' %}#0D1320{% else %}#F7FAFA{% endif %};
+    --theme-text: {% if section.settings.theme_style == 'dark' %}#ffffff{% else %}#0D1320{% endif %};
+    --theme-accent: #1C8E8E;
+    --theme-shadow: {% if section.settings.theme_style == 'dark' %}rgba(0, 0, 0, 0.3){% else %}rgba(0, 0, 0, 0.1){% endif %};
+  }
+
+  .color-scheme-{{ section.id }}.color-custom {
+    --color-background: {{ section.settings.custom_colors_background.red }}, {{ section.settings.custom_colors_background.green }}, {{ section.settings.custom_colors_background.blue }};
+    --color-foreground: {{ section.settings.custom_colors_text.red }}, {{ section.settings.custom_colors_text.green }}, {{ section.settings.custom_colors_text.blue }};
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="section-{{ section.id }}-padding">
+    <div class="page-width">
+      <div class="launch-stack-compare-{{ section.id }} comparison-wrapper">
+        {%- if section.settings.title != blank -%}
+          <div class="comparison-header">
+            <h2 class="comparison-title">{{ section.settings.title }}</h2>
+            {%- if section.settings.subtitle != blank -%}
+              <p class="comparison-subtitle">{{ section.settings.subtitle }}</p>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        <div class="comparison-table-container">
+          <table class="comparison-table" role="table">
+            <caption class="sr-only">{{ section.settings.title | default: 'Product comparison table' }}</caption>
+            <thead>
+              <tr>
+                <th scope="col" class="feature-column">{{ 'compare.feature' | t | default: 'Feature' }}</th>
+                <th scope="col" class="column-a">
+                  {{ section.settings.col_a_label | default: 'compare.col_a' | t }}
+                  {%- if section.settings.show_badges -%}
+                    <span class="column-badge">{{ 'compare.badge.patch' | t | default: 'No Pills' }}</span>
+                  {%- endif -%}
+                </th>
+                <th scope="col" class="column-b">
+                  {{ section.settings.col_b_label | default: 'compare.col_b' | t }}
+                  {%- if section.settings.show_badges -%}
+                    <span class="column-badge">{{ 'compare.badge.pills' | t | default: 'Oral' }}</span>
+                  {%- endif -%}
+                </th>
+                <th scope="col" class="column-c">
+                  {{ section.settings.col_c_label | default: 'compare.col_c' | t }}
+                  {%- if section.settings.show_badges -%}
+                    <span class="column-badge">{{ 'compare.badge.drinks' | t | default: 'Caffeinated' }}</span>
+                  {%- endif -%}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'feature_row' -%}
+                    <tr {{ block.shopify_attributes }}>
+                      <td class="feature-label">{{ block.settings.row_label }}</td>
+                      <td class="column-a-cell">
+                        {%- case block.settings.col_a_state -%}
+                          {%- when 'check' -%}
+                            <span class="icon-check" aria-label="{{ 'compare.legend.check' | t | default: 'Yes' }}">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </span>
+                          {%- when 'cross' -%}
+                            <span class="icon-cross" aria-label="{{ 'compare.legend.cross' | t | default: 'No' }}">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </span>
+                          {%- when 'minus' -%}
+                            <span class="icon-minus" aria-label="{{ 'compare.legend.minus' | t | default: 'Partial' }}">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 10H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </span>
+                          {%- when 'text' -%}
+                            <span class="text-content">{{ block.settings.col_a_text }}</span>
+                        {%- endcase -%}
+                      </td>
+                      <td class="column-b-cell">
+                        {%- case block.settings.col_b_state -%}
+                          {%- when 'check' -%}
+                            <span class="icon-check" aria-label="{{ 'compare.legend.check' | t | default: 'Yes' }}">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </span>
+                          {%- when 'cross' -%}
+                            <span class="icon-cross" aria-label="{{ 'compare.legend.cross' | t | default: 'No' }}">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </span>
+                          {%- when 'minus' -%}
+                            <span class="icon-minus" aria-label="{{ 'compare.legend.minus' | t | default: 'Partial' }}">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 10H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </span>
+                          {%- when 'text' -%}
+                            <span class="text-content">{{ block.settings.col_b_text }}</span>
+                        {%- endcase -%}
+                      </td>
+                      <td class="column-c-cell">
+                        {%- case block.settings.col_c_state -%}
+                          {%- when 'check' -%}
+                            <span class="icon-check" aria-label="{{ 'compare.legend.check' | t | default: 'Yes' }}">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </span>
+                          {%- when 'cross' -%}
+                            <span class="icon-cross" aria-label="{{ 'compare.legend.cross' | t | default: 'No' }}">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </span>
+                          {%- when 'minus' -%}
+                            <span class="icon-minus" aria-label="{{ 'compare.legend.minus' | t | default: 'Partial' }}">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 10H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </span>
+                          {%- when 'text' -%}
+                            <span class="text-content">{{ block.settings.col_c_text }}</span>
+                        {%- endcase -%}
+                      </td>
+                    </tr>
+                {%- endcase -%}
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+
+        {%- if section.settings.show_caption and section.settings.caption_text != blank -%}
+          <div class="comparison-caption">
+            <p>{{ section.settings.caption_text }}</p>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .launch-stack-compare-{{ section.id }} {
+    background: var(--theme-bg);
+    color: var(--theme-text);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 20px var(--theme-shadow);
+    overflow: hidden;
+  }
+
+  .comparison-header {
+    text-align: center;
+    padding: 2rem 1.5rem 1rem;
+  }
+
+  .comparison-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: var(--theme-text);
+  }
+
+  .comparison-subtitle {
+    font-size: 1.125rem;
+    color: var(--theme-text);
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  .comparison-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .comparison-table th {
+    background: var(--theme-accent);
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+  }
+
+  .feature-column {
+    text-align: left !important;
+    background: var(--theme-bg) !important;
+    color: var(--theme-text) !important;
+    font-weight: 600;
+  }
+
+  .column-a {
+    background: linear-gradient(135deg, var(--theme-accent), #0A6B6B) !important;
+  }
+
+  .column-b,
+  .column-c {
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .column-badge {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.9;
+    margin-top: 0.25rem;
+    font-weight: 400;
+  }
+
+  .comparison-table td {
+    background: var(--theme-bg);
+    color: var(--theme-text);
+  }
+
+  .icon-check {
+    color: #10B981;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-cross {
+    color: #EF4444;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-minus {
+    color: #F59E0B;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-content {
+    font-weight: 500;
+    color: var(--theme-text);
+  }
+
+  .comparison-caption {
+    text-align: center;
+    padding: 1rem 1.5rem 2rem;
+    font-size: 0.875rem;
+    color: var(--theme-text);
+    opacity: 0.7;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Mobile-first responsive */
+  @media screen and (max-width: 749px) {
+    .comparison-table {
+      min-width: 500px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 0.75rem 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    .comparison-title {
+      font-size: 1.5rem;
+    }
+
+    .comparison-subtitle {
+      font-size: 1rem;
+    }
+  }
+
+  /* RTL Support */
+  [dir="rtl"] .comparison-table th,
+  [dir="rtl"] .comparison-table td {
+    text-align: center;
+  }
+
+  [dir="rtl"] .feature-column {
+    text-align: right !important;
+  }
+
+  /* Focus states for accessibility */
+  .comparison-table th:focus,
+  .comparison-table td:focus {
+    outline: 2px solid var(--theme-accent);
+    outline-offset: 2px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Launch Stack Compare",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Why the Launch Stack Beats the Alternatives"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "See how our transdermal patches outperform traditional supplements"
+    },
+    {
+      "type": "select",
+      "id": "theme_style",
+      "label": "Theme Style",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "light"
+    },
+    {
+      "type": "header",
+      "content": "Table Labels"
+    },
+    {
+      "type": "text",
+      "id": "col_a_label",
+      "label": "Column A Label",
+      "default": "Launch Stack (Patches)"
+    },
+    {
+      "type": "text",
+      "id": "col_b_label",
+      "label": "Column B Label",
+      "default": "Pills"
+    },
+    {
+      "type": "text",
+      "id": "col_c_label",
+      "label": "Column C Label",
+      "default": "Energy Drinks"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_badges",
+      "label": "Show column badges",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Caption"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_caption",
+      "label": "Show caption",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "caption_text",
+      "label": "Caption text",
+      "default": "Results may vary. Consult your healthcare provider before starting any supplement regimen."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Corner radius",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "Background 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Background 2"
+        },
+        {
+          "value": "inverse",
+          "label": "Inverse"
+        },
+        {
+          "value": "accent-1",
+          "label": "Accent 1"
+        },
+        {
+          "value": "accent-2",
+          "label": "Accent 2"
+        },
+        {
+          "value": "custom",
+          "label": "Custom"
+        }
+      ],
+      "default": "background-1"
+    },
+    {
+      "type": "color",
+      "id": "custom_colors_background",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "custom_colors_text",
+      "label": "Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_row",
+      "name": "Feature Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "row_label",
+          "label": "Feature label",
+          "default": "Energy Duration"
+        },
+        {
+          "type": "header",
+          "content": "Column A (Launch Stack)"
+        },
+        {
+          "type": "select",
+          "id": "col_a_state",
+          "label": "Column A state",
+          "options": [
+            {
+              "value": "check",
+              "label": "Check"
+            },
+            {
+              "value": "cross",
+              "label": "Cross"
+            },
+            {
+              "value": "minus",
+              "label": "Minus"
+            },
+            {
+              "value": "text",
+              "label": "Text"
+            }
+          ],
+          "default": "check"
+        },
+        {
+          "type": "text",
+          "id": "col_a_text",
+          "label": "Column A text",
+          "info": "Only used when state is 'Text'"
+        },
+        {
+          "type": "header",
+          "content": "Column B (Pills)"
+        },
+        {
+          "type": "select",
+          "id": "col_b_state",
+          "label": "Column B state",
+          "options": [
+            {
+              "value": "check",
+              "label": "Check"
+            },
+            {
+              "value": "cross",
+              "label": "Cross"
+            },
+            {
+              "value": "minus",
+              "label": "Minus"
+            },
+            {
+              "value": "text",
+              "label": "Text"
+            }
+          ],
+          "default": "minus"
+        },
+        {
+          "type": "text",
+          "id": "col_b_text",
+          "label": "Column B text",
+          "info": "Only used when state is 'Text'"
+        },
+        {
+          "type": "header",
+          "content": "Column C (Energy Drinks)"
+        },
+        {
+          "type": "select",
+          "id": "col_c_state",
+          "label": "Column C state",
+          "options": [
+            {
+              "value": "check",
+              "label": "Check"
+            },
+            {
+              "value": "cross",
+              "label": "Cross"
+            },
+            {
+              "value": "minus",
+              "label": "Minus"
+            },
+            {
+              "value": "text",
+              "label": "Text"
+            }
+          ],
+          "default": "cross"
+        },
+        {
+          "type": "text",
+          "id": "col_c_text",
+          "label": "Column C text",
+          "info": "Only used when state is 'Text'"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Launch Stack Compare",
+      "blocks": [
+        {
+          "type": "feature_row",
+          "settings": {
+            "row_label": "Energy Duration",
+            "col_a_state": "check",
+            "col_b_state": "minus",
+            "col_c_state": "cross"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "row_label": "Delivery Method",
+            "col_a_state": "check",
+            "col_b_state": "cross",
+            "col_c_state": "cross"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "row_label": "Digestive Impact",
+            "col_a_state": "check",
+            "col_b_state": "minus",
+            "col_c_state": "cross"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "row_label": "Consistency/Compliance",
+            "col_a_state": "check",
+            "col_b_state": "minus",
+            "col_c_state": "cross"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "row_label": "Crash/Anxiety",
+            "col_a_state": "check",
+            "col_b_state": "minus",
+            "col_c_state": "cross"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "row_label": "Convenience",
+            "col_a_state": "check",
+            "col_b_state": "minus",
+            "col_c_state": "cross"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "row_label": "Price per day",
+            "col_a_text": "$1.56/day",
+            "col_b_text": "$2–4/day",
+            "col_c_text": "$3–6/day",
+            "col_a_state": "text",
+            "col_b_state": "text",
+            "col_c_state": "text"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
