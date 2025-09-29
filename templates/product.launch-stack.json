@@ -380,7 +380,7 @@
         "subheading": "See why thousands choose SURGE over traditional energy solutions",
         "style": "modern",
         "corner_radius": 20,
-        "highlighted_separator_opacity": 100,
+        "highlighted_separator_opacity": 40,
         "regular_separator_opacity": 20,
         "highlighted_overlay_opacity": 10,
         "regular_overlay_opacity": 5,
