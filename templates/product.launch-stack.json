@@ -343,8 +343,8 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "heading": "Why Patches Beat Everything Else",
-        "subheading": "Stop wasting time on pills that upset your stomach and drinks that crash you hard. The Launch Stack delivers steady 8-12 hour energy through your skin — no swallowing, no gut issues, just clean performance.",
+        "title": "Why Patches Beat Everything Else",
+        "text": "<p>Stop wasting time on pills that upset your stomach and drinks that crash you hard. The Launch Stack delivers steady 8-12 hour energy through your skin — no swallowing, no gut issues, just clean performance.</p>",
         "style": "modern",
         "corner_radius": 16,
         "highlighted_separator_opacity": 40,
@@ -362,7 +362,7 @@
         "padding_top": 80,
         "padding_bottom": 80,
         "us_label": "Ondermax 24 Stack",
-        "them_label": "Pills & Powders"
+        "others_label": "Pills & Powders"
       }
     },
     "surge_day_only": {
