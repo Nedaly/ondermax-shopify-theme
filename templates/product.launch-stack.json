@@ -424,6 +424,36 @@
         "p_bottom": 80
       }
     },
+    "drift_night_only": {
+      "type": "two-products-sec",
+      "blocks": {
+        "text_drift": {
+          "type": "text",
+          "settings": {
+            "bg_color": "linear-gradient(306deg, rgba(127, 72, 176, 1) 1%, rgba(127, 72, 176, 0.94) 9%, rgba(67, 48, 211, 0.96) 88%)",
+            "product": "surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "pro_img": "shopify://shop_images/mock-up-new2_53439dcb-7fe5-461f-bc80-ac8082ddacd6.png",
+            "pro_img_title": "Drift",
+            "pro_img_bg_color": "rgba(0,0,0,0)",
+            "pro_title": "All-Night Rest",
+            "pro_desc": "<p>Magnesium, Melatonin for deeper rest and restoration.</p>",
+            "atc_btn": "",
+            "atc_btn_link": "",
+            "show_btn_outline": false,
+            "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-moon w-16 h-16 text-blue-100/30 animate-pulse\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:83:14\" data-orchids-name=\"Moon\"><path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\"></path></svg>",
+            "icon_animation": "pulse_bounce"
+          }
+        }
+      },
+      "block_order": [
+        "text_drift"
+      ],
+      "name": "Drift Night Section",
+      "settings": {
+        "p_top": 75,
+        "p_bottom": 75
+      }
+    },
     "static_image_grid": {
       "type": "static-image-grid",
       "blocks": {
@@ -908,6 +938,7 @@
         "problem_solution",
         "comparison_table",
         "surge_day_only",
+        "drift_night_only",
         "static_image_grid",
         "testimonial_grid",
         "faq_section"
