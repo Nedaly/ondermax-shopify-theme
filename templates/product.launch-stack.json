@@ -18,6 +18,10 @@
             "text_size": "h1",
             "title_alignment": "left",
             "uppercase_title": false,
+            "show_badge": true,
+            "badge_text": "🔥 Best Seller",
+            "badge_style": "primary",
+            "badge_size": "badge--medium",
             "margin_top": 0,
             "margin_bottom": 0
           }
@@ -68,20 +72,15 @@
           }
         },
         "sticky_atc": {
-          "type": "sticky_atc",
+          "type": "sticky-atc",
           "settings": {
-            "function": "add_to_cart",
-            "display_when": "after_scroll",
             "button_label": "ADD BOTH",
-            "enable_custom_btn_color": false,
-            "color_scheme": "background-1",
-            "picker_type": "combined",
-            "desktop_show_image": true,
-            "desktop_show_title": true,
-            "desktop_show_price": true,
-            "desktop_show_sale_badge": true,
-            "desktop_variant_picker": true,
-            "desktop_full_button_width": false
+            "show_image": true,
+            "show_title": true,
+            "show_price": true,
+            "show_sale_badge": true,
+            "show_variant_picker": false,
+            "scroll_threshold": 300
           }
         },
         "custom_css": {
@@ -256,8 +255,157 @@
         "heading": "Science backed energy.",
         "subheading": "SURGE combines clinically studied ingredients, precisely dosed for all-day energy and mental clarity—without pills or crash.",
         "bg_color": "#1a1a1a",
+        "show_badge": true,
+        "badge_text": "🔬 Clinically Proven",
+        "badge_style": "primary",
+        "badge_size": "badge--medium",
+        "show_stats": true,
+        "stat_1_number": "10,000+",
+        "stat_1_label": "Happy Customers",
+        "stat_2_number": "95%",
+        "stat_2_label": "Satisfaction Rate",
+        "stat_3_number": "30",
+        "stat_3_label": "Day Guarantee",
         "p_top": 80,
         "p_bottom": 80
+      }
+    },
+    "problem_solution": {
+      "type": "problem-solution-blocks",
+      "blocks": {
+        "problem_solution_1": {
+          "type": "problem_solution",
+          "settings": {
+            "problem_title": "Energy Crashes",
+            "problem_description": "Feeling drained by 2 PM, reaching for another coffee that only makes you jittery and anxious",
+            "solution_title": "Sustained Energy",
+            "solution_description": "8-12 hours of clean, steady energy that builds gradually and fades naturally without crash",
+            "show_benefit": true,
+            "benefit_text": "Clinically Proven"
+          }
+        },
+        "problem_solution_2": {
+          "type": "problem_solution",
+          "settings": {
+            "problem_title": "Digestive Issues",
+            "problem_description": "Pills and drinks upset your stomach, causing bloating and discomfort throughout the day",
+            "solution_title": "Transdermal Delivery",
+            "solution_description": "Absorbed through your skin, bypassing your digestive system for maximum comfort and effectiveness",
+            "show_benefit": true,
+            "benefit_text": "Gentle & Effective"
+          }
+        },
+        "problem_solution_3": {
+          "type": "problem_solution",
+          "settings": {
+            "problem_title": "Inconsistent Results",
+            "problem_description": "Some days your energy supplements work, other days they don't - leaving you frustrated and unreliable",
+            "solution_title": "Consistent Performance",
+            "solution_description": "Every patch delivers the same precise dose, giving you predictable energy every single day",
+            "show_benefit": true,
+            "benefit_text": "Reliable Results"
+          }
+        }
+      },
+      "block_order": [
+        "problem_solution_1",
+        "problem_solution_2",
+        "problem_solution_3"
+      ],
+      "name": "Problem Solution Blocks",
+      "settings": {
+        "heading": "Why You'll Love It",
+        "subheading": "See how we solve your biggest energy challenges with science-backed solutions",
+        "bg_color": "#0f0f0f",
+        "show_badge": true,
+        "badge_text": "🎯 Why You Need This",
+        "badge_style": "primary",
+        "badge_size": "badge--medium",
+        "p_top": 80,
+        "p_bottom": 80
+      }
+    },
+    "comparison_table": {
+      "type": "comparison-table",
+      "blocks": {
+        "row_1": {
+          "type": "row",
+          "settings": {
+            "benefit": "Energy Duration",
+            "us": "8-12 hours sustained",
+            "them": "2-4 hours with crash"
+          }
+        },
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "benefit": "Delivery Method",
+            "us": "Transdermal patch",
+            "them": "Pills & drinks"
+          }
+        },
+        "row_3": {
+          "type": "row",
+          "settings": {
+            "benefit": "Digestive Impact",
+            "us": "No stomach issues",
+            "them": "Bloating & discomfort"
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "benefit": "Consistency",
+            "us": "Same results every time",
+            "them": "Hit or miss"
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "benefit": "Convenience",
+            "us": "Stick & forget",
+            "them": "Remember to take"
+          }
+        },
+        "row_6": {
+          "type": "row",
+          "settings": {
+            "benefit": "Price per day",
+            "us": "$2.50",
+            "them": "$5-8"
+          }
+        }
+      },
+      "block_order": [
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5",
+        "row_6"
+      ],
+      "name": "Comparison Table",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "heading": "SURGE vs. Everything Else",
+        "subheading": "See why thousands choose SURGE over traditional energy solutions",
+        "style": "modern",
+        "corner_radius": 20,
+        "highlighted_separator_opacity": 100,
+        "regular_separator_opacity": 20,
+        "highlighted_overlay_opacity": 10,
+        "regular_overlay_opacity": 5,
+        "minimalistic_border_opacity": 20,
+        "color_scheme": "custom",
+        "custom_colors_background": "#1a1a1a",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#00908d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#00908d",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "surge_day_only": {
@@ -661,6 +809,69 @@
         "p_bottom": 80
       }
     },
+    "ugc_gallery": {
+      "type": "ugc-video-gallery",
+      "blocks": {
+        "ugc_video_1": {
+          "type": "ugc_video",
+          "settings": {
+            "customer_name": "Ahmed Al-Rashid",
+            "customer_role": "Software Engineer",
+            "description": "SURGE gives me that clean energy boost I need for my 6 AM workouts. No crash, just sustained focus all morning.",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
+        "ugc_video_2": {
+          "type": "ugc_video",
+          "settings": {
+            "customer_name": "Fatima Hassan",
+            "customer_role": "Working Mother",
+            "description": "Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything.",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
+        "ugc_video_3": {
+          "type": "ugc_video",
+          "settings": {
+            "customer_name": "Khalid Al-Sabah",
+            "customer_role": "Fitness Trainer",
+            "description": "SURGE has completely transformed my morning routine. I wake up feeling energized and ready to tackle my day.",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
+        "ugc_video_4": {
+          "type": "ugc_video",
+          "settings": {
+            "customer_name": "Dr. Omar Al-Zahra",
+            "customer_role": "Medical Director",
+            "description": "SURGE helps me maintain focus during long surgery days. I stick it on during my morning routine and stay sharp all day.",
+            "show_rating": true,
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "ugc_video_1",
+        "ugc_video_2",
+        "ugc_video_3",
+        "ugc_video_4"
+      ],
+      "name": "UGC Video Gallery",
+      "settings": {
+        "heading": "Real Results from Real People",
+        "subheading": "See how SURGE is transforming lives every day with authentic customer stories",
+        "bg_color": "#0f0f0f",
+        "show_badge": true,
+        "badge_text": "🎥 Real Results",
+        "badge_style": "primary",
+        "badge_size": "badge--medium",
+        "p_top": 80,
+        "p_bottom": 80
+      }
+    },
     "faq_section": {
       "type": "collapsible-content",
       "blocks": {
@@ -770,9 +981,12 @@
     "main",
     "horizontal_ticker",
     "science_backed",
+    "problem_solution",
+    "comparison_table",
     "surge_day_only",
     "static_image_grid",
     "testimonial_grid",
+    "ugc_gallery",
     "faq_section"
   ]
 }
