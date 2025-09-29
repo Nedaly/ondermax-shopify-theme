@@ -257,61 +257,6 @@
         "p_bottom": 80
       }
     },
-    "problem_solution": {
-      "type": "problem-solution-blocks",
-      "blocks": {
-        "problem_solution_1": {
-          "type": "problem_solution",
-          "settings": {
-            "problem_title": "Energy Crashes",
-            "problem_description": "Feeling drained by 2 PM, reaching for another coffee that only makes you jittery and anxious",
-            "solution_title": "Sustained Energy",
-            "solution_description": "8-12 hours of clean, steady energy that builds gradually and fades naturally without crash",
-            "show_benefit": true,
-            "benefit_text": "Clinically Proven"
-          }
-        },
-        "problem_solution_2": {
-          "type": "problem_solution",
-          "settings": {
-            "problem_title": "Digestive Issues",
-            "problem_description": "Pills and drinks upset your stomach, causing bloating and discomfort throughout the day",
-            "solution_title": "Transdermal Delivery",
-            "solution_description": "Absorbed through your skin, bypassing your digestive system for maximum comfort and effectiveness",
-            "show_benefit": true,
-            "benefit_text": "Gentle & Effective"
-          }
-        },
-        "problem_solution_3": {
-          "type": "problem_solution",
-          "settings": {
-            "problem_title": "Inconsistent Results",
-            "problem_description": "Some days your energy supplements work, other days they don't - leaving you frustrated and unreliable",
-            "solution_title": "Consistent Performance",
-            "solution_description": "Every patch delivers the same precise dose, giving you predictable energy every single day",
-            "show_benefit": true,
-            "benefit_text": "Reliable Results"
-          }
-        }
-      },
-      "block_order": [
-        "problem_solution_1",
-        "problem_solution_2",
-        "problem_solution_3"
-      ],
-      "name": "Problem Solution Blocks",
-      "settings": {
-        "heading": "Why You'll Love It",
-        "subheading": "See how we solve your biggest energy challenges with science-backed solutions",
-        "bg_color": "#0f0f0f",
-        "show_badge": true,
-        "badge_text": "🎯 Why You Need This",
-        "badge_style": "primary",
-        "badge_size": "badge--medium",
-        "p_top": 80,
-        "p_bottom": 80
-      }
-    },
     "comparison_table": {
       "type": "comparison-table",
       "blocks": {
@@ -935,7 +880,6 @@
         "main",
         "horizontal_ticker",
         "science_backed",
-        "problem_solution",
         "comparison_table",
         "surge_day_only",
         "drift_night_only",
