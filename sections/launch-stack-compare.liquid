@@ -67,7 +67,7 @@
             <tbody>
               {%- for block in section.blocks -%}
               {%- case block.type -%}
-                {%- when 'compare_row' -%}
+                {%- when 'row' -%}
                     <tr {{ block.shopify_attributes }}>
                       <td class="feature-label">{{ block.settings.row_label }}</td>
                       <td class="column-a-cell">
@@ -490,7 +490,7 @@
   ],
   "blocks": [
     {
-      "type": "compare_row",
+      "type": "row",
       "name": "Compare Row",
       "settings": [
         {
@@ -609,7 +609,7 @@
       "name": "Launch Stack Compare",
       "blocks": [
         {
-          "type": "compare_row",
+          "type": "row",
           "settings": {
             "row_label": "Energy Duration",
             "col_a_state": "check",
@@ -618,7 +618,7 @@
           }
         },
         {
-          "type": "compare_row",
+          "type": "row",
           "settings": {
             "row_label": "Delivery Method",
             "col_a_state": "check",
@@ -627,7 +627,7 @@
           }
         },
         {
-          "type": "compare_row",
+          "type": "row",
           "settings": {
             "row_label": "Digestive Impact",
             "col_a_state": "check",
@@ -636,7 +636,7 @@
           }
         },
         {
-          "type": "compare_row",
+          "type": "row",
           "settings": {
             "row_label": "Consistency/Compliance",
             "col_a_state": "check",
@@ -645,7 +645,7 @@
           }
         },
         {
-          "type": "compare_row",
+          "type": "row",
           "settings": {
             "row_label": "Crash/Anxiety",
             "col_a_state": "check",
@@ -654,7 +654,7 @@
           }
         },
         {
-          "type": "compare_row",
+          "type": "row",
           "settings": {
             "row_label": "Convenience",
             "col_a_state": "check",
@@ -663,7 +663,7 @@
           }
         },
         {
-          "type": "compare_row",
+          "type": "row",
           "settings": {
             "row_label": "Price per day",
             "col_a_text": "$1.56/day",
