@@ -356,7 +356,7 @@
         "custom_colors_background": "#0D1320",
         "custom_gradient_background": "linear-gradient(135deg, #0D1320 0%, #1a1a1a 50%, #2D1B69 100%)",
         "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#1C8E8E",
+        "custom_colors_solid_button_background": "linear-gradient(135deg, #1C8E8E 0%, #0D1320 100%)",
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#1C8E8E",
         "padding_top": 80,
