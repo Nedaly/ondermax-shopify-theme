@@ -229,13 +229,35 @@
             "title": "B-Vitamins",
             "desc": "<p>Energy metabolism and mental clarity</p>"
           }
+        },
+        "text_magnesium": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 48 48\" height=\"48\" width=\"48\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2.5\" stroke=\"white\" d=\"M24 4L30 18H44L32 28L38 42L24 32L10 42L16 28L4 18H18L24 4Z\"></path>\n<circle cx=\"24\" cy=\"24\" r=\"3\" fill=\"white\" opacity=\"0.8\"></circle>\n</svg>",
+            "title": "Magnesium",
+            "desc": "<p>Deep muscle relaxation and stress relief</p>",
+            "show_benefit": true,
+            "benefit_text": "Sleep Quality"
+          }
+        },
+        "text_melatonin": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 48 48\" height=\"48\" width=\"48\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2.5\" stroke=\"white\" d=\"M24 4C12.954 4 4 12.954 4 24s8.954 20 20 20 20-8.954 20-20S35.046 4 24 4z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2.5\" stroke=\"white\" d=\"M24 8v16l8 8\"></path>\n<circle cx=\"24\" cy=\"24\" r=\"2\" fill=\"white\" opacity=\"0.9\"></circle>\n</svg>",
+            "title": "Melatonin",
+            "desc": "<p>Natural sleep hormone for deeper rest</p>",
+            "show_benefit": true,
+            "benefit_text": "Sleep Cycle"
+          }
         }
       },
       "block_order": [
         "text_VwPtCh",
         "text_kxbakH",
         "text_JJ4JV8",
-        "text_bVitamins"
+        "text_bVitamins",
+        "text_magnesium",
+        "text_melatonin"
       ],
       "name": "Icon with text",
       "settings": {
