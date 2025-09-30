@@ -1,18 +1,46 @@
 <div class="icon_with_text padding-{{ section.id }}" id="science-authority">
     <div class="page-width">
         <div class="heading">
+            {%- if section.settings.show_badge -%}
+                <div class="iwt_badge">
+                    <span class="badge badge--{{ section.settings.badge_style }} {{ section.settings.badge_size }}">
+                        {{ section.settings.badge_text | default: 'Science Backed' }}
+                    </span>
+                </div>
+            {%- endif -%}
             <h2 class="iwt_heading">{{ section.settings.heading }}</h2>
             <p class="iwt_subheading">{{ section.settings.subheading }}</p>
+            {%- if section.settings.show_stats -%}
+                <div class="iwt_stats">
+                    <div class="stat_item">
+                        <span class="stat_number">{{ section.settings.stat_1_number | default: '10,000+' }}</span>
+                        <span class="stat_label">{{ section.settings.stat_1_label | default: 'Happy Customers' }}</span>
+                    </div>
+                    <div class="stat_item">
+                        <span class="stat_number">{{ section.settings.stat_2_number | default: '95%' }}</span>
+                        <span class="stat_label">{{ section.settings.stat_2_label | default: 'Satisfaction Rate' }}</span>
+                    </div>
+                    <div class="stat_item">
+                        <span class="stat_number">{{ section.settings.stat_3_number | default: '30' }}</span>
+                        <span class="stat_label">{{ section.settings.stat_3_label | default: 'Day Guarantee' }}</span>
+                    </div>
+                </div>
+            {%- endif -%}
         </div>
         <div class="icon_with_text_blocks">
             {% for block in section.blocks %}
-                <div class="icon_with_text_block">
+                <div class="icon_with_text_block" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 100 }}">
                     <div class="iwt_icon">
                         {{ block.settings.svg }}
                         {% comment %} {{ block.settings.icon | image_url: width: 20 | image_tag  }} {% endcomment %}
                     </div>
                     <h1 class="iwt_title">{{ block.settings.title }}</h1>
                     <div class="iwt_desc">{{ block.settings.desc }}</div>
+                    {%- if block.settings.show_benefit -%}
+                        <div class="iwt_benefit">
+                            <span class="benefit_text">{{ block.settings.benefit_text | default: 'Clinically Proven' }}</span>
+                        </div>
+                    {%- endif -%}
                 </div>
             {% endfor %}
         </div>
@@ -176,6 +204,63 @@
         max-width: 50%;
         margin-block: 2rem;
     }
+
+    /* CRO Enhancements */
+    .iwt_badge {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .iwt_stats {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .stat_item {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat_number {
+        font-family: 'Poppins', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: #00908d;
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+
+    .stat_label {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #cfcfcf;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .iwt_benefit {
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    .benefit_text {
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        color: #00908d;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 4px 8px;
+        border: 1px solid #00908d;
+        border-radius: 12px;
+        background: rgba(0, 144, 141, 0.1);
+    }
     @media screen and (max-width: 989px){
     .icon_with_text .icon_with_text_block {
         flex: 0 0 calc(50% - 2rem); 
@@ -213,6 +298,20 @@
     .padding-{{ section.id }}{
         padding-top: 40px !important;
         padding-bottom: 40px !important;
+    }
+
+    /* Mobile CRO Enhancements */
+    .iwt_stats {
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .stat_number {
+        font-size: 24px;
+    }
+
+    .stat_label {
+        font-size: 12px;
     }
 }
 
@@ -269,6 +368,91 @@
                 "label": "Background color"
             },
             {
+                "type": "header",
+                "content": "CRO Enhancements"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_badge",
+                "label": "Show badge",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "badge_text",
+                "label": "Badge text",
+                "default": "Science Backed"
+            },
+            {
+                "type": "select",
+                "id": "badge_style",
+                "label": "Badge style",
+                "options": [
+                    {"value": "primary", "label": "Primary"},
+                    {"value": "secondary", "label": "Secondary"},
+                    {"value": "success", "label": "Success"},
+                    {"value": "warning", "label": "Warning"}
+                ],
+                "default": "primary"
+            },
+            {
+                "type": "select",
+                "id": "badge_size",
+                "label": "Badge size",
+                "options": [
+                    {"value": "badge--small", "label": "Small"},
+                    {"value": "badge--medium", "label": "Medium"},
+                    {"value": "badge--large", "label": "Large"}
+                ],
+                "default": "badge--medium"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_stats",
+                "label": "Show statistics",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "stat_1_number",
+                "label": "Stat 1 Number",
+                "default": "10,000+"
+            },
+            {
+                "type": "text",
+                "id": "stat_1_label",
+                "label": "Stat 1 Label",
+                "default": "Happy Customers"
+            },
+            {
+                "type": "text",
+                "id": "stat_2_number",
+                "label": "Stat 2 Number",
+                "default": "95%"
+            },
+            {
+                "type": "text",
+                "id": "stat_2_label",
+                "label": "Stat 2 Label",
+                "default": "Satisfaction Rate"
+            },
+            {
+                "type": "text",
+                "id": "stat_3_number",
+                "label": "Stat 3 Number",
+                "default": "30"
+            },
+            {
+                "type": "text",
+                "id": "stat_3_label",
+                "label": "Stat 3 Label",
+                "default": "Day Guarantee"
+            },
+            {
+                "type": "header",
+                "content": "Layout"
+            },
+            {
                 "type": "range",
                 "id": "p_top",
                 "min": 0,
@@ -308,6 +492,18 @@
                         "type": "richtext",
                         "id": "desc",
                         "label": "Description"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "show_benefit",
+                        "label": "Show benefit badge",
+                        "default": false
+                    },
+                    {
+                        "type": "text",
+                        "id": "benefit_text",
+                        "label": "Benefit text",
+                        "default": "Clinically Proven"
                     }
                 ]
             }

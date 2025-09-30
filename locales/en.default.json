@@ -577,5 +577,125 @@
       "results_and_reviews": "Results & Reviews",
       "trust_text": "★ <strong>500+</strong> verified results · 🚚 <strong>Free</strong> express shipping · 🛡️ <strong>30-day</strong> money-back guarantee"
     }
+  },
+  "cro": {
+    "badge": {
+      "best_seller": "Best Seller",
+      "science_backed": "Science Backed",
+      "clinically_proven": "Clinically Proven",
+      "real_results": "Real Results",
+      "why_you_need_this": "Why You Need This"
+    },
+    "stats": {
+      "happy_customers": "Happy Customers",
+      "satisfaction_rate": "Satisfaction Rate",
+      "day_guarantee": "Day Guarantee"
+    },
+    "problem_solution": {
+      "heading": "Why You'll Love It",
+      "subheading": "See how we solve your biggest energy challenges with science-backed solutions",
+      "energy_crashes": "Energy Crashes",
+      "energy_crashes_desc": "Feeling drained by 2 PM, reaching for another coffee that only makes you jittery and anxious",
+      "sustained_energy": "Sustained Energy",
+      "sustained_energy_desc": "8-12 hours of clean, steady energy that builds gradually and fades naturally without crash",
+      "digestive_issues": "Digestive Issues",
+      "digestive_issues_desc": "Pills and drinks upset your stomach, causing bloating and discomfort throughout the day",
+      "transdermal_delivery": "Transdermal Delivery",
+      "transdermal_delivery_desc": "Absorbed through your skin, bypassing your digestive system for maximum comfort and effectiveness",
+      "inconsistent_results": "Inconsistent Results",
+      "inconsistent_results_desc": "Some days your energy supplements work, other days they don't - leaving you frustrated and unreliable",
+      "consistent_performance": "Consistent Performance",
+      "consistent_performance_desc": "Every patch delivers the same precise dose, giving you predictable energy every single day",
+      "benefit_clinically_proven": "Clinically Proven",
+      "benefit_gentle_effective": "Gentle & Effective",
+      "benefit_reliable_results": "Reliable Results"
+    },
+    "comparison": {
+      "heading": "SURGE vs. Everything Else",
+      "subheading": "See why thousands choose SURGE over traditional energy solutions",
+      "energy_duration": "Energy Duration",
+      "energy_duration_us": "8-12 hours sustained",
+      "energy_duration_them": "2-4 hours with crash",
+      "delivery_method": "Delivery Method",
+      "delivery_method_us": "Transdermal patch",
+      "delivery_method_them": "Pills & drinks",
+      "digestive_impact": "Digestive Impact",
+      "digestive_impact_us": "No stomach issues",
+      "digestive_impact_them": "Bloating & discomfort",
+      "consistency": "Consistency",
+      "consistency_us": "Same results every time",
+      "consistency_them": "Hit or miss",
+      "convenience": "Convenience",
+      "convenience_us": "Stick & forget",
+      "convenience_them": "Remember to take",
+      "price_per_day": "Price per day",
+      "price_per_day_us": "$2.50",
+      "price_per_day_them": "$5-8"
+    },
+    "ugc": {
+      "heading": "Real Results from Real People",
+      "subheading": "See how SURGE is transforming lives every day with authentic customer stories",
+      "customer_1_name": "Ahmed Al-Rashid",
+      "customer_1_role": "Software Engineer",
+      "customer_1_desc": "SURGE gives me that clean energy boost I need for my 6 AM workouts. No crash, just sustained focus all morning.",
+      "customer_2_name": "Fatima Hassan",
+      "customer_2_role": "Working Mother",
+      "customer_2_desc": "Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything.",
+      "customer_3_name": "Khalid Al-Sabah",
+      "customer_3_role": "Fitness Trainer",
+      "customer_3_desc": "SURGE has completely transformed my morning routine. I wake up feeling energized and ready to tackle my day.",
+      "customer_4_name": "Dr. Omar Al-Zahra",
+      "customer_4_role": "Medical Director",
+      "customer_4_desc": "SURGE helps me maintain focus during long surgery days. I stick it on during my morning routine and stay sharp all day."
+    },
+    "sticky_atc": {
+      "button_label": "ADD BOTH",
+      "added": "Added!",
+      "on_sale": "On Sale"
+    },
+    "compare": {
+      "title": "Why the Launch Stack Wins Every Time",
+      "subtitle": "Patches deliver what pills and drinks can't — clean, steady energy without the crash.",
+      "col_a": "Launch Stack (Patches)",
+      "col_b": "Alternatives",
+      "row": {
+        "energy_duration": "Energy Duration (hours of clean energy)",
+        "delivery_method": "Delivery Method (how it enters your body)",
+        "digestive_impact": "Digestive Impact (gut friendliness)",
+        "consistency": "Consistency (daily compliance)",
+        "convenience": "Convenience (ease of use)",
+        "price_per_day": "Price per Day"
+      },
+      "cell": {
+        "patches_energy": "Lasts all day & night",
+        "patches_delivery": "Transdermal patch, no swallowing",
+        "patches_digestive": "Gentle on stomach",
+        "patches_consistency": "Set & forget",
+        "patches_convenience": "Peel & apply anywhere",
+        "patches_price": "$1.56/day",
+        "alternatives_energy": "Spike & crash",
+        "alternatives_delivery": "Oral / sugary",
+        "alternatives_digestive": "Irritates gut",
+        "alternatives_consistency": "Easy to miss",
+        "alternatives_convenience": "Cans/pills to carry",
+        "alternatives_price": "$3–6/day"
+      },
+      "left": {
+        "title": "Why Patches Beat Everything Else",
+        "subtitle": "Stop wasting time on pills that upset your stomach and drinks that crash you hard. The Launch Stack delivers steady 8-12 hour energy through your skin — no swallowing, no gut issues, just clean performance.",
+        "bullet1": "⚡ 8-12 Hours of Steady Energy",
+        "bullet2": "💊 No Pills. No Gut Issues. No Crash.",
+        "bullet3": "🌍 Just Peel & Stick — Anywhere",
+        "cta": "Shop the Launch Stack"
+      }
+    },
+    "cro_benefit1": "🌍 Free shipping on all orders",
+    "cro_benefit2": "⚡ 8-12 Hours of Steady Energy",
+    "cro_benefit3": "💊 No Pills. No Gut Issues. No Crash.",
+    "cro_benefit4": "🌍 Just Peel & Stick — Anywhere",
+    "subscription_benefit1": "🌍 Free shipping on all orders",
+    "subscription_benefit2": "⚡ 8-12 Hours of Steady Energy",
+    "subscription_benefit3": "💊 No Pills. No Gut Issues. No Crash.",
+    "subscription_benefit4": "🌍 Just Peel & Stick — Anywhere"
   }
 }
