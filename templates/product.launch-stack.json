@@ -408,7 +408,7 @@
       ],
       "name": "SURGE Day Section",
       "settings": {
-        "p_top": 80,
+        "p_top": 120,
         "p_bottom": 80
       }
     },
