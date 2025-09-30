@@ -916,7 +916,7 @@
         "collapse_icon": "plus",
         "display_top_border": true,
         "padding_top": 80,
-        "padding_bottom": 160,
+        "padding_bottom": 100,
         "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
         "custom_colors_text": "#2e2a39",
