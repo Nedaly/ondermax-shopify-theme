@@ -91,7 +91,7 @@
     document.querySelector('[data-omx-atc]') ||
     document.querySelector('form[action^="/cart/add"] [type="submit"]');
 
-  const subPriceNode = document.querySelector('#omx-sub-price[data-omx-price]');
+  const subPriceNode = document.querySelector('#subscription-price-display');
   const oneTimePriceNode = document.querySelector(
     '#omx-onetime-price[data-omx-price]'
   );
@@ -117,9 +117,11 @@
     }
   }
   function fmt(c) {
-    return window.Shopify && Shopify.formatMoney
-      ? Shopify.formatMoney(c, moneyFormat)
-      : (c / 100).toFixed(2);
+    if (window.Shopify && Shopify.formatMoney) {
+      return Shopify.formatMoney(c, moneyFormat);
+    }
+    // Fallback: add currency symbol manually
+    return '$' + (c / 100).toFixed(2);
   }
   function hidden(parent, id, name, val) {
     const i = document.createElement('input');
