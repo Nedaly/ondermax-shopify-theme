@@ -689,18 +689,6 @@
         "cta": "Shop the Launch Stack"
       }
     },
-    "subscription": {
-      "cro": {
-        "benefit1": "🌍 Free shipping on all orders",
-        "benefit2": "⚡ 8-12 Hours of Steady Energy",
-        "benefit3": "💊 No Pills. No Gut Issues. No Crash.",
-        "benefit4": "🌍 Just Peel & Stick — Anywhere"
-      }
-    },
-    "subscription_cro_benefit1": "🌍 Free shipping on all orders",
-    "subscription_cro_benefit2": "⚡ 8-12 Hours of Steady Energy", 
-    "subscription_cro_benefit3": "💊 No Pills. No Gut Issues. No Crash.",
-    "subscription_cro_benefit4": "🌍 Just Peel & Stick — Anywhere",
     "cro_benefit1": "🌍 Free shipping on all orders",
     "cro_benefit2": "⚡ 8-12 Hours of Steady Energy",
     "cro_benefit3": "💊 No Pills. No Gut Issues. No Crash.",
