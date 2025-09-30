@@ -157,18 +157,39 @@
           "settings": {
             "title": "🎯 Complete Biohacking Stack"
           }
+        },
+        "text_duplicate1": {
+          "type": "text",
+          "settings": {
+            "title": "⚡🌙 Day & Night Complete"
+          }
+        },
+        "text_duplicate2": {
+          "type": "text",
+          "settings": {
+            "title": "✈️ Fast Worldwide Shipping"
+          }
+        },
+        "text_duplicate3": {
+          "type": "text",
+          "settings": {
+            "title": "🎯 Complete Biohacking Stack"
+          }
         }
       },
       "block_order": [
         "text_EEXyiX",
         "text_V7RMqT",
-        "text_8QmnpH"
+        "text_8QmnpH",
+        "text_duplicate1",
+        "text_duplicate2",
+        "text_duplicate3"
       ],
       "name": "Power Bar Under Hero",
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "speed": 1,
+        "speed": 2,
         "direction": "normal",
         "stop_on_hover": false,
         "mobile_spacing": 60,
@@ -387,7 +408,7 @@
       ],
       "name": "Two products section",
       "settings": {
-        "p_top": 80,
+        "p_top": 0,
         "p_bottom": 80
       }
     },
