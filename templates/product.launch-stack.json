@@ -406,9 +406,9 @@
       "block_order": [
         "text_78hKmU"
       ],
-      "name": "Two products section",
+      "name": "SURGE Day Section",
       "settings": {
-        "p_top": 0,
+        "p_top": 80,
         "p_bottom": 80
       }
     },
@@ -436,10 +436,10 @@
       "block_order": [
         "text_drift"
       ],
-      "name": "Drift Night Section",
+      "name": "DRIFT Night Section",
       "settings": {
-        "p_top": 75,
-        "p_bottom": 75
+        "p_top": 80,
+        "p_bottom": 80
       }
     },
     "static_image_grid": {
