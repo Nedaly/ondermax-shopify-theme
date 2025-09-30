@@ -20,18 +20,18 @@
             <h4 class="menu-drawer__section-title">SHOP</h4>
             <ul class="menu-drawer__menu list-menu" role="list">
               <li>
-                <a href="/collections/best-seller" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="shop-the-stack">
-                  Shop the Stack
+                <a href="/products/{{ settings.stack_product_handle | default: 'high-energy-and-sleep-stack' }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="shop-the-stack">
+                  {{ settings.shop_stack_label | default: 'Shop the Stack' }}
                   <span class="menu-drawer__badge">Best value</span>
                 </a>
               </li>
               <li>
-                <a href="/products/surge-energy-patch-stack-preorder-ships-july-7-copy-1" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="surge">
+                <a href="/products/{{ settings.surge_product_handle | default: 'surge-energy-patch-stack-preorder-ships-july-7-copy-1' }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="surge">
                   Surge (AM)
                 </a>
               </li>
               <li>
-                <a href="/products/surge-energy-patch-stack-preorder-ships-july-7-copy" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="drift">
+                <a href="/products/{{ settings.drift_product_handle | default: 'surge-energy-patch-stack-preorder-ships-july-7-copy' }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="drift">
                   Drift (PM)
                 </a>
               </li>

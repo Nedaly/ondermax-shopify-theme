@@ -11,7 +11,7 @@
   "products": {
     "product": {
       "fake_stock_message_html": "تبقّى فقط <span id=\"fake-stock-count\" class=\"rtl-num\">{{ count }}</span> في المخزون",
-      "add_to_cart": "أضف إلى السلة",
+      "add_to_cart": "<tc>أضف إلى السلة</tc>",
       "choose_options": "اختر الخيارات",
       "choose_product_options": "اختر الخيارات لـ {{ product_name }}",
       "description": "وصف",
@@ -143,14 +143,14 @@
       "just_results": "فقط النتائج.",
       "doctor_built_system": "نظام مُصمم بواسطة أطباء، مستوحى من العيادات",
       "surge_drift_system": "SURGE + DRIFT — نظام البيوهكرينغ.",
-      "shop_the_stack": "تسوق المجموعة",
-      "how_it_works": "كيف يعمل ↓",
+      "shop_the_stack": "<tc>اشتري الباكج</tc>",
+      "how_it_works": "<tc>كيف يعمل؟↓</tc>",
       "shop_now": "تسوق الآن"
     },
     "benefits_story": {
-      "stick_it": "ألصقها",
-      "absorb_it": "امتصاصه",
-      "feel_it": "اشعر به"
+      "stick_it": "<tc>ضع اللاصقة على جلد نظيف.</tc>",
+      "absorb_it": "<tc>تُطلق الجرعة بثبات خلال اليوم/الليل.</tc>",
+      "feel_it": "<tc>طاقة أو نوم — بلا كافيين ولا حبوب.</tc>"
     },
     "header_drawer": {
       "results_and_reviews": "النتائج & المراجعات",

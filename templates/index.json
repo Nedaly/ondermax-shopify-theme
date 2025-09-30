@@ -18,7 +18,7 @@
         "use_video": true,
         "video_cdn_url": "https://cdn.shopify.com/videos/c/o/v/6f036483135b4d3d8f375016a8ed00a5.mp4",
         "overlay_strength": 30,
-        "primary_link": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+        "primary_link": "shopify://products/high-energy-and-sleep-stack",
         "primary_label": "Shop the Stack",
         "secondary_link": "#shopify-section-template--26495401165131__benefits_story",
         "secondary_label": "How it Works ↓",
@@ -602,7 +602,7 @@
         "custom_contaner_colors_background": "#ffffff",
         "custom_container_gradient_background": "",
         "custom_contaner_colors_text": "#2e2a39",
-        "btn_url": "shopify://products/surge-energy-patch-stack-preorder-ships-july-7-copy",
+        "btn_url": "shopify://products/high-energy-and-sleep-stack",
         "btn": "SHOP NOW",
         "btn_subheading": ""
       }

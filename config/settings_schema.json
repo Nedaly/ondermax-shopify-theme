@@ -118,6 +118,54 @@
     ]
   },
   {
+    "name": "Navigation",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Product Navigation Links"
+      },
+      {
+        "type": "text",
+        "id": "stack_product_handle",
+        "label": "Stack Product Handle",
+        "default": "high-energy-and-sleep-stack",
+        "info": "The product handle for the main stack product (used in 'Shop the Stack' buttons and navigation)"
+      },
+      {
+        "type": "text",
+        "id": "surge_product_handle",
+        "label": "Surge Product Handle",
+        "default": "surge-energy-patch-stack-preorder-ships-july-7-copy-1",
+        "info": "The product handle for the Surge (AM) product"
+      },
+      {
+        "type": "text",
+        "id": "drift_product_handle",
+        "label": "Drift Product Handle",
+        "default": "surge-energy-patch-stack-preorder-ships-july-7-copy",
+        "info": "The product handle for the Drift (PM) product"
+      },
+      {
+        "type": "header",
+        "content": "Navigation Labels"
+      },
+      {
+        "type": "text",
+        "id": "shop_stack_label",
+        "label": "Shop the Stack Label",
+        "default": "Shop the Stack",
+        "info": "Text for the main stack product button"
+      },
+      {
+        "type": "text",
+        "id": "hero_kicker_text",
+        "label": "Hero Kicker Text",
+        "default": "Take Control of Your 24 Hours",
+        "info": "The main hero section kicker text"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {

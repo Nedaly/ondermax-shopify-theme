@@ -15,6 +15,8 @@
   const moneyFormat = root.dataset.moneyFormat || '${{amount}}';
   const basePriceCents = Number(root.dataset.basePriceCents || 0);
   let variantId = root.dataset.variantId || null;
+  const productId = root.dataset.productId || null;
+  const productHandle = root.dataset.productHandle || null;
   const allocsRaw = root.dataset.spAllocJson || '[]';
   const groupsRaw = root.dataset.spGroupsJson || '[]';
   const manualDataAttr = root.dataset.sellingPlanId || '';
@@ -29,8 +31,22 @@
     !manualUrlParam && !manualDataAttr
       ? extractPlanIdFromString(allocsRaw) || extractPlanIdFromString(groupsRaw)
       : '';
+  
+  // Enhanced fallback: try product ID, handle, then auto-detect
   const manualOverride =
-    manualUrlParam || manualDataAttr || autoDetectedId || '';
+    manualUrlParam || manualDataAttr || productId || productHandle || autoDetectedId || '';
+  
+  // Debug logging (production)
+  if (DEBUG) {
+    console.log('OMX Subscription Debug:', {
+      productId,
+      productHandle,
+      variantId,
+      manualOverride,
+      allocs: allocs.length,
+      groups: groups.length
+    });
+  }
 
   // resolve plan id + price
   let { sellingPlanId, subscriptionPriceCents, resolvedFrom } =
@@ -42,6 +58,15 @@
       allocsRaw,
       groupsRaw
     );
+    
+  // Debug the resolution result (production)
+  if (DEBUG) {
+    console.log('OMX Subscription Resolution:', {
+      sellingPlanId,
+      subscriptionPriceCents,
+      resolvedFrom
+    });
+  }
 
   // expose for console checks
   window.__OMX_LAST_PLAN_ID = sellingPlanId;
@@ -66,7 +91,7 @@
     document.querySelector('[data-omx-atc]') ||
     document.querySelector('form[action^="/cart/add"] [type="submit"]');
 
-  const subPriceNode = document.querySelector('#omx-sub-price[data-omx-price]');
+  const subPriceNode = document.querySelector('#subscription-price-display');
   const oneTimePriceNode = document.querySelector(
     '#omx-onetime-price[data-omx-price]'
   );
@@ -92,9 +117,11 @@
     }
   }
   function fmt(c) {
-    return window.Shopify && Shopify.formatMoney
-      ? Shopify.formatMoney(c, moneyFormat)
-      : (c / 100).toFixed(2);
+    if (window.Shopify && Shopify.formatMoney) {
+      return Shopify.formatMoney(c, moneyFormat);
+    }
+    // Fallback: add currency symbol manually
+    return '$' + (c / 100).toFixed(2);
   }
   function hidden(parent, id, name, val) {
     const i = document.createElement('input');
@@ -180,6 +207,14 @@
       sp.name = 'selling_plan';
       sp.value = sellingPlanId || '';
       form.appendChild(sp);
+      
+      // Debug logging (production)
+      if (DEBUG) {
+        console.log('OMX Subscription: Injecting selling plan', {
+          sellingPlanId,
+          form: form.tagName
+        });
+      }
       let q = form.querySelector('input[name="quantity"]');
       if (!q) q = hidden(form, 'omx-qty', 'quantity', '1');
       q.value = '1';
@@ -215,6 +250,10 @@
         if (state.mode === 'subscription') {
           state.months = 1;
           qtyInput.value = '1';
+          // Ensure selling plan is available for subscription
+          if (!sellingPlanId) {
+            console.warn('OMX Subscription: No selling plan ID found for subscription mode');
+          }
         }
         setCardSelection();
         setMonthsVisibility();
@@ -254,12 +293,41 @@
 
   // hook both click & submit so we survive themes that serialize manually
   if (cta) {
-    const form = cta.closest('form[action^="/cart/add"]');
+    const form = cta.closest('form[action^="/cart/add"]') || 
+                 cta.closest('form') || 
+                 document.querySelector('form[action*="/cart/add"]') ||
+                 document.querySelector('form[action*="cart"]');
     const attach = () => {
-      if (form) injectPayloadInto(form);
+      if (form) {
+        injectPayloadInto(form);
+        if (DEBUG) {
+          console.log('OMX Subscription: Form found and payload injected', {
+            form: form.tagName,
+            action: form.action,
+            sellingPlanId
+          });
+        }
+      } else {
+        console.warn('OMX Subscription: No form found for CTA', cta);
+        // Try to find any form on the page
+        const allForms = document.querySelectorAll('form');
+        console.log('Available forms on page:', Array.from(allForms).map(f => ({
+          tagName: f.tagName,
+          action: f.action,
+          method: f.method
+        })));
+      }
     };
     cta.addEventListener('click', attach, opt);
     form && form.addEventListener('submit', attach, opt);
+    
+    // Debug form detection (production)
+    if (DEBUG) {
+      console.log('OMX Subscription: CTA and form detection', {
+        cta: cta ? cta.tagName : 'not found',
+        form: form ? form.tagName : 'not found'
+      });
+    }
   }
 
   // variant change → re-resolve plan from fresh DOM data attrs

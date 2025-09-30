@@ -119,14 +119,16 @@
               {% render 'text-with-icon-block', block: block, margins: true, block_attributes: true %}
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }} style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;">
+                {%- if block.settings.show_badge -%}
+                  <div class="product__badge" style="margin-bottom: 12px;">
+                    <span class="badge badge--{{ block.settings.badge_style }} {{ block.settings.badge_size }}">
+                      {{ block.settings.badge_text | default: 'Best Seller' }}
+                    </span>
+                  </div>
+                {%- endif -%}
                 <h1 class="{{ block.settings.text_size }}{% if block.settings.uppercase_title %} product-title--uppercase{% endif %}{% if block.settings.title_alignment == 'center' %} center{% endif %}">
-                  {{ product.title | slice: 0, 13 }}
+                  {{ product.title }}
                 </h1>
-                <a href="{{ product.url }}" class="product__title">
-                  <h2 class="h1">
-                    {{ product.title | truncate: 65 }}
-                  </h2>
-                </a>
               </div>
             {% when 'rating_stars' %}
               {% render 'rating-stars-block', block: block, margins: true, block_attributes: true %}
@@ -1516,6 +1518,67 @@
           "id": "uppercase_title",
           "label": "Uppercase title",
           "default": false
+        },
+        {
+          "type": "header",
+          "content": "Product Badge"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_badge",
+          "label": "Show badge above title",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge text",
+          "default": "Best Seller",
+          "info": "Text to display in the badge"
+        },
+        {
+          "type": "select",
+          "id": "badge_style",
+          "label": "Badge style",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "success",
+              "label": "Success"
+            },
+            {
+              "value": "warning",
+              "label": "Warning"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "select",
+          "id": "badge_size",
+          "label": "Badge size",
+          "options": [
+            {
+              "value": "badge--small",
+              "label": "Small"
+            },
+            {
+              "value": "badge--medium",
+              "label": "Medium"
+            },
+            {
+              "value": "badge--large",
+              "label": "Large"
+            }
+          ],
+          "default": "badge--medium"
         },
         {
           "type": "header",

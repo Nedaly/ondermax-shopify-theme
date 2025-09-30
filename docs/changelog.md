@@ -19,6 +19,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [v1.5.0] - 2025-09-30
+
+### Added
+
+- **CRO-Optimized Subscription Section**: Enhanced subscription options with conversion-focused benefits display
+- **Currency Symbol Support**: Fixed currency symbol display in subscription pricing with JavaScript fallback
+- **Hardcoded CRO Benefits**: Reliable CRO benefits display using hardcoded text in custom_liquid blocks
+- **Enhanced JavaScript Fallback**: Improved price formatting with manual currency symbol addition
+- **Subscription UX Improvements**: Streamlined subscription flow with 3 key benefits for better conversion
+
+### Changed
+
+- **Subscription Pricing Display**: Updated JavaScript to ensure currency symbols always appear
+- **CRO Benefits Layout**: Reduced from 4 to 3 benefits for cleaner, more focused presentation
+- **Template Structure**: Enhanced JSON template with proper escaping for custom_liquid content
+- **Price Formatting Logic**: Improved fallback handling when Shopify.formatMoney fails
+
+### Fixed
+
+- **Currency Symbol Missing**: Resolved issue where subscription prices showed numbers without currency symbols
+- **JSON Template Errors**: Fixed JSON syntax errors caused by unescaped quotes in custom_liquid blocks
+- **Translation Missing**: Eliminated "Translation missing" errors in CRO benefits section
+- **JavaScript Override Issues**: Prevented JavaScript from overriding Liquid-rendered price displays
+- **Template Validation**: Ensured all JSON templates pass validation checks
+
+### Security
+
+- **Safe JSON Escaping**: Implemented proper escaping for all dynamic content in templates
+- **No External Dependencies**: All improvements use native Shopify/Liquid functionality
+
 ## [v1.4.0] - 2025-09-24
 
 ### Added

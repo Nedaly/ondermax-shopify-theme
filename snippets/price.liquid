@@ -126,9 +126,11 @@
           {% render 'material-icon', icon: block.settings.icon_2, filled: block.settings.filled_icon_2 %}
         {% endif %}
       {% endcapture %}
-      <span class="badge price__badge-custom color-{{ settings.sale_badge_color_scheme }} nowrap" style="--icon-size: {{ block.settings.icon_scale | divided_by: 100.0 }}em;">
-        {{ block.settings.custom_badge_text | replace: '[percentage]', percentage_saved | replace: '[amount]', money_saved | replace: '[icon_1]', icon_1 | replace: '[icon_2]', icon_2 }}
-      </span>
+      {%- if compare_at_price > price and percentage_saved != '0%' -%}
+        <span class="badge price__badge-custom color-{{ settings.sale_badge_color_scheme }} nowrap" style="--icon-size: {{ block.settings.icon_scale | divided_by: 100.0 }}em;">
+          {{ block.settings.custom_badge_text | replace: '[percentage]', percentage_saved | replace: '[amount]', money_saved | replace: '[icon_1]', icon_1 | replace: '[icon_2]', icon_2 }}
+        </span>
+      {%- endif -%}
     {% endif %}
     <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
       {{ 'products.product.sold_out' | t }}

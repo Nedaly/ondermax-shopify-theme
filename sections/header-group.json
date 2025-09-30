@@ -172,7 +172,7 @@
         "menu": "new-menu",
         "menu_type_desktop": "dropdown",
         "new-button": "Shop The Stack",
-        "btn_link": "shopify://products/high-energy-stack",
+        "btn_link": "shopify://products/high-energy-and-sleep-stack",
         "highlight_active_link": false,
         "highlighted_link_color_scheme": "accent-1",
         "products_mega_menu_links": "",

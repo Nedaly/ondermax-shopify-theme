@@ -18,6 +18,10 @@
             "text_size": "h1",
             "title_alignment": "left",
             "uppercase_title": false,
+            "show_badge": true,
+            "badge_text": "🔥 Best Seller",
+            "badge_style": "primary",
+            "badge_size": "badge--large",
             "margin_top": 0,
             "margin_bottom": 0
           }
@@ -61,27 +65,10 @@
             "uppercase_text": true,
             "icon_scale": 120,
             "icon_spacing": 10,
-            "display_price": false,
+            "display_price": true,
             "enable_custom_color": false,
             "margin_top": 15,
             "margin_bottom": 30
-          }
-        },
-        "sticky_atc": {
-          "type": "sticky_atc",
-          "settings": {
-            "function": "add_to_cart",
-            "display_when": "after_scroll",
-            "button_label": "ADD BOTH",
-            "enable_custom_btn_color": false,
-            "color_scheme": "background-1",
-            "picker_type": "combined",
-            "desktop_show_image": true,
-            "desktop_show_title": true,
-            "desktop_show_price": true,
-            "desktop_show_sale_badge": true,
-            "desktop_variant_picker": true,
-            "desktop_full_button_width": false
           }
         },
         "custom_css": {
@@ -93,7 +80,7 @@
         "subscription_options": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<style>@keyframes slideInUp {from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);}}@keyframes pulse {0%, 100% {transform: scale(1);} 50% {transform: scale(1.05);}}@keyframes shimmer {0% {background-position: -200px 0;} 100% {background-position: calc(200px + 100%) 0;}}.modern-radio {appearance: none; width: 20px; height: 20px; border: 2px solid #e5e7eb; border-radius: 50%; background: white; cursor: pointer; position: relative; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);}.modern-radio:checked {border-color: #1C8E8E; background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%); animation: pulse 0.6s ease-in-out;}.modern-radio:checked::after {content: ''; position: absolute; top: 50%; left: 50%; width: 8px; height: 8px; background: white; border-radius: 50%; transform: translate(-50%, -50%);}.modern-card {border: 2px solid transparent; border-radius: 16px; padding: 24px; margin-bottom: 16px; background: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;}.modern-card::before {content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(28, 142, 142, 0.1), transparent); transition: left 0.6s ease;}.modern-card:hover::before {left: 100%;}.modern-card.selected {border-color: #1C8E8E; background: linear-gradient(135deg, rgba(28, 142, 142, 0.02) 0%, rgba(109, 56, 179, 0.02) 100%); box-shadow: 0 10px 25px -3px rgba(28, 142, 142, 0.1), 0 4px 6px -2px rgba(28, 142, 142, 0.05); transform: translateY(-2px);}.modern-card.unselected {opacity: 0.6; background: #f8fafc; border-color: #e2e8f0;}.modern-badge {background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%); color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 4px rgba(28, 142, 142, 0.3);}.modern-btn {padding: 10px 20px; border: 2px solid transparent; border-radius: 25px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;}.modern-btn::before {content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); transition: left 0.5s ease;}.modern-btn:hover::before {left: 100%;}.modern-btn.active {background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%); color: white; border-color: #1C8E8E; box-shadow: 0 4px 12px rgba(28, 142, 142, 0.3);}.modern-btn.inactive {background: white; color: #64748b; border-color: #e2e8f0;}.modern-btn.inactive:hover {border-color: #1C8E8E; color: #1C8E8E; transform: translateY(-1px);}.supply-selector {animation: slideInUp 0.4s ease-out;}</style><div id=\"omx-subscription-root\" class=\"purchase-options\" style=\"margin: 24px 0;\" data-money-format=\"{{ shop.money_format | escape }}\" data-variant-id=\"{{ product.selected_or_first_available_variant.id }}\" data-base-price-cents=\"{{ product.selected_or_first_available_variant.price }}\" data-sp-alloc-json='{{ product.selected_or_first_available_variant.selling_plan_allocations | json }}' data-sp-groups-json='{{ product.selling_plan_groups | json }}' data-selling-plan-id=\"\"><input type=\"hidden\" name=\"quantity\" id=\"custom-quantity\" value=\"1\"><span id=\"omx-sub-price\" data-omx-price hidden></span><span id=\"omx-onetime-price\" data-omx-price hidden></span><div id=\"subscription-card\" class=\"modern-card selected\"><div style=\"display: flex; align-items: center; justify-content: space-between;\"><div style=\"display: flex; align-items: center; flex: 1;\"><input type=\"radio\" name=\"purchase_type\" value=\"subscription\" id=\"subscription\" class=\"modern-radio\" checked style=\"margin-right: 16px;\"><label for=\"subscription\" style=\"font-weight: 700; color: #1C8E8E; font-size: 18px; cursor: pointer; transition: all 0.3s ease;\">Subscribe and save</label></div><div style=\"display: flex; align-items: center; gap: 12px;\"><div class=\"modern-badge\">SAVE 20%</div><div style=\"text-align: right;\"><div style=\"font-weight: 800; color: #1C8E8E; font-size: 18px;\">${{ product.price | money_without_currency | times: 0.8 | round: 2 }}</div><div style=\"font-size: 14px; color: #9ca3af; text-decoration: line-through;\">${{ product.price | money_without_currency }}</div></div></div></div><div style=\"margin-left: 36px; margin-top: 8px; color: #6b7280; font-size: 14px; font-weight: 500;\">Monthly Subscription</div></div><div id=\"one-time-card\" class=\"modern-card unselected\"><div style=\"display: flex; align-items: center; justify-content: space-between;\"><div style=\"display: flex; align-items: center; flex: 1;\"><input type=\"radio\" name=\"purchase_type\" value=\"one-time\" id=\"one-time\" class=\"modern-radio\" style=\"margin-right: 16px;\"><label for=\"one-time\" style=\"font-weight: 700; color: #9ca3af; font-size: 18px; cursor: pointer; flex: 1; transition: all 0.3s ease;\">One Time Purchase</label></div><div style=\"font-weight: 800; color: #9ca3af; font-size: 18px; transition: all 0.3s ease;\">${{ product.price | money_without_currency }}</div></div><div id=\"supply-selector\" class=\"supply-selector\" style=\"margin-left: 36px; margin-top: 16px; display: none;\"><div style=\"margin-bottom: 12px; color: #374151; font-size: 15px; font-weight: 600;\">Supply:</div><div style=\"display: flex; gap: 12px; flex-wrap: wrap;\"><button type=\"button\" class=\"modern-btn active\" data-supply=\"1\" data-price=\"{{ product.price | money_without_currency }}\">1 Month</button><button type=\"button\" class=\"modern-btn inactive\" data-supply=\"3\" data-price=\"{{ product.price | money_without_currency | times: 3 | round: 2 }}\">3 Month</button><button type=\"button\" class=\"modern-btn inactive\" data-supply=\"6\" data-price=\"{{ product.price | money_without_currency | times: 6 | round: 2 }}\">6 Month</button></div></div></div></div><!-- Subscription logic handled by omx-subscriptions.js -->"
+            "custom_liquid": "<style>@keyframes slideInUp {from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);}}@keyframes pulse {0%, 100% {transform: scale(1);} 50% {transform: scale(1.05);}}@keyframes shimmer {0% {background-position: -200px 0;} 100% {background-position: calc(200px + 100%) 0;}}.modern-radio {appearance: none; width: 20px; height: 20px; border: 2px solid #e5e7eb; border-radius: 50%; background: white; cursor: pointer; position: relative; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);}.modern-radio:checked {border-color: #1C8E8E; background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%); animation: pulse 0.6s ease-in-out;}.modern-radio:checked::after {content: ''; position: absolute; top: 50%; left: 50%; width: 8px; height: 8px; background: white; border-radius: 50%; transform: translate(-50%, -50%);}.modern-card {border: 2px solid transparent; border-radius: 16px; padding: 24px; margin-bottom: 16px; background: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;}.modern-card::before {content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(28, 142, 142, 0.1), transparent); transition: left 0.6s ease;}.modern-card:hover::before {left: 100%;}.modern-card.selected {border-color: #1C8E8E; background: linear-gradient(135deg, rgba(28, 142, 142, 0.02) 0%, rgba(109, 56, 179, 0.02) 100%); box-shadow: 0 10px 25px -3px rgba(28, 142, 142, 0.1), 0 4px 6px -2px rgba(28, 142, 142, 0.05); transform: translateY(-2px);}.modern-card.unselected {opacity: 0.6; background: #f8fafc; border-color: #e2e8f0;}.modern-badge {background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%); color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 4px rgba(28, 142, 142, 0.3);}.modern-btn {padding: 10px 20px; border: 2px solid transparent; border-radius: 25px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;}.modern-btn::before {content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); transition: left 0.5s ease;}.modern-btn:hover::before {left: 100%;}.modern-btn.active {background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%); color: white; border-color: #1C8E8E; box-shadow: 0 4px 12px rgba(28, 142, 142, 0.3);}.modern-btn.inactive {background: white; color: #64748b; border-color: #e2e8f0;}.modern-btn.inactive:hover {border-color: #1C8E8E; color: #1C8E8E; transform: translateY(-1px);}.supply-selector {animation: slideInUp 0.4s ease-out;}.cro-benefits {display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;}.cro-benefit {background: #f0f9ff; border: 1px solid #e0f2fe; border-radius: 8px; padding: 6px 12px; font-size: 12px; color: #0369a1; font-weight: 500;}</style><div id=\"omx-subscription-root\" class=\"purchase-options\" style=\"margin: 24px 0;\" data-money-format=\"{{ shop.money_format | escape }}\" data-variant-id=\"{{ product.selected_or_first_available_variant.id }}\" data-base-price-cents=\"{{ product.selected_or_first_available_variant.price }}\" data-sp-alloc-json='{{ product.selected_or_first_available_variant.selling_plan_allocations | json | escape }}' data-sp-groups-json='{{ product.selling_plan_groups | json | escape }}' data-selling-plan-id=\"\"><input type=\"hidden\" name=\"quantity\" id=\"custom-quantity\" value=\"1\"><span id=\"omx-sub-price\" data-omx-price hidden></span><span id=\"omx-onetime-price\" data-omx-price hidden></span><div id=\"subscription-card\" class=\"modern-card selected\"><div style=\"display: flex; align-items: center; justify-content: space-between;\"><div style=\"display: flex; align-items: center; flex: 1;\"><input type=\"radio\" name=\"purchase_type\" value=\"subscription\" id=\"subscription\" class=\"modern-radio\" checked style=\"margin-right: 16px;\"><label for=\"subscription\" style=\"font-weight: 700; color: #1C8E8E; font-size: 18px; cursor: pointer; transition: all 0.3s ease;\">Subscribe and save</label></div><div style=\"display: flex; align-items: center; gap: 12px;\"><div class=\"modern-badge\">SAVE 20%</div><div style=\"text-align: right;\"><div style=\"font-weight: 800; color: #1C8E8E; font-size: 18px;\" id=\"subscription-price-display\">{{ product.price | times: 0.8 | money }}</div><div style=\"font-size: 14px; color: #9ca3af; text-decoration: line-through;\">{{ product.price | money }}</div></div></div></div><div style=\"margin-left: 36px; margin-top: 8px; color: #6b7280; font-size: 14px; font-weight: 500;\">Monthly Subscription</div><div class=\"cro-benefits\"><div class=\"cro-benefit\">🌍 Free shipping on all orders</div><div class=\"cro-benefit\">⚡ 8-12 Hours of Steady Energy</div><div class=\"cro-benefit\">💊 No Pills. No Gut Issues. No Crash.</div></div></div><div id=\"one-time-card\" class=\"modern-card unselected\"><div style=\"display: flex; align-items: center; justify-content: space-between;\"><div style=\"display: flex; align-items: center; flex: 1;\"><input type=\"radio\" name=\"purchase_type\" value=\"one-time\" id=\"one-time\" class=\"modern-radio\" style=\"margin-right: 16px;\"><label for=\"one-time\" style=\"font-weight: 700; color: #9ca3af; font-size: 18px; cursor: pointer; flex: 1; transition: all 0.3s ease;\">One Time Purchase</label></div><div style=\"font-weight: 800; color: #9ca3af; font-size: 18px; transition: all 0.3s ease;\">{{ product.price | money }}</div></div><div id=\"supply-selector\" class=\"supply-selector\" style=\"margin-left: 36px; margin-top: 16px; display: none;\"><div style=\"margin-bottom: 12px; color: #374151; font-size: 15px; font-weight: 600;\">Supply:</div><div style=\"display: flex; gap: 12px; flex-wrap: wrap;\"><button type=\"button\" class=\"modern-btn active\" data-supply=\"1\" data-price=\"{{ product.price | money_without_currency }}\">1 Month</button><button type=\"button\" class=\"modern-btn inactive\" data-supply=\"3\" data-price=\"{{ product.price | money_without_currency | times: 3 | round: 2 }}\">3 Month</button><button type=\"button\" class=\"modern-btn inactive\" data-supply=\"6\" data-price=\"{{ product.price | money_without_currency | times: 6 | round: 2 }}\">6 Month</button></div></div></div></div><!-- Subscription logic handled by omx-subscriptions.js -->"
           }
         },
         "free_shipping_notice": {
@@ -136,7 +123,6 @@
         "subscription_options",
         "buy_buttons",
         "free_shipping_notice",
-        "sticky_atc",
         "custom_css"
       ],
       "settings": {
@@ -171,18 +157,60 @@
           "settings": {
             "title": "🎯 Complete Biohacking Stack"
           }
+        },
+        "text_duplicate1": {
+          "type": "text",
+          "settings": {
+            "title": "⚡🌙 Day & Night Complete"
+          }
+        },
+        "text_duplicate2": {
+          "type": "text",
+          "settings": {
+            "title": "✈️ Fast Worldwide Shipping"
+          }
+        },
+        "text_duplicate3": {
+          "type": "text",
+          "settings": {
+            "title": "🎯 Complete Biohacking Stack"
+          }
+        },
+        "text_duplicate4": {
+          "type": "text",
+          "settings": {
+            "title": "⚡🌙 Day & Night Complete"
+          }
+        },
+        "text_duplicate5": {
+          "type": "text",
+          "settings": {
+            "title": "✈️ Fast Worldwide Shipping"
+          }
+        },
+        "text_duplicate6": {
+          "type": "text",
+          "settings": {
+            "title": "🎯 Complete Biohacking Stack"
+          }
         }
       },
       "block_order": [
         "text_EEXyiX",
         "text_V7RMqT",
-        "text_8QmnpH"
+        "text_8QmnpH",
+        "text_duplicate1",
+        "text_duplicate2",
+        "text_duplicate3",
+        "text_duplicate4",
+        "text_duplicate5",
+        "text_duplicate6"
       ],
       "name": "Power Bar Under Hero",
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "speed": 1,
+        "speed": 5,
         "direction": "normal",
         "stop_on_hover": false,
         "mobile_spacing": 60,
@@ -217,7 +245,9 @@
           "settings": {
             "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 31 45\" height=\"45\" width=\"31\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.38623\" stroke=\"white\" d=\"M2.43958 20.9557L15.98 2.70391C17.041 1.27718 19.0231 2.16437 19.0231 4.06518V18.1925C19.0231 19.3326 19.8019 20.2536 20.7614 20.2536H27.3487C28.8454 20.2536 29.6423 22.3463 28.6535 23.6805L15.1131 41.93C14.0521 43.3568 12.07 42.4696 12.07 40.5688V26.4414C12.07 25.3014 11.2912 24.3803 10.3318 24.3803H3.74216C2.24544 24.3803 1.4508 22.2876 2.43958 20.9557Z\"></path>\n</svg>",
             "title": "NAD+",
-            "desc": "<p>Cellular energy and anti-aging support</p>"
+            "desc": "<p>Cellular energy and anti-aging support</p>",
+            "show_benefit": true,
+            "benefit_text": "Energy Boost"
           }
         },
         "text_kxbakH": {
@@ -225,7 +255,9 @@
           "settings": {
             "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
             "title": "Glutathione",
-            "desc": "<p>Master antioxidant for recovery</p>"
+            "desc": "<p>Master antioxidant for recovery</p>",
+            "show_benefit": true,
+            "benefit_text": "Recovery"
           }
         },
         "text_JJ4JV8": {
@@ -233,7 +265,9 @@
           "settings": {
             "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
             "title": "Creatine",
-            "desc": "<p>Enhanced strenth and performance</p>"
+            "desc": "<p>Enhanced strenth and performance</p>",
+            "show_benefit": true,
+            "benefit_text": "Performance"
           }
         },
         "text_bVitamins": {
@@ -241,7 +275,29 @@
           "settings": {
             "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" height=\"24\" width=\"24\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2\" stroke=\"white\" d=\"M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z\"></path>\n</svg>",
             "title": "B-Vitamins",
-            "desc": "<p>Energy metabolism and mental clarity</p>"
+            "desc": "<p>Energy metabolism and mental clarity</p>",
+            "show_benefit": true,
+            "benefit_text": "Mental Clarity"
+          }
+        },
+        "text_magnesium": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 48 48\" height=\"48\" width=\"48\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2.5\" stroke=\"white\" d=\"M24 4L30 18H44L32 28L38 42L24 32L10 42L16 28L4 18H18L24 4Z\"></path>\n<circle cx=\"24\" cy=\"24\" r=\"3\" fill=\"white\" opacity=\"0.8\"></circle>\n</svg>",
+            "title": "Magnesium",
+            "desc": "<p>Deep muscle relaxation and stress relief</p>",
+            "show_benefit": true,
+            "benefit_text": "Sleep Quality"
+          }
+        },
+        "text_melatonin": {
+          "type": "text",
+          "settings": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 48 48\" height=\"48\" width=\"48\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2.5\" stroke=\"white\" d=\"M24 4C12.954 4 4 12.954 4 24s8.954 20 20 20 20-8.954 20-20S35.046 4 24 4z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2.5\" stroke=\"white\" d=\"M24 8v16l8 8\"></path>\n<circle cx=\"24\" cy=\"24\" r=\"2\" fill=\"white\" opacity=\"0.9\"></circle>\n</svg>",
+            "title": "Melatonin",
+            "desc": "<p>Natural sleep hormone for deeper rest</p>",
+            "show_benefit": true,
+            "benefit_text": "Sleep Cycle"
           }
         }
       },
@@ -249,15 +305,111 @@
         "text_VwPtCh",
         "text_kxbakH",
         "text_JJ4JV8",
-        "text_bVitamins"
+        "text_bVitamins",
+        "text_magnesium",
+        "text_melatonin"
       ],
       "name": "Icon with text",
       "settings": {
         "heading": "Science backed energy.",
         "subheading": "SURGE combines clinically studied ingredients, precisely dosed for all-day energy and mental clarity—without pills or crash.",
         "bg_color": "#1a1a1a",
+        "show_badge": true,
+        "badge_text": "🔬 Clinically Proven",
+        "badge_style": "primary",
+        "badge_size": "badge--medium",
+        "show_stats": true,
+        "stat_1_number": "10,000+",
+        "stat_1_label": "Happy Customers",
+        "stat_2_number": "95%",
+        "stat_2_label": "Satisfaction Rate",
+        "stat_3_number": "30",
+        "stat_3_label": "Day Guarantee",
         "p_top": 80,
         "p_bottom": 80
+      }
+    },
+    "comparison_table": {
+      "type": "comparison-table",
+      "blocks": {
+        "row_1": {
+          "type": "row",
+          "settings": {
+            "benefit": "Duration",
+            "us": "8-12 hours",
+            "them": "Less than 4 hours"
+          }
+        },
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "benefit": "Delivery",
+            "us": "Skin - easy",
+            "them": "Swallowing"
+          }
+        },
+        "row_3": {
+          "type": "row",
+          "settings": {
+            "benefit": "Digestive",
+            "us": "No effect",
+            "them": "Bloating & discomfort"
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "benefit": "Consistency",
+            "us": "Use anywhere",
+            "them": "Hard to use"
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "benefit": "Convenience",
+            "us": "Use anywhere",
+            "them": "Hard to use"
+          }
+        },
+        "row_6": {
+          "type": "row",
+          "settings": {
+            "benefit": "Price per Day",
+            "us": "Less than a cup of coffee",
+            "them": "Expensive"
+          }
+        }
+      },
+      "block_order": [
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5",
+        "row_6"
+      ],
+      "name": "Comparison Table",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "Why Patches Beat Everything Else",
+        "text": "<p>Stop wasting time on pills that upset your stomach and drinks that crash you hard. The Launch Stack delivers steady 8-12 hour energy through your skin — no swallowing, no gut issues, just clean performance.</p><ul><li>⚡ 8-12 Hours of Steady Energy</li><li>💊 No Pills. No Gut Issues. No Crash.</li><li>🌍 Just Peel & Stick — Anywhere</li></ul>",
+        "style": "modern",
+        "corner_radius": 16,
+        "highlighted_separator_opacity": 40,
+        "regular_separator_opacity": 30,
+        "highlighted_overlay_opacity": 20,
+        "regular_overlay_opacity": 15,
+        "minimalistic_border_opacity": 40,
+        "color_scheme": "custom",
+        "custom_colors_background": "#0D1320",
+        "custom_gradient_background": "linear-gradient(135deg, #0D1320 0%, #1a1a1a 30%, #2D1B69 70%, #4A3B8A 100%)",
+        "custom_colors_text": "#ffffff",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "us_label": "Ondermax 24 Stack",
+        "others_label": "Pills & Powders"
       }
     },
     "surge_day_only": {
@@ -283,7 +435,37 @@
       "block_order": [
         "text_78hKmU"
       ],
-      "name": "Two products section",
+      "name": "SURGE Day Section",
+      "settings": {
+        "p_top": 80,
+        "p_bottom": 80
+      }
+    },
+    "drift_night_only": {
+      "type": "two-products-sec",
+      "blocks": {
+        "text_drift": {
+          "type": "text",
+          "settings": {
+            "bg_color": "linear-gradient(306deg, rgba(127, 72, 176, 1) 1%, rgba(127, 72, 176, 0.94) 9%, rgba(67, 48, 211, 0.96) 88%)",
+            "product": "surge-energy-patch-stack-preorder-ships-july-7-copy",
+            "pro_img": "shopify://shop_images/mock-up-new2_53439dcb-7fe5-461f-bc80-ac8082ddacd6.png",
+            "pro_img_title": "Drift",
+            "pro_img_bg_color": "rgba(0,0,0,0)",
+            "pro_title": "All-Night Rest",
+            "pro_desc": "<p>Magnesium, Melatonin for deeper rest and restoration.</p>",
+            "atc_btn": "",
+            "atc_btn_link": "",
+            "show_btn_outline": false,
+            "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-moon w-16 h-16 text-blue-100/30 animate-pulse\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:83:14\" data-orchids-name=\"Moon\"><path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\"></path></svg>",
+            "icon_animation": "pulse_bounce"
+          }
+        }
+      },
+      "block_order": [
+        "text_drift"
+      ],
+      "name": "DRIFT Night Section",
       "settings": {
         "p_top": 80,
         "p_bottom": 80
@@ -406,8 +588,8 @@
             "image": "shopify://shop_images/photo-1500648767791-00dcc994a43e.jpg",
             "name": "Mike Chen",
             "role": "Startup Founder, 32",
-            "review": "\"Running a startup means 16-hour days. SURGE keeps me alert and focused without the anxiety I used to get from energy drinks. It's become my secret weapon.\"",
-            "badge_text": "★★★★★ SURGE USER",
+            "review": "\"Running a startup means 16-hour days. SURGE keeps me alert and focused without the anxiety I used to get from energy drinks. DRIFT helps me wind down and get quality sleep. It's become my secret weapon.\"",
+            "badge_text": "★★★★★ SURGE & DRIFT USER",
             "badge_color": "#1c8e8e"
           }
         },
@@ -417,8 +599,8 @@
             "image": "shopify://shop_images/photo-1534528741775-53994a69daeb.jpg",
             "name": "Elena Rodriguez",
             "role": "Nurse, 35",
-            "review": "\"12-hour shifts were killing me until I found SURGE. Now I have consistent energy throughout my entire shift. My patients notice I'm more alert and attentive too.\"",
-            "badge_text": "★★★★★ SURGE USER",
+            "review": "\"12-hour shifts were killing me until I found SURGE. DRIFT helps me wind down after long shifts and get quality sleep. My patients notice I'm more alert and attentive too.\"",
+            "badge_text": "★★★★★ SURGE & DRIFT USER",
             "badge_color": "#1c8e8e"
           }
         },
@@ -428,8 +610,8 @@
             "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg",
             "name": "David Thompson",
             "role": "Sales Director, 41",
-            "review": "\"I travel constantly for work and SURGE is perfect for jet lag recovery. One patch and I'm ready to close deals in any time zone. Game changer for my career.\"",
-            "badge_text": "★★★★★ SURGE USER",
+            "review": "\"I travel constantly for work and SURGE is perfect for jet lag recovery. DRIFT helps me sleep better in different time zones. One patch and I'm ready to close deals in any time zone. Game changer for my career.\"",
+            "badge_text": "★★★★★ SURGE & DRIFT USER",
             "badge_color": "#1c8e8e"
           }
         },
@@ -627,31 +809,12 @@
         "testimonial_3dyCnt",
         "testimonial_4NnrJU",
         "testimonial_Sarah",
-        "testimonial_Mike",
-        "testimonial_Elena",
-        "testimonial_David",
-        "testimonial_Lisa",
-        "testimonial_James",
-        "testimonial_Maria",
-        "testimonial_Youssef",
-        "testimonial_Layla",
-        "testimonial_Hassan",
-        "testimonial_Amina",
-        "testimonial_Khalil",
-        "testimonial_Nour",
-        "testimonial_Tariq",
-        "testimonial_Mahmoud",
-        "testimonial_Rana",
-        "testimonial_Sami",
-        "testimonial_Lina",
-        "testimonial_Khaled",
-        "testimonial_Maya",
-        "testimonial_Omar"
+        "testimonial_Mike"
       ],
       "name": "Testimonial Grid",
       "settings": {
-        "heading": "Join 10,000+ Professionals Who Choose SURGE.",
-        "subheading": "Real users. Real energy. Real results. See why doctors, engineers, and entrepreneurs trust SURGE for sustained performance.",
+        "heading": "Join 10,000+ Professionals Who Choose SURGE & DRIFT.",
+        "subheading": "Real users. Real results. See why doctors, engineers, and entrepreneurs trust our patches for sustained performance and better sleep.",
         "bg_color": "#ffffff",
         "heading_color": "#0d0d33",
         "subheading_color": "#666666",
@@ -753,7 +916,7 @@
         "collapse_icon": "plus",
         "display_top_border": true,
         "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_bottom": 100,
         "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
         "custom_colors_text": "#2e2a39",
@@ -766,13 +929,15 @@
       }
     }
   },
-  "order": [
-    "main",
-    "horizontal_ticker",
-    "science_backed",
-    "surge_day_only",
-    "static_image_grid",
-    "testimonial_grid",
-    "faq_section"
-  ]
+      "order": [
+        "main",
+        "horizontal_ticker",
+        "science_backed",
+        "comparison_table",
+        "surge_day_only",
+        "drift_night_only",
+        "static_image_grid",
+        "testimonial_grid",
+        "faq_section"
+      ]
 }

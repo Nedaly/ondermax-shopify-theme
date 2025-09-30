@@ -1999,3 +1999,92 @@
 .omx-container.page-width {
   padding-left: 0;
 }
+
+/* Product Title Fix - Prevent Truncation */
+.product-title {
+  white-space: normal;
+  overflow: visible;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.2;
+}
+
+/* CRO Product Badge Styles */
+.product__badge {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.badge--small {
+  padding: 4px 8px;
+  font-size: 10px;
+}
+
+.badge--medium {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.badge--large {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.badge--primary {
+  background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%);
+  color: white;
+  box-shadow: 0 2px 4px rgba(28, 142, 142, 0.3);
+}
+
+.badge--secondary {
+  background: #f8fafc;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+.badge--success {
+  background: #10b981;
+  color: white;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+}
+
+.badge--warning {
+  background: #f59e0b;
+  color: white;
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+}
+
+/* Mobile-first responsive adjustments */
+@media screen and (max-width: 749px) {
+  .product__badge {
+    margin-bottom: 8px;
+  }
+  
+  .badge--small {
+    padding: 3px 6px;
+    font-size: 9px;
+  }
+  
+  .badge--medium {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  
+  .badge--large {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+}
