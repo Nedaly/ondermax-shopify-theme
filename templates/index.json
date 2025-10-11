@@ -22,7 +22,7 @@
         "primary_label": "Shop the Stack",
         "secondary_link": "#shopify-section-template--26495401165131__benefits_story",
         "secondary_label": "How it Works ↓",
-        "learn_anchor": "science-authority",
+        "learn_anchor": "benefits_story",
         "enable_smooth_scroll": true,
         "badge_enable": true,
         "mobile_sticky_cta": false,
