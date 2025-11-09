@@ -17878,7 +17878,7 @@ a.new-btn.buttons:hover {
   text-decoration: none;
 }
 .product__text-container {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 .collapsible-content {
   margin-bottom: 4rem !important;
@@ -17888,8 +17888,7 @@ button#Subscribe,
   height: 60px;
 }
 @media screen and (max-width: 989px) {
-  nav.header__inline-menu,
-  .header__heading {
+  nav.header__inline-menu {
     display: none;
   }
   .benefits-story__heading,

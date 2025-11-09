@@ -17,6 +17,8 @@
         "subheading": "Maximum Day.\n Awake when you want, asleep when you need.",
         "use_video": true,
         "video_cdn_url": "https://cdn.shopify.com/videos/c/o/v/6f036483135b4d3d8f375016a8ed00a5.mp4",
+        "fallback": "shopify://shop_images/Screenshot_1.png",
+        "image": "shopify://shop_images/Screenshot_1.png",
         "overlay_strength": 30,
         "primary_link": "shopify://products/high-energy-and-sleep-stack",
         "primary_label": "Shop the Stack",
@@ -65,6 +67,7 @@
         "image_slide_2",
         "image_slide_3"
       ],
+      "disabled": true,
       "name": "Static Image Grid",
       "settings": {
         "display_id": false,
@@ -82,8 +85,57 @@
         "custom_colors_text": "#121212"
       }
     },
+    "multirow_custom_3RUXj3": {
+      "type": "multirow-custom",
+      "blocks": {
+        "row_kjH9Gt": {
+          "type": "row",
+          "settings": {
+            "icon_svg": "<svg width=\"120\" height=\"120\" viewbox=\"0 0 88 88\" role=\"img\" aria-label=\"Apply in seconds\" focusable=\"false\">\n            <g class=\"hand\" stroke=\"#0C1113\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M26 50c2 10 12 18 24 18 8 0 12-4 12-9V36c0-3-5-3-5 0v11M46 28v17M38 30v15M30 36v9\"></path>\n            </g>\n            <g class=\"patch\" fill=\"url(#patch-gradient)\">\n              <rect x=\"22\" y=\"52\" rx=\"6\" ry=\"6\" width=\"28\" height=\"16\"></rect>\n              <rect class=\"peel\" x=\"44\" y=\"52\" rx=\"4\" ry=\"4\" width=\"8\" height=\"10\" fill=\"#fff\" opacity=\".65\"></rect>\n            </g>\n            <rect class=\"glint\" x=\"-40\" y=\"50\" width=\"36\" height=\"20\" fill=\"url(#gl-stick)\" opacity=\"0\"></rect>\n            <defs>\n              <lineargradient id=\"patch-gradient\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">\n                <stop offset=\"0%\" style=\"stop-color:#1C8E8E;stop-opacity:1\"></stop>\n                <stop offset=\"50%\" style=\"stop-color:#2BA5A5;stop-opacity:1\"></stop>\n                <stop offset=\"100%\" style=\"stop-color:#1C8E8E;stop-opacity:1\"></stop>\n              </lineargradient>\n              <lineargradient id=\"gl-stick\" x1=\"0\" x2=\"1\">\n                <stop offset=\"0\" stop-color=\"#fff\" stop-opacity=\"0\"></stop>\n                <stop offset=\"0.5\" stop-color=\"#fff\" stop-opacity=\"0.35\"></stop>\n                <stop offset=\"1\" stop-color=\"#fff\" stop-opacity=\"0\"></stop>\n              </lineargradient>\n            </defs>\n          </svg>",
+            "title": "Stick It",
+            "text": "Apply in seconds. No pills, no swallowing.",
+            "animation_type": "stick",
+            "image": "shopify://shop_images/ezgif-44da9df2171bad-bottom-cropped.webp",
+            "image_position": "left"
+          }
+        },
+        "row_ipYwba": {
+          "type": "row",
+          "settings": {
+            "icon_svg": "<svg width=\"120\" height=\"120\" viewbox=\"0 0 88 88\" role=\"img\" aria-label=\"Transdermal absorption\" focusable=\"false\">\n            <rect class=\"patch\" x=\"26\" y=\"18\" width=\"36\" height=\"14\" rx=\"7\" fill=\"url(#patch-gradient-2)\"></rect>\n            <rect class=\"skin\" x=\"14\" y=\"40\" width=\"60\" height=\"22\" rx=\"11\" fill=\"url(#skin-absorb)\"></rect>\n            <g class=\"p\">\n              <circle cx=\"44\" cy=\"32\" r=\"3\" fill=\"#fff\"></circle>\n              <circle cx=\"36\" cy=\"30\" r=\"2.5\" fill=\"#CFF3F3\"></circle>\n              <circle cx=\"52\" cy=\"30\" r=\"2.5\" fill=\"#CFF3F3\"></circle>\n              <circle cx=\"40\" cy=\"32\" r=\"2\" fill=\"#fff\"></circle>\n              <circle cx=\"48\" cy=\"32\" r=\"2\" fill=\"#fff\"></circle>\n            </g>\n            <defs>\n              <lineargradient id=\"patch-gradient-2\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">\n                <stop offset=\"0%\" style=\"stop-color:#1C8E8E;stop-opacity:1\"></stop>\n                <stop offset=\"50%\" style=\"stop-color:#2BA5A5;stop-opacity:1\"></stop>\n                <stop offset=\"100%\" style=\"stop-color:#1C8E8E;stop-opacity:1\"></stop>\n              </lineargradient>\n              <lineargradient id=\"skin-absorb\" x1=\"0\" x2=\"0\" y1=\"0\" y2=\"1\">\n                <stop offset=\"0\" stop-color=\"rgba(28,142,142,.14)\"></stop>\n                <stop offset=\"1\" stop-color=\"rgba(28,142,142,.04)\"></stop>\n              </lineargradient>\n            </defs>\n          </svg>",
+            "title": "Absorb It",
+            "text": "Transdermal delivery for faster absorption and steady release.",
+            "animation_type": "stick",
+            "image": "shopify://shop_images/ezgif-4f3a4bd575d738-bottom-cropped.webp",
+            "image_position": "right"
+          }
+        },
+        "row_YgaNBT": {
+          "type": "row",
+          "settings": {
+            "icon_svg": "<svg width=\"120\" height=\"120\" viewbox=\"0 0 88 88\" role=\"img\" aria-label=\"Feel great\" focusable=\"false\">\n            <g class=\"ring\" fill=\"none\" stroke=\"url(#heart-gradient)\" stroke-width=\"2\" opacity=\"0\">\n              <circle cx=\"44\" cy=\"44\" r=\"22\"></circle>\n            </g>\n            <path class=\"heart\" d=\"M44 60s-16-9.6-16-20a9 9 0 0 1 16-5 9 9 0 0 1 16 5c0 10.4-16 20-16 20z\" fill=\"url(#heart-gradient)\"></path>\n            <path class=\"smile\" d=\"M36 48q8 6 16 0\" stroke=\"#fff\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\" opacity=\"0\"></path>\n            <g class=\"sparkles\" fill=\"#fff\" opacity=\"0\">\n              <circle cx=\"26\" cy=\"36\" r=\"2\"></circle>\n              <circle cx=\"62\" cy=\"34\" r=\"1.8\"></circle>\n              <circle cx=\"60\" cy=\"56\" r=\"1.6\"></circle>\n            </g>\n            <defs>\n              <lineargradient id=\"heart-gradient\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">\n                <stop offset=\"0%\" style=\"stop-color:#1C8E8E;stop-opacity:1\"></stop>\n                <stop offset=\"50%\" style=\"stop-color:#2BA5A5;stop-opacity:1\"></stop>\n                <stop offset=\"100%\" style=\"stop-color:#1C8E8E;stop-opacity:1\"></stop>\n              </lineargradient>\n            </defs>\n          </svg>",
+            "title": "Feel It",
+            "text": "Clean energy by day. Deep recovery by night.",
+            "animation_type": "stick",
+            "image": "shopify://shop_images/ezgif-3a5ebe5105337b-bottom-cropped.webp",
+            "image_position": "left"
+          }
+        }
+      },
+      "block_order": [
+        "row_kjH9Gt",
+        "row_ipYwba",
+        "row_YgaNBT"
+      ],
+      "disabled": true,
+      "name": "Multirow Custom",
+      "settings": {
+        "heading": "How It Works"
+      }
+    },
     "props": {
       "type": "home-value-props",
+      "disabled": true,
       "settings": {}
     },
     "benefits_story": {
@@ -294,7 +346,9 @@
           "settings": {
             "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 31 45\" height=\"45\" width=\"31\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.38623\" stroke=\"white\" d=\"M2.43958 20.9557L15.98 2.70391C17.041 1.27718 19.0231 2.16437 19.0231 4.06518V18.1925C19.0231 19.3326 19.8019 20.2536 20.7614 20.2536H27.3487C28.8454 20.2536 29.6423 22.3463 28.6535 23.6805L15.1131 41.93C14.0521 43.3568 12.07 42.4696 12.07 40.5688V26.4414C12.07 25.3014 11.2912 24.3803 10.3318 24.3803H3.74216C2.24544 24.3803 1.4508 22.2876 2.43958 20.9557Z\"></path>\n</svg>",
             "title": "NAD+",
-            "desc": "<p>Cellular energy and anti-aging support</p>"
+            "desc": "<p>Cellular energy and anti-aging support</p>",
+            "show_benefit": false,
+            "benefit_text": "Clinically Proven"
           }
         },
         "text_qNxfqp": {
@@ -302,7 +356,9 @@
           "settings": {
             "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
             "title": "Glutathione",
-            "desc": "<p>Master antioxidant for recovery</p>"
+            "desc": "<p>Master antioxidant for recovery</p>",
+            "show_benefit": false,
+            "benefit_text": "Clinically Proven"
           }
         },
         "text_hL3K3x": {
@@ -310,7 +366,9 @@
           "settings": {
             "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
             "title": "Creatine",
-            "desc": "<p>Enhanced strenth and performance</p>"
+            "desc": "<p>Enhanced strenth and performance</p>",
+            "show_benefit": false,
+            "benefit_text": "Clinically Proven"
           }
         },
         "text_PrEYJ8": {
@@ -318,7 +376,9 @@
           "settings": {
             "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 31 45\" height=\"45\" width=\"31\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.38623\" stroke=\"white\" d=\"M2.43958 20.9557L15.98 2.70391C17.041 1.27718 19.0231 2.16437 19.0231 4.06518V18.1925C19.0231 19.3326 19.8019 20.2536 20.7614 20.2536H27.3487C28.8454 20.2536 29.6423 22.3463 28.6535 23.6805L15.1131 41.93C14.0521 43.3568 12.07 42.4696 12.07 40.5688V26.4414C12.07 25.3014 11.2912 24.3803 10.3318 24.3803H3.74216C2.24544 24.3803 1.4508 22.2876 2.43958 20.9557Z\"></path>\n</svg>",
             "title": "Magnesium",
-            "desc": "<p>Muscle function and relaxation</p>"
+            "desc": "<p>Muscle function and relaxation</p>",
+            "show_benefit": false,
+            "benefit_text": "Clinically Proven"
           }
         },
         "text_NjyLP3": {
@@ -326,7 +386,9 @@
           "settings": {
             "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 39 37\" height=\"37\" width=\"39\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.86111\" stroke=\"white\" d=\"M2 27.0972H36.75M2 34.8194H36.75M12.2242 27.0972C7.84572 24.3944 5.27808 19.207 5.97501 13.7455C6.83025 7.02717 12.3613 2.00193 18.9059 2V2.01158H19.4773C15.6336 5.71053 14.8884 11.7223 17.7051 16.3073C20.5218 20.8924 26.0953 22.7361 30.9583 20.6994C29.9029 23.3513 28.0235 25.594 25.5972 27.0972\"></path>\n</svg>",
             "title": "Melatonin",
-            "desc": "<p>Natural sleep cycle regulation</p>"
+            "desc": "<p>Natural sleep cycle regulation</p>",
+            "show_benefit": false,
+            "benefit_text": "Clinically Proven"
           }
         }
       },
@@ -342,6 +404,17 @@
         "heading": "Science backed.",
         "subheading": "Premium ingredients, precisely dosed for optimal performance.",
         "bg_color": "#1a1a1a",
+        "show_badge": false,
+        "badge_text": "Science Backed",
+        "badge_style": "primary",
+        "badge_size": "badge--medium",
+        "show_stats": false,
+        "stat_1_number": "10,000+",
+        "stat_1_label": "Happy Customers",
+        "stat_2_number": "95%",
+        "stat_2_label": "Satisfaction Rate",
+        "stat_3_number": "30",
+        "stat_3_label": "Day Guarantee",
         "p_top": 80,
         "p_bottom": 80
       }
@@ -552,7 +625,7 @@
             "heading": "When will my order ship?",
             "icon": "",
             "filled_icon": false,
-            "row_content": "<p>DRIFT and SURGE are currently available via preorder as part of our Founder Stack launch. Your order will ship between July 7–12 from our U.S. fulfillment center.</p>",
+            "row_content": "<p><strong>Now Shipping Immediately</strong><br/><br/>No more waiting. Your Founder Stack order leaves our fulfillment centers within 24 hours. Limited quantities available.</p>",
             "page": ""
           }
         },
@@ -630,6 +703,7 @@
   "order": [
     "hero",
     "image_slider_cgrJmQ",
+    "multirow_custom_3RUXj3",
     "props",
     "benefits_story",
     "product_showcase_gifs",

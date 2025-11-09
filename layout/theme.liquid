@@ -20,7 +20,8 @@
    
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     <link rel="preconnect" href="https://js.shrinetheme.com" crossorigin>
-    
+   
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     {% liquid
       assign is_rtl = false
       if settings.enable_rtl == true
@@ -611,6 +612,13 @@
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "rkvo18a1yq");
   </script>
+
+<!-- Slick Slider CDN -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
   </head>
 
   <body class="gradient link-btns--{{ settings.link_btn_hover }} action-btns--{{ settings.action_btn_hover }} omx-hide-appstle"{% if is_rtl %} data-rtl="true"{% endif %}>
@@ -972,5 +980,77 @@ html[dir="rtl"] .rtl-mirror {
   transform: scaleX(-1);
 }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const orderElement = document.querySelector('.review-avatars__text strong');
+
+    if (!orderElement) return;
+
+    // Starting and ending values
+    let currentOrders = 5;
+    const maxOrders = 50;
+
+    // Display the initial number
+    orderElement.textContent = currentOrders + ' orders';
+
+    // Function to increase the number
+    const increaseOrders = () => {
+      if (currentOrders < maxOrders) {
+        // Random small increase between 1 and 3
+        const increase = Math.floor(Math.random() * 3) + 1;
+        currentOrders = Math.min(currentOrders + increase, maxOrders);
+        orderElement.textContent = currentOrders + ' orders';
+      }
+    };
+
+    // Increase every 20 minutes (20 * 60 * 1000 ms)
+    const intervalTime = 20 * 60 * 1000;
+    setInterval(increaseOrders, intervalTime);
+  });
+</script>
+
+
+ {% comment %} <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Check if current page URL contains '/cart'
+    if (window.location.pathname.includes("/cart")) {
+      // Wait for the checkout button to load
+      const checkButton = () => {
+        const checkoutBtn = document.querySelector("#checkout");
+        if (checkoutBtn) {
+          checkoutBtn.click(); // Trigger click
+          console.log("✅ Checkout button auto-clicked");
+        } else {
+          // Try again after a short delay (Shopify sometimes loads it asynchronously)
+          setTimeout(checkButton, 10);
+        }
+      };
+
+      checkButton();
+    }
+  });
+</script>  {% endcomment %}
+
+{% comment %} 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Select the Add to Cart button
+  const addToCartBtn = document.querySelector('.new-btn.atc-button.product-form__submit');
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener('click', function() {
+      // Wait a short moment for Shopify's Add to Cart process to complete
+   //debugger;
+        window.location.href = '/checkout';
+    // Adjust delay (ms) if needed
+    });
+  }
+});
+</script> {% endcomment %}
+
+
+
+
+
   </body>
 </html>

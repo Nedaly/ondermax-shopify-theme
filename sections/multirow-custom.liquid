@@ -1,0 +1,287 @@
+{{ 'benefits-story.css' | asset_url | stylesheet_tag }}
+
+<div class="multirow-custom section-{{ section.id }}-padding">
+  <div class="page-width">
+    {% if section.settings.heading != blank %}
+      <div class="multirow-custom__header">
+        <h2 class="multirow-custom__heading">{{ section.settings.heading }}</h2>
+      </div>
+    {% endif %}
+
+    <div class="multirow-custom__rows">
+      {% for block in section.blocks %}
+        <div class="multirow-custom__row {% if block.settings.image_position == 'left' %}image-left{% else %}image-right{% endif %}">
+          
+          {% if block.settings.image != blank %}
+            <div class="multirow-custom__side-image">
+              <img src="{{ block.settings.image | img_url: '1000x' }}" alt="{{ block.settings.title | escape }}" loading="lazy">
+            </div>
+          {% endif %}
+
+          <div class="multirow-custom__content">
+            <div class="benefit-card" data-animation="{{ block.settings.animation_type }}">
+              <div class="benefit-card__icon">
+                {{ block.settings.icon_svg }}
+              </div>
+              <div class="benefit-card__content">
+                <h3 class="benefit-card__title">{{ block.settings.title }}</h3>
+                <p class="benefit-card__description">{{ block.settings.text }}</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .multirow-custom {
+    padding: 6rem 0;
+  }
+  .multirow-custom__header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .multirow-custom__heading {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: #0C1113;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+  }
+
+  .multirow-custom__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 8rem;
+  }
+
+  .multirow-custom__row.image-left .multirow-custom__side-image { order: 1; }
+  .multirow-custom__row.image-left .multirow-custom__content { order: 2; }
+  .multirow-custom__row.image-right .multirow-custom__side-image { order: 2; }
+  .multirow-custom__row.image-right .multirow-custom__content { order: 1; }
+
+  .multirow-custom__side-image {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+  .multirow-custom__side-image img {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+    object-fit: cover;
+  }
+  .multirow-custom__content {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  /* --- Original Benefit Card Animations --- */
+  .benefit-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+  }
+  .benefit-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* SVG & text styles */
+  .benefit-card__icon {
+    margin-bottom: 1rem;
+  }
+  .benefit-card__title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: #0C1113;
+    text-transform: uppercase;
+  }
+  .benefit-card__description {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    color: #4A4A4A;
+    font-weight: 500;
+  }
+
+  /* --- Animation Keyframes --- */
+  @keyframes stick-slide {
+    0% { transform: translateX(-20px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes peel-tilt {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-15deg); }
+  }
+  @keyframes glint-sweep {
+    0% { transform: translateX(-40px); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(40px); opacity: 0; }
+  }
+  @keyframes absorb-drop {
+    0% { transform: translateY(-10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  @keyframes ring {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: scale(1.2); opacity: 0; }
+  }
+  @keyframes smile-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes sparkle {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.5); }
+  }
+
+  /* Animation Triggers */
+  .benefit-card[data-animation="stick"].animate .patch {
+    animation: stick-slide 900ms ease-out forwards;
+  }
+  .benefit-card[data-animation="stick"].animate .peel {
+    animation: peel-tilt 700ms 260ms ease-out forwards;
+  }
+  .benefit-card[data-animation="stick"].animate .glint {
+    animation: glint-sweep 1100ms 650ms ease-out forwards;
+  }
+
+  .benefit-card[data-animation="absorb"].animate .p circle {
+    animation: absorb-drop 1.6s ease-in forwards;
+  }
+  .benefit-card[data-animation="absorb"].animate .p circle:nth-child(2) { animation-delay: 0.08s; }
+  .benefit-card[data-animation="absorb"].animate .p circle:nth-child(3) { animation-delay: 0.16s; }
+  .benefit-card[data-animation="absorb"].animate .p circle:nth-child(4) { animation-delay: 0.24s; }
+  .benefit-card[data-animation="absorb"].animate .p circle:nth-child(5) { animation-delay: 0.32s; }
+
+  .benefit-card[data-animation="feel"].animate .heart {
+    animation: beat 600ms ease-in-out 0s 3;
+  }
+  .benefit-card[data-animation="feel"].animate .ring {
+    animation: ring 600ms ease-out 120ms 3;
+  }
+  .benefit-card[data-animation="feel"].animate .smile {
+    animation: smile-in 500ms 180ms ease-out forwards;
+  }
+  .benefit-card[data-animation="feel"].animate .sparkles {
+    animation: sparkle 520ms 220ms ease-out forwards;
+  }
+
+  @media (max-width: 767px) {
+    .multirow-custom__row {
+      flex-direction: column;
+    }
+    .multirow-custom__side-image,
+    .multirow-custom__content {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.benefit-card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('animate');
+          }, index * 200); // stagger animation
+        }
+      });
+    }, {
+      threshold: 0.3,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    cards.forEach(card => observer.observe(card));
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Multirow Custom",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "How It Works"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Row",
+      "settings": [
+        {
+          "type": "html",
+          "id": "icon_svg",
+          "label": "Center Icon (SVG)",
+          "default": "<svg width='120' height='120' viewBox='0 0 88 88'><circle cx='44' cy='44' r='30' stroke='#1C8E8E' stroke-width='4'/></svg>"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Stick It"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Apply in seconds. No pills, no swallowing."
+        },
+        {
+          "type": "select",
+          "id": "animation_type",
+          "label": "Animation Type",
+          "options": [
+            { "value": "stick", "label": "Stick" },
+            { "value": "absorb", "label": "Absorb" },
+            { "value": "feel", "label": "Feel" }
+          ],
+          "default": "stick"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Side Image"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image Position",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multirow Custom",
+      "blocks": [
+        { "type": "row", "settings": { "title": "Stick It", "animation_type": "stick", "image_position": "left" } },
+        { "type": "row", "settings": { "title": "Absorb It", "animation_type": "absorb", "image_position": "right" } },
+        { "type": "row", "settings": { "title": "Feel It", "animation_type": "feel", "image_position": "left" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

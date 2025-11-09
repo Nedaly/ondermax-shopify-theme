@@ -10,6 +10,9 @@
 
     <div class="benefits-story__grid">
       <div class="benefit-card" data-animation="stick">
+
+<div class="bef_container_left"> 
+
         <div class="benefit-card__icon">
           <svg width="120" height="120" viewBox="0 0 88 88" role="img" aria-label="Apply in seconds" focusable="false">
             <g class="hand" stroke="#0C1113" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -38,9 +41,26 @@
           <h3 class="benefit-card__title">{{ 'ui.benefits_story.stick_it' | t }}</h3>
           <p class="benefit-card__description">Apply in seconds. No pills, no swallowing.</p>
         </div>
+</div>
+<div class="bef_container_right"> 
+<img 
+src="{{ 'ezgif-44da9df2171bad-bottom-cropped.gif' | asset_url }}" 
+alt="GIF 1"
+loading="lazy"
+width="800"
+height="450"
+style="width: 100%; height: 100%; object-fit: cover; display: block;"
+>
+</div>
+
+
       </div>
 
+
+
+
       <div class="benefit-card" data-animation="absorb">
+<div class="bef_container_left"> 
         <div class="benefit-card__icon">
           <svg width="120" height="120" viewBox="0 0 88 88" role="img" aria-label="Transdermal absorption" focusable="false">
             <rect class="patch" x="26" y="18" width="36" height="14" rx="7" fill="url(#patch-gradient-2)"/>
@@ -69,9 +89,25 @@
           <h3 class="benefit-card__title">{{ 'ui.benefits_story.absorb_it' | t }}</h3>
           <p class="benefit-card__description">Transdermal delivery for faster absorption and steady release.</p>
         </div>
+</div>
+<div class="bef_container_right"> 
+<img 
+src="{{ 'ezgif-4f3a4bd575d738-bottom-cropped.gif' | asset_url }}" 
+alt="GIF 2"
+loading="lazy"
+width="800"
+height="450"
+style="width: 100%; height: 100%; object-fit: cover; display: block;"
+>
+</div>
+
+
+
+
       </div>
 
       <div class="benefit-card" data-animation="feel">
+<div class="bef_container_left">         
         <div class="benefit-card__icon">
           <svg width="120" height="120" viewBox="0 0 88 88" role="img" aria-label="Feel great" focusable="false">
             <g class="ring" fill="none" stroke="url(#heart-gradient)" stroke-width="2" opacity="0">
@@ -97,6 +133,21 @@
           <h3 class="benefit-card__title">{{ 'ui.benefits_story.feel_it' | t }}</h3>
           <p class="benefit-card__description">Clean energy by day. Deep recovery by night.</p>
         </div>
+</div>
+<div class="bef_container_right"> 
+<img 
+src="{{ 'ezgif-3a5ebe5105337b-bottom-cropped.gif' | asset_url }}" 
+alt="GIF 3"
+loading="lazy"
+width="800"
+height="450"
+style="width: 100%; height: 100%; object-fit: cover; display: block;"
+>
+</div>
+
+
+
+
       </div>
     </div>
   </div>
@@ -109,7 +160,8 @@
 
   .benefits-story__header {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 30px;
+    margin-top:50px;
   }
 
   .benefits-story__heading {
@@ -161,6 +213,7 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
+    width:100%;
   }
 
   .benefit-card:hover .benefit-card__icon {
@@ -216,7 +269,8 @@
     }
     
     .benefits-story__header {
-      margin-bottom: 6rem;
+       margin-bottom: 30px;
+    margin-top:50px;
     }
     
     .benefits-story {

@@ -97,7 +97,16 @@
     endif
   -%}
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+    
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}">
+      
+      <div class="product__badge" style="margin-bottom: 12px;">
+                    <span class="badge badge--primary badge--large">
+                     🔥 Best Seller
+                    </span>
+                  </div> 
+      
+      
       {% render 'product-media-gallery', variant_images: variant_images, has_filtering: has_filtering, section %}
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}{% if section.settings.mobile_pagination == 'dots_overlay' or hide_mobile_slider %} product__info-wrapper--top-padding{% endif %}">
@@ -120,11 +129,11 @@
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }} style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;">
                 {%- if block.settings.show_badge -%}
-                  <div class="product__badge" style="margin-bottom: 12px;">
+                  {% comment %} <div class="product__badge" style="margin-bottom: 12px;">
                     <span class="badge badge--{{ block.settings.badge_style }} {{ block.settings.badge_size }}">
                       {{ block.settings.badge_text | default: 'Best Seller' }}
                     </span>
-                  </div>
+                  </div> {% endcomment %}
                 {%- endif -%}
                 <h1 class="{{ block.settings.text_size }}{% if block.settings.uppercase_title %} product-title--uppercase{% endif %}{% if block.settings.title_alignment == 'center' %} center{% endif %}">
                   {{ product.title }}
@@ -1195,6 +1204,79 @@
       ]
     }
   </script>
+
+{% comment %} <div class="custom-product-description">
+
+   <h2 class="desc-heading">✨ Product Description</h2>
+
+<div class="desc-content short" id="desc-content">
+  {{ product.description }}
+</div>
+<button id="toggle-desc" class="  new-btn">Read more</button>
+</div> {% endcomment %}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("toggle-desc");
+  const desc = document.getElementById("desc-content");
+
+  btn.addEventListener("click", () => {
+    desc.classList.toggle("short");
+    btn.textContent = desc.classList.contains("short") ? "Read more" : "Read less";
+  });
+});
+</script>
+
+<style>
+
+
+.desc-content .onder-desc {
+    max-width: 720px;
+    max-width: 100%!important;
+}
+
+
+.custom-product-description {
+    text-align: center;
+    line-height: initial;
+}
+
+ .desc-heading {
+    font-weight: 800;
+    text-align: center;
+}
+
+.short {
+  max-height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.short::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: linear-gradient(transparent, #fff);
+}
+.read-more-btn {
+  background: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 18px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+.read-more-btn:hover {
+  background: #27ae60;
+}
+</style>
+
+
+
 </section>
 
 {% schema %}
