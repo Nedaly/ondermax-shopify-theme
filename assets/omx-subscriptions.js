@@ -120,8 +120,58 @@
     if (window.Shopify && Shopify.formatMoney) {
       return Shopify.formatMoney(c, moneyFormat);
     }
-    // Fallback: add currency symbol manually
-    return '$' + (c / 100).toFixed(2);
+    // Fallback: extract currency from moneyFormat or use shop currency
+    let currencySymbol = '$';
+    let currencyCode = 'USD';
+    
+    // Try to get currency from Shopify object
+    if (window.Shopify) {
+      if (window.Shopify.currency && window.Shopify.currency.active) {
+        currencyCode = window.Shopify.currency.active;
+      } else if (window.Shopify.shop && window.Shopify.shop.currency) {
+        currencyCode = window.Shopify.shop.currency;
+      }
+    }
+    
+    // Try to extract symbol from moneyFormat string (e.g., "${{amount}}" or "{{amount}} USD")
+    if (moneyFormat) {
+      const formatStr = String(moneyFormat);
+      // Check if format starts with a symbol (common patterns)
+      const symbolMatch = formatStr.match(/^([^\{\{]+)/);
+      if (symbolMatch) {
+        currencySymbol = symbolMatch[1].trim();
+      } else {
+        // Check if format ends with currency code
+        const codeMatch = formatStr.match(/([A-Z]{3})\s*$/);
+        if (codeMatch) {
+          currencyCode = codeMatch[1];
+        }
+      }
+    }
+    
+    // Use currency code to determine symbol if still default
+    if (currencySymbol === '$' && currencyCode !== 'USD') {
+      // For common currencies, map code to symbol
+      const currencyMap = {
+        'EUR': '€',
+        'GBP': '£',
+        'JPY': '¥',
+        'CAD': 'C$',
+        'AUD': 'A$',
+        'CHF': 'CHF',
+        'CNY': '¥',
+        'INR': '₹',
+        'BRL': 'R$',
+        'MXN': '$',
+        'ILS': '₪',
+        'AED': 'د.إ',
+        'SAR': 'ر.س',
+        'EGP': 'E£'
+      };
+      currencySymbol = currencyMap[currencyCode] || currencyCode;
+    }
+    
+    return currencySymbol + (c / 100).toFixed(2);
   }
   function hidden(parent, id, name, val) {
     const i = document.createElement('input');

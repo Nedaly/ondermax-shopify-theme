@@ -11,7 +11,7 @@
   "products": {
     "product": {
       "fake_stock_message_html": "تبقّى فقط <span id=\"fake-stock-count\" class=\"rtl-num\">{{ count }}</span> في المخزون",
-      "add_to_cart": "<tc>أضف إلى السلة</tc>",
+      "add_to_cart": "أضف إلى السلة",
       "choose_options": "اختر الخيارات",
       "choose_product_options": "اختر الخيارات لـ {{ product_name }}",
       "description": "وصف",
@@ -143,14 +143,14 @@
       "just_results": "فقط النتائج.",
       "doctor_built_system": "نظام مُصمم بواسطة أطباء، مستوحى من العيادات",
       "surge_drift_system": "SURGE + DRIFT — نظام البيوهكرينغ.",
-      "shop_the_stack": "<tc>اشتري الباكج</tc>",
-      "how_it_works": "<tc>كيف يعمل؟↓</tc>",
+      "shop_the_stack": "تسوق المجموعة",
+      "how_it_works": "كيف يعمل ↓",
       "shop_now": "تسوق الآن"
     },
     "benefits_story": {
-      "stick_it": "<tc>ضع اللاصقة على جلد نظيف.</tc>",
-      "absorb_it": "<tc>تُطلق الجرعة بثبات خلال اليوم/الليل.</tc>",
-      "feel_it": "<tc>طاقة أو نوم — بلا كافيين ولا حبوب.</tc>"
+      "stick_it": "ألصقها",
+      "absorb_it": "امتصاصه",
+      "feel_it": "اشعر به"
     },
     "header_drawer": {
       "results_and_reviews": "النتائج & المراجعات",
@@ -1786,7 +1786,7 @@
       "caption": "عناصر السلة",
       "cart_error": "حدث خطأ أثناء تحديث سلة التسوق الخاصة بك. يرجى المحاولة مرة أخرى.",
       "cart_quantity_error_html": "يمكنك إضافة {{ quantity }} من هذه السلعة فقط إلى سلة التسوق الخاصة بك.",
-      "checkout": "<tc>أكمل الدفع الآن</tc>",
+      "checkout": "تفقّد",
       "empty": "عربتك فارغة",
       "headings": {
         "image": "صورة المنتج",
