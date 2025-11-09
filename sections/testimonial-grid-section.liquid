@@ -109,7 +109,7 @@
   ],
   "presets": [
     {
-      "name": "Testimonial Grid",
+      "name": "Testimonial Grid"
     }
   ]
 }
@@ -121,7 +121,7 @@
     <h2 class="tg_heading" style="color: {{ section.settings.heading_color }}">{{ section.settings.heading }}</h2>
     <p class="tg_subheading" style="color: {{ section.settings.subheading_color }}">{{ section.settings.subheading }}</p>
 
-    <div class="testimonial-cards">
+    <div class="testimonial-cards slider-{{ section.id }}">
       {% for block in section.blocks %}
         <div class="testimonial-card" style="background: {{ section.settings.card_background }}">
           <div class="testimonial-header">
@@ -169,9 +169,9 @@
     box-shadow: 0 5px 12px 0px rgb(60 60 60 / 13%);
     text-align: left;
     transition: all 0.3s ease-in-out;
-    &:hover{
-        transform: translateY(-5px);
-    }
+}
+.testimonial-card:hover{
+    transform: translateY(-5px);
 }
 .testimonial-header {
   display: flex;
@@ -268,6 +268,9 @@
   .tg_heading{
     font-size: 40px;
   }
+   .testimonial-cards{
+    max-width: unset!important;
+  }
 }
 @media screen and (max-width: 767px){
   .tg_heading{
@@ -277,5 +280,69 @@
   .tg_subheading{
     font-size: 20px;
   }
+ 
+}
+
+/* slick adjustments */
+.slider-{{ section.id }} .slick-slide {
+  margin: 0 13px;
+}
+.slider-{{ section.id }} .slick-list {
+  margin: 0 -13px;
 }
 </style>
+
+<!-- Slick Slider CDN (loaded safely after jQuery) -->
+{{ 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' | stylesheet_tag }}
+{{ 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css' | stylesheet_tag }}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  function loadScript(src, callback) {
+    var script = document.createElement('script');
+    script.src = src;
+    script.onload = callback;
+    document.head.appendChild(script);
+  }
+
+  // Ensure jQuery is available before initializing slick
+  if (typeof jQuery === 'undefined') {
+    loadScript('https://code.jquery.com/jquery-3.6.0.min.js', initSlick);
+  } else {
+    initSlick();
+  }
+
+  function initSlick() {
+    loadScript('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', function() {
+      jQuery(function($) {
+        $('.slider-{{ section.id }}').slick({
+          dots: false,
+          arrows: true,
+          infinite: false,
+          speed: 500,
+           prevArrow:
+    '<button type="button" class="slick-prev" aria-label="Previous">' +
+    '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>' +
+    '</button>',
+  nextArrow:
+    '<button type="button" class="slick-next" aria-label="Next">' +
+    '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>' +
+    '</button>',
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: { slidesToShow: 3 }
+            },
+            {
+              breakpoint: 768,
+              settings: { slidesToShow: 1 }
+            }
+          ]
+        });
+      });
+    });
+  }
+});
+</script>
