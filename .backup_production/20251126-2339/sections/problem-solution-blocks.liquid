@@ -1,0 +1,429 @@
+<div class="problem_solution padding-{{ section.id }}" id="problem-solution">
+    <div class="page-width">
+        <div class="heading">
+            {%- if section.settings.show_badge -%}
+                <div class="ps_badge">
+                    <span class="badge badge--{{ section.settings.badge_style }} {{ section.settings.badge_size }}">
+                        {{ section.settings.badge_text | default: 'Why You Need This' }}
+                    </span>
+                </div>
+            {%- endif -%}
+            <h2 class="ps_heading">{{ section.settings.heading }}</h2>
+            <p class="ps_subheading">{{ section.settings.subheading }}</p>
+        </div>
+        <div class="problem_solution_blocks">
+            {% for block in section.blocks %}
+                <div class="problem_solution_block" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 150 }}">
+                    <div class="ps_content">
+                        <div class="problem_side">
+                            <div class="problem_icon">
+                                {%- if block.settings.problem_icon -%}
+                                    {{ block.settings.problem_icon }}
+                                {%- else -%}
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="15" y1="9" x2="9" y2="15"></line>
+                                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                                    </svg>
+                                {%- endif -%}
+                            </div>
+                            <h3 class="problem_title">{{ block.settings.problem_title }}</h3>
+                            <p class="problem_description">{{ block.settings.problem_description }}</p>
+                        </div>
+                        <div class="solution_side">
+                            <div class="solution_icon">
+                                {%- if block.settings.solution_icon -%}
+                                    {{ block.settings.solution_icon }}
+                                {%- else -%}
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                    </svg>
+                                {%- endif -%}
+                            </div>
+                            <h3 class="solution_title">{{ block.settings.solution_title }}</h3>
+                            <p class="solution_description">{{ block.settings.solution_description }}</p>
+                            {%- if block.settings.show_benefit -%}
+                                <div class="solution_benefit">
+                                    <span class="benefit_text">{{ block.settings.benefit_text | default: 'Proven Results' }}</span>
+                                </div>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<style>
+    .padding-{{ section.id }}{
+        padding-top:{{ section.settings.p_top | times: 0.75 | round: 0 }}px;
+        padding-bottom:{{ section.settings.p_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    .problem_solution{
+        background: {{ section.settings.bg_color }};
+    }
+
+    .ps_heading {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 48px;
+        font-weight: 600;
+        letter-spacing: -1.5px;
+        color: #fff;
+        margin: 0;
+        line-height: 1.1;
+        text-transform: capitalize;
+    }
+
+    .ps_subheading {
+        color: #cfcfcf;
+        font-family: 'Poppins';
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0;
+        margin: 0 auto;
+        line-height: 1.6;
+        max-width: 60%;
+        margin-block: 2rem;
+    }
+
+    .ps_badge {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .problem_solution_blocks {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 4rem;
+    }
+
+    .problem_solution_block {
+        background: #262626;
+        border: 1px solid #303030;
+        border-radius: 1rem;
+        padding: 2rem;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .problem_solution_block:hover {
+        background: #313131;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 144, 141, 0.2);
+        border-color: #00908d;
+    }
+
+    .problem_solution_block::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(0, 144, 141, 0.1), transparent);
+        transition: left 0.6s ease;
+    }
+
+    .problem_solution_block:hover::before {
+        left: 100%;
+    }
+
+    .ps_content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+    }
+
+    .problem_side, .solution_side {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .problem_icon, .solution_icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .problem_icon {
+        background: rgba(239, 68, 68, 0.1);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        color: #ef4444;
+    }
+
+    .solution_icon {
+        background: rgba(0, 144, 141, 0.1);
+        border: 1px solid rgba(0, 144, 141, 0.3);
+        color: #00908d;
+    }
+
+    .problem_icon svg, .solution_icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .problem_title, .solution_title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0 0 1rem 0;
+        line-height: 1.2;
+    }
+
+    .problem_title {
+        color: #ef4444;
+    }
+
+    .solution_title {
+        color: #00908d;
+    }
+
+    .problem_description, .solution_description {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        color: #cfcfcf;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .solution_benefit {
+        margin-top: 1rem;
+    }
+
+    .benefit_text {
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        color: #00908d;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 6px 12px;
+        border: 1px solid #00908d;
+        border-radius: 20px;
+        background: rgba(0, 144, 141, 0.1);
+        display: inline-block;
+    }
+
+    /* Mobile-first responsive design */
+    @media screen and (max-width: 768px) {
+        .ps_heading {
+            font-size: 32px;
+            letter-spacing: -0.5px;
+        }
+
+        .ps_subheading {
+            font-size: 16px;
+            max-width: 100%;
+        }
+
+        .problem_solution_blocks {
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .problem_solution_block {
+            padding: 1.5rem;
+        }
+
+        .ps_content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .problem_title, .solution_title {
+            font-size: 20px;
+        }
+
+        .problem_description, .solution_description {
+            font-size: 14px;
+        }
+
+        .problem_icon, .solution_icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .problem_icon svg, .solution_icon svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    @media screen and (min-width: 750px) {
+        .padding-{{ section.id }}{
+            padding-top:{{ section.settings.p_top }}px;
+            padding-bottom:{{ section.settings.p_bottom }}px;
+        }
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Problem Solution Blocks",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Why You'll Love It"
+        },
+        {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "See how we solve your biggest energy challenges"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "header",
+            "content": "CRO Enhancements"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_badge",
+            "label": "Show badge",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "badge_text",
+            "label": "Badge text",
+            "default": "Why You Need This"
+        },
+        {
+            "type": "select",
+            "id": "badge_style",
+            "label": "Badge style",
+            "options": [
+                {"value": "primary", "label": "Primary"},
+                {"value": "secondary", "label": "Secondary"},
+                {"value": "success", "label": "Success"},
+                {"value": "warning", "label": "Warning"}
+            ],
+            "default": "primary"
+        },
+        {
+            "type": "select",
+            "id": "badge_size",
+            "label": "Badge size",
+            "options": [
+                {"value": "badge--small", "label": "Small"},
+                {"value": "badge--medium", "label": "Medium"},
+                {"value": "badge--large", "label": "Large"}
+            ],
+            "default": "badge--medium"
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "range",
+            "id": "p_top",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 80,
+            "label": "Padding top"
+        },
+        {
+            "type": "range",
+            "id": "p_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 80,
+            "label": "Padding bottom"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "problem_solution",
+            "name": "Problem Solution Block",
+            "settings": [
+                {
+                    "type": "header",
+                    "content": "Problem"
+                },
+                {
+                    "type": "textarea",
+                    "id": "problem_icon",
+                    "label": "Problem Icon (SVG)",
+                    "info": "Optional SVG code for problem icon"
+                },
+                {
+                    "type": "text",
+                    "id": "problem_title",
+                    "label": "Problem Title",
+                    "default": "Energy Crashes"
+                },
+                {
+                    "type": "textarea",
+                    "id": "problem_description",
+                    "label": "Problem Description",
+                    "default": "Feeling drained by 2 PM, reaching for another coffee that only makes you jittery"
+                },
+                {
+                    "type": "header",
+                    "content": "Solution"
+                },
+                {
+                    "type": "textarea",
+                    "id": "solution_icon",
+                    "label": "Solution Icon (SVG)",
+                    "info": "Optional SVG code for solution icon"
+                },
+                {
+                    "type": "text",
+                    "id": "solution_title",
+                    "label": "Solution Title",
+                    "default": "Sustained Energy"
+                },
+                {
+                    "type": "textarea",
+                    "id": "solution_description",
+                    "label": "Solution Description",
+                    "default": "8-12 hours of clean, steady energy that builds gradually and fades naturally"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show_benefit",
+                    "label": "Show benefit badge",
+                    "default": true
+                },
+                {
+                    "type": "text",
+                    "id": "benefit_text",
+                    "label": "Benefit text",
+                    "default": "Proven Results"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Problem Solution Blocks"
+        }
+    ]
+}
+{% endschema %}

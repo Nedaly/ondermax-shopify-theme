@@ -1,0 +1,358 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "benefits_story": {
+      "type": "benefits-story",
+      "settings": {
+        "heading": "How It Works",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "testimonials_3EzwNj": {
+      "type": "testimonials",
+      "blocks": {
+        "column_d4g63A": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "SURGE",
+            "text": "<p><strong>\"SURGE replaced my 3 cups of coffee — without the crash. As a software engineer working long hours, this gives me clean energy that lasts all day.\"</strong></p>",
+            "author": "<strong>Ahmed Al-Rashid</strong>"
+          }
+        },
+        "column_KEniVi": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "DRIFT",
+            "text": "<p>\"I fall asleep faster and wake up fresher with <strong>DRIFT. As a working mother of three, I finally get the rest I need without feeling groggy.\"</strong></p>",
+            "author": "<strong>Fatima Hassan</strong>"
+          }
+        },
+        "column_BMU97e": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "DRIFT",
+            "text": "<p><strong>\"Finally ditched all my pills. These patches just work. Natural ingredients, no side effects, and I sleep like a baby every night.\"</strong></p>",
+            "author": "<strong>Dr. Omar Al-Zahra</strong>"
+          }
+        },
+        "column_HxK7Yb": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "SURGE",
+            "text": "<p><strong>\"Clean energy all day, perfect sleep at night. Love this system. My productivity has increased dramatically since using both patches.\"</strong></p>",
+            "author": "<strong>Khalid Al-Sabah</strong>"
+          }
+        },
+        "column_REhJax": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "Best product I've tried!",
+            "text": "<p>Finally, something that works with my day AND night. As a fitness trainer, I need energy for workouts and recovery for sleep. This system delivers both perfectly.</p>",
+            "author": "<em><strong>Layla Al-Mansouri</strong></em>"
+          }
+        },
+        "column_fAANed": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "Absolutely love this product!",
+            "text": "<p>DRIFT helps me unwind after a long day. I feel more calm and relaxed without feeling groggy in the morning. This is exactly what I needed! My husband even noticed how much more patient I am now.</p>",
+            "author": "<em><strong>Nour Al-Din</strong></em>"
+          }
+        }
+      },
+      "block_order": [
+        "column_d4g63A",
+        "column_KEniVi",
+        "column_BMU97e",
+        "column_HxK7Yb",
+        "column_REhJax",
+        "column_fAANed"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "<strong>What Real Users Are Saying</strong>",
+        "title_highlight_color": "#ffffff",
+        "heading_size": "h1",
+        "text": "<p>High performers choose Ondermax for effortless transformation.</p>",
+        "color_scheme": "custom",
+        "image_width": "full",
+        "image_ratio": "square",
+        "column_alignment": "center",
+        "show_stars": true,
+        "inactive_stars_style": "solid",
+        "star_color": "#ffd700",
+        "bg_star_color": "#ffd700",
+        "show_quotes": true,
+        "quotes_color_scheme": "accent-1",
+        "cards_color_scheme": "custom",
+        "type": "slide",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": true,
+        "dots_color_scheme": "background-1",
+        "desktop_full_page": false,
+        "columns_desktop": 2,
+        "slider_desktop": true,
+        "per_move_desktop": 1,
+        "desktop_spacing": 40,
+        "desktop_side_padding": 0,
+        "desktop_padding_calc": true,
+        "desktop_adaptive_height": false,
+        "desktop_dots_position": "under",
+        "desktop_arrows_position": "sides",
+        "slider_mobile": true,
+        "enable_mobile_preview": false,
+        "mobile_adaptive_height": false,
+        "mobile_dots_position": "under",
+        "mobile_arrows_position": "under",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "custom_colors_background": "#1a1a2e",
+        "custom_gradient_background": "linear-gradient(135deg, rgba(26, 26, 46, 1), rgba(22, 33, 62, 1) 25%, rgba(15, 52, 96, 1) 50%, rgba(83, 52, 131, 1) 75%, rgba(114, 9, 183, 1) 100%)",
+        "custom_colors_text": "#ffffff",
+        "custom_cards_colors_background": "#ffffff1a",
+        "custom_cards_gradient_background": "",
+        "custom_cards_colors_text": "#ffffff"
+      }
+    },
+    "collapsible_content_XGKDTp": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Xk4BFM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes Ondermax patches different from pills or powders?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Our transdermal patches deliver nutrients directly into your bloodstream—no digestion required. That means faster absorption, no gut irritation, and zero effort. Just peel, stick, and go.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PTETHM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to feel the effects?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Most users feel the High Energy patch within 20–30 minutes. Sleep patches work gently in the background—expect deeper, smoother sleep by night one.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bjpTbn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are the patches safe?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Yes. All our patches are produced in GMP-certified labs, are third-party tested, and free of toxins, allergens, and synthetic binders.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_RY9Czz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use more than one patch at a time?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Yes. Our stacks are designed to be used together: High Energy for daytime, Sleep Tight for nighttime. No overlap, no interaction risk—just synergy.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_fRL6Bn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When will my order ship?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p><strong>Now Shipping Immediately</strong><br/><br/>No more waiting. Your Founder Stack order leaves our fulfillment centers within 24 hours. Limited quantities available.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_B7MNQk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Ondermax patches vegan and cruelty-free?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>100% yes. No gelatin. No animal testing. Just clean performance.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Xk4BFM",
+        "collapsible_row_PTETHM",
+        "collapsible_row_bjpTbn",
+        "collapsible_row_RY9Czz",
+        "collapsible_row_fRL6Bn",
+        "collapsible_row_B7MNQk"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "caption": "",
+        "title": "Everything You Need to Know.",
+        "title_highlight_color": "#1c8e8e",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-1",
+        "open_first_collapsible_row": false,
+        "video_muted_autoplay": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "row_heading_size": "medium",
+        "collapse_icon": "plus",
+        "display_top_border": true,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_contaner_colors_background": "#ffffff",
+        "custom_container_gradient_background": "",
+        "custom_contaner_colors_text": "#2e2a39",
+        "btn_url": "shopify://products/high-energy-and-sleep-stack",
+        "btn": "SHOP NOW",
+        "btn_subheading": ""
+      }
+    },
+    "rich_text_pz9hbV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ebXedc": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Talk about your brand",
+            "title_highlight_color": "#6d388b",
+            "heading_size": "h1"
+          }
+        },
+        "text_QHkikt": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br/>Ondermax is a wellness performance brand built by Dr. Nedal Yassin — a medical doctor obsessed with biohacking, aesthetics, and longevity. We create science-backed, no-nonsense solutions for modern life. No pills. No fluff. Just results.<br/><br/></p>"
+          }
+        },
+        "button_ad3YEk": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ebXedc",
+        "text_QHkikt",
+        "button_ad3YEk"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "full_width": true,
+        "mobile_narrow_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Subscribe to our emails",
+            "title_highlight_color": "#6d388b",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Join our email list for exclusive offers and the latest news. </p>"
+          }
+        },
+        "email-form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email-form"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "button_type": "solid",
+        "button_label": "Sign up",
+        "button_style_secondary": false,
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 68,
+        "padding_bottom": 52,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "benefits_story",
+    "testimonials_3EzwNj",
+    "collapsible_content_XGKDTp",
+    "rich_text_pz9hbV",
+    "newsletter"
+  ]
+}

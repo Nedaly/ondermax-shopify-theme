@@ -1,0 +1,242 @@
+<header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}" data-desktop-type="{{ section.settings.menu_type_desktop }}" data-drawer="{{ settings.animations_type }}">
+  <details id="Details-menu-drawer-container" class="menu-drawer-container">
+    <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
+      <span>
+        {% render 'icon-hamburger' %}
+        {% render 'icon-close' %}
+      </span>
+    </summary>
+    <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}" tabindex="-1">
+      <div class="menu-drawer__inner-container">
+        <div class='menu-drawer__mobile-content menu-drawer__title-and-close-btn'>
+          <h3 class='menu-drawer__title'>{{ section.settings.mobile_menu_title }}</h3>
+          <button class='menu-drawer__close-btn menu-drawer__close-menu-btn header__icon header__icon--menu header__icon--summary link focus-inset'>
+            {% render 'icon-close' %}
+          </button>
+        </div>
+        <div class="menu-drawer__navigation-container">
+          <!-- SHOP Section -->
+          <nav class="menu-drawer__navigation" data-nav="shop">
+            <h4 class="menu-drawer__section-title">SHOP</h4>
+            <ul class="menu-drawer__menu list-menu" role="list">
+              <li>
+                <a href="/products/{{ settings.stack_product_handle | default: 'high-energy-and-sleep-stack' }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="shop-the-stack">
+                  {{ settings.shop_stack_label | default: 'Shop the Stack' }}
+                  <span class="menu-drawer__badge">Best value</span>
+                </a>
+              </li>
+              <li>
+                <a href="/products/{{ settings.surge_product_handle | default: 'surge-energy-patch-stack-preorder-ships-july-7-copy-1' }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="surge">
+                  Surge (AM)
+                </a>
+              </li>
+              <li>
+                <a href="/products/{{ settings.drift_product_handle | default: 'surge-energy-patch-stack-preorder-ships-july-7-copy' }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="drift">
+                  Drift (PM)
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- LEARN Section -->
+          <nav class="menu-drawer__navigation" data-nav="learn">
+            <h4 class="menu-drawer__section-title">LEARN</h4>
+            <ul class="menu-drawer__menu list-menu" role="list">
+              <li>
+                <a href="#science-authority" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="how-it-works">
+                  How it Works
+                </a>
+              </li>
+              <li>
+                <a href="/pages/ingredients" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="ingredients">
+                  Ingredients & Science
+                </a>
+              </li>
+              <li>
+                <a href="/pages/reviews" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="reviews">
+                  {{ 'ui.header_drawer.results_and_reviews' | t }}
+                </a>
+              </li>
+              <li>
+                <a href="#faq" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="faq">
+                  FAQ
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- SUPPORT Section -->
+          <nav class="menu-drawer__navigation" data-nav="support">
+            <h4 class="menu-drawer__section-title">SUPPORT</h4>
+            <ul class="menu-drawer__menu list-menu" role="list">
+              <li>
+                <a href="/pages/contact" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="contact">
+                  Contact / Help
+                </a>
+              </li>
+              <li>
+                <a href="/pages/track-order" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="track-order">
+                  Track Order
+                </a>
+              </li>
+              <li>
+                <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" data-nav-link="account">
+                  Account
+                </a>
+              </li>
+            </ul>
+          </nav>
+<!--                 start secondary nav -->
+          {% if section.settings.secondary_menu != blank %}
+            <nav class="menu-drawer__navigation menu-drawer__secondary-nav">
+              <ul class="menu-drawer__menu has-submenu list-menu" role="list">
+                {%- for link in section.settings.secondary_menu.links -%}
+                  <li>
+                    {%- if link.links != blank -%}
+                      <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
+                        <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
+                          {{ link.title | escape }}
+                          {% render 'icon-arrow' %}
+                          {% render 'icon-caret' %}
+                        </summary>
+                        <div id="link-{{ link.handle | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce" tabindex="-1">
+                          <div class="menu-drawer__inner-submenu">
+                            <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                              {% render 'icon-arrow' %}
+                              {{ link.title | escape }}
+                            </button>
+                            <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                              {%- for childlink in link.links -%}
+                                <li>
+                                  {%- if childlink.links == blank -%}
+                                    <a href="{{ childlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                      {{ childlink.title | escape }}
+                                    </a>
+                                  {%- else -%}
+                                    <details id="Details-menu-drawer-submenu-{{ forloop.index }}">
+                                      <summary class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                        {{ childlink.title | escape }}
+                                        {% render 'icon-arrow' %}
+                                        {% render 'icon-caret' %}
+                                      </summary>
+                                      <div id="childlink-{{ childlink.handle | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce">
+                                        <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                                          {% render 'icon-arrow' %}
+                                          {{ childlink.title | escape }}
+                                        </button>
+                                        <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                                          {%- for grandchildlink in childlink.links -%}
+                                            <li>
+                                              <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                                {{ grandchildlink.title | escape }}
+                                              </a>
+                                            </li>
+                                          {%- endfor -%}
+                                        </ul>
+                                      </div>
+                                    </details>
+                                  {%- endif -%}
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          </div>
+                        </div>
+                      </details>
+                    {%- else -%}
+                      <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
+                        {{ link.title | escape }}
+                      </a>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </nav>
+          {% endif %}
+<!--                 end secondary nav -->
+          <!-- Trust Footer -->
+          <div class="menu-drawer__trust-footer">
+            <p class="menu-drawer__trust-text">{{ 'ui.header_drawer.trust_text' | t }}</p>
+          </div>
+
+          <!-- Locale/Currency Selector -->
+          <div class="menu-drawer__utility-links">
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+</header-drawer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const drawer = document.querySelector('header-drawer');
+  const drawerContainer = document.querySelector('#Details-menu-drawer-container');
+  const navLinks = document.querySelectorAll('[data-nav-link]');
+  
+  if (!drawer || !drawerContainer) return;
+
+  // Track drawer open
+  drawerContainer.addEventListener('toggle', function() {
+    if (this.open) {
+      // Fire nav_open event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'nav_open', {
+          event_category: 'navigation',
+          event_label: 'mobile_drawer'
+        });
+      }
+      
+      // Disable background scroll and add class
+      document.body.style.overflow = 'hidden';
+      document.body.classList.add('drawer-open');
+      
+      // Focus trap
+      const focusableElements = drawer.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])');
+      if (focusableElements.length > 0) {
+        focusableElements[0].focus();
+      }
+    } else {
+      // Re-enable background scroll and remove class
+      document.body.style.overflow = '';
+      document.body.classList.remove('drawer-open');
+    }
+  });
+
+  // Track link clicks
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      const section = this.closest('[data-nav]').dataset.nav;
+      const label = this.dataset.navLink;
+      
+      // Fire nav_link_click event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'nav_link_click', {
+          event_category: 'navigation',
+          event_label: label,
+          custom_parameter_1: section
+        });
+      }
+      
+      // Close drawer on link click
+      drawerContainer.removeAttribute('open');
+      document.body.style.overflow = '';
+      document.body.classList.remove('drawer-open');
+      
+      // Track time to PDP if it's a product link
+      if (this.href.includes('/products/')) {
+        const startTime = performance.now();
+        setTimeout(() => {
+          const timeToPDP = Math.round(performance.now() - startTime);
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'nav_to_pdp_time_ms', {
+              event_category: 'navigation',
+              event_label: label,
+              value: timeToPDP
+            });
+          }
+        }, 100);
+      }
+    });
+  });
+});
+</script>

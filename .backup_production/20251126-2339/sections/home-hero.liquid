@@ -1,0 +1,137 @@
+{{ 'hero-value.css' | asset_url | stylesheet_tag }}
+
+<section class="home-hero omx-hero-enhanced" role="banner" aria-label="Ondermax hero">
+  <div class="omx-hero-media" style="aspect-ratio: 16/9; width: 100%;">
+    {% if section.settings.use_video and section.settings.video != blank %}
+      {% assign mp4 = section.settings.video | file_url %}
+      <video class="omx-hero-media-element" autoplay muted loop playsinline preload="metadata" aria-hidden="true" width="1920" height="1080"{% if section.settings.fallback != blank %} poster="{{ section.settings.fallback | image_url: width:1920 }}"{% endif %}>
+        <source src="{{ mp4 }}" type="video/mp4">
+      </video>
+    {% elsif section.settings.hero_image != blank %}
+      {% assign img = section.settings.hero_image %}
+      <img class="omx-hero-media-element" src="{{ img | image_url: width: 1920 }}" srcset="{{ img | image_url: width: 768 }} 768w, {{ img | image_url: width: 1280 }} 1280w, {{ img | image_url: width: 1600 }} 1600w, {{ img | image_url: width: 1920 }} 1920w" sizes="(max-width: 768px) 100vw, 100vw" width="1920" height="1080" alt="{{ section.settings.image_alt | escape }}" loading="eager" fetchpriority="high">
+    {% endif %}
+    <div class="omx-hero-overlay" style="--overlay-opacity: {{ section.settings.overlay_strength | divided_by: 100.0 }};"></div>
+  </div>
+  
+  <div class="container">
+    <div class="copy omx-hero-content omx-hero-content--{{ section.settings.align }}">
+      {% if section.settings.kicker != blank %}
+        <div class="omx-hero-kicker" aria-hidden="true">{{ section.settings.kicker }}</div>
+      {% endif %}
+      <h1 class="omx-hero-title">{{ section.settings.heading }}</h1>
+      {% if section.settings.subheading != blank %}
+        <p class="omx-hero-sub">{{ section.settings.subheading }}</p>
+      {% endif %}
+      
+      <div class="omx-hero-cta">
+        {% if section.settings.cta_label != blank and section.settings.cta_url != blank %}
+          <a class="btn omx-hero-cta-primary" href="{{ section.settings.cta_url }}" data-analytics="hero_cta_primary" aria-label="{{ section.settings.cta_label }}">
+            {{ section.settings.cta_label }}
+          </a>
+        {% endif %}
+        {% if section.settings.secondary_label != blank and section.settings.secondary_link != blank %}
+          <a class="btn omx-hero-cta-secondary" href="{{ section.settings.secondary_link }}" data-analytics="hero_cta_secondary" aria-label="{{ section.settings.secondary_label }}">
+            {{ section.settings.secondary_label }}
+          </a>
+        {% endif %}
+      </div>
+      
+      {% if section.settings.badge_enable %}
+        <ul class="omx-hero-badges" aria-label="Key results">
+          {% if section.settings.badge_1 != blank %}<li class="omx-hero-badge"><strong>{{ section.settings.badge_1 }}</strong></li>{% endif %}
+          {% if section.settings.badge_2 != blank %}<li class="omx-hero-badge"><strong>{{ section.settings.badge_2 }}</strong></li>{% endif %}
+          {% if section.settings.badge_3 != blank %}<li class="omx-hero-badge"><strong>{{ section.settings.badge_3 }}</strong></li>{% endif %}
+          {% if section.settings.badge_4 != blank %}<li class="omx-hero-badge"><strong>{{ section.settings.badge_4 }}</strong></li>{% endif %}
+        </ul>
+      {% endif %}
+      
+      {% render 'home-social-proof', logos: section.blocks %}
+    </div>
+  </div>
+  
+  {% if section.settings.mobile_sticky_cta %}
+    <div class="omx-hero-sticky-cta">
+      <a class="omx-hero-sticky-button" href="{{ section.settings.cta_url }}" data-analytics="hero_sticky_cta" aria-label="{{ section.settings.sticky_label }}">
+        {{ section.settings.sticky_label }}
+      </a>
+    </div>
+  {% endif %}
+  
+  <style>
+    .home-hero {
+      padding: 56px 0;
+    }
+    .home-hero .container {
+      display: grid;
+      gap: 32px;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+    }
+    .home-hero .copy h1 {
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.1;
+      margin: 0 0 12px;
+    }
+    .home-hero .copy .sub {
+      font-size: 1.05rem;
+      opacity: .85;
+      margin: 0 0 20px;
+    }
+    .home-hero .btn {
+      display:inline-block;
+      padding:12px 20px;
+      border-radius:10px;
+      font-weight:600;
+    }
+    .home-hero .media img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+    @media (max-width: 900px){
+      .home-hero .container{grid-template-columns:1fr;}
+      .home-hero{padding:32px 0;}
+    }
+  </style>
+  {% schema %}
+  {
+    "name": "Home — Hero",
+    "settings": [
+      { "id": "kicker", "type": "text", "label": "Kicker (optional)", "default": "Doctor-built, clinically-inspired system" },
+      { "id": "heading", "type": "text", "label": "Heading", "default": "Just Results." },
+      { "id": "subheading", "type": "textarea", "label": "Subheading", "default": "SURGE + DRIFT — The biohacking system." },
+      { "id": "cta_label", "type": "text", "label": "Primary CTA", "default": "Shop the Stack" },
+      { "id": "cta_url", "type": "url", "label": "Primary CTA link" },
+      { "id": "secondary_label", "type": "text", "label": "Secondary CTA (optional)", "default": "Learn more" },
+      { "id": "secondary_link", "type": "url", "label": "Secondary CTA link" },
+      { "id": "use_video", "type": "checkbox", "label": "Use video background", "default": false },
+      { "id": "video", "type": "video", "label": "Video file" },
+      { "id": "fallback", "type": "image_picker", "label": "Video poster image" },
+      { "id": "hero_image", "type": "image_picker", "label": "Hero image (if not using video)" },
+      { "id": "image_alt", "type": "text", "label": "Image alt text", "default": "Ondermax hero background" },
+      { "id": "overlay_strength", "type": "range", "label": "Overlay strength", "min": 0, "max": 90, "step": 5, "default": 40, "unit": "%" },
+      { "id": "align", "type": "select", "label": "Content alignment", "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ], "default": "center" },
+      { "id": "badge_enable", "type": "checkbox", "label": "Show trust badges", "default": true },
+      { "id": "badge_1", "type": "text", "label": "Badge 1", "default": "98% satisfaction" },
+      { "id": "badge_2", "type": "text", "label": "Badge 2", "default": "Doctor built" },
+      { "id": "badge_3", "type": "text", "label": "Badge 3", "default": "Clean formulation" },
+      { "id": "badge_4", "type": "text", "label": "Badge 4", "default": "No crash / No grogginess" },
+      { "id": "mobile_sticky_cta", "type": "checkbox", "label": "Mobile sticky CTA", "default": true },
+      { "id": "sticky_label", "type": "text", "label": "Sticky CTA label", "default": "Shop the Stack" }
+    ],
+    "blocks": [
+      { "type": "logo", "name": "Logo", "settings": [
+        { "id": "logo", "type": "image_picker", "label": "Logo image" },
+        { "id": "alt", "type": "text", "label": "Alt text", "default": "Brand" }
+      ]}
+    ],
+    "max_blocks": 6,
+    "presets": [{ "name": "Home — Hero" }]
+  }
+  {% endschema %}
+</section>

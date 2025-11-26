@@ -1,0 +1,188 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "products": {
+    "product": {
+      "fake_stock_message_html": "נשארו רק <span id=\"fake-stock-count\" class=\"rtl-num\">{{ count }}</span> במלאי"
+    }
+  },
+  "hero": {
+    "heading": "וולנס בביצועים גבוהים — בפשטות",
+    "subheading": "מדבקות קליניות לאנרגיה נקייה ומהירה ולשינה עמוקה",
+    "cta_primary": "לעגלה"
+  },
+  "cart": {
+    "free_shipping_badge": "משלוח חינם מעל {{ amount }}"
+  },
+  "checkout": {
+    "trust_row_1": "תשלום מאובטח",
+    "trust_row_2": "החזרה עד 30 יום"
+  },
+  "pdp": {
+    "benefits_title": "למה תרגישו את ההבדל"
+  },
+  "home": {
+    "blocks": {
+      "science": "אנרגיה מבוססת מדע",
+      "allday": "אנרגיה לכל היום",
+      "join": "הצטרפו ל-10,000+ מקצוענים שבוחרים ב-SURGE",
+      "faq": "מדבקות האנרגיה SURGE: שאלות ותשובות",
+      "cta": "להזמין SURGE עכשיו"
+    }
+  },
+  "power_bar": {
+    "high_energy": "אנרגיה גבוהה",
+    "doctor_developed": "פותח על ידי רופא",
+    "backed_by_science": "מבוסס על מדע",
+    "free_worldwide_shipping": "משלוח חינם עולמי"
+  },
+  "ui": {
+    "ondermax_hero": {
+      "five_hundred_plus_results": "500+ תוצאות",
+      "thirty_day_guarantee": "ערבות 30 יום",
+      "just_results": "רק תוצאות.",
+      "doctor_built_system": "מערכת פותחה על ידי רופא, בהשראת קלינית",
+      "surge_drift_system": "SURGE + DRIFT — מערכת הביוהקינג.",
+      "shop_the_stack": "קנה את החבילה",
+      "how_it_works": "איך זה עובד ↓",
+      "shop_now": "קנה עכשיו"
+    },
+    "benefits_story": {
+      "stick_it": "Stick It",
+      "absorb_it": "Absorb It",
+      "feel_it": "Feel It"
+    },
+    "header_drawer": {
+      "results_and_reviews": "Results & Reviews",
+      "trust_text": "★ <strong>500+</strong> verified results · 🚚 <strong>Free</strong> express shipping · 🛡️ <strong>30-day</strong> money-back guarantee"
+    },
+    "cro": {
+      "badge": {
+        "best_seller": "הנמכר ביותר",
+        "science_backed": "מבוסס מדעית",
+        "clinically_proven": "מוכח קלינית",
+        "real_results": "תוצאות אמיתיות",
+        "why_you_need_this": "למה אתה צריך את זה"
+      },
+      "stats": {
+        "happy_customers": "לקוחות מרוצים",
+        "satisfaction_rate": "שיעור שביעות רצון",
+        "day_guarantee": "ערבות יום"
+      },
+      "problem_solution": {
+        "heading": "למה תאהב את זה",
+        "subheading": "ראה איך אנחנו פותרים את אתגרי האנרגיה הגדולים שלך עם פתרונות מבוססי מדע",
+        "energy_crashes": "התרסקות אנרגיה",
+        "energy_crashes_desc": "הרגשה מותשת עד 2 בצהריים, מגיע לכוס קפה נוספת שגורמת לך להיות עצבני וחרד",
+        "sustained_energy": "אנרגיה מתמשכת",
+        "sustained_energy_desc": "8-12 שעות של אנרגיה נקייה וקבועה שנבנית בהדרגה ודועכת באופן טבעי ללא התרסקות",
+        "digestive_issues": "בעיות עיכול",
+        "digestive_issues_desc": "גלולות ומשקאות מפריעים לבטן שלך, גורמים לנפיחות ואי נוחות לאורך היום",
+        "transdermal_delivery": "משלוח דרך העור",
+        "transdermal_delivery_desc": "נספג דרך העור שלך, עוקף את מערכת העיכול שלך למקסימום נוחות ויעילות",
+        "inconsistent_results": "תוצאות לא עקביות",
+        "inconsistent_results_desc": "חלק מהימים תוספי האנרגיה עובדים, ימים אחרים לא - משאיר אותך מתוסכל ולא אמין",
+        "consistent_performance": "ביצועים עקביים",
+        "consistent_performance_desc": "כל טלאי מספק את אותה מינון מדויק, נותן לך אנרגיה צפויה כל יום",
+        "benefit_clinically_proven": "מוכח קלינית",
+        "benefit_gentle_effective": "עדין ויעיל",
+        "benefit_reliable_results": "תוצאות אמינות"
+      },
+      "comparison": {
+        "heading": "SURGE מול כל השאר",
+        "subheading": "ראה למה אלפים בוחרים ב-SURGE על פני פתרונות אנרגיה מסורתיים",
+        "energy_duration": "משך אנרגיה",
+        "energy_duration_us": "8-12 שעות מתמשכות",
+        "energy_duration_them": "2-4 שעות עם התרסקות",
+        "delivery_method": "שיטת משלוח",
+        "delivery_method_us": "טלאי דרך העור",
+        "delivery_method_them": "גלולות ומשקאות",
+        "digestive_impact": "השפעה על העיכול",
+        "digestive_impact_us": "אין בעיות בטן",
+        "digestive_impact_them": "נפיחות ואי נוחות",
+        "consistency": "עקביות",
+        "consistency_us": "אותן תוצאות כל פעם",
+        "consistency_them": "הצלחה או כישלון",
+        "convenience": "נוחות",
+        "convenience_us": "הדבק ושכח",
+        "convenience_them": "זכור לקחת",
+        "price_per_day": "מחיר ליום",
+        "price_per_day_us": "2.50$",
+        "price_per_day_them": "5-8$"
+      },
+      "ugc": {
+        "heading": "תוצאות אמיתיות מאנשים אמיתיים",
+        "subheading": "ראה איך SURGE משנה חיים כל יום עם סיפורי לקוחות אותנטיים",
+        "customer_1_name": "אחמד אל-ראשיד",
+        "customer_1_role": "מהנדס תוכנה",
+        "customer_1_desc": "SURGE נותן לי את דחיפת האנרגיה הנקייה שאני צריך לאימונים שלי ב-6 בבוקר. אין התרסקות, רק מיקוד מתמשך כל הבוקר.",
+        "customer_2_name": "פאטמה חסן",
+        "customer_2_role": "אם עובדת",
+        "customer_2_desc": "בין עבודה לילדים, הייתי צריכה משהו פשוט. רק הדבק SURGE ואני מוכנה להתמודד עם כל דבר.",
+        "customer_3_name": "ח'אלד א-סבאח",
+        "customer_3_role": "מאמן כושר",
+        "customer_3_desc": "SURGE שינה לחלוטין את שגרת הבוקר שלי. אני מתעורר מרגיש אנרגטי ומוכן להתמודד עם היום שלי.",
+        "customer_4_name": "ד\"ר עומר אל-זהרה",
+        "customer_4_role": "מנהל רפואי",
+        "customer_4_desc": "SURGE עוזר לי לשמור על מיקוד במהלך ימי ניתוח ארוכים. אני מדביק אותו במהלך שגרת הבוקר שלי ונשאר חד כל היום."
+      },
+      "sticky_atc": {
+        "button_label": "הוסף את שניהם",
+        "added": "נוסף!",
+        "on_sale": "במבצע"
+      }
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
+    }
+  }
+}

@@ -19,6 +19,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [v1.6.0] - 2025-11-26
+
+### Added
+
+- **Anti-Dopamine Product Template**: New dedicated product template and sections for anti-dopamine product line
+- **Product Launch Variants**: Enhanced product launch templates with version1 variants for A/B testing
+- **Recently Purchase Section**: New social proof section showing recent customer activity
+- **Custom Announcement Bar**: Enhanced announcement bar with custom styling and functionality
+- **Product Benefit Snippets**: Reusable benefit display components with check icons
+- **How It Works Page**: New dedicated page template for product explanation flow
+
+### Changed
+
+- **Header Group Configuration**: Updated header group JSON with improved navigation structure
+- **Product Stack Section**: Enhanced main product stack display with better UX
+- **Main Product Section**: Improved product page layout and functionality
+- **Profile Info Section**: Updated user profile information display
+- **Base CSS & Ondermax Styles**: Refined styling for better visual consistency
+- **Locale Updates**: Enhanced Arabic and English translations for new features
+
+### Fixed
+
+- **Production Sync**: Synchronized all production changes with development branch
+- **Theme Integrity**: Maintained Shrine auth/loader configuration during sync
+- **Settings Data**: Updated configuration settings to match production environment
+
 ## [v1.5.0] - 2025-09-30
 
 ### Added

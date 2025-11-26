@@ -1,0 +1,26 @@
+{% assign logo_blocks = logos | default: section.blocks %}
+<div class="social-proof">
+  <ul class="logos" role="list">
+    {% for b in logo_blocks %}
+      {% if b.settings.logo != blank %}
+        <li><img src="{{ b.settings.logo | image_url: width: 160 }}" alt="{{ b.settings.alt | escape }}" loading="lazy" width="160" height="auto"></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <style>
+    .social-proof .logos {
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin:20px 0 0;
+      opacity:.9
+    }
+    .social-proof .logos img {
+      height:28px;
+      width:auto;
+      filter: grayscale(1);
+      opacity:.8
+    }
+  </style>
+</div>

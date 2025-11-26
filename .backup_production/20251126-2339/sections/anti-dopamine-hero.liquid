@@ -1,0 +1,519 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .color-scheme-{{ section.id }}.color-custom {
+    --color-background: {{ section.settings.custom_colors_background.red }}, {{ section.settings.custom_colors_background.green }}, {{ section.settings.custom_colors_background.blue }};
+    --gradient-background: {% if section.settings.custom_gradient_background != blank %}{{ section.settings.custom_gradient_background }}{% else %}{{ section.settings.custom_colors_background }}{% endif %};
+    {% if section.settings.custom_image_background != blank %}
+      {% # theme-check-disable %}
+      --gradient-background: url('{{ section.settings.custom_image_background | image_url: 'master' }}') center center / cover no-repeat;
+      {% # theme-check-enable %}
+    {% endif %}
+    --color-foreground: {{ section.settings.custom_colors_text.red }}, {{ section.settings.custom_colors_text.green }}, {{ section.settings.custom_colors_text.blue }};
+    --color-button: {{ section.settings.custom_colors_solid_button_background.red }}, {{ section.settings.custom_colors_solid_button_background.green }}, {{ section.settings.custom_colors_solid_button_background.blue }};
+    --color-button-text: {{ section.settings.custom_colors_solid_button_text.red }}, {{ section.settings.custom_colors_solid_button_text.green }}, {{ section.settings.custom_colors_solid_button_text.blue }};
+    --color-base-outline-button-labels: {{ section.settings.custom_colors_outline_button.red }}, {{ section.settings.custom_colors_outline_button.green }}, {{ section.settings.custom_colors_outline_button.blue }};
+  }
+
+  {% if section.settings.custom_mobile_image_background != blank %}
+    @media screen and (max-width: 740px) {
+      .color-scheme-{{ section.id }}.color-custom {
+        {% # theme-check-disable %}
+        --gradient-background: url('{{ section.settings.custom_mobile_image_background | image_url: 'master' }}') center center / cover no-repeat;
+        {% # theme-check-enable %}
+      }
+    }
+  {% endif %}
+
+  .anti-dopamine-hero-{{ section.id }} {
+    display: grid;
+    gap: 1.6rem;
+  }
+
+  @media screen and (min-width: 990px) {
+    .anti-dopamine-hero-{{ section.id }} {
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      align-items: center;
+      column-gap: 4rem;
+    }
+  }
+
+  .anti-dopamine-hero-{{ section.id }} .hero-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+    opacity: 0.9;
+  }
+
+  .anti-dopamine-hero-{{ section.id }} .hero-heading {
+    margin: 0 0 0.8rem;
+  }
+
+  .anti-dopamine-hero-{{ section.id }} .hero-subheading {
+    margin-bottom: 1rem;
+    opacity: 0.9;
+  }
+
+  .anti-dopamine-hero-{{ section.id }} .hero-body {
+    margin-bottom: 1.4rem;
+  }
+
+  .anti-dopamine-hero-{{ section.id }} .hero-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.8rem;
+  }
+
+  .anti-dopamine-hero-{{ section.id }} .hero-bullet {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .anti-dopamine-hero-{{ section.id }} .hero-bullet-icon {
+    line-height: 1;
+    font-size: 1.1rem;
+    margin-top: 0.1rem;
+  }
+
+  .anti-dopamine-hero-{{ section.id }} .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .anti-dopamine-hero-{{ section.id }} .hero-microcopy {
+    font-size: 0.85rem;
+    opacity: 0.9;
+  }
+
+  .anti-dopamine-hero-{{ section.id }} .hero-secondary {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 749px) {
+    .anti-dopamine-hero-{{ section.id }} .hero-ctas {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .anti-dopamine-hero-{{ section.id }} .hero-secondary {
+      text-align: center;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-scheme-{{ section.id }} color-{{ section.settings.color_scheme }} gradient content-for-grouping animate-section animate--hidden {{ section.settings.visibility }}">
+  {% if section.settings.display_id %}
+    <copy-button class="section-id-btn button" data-content="#shopify-section-{{ section.id }}" data-success="false">
+      <span class="copy-text">Click to copy section ID</span>
+      <span class="copy-success">ID copied successfully!</span>
+    </copy-button>
+  {% endif %}
+
+  <div class="page-width{% if section.settings.desktop_page_width != 'normal' %} {{ section.settings.desktop_page_width }}{% endif %}{% if section.settings.mobile_full_page %} mobile-full-page{% endif %} section-{{ section.id }}-padding">
+    <div class="anti-dopamine-hero-{{ section.id }}">
+      <div class="hero-copy">
+        {% if section.settings.eyebrow != blank %}
+          <div class="hero-eyebrow">
+            {{ section.settings.eyebrow }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h1 class="hero-heading {{ section.settings.heading_size }}">
+            {{ section.settings.heading }}
+          </h1>
+        {% endif %}
+
+        {% if section.settings.subheading != blank %}
+          <div class="hero-subheading rte">
+            {{ section.settings.subheading }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.body != blank %}
+          <div class="hero-body rte">
+            {{ section.settings.body }}
+          </div>
+        {% endif %}
+
+        {% if section.blocks.size > 0 %}
+          <ul class="hero-bullets" role="list">
+            {% for block in section.blocks %}
+              {% if block.type == 'bullet' %}
+                <li class="hero-bullet" {{ block.shopify_attributes }}>
+                  <span class="hero-bullet-icon">
+                    {% if block.settings.custom_icon != blank %}
+                      <img
+                        src="{{ block.settings.custom_icon | image_url: width: 32 }}"
+                        alt="{{ block.settings.custom_icon.alt | default: '' | escape }}"
+                        width="16"
+                        height="16"
+                        loading="lazy"
+                      >
+                    {% else %}
+                      {% render 'material-icon',
+                        icon: block.settings.icon,
+                        filled: block.settings.filled_icon
+                      %}
+                    {% endif %}
+                  </span>
+                  <span class="hero-bullet-text">
+                    {{ block.settings.text }}
+                  </span>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        <div class="hero-ctas">
+          {% if section.settings.primary_button_label != blank %}
+            <a
+              {% if section.settings.primary_button_link == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ section.settings.primary_button_link }}"
+              {% endif %}
+              class="button button--primary"
+            >
+              {{ section.settings.primary_button_label | escape }}
+            </a>
+          {% endif %}
+
+          {% if section.settings.secondary_button_label != blank %}
+            <a
+              {% if section.settings.secondary_button_link == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ section.settings.secondary_button_link }}"
+              {% endif %}
+              class="button button--secondary hero-secondary"
+            >
+              {{ section.settings.secondary_button_label | escape }}
+            </a>
+          {% endif %}
+        </div>
+
+        {% if section.settings.microcopy != blank %}
+          <div class="hero-microcopy">
+            {{ section.settings.microcopy }}
+          </div>
+        {% endif %}
+      </div>
+
+      {% if section.settings.show_right_content %}
+        <div class="hero-right">
+          {{ section.settings.custom_liquid }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Anti-Dopamine Hero",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display_id",
+      "label": "Display section ID (for anchors)",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "visibility",
+      "options": [
+        { "value": "desktop-hidden", "label": "Mobile only" },
+        { "value": "mobile-hidden", "label": "Desktop only" },
+        { "value": "always-display", "label": "All devices" }
+      ],
+      "label": "Display on",
+      "default": "always-display"
+    },
+    {
+      "type": "header",
+      "content": "General"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "Accent 1" },
+        { "value": "accent-2", "label": "Accent 2" },
+        { "value": "background-1", "label": "Background 1" },
+        { "value": "background-2", "label": "Background 2" },
+        { "value": "inverse", "label": "Inverse" },
+        { "value": "custom", "label": "Custom" }
+      ],
+      "default": "background-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "select",
+      "id": "desktop_page_width",
+      "options": [
+        { "value": "page-width--narrow", "label": "Narrow" },
+        { "value": "normal", "label": "Normal" },
+        { "value": "desktop-full-page", "label": "Full width" },
+        { "value": "desktop-full-page-no-padding", "label": "Full width without side spacing" }
+      ],
+      "default": "normal",
+      "label": "Page width"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_full_page",
+      "label": "Full page width on mobile",
+      "default": false
+    },
+
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "The First Anti-Dopamine Patch System"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Anti-Dopamine Patch System for Adults Who Are Done Wasting Days."
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" }
+      ],
+      "default": "h0",
+      "label": "Heading size"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p><strong>SURGE</strong> (day) and <strong>DRIFT</strong> (night) are a patch-based operating system for your focus, output, and sleep. Not for people who want more stimulation. For people who want their day back.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Short body",
+      "default": "<p>You’re not lazy. Your brain is overstimulated, under-focused, and running on scroll loops.<br>One patch stabilizes your day for real work.<br>One patch resets your brain at night so tomorrow isn’t a copy-paste of today.</p>"
+    },
+
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "primary_button_label",
+      "label": "Primary button label",
+      "default": "See How the System Works"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_label",
+      "label": "Secondary button label",
+      "default": "Start My 30-Day Reset"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "Secondary button link"
+    },
+    {
+      "type": "richtext",
+      "id": "microcopy",
+      "label": "Micro-copy under CTA",
+      "default": "<p>If this feels like your real problem, this is your system.</p>"
+    },
+
+    {
+      "type": "header",
+      "content": "Right side (optional)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_right_content",
+      "label": "Show right column content",
+      "default": false
+    },
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "Right column custom Liquid / HTML",
+      "info": "Use this for an image, badge stack, or product media embed."
+    },
+
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 52
+    },
+
+    {
+      "type": "header",
+      "content": "Custom color scheme",
+      "info": "Applied if Color scheme is set to Custom."
+    },
+    {
+      "type": "color",
+      "id": "custom_colors_background",
+      "default": "#FFFFFF",
+      "label": "Background color"
+    },
+    {
+      "type": "color_background",
+      "id": "custom_gradient_background",
+      "label": "Gradient background"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image_background",
+      "label": "Image background"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_mobile_image_background",
+      "label": "Mobile image background",
+      "info": "If empty, the desktop image background will be used on mobile."
+    },
+    {
+      "type": "color",
+      "id": "custom_colors_text",
+      "default": "#2E2A39",
+      "label": "Text color"
+    },
+    {
+      "type": "color",
+      "id": "custom_colors_solid_button_background",
+      "default": "#121212",
+      "label": "Solid button background"
+    },
+    {
+      "type": "color",
+      "id": "custom_colors_solid_button_text",
+      "default": "#ffffff",
+      "label": "Solid button label"
+    },
+    {
+      "type": "color",
+      "id": "custom_colors_outline_button",
+      "default": "#121212",
+      "label": "Outline button color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "bullet",
+      "name": "Key bullet",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Bullet text",
+          "default": "Protect your focus from dopamine and distractions"
+        },
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Material icon name",
+          "default": "check_circle",
+          "info": "[View all Material icons](https://fonts.google.com/icons?icon.set=Material+Symbols&icon.platform=web)."
+        },
+        {
+          "type": "checkbox",
+          "id": "filled_icon",
+          "label": "Filled icon style",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom icon (overrides Material icon)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero – Anti-Dopamine",
+      "blocks": [
+        {
+          "type": "bullet",
+          "settings": {
+            "text": "Protect your focus from dopamine and distractions"
+          }
+        },
+        {
+          "type": "bullet",
+          "settings": {
+            "text": "Turn “I’ll do it later” into 90-minute deep work blocks"
+          }
+        },
+        {
+          "type": "bullet",
+          "settings": {
+            "text": "Night-time reset so your brain actually recovers"
+          }
+        },
+        {
+          "type": "bullet",
+          "settings": {
+            "text": "Patch ritual = a small daily contract with your future self"
+          }
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  }
+}
+{% endschema %}

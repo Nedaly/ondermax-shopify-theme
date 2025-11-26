@@ -1,0 +1,223 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.mobile_padding_top }}px;
+    padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+  }
+
+  .static-power-bar-{{ section.id }} {
+    background: {{ section.settings.custom_colors_background }};
+    color: {{ section.settings.custom_colors_text }};
+  }
+
+  .static-power-bar-{{ section.id }} .power-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: {{ section.settings.mobile_text_size }}px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.desktop_padding_top }}px;
+      padding-bottom: {{ section.settings.desktop_padding_bottom }}px;
+    }
+
+    .static-power-bar-{{ section.id }} .power-badge {
+      font-size: {{ section.settings.desktop_text_size }}px;
+      padding: 16px 24px;
+    }
+  }
+
+  .static-power-bar-{{ section.id }} .power-badges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    justify-items: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    .static-power-bar-{{ section.id }} .power-badges-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="static-power-bar-{{ section.id }} section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="power-badges-grid">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'power_badge' -%}
+            <div class="power-badge" {{ block.shopify_attributes }}>
+              {%- if block.settings.icon != blank -%}
+                <span class="power-badge__icon">{{ block.settings.icon }}</span>
+              {%- endif -%}
+              <span class="power-badge__text">
+                {% capture __maybe %}{{ block.settings.text | t }}{% endcapture %}
+                {% if __maybe contains 'Translation missing' %}
+                  {{ block.settings.text }}
+                {% else %}
+                  {{ __maybe }}
+                {% endif %}
+              </span>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Static Power Bar",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Mobile padding top",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Mobile padding bottom",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop padding top",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop padding bottom",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "mobile_text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile text size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "desktop_text_size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Desktop text size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "custom_colors_background",
+      "label": "Background color",
+      "default": "#1c8e8e"
+    },
+    {
+      "type": "color",
+      "id": "custom_colors_text",
+      "label": "Text color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "power_badge",
+      "name": "Power Badge",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "⚡"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "power_bar.high_energy"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Static Power Bar",
+      "blocks": [
+        {
+          "type": "power_badge",
+          "settings": {
+            "icon": "⚡",
+            "text": "power_bar.high_energy"
+          }
+        },
+        {
+          "type": "power_badge",
+          "settings": {
+            "icon": "🧪",
+            "text": "power_bar.doctor_developed"
+          }
+        },
+        {
+          "type": "power_badge",
+          "settings": {
+            "icon": "🧬",
+            "text": "power_bar.backed_by_science"
+          }
+        },
+        {
+          "type": "power_badge",
+          "settings": {
+            "icon": "🌍",
+            "text": "power_bar.free_worldwide_shipping"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
