@@ -1,0 +1,463 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "text_size": "h1",
+            "title_alignment": "left",
+            "uppercase_title": false,
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "layout": "price_first",
+            "price_color": "accent-1",
+            "compare_price_color": "text",
+            "displayed_badge": "custom",
+            "icon_scale": 140,
+            "custom_badge_text": "🌙 SAVE [percentage]% TODAY",
+            "icon_1": "redeem",
+            "filled_icon_1": false,
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "margin_top": 9,
+            "margin_bottom": 15
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "margin_top": 12,
+            "margin_bottom": 24
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "skip_cart": false,
+            "uppercase_text": true,
+            "icon_scale": 120,
+            "icon_spacing": 10,
+            "atc_custom_label": "",
+            "display_price": false,
+            "enable_custom_color": false,
+            "custom_color": "#53af01",
+            "enable_secondary_btn": false,
+            "secondary_btn_label": "Buy It Now",
+            "secondary_btn_enable_custom_color": false,
+            "secondary_btn_custom_color": "#dd1d1d",
+            "margin_top": 39,
+            "margin_bottom": 39
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky_atc",
+          "settings": {
+            "function": "add_to_cart",
+            "display_when": "after_scroll",
+            "button_label": "ADD DRIFT",
+            "enable_custom_btn_color": false,
+            "custom_btn_color": "#dd1d1d",
+            "color_scheme": "background-1",
+            "star_color": "#ffcc00",
+            "stars_label": "",
+            "picker_type": "combined",
+            "desktop_show_image": true,
+            "desktop_show_title": true,
+            "desktop_rating_stars": false,
+            "desktop_show_price": true,
+            "desktop_show_sale_badge": true,
+            "desktop_variant_picker": true,
+            "desktop_full_button_width": false,
+            "desktop_show_price_in_button": false,
+            "desktop_transparent_bg": false,
+            "mobile_show_image": false,
+            "mobile_show_title": true,
+            "mobile_rating_stars": false,
+            "mobile_show_price": true,
+            "mobile_show_sale_badge": false,
+            "mobile_variant_picker": false,
+            "mobile_full_button_width": false,
+            "mobile_show_price_in_button": false,
+            "mobile_transparent_bg": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "sticky_atc"
+      ],
+      "settings": {
+        "display_id": false,
+        "enable_sticky_info": true,
+        "display_variant_image_first": false,
+        "disable_prepend": true,
+        "hide_variants": false,
+        "variant_image_filtering": "none",
+        "image_zoom": "none",
+        "thumbnails_ratio": "square",
+        "arrows_color_scheme": "accent-1",
+        "transparent_arrows": false,
+        "dots_color_scheme": "inverse",
+        "video_player": "play_btn",
+        "enable_video_looping": false,
+        "autoplay_videos_pause_btn": false,
+        "video_sound_btn": false,
+        "video_timeline": false,
+        "play_btn_color_scheme": "accent-1",
+        "sound_btn_color_scheme": "inverse",
+        "timeline_color": "accent-1",
+        "media_size": "medium",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "desktop_thumbnails_position": "bottom",
+        "desktop_thumbnails_count": 5,
+        "desktop_vertical_thumbnails_width": 16,
+        "desktop_vertical_thumbnails_hide_arrows": false,
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "desktop_arrows_position": "hidden",
+        "mobile_media_corner_radius": 0,
+        "mobile_spacing_pixels": 0,
+        "mobile_arrows_position": "sides",
+        "mobile_pagination": "dots_overlay",
+        "mobile_thumbnails_position": "hidden",
+        "mobile_thumbnails_count": 5,
+        "mobile_vertical_thumbnails_width": 22,
+        "mobile_vertical_thumbnails_hide_arrows": true,
+        "mobile_scroll_padding_percentage": 0,
+        "mobile_scroll_padding_pixels": 14,
+        "enable_mobile_outher_spacing": false,
+        "mobile_slides_container_width": 100,
+        "mobile_slides_inner_width": 100,
+        "trust_badge_position": "top-right",
+        "trust_badge_size": "medium",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 16,
+        "desktop_padding_top": 20,
+        "desktop_padding_bottom": 36
+      }
+    },
+    "static_power_bar": {
+      "type": "static-power-bar",
+      "blocks": {
+        "power_badge_1": {
+          "type": "power_badge",
+          "settings": {
+            "icon": "🌙",
+            "text": "Deep Sleep"
+          }
+        },
+        "power_badge_2": {
+          "type": "power_badge",
+          "settings": {
+            "icon": "🧪",
+            "text": "Doctor Developed"
+          }
+        },
+        "power_badge_3": {
+          "type": "power_badge",
+          "settings": {
+            "icon": "🧬",
+            "text": "Backed by Science"
+          }
+        },
+        "power_badge_4": {
+          "type": "power_badge",
+          "settings": {
+            "icon": "🌍",
+            "text": "Free Worldwide Shipping"
+          }
+        }
+      },
+      "block_order": [
+        "power_badge_1",
+        "power_badge_2",
+        "power_badge_3",
+        "power_badge_4"
+      ],
+      "settings": {
+        "mobile_padding_top": 12,
+        "mobile_padding_bottom": 12,
+        "desktop_padding_top": 16,
+        "desktop_padding_bottom": 16,
+        "mobile_text_size": 14,
+        "desktop_text_size": 16,
+        "custom_colors_background": "#7f48b0",
+        "custom_colors_text": "#ffffff"
+      }
+    },
+    "icon_with_text_blocks": {
+      "type": "multicolumn",
+      "blocks": {
+        "ingredient_1": {
+          "type": "column",
+          "settings": {
+            "title": "Melatonin",
+            "text": "<p>Natural sleep hormone that helps regulate your circadian rhythm for deeper, more restful sleep.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "ingredient_2": {
+          "type": "column",
+          "settings": {
+            "title": "Magnesium",
+            "text": "<p>Essential mineral that helps relax muscles and calm the nervous system for better sleep quality.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "ingredient_3": {
+          "type": "column",
+          "settings": {
+            "title": "L-Theanine",
+            "text": "<p>Promotes relaxation and reduces stress without drowsiness, helping you wind down naturally.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "ingredient_4": {
+          "type": "column",
+          "settings": {
+            "title": "Glycine",
+            "text": "<p>Supports healthy sleep patterns and helps improve sleep quality for more restorative rest.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_1",
+        "ingredient_2",
+        "ingredient_3",
+        "ingredient_4"
+      ],
+      "settings": {
+        "title": "Science-Backed Sleep Ingredients",
+        "title_highlight_color": "#7f48b0",
+        "heading_size": "h1",
+        "button_label": "",
+        "button_link": "",
+        "atc_button_label": "",
+        "atc_product": "",
+        "atc_skip_cart": false,
+        "color_scheme": "background-1",
+        "cards_color_scheme": "background-1",
+        "cards_corner_radius": 20,
+        "stretch_cards": false,
+        "stretched_cards_content_alignment": "center",
+        "image_width": "third",
+        "image_ratio": "square",
+        "media_position": "top",
+        "column_alignment": "center",
+        "desktop_heading_size": 20,
+        "mobile_heading_size": 22,
+        "desktop_text_size": 16,
+        "mobile_text_size": 15,
+        "desktop_text_top_margin": 10,
+        "mobile_text_top_margin": 10,
+        "desktop_container_padding_y": 24,
+        "desktop_container_padding_x": 24,
+        "mobile_container_padding_y": 24,
+        "mobile_container_padding_x": 24,
+        "type": "slide",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": true,
+        "dots_color_scheme": "inverse",
+        "desktop_full_page": false,
+        "columns_desktop": 4,
+        "slider_desktop": false,
+        "per_move_desktop": 1,
+        "desktop_spacing": 40,
+        "desktop_side_padding": 0,
+        "desktop_padding_calc": true,
+        "desktop_adaptive_height": false,
+        "desktop_dots_position": "under",
+        "desktop_arrows_position": "sides",
+        "columns_mobile": "1",
+        "slider_mobile": true,
+        "enable_mobile_preview": false,
+        "mobile_adaptive_height": false,
+        "mobile_dots_position": "under",
+        "mobile_arrows_position": "under",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "two_products_sec": {
+      "type": "two-products-sec",
+      "blocks": {
+        "drift_tile": {
+          "type": "text",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "drift_tile"
+      ],
+      "settings": {
+        "p_top": 75,
+        "p_bottom": 75
+      }
+    },
+    "testimonial_grid_section": {
+      "type": "testimonial-grid-section",
+      "settings": {
+        "heading": "Real Results from Real People",
+        "subheading": "Join thousands who've transformed their sleep with DRIFT.",
+        "bg_color": "#ffffff"
+      }
+    },
+    "collapsible_content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does DRIFT take to work?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>DRIFT works gently in the background. Most users experience deeper sleep within 30-60 minutes of application, with full effects by the second night.</p>",
+            "page": ""
+          }
+        },
+        "faq_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When should I apply DRIFT?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Apply DRIFT 30-60 minutes before your desired bedtime. The patch works best when applied to clean, dry skin on your upper arm or shoulder.</p>",
+            "page": ""
+          }
+        },
+        "faq_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is DRIFT safe for daily use?",
+            "icon": "",
+            "filled_icon": false,
+            "row_content": "<p>Yes, DRIFT is formulated with clinically-tested ingredients and is safe for daily use. The natural ingredients support your body's own sleep processes.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "caption": "",
+        "title": "Frequently Asked Questions",
+        "title_highlight_color": "#7f48b0",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "video_muted_autoplay": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "row_heading_size": "medium",
+        "collapse_icon": "plus",
+        "display_top_border": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_divider": {
+      "type": "section-divider",
+      "settings": {
+        "visibility": "always-display",
+        "shape": "waves_3",
+        "flip_horizontal": false,
+        "flip_vertical": false,
+        "shape_color": "custom",
+        "custom_shape_color": "#f3e8ff",
+        "background_color": "background-1",
+        "custom_background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "atc_button": {
+          "type": "atc_button",
+          "settings": {
+            "button_label": "Ditch the Pills — Patch In",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        }
+      },
+      "block_order": [
+        "atc_button"
+      ],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "full_width": true,
+        "mobile_narrow_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 12,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "static_power_bar",
+    "icon_with_text_blocks",
+    "two_products_sec",
+    "testimonial_grid_section",
+    "collapsible_content",
+    "section_divider",
+    "rich_text_cta"
+  ]
+}

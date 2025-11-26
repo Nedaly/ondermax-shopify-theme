@@ -1,0 +1,78 @@
+/* Arabic font support - IBM Plex Sans Arabic WOFF2 files available */
+
+@font-face {
+  font-family: 'PlexArabic';
+  src: url('{{ "ibm-plex-sans-arabic-400.woff2" | asset_url }}') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlexArabic';
+  src: url('{{ "ibm-plex-sans-arabic-600.woff2" | asset_url }}') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Arabic typography & micro-tweaks */
+html:lang(ar) body {
+  font-family:
+    'PlexArabic',
+    Cairo,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Noto Sans Arabic',
+    sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+  font-feature-settings: 'kern';
+}
+
+/* --- Ensure theme variables use Arabic family globally --- */
+:root:lang(ar) {
+  --font-body-family:
+    'PlexArabic', Cairo, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Noto Sans Arabic', sans-serif;
+  --font-heading-family:
+    'PlexArabic', Cairo, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Noto Sans Arabic', sans-serif;
+}
+
+/* --- Footer enforcement (catches components that force a font) --- */
+:root:lang(ar) footer,
+:root:lang(ar) .footer,
+:root:lang(ar) #shopify-section-footer {
+  font-family: var(--font-body-family) !important;
+}
+
+:root:lang(ar) footer *,
+:root:lang(ar) .footer *,
+:root:lang(ar) #shopify-section-footer * {
+  font-family: inherit !important;
+}
+
+/* Headings inside footer use heading family explicitly */
+:root:lang(ar) footer h1,
+:root:lang(ar) footer h2,
+:root:lang(ar) footer h3,
+:root:lang(ar) footer h4,
+:root:lang(ar) footer h5,
+:root:lang(ar) footer h6,
+:root:lang(ar) .footer h1,
+:root:lang(ar) .footer h2,
+:root:lang(ar) .footer h3,
+:root:lang(ar) .footer h4,
+:root:lang(ar) .footer h5,
+:root:lang(ar) .footer h6,
+:root:lang(ar) #shopify-section-footer h1,
+:root:lang(ar) #shopify-section-footer h2,
+:root:lang(ar) #shopify-section-footer h3,
+:root:lang(ar) #shopify-section-footer h4,
+:root:lang(ar) #shopify-section-footer h5,
+:root:lang(ar) #shopify-section-footer h6 {
+  font-family: var(--font-heading-family) !important;
+}

@@ -1,0 +1,228 @@
+{% stylesheet %}
+.ls-anchors { 
+  --gap: 0px; 
+  position: relative; 
+  container-type: inline-size;
+  width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: none !important;
+}
+
+/* Force break out of any parent with 20px padding */
+.ls-anchors {
+  transform: translateX(calc(-50vw + 50%)) !important;
+  width: 100vw !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+}
+
+/* Break out of any parent containers */
+.ls-anchors,
+.ls-anchors .page-width,
+.ls-anchors .container,
+.ls-anchors .wrapper,
+.ls-anchors .section-padding,
+.ls-anchors [class*="section-"],
+.ls-anchors [class*="padding"],
+.ls-anchors [class*="template--"] {
+  max-width: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Target any parent section wrapper */
+section:has(.ls-anchors),
+[class*="template--"]:has(.ls-anchors),
+[class*="section-"]:has(.ls-anchors) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.ls-anchors__grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: var(--gap); 
+  width: 100%;
+}
+@media (max-width: 980px){
+  .ls-anchors__grid { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: var(--gap); 
+  }
+  .ls-anchors__item { 
+    width: 100%; 
+  }
+}
+.ls-anchors__item { position:relative; overflow:hidden; isolation:isolate; }
+.ls-anchors__media { position:relative; aspect-ratio: 16/9; }
+.ls-anchors__picture, .ls-anchors__img {
+  width:100%; height:100%; display:block; object-fit:cover; border:0;
+}
+.ls-anchors__overlay {
+  position:absolute; inset:0;
+  background: linear-gradient(135deg, rgba(59,130,246,0.3) 0%, rgba(147,51,234,0.4) 50%, rgba(0,0,0,0.6) 100%);
+  pointer-events:none;
+}
+.ls-anchors__content {
+  position:absolute; inset-inline:20px; bottom:20px; color:#fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+.ls-anchors__title { font-weight:700; font-size: clamp(24px, 4cqw, 32px); line-height:1.1; margin:0 0 8px; letter-spacing:-0.01em; }
+.ls-anchors__desc { font-size: clamp(16px, 2.8cqw, 18px); opacity:1; margin:0 0 12px; font-weight:400; }
+.ls-anchors__cta { display:inline-flex; align-items:center; gap:6px; color:#fff; text-decoration:none; font-weight:600; font-size:16px; text-transform:none; letter-spacing:0.02em; }
+.ls-anchors__badge {
+  position:absolute; top:20px; inset-inline:20px auto;
+  background: linear-gradient(135deg, rgba(59,130,246,0.9) 0%, rgba(147,51,234,0.9) 100%); color:#fff; padding:8px 16px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em;
+}
+html[dir="rtl"] .ls-anchors__badge { inset-inline:auto 20px; }
+.ls-anchors__img[data-focus]{
+  object-position: var(--focus-x, 50%) var(--focus-y, 50%);
+}
+/* Hide any carousel arrows or navigation */
+.ls-anchors .swiper-button-next,
+.ls-anchors .swiper-button-prev,
+.ls-anchors .carousel-arrow,
+.ls-anchors .arrow,
+.ls-anchors [class*="arrow"],
+.ls-anchors [class*="nav"],
+.ls-anchors [class*="button"],
+.ls-anchors .slider-button,
+.ls-anchors .slider-buttons,
+.ls-anchors .slider__button,
+.ls-anchors .slideshow__controls,
+.ls-anchors .slideshow__autoplay,
+.ls-anchors .slider-counter,
+.ls-anchors .slider-counter__link,
+.ls-anchors .flickity-button,
+.ls-anchors .flickity-prev-next-button,
+.ls-anchors .slick-arrow,
+.ls-anchors .slick-prev,
+.ls-anchors .slick-next {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Bold hover effect to match homepage spirit */
+@media (hover:hover){
+  .ls-anchors__item:hover .ls-anchors__img { transform: scale(1.05); transition: transform .3s ease; }
+  .ls-anchors__item:hover .ls-anchors__overlay { background: linear-gradient(135deg, rgba(59,130,246,0.4) 0%, rgba(147,51,234,0.5) 50%, rgba(0,0,0,0.7) 100%); }
+}
+{% endstylesheet %}
+
+<section class="ls-anchors" aria-label="{{ 'sections.lifestyle_anchors' | t | default: 'Lifestyle anchors' }}">
+  <div class="ls-anchors__grid">
+    {% for block in section.blocks %}
+      {% liquid
+        assign title = block.settings.title | default: 'Title'
+        assign desc  = block.settings.text  | default: 'Short supporting line'
+        assign link  = block.settings.link  | default: routes.root_url
+        assign badge = block.settings.badge
+        assign fx    = block.settings.focal_x | default: 50
+        assign fy    = block.settings.focal_y | default: 50
+        assign priority = block.settings.fetch_priority
+        assign img = block.settings.image
+        if img == blank
+          case forloop.index
+            when 1
+              assign fallback = 'morning-boost.webp' | asset_url
+            when 2
+              assign fallback = 'work-focus.webp' | asset_url
+            else
+              assign fallback = 'night-reset.webp' | asset_url
+          endcase
+        endif
+      %}
+
+      <article class="ls-anchors__item" {{ block.shopify_attributes }} data-analytics="lifestyle_click" data-analytics-index="{{ forloop.index0 }}">
+        {% if badge != blank %}<span class="ls-anchors__badge">{{ badge }}</span>{% endif %}
+
+        <div class="ls-anchors__media">
+          <picture class="ls-anchors__picture">
+            {% if img != blank %}
+              <source type="image/avif" srcset="{{ img | image_url: width: 1200, format: 'avif' }} 1200w, {{ img | image_url: width: 800, format: 'avif' }} 800w, {{ img | image_url: width: 480, format: 'avif' }} 480w" sizes="(max-width: 980px) 90vw, 33vw">
+              <source type="image/webp" srcset="{{ img | image_url: width: 1200, format: 'webp' }} 1200w, {{ img | image_url: width: 800, format: 'webp' }} 800w, {{ img | image_url: width: 480, format: 'webp' }} 480w" sizes="(max-width: 980px) 90vw, 33vw">
+              <img
+                class="ls-anchors__img"
+                alt="{{ title | escape }}"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="{% if priority and forloop.first %}high{% else %}auto{% endif %}"
+                src="{{ img | image_url: width: 1200 }}"
+                width="1200" height="675"
+                style="--focus-x: {{ fx }}%; --focus-y: {{ fy }}%;"
+                data-focus
+              >
+            {% else %}
+              <img
+                class="ls-anchors__img"
+                alt="{{ title | escape }}"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="{% if priority and forloop.first %}high{% else %}auto{% endif %}"
+                src="{{ fallback }}"
+                width="1200" height="675"
+                style="--focus-x: {{ fx }}%; --focus-y: {{ fy }}%;"
+                data-focus
+              >
+            {% endif %}
+          </picture>
+          <div class="ls-anchors__overlay" aria-hidden="true"></div>
+          <div class="ls-anchors__content">
+            <h3 class="ls-anchors__title">{{ title }}</h3>
+            {% if desc != blank %}<p class="ls-anchors__desc">{{ desc }}</p>{% endif %}
+            <a class="ls-anchors__cta" href="{{ link }}" aria-label="{{ title }}">
+              Learn More →
+            </a>
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+{% comment %}
+// Static image collage - no carousel functionality needed
+{% endcomment %}
+
+{% schema %}
+{
+  "name": "Lifestyle Anchors",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "anchor",
+      "name": "Anchor item",
+      "limit": 3,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image (optional if using assets)" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Morning" },
+        { "type": "text", "id": "text", "label": "Description", "default": "Apply SURGE." },
+        { "type": "url",  "id": "link", "label": "Link" },
+        { "type": "range","id": "focal_x","label": "Focal X (%)","min": 0,"max": 100,"step": 1,"default": 50 },
+        { "type": "range","id": "focal_y","label": "Focal Y (%)","min": 0,"max": 100,"step": 1,"default": 50 },
+        { "type": "text", "id": "badge","label": "Badge (optional)" },
+        { "type": "checkbox","id": "fetch_priority","label": "Prioritize first tile (above the fold)", "default": false }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Lifestyle Anchors",
+      "blocks": [
+        { "type": "anchor", "settings": { "title": "Morning", "text": "Apply SURGE.", "link": "#how-to-use", "focal_x": 68, "focal_y": 52, "badge": "SURGE" } },
+        { "type": "anchor", "settings": { "title": "Work", "text": "Keep SURGE.", "link": "#how-to-use", "focal_x": 42, "focal_y": 63, "badge": "SURGE" } },
+        { "type": "anchor", "settings": { "title": "Night", "text": "Apply DRIFT.", "link": "#how-to-use", "focal_x": 35, "focal_y": 48, "badge": "DRIFT" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
