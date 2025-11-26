@@ -1,0 +1,137 @@
+<style>
+    .videos-section{
+        position: relative;
+    }
+    .videos_slider {
+        min-height: 90vh;
+    }
+    .videos_slider video{   
+        width: 100%;
+    }
+    .video-content {
+        position: absolute;
+        top: 40%;
+        left: 20%;
+    }
+    .video-btn{
+        background: linear-gradient(90deg, #2ca6a4 0%, #3f1c96 100%);
+        color: #fff;
+        font-weight: bold;
+        border-radius: 35px;
+        padding: 18px 35px;
+        border: none;
+        cursor: pointer;
+        width: fit-content;
+        margin-top: 40px;
+    }
+    h2.title {
+        font-size: 70px;
+        font-weight: 700;
+        color: #fff;
+        margin: 0;
+    }
+    .sub-title{
+        font-size: 20px;
+        color: #fff;
+        margin: 10px 0;
+    }
+</style>
+<div class="videos-section">
+    <div class="videos_slider">
+        {%- if section.settings.video_url.type == 'youtube' -%}
+            <iframe
+                src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1"
+                class="js-youtube"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                title="{{ section.settings.description | escape }}"
+            ></iframe>
+        {%- elsif section.settings.video_url.type == 'vimeo' -%}
+            <iframe
+                src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}"
+                class="js-vimeo"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                title="{{ section.settings.description | escape }}"
+            ></iframe>
+        {% elsif section.settings.video != blank %}
+            {{ section.settings.video
+                | video_tag:
+                loop: section.settings.enable_video_looping,
+                autoplay: true,
+                controls: false,
+                muted: true
+            }}
+        {%- endif -%}
+    </div>
+    <div class="video-content">
+        <h2 class="title" >
+        {{ section.settings.video_ttl }}
+        </h2>
+        <div class="sub-title">
+            {{ section.settings.sub_title }}
+        </div>
+        <div class="video-btn">
+            <a href="{{ section.settings.video_btn_link }}">{{ section.settings.video_btn }}</a>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Custom Video",
+  "class": "section",
+  "settings": [
+        {
+            "type": "video_url",
+            "id": "video_url",
+            "accept": ["youtube", "vimeo"],
+            "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "label": "t:sections.video.settings.video_url.label",
+            "placeholder": "t:sections.video.settings.video_url.placeholder",
+            "info": "t:sections.video.settings.video_url.info"
+        },
+        {   
+            "type": "video",
+            "id": "video",
+            "label": "MP4 Video"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_video_looping",
+            "default": false,
+            "label": "Enable video looping"
+        },
+        {
+            "type": "header",
+            "content": "Video Content"
+        },
+        {
+            "type": "text",
+            "id": "video_ttl",
+            "label": "Heading"
+        },
+        {
+            "type": "html",
+            "id": "sub_title",
+            "label": "Sub Heading"
+        },
+        {
+            "type": "text",
+            "id":"video_btn",
+            "label": "Button"
+        },
+        {
+            "type": "url",
+            "id":"video_btn_link",
+            "label": "Link"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Custom Video"
+      }
+    ]
+  }
+{% endschema %}

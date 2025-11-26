@@ -1,0 +1,27 @@
+html[dir='rtl'] body {
+  direction: rtl;
+}
+html[dir='rtl'] .text-start {
+  text-align: right;
+}
+html[dir='rtl'] .text-end {
+  text-align: left;
+}
+html[dir='rtl'] .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+html[dir='rtl'] .mr-auto {
+  margin-right: 0;
+  margin-left: auto;
+}
+.rtl-flip {
+  transform: scaleX(-1);
+}
+[dir='rtl'] .rtl-flip {
+  transform: scaleX(-1);
+}
+.rtl-num {
+  direction: ltr;
+  unicode-bidi: isolate;
+}

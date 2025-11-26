@@ -1,0 +1,249 @@
+{% comment %}
+Recent Purchase Popup Section (fixed)
+Displays a random product and fake recent purchase notification every 2 minutes
+{% endcomment %}
+
+<div id="purchase-popup" class="purchase-popup" aria-hidden="true">
+  <div class="popup-inner">
+    <img class="popup-user" src="" alt="Customer" />
+    <div class="popup-details">
+      <p class="popup-message">
+        <strong class="popup-name"></strong> from 
+        <span class="popup-location"></span> just bought this!
+      </p>
+      <div class="popup-product">
+        <img class="popup-product-image" src="" alt="Product">
+        <div>
+          <p class="popup-product-title"></p>
+          <p class="popup-product-price"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Basic styling — tweak to match your theme */
+.purchase-popup {
+  position: fixed;
+  bottom: -220px;
+  left: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.59);
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+  padding: 12px 16px;
+  z-index: 9999;
+  max-width: 360px;
+  font-family: inherit;
+  pointer-events: auto;
+}
+
+.purchase-popup.show {
+  bottom: 20px;
+}
+
+.popup-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.popup-user {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #f2f2f2;
+}
+
+.popup-product {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.popup-product img {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.popup-product-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+  max-width: 190px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.popup-product-price {
+  color: #008000;
+  font-weight: 600;
+  font-size: 13px;
+  margin: 2px 0 0 0;
+}
+
+.popup-message {
+  margin: 0;
+  font-size: 16px;
+  color: #1c8e8e;
+}
+@media (max-width: 480px) {
+  .purchase-popup { left: 12px; right: 12px; max-width: calc(100% - 24px); }
+  .popup-product-title { max-width: 120px; }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const popup = document.getElementById("purchase-popup");
+  const nameEl = popup.querySelector(".popup-name");
+  const locationEl = popup.querySelector(".popup-location");
+  const userImg = popup.querySelector(".popup-user");
+  const productImg = popup.querySelector(".popup-product-image");
+  const productTitle = popup.querySelector(".popup-product-title");
+  const productPrice = popup.querySelector(".popup-product-price");
+
+  // Demo customer data
+  const names = ["Emily", "John", "Sophia", "Oliver", "Mia", "Liam", "Ava", "Noah", "Charlotte", "James"];
+  const locations = ["London", "Manchester", "Liverpool", "Birmingham", "Leeds", "Bristol", "Glasgow", "Newcastle"];
+  const userImages = [
+    "https://randomuser.me/api/portraits/women/44.jpg",
+    "https://randomuser.me/api/portraits/men/32.jpg",
+    "https://randomuser.me/api/portraits/women/55.jpg",
+    "https://randomuser.me/api/portraits/men/23.jpg",
+    "https://randomuser.me/api/portraits/women/65.jpg",
+    "https://randomuser.me/api/portraits/men/47.jpg",
+    "https://randomuser.me/api/portraits/women/12.jpg",
+    "https://randomuser.me/api/portraits/men/14.jpg"
+  ];
+
+  // Use Liquid to inject the store currency into JS
+  const STORE_CURRENCY = "{{ shop.currency }}";
+
+  // Utility: safe image URL (adds host if Shopify returns relative path)
+  function normalizeImageUrl(src) {
+    if (!src) return "";
+    // Some stores return "//cdn.shopify..." or "/..."; we can normalize if needed.
+    if (src.indexOf("//") === 0) return window.location.protocol + src;
+    if (src.indexOf("http") === 0) return src;
+    // if it starts with '/', prefix with shop origin
+    if (src.charAt(0) === "/") return window.location.origin + src;
+    return src;
+  }
+
+  // Fetch a small set of products (to keep payload lighter, you can later fetch specific collections)
+  // We fetch /collections/all/products.json?limit=250 is allowed on many stores — but default /products.json returns 50.
+  // We'll request /products.json (default limit) and fall back gracefully.
+  fetch('/products.json')
+    .then(response => response.json())
+    .then(data => {
+      const products = Array.isArray(data.products) ? data.products : [];
+
+      if (!products.length) {
+        console.warn("No products found for recent-purchase popup.");
+        return;
+      }
+
+      // Format price using Intl.NumberFormat and the injected store currency
+      function formatPrice(priceString) {
+        // Convert to float; Shopify products.json usually returns price as a string like "19.99"
+        const priceNumber = parseFloat(priceString);
+        if (isNaN(priceNumber)) return priceString;
+
+        try {
+          // Use the browser locale if available; fallback to en-GB
+          const locale = navigator.language || 'en-GB';
+          return new Intl.NumberFormat(locale, { style: 'currency', currency: STORE_CURRENCY }).format(priceNumber);
+        } catch (e) {
+          // Fallback: simple two-decimal with currency code
+          return STORE_CURRENCY + " " + priceNumber.toFixed(2);
+        }
+      }
+
+      function showPopup() {
+        // pick a random product that has at least one variant (safety)
+        const eligible = products.filter(p => p && p.variants && p.variants.length > 0);
+        if (!eligible.length) return;
+
+        const randomProduct = eligible[Math.floor(Math.random() * eligible.length)];
+        const randomName = names[Math.floor(Math.random() * names.length)];
+        const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+        const randomUserImg = userImages[Math.floor(Math.random() * userImages.length)];
+
+        nameEl.textContent = randomName;
+        locationEl.textContent = randomLocation + ", United Kingdom";
+        userImg.src = randomUserImg;
+        userImg.alt = randomName + " profile";
+
+        // product image: prefer first product image, else variant image, else placeholder
+        let imgUrl = "";
+        if (randomProduct.images && randomProduct.images.length > 0 && randomProduct.images[0].src) {
+          imgUrl = normalizeImageUrl(randomProduct.images[0].src);
+        } else if (randomProduct.variants && randomProduct.variants[0].featured_image && randomProduct.variants[0].featured_image.src) {
+          imgUrl = normalizeImageUrl(randomProduct.variants[0].featured_image.src);
+        } else {
+          // fallback to shop asset named 'no-image' if present (optional)
+          imgUrl = "";
+        }
+        if (imgUrl) {
+          productImg.src = imgUrl;
+          productImg.alt = randomProduct.title;
+        } else {
+          productImg.src = "";
+          productImg.alt = randomProduct.title;
+        }
+
+        productTitle.textContent = randomProduct.title || "Product";
+        // Use first variant price (safe because we filtered for variants)
+        productPrice.textContent = formatPrice(randomProduct.variants[0].price);
+
+        // Optional: attach click to go to product page
+        popup.onclick = function() {
+          if (randomProduct && randomProduct.handle) {
+            window.location.href = '/' + randomProduct.handle;
+          }
+        };
+
+        // Show popup
+        popup.setAttribute('aria-hidden', 'false');
+        popup.classList.add("show");
+
+        // Hide after 6 seconds
+        setTimeout(() => {
+          popup.classList.remove("show");
+          popup.setAttribute('aria-hidden', 'true');
+        }, 6000);
+      }
+
+      // Start: show immediately then every 2 minutes
+      showPopup();
+  setInterval(showPopup, 60000);
+    })
+    .catch(err => {
+      console.error("Error loading products for recent-purchase popup:", err);
+    });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Recent Purchase Popup",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Recent Purchase Popup"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,151 @@
+{% comment %}
+Corrected: No “default” in schema.
+Added JS slider for mobile.
+Desktop: 3 items in a row
+Mobile: smooth slider with autoplay
+{% endcomment %}
+
+<style>
+.custom-ann-bar {
+  background: #f5faf8;
+  padding: 12px 0;
+  border-bottom: 1px solid #e6ecea;
+  font-family: inherit;
+}
+
+.custom-ann-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.custom-ann-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #0d3d3a;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.custom-ann-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+}
+
+@media (max-width: 768px) {
+  .custom-ann-wrapper {
+    overflow: hidden;
+    gap: 0;
+  }
+  .custom-ann-item {
+    min-width: 100%;
+    justify-content: center;
+    padding: 8px 0;
+  }
+}
+</style>
+
+<div class="custom-ann-bar">
+  <div class="custom-ann-wrapper" id="annSlider-{{ section.id }}">
+    {% for block in section.blocks %}
+      <div class="custom-ann-item">
+        <span class="custom-ann-icon">{{ block.settings.icon_svg }}</span>
+        <span>{{ block.settings.text }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const wrap = document.getElementById("annSlider-{{ section.id }}");
+  if (!wrap) return;
+
+  const mobile = window.matchMedia("(max-width: 768px)");
+  const speed = Number("{{ section.settings.slider_speed }}"); // <- FIX
+
+  if (!mobile.matches) return;
+
+  let index = 0;
+  const items = wrap.children;
+  const total = items.length;
+
+  function slide() {
+    index = (index + 1) % total;
+    wrap.style.transform = "translateX(-" + (index * 100) + "%)";
+    wrap.style.transition = "transform 0.5s ease";
+  }
+
+  setInterval(slide, speed);
+});
+</script>
+
+
+{% schema %}
+{
+  "name": "Custom Announcement Bar",
+  "settings": [
+    {
+      "type": "range",
+      "id": "slider_speed",
+      "label": "Mobile slider speed (ms)",
+      "min": 1000,
+      "max": 8000,
+      "step": 500,
+      "default": 3000
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Announcement Item",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "icon_svg",
+          "label": "Icon SVG",
+          "default": "<svg fill='none' stroke='#0d3d3a' stroke-width='2' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10'></circle><path d='M12 6v6l4 2'></path></svg>"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Clinically studied ingredients"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Announcement Bar",
+      "blocks": [
+        {
+          "type": "item",
+          "settings": {
+            "icon_svg": "<svg fill='none' stroke='#0d3d3a' stroke-width='2' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10'></circle><path d='M12 6v6l4 2'></path></svg>",
+            "text": "Clinically studied ingredients"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "icon_svg": "<svg fill='none' stroke='#0d3d3a' stroke-width='2' viewBox='0 0 24 24'><path d='M4 4h16v16H4z'></path><path d='M8 8h8v8H8z'></path></svg>",
+            "text": "Made in USA"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "icon_svg": "<svg fill='none' stroke='#0d3d3a' stroke-width='2' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10'></circle><path d='M12 8v4l3 2'></path></svg>",
+            "text": "30-Day Money-Back Guarantee"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

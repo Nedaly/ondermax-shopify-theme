@@ -1,0 +1,48 @@
+/* Benefits Story Section Styles */
+.benefits-story {
+  padding: 2rem 0;
+}
+
+.benefits-story__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.benefits-story__title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.benefits-story__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefits-story__item {
+  text-align: center;
+}
+
+.benefits-story__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+}
+
+.benefits-story__heading {
+  margin-bottom: 1rem;
+}
+
+.benefits-story__text {
+  color: var(--color-foreground-75);
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .benefits-story__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,517 @@
+
+<style>
+  .switch_tab{{ section.id }} {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+  .tab-buttons {  
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tab-toggle {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+  }
+
+  .tab-toggle.active {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .tab-content .tab-panel {
+    display: none;
+  }
+
+  .tab-content .tab-panel.active {
+    display: block;
+  }
+
+.tab-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 65px;
+}
+
+  .tab-block {
+    max-width: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+.sv_wrapper img {
+    margin-right: 10px;
+}
+  .tab-feature {
+  }
+
+  .tab-image img {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 50%;
+  }
+  .switch_tab{{ section.id }} .tab-content * {
+    color: {{ section.settings.text-color }};
+  }
+  .tab-image {
+    max-width: 34%;
+    padding: 0 25px;
+}
+  .sv_wrapper h3 {
+    margin: 0;
+}
+  .sv_wrapper {
+    display: flex;
+    align-items: center;
+}
+  .tab_btn_outer {
+    display: inline-flex;
+    border: 2px solid #b6e1dd;
+    background-color: #b6e1dd;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 10px 10px;
+}
+
+.tab-toggle {
+    padding: 10px 12px;
+    background-color: #b6e1dd;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 124px;
+    font-size: 17px;
+    border-radius: 10px;
+}
+.tab-toggle.active {
+  background-color: #fff; /* active bg */
+  color: #333;
+}
+  .mobile_toggle {
+    display: none; 
+}   
+@media screen and (max-width: 750px) {
+  .tab-block {
+    display: none;
+}
+  .mobile_toggle {
+    display: block;
+}
+  .tab-image {
+    max-width: 90%;
+  }
+  .tab-layout {
+    margin-top: 10px;
+}
+  .mobile_toggle {
+    margin-top: 25px;
+}
+  .tab-feature {
+    background: #ffffff33;
+    border-radius: 8px;
+    padding: 15px 15px;
+    margin-bottom: 15px;
+}
+  .sv_wrapper svg {
+    position: absolute;
+    right: 0;
+}
+  .sv_wrapper {
+    position: relative;
+}
+  .mobile_toggle {
+    width: 100%;
+}
+  .tab-feature svg {
+    transition: transform 0.3s ease;
+}
+ .tab-feature.active svg {
+    transform: rotate(45deg);
+}
+  .sv_wrapper img {
+    margin-right: 10px;
+    max-width: 30px;
+    max-height: 30px;
+}
+  .tab-feature p {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+    margin: 0;
+}
+.tab-feature.active p {
+  max-height: 500px; /* Or enough to show full content */
+}
+.tab-content .text-center {
+    display: none;
+}
+     .tab_head_mobile {
+        display: block !important;
+        margin-bottom: 40px;
+    }
+  .tab_head_mobile * {
+    color: {{ section.settings.text-color }};
+}
+  section.tab-section {
+    padding-top: 1px;
+}
+}
+</style>
+<section section class="tab-section switch_tab{{ section.id }}" style="background: {{ section.settings.back }}">
+<div class="tab-section page-width">
+  <div class="text-center">
+    <div class="tab_head_mobile" style="display: none;">
+       {% for tab in section.blocks %}
+        <h2>{{ tab.settings.heading }}</h2>
+        <p>{{ tab.settings.subheading }}</p>
+      {% break %}
+        {% endfor %}
+    </div>
+  <div class="tab-buttons tab_btn_outer">
+    <button class="tab-toggle{% if section.settings.default_tab == 'drift' %} active{% endif %}" data-tab="drift">{{ section.settings.drift_label }}</button>
+    <button class="tab-toggle{% if section.settings.default_tab == 'surge' %} active{% endif %}" data-tab="surge">{{ section.settings.surge_label }}</button>
+  </div>
+  </div>
+
+  <div class="tab-content">
+    {% for tab in section.blocks %}
+      <div class="tab-panel{% if section.settings.default_tab == tab.settings.tab_id %} active{% endif %}" data-tab="{{ tab.settings.tab_id }}">
+        <div class="text-center">
+        <h2>{{ tab.settings.heading }}</h2>
+        <p>{{ tab.settings.subheading }}</p>
+        </div>
+        <div class="tab-layout">
+          <!-- Left Block -->
+          <div class="tab-block">
+            <div class="tab-feature">
+              <div class="sv_wrapper">
+              {% if tab.settings.left_icon != blank %}
+              <img src="{{ tab.settings.left_icon | image_url: 'master' }}" alt="" />
+              {% endif %}
+              <h3>{{ tab.settings.left_heading }}</h3>
+              </div>
+              <p>{{ tab.settings.left_text }}</p>
+            </div>
+            <div class="tab-feature">
+               <div class="sv_wrapper">
+               {% if tab.settings.left_icon2 != blank %}
+              <img src="{{ tab.settings.left_icon2 | image_url: 'master' }}" alt="" />
+              {% endif %}
+              <h3>{{ tab.settings.left_heading2 }}</h3>
+               </div>
+              <p>{{ tab.settings.left_text2 }}</p>
+            </div>
+          </div>
+
+          <!-- Center Image -->
+          <div class="tab-image">
+           
+          {{ tab.settings.center_image | image_url: width: 800 | image_tag: loading: 'lazy', alt: tab.settings.center_image.alt | escape }}
+       
+          </div>
+
+          <!-- Right Block -->
+          <div class="tab-block">
+            <div class="tab-feature">
+               <div class="sv_wrapper">
+            {% if tab.settings.right_icon != blank %}
+              <img src="{{ tab.settings.right_icon | image_url: 'master' }}" alt="" />
+              {% endif %}
+              
+              <h3>{{ tab.settings.right_heading }}</h3>
+               </div>
+              <p>{{ tab.settings.right_text }}</p>
+            </div>
+            <div class="tab-feature">
+               <div class="sv_wrapper">
+              {% if tab.settings.right_icon2 != blank %}
+              <img src="{{ tab.settings.right_icon2 | image_url: 'master' }}" alt="" />
+              {% endif %}
+              <h3>{{ tab.settings.right_heading2 }}</h3>
+               </div>
+              <p>{{ tab.settings.right_text2 }}</p>
+            </div>
+          </div>
+
+          <div class="mobile_toggle">
+            <div class="tab-feature">
+              <div class="sv_wrapper">
+              {% if tab.settings.left_icon != blank %}
+              <img src="{{ tab.settings.left_icon | image_url: 'master' }}" alt="" />
+              {% endif %}
+              <h3>{{ tab.settings.left_heading }}</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.7795 6.25942C0.572764 6.25942 0.374495 6.34155 0.22831 6.48773C0.0821256 6.63392 0 6.83219 0 7.03892C0 7.24566 0.0821256 7.44393 0.22831 7.59011C0.374495 7.7363 0.572764 7.81842 0.7795 7.81842H6.236L6.25159 13.2749C6.25261 13.3773 6.27379 13.4785 6.31391 13.5726C6.35403 13.6668 6.41231 13.7522 6.48541 13.8238C6.55852 13.8955 6.64503 13.952 6.73999 13.9903C6.83496 14.0285 6.93652 14.0477 7.03889 14.0466C7.14125 14.0456 7.24241 14.0244 7.33659 13.9843C7.43078 13.9442 7.51613 13.8859 7.58779 13.8128C7.65945 13.7397 7.71601 13.6532 7.75424 13.5582C7.79247 13.4633 7.81161 13.3617 7.81059 13.2593V7.80283L13.2671 7.78724C13.3695 7.78622 13.4706 7.76504 13.5648 7.72493C13.659 7.68481 13.7443 7.62653 13.816 7.55342C13.8877 7.48031 13.9442 7.39381 13.9824 7.29884C14.0207 7.20388 14.0398 7.10231 14.0388 6.99995C14.0378 6.89758 14.0166 6.79642 13.9765 6.70224C13.9364 6.60806 13.8781 6.5227 13.805 6.45104C13.7319 6.37938 13.6454 6.32282 13.5504 6.2846C13.4554 6.24637 13.3539 6.22722 13.2515 6.22824H7.795L7.77941 0.771744C7.77734 0.565008 7.69323 0.36756 7.54559 0.222837C7.39794 0.0781146 7.19885 -0.00202834 6.99212 3.90265e-05C6.78538 0.00210639 6.58793 0.0862148 6.44321 0.233861C6.29849 0.381508 6.21834 0.580598 6.22041 0.787334V6.24383L0.76391 6.25942H0.7795Z" fill="white" fill-opacity="0.9"/>
+              </svg> 
+              </div>
+              <p>{{ tab.settings.left_text }}</p>
+            </div>
+            <div class="tab-feature">
+               <div class="sv_wrapper">
+               {% if tab.settings.left_icon2 != blank %}
+              <img src="{{ tab.settings.left_icon2 | image_url: 'master' }}" alt="" />
+              {% endif %}
+              <h3>{{ tab.settings.left_heading2 }}</h3>
+               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.7795 6.25942C0.572764 6.25942 0.374495 6.34155 0.22831 6.48773C0.0821256 6.63392 0 6.83219 0 7.03892C0 7.24566 0.0821256 7.44393 0.22831 7.59011C0.374495 7.7363 0.572764 7.81842 0.7795 7.81842H6.236L6.25159 13.2749C6.25261 13.3773 6.27379 13.4785 6.31391 13.5726C6.35403 13.6668 6.41231 13.7522 6.48541 13.8238C6.55852 13.8955 6.64503 13.952 6.73999 13.9903C6.83496 14.0285 6.93652 14.0477 7.03889 14.0466C7.14125 14.0456 7.24241 14.0244 7.33659 13.9843C7.43078 13.9442 7.51613 13.8859 7.58779 13.8128C7.65945 13.7397 7.71601 13.6532 7.75424 13.5582C7.79247 13.4633 7.81161 13.3617 7.81059 13.2593V7.80283L13.2671 7.78724C13.3695 7.78622 13.4706 7.76504 13.5648 7.72493C13.659 7.68481 13.7443 7.62653 13.816 7.55342C13.8877 7.48031 13.9442 7.39381 13.9824 7.29884C14.0207 7.20388 14.0398 7.10231 14.0388 6.99995C14.0378 6.89758 14.0166 6.79642 13.9765 6.70224C13.9364 6.60806 13.8781 6.5227 13.805 6.45104C13.7319 6.37938 13.6454 6.32282 13.5504 6.2846C13.4554 6.24637 13.3539 6.22722 13.2515 6.22824H7.795L7.77941 0.771744C7.77734 0.565008 7.69323 0.36756 7.54559 0.222837C7.39794 0.0781146 7.19885 -0.00202834 6.99212 3.90265e-05C6.78538 0.00210639 6.58793 0.0862148 6.44321 0.233861C6.29849 0.381508 6.21834 0.580598 6.22041 0.787334V6.24383L0.76391 6.25942H0.7795Z" fill="white" fill-opacity="0.9"/>
+              </svg>   
+               </div>
+              <p>{{ tab.settings.left_text2 }}</p>
+            </div>
+            <div class="tab-feature">
+               <div class="sv_wrapper">
+            {% if tab.settings.right_icon != blank %}
+              <img src="{{ tab.settings.right_icon | image_url: 'master' }}" alt="" />
+              {% endif %}
+              
+              <h3>{{ tab.settings.right_heading }}</h3>
+                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.7795 6.25942C0.572764 6.25942 0.374495 6.34155 0.22831 6.48773C0.0821256 6.63392 0 6.83219 0 7.03892C0 7.24566 0.0821256 7.44393 0.22831 7.59011C0.374495 7.7363 0.572764 7.81842 0.7795 7.81842H6.236L6.25159 13.2749C6.25261 13.3773 6.27379 13.4785 6.31391 13.5726C6.35403 13.6668 6.41231 13.7522 6.48541 13.8238C6.55852 13.8955 6.64503 13.952 6.73999 13.9903C6.83496 14.0285 6.93652 14.0477 7.03889 14.0466C7.14125 14.0456 7.24241 14.0244 7.33659 13.9843C7.43078 13.9442 7.51613 13.8859 7.58779 13.8128C7.65945 13.7397 7.71601 13.6532 7.75424 13.5582C7.79247 13.4633 7.81161 13.3617 7.81059 13.2593V7.80283L13.2671 7.78724C13.3695 7.78622 13.4706 7.76504 13.5648 7.72493C13.659 7.68481 13.7443 7.62653 13.816 7.55342C13.8877 7.48031 13.9442 7.39381 13.9824 7.29884C14.0207 7.20388 14.0398 7.10231 14.0388 6.99995C14.0378 6.89758 14.0166 6.79642 13.9765 6.70224C13.9364 6.60806 13.8781 6.5227 13.805 6.45104C13.7319 6.37938 13.6454 6.32282 13.5504 6.2846C13.4554 6.24637 13.3539 6.22722 13.2515 6.22824H7.795L7.77941 0.771744C7.77734 0.565008 7.69323 0.36756 7.54559 0.222837C7.39794 0.0781146 7.19885 -0.00202834 6.99212 3.90265e-05C6.78538 0.00210639 6.58793 0.0862148 6.44321 0.233861C6.29849 0.381508 6.21834 0.580598 6.22041 0.787334V6.24383L0.76391 6.25942H0.7795Z" fill="white" fill-opacity="0.9"/>
+              </svg> 
+               </div>
+              <p>{{ tab.settings.right_text }}</p>
+            </div>
+            <div class="tab-feature">
+               <div class="sv_wrapper">
+              {% if tab.settings.right_icon2 != blank %}
+              <img src="{{ tab.settings.right_icon2 | image_url: 'master' }}" alt="" />
+              {% endif %}
+              <h3>{{ tab.settings.right_heading2 }}</h3>
+                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.7795 6.25942C0.572764 6.25942 0.374495 6.34155 0.22831 6.48773C0.0821256 6.63392 0 6.83219 0 7.03892C0 7.24566 0.0821256 7.44393 0.22831 7.59011C0.374495 7.7363 0.572764 7.81842 0.7795 7.81842H6.236L6.25159 13.2749C6.25261 13.3773 6.27379 13.4785 6.31391 13.5726C6.35403 13.6668 6.41231 13.7522 6.48541 13.8238C6.55852 13.8955 6.64503 13.952 6.73999 13.9903C6.83496 14.0285 6.93652 14.0477 7.03889 14.0466C7.14125 14.0456 7.24241 14.0244 7.33659 13.9843C7.43078 13.9442 7.51613 13.8859 7.58779 13.8128C7.65945 13.7397 7.71601 13.6532 7.75424 13.5582C7.79247 13.4633 7.81161 13.3617 7.81059 13.2593V7.80283L13.2671 7.78724C13.3695 7.78622 13.4706 7.76504 13.5648 7.72493C13.659 7.68481 13.7443 7.62653 13.816 7.55342C13.8877 7.48031 13.9442 7.39381 13.9824 7.29884C14.0207 7.20388 14.0398 7.10231 14.0388 6.99995C14.0378 6.89758 14.0166 6.79642 13.9765 6.70224C13.9364 6.60806 13.8781 6.5227 13.805 6.45104C13.7319 6.37938 13.6454 6.32282 13.5504 6.2846C13.4554 6.24637 13.3539 6.22722 13.2515 6.22824H7.795L7.77941 0.771744C7.77734 0.565008 7.69323 0.36756 7.54559 0.222837C7.39794 0.0781146 7.19885 -0.00202834 6.99212 3.90265e-05C6.78538 0.00210639 6.58793 0.0862148 6.44321 0.233861C6.29849 0.381508 6.21834 0.580598 6.22041 0.787334V6.24383L0.76391 6.25942H0.7795Z" fill="white" fill-opacity="0.9"/>
+              </svg> 
+               </div>
+              <p>{{ tab.settings.right_text2 }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const sectionId = '{{ section.id }}'; // This must be dynamically rendered
+    const tabSection = document.querySelector(`.tab-section.switch_tab${sectionId}`);
+
+    if (!tabSection) return; // Agar section milta hi nahi, kuch mat karo
+
+    const buttons = tabSection.querySelectorAll('.tab-toggle');
+    const panels = tabSection.querySelectorAll('.tab-panel');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        const target = this.getAttribute('data-tab');
+
+        // Remove 'active' from all buttons in this section
+        buttons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        // Remove previous tab class and add new one to this section
+        buttons.forEach(btn => {
+          const tabClass = btn.getAttribute('data-tab');
+          tabSection.classList.remove(tabClass);
+        });
+        tabSection.classList.add(target);
+
+        // Show/hide panels inside only this section
+        panels.forEach(panel => {
+          panel.classList.toggle('active', panel.dataset.tab === target);
+        });
+      });
+    });
+
+    // Auto activate first tab on load
+    if (buttons.length && panels.length) {
+      const firstButton = buttons[0];
+      const firstTab = firstButton.getAttribute('data-tab');
+
+      firstButton.classList.add('active');
+      tabSection.classList.add(firstTab);
+      panels.forEach(panel => {
+        panel.classList.toggle('active', panel.dataset.tab === firstTab);
+      });
+    }
+
+    // Feature wrapper toggle within this section
+    tabSection.querySelectorAll('.tab-feature .sv_wrapper').forEach(wrapper => {
+      wrapper.addEventListener('click', () => {
+        const parent = wrapper.closest('.tab-feature');
+        parent.classList.toggle('active');
+      });
+    });
+  });
+</script>
+
+
+
+{% schema %}
+{
+  "name": "Tabs Section",
+  "settings": [
+    {
+      "type": "color",
+      "label": "Background color",
+      "id": "back",
+      "default": "#1C8E8E"
+    },
+    {
+      "type": "color",
+      "label": "Text color",
+      "id": "text-color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "drift_label",
+      "label": "Drift Tab Label",
+      "default": "DRIFT"
+    },
+    {
+      "type": "text",
+      "id": "surge_label",
+      "label": "Surge Tab Label",
+      "default": "SURGE"
+    },
+    {
+      "type": "select",
+      "id": "default_tab",
+      "label": "Default Tab",
+      "options": [
+        { "value": "drift", "label": "Drift" },
+        { "value": "surge", "label": "Surge" }
+      ],
+      "default": "drift"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "label": "Padding top",
+      "id": "padding_top",
+      "min": 0,
+      "max": 50,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "label": "Padding bottom",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 50,
+      "default": 20,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_id",
+          "label": "Tab ID (e.g. drift, surge)"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading"
+        },
+        {
+          "type": "image_picker",
+          "id": "center_image",
+          "label": "Center Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "left_icon",
+          "label": "Left Icon 1"
+        },
+        {
+          "type": "text",
+          "id": "left_heading",
+          "label": "Left Heading 1"
+        },
+        {
+          "type": "textarea",
+          "id": "left_text",
+          "label": "Left Text 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "left_icon2",
+          "label": "Left Icon 2"
+        },
+        {
+          "type": "text",
+          "id": "left_heading2",
+          "label": "Left Heading 2"
+        },
+        {
+          "type": "textarea",
+          "id": "left_text2",
+          "label": "Left Text 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_icon",
+          "label": "Right Icon 1"
+        },
+        {
+          "type": "text",
+          "id": "right_heading",
+          "label": "Right Heading 1"
+        },
+        {
+          "type": "textarea",
+          "id": "right_text",
+          "label": "Right Text 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_icon2",
+          "label": "Right Icon 2"
+        },
+        {
+          "type": "text",
+          "id": "right_heading2",
+          "label": "Right Heading 2"
+        },
+        {
+          "type": "textarea",
+          "id": "right_text2",
+          "label": "Right Text 2"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 2,
+  "presets": [
+    {
+      "name": "Drift / Surge Tabs",
+      "blocks": [
+        { "type": "tab", "settings": { "tab_id": "drift", "heading": "Just powerful, clean energy — no fluff.", "subheading": "Each ingredient is science-backed..." } },
+        { "type": "tab", "settings": { "tab_id": "surge", "heading": "More focused, lasting energy", "subheading": "Formulated for performance and clarity..." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

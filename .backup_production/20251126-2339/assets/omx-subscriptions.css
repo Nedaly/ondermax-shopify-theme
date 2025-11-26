@@ -1,0 +1,34 @@
+/* 
+ * Ondermax Subscription Widget - Appstle Neutralization
+ * Scoped kill-switch to hide Appstle PDP widget without affecting our custom UI
+ */
+
+/* Scoped kill-switch; keeps our exact design intact */
+body.omx-hide-appstle .product-form .appstle_sub_widget,
+body.omx-hide-appstle .product-form [id^='appstle'],
+body.omx-hide-appstle .product-form [class*='appstle'] {
+  display: none !important;
+}
+
+/* Additional Appstle selectors that might appear in product forms */
+body.omx-hide-appstle .product-form [data-appstle],
+body.omx-hide-appstle .product-form .appstle-subscription-widget,
+body.omx-hide-appstle .product-form .appstle-subscription-options {
+  display: none !important;
+}
+
+/* Ensure our custom subscription UI remains visible */
+.purchase-options,
+.modern-card,
+.modern-radio,
+.modern-btn {
+  display: block !important;
+}
+
+/* Preserve our animations and styling */
+.modern-card.selected,
+.modern-card.unselected,
+.modern-btn.active,
+.modern-btn.inactive {
+  /* Our existing styles are preserved */
+}

@@ -1,0 +1,318 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .color-scheme-{{ section.id }}.color-custom {
+    --color-background: {{ section.settings.custom_colors_background.red }}, {{ section.settings.custom_colors_background.green }}, {{ section.settings.custom_colors_background.blue }};
+    --gradient-background: {% if section.settings.custom_gradient_background != blank %}{{ section.settings.custom_gradient_background }}{% else %}{{ section.settings.custom_colors_background }}{% endif %};
+    {% if section.settings.custom_image_background != blank %}
+      {% # theme-check-disable %}
+      --gradient-background: url('{{ section.settings.custom_image_background | image_url: 'master' }}') center center / cover no-repeat;
+      {% # theme-check-enable %}
+    {% endif %}
+    --color-foreground: {{ section.settings.custom_colors_text.red }}, {{ section.settings.custom_colors_text.green }}, {{ section.settings.custom_colors_text.blue }};
+  }
+
+  {% if section.settings.custom_mobile_image_background != blank %}
+    @media screen and (max-width: 740px) {
+      .color-scheme-{{ section.id }}.color-custom {
+        {% # theme-check-disable %}
+        --gradient-background: url('{{ section.settings.custom_mobile_image_background | image_url: 'master' }}') center center / cover no-repeat;
+        {% # theme-check-enable %}
+      }
+    }
+  {% endif %}
+
+  .who-this-is-for-{{ section.id }} {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: left;
+    display: grid;
+    gap: 1.2rem;
+  }
+
+  .who-this-is-for-{{ section.id }} .wtf-heading {
+    margin: 0;
+  }
+
+  .who-this-is-for-{{ section.id }} .wtf-body {
+    opacity: 0.95;
+  }
+
+  .who-this-is-for-{{ section.id }} .wtf-list-title {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  .who-this-is-for-{{ section.id }} .wtf-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.6rem;
+  }
+
+  .who-this-is-for-{{ section.id }} .wtf-list li {
+    margin-bottom: 0.2rem;
+  }
+
+  .who-this-is-for-{{ section.id }} .wtf-quote {
+    font-style: italic;
+    font-weight: 600;
+    padding-left: 0.6rem;
+    border-left: 3px solid currentColor;
+    margin-top: 0.4rem;
+  }
+{%- endstyle -%}
+
+<div class="color-scheme-{{ section.id }} color-{{ section.settings.color_scheme }} gradient content-for-grouping animate-section animate--hidden {{ section.settings.visibility }}">
+  {% if section.settings.display_id %}
+    <copy-button class="section-id-btn button" data-content="#shopify-section-{{ section.id }}" data-success="false">
+      <span class="copy-text">Click to copy section ID</span>
+      <span class="copy-success">ID copied successfully!</span>
+    </copy-button>
+  {% endif %}
+
+  <div class="page-width{% if section.settings.desktop_page_width != 'normal' %} {{ section.settings.desktop_page_width }}{% endif %}{% if section.settings.mobile_full_page %} mobile-full-page{% endif %} section-{{ section.id }}-padding">
+    <div class="who-this-is-for-{{ section.id }}">
+      {% if section.settings.heading != blank %}
+        <h2 class="wtf-heading {{ section.settings.heading_size }}">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.body != blank %}
+        <div class="wtf-body rte">
+          {{ section.settings.body }}
+        </div>
+      {% endif %}
+
+      <div class="wtf-list-wrapper">
+        {% if section.settings.list_title != blank %}
+          <div class="wtf-list-title">
+            {{ section.settings.list_title }}
+          </div>
+        {% endif %}
+
+        <ul class="wtf-list" role="list">
+          {% for block in section.blocks %}
+            {% if block.type == 'persona' %}
+              <li {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      {% if section.settings.identity_line != blank %}
+        <div class="wtf-quote">
+          {{ section.settings.identity_line }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Anti-Dopamine Who is for",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display_id",
+      "label": "Display section ID (for anchors)",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "visibility",
+      "options": [
+        { "value": "desktop-hidden", "label": "Mobile only" },
+        { "value": "mobile-hidden", "label": "Desktop only" },
+        { "value": "always-display", "label": "All devices" }
+      ],
+      "label": "Display on",
+      "default": "always-display"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "Accent 1" },
+        { "value": "accent-2", "label": "Accent 2" },
+        { "value": "background-1", "label": "Background 1" },
+        { "value": "background-2", "label": "Background 2" },
+        { "value": "inverse", "label": "Inverse" },
+        { "value": "custom", "label": "Custom" }
+      ],
+      "default": "background-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "select",
+      "id": "desktop_page_width",
+      "options": [
+        { "value": "page-width--narrow", "label": "Narrow" },
+        { "value": "normal", "label": "Normal" },
+        { "value": "desktop-full-page", "label": "Full width" },
+        { "value": "desktop-full-page-no-padding", "label": "Full width without side spacing" }
+      ],
+      "default": "page-width--narrow",
+      "label": "Page width"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_full_page",
+      "label": "Full page width on mobile",
+      "default": false
+    },
+
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "For Adults Who Are Done Letting Their Phone Run the Day."
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" }
+      ],
+      "default": "h2",
+      "label": "Heading size"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>If you’re 30–45, juggling work, kids, and a thousand notifications… you already know the problem isn’t “low energy”. It’s afternoons that disappear into nothing. It’s “I know exactly what I should do, and I still don’t do it.”</p>"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "list_title",
+      "label": "List intro",
+      "default": "SURGE &amp; DRIFT are built for:"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "identity_line",
+      "label": "Identity line",
+      "default": "“This isn’t self-care. This is self-respect.”"
+    },
+
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    },
+
+    {
+      "type": "header",
+      "content": "Custom color scheme",
+      "info": "Applied if Color scheme is set to Custom."
+    },
+    {
+      "type": "color",
+      "id": "custom_colors_background",
+      "default": "#FFFFFF",
+      "label": "Background color"
+    },
+    {
+      "type": "color_background",
+      "id": "custom_gradient_background",
+      "label": "Gradient background"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image_background",
+      "label": "Image background"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_mobile_image_background",
+      "label": "Mobile image background"
+    },
+    {
+      "type": "color",
+      "id": "custom_colors_text",
+      "default": "#2E2A39",
+      "label": "Text color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "persona",
+      "name": "Persona line",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "Managers, teachers, knowledge workers, small business owners"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Who this is for Anti-Dopamine",
+      "blocks": [
+        {
+          "type": "persona",
+          "settings": {
+            "text": "Managers, teachers, knowledge workers, small business owners"
+          }
+        },
+        {
+          "type": "persona",
+          "settings": {
+            "text": "Smart people who feel constantly behind"
+          }
+        },
+        {
+          "type": "persona",
+          "settings": {
+            "text": "Adults who are quietly terrified of becoming “the person who talks big but never ships”"
+          }
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  }
+}
+{% endschema %}

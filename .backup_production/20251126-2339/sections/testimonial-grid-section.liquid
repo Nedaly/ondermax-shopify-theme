@@ -1,0 +1,348 @@
+{% schema %}
+{
+  "name": "Testimonial Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "Already Transforming Daily Routines."
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Real people. Real results. Real patches."
+    },
+    {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#0D0D33"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "badge_bg",
+      "label": "Badge Dot Color",
+      "default": "#0D0D33"
+    },
+    {
+        "type": "range",
+        "id": "p_top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0,
+        "label": "Padding top"
+    },
+    {
+        "type": "range",
+        "id": "p_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "default": 0,
+        "label": "Padding bottom"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Profile Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "John Doe"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Role / Title / Age",
+          "default": "Creative Director, 36"
+        },
+        {
+          "type": "textarea",
+          "id": "review",
+          "label": "Review Text",
+          "default": "This is where the testimonial text goes."
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge Text",
+          "default": "SURGE USER"
+        },
+        {
+          "type": "color",
+          "id": "badge_color",
+          "label": "Badge Color",
+          "default": "#008060"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial Grid"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="testimonial-grid cust_testimonial_grid padding-{{ section.id }}">
+    <div class="page-width">
+  <div class="container">
+    <h2 class="tg_heading" style="color: {{ section.settings.heading_color }}">{{ section.settings.heading }}</h2>
+    <p class="tg_subheading" style="color: {{ section.settings.subheading_color }}">{{ section.settings.subheading }}</p>
+
+    <div class="testimonial-cards slider-{{ section.id }}">
+      {% for block in section.blocks %}
+        <div class="testimonial-card" style="background: {{ section.settings.card_background }}">
+          <div class="testimonial-header">
+            {% if block.settings.image != blank %}
+              {{ block.settings.image | image_url: width: 48 | image_tag  }}
+            {% endif %}
+            <div class="testimonial-meta">
+              <h5 class="tg_client_name">{{ block.settings.name }}</h5>
+              <div class="testimonial-role">{{ block.settings.role }}</div>
+            </div>
+          </div>
+          <p class="testimonial-text">{{ block.settings.review }}</p>
+          <div class="testimonial-badge">
+            <span class="dot" style="background: {{ block.settings.badge_color }}"></span>
+            {{ block.settings.badge_text }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  </div>
+</div>
+
+<style>
+
+ .padding-{{ section.id }}{
+    padding-top:{{ section.settings.p_top | times: 0.75 | round: 0 }}px;
+    padding-bottom:{{ section.settings.p_bottom | times: 0.75 | round: 0 }}px;
+}
+
+.testimonial-grid {
+  text-align: center;
+  background-color: {{ section.settings.bg_color }};
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 26px;
+  margin-top: 6rem;
+}
+.testimonial-card {
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 5px 12px 0px rgb(60 60 60 / 13%);
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+}
+.testimonial-card:hover{
+    transform: translateY(-5px);
+}
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 1rem;
+}
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+.testimonial-meta {
+  font-size: 14px;
+}
+.testimonial-meta strong {
+  display: block;
+  font-size: 16px;
+}
+.testimonial-role {
+  color: #666;
+  font-size: 14px;
+}
+.testimonial-text {
+    font-style: italic;
+    margin: 16px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Poppins';
+    letter-spacing: 0;
+}
+.testimonial-badge {
+    display: flex;
+    font-weight: 500;
+    color: #4a5565;
+    font-family: poppins;
+    letter-spacing: 0;
+    font-size: 12px;
+    align-items: center;
+}
+.testimonial-badge .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.testimonial-header img {
+    border-radius: 50%;
+}
+.tg_heading {
+    font-size: 60px;
+    font-family: 'Poppins';
+    letter-spacing: 0;
+    font-weight: 600;
+    line-height: 100%;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.tg_subheading {
+    font-size: 24px;
+    letter-spacing: 0;
+    font-family: 'Poppins';
+    line-height: 100%;
+    margin: 0;
+}
+
+.tg_client_name {
+    font-size: 14px;
+    font-family: 'Poppins';
+    letter-spacing: 0;
+    font-weight: 600;
+    margin: 0;
+}
+
+.testimonial-role {
+    color: #666;
+    font-size: 12px;
+    letter-spacing: 0;
+    font-family: 'Poppins';
+    text-transform: capitalize;
+}
+
+@media screen and (min-width: 750px){
+    .padding-{{ section.id }}{
+        padding-top:{{ section.settings.p_top }}px;
+        padding-bottom:{{ section.settings.p_bottom }}px;
+    }
+}
+@media screen and (max-width: 989px){
+  .tg_heading{
+    font-size: 40px;
+  }
+   .testimonial-cards{
+    max-width: unset!important;
+  }
+}
+@media screen and (max-width: 767px){
+  .tg_heading{
+    font-size: 30px;
+    line-height: normal;
+  }
+  .tg_subheading{
+    font-size: 20px;
+  }
+ 
+}
+
+/* slick adjustments */
+.slider-{{ section.id }} .slick-slide {
+  margin: 0 13px;
+}
+.slider-{{ section.id }} .slick-list {
+  margin: 0 -13px;
+}
+</style>
+
+<!-- Slick Slider CDN (loaded safely after jQuery) -->
+{{ 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' | stylesheet_tag }}
+{{ 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css' | stylesheet_tag }}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  function loadScript(src, callback) {
+    var script = document.createElement('script');
+    script.src = src;
+    script.onload = callback;
+    document.head.appendChild(script);
+  }
+
+  // Ensure jQuery is available before initializing slick
+  if (typeof jQuery === 'undefined') {
+    loadScript('https://code.jquery.com/jquery-3.6.0.min.js', initSlick);
+  } else {
+    initSlick();
+  }
+
+  function initSlick() {
+    loadScript('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', function() {
+      jQuery(function($) {
+        $('.slider-{{ section.id }}').slick({
+          dots: false,
+          arrows: true,
+          infinite: false,
+          speed: 500,
+           prevArrow:
+    '<button type="button" class="slick-prev" aria-label="Previous">' +
+    '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>' +
+    '</button>',
+  nextArrow:
+    '<button type="button" class="slick-next" aria-label="Next">' +
+    '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>' +
+    '</button>',
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: { slidesToShow: 3 }
+            },
+            {
+              breakpoint: 768,
+              settings: { slidesToShow: 1 }
+            }
+          ]
+        });
+      });
+    });
+  }
+});
+</script>

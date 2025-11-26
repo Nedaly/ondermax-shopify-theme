@@ -1,0 +1,693 @@
+<div class="two_product_section">
+    <div class="two_products_sec_wrapper">
+        {% for block in section.blocks %}
+            {% assign product = block.settings.product %}
+            <div class="tps_product padding-{{ section.id }}" style="background: {{ block.settings.bg_color }};">
+                {% if block.settings.svg_code != blank %}
+                <div class="tps_animated_icon {% if block.settings.icon_animation == 'bounce_rotate' %} sun-wrapper one{%else %}moon-wrapper moon_one{%endif %}">
+                    {% assign svg_code = block.settings.svg_code %}
+                    {% if block.settings.icon_animation == 'bounce_rotate' %}
+                    {% assign modified_svg = svg_code | replace: '<svg', '<svg class="sun"' %}
+                    {{ modified_svg }}
+                    {% else %}
+                    {% assign modified_svg = svg_code | replace: '<svg', '<svg class="moon"' %}
+                    {{ modified_svg }}
+                    {% endif %}
+                </div>
+            {% endif %}
+            {% if block.settings.svg_code != blank %}
+                <div class="tps_animated_icon {% if block.settings.icon_animation == 'bounce_rotate' %} sun-wrapper two{%else %}moon-wrapper moon_two{%endif %}">
+                    {% assign svg_code = block.settings.svg_code %}
+                    {% if block.settings.icon_animation == 'bounce_rotate' %}
+                    {% assign modified_svg = svg_code | replace: '<svg', '<svg class="sun"' %}
+                    {{ modified_svg }}
+                    {% else %}
+                    {% assign modified_svg = svg_code | replace: '<svg', '<svg class="moon"' %}
+                    {{ modified_svg }}
+                    {% endif %}
+                </div>
+            {% endif %}
+            {% if block.settings.svg_code != blank %}
+                <div class="tps_animated_icon {% if block.settings.icon_animation == 'bounce_rotate' %} sun-wrapper three{%else %}moon-wrapper moon_three{%endif %}">
+                    {% assign svg_code = block.settings.svg_code %}
+                    {% if block.settings.icon_animation == 'bounce_rotate' %}
+                    {% assign modified_svg = svg_code | replace: '<svg', '<svg class="sun"' %}
+                    {{ modified_svg }}
+                    {% else %}
+                    {% assign modified_svg = svg_code | replace: '<svg', '<svg class="moon"' %}
+                    {{ modified_svg }}
+                    {% endif %}
+
+                </div>
+            {% endif %}
+            {% if block.settings.svg_code != blank %}
+                <div class="tps_animated_icon {% if block.settings.icon_animation == 'bounce_rotate' %} sun-wrapper four{%else %}moon-wrapper moon_four{%endif %}">
+                   {% assign svg_code = block.settings.svg_code %}
+                    {% if block.settings.icon_animation == 'bounce_rotate' %}
+                    {% assign modified_svg = svg_code | replace: '<svg', '<svg class="sun"' %}
+                    {{ modified_svg }}
+                    {% else %}
+                    {% assign modified_svg = svg_code | replace: '<svg', '<svg class="moon"' %}
+                    {{ modified_svg }}
+                    {% endif %}
+                </div>
+            {% endif %}
+            {% if block.settings.svg_code != blank %}
+                <div class="tps_animated_icon {% if block.settings.icon_animation == 'bounce_rotate' %} sun-wrapper five{%else %}moon-wrapper moon_five{%endif %}">
+                   {% assign svg_code = block.settings.svg_code %}
+                    {% if block.settings.icon_animation == 'bounce_rotate' %}
+                    {% assign modified_svg = svg_code | replace: '<svg', '<svg class="sun"' %}
+                    {{ modified_svg }}
+                    {% else %}
+                    {% assign modified_svg = svg_code | replace: '<svg', '<svg class="moon"' %}
+                    {{ modified_svg }}
+                    {% endif %}
+                </div>
+            {% endif %}
+                <div class="tps_product_img" style="background: {{ block.settings.pro_img_bg_color }}">
+                    {% if block.settings.pro_img != blank %}
+                        {{ block.settings.pro_img | image_url: width: 500 | image_tag: style: 'max-width: 100%; height: auto; object-fit: contain; display: block;' }}
+                    {% elsif block.settings.pro_img_title != blank %}
+                        {{ block.settings.pro_img_title }}
+                    {% else %}
+                        {{ product.featured_media | image_url: width: 200, height: 200 | image_tag  }}
+                    {% endif %}
+                </div>
+                <div class="tps_product_title">
+                {% if block.settings.pro_title != blank %}
+                <h2 class="product_title">{{ block.settings.pro_title }}</h2>
+                {% else %}
+                <h2 class="product_title">{{ product.title }}</h2>
+                {% endif %}
+                </div>
+                <div class="tps_pro_desc">
+                    <p>{{ block.settings.pro_desc }}</p>
+                </div>
+                <div class="tps_btn_wrapper">
+                    <div class="add_cart_btn btn-{{ block.id }}">
+                        <a href="{{ block.settings.atc_btn_link }}"><button class="tps_btn {% if block.settings.show_btn_outline == true %}tps_btn2{% endif %}">{{ block.settings.atc_btn }}</button></a>
+                    </div>
+                    {% if block.settings.atc_btn_link != blank %}
+                        <style>
+                            .btn-{{ block.id }} .tps_btn.tps_btn2 {
+                            border: 2px solid #7f48b0 !important;
+                            background: linear-gradient(135deg, #7f48b0, #4f46e5) !important;
+                            color: #fff;
+                            position: relative;
+                            overflow: hidden;
+                            box-shadow: 
+                                0 0 25px rgba(127, 72, 176, 0.4),
+                                0 4px 15px rgba(0, 0, 0, 0.2);
+                            
+                            /* Enhanced glow effect for Drift */
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: -2px;
+                                left: -2px;
+                                right: -2px;
+                                bottom: -2px;
+                                background: linear-gradient(45deg, #7f48b0, #4f46e5, #8b5cf6, #4f46e5, #7f48b0);
+                                border-radius: 42px;
+                                z-index: -1;
+                                opacity: 0.6;
+                                animation: glow-pulse-drift 2s ease-in-out infinite;
+                            }
+                            
+                            /* Enhanced shimmer effect for Drift */
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: -100%;
+                                width: 100%;
+                                height: 100%;
+                                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                transition: left 0.6s ease;
+                            }
+                            
+                            &:hover {
+                                background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+                                border-color: #8b5cf6;
+                                color: #fff;
+                                transform: translateY(-2px) scale(1.02);
+                                box-shadow: 
+                                    0 8px 30px rgba(127, 72, 176, 0.6),
+                                    0 0 50px rgba(79, 70, 229, 0.5);
+                                
+                                &::before {
+                                    opacity: 1;
+                                }
+                                
+                                &::after {
+                                    left: 100%;
+                                }
+                            }
+                            
+                            &:active {
+                                transform: translateY(0) scale(0.98);
+                                transition: all 0.1s ease;
+                            }
+                        }
+                        .btn-{{ block.id }} .tps_btn {
+                            font-family: 'Inter';
+                            font-size: 18px;
+                            padding: 22px 40px;
+                            background: #ffffff;
+                            color: #00908d;
+                            border-radius: 40px;
+                            line-height: 1.6;
+                            font-weight: 600;
+                            text-transform: capitalize;
+                            text-decoration: none;
+                            border: 2px solid #00908d;
+                            position: relative;
+                            overflow: hidden;
+                            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                            box-shadow: 
+                                0 0 20px rgba(0, 144, 141, 0.3),
+                                0 4px 15px rgba(0, 0, 0, 0.1);
+                            
+                            /* Glow effect - Surge teal colors */
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: -2px;
+                                left: -2px;
+                                right: -2px;
+                                bottom: -2px;
+                                background: linear-gradient(45deg, #00908d, #00b8b5, #00908d);
+                                border-radius: 42px;
+                                z-index: -1;
+                                opacity: 0.4;
+                                transition: opacity 0.4s ease;
+                                animation: glow-pulse-surge 2s ease-in-out infinite;
+                            }
+                            
+                            /* Shimmer effect */
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: -100%;
+                                width: 100%;
+                                height: 100%;
+                                background: linear-gradient(90deg, transparent, rgba(0, 144, 141, 0.2), transparent);
+                                transition: left 0.6s ease;
+                            }
+                            
+                            &:hover {
+                                background: #00908d;
+                                color: #fff;
+                                border-color: #00b8b5;
+                                transform: translateY(-2px) scale(1.02);
+                                box-shadow: 
+                                    0 8px 25px rgba(0, 144, 141, 0.4),
+                                    0 0 40px rgba(0, 184, 181, 0.3);
+                                
+                                &::before {
+                                    opacity: 0.8;
+                                }
+                                
+                                &::after {
+                                    left: 100%;
+                                }
+                            }
+                            
+                            &:active {
+                                transform: translateY(0) scale(0.98);
+                                transition: all 0.1s ease;
+                            }
+                        }
+                        </style>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<style>
+.padding-{{ section.id }}{
+    padding-top:{{ section.settings.p_top | times: 0.75 | round: 0 }}px;
+    padding-bottom:{{ section.settings.p_bottom | times: 0.75 | round: 0 }}px;  
+}
+
+.two_products_sec_wrapper {
+    display: flex;
+    flex-direction: column; /* Mobile: stacked vertically */
+    gap: 0; /* No gap between cards */
+}
+
+/* Desktop: Split screen layout */
+@media (min-width: 768px) {
+    .two_products_sec_wrapper {
+        flex-direction: row; /* Desktop: side by side */
+        min-height: 100vh; /* Full viewport height */
+    }
+    
+    .two_products_sec_wrapper > div {
+        flex: 1; /* Each product takes 50% width */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+}
+
+.tps_product {
+    padding: 128px 30px;
+    margin: 0 auto;
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+/* Adjust padding for split screen on desktop */
+@media (min-width: 768px) {
+    .tps_product {
+        padding: 0; /* Remove all padding for full split screen */
+        max-width: none; /* Remove any max-width constraints */
+    }
+}
+
+.tps_product_img {
+    width: fit-content;
+    margin: 0 auto 2rem auto;
+    max-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 2px;
+    &:before{
+        box-shadow: 0 0 20px 0px #00000047;
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+.tps_product_img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+    display: block;
+}
+
+.product_title {
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 0;
+    color: #fff;
+}
+
+.tps_product_title {
+    max-width: 350px;
+    margin: 0 auto 1.5rem auto;
+    transition: all 0.3s ease;
+}
+
+.tps_pro_desc {
+    max-width: 420px;
+    margin: 0 auto 2rem auto;
+    transition: all 0.3s ease;
+}
+
+.tps_pro_desc > * {
+    font-family: 'Inter';
+    font-size: 24px;
+    letter-spacing: 0;
+    color: #e6f3f4;
+}
+
+.tps_btn_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tps_animated_icon{
+    position: absolute;
+}
+
+.tps_animated_icon.one svg, .tps_animated_icon.moon_one svg {
+    width: 64px;
+    height: 64px;
+}
+
+.tps_animated_icon.moon_two svg{
+    width: 48px;
+    height: 48px;
+}
+
+.tps_animated_icon.two svg{
+    width: 32px;
+    height: 32px;
+}
+
+.tps_animated_icon.three svg{
+    width: 56px;
+    height: 56px;
+}
+
+.tps_animated_icon.four svg, .tps_animated_icon.moon_three svg, .tps_animated_icon.moon_four svg{
+    width: 48px;
+    height: 48px;
+}
+
+.tps_animated_icon.five svg, .tps_animated_icon.moon_five svg{
+    width: 40px;
+    height: 40px;
+}
+
+.tps_animated_icon svg path, .tps_animated_icon svg circle {
+    stroke: #ffe02a4d;
+}
+
+.tps_animated_icon.moon-wrapper svg path{
+    stroke: #dbeafe4d;
+}
+
+.tps_animated_icon.one{
+    top: 10%;
+    left: 10%;
+}
+
+.tps_animated_icon.two{
+    top: 30%;
+    right: 25%;
+}
+
+.tps_animated_icon.three{
+    top: 45%;
+    left: 35%;
+}
+
+.tps_animated_icon.four{
+    top: 60%;
+    right: 15%;
+}
+
+.tps_animated_icon.five{
+    left: 20%;
+    bottom: 20%;
+}
+
+.tps_animated_icon.moon_one{
+    top: 15%;
+    right: 10%;
+}
+
+.tps_animated_icon.moon_two{
+    top: 35%;
+    left: 25%;
+}
+
+.tps_animated_icon.moon_three{
+    top: 55%;
+    left: 12%;
+}
+
+.tps_animated_icon.moon_four{
+    top: 70%;
+    left: 30%;
+}
+
+.tps_animated_icon.moon_five{
+    right: 20%;
+    bottom: 25%;
+}
+
+.sun-wrapper {
+  display: inline-block;
+  animation: bounce-sun 0.6s ease-in-out infinite alternate;
+}
+
+.sun {
+  transform-origin: center center;
+  animation: rotate-sun 1s linear infinite;
+}
+
+@keyframes rotate-sun {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes bounce-sun {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-20px); }
+}
+
+/* Button glow pulse animation - Surge theme */
+@keyframes glow-pulse-surge {
+  0%, 100% { 
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.7;
+    transform: scale(1.02);
+  }
+}
+
+/* Button glow pulse animation - Drift theme */
+@keyframes glow-pulse-drift {
+  0%, 100% { 
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+
+/* Opacity pulse */
+@keyframes pulse-sun {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Apply rotation + pulse only on the two and five sun icons */
+.tps_animated_icon.two .sun,
+.tps_animated_icon.five .sun {
+  animation: rotate-sun 1s linear infinite, pulse-sun 2s ease-in-out infinite;
+}
+
+{% comment %} Moon animation {% endcomment %}
+/* Moon floating animation (gentle drift up/down) */
+@keyframes moon-float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* Moon opacity pulse */
+@keyframes moon-pulse {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Apply floating + pulsing to all moon icons */
+.moon_one .moon,
+.moon_two .moon,
+.moon_three .moon,
+.moon_four .moon,
+.moon_five .moon {
+  transform-origin: center center;
+  animation: moon-float 1s ease-in-out infinite, moon-pulse 2s ease-in-out infinite;
+}
+
+{% comment %} ---- {% endcomment %}
+ /* Extra dissolve effect only for moon_two */
+@keyframes moon-dissolve {
+  0%   { opacity: 0; transform: scale(0.8); }
+  50%  { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+/* Attach dissolve alongside existing float + pulse */
+.moon_two .moon {
+  animation: moon-float 1s ease-in-out infinite,
+             moon-pulse 2s ease-in-out infinite,
+             moon-dissolve 1s ease-in-out infinite;
+}
+
+/* Dissolve + slight scaling (breathing blink) */
+@keyframes moon-dissolve-scale {
+  0%   { opacity: 1; transform: scale(1); }
+  50%  { opacity: 0; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Apply only on the 2nd moon */
+.moon_two .moon {
+  animation: moon-dissolve-scale 1s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+
+
+ @media screen and (min-width: 750px){
+    .padding-{{ section.id }}{
+        padding-top:{{ section.settings.p_top }}px;
+        padding-bottom:{{ section.settings.p_bottom }}px;
+    }
+}
+@media screen and ( max-width: 989px ){
+    .product_title{
+        font-size: 45px;
+    }
+}
+@media screen and ( max-width: 767px ){
+    .tps_product{
+        width: 100%;
+    }
+    .product_title{
+        font-size: 40px;
+    }
+    .tps_product{
+        padding: 80px 30px;
+    }
+    .tps_pro_desc > *{
+        font-size: 20px;
+    }
+    .tps_btn{
+        padding: 16px 36px;
+    }
+}
+@media screen and ( max-width: 484px ){
+    .product_title{
+        font-size: 30px;
+    }
+}
+</style>
+
+{% schema %}
+{
+    "name": "Two products section",
+    "settings": [
+        {
+            "type": "range",
+            "id": "p_top",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 0,
+            "label": "Padding top"
+        },
+        {
+            "type": "range",
+            "id": "p_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 0,
+            "label": "Padding bottom"
+        }
+    ], 
+    "blocks": [
+        {
+            "type": "text",
+            "name": "Add product",
+            "settings": [
+                {
+                    "type": "color_background",
+                    "id": "bg_color",
+                    "label": "Background color"
+                },
+                {
+                    "type": "product",
+                    "id": "product",
+                    "label": "Select product"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "pro_img",
+                    "label": "Product image"
+                },
+                {
+                    "type": "text",
+                    "id": "pro_img_title",
+                    "label": "Product image title"
+                },
+                {
+                    "type": "color",
+                    "id": "pro_img_bg_color",
+                    "label": "Product image background color"
+                },
+                {
+                    "type": "text",
+                    "id": "pro_title",
+                    "label": "Product title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "pro_desc",
+                    "label": "Content"
+                },
+                {
+                    "type": "text",
+                    "id": "atc_btn",
+                    "label": "ATC button label"
+                },
+                {
+                    "type": "url",
+                    "id": "atc_btn_link",
+                    "label": "Button Link"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show_btn_outline",
+                    "label": "Show button outline"
+                },
+                {
+                    "type": "textarea",
+                    "id": "svg_code",
+                    "label": "Animated svg code"
+                },
+                {
+                    "type": "select",
+                    "id": "icon_animation",
+                    "label": "Icon animation",
+                    "options": [
+                        {
+                        "value": "bounce_rotate",
+                        "label": "Bounce & rotate"
+                        },
+                        {
+                        "value": "pulse_bounce",
+                        "label": "Pulse & bounce"
+                        }
+                    ],
+                    "default": "bounce_rotate"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Two products section"
+        }
+    ]
+}
+{% endschema %}
