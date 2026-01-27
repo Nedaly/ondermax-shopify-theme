@@ -8,6 +8,11 @@
  * ------------------------------------------------------------
  */
 {
+  "_template_meta": {
+    "version": "1.0.0",
+    "updated": "2026-01-27",
+    "description": "DRIFT standalone PDP - nighttime sleep & recovery"
+  },
   "sections": {
     "main": {
       "type": "main-product",

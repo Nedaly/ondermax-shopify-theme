@@ -63,7 +63,7 @@
             "desktop_text_size": 14,
             "alignment": "left",
             "text_color": "#1c8e8e",
-            "text_1": "•<strong>Steady energy by day </strong>•<strong>Deep recovery by night </strong>•<strong>No pills, no crashes</strong>",
+            "text_1": "•<strong>Clean, sustained energy all day </strong>•<strong>No crashes, no jitters </strong>•<strong>Doctor formulated</strong>",
             "text_2": "",
             "text_3": "",
             "icon_scale": 120,
@@ -661,33 +661,33 @@
         "stat_item_DLQT6t": {
           "type": "stat_item",
           "settings": {
-            "subheading": "Sustained Energy",
+            "subheading": "Crash-Free Energy",
             "stat_value": "94%",
-            "description": "<p>Of users reported feeling consistent, crash-free energy throughout the day<br/></p>"
+            "description": "<p>Reported crash-free energy throughout the day<br/></p>"
           }
         },
         "stat_item_HqE8Ji": {
           "type": "stat_item",
           "settings": {
-            "subheading": "Improved Recovery",
+            "subheading": "Mental Clarity",
             "stat_value": "88%",
-            "description": "<p>Experienced better recovery and reduced daily fatigue<br/></p>"
+            "description": "<p>Experienced improved mental clarity<br/></p>"
           }
         },
         "stat_item_CqbEXH": {
           "type": "stat_item",
           "settings": {
-            "subheading": "Deeper Sleep",
-            "stat_value": "82%",
-            "description": "<p>Reported falling asleep faster and waking up more refreshed<br/></p>"
+            "subheading": "Focus & Concentration",
+            "stat_value": "79%",
+            "description": "<p>Noticed better focus and concentration<br/></p>"
           }
         },
         "stat_item_RpThw9": {
           "type": "stat_item",
           "settings": {
-            "subheading": "Sharper Focus",
-            "stat_value": "79%",
-            "description": "<p>Noticed improved mental clarity and sustained concentration<br/></p>"
+            "subheading": "Reduced Caffeine",
+            "stat_value": "85%",
+            "description": "<p>Reduced caffeine dependence<br/></p>"
           }
         }
       },
@@ -792,8 +792,8 @@
           "type": "card",
           "settings": {
             "front_image": "shopify://shop_images/ezgif-1c16be4e7b5dee.gif",
-            "title": "8+ Hours Steady Focus",
-            "front_description": "No afternoon energy crash",
+            "title": "8+ Hours Steady Energy",
+            "front_description": "No afternoon crash or jitters",
             "back_content": "<p>On SURGE days, you’re not starting 10 tasks and finishing none. You sit, focus, and ship.</p><p></p>",
             "button_label": "",
             "button_link": ""
@@ -803,8 +803,8 @@
           "type": "card",
           "settings": {
             "front_image": "shopify://shop_images/ezgif-14cc8c86a229a1.gif",
-            "title": "Reduces Distractions",
-            "front_description": "Stay locked in on deep work",
+            "title": "Sharper Mental Clarity",
+            "front_description": "Stay focused on deep work",
             "back_content": "<p>Makes it easier to stay out of the “I’ll just check my phone” hole that eats your afternoons.</p><h3><br/><br/></h3>",
             "button_label": "",
             "button_link": ""
@@ -814,8 +814,8 @@
           "type": "card",
           "settings": {
             "front_image": "shopify://shop_images/Ondermax-surge-drift-without-pouches.png",
-            "title": "Clean Energy",
-            "front_description": "No jitters, no crash, no dependency",
+            "title": "No Caffeine Dependency",
+            "front_description": "Clean energy without the addiction",
             "back_content": "<p>Stable mental clarity without chasing another coffee or energy drink every few hours.</p><h3><br/><br/></h3>",
             "button_label": "",
             "button_link": ""
@@ -841,7 +841,7 @@
       ],
       "name": "card-slider-section",
       "settings": {
-        "heading_regular": "Why Optimizers Choose Ondermax",
+        "heading_regular": "Why High Performers Choose SURGE",
         "heading_italic": "",
         "descriptionvv": "",
         "subheading": "",
@@ -1385,24 +1385,24 @@
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/frist-step.jpg",
-            "title": "APPLY SURGE",
-            "text": "<p>Stick the SURGE patch to your skin in the morning for clean, sustained energy without the crash.</p>"
+            "title": "APPLY IN MORNING",
+            "text": "<p>Stick SURGE patch to clean, dry skin when you wake up.</p>"
           }
         },
         "step_dQYzQQ": {
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/sec-step.jpg",
-            "title": "APPLY DRIFT",
-            "text": "<p>Apply the DRIFT patch in the evening to promote deep, restorative sleep without grogginess in the morning.</p>"
+            "title": "GO ABOUT YOUR DAY",
+            "text": "<p>Steady release of NAD+, Creatine & B-Vitamins for 8+ hours.</p>"
           }
         },
         "step_zHqjUK": {
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/3rd-step.jpg",
-            "title": "WAKE REFRESHED",
-            "text": "<p>Wake up energized and ready to perform. Repeat daily for compounding results.</p>"
+            "title": "REMOVE AT NIGHT",
+            "text": "<p>Take off before bed. Wake up ready to repeat.</p>"
           }
         }
       },
@@ -1417,7 +1417,7 @@
         "show_cta": true,
         "cta_icon": "shopify://shop_images/Group.png",
         "cta_heading": "CONSISTENCY IS KEY",
-        "cta_text": "<p>Users report noticeable improvements in energy, focus, and recovery within the first week. For full benefits, use daily with both SURGE and DRIFT patches over 4-8 weeks.</p>"
+        "cta_text": "<p>Users report noticeable improvements in energy and focus within the first week. For full benefits, use SURGE daily over 4-8 weeks.</p>"
       }
     }
   },

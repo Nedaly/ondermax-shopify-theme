@@ -8,11 +8,6 @@
  * ------------------------------------------------------------
  */
 {
-  "_template_meta": {
-    "version": "1.0.0",
-    "updated": "2026-01-27",
-    "description": "SURGE standalone PDP - daytime energy & focus"
-  },
   "sections": {
     "main": {
       "type": "main-product",
@@ -68,7 +63,7 @@
             "desktop_text_size": 14,
             "alignment": "left",
             "text_color": "#1c8e8e",
-            "text_1": "•<strong>Clean, sustained energy all day </strong>•<strong>No crashes, no jitters </strong>•<strong>Doctor formulated</strong>",
+            "text_1": "•<strong>Deep, restorative sleep </strong>•<strong>Wake refreshed, not groggy </strong>•<strong>Doctor formulated</strong>",
             "text_2": "",
             "text_3": "",
             "icon_scale": 120,
@@ -666,33 +661,33 @@
         "stat_item_DLQT6t": {
           "type": "stat_item",
           "settings": {
-            "subheading": "Crash-Free Energy",
-            "stat_value": "94%",
-            "description": "<p>Reported crash-free energy throughout the day<br/></p>"
+            "subheading": "Fall Asleep Faster",
+            "stat_value": "82%",
+            "description": "<p>Reported falling asleep faster<br/></p>"
           }
         },
         "stat_item_HqE8Ji": {
           "type": "stat_item",
           "settings": {
-            "subheading": "Mental Clarity",
+            "subheading": "Deeper Sleep",
             "stat_value": "88%",
-            "description": "<p>Experienced improved mental clarity<br/></p>"
+            "description": "<p>Experienced deeper, more restorative sleep<br/></p>"
           }
         },
         "stat_item_CqbEXH": {
           "type": "stat_item",
           "settings": {
-            "subheading": "Focus & Concentration",
-            "stat_value": "79%",
-            "description": "<p>Noticed better focus and concentration<br/></p>"
+            "subheading": "Wake Refreshed",
+            "stat_value": "91%",
+            "description": "<p>Woke up feeling more refreshed<br/></p>"
           }
         },
         "stat_item_RpThw9": {
           "type": "stat_item",
           "settings": {
-            "subheading": "Reduced Caffeine",
-            "stat_value": "85%",
-            "description": "<p>Reduced caffeine dependence<br/></p>"
+            "subheading": "Next-Day Energy",
+            "stat_value": "79%",
+            "description": "<p>Noticed improved next-day energy<br/></p>"
           }
         }
       },
@@ -797,8 +792,8 @@
           "type": "card",
           "settings": {
             "front_image": "shopify://shop_images/ezgif-1c16be4e7b5dee.gif",
-            "title": "8+ Hours Steady Energy",
-            "front_description": "No afternoon crash or jitters",
+            "title": "Fall Asleep Faster",
+            "front_description": "Calm your mind within 30 minutes",
             "back_content": "<p>On SURGE days, you’re not starting 10 tasks and finishing none. You sit, focus, and ship.</p><p></p>",
             "button_label": "",
             "button_link": ""
@@ -808,8 +803,8 @@
           "type": "card",
           "settings": {
             "front_image": "shopify://shop_images/ezgif-14cc8c86a229a1.gif",
-            "title": "Sharper Mental Clarity",
-            "front_description": "Stay focused on deep work",
+            "title": "Deeper Sleep Cycles",
+            "front_description": "More time in restorative REM & deep sleep",
             "back_content": "<p>Makes it easier to stay out of the “I’ll just check my phone” hole that eats your afternoons.</p><h3><br/><br/></h3>",
             "button_label": "",
             "button_link": ""
@@ -819,8 +814,8 @@
           "type": "card",
           "settings": {
             "front_image": "shopify://shop_images/Ondermax-surge-drift-without-pouches.png",
-            "title": "No Caffeine Dependency",
-            "front_description": "Clean energy without the addiction",
+            "title": "No Morning Grogginess",
+            "front_description": "Wake up clear, not foggy",
             "back_content": "<p>Stable mental clarity without chasing another coffee or energy drink every few hours.</p><h3><br/><br/></h3>",
             "button_label": "",
             "button_link": ""
@@ -830,8 +825,8 @@
           "type": "card",
           "settings": {
             "front_image": "shopify://shop_images/4_f67b46d8-9736-4f23-bc56-7aac35f9d2c0.png",
-            "title": "Compounding Results",
-            "front_description": "Benefits increase over 4-8 weeks of use",
+            "title": "Faster Recovery",
+            "front_description": "Let your body repair while you rest",
             "back_content": "<p>A simple ritual that rebuilds self-trust: you actually do what you said you’d do today.</p>",
             "button_label": "",
             "button_link": ""
@@ -846,7 +841,7 @@
       ],
       "name": "card-slider-section",
       "settings": {
-        "heading_regular": "Why High Performers Choose SURGE",
+        "heading_regular": "Why High Performers Choose DRIFT",
         "heading_italic": "",
         "descriptionvv": "",
         "subheading": "",
@@ -1390,24 +1385,24 @@
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/frist-step.jpg",
-            "title": "APPLY IN MORNING",
-            "text": "<p>Stick SURGE patch to clean, dry skin when you wake up.</p>"
+            "title": "APPLY BEFORE BED",
+            "text": "<p>Stick DRIFT patch to clean skin 30-60 minutes before sleep.</p>"
           }
         },
         "step_dQYzQQ": {
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/sec-step.jpg",
-            "title": "GO ABOUT YOUR DAY",
-            "text": "<p>Steady release of NAD+, Creatine & B-Vitamins for 8+ hours.</p>"
+            "title": "RELAX & UNWIND",
+            "text": "<p>Magnesium, Melatonin & L-Theanine help calm your system.</p>"
           }
         },
         "step_zHqjUK": {
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/3rd-step.jpg",
-            "title": "REMOVE AT NIGHT",
-            "text": "<p>Take off before bed. Wake up ready to repeat.</p>"
+            "title": "WAKE REFRESHED",
+            "text": "<p>Remove in morning. Feel the difference.</p>"
           }
         }
       },
@@ -1422,7 +1417,7 @@
         "show_cta": true,
         "cta_icon": "shopify://shop_images/Group.png",
         "cta_heading": "CONSISTENCY IS KEY",
-        "cta_text": "<p>Users report noticeable improvements in energy and focus within the first week. For full benefits, use SURGE daily over 4-8 weeks.</p>"
+        "cta_text": "<p>Users report noticeable improvements in sleep quality within the first few nights. For full benefits, use DRIFT nightly over 4-8 weeks.</p>"
       }
     }
   },
