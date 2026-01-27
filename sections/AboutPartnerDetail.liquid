@@ -1,0 +1,207 @@
+<div id="shopify-section-template--17653238890663__page_about_partner_detail_new_zCBjTx" class="shopify-section Page_about_partner_detail_new">
+
+  <div class="Page_about_partner_detail_main_new"  style="background: {{ section.settings.background_color }};">
+    <div class="Page_about_partner_detail_inner_new">
+      <div class="Page_about_partner_detail_boths_new"><div class="Page_about_partner_detail_boths_mainstatic_new">
+            <div class="Page_about_partner_detail_boths_innerstatic_new"> <div class="Page_about_partner_detail_boths_innerstatic_videoimage_new">
+              <img src="https://cdn.shopify.com/s/files/1/0930/5807/2907/files/Rectangle_144433628-min.webp?v=1766039347" alt="" srcset="https://cdn.shopify.com/s/files/1/0930/5807/2907/files/Rectangle_144433628-min.webp?v=1766039347" width="2880" height="1638" loading="lazy" fetchpriority="auto" class="desktop_image_new">
+<img src="https://cdn.shopify.com/s/files/1/0930/5807/2907/files/Rectangle_144433628_1_-min.webp?v=1766039398" alt="" width="750" height="2534" loading="lazy" fetchpriority="auto" class="mobile_image_new">
+</div></div>
+          </div><div class="Page_about_partner_detail_boths_mainoverlay_new">
+            <div class="page-width"><div class="Page_about_partner_detail_boths_inneroverlay_innerleft_maintitle_new Mobile_only_new">
+                  
+                  
+                  <div class="Common_title_new Page_about_partner_detail_boths_inneroverlay_innerleft_innertitle_new landing-page-style-active">
+                   <h2>{{ section.settings.heading }}</h2>
+                  </div>
+                </div><div class="Page_about_partner_detail_boths_inneroverlay_new"><div class="Page_about_partner_detail_boths_inneroverlay_mainleft_new">
+                    <div class="Page_about_partner_detail_boths_inneroverlay_innerleft_new"><div class="Page_about_partner_detail_boths_inneroverlay_innerleft_maintitle_new Desktop_only_new">
+                          
+                          
+                          <div class="Common_title_new Page_about_partner_detail_boths_inneroverlay_innerleft_innertitle_new landing-page-style-active">
+                            <h2>{{section.settings.heading }}</h2>
+                          </div>
+                        </div><div class="Page_about_partner_detail_boths_inneroverlay_innerleft_maininfos_new">
+                          <div class="Page_about_partner_detail_boths_inneroverlay_innerleft_innerinfos_new">
+ {{ section.settings.description }}                          </div>
+                        </div><div class="Page_about_partner_detail_boths_inneroverlay_innerleft_mainboths_new">
+                          <div class="Page_about_partner_detail_boths_inneroverlay_innerleft_innerboths_new"><div class="Page_about_partner_detail_boths_inneroverlay_innerleft_innerboths_author_new">
+                               {{ section.settings.author_name }}
+                              </div><div class="Page_about_partner_detail_boths_inneroverlay_innerleft_innerboths_texts_new">
+                                {{ section.settings.author_position }}
+                              </div></div>
+                        </div></div>
+                  </div><div class="Page_about_partner_detail_boths_inneroverlay_mainright_new">
+                    <div class="Page_about_partner_detail_boths_inneroverlay_innerright_new"><div class="Page_about_partner_detail_boths_inneroverlay_innerright_videoimage_new" id="video_about_partner_overlay_play">
+                
+                  
+                   {% comment %} <video 
+            playsinline 
+            autoplay 
+            loop 
+            muted 
+            preload="metadata" 
+            poster="{{ section.settings.video_poster | image_url }}"
+          >
+            <source src="{{ section.settings.video_url }}" type="video/mp4">
+            <img src="{{ section.settings.video_poster | image_url }}" alt="Video Poster">
+          </video> {% endcomment %}
+           <img src="{{ section.settings.video_poster | img_url:'master' }}" alt="Image">
+                
+</div>
+                      </div>
+                  </div></div>
+            </div>
+          </div></div>
+    </div>
+  </div><script>
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('🎬 Initializing About Partner video play button sync');
+  
+  // Find all video containers
+  const videoContainers = [
+    { id: 'video_about_partner_back_play', muteId: 'video_about_partner_back' },
+    { id: 'video_about_partner_overlay_play', muteId: 'video_about_partner_overlay' }
+  ];
+  
+  videoContainers.forEach(container => {
+    const videoElement = document.getElementById(container.id);
+    if (videoElement) {
+      const video = videoElement.querySelector('video');
+      const playButton = videoElement.querySelector('.play_icon_new');
+      
+      if (video && playButton) {
+        console.log(`🎬 Setting up sync for ${container.id}`);
+        
+        // Function to update play button visibility
+        function updatePlayButtonState() {
+          if (video.paused) {
+            playButton.style.display = 'flex';
+            console.log(`▶️ Video ${container.id} paused - showing play button`);
+          } else {
+            playButton.style.display = 'none';
+            console.log(`⏸️ Video ${container.id} playing - hiding play button`);
+          }
+        }
+        
+        // Listen for video state changes
+        video.addEventListener('play', updatePlayButtonState);
+        video.addEventListener('pause', updatePlayButtonState);
+        video.addEventListener('ended', updatePlayButtonState);
+        video.addEventListener('loadeddata', updatePlayButtonState);
+        video.addEventListener('loadedmetadata', updatePlayButtonState);
+        
+        // Check autoplay state after a short delay
+        setTimeout(() => {
+          updatePlayButtonState();
+          console.log(`🎬 Initial state check for ${container.id}: paused = ${video.paused}`);
+        }, 100);
+        
+        // Also check periodically in case of autoplay delays
+        let checkCount = 0;
+        const autoplayCheck = setInterval(() => {
+          checkCount++;
+          updatePlayButtonState();
+          
+          // Stop checking after 3 seconds
+          if (checkCount >= 6) {
+            clearInterval(autoplayCheck);
+          }
+        }, 500);
+        
+        // Manual play button click handler (works with existing custom.js)
+        playButton.addEventListener('click', function() {
+          if (video.paused) {
+            video.play().then(() => {
+              console.log(`🎬 Manual play triggered for ${container.id}`);
+              updatePlayButtonState();
+            }).catch(error => {
+              console.log(`🎬 Play failed for ${container.id}:`, error);
+            });
+          }
+        });
+        
+        // Also listen for when videos autoplay and become available
+        if (video.readyState >= 2) {
+          // Video is already loaded
+          updatePlayButtonState();
+        }
+      }
+    }
+  });
+});
+</script></div>
+
+{% schema %}
+{
+  "name": "About Partner Detail",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f5eaea"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A Note from David Beckham"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>I’ve been fortunate to work with some of the world’s top medical professionals...</p>"
+    },
+    {
+      "type": "text",
+      "id": "author_name",
+      "label": "Author Name",
+      "default": "David Beckham"
+    },
+    {
+      "type": "text",
+      "id": "author_position",
+      "label": "Author Position",
+      "default": "Co-Founding Partner"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Partner Detail",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  
+@media (min-width: 0px) and (max-width: 749px) {
+    .Page_about_partner_detail_boths_inneroverlay_innerleft_innerinfos_new p {
+    
+        text-align: center;
+    }
+    .Page_about_partner_detail_boths_inneroverlay_innerleft_mainboths_new {
+        
+       text-align: center;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 749px) {
+    .Page_about_partner_detail_boths_inneroverlay_innerleft_innertitle_new.landing-page-style-active h2 {
+
+        text-align: center;
+    }
+}
+  
+  .Page_about_partner_detail_boths_new{position:relative}.Page_about_partner_detail_boths_mainstatic_new{position:absolute;top:0;left:0;width:100%;height:100%}.Page_about_partner_detail_boths_innerstatic_new{height:100%;position:relative}.Page_about_partner_detail_boths_innerstatic_new:after{position:absolute;content:"";top:0;left:0;width:100%;height:100%;    background: var(--gradient-background);
+    --color-background: 26, 26, 46;
+    --gradient-background: linear-gradient(135deg, rgba(26, 26, 46, 1), rgba(22, 33, 62, 1) 25%, rgba(15, 52, 96, 1) 50%, rgba(83, 52, 131, 1) 75%, rgba(114, 9, 183, 1) 100%);mix-blend-mode:multiply}.Page_about_partner_detail_boths_innerstatic_videoimage_new img{width:100%;position:absolute;object-fit:cover;top:0;right:0;bottom:0;left:0;height:100%!important}.Page_about_partner_detail_boths_innerstatic_videoimage_new video{width:100%;position:absolute;object-fit:cover;top:0;right:0;bottom:0;left:0;height:100%!important}.Page_about_partner_detail_boths_mainoverlay_new{position:relative;z-index:1;padding:104px 0;width:76.667%;margin:auto}.Page_about_partner_detail_boths_mainoverlay_new .page-width{padding:0!important}.Page_about_partner_detail_boths_inneroverlay_new{display:flex;align-items:center}.Page_about_partner_detail_boths_inneroverlay_mainleft_new{width:60.869%;padding-right:125px}.Page_about_partner_detail_boths_inneroverlay_innerleft_innertitle_new h2{color:#fff!important}.Page_about_partner_detail_boths_inneroverlay_innerleft_innertitle_new.landing-page-style-active h2{font-size:42px;text-transform:uppercase;font-weight:300}.Page_about_partner_detail_boths_inneroverlay_innerleft_maininfos_new{padding-top:25px}.Page_about_partner_detail_boths_inneroverlay_innerleft_innerinfos_new p{margin:0;color:#fff;font-size:16px;font-weight:400;line-height:128%;padding-bottom:16px}.Page_about_partner_detail_boths_inneroverlay_innerleft_innerinfos_new p:last-child{padding-bottom:0}.Page_about_partner_detail_boths_inneroverlay_innerleft_mainboths_new{padding-top:25px}.Page_about_partner_detail_boths_inneroverlay_innerleft_innerboths_author_new{font-family:var(--font-heading-family);color:#fff;font-size:20px;font-weight:500;line-height:120%;letter-spacing:-.4px}.Page_about_partner_detail_boths_inneroverlay_innerleft_innerboths_texts_new{color:#fff;font-size:16px;font-weight:500;line-height:135%}.Page_about_partner_detail_boths_inneroverlay_mainright_new{width:39.131%}.Page_about_partner_detail_boths_inneroverlay_innerright_new{padding-bottom:141.436%;position:relative}.Page_about_partner_detail_boths_inneroverlay_innerright_videoimage_new img{width:100%;position:absolute;object-fit:cover;top:0;right:0;bottom:0;left:0;height:100%!important;border-radius:16px}.Page_about_partner_detail_boths_inneroverlay_innerright_videoimage_new video{width:100%;position:absolute;object-fit:cover;top:0;right:0;bottom:0;left:0;height:100%!important;border-radius:16px}@media (min-width:0px) and (max-width:749px){.Page_about_partner_detail_boths_mainoverlay_new .page-width{padding:0 20px!important}.Page_about_partner_detail_boths_innerstatic_new{display:flex;flex-direction:column-reverse}.Page_about_partner_detail_boths_innerstatic_mainleft_new{width:100%;height:27.665%;z-index:99}.Page_about_partner_detail_boths_innerstatic_mainright_new{height:100%;width:100%}.Page_about_partner_detail_boths_mainoverlay_new{padding:56px 0;width:100%}.Page_about_partner_detail_boths_inneroverlay_new{display:flex;flex-direction:column-reverse}.Page_about_partner_detail_boths_inneroverlay_mainleft_new{width:100%;padding:0}.Page_about_partner_detail_boths_inneroverlay_innerleft_innerinfos_new p{padding-bottom:12px;line-height:135%}.Page_about_partner_detail_boths_inneroverlay_innerleft_innerinfos_new p{font-size:14px}.Page_about_partner_detail_boths_inneroverlay_innerleft_innertitle_new.landing-page-style-active h2{font-size:32px}.Page_about_partner_detail_boths_inneroverlay_innerleft_mainboths_new{padding-top:32px}.Page_about_partner_detail_boths_inneroverlay_innerleft_innerboths_author_new{font-size:24px;letter-spacing:-.48px;line-height:108%}.Page_about_partner_detail_boths_inneroverlay_innerleft_innerboths_texts_new{font-size:14px;font-weight:400}.Page_about_partner_detail_boths_inneroverlay_mainright_new{width:100%;padding-top:24px}.Page_about_partner_detail_boths_inneroverlay_innerright_new{padding-bottom:97.912%;margin:0}}@media (min-width:750px) and (max-width:989px){.Page_about_partner_detail_boths_mainoverlay_new{padding:60px 20px;width:100%}.Page_about_partner_detail_boths_inneroverlay_mainleft_new{width:55%;padding-right:32px}.Page_about_partner_detail_boths_inneroverlay_innerleft_maininfos_new{padding-top:20px}.Page_about_partner_detail_boths_inneroverlay_innerleft_innerinfos_new p{font-size:15px;line-height:126%;padding-bottom:15px}.Page_about_partner_detail_boths_inneroverlay_innerleft_mainboths_new{padding-top:20px}.Page_about_partner_detail_boths_inneroverlay_mainright_new{width:45%}}@media (min-width:990px) and (max-width:1439px){.Page_about_partner_detail_boths_mainoverlay_new{padding:80px 20px;width:100%}.Page_about_partner_detail_boths_inneroverlay_mainleft_new{width:55%;padding-right:60px}.Page_about_partner_detail_boths_inneroverlay_innerleft_maininfos_new,.Page_about_partner_detail_boths_inneroverlay_innerleft_mainboths_new{padding-top:20px}.Page_about_partner_detail_boths_inneroverlay_mainright_new{width:45%}}
+/*# sourceMappingURL=/cdn/shop/t/121/assets/page-about-partner-detail.css.map?v=97746781005562392021749953897 */</style>

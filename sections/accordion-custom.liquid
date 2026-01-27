@@ -1,0 +1,715 @@
+<section id="shopify-section-template--17653238890663__accordion_content_KgKpNV" class="shopify-section accordion-content-section">
+    <div class="accordion-section-container page-width" id="accordion-section-template--17653238890663__accordion_content_KgKpNV">
+        <h2 class="accordion-section-title">{{ section.settings.main_heading }}</h2>
+
+
+<div class="accordion-section-description">
+  <p class="accordion-subtitle">{{ section.settings.sub_heading }}</p>    </div>
+    
+    <div class="accordion-group">
+        
+      {% for block in section.blocks %}
+      <div class="accordion-item has-image" {{ block.shopify_attributes }}>
+        
+        <!-- LEFT BIG IMAGE -->
+        <div class="accordion-left-media">
+          {% if block.settings.left_big_image %}
+            <img 
+              src="{{ block.settings.left_big_image | img_url: '800x' }}" 
+              alt="{{ block.settings.title }}" 
+              width="800" 
+              height="600" 
+              loading="lazy">
+          {% endif %}
+        </div>
+
+        <!-- BUTTON HEADER -->
+        <button 
+          class="accordion-header has-image" 
+          aria-expanded="false">
+          
+          <div class="accordion-header-columns">
+
+            <!-- LEFT SMALL IMAGE + EMOJIS -->
+            <div class="accordion-column accordion-column-left has-image">
+
+              {% if block.settings.left_small_image %}
+                <img 
+                  src="{{ block.settings.left_small_image | img_url: '360x' }}" 
+                  alt="{{ block.settings.title }}" 
+                  class="accordion-block-image"
+                  width="360"
+                  height="240"
+                  loading="lazy">
+              {% endif %}
+
+              {% if block.settings.emojis != blank %}
+                <span class="accordion-block-emojis">
+                  {{ block.settings.emojis }}
+                </span>
+              {% endif %}
+            </div>
+
+            <!-- MIDDLE TITLE + SUBTITLE -->
+            <div class="accordion-column accordion-column-middle">
+              <h3 class="accordion-item-title">{{ block.settings.title }}</h3>
+              <p class="accordion-item-subtitle">{{ block.settings.subtitle }}</p>
+            </div>
+
+            <!-- RIGHT ICON -->
+            <div class="accordion-column accordion-column-right">
+              {% if block.settings.right_icon %}
+                <img 
+                  src="https://cdn.shopify.com/s/files/1/0930/5807/2907/files/svgviewer-output_7.svg?v=1766039167" 
+                  alt="" 
+                  class="accordion-octagon-icon" 
+                  width="45" 
+                  height="45">
+              {% endif %}
+            </div>
+
+          </div>
+        </button>
+
+        <!-- CONTENT AREA -->
+        <div class="accordion-content" hidden>
+          <div class="accordion-content-inner">
+
+            <!-- TOP BANNER TEXTS -->
+            <div class="accordion-banner-texts-wrapper">
+              {% if block.settings.banner_text_1 != blank %}
+              <div class="accordion-banner-text">{{ block.settings.banner_text_1 }}</div>
+              {% endif %}
+
+              {% if block.settings.banner_text_2 != blank %}
+              <div class="accordion-banner-text">{{ block.settings.banner_text_2 }}</div>
+              {% endif %}
+            </div>
+
+            <!-- DESCRIPTION -->
+            <div class="accordion-expanded-description">
+              {{ block.settings.description }}
+            </div>
+
+            <!-- RICHTEXT -->
+            <div class="accordion-expanded-richtext">
+              {{ block.settings.richtext }}
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      {% endfor %}
+          
+          
+          
+     
+        
+        
+        </div></div>
+
+<style>
+  #accordion-section-template--17653238890663__accordion_content_KgKpNV {
+    --mobile-emoji-size: 20px;
+  }
+  
+  .accordion-section-container {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+  .accordion-section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 20px;
+   
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .accordion-section-description {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+   
+  }
+
+  .accordion-item {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+   background: var(--gradient-background);
+    --color-background: 26, 26, 46;
+    --gradient-background: linear-gradient(135deg, rgba(26, 26, 46, 1), rgba(22, 33, 62, 1) 25%, rgba(15, 52, 96, 1) 50%, rgba(83, 52, 131, 1) 75%, rgba(114, 9, 183, 1) 100%);
+  
+    position: relative;
+    border: 1px solid transparent;
+  }
+  .accordion-item.expanded {
+    background-color: #F5EBE9;
+  }
+  /* Premium subtle hover/active treatment (no shadows, no translate) */
+  .accordion-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    pointer-events: none;
+    opacity: 0;
+    background:
+      linear-gradient(180deg, rgba(255,150,147,0.10) 0%, rgba(255,150,147,0.06) 30%, rgba(255,150,147,0.00) 70%),
+      radial-gradient(120% 60% at 50% -20%, rgba(255,150,147,0.10) 0%, rgba(255,150,147,0.00) 70%);
+    transition: opacity 320ms ease;
+  }
+  #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item:hover { border-color: rgba(164,0,17,0.18); }
+  #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item:hover::before,
+  #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item.expanded::before { opacity: 1; }
+  .accordion-header {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 25px 20px;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+  /* Reserve spacing to avoid text under the image */
+  .accordion-item.has-image .accordion-header-columns { padding-left: 0; }
+  .accordion-item.expanded .accordion-header:hover {
+    background-color: transparent;
+  }
+  .accordion-header-columns {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+  }
+  .accordion-column-left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Left column image sizing */
+  .accordion-item.has-image .accordion-column-left {
+    padding: 0;
+    margin-left: -20px;
+    margin-top: -25px;
+    margin-bottom: -25px;
+    max-height: 120px;
+  }
+  .accordion-item.has-image .accordion-block-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+    display: block;
+  }
+  .accordion-item.expanded.has-image .accordion-column-left { max-height: none; }
+  /* Full-height media overlay: pre-rendered; no cross-fade */
+  .accordion-left-media {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    bottom: auto;
+    width: 240px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+    pointer-events: none;
+    transition: height 0.3s ease-out;
+  }
+  /* Remove reddish gradient overlay from left media */
+  .accordion-left-media::after { content: none !important; background: none !important; opacity: 0 !important; }
+  .accordion-left-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: none !important; }
+  .accordion-item.expanded.has-image .accordion-left-media { height: 100%; }
+  .accordion-item.expanded.has-image .accordion-column-left .accordion-block-image { visibility: hidden; }
+  /* Immediately hide header image in expanded state (no cross-fade) */
+  #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-column-left .accordion-block-image { transition: none !important; }
+  .accordion-item.expanded.has-image .accordion-column-left .accordion-block-image { display: none; }
+  .accordion-block-emojis {
+    font-size: 42px;
+    line-height: 1;
+    display: flex;
+    gap: 8px;
+  }
+  /* Default: hide emojis when an image is present (shown back on mobile) */
+  .accordion-item.has-image .accordion-block-emojis { display: none; }
+  .accordion-block-image {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+  }
+  .accordion-item.has-image .accordion-column-left {
+    padding: 0;
+    margin-left: -20px;
+    margin-top: -25px;
+    margin-bottom: -25px;
+    max-height: 120px;
+  }
+  .accordion-item.has-image .accordion-column-left .accordion-block-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+    opacity: 0;
+  }
+  .accordion-item.expanded.has-image .accordion-column-left {
+    max-height: none;
+  }
+  .accordion-column-middle {
+    flex-grow: 1;
+    min-width: 0;
+  }
+  .accordion-item-title {
+    font-size: 21px;
+    font-family: 'ABC Arizona Flare', sans-serif;
+    margin: 0 0 5px 0;
+    font-weight: 400;
+  
+    word-wrap: break-word;
+    line-height: 190%;
+    color: white;
+  }
+
+  .accordion-expanded-description h3 {    color: #ffffff;}
+  .accordion-item-subtitle {
+    font-size: 14px;
+    margin: 0;
+    
+    font-weight: 700;
+    word-wrap: break-word;
+    color:white;
+  }
+  .accordion-column-right {
+    flex-shrink: 0;
+  }
+  .accordion-octagon-icon {
+    width: 45px;
+    height: 45px;
+    display: block;
+  }
+  .accordion-header[aria-expanded="true"] .accordion-octagon-icon {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+  .accordion-header[aria-expanded="false"] .accordion-octagon-icon {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+  .accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: max-height 0.35s ease-out, padding 0.35s ease-out, opacity 0.35s ease-out, transform 0.35s ease-out;
+  }
+  .accordion-item.expanded .accordion-content { opacity: 1; transform: translateY(0); }
+  .accordion-expanded-richtext h3 {
+    font-family: 'Aeonik', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .accordion-content[hidden] {
+    display: none;
+  }
+  .accordion-content-inner {
+    padding: 0 20px 25px 20px;
+    max-width: 100%;
+  }
+  .accordion-banner-texts-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .accordion-banner-text {
+    font-family: 'NB Architekt', sans-serif;
+    background-color: #FFFFFF;
+    
+    padding: 8px 20px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+  }
+  .accordion-expanded-description,
+  .accordion-expanded-richtext {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #ffffff;
+   
+  }
+
+  @media (min-width: 990px) and (max-width: 1439px) {
+    body .accordion-content-section .accordion-section-container {
+      padding: 40px 20px 60px !important;
+             
+
+    }
+}
+
+  /* Desktop styles (min-width: 1024px) */
+  @media (min-width: 1024px) {
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-header {
+      padding: 30px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-header-columns {
+      gap: 50px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-column-left.has-image {
+      width: 320px;
+      min-width: 320px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-left-media { width: 320px; min-width: 320px; }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item.has-image .accordion-column-left { margin-left: -30px; margin-top: -30px; margin-bottom: -30px; }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item.has-image .accordion-column-left {
+      margin-left: -30px;
+      margin-top: -30px;
+      margin-bottom: -30px;
+      max-height: 120px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-block-emojis {
+      font-size: 52px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-content-inner {
+      padding: 0 0 25px 290px;
+      max-width: 85%;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item.has-image .accordion-content-inner { padding: 0 0 25px 370px; }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-section-title {
+      font-size: 32px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-section-description {
+      font-size: 18px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-banner-text {
+      padding: 8px 30px;
+    }
+  }
+
+  /* Tablet styles */
+  @media (min-width: 769px) and (max-width: 1023px) {
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-section-title {
+      font-size: 32px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-column-left {
+      width: 180px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-left-media { width: 180px; }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-left-media { width: 180px; height: 120px; }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item.has-image .accordion-column-left {
+      margin-left: -25px;
+      margin-top: -25px;
+      margin-bottom: -25px;
+      max-height: 120px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-block-emojis {
+      font-size: 42px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-block-image {
+      width: 42px;
+      height: 42px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item.expanded.has-image .accordion-column-left { max-height: none; }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-content-inner {
+      padding: 0 15px 25px 200px;
+      max-width: 90%;
+    }
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    body .accordion-content-section .accordion-section-container {
+      padding: 40px 20px !important;
+       padding-top: 0px !important;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-section-title {
+      font-size: 26px !important;
+      margin-bottom: 15px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-section-description {
+      font-size: 15px !important;
+      margin-bottom: 30px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-header {
+      padding: 16px !important;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-header-columns {
+      gap: 12px;
+      align-items: flex-start !important;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-column-left {
+      width: 90px !important;
+      min-width: 90px !important;
+      padding-top: 0;
+      flex-shrink: 0;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-left-media { width: 90px; }
+    /* Use emojis instead of images on mobile */
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-left-media { display: none !important; }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item.has-image .accordion-column-left .accordion-block-image { display: none !important; }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item.has-image .accordion-block-emojis { display: flex !important; }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item.has-image .accordion-column-left { margin: 0 !important; max-height: none !important; }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-block-emojis {
+      font-size: var(--mobile-emoji-size) !important;
+      gap: 3px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 100%;
+      line-height: 1.2;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-block-image {
+      width: 28px;
+      height: 28px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item.expanded.has-image .accordion-column-left { max-height: none; }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item-title {
+      font-size: 18px !important;
+      line-height: 1.2;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item-subtitle {
+      font-size: 16px !important;
+      line-height: 1.2;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-octagon-icon {
+      width: 28px !important;
+      height: 28px !important;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-banner-text {
+      padding: 6px 15px;
+      font-size: 11px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-expanded-description,
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-expanded-richtext {
+      font-size: 14px;
+      margin-top: 15px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-content-inner {
+      padding: 5px 15px 20px 15px !important;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item {
+      margin-bottom: 12px;
+    }
+  }
+  
+  /* Extra small devices */
+  @media (max-width: 480px) {
+
+.padding-template--27844510384459__testimonial_grid_section_Bk6fah
+
+ {
+    padding-top: 0px!important;
+    padding-bottom: 49px;
+}
+
+
+     #accordion-section-template--17653238890663__accordion_content_KgKpNV.accordion-section-container {
+      padding-bottom: 30px !important;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-section-title {
+      font-size: 24px !important;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-section-description {
+      font-size: 14px !important;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-header {
+      padding: 14px !important;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-header-columns {
+      gap: 10px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-block-emojis {
+      font-size: var(--mobile-emoji-size) !important;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-block-image {
+      width: 24px;
+      height: 24px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item.has-image .accordion-column-left { margin: 0 !important; max-height: none !important; }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item.expanded.has-image .accordion-column-left { max-height: none; }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-column-left {
+      min-width: 45px !important;
+      width: 45px !important;
+      padding-top: 2px;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item-title {
+      font-size: 16px !important;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-item-subtitle {
+      font-size: 15px !important;
+    }
+    #accordion-section-template--17653238890663__accordion_content_KgKpNV .accordion-octagon-icon {
+      width: 24px !important;
+      height: 24px !important;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const accordionContainer = document.getElementById(
+    'accordion-section-template--17653238890663__accordion_content_KgKpNV'
+  );
+  if (!accordionContainer) return;
+
+  const accordionItems = accordionContainer.querySelectorAll('.accordion-item');
+
+  accordionItems.forEach((item, index) => {
+    const button = item.querySelector('.accordion-header');
+    const content = item.querySelector('.accordion-content');
+
+    if (!button || !content) return;
+
+    /* -------------------------------
+       OPEN ALL ACCORDIONS BY DEFAULT
+    -------------------------------- */
+    item.classList.add('expanded');
+    button.setAttribute('aria-expanded', 'true');
+    content.removeAttribute('hidden');
+    content.style.maxHeight = content.scrollHeight + 'px';
+
+    button.addEventListener('click', () => {
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+      item.classList.toggle('expanded');
+      button.setAttribute('aria-expanded', String(!isExpanded));
+
+      if (!isExpanded) {
+        content.removeAttribute('hidden');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = null;
+        content.addEventListener(
+          'transitionend',
+          function onTransitionEnd() {
+            content.setAttribute('hidden', '');
+            content.removeEventListener('transitionend', onTransitionEnd);
+          },
+          { once: true }
+        );
+      }
+    });
+  });
+
+  /* UPDATE HEIGHT ON RESIZE */
+  window.addEventListener('resize', function() {
+    const expandedContents =
+      accordionContainer.querySelectorAll('.accordion-content:not([hidden])');
+    expandedContents.forEach(content => {
+      content.style.maxHeight = content.scrollHeight + 'px';
+    });
+  });
+});
+</script>
+
+
+ </section>
+{% schema %}
+{
+  "name": "Custom Accordion Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading"
+    },
+    {
+      "type": "text",
+      "id": "sub_heading",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#f5f5f5"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion_item",
+      "name": "Accordion Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "left_big_image",
+          "label": "Left Big Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "left_small_image",
+          "label": "Left Small Image"
+        },
+        {
+          "type": "text",
+          "id": "emojis",
+          "label": "Emojis",
+          "default": "☀️ 🦴"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Bone Health & Cardiovascular Support"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Vitamin D & K"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_icon",
+          "label": "Right SVG Icon"
+        },
+        {
+          "type": "text",
+          "id": "banner_text_1",
+          "label": "Banner Text 1"
+        },
+        {
+          "type": "text",
+          "id": "banner_text_2",
+          "label": "Banner Text 2"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "richtext",
+          "id": "richtext",
+          "label": "Bottom Richtext"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Accordion Section",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

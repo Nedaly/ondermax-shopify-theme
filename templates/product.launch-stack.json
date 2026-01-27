@@ -12,6 +12,17 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "inventory_kgr4wg": {
+          "type": "inventory",
+          "disabled": true,
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 3,
+            "show_inventory_quantity": true,
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
         "rating_stars_apKxNG": {
           "type": "rating_stars",
           "settings": {
@@ -40,7 +51,7 @@
             "show_badge": true,
             "badge_text": "🔥 Best Seller",
             "badge_style": "primary",
-            "badge_size": "badge--large",
+            "badge_size": "badge--medium",
             "margin_top": 3,
             "margin_bottom": 0
           }
@@ -48,11 +59,11 @@
         "text_emAHpN": {
           "type": "text",
           "settings": {
-            "mobile_text_size": 14,
+            "mobile_text_size": 12,
             "desktop_text_size": 14,
             "alignment": "left",
             "text_color": "#1c8e8e",
-            "text_1": "<strong>•</strong>Deep focus<strong> •</strong>Calm sleep<strong> •</strong>FDA approved",
+            "text_1": "•<strong>Beat Distractions </strong>•<strong>Get more done </strong>•<strong>Wake clear</strong>",
             "text_2": "",
             "text_3": "",
             "icon_scale": 120,
@@ -72,7 +83,7 @@
             "padding": 1,
             "border_size": 0,
             "border_color": "#b7b7b7",
-            "margin_top": 6,
+            "margin_top": 9,
             "margin_bottom": 0
           }
         },
@@ -94,6 +105,7 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "layout": "price_first",
             "price_color": "accent-1",
@@ -106,16 +118,6 @@
             "icon_2": "check_circle",
             "filled_icon_2": false,
             "margin_top": 9,
-            "margin_bottom": 15
-          }
-        },
-        "inventory_kgr4wg": {
-          "type": "inventory",
-          "settings": {
-            "text_style": "body",
-            "inventory_threshold": 3,
-            "show_inventory_quantity": true,
-            "margin_top": 15,
             "margin_bottom": 15
           }
         },
@@ -170,8 +172,40 @@
             "custom_liquid": "<style>@keyframes slideInUp {from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);}}@keyframes pulse {0%, 100% {transform: scale(1);} 50% {transform: scale(1.05);}}@keyframes shimmer {0% {background-position: -200px 0;} 100% {background-position: calc(200px + 100%) 0;}}.modern-radio {appearance: none; width: 20px; height: 20px; border: 2px solid #e5e7eb; border-radius: 50%; background: white; cursor: pointer; position: relative; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);}.modern-radio:checked {border-color: #1C8E8E; background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%); animation: pulse 0.6s ease-in-out;}.modern-radio:checked::after {content: ''; position: absolute; top: 50%; left: 50%; width: 8px; height: 8px; background: white; border-radius: 50%; transform: translate(-50%, -50%);}.modern-btn{\n    background: white;\n    color: #64748b;\n    border-color: #e2e8f0!important;\n}.modern-card {border: 2px solid transparent; border-radius: 16px; padding: 24px; margin-bottom: 16px; background: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;}.modern-card::before {content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(28, 142, 142, 0.1), transparent); transition: left 0.6s ease;}.modern-card:hover::before {left: 100%;}.modern-card.selected {border-color: #1C8E8E; background: linear-gradient(135deg, rgba(28, 142, 142, 0.02) 0%, rgba(109, 56, 179, 0.02) 100%); box-shadow: 0 10px 25px -3px rgba(28, 142, 142, 0.1), 0 4px 6px -2px rgba(28, 142, 142, 0.05); transform: translateY(-2px);}.modern-card.unselected {opacity: 0.6; background: #f8fafc; border-color: #e2e8f0;}.modern-badge {background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%); color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 4px rgba(28, 142, 142, 0.3);}.modern-btn {padding: 10px 20px; border: 2px solid transparent; border-radius: 25px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;}.modern-btn::before {content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); transition: left 0.5s ease;}.modern-btn:hover::before {left: 100%;}.modern-btn.active,.modern-btn.active.inactive {background: linear-gradient(135deg, #1C8E8E 0%, #6D38B3 100%); color: white!important; border-color: #1C8E8E; box-shadow: 0 4px 12px rgba(28, 142, 142, 0.3);}.modern-btn.inactive {background: white; color: #64748b; border-color: #e2e8f0;}.modern-btn.inactive:hover {border-color: #1C8E8E; color: #1C8E8E; transform: translateY(-1px);}.supply-selector {animation: slideInUp 0.4s ease-out;}.cro-benefits {display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;}.cro-benefit {background: #f0f9ff; border: 1px solid #e0f2fe; border-radius: 8px; padding: 6px 12px; font-size: 12px; color: #0369a1; font-weight: 500;}</style><div id=\"omx-subscription-root\" class=\"purchase-options\" style=\"margin: 24px 0;\" data-money-format=\"{{ shop.money_format | escape }}\" data-variant-id=\"{{ product.selected_or_first_available_variant.id }}\" data-base-price-cents=\"{{ product.selected_or_first_available_variant.price }}\" data-sp-alloc-json='{{ product.selected_or_first_available_variant.selling_plan_allocations | json | escape }}' data-sp-groups-json='{{ product.selling_plan_groups | json | escape }}' data-selling-plan-id=\"\"><input type=\"hidden\" name=\"quantity\" id=\"custom-quantity\" value=\"1\"><span id=\"omx-sub-price\" data-omx-price hidden></span><span id=\"omx-onetime-price\" data-omx-price hidden></span><div id=\"subscription-card\" class=\"modern-card selected\"><div style=\"display: flex; align-items: center; justify-content: space-between;\"><div style=\"display: flex; align-items: center; flex: 1;\"><input type=\"radio\" name=\"purchase_type\" value=\"subscription\" id=\"subscription\" class=\"modern-radio\" checked style=\"margin-right: 16px;\"><label for=\"subscription\" style=\"font-weight: 700; color: #1C8E8E; font-size: 18px; cursor: pointer; transition: all 0.3s ease;\">Subscribe and save</label></div><div style=\"display: flex; align-items: center; gap: 12px;\"><div style=\"text-align: right;\"><div style=\"font-weight: 800; color: #000; font-size: 18px;\" id=\"subscription-price-display\">{{ product.price | times: 0.8 | money }}</div><div style=\"font-size: 14px; color: #1C8E8E; text-decoration: line-through;\">{{ product.price | money }}</div></div></div></div>\n<div style=\"margin-left: 36px; margin-top: 8px; color: #6b7280; font-size: 14px; font-weight: 500;\"><div class=\"modern-badge\" style=\"margin-top:-14px;width:max-content;\">SAVE 20% more</div>Monthly Subscription</div><div class=\"cro-benefits\"><div class=\"cro-benefit\">🌍 Free shipping on all orders</div><div class=\"cro-benefit\">⚡ 8-12 Hours of Steady Energy</div><div class=\"cro-benefit\">💊 No Pills. No Gut Issues. No Crash.</div></div></div><div id=\"one-time-card\" class=\"modern-card unselected\"><div style=\"display: flex; align-items: center; justify-content: space-between;\"><div style=\"display: flex; align-items: center; flex: 1;\"><input type=\"radio\" name=\"purchase_type\" value=\"one-time\" id=\"one-time\" class=\"modern-radio\" style=\"margin-right: 16px;\"><label for=\"one-time\" style=\"font-weight: 700; color: #9ca3af; font-size: 18px; cursor: pointer; flex: 1; transition: all 0.3s ease;\">One Time Purchase</label></div><div style=\"font-weight: 800; color: #9ca3af; font-size: 18px; transition: all 0.3s ease;\">{{ product.price | money }}</div></div><div id=\"supply-selector\" class=\"supply-selector\" style=\"margin-left: 36px; margin-top: 16px; display: none;\"><div style=\"margin-bottom: 12px; color: #374151; font-size: 15px; font-weight: 600;\">Supply:</div><div style=\"display: flex; gap: 12px; flex-wrap: wrap;\"><button type=\"button\" class=\"modern-btn active\" data-supply=\"1\" data-price=\"{{ product.price | money_without_currency }}\">1 Month</button><button type=\"button\" class=\"modern-btn inactive\" data-supply=\"3\" data-price=\"{{ product.price | money_without_currency | times: 3 | round: 2 }}\">3 Month</button><button type=\"button\" class=\"modern-btn inactive\" data-supply=\"6\" data-price=\"{{ product.price | money_without_currency | times: 6 | round: 2 }}\">6 Month</button></div></div></div></div><!-- Subscription logic handled by omx-subscriptions.js -->"
           }
         },
+        "text_Gj98nM": {
+          "type": "text",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "center",
+            "text_color": "#121212",
+            "text_1": "30-Day Money-Back Guarantee",
+            "text_2": "",
+            "text_3": "",
+            "icon_scale": 120,
+            "icon_color": "#1c8e8e",
+            "icon_1": "shield",
+            "filled_icon_1": true,
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "enable_bg": false,
+            "bg_color": "#f3f3f3",
+            "corner_radius": 40,
+            "padding": 3,
+            "border_size": 0,
+            "border_color": "#b7b7b7",
+            "margin_top": 30,
+            "margin_bottom": 9
+          }
+        },
         "review_avatars_q6zBRn": {
           "type": "review_avatars",
+          "disabled": true,
           "settings": {
             "alignment": "start",
             "corner_radius": 30,
@@ -222,37 +256,6 @@
             "margin_bottom": 15
           }
         },
-        "text_Gj98nM": {
-          "type": "text",
-          "settings": {
-            "mobile_text_size": 14,
-            "desktop_text_size": 16,
-            "alignment": "center",
-            "text_color": "#121212",
-            "text_1": "30-Day Money-Back Guarantee",
-            "text_2": "",
-            "text_3": "",
-            "icon_scale": 120,
-            "icon_color": "#1c8e8e",
-            "icon_1": "shield",
-            "filled_icon_1": true,
-            "icon_2": "check_circle",
-            "filled_icon_2": false,
-            "icon_3": "check_circle",
-            "filled_icon_3": false,
-            "width": "100%",
-            "direction": "horizontal",
-            "column_gap": 3,
-            "enable_bg": false,
-            "bg_color": "#f3f3f3",
-            "corner_radius": 40,
-            "padding": 3,
-            "border_size": 0,
-            "border_color": "#b7b7b7",
-            "margin_top": 30,
-            "margin_bottom": 9
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -270,7 +273,38 @@
             "secondary_btn_enable_custom_color": false,
             "secondary_btn_custom_color": "#dd1d1d",
             "margin_top": 15,
-            "margin_bottom": 30
+            "margin_bottom": 6
+          }
+        },
+        "text_4J6gGR": {
+          "type": "text",
+          "settings": {
+            "mobile_text_size": 11,
+            "desktop_text_size": 12,
+            "alignment": "center",
+            "text_color": "#555555",
+            "text_1": "Includes: 30 SURGE patches + 30 DRIFT patches",
+            "text_2": "",
+            "text_3": "",
+            "icon_scale": 120,
+            "icon_color": "#121212",
+            "icon_1": "",
+            "filled_icon_1": false,
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "width": "fit-content",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "enable_bg": false,
+            "bg_color": "#f3f3f3",
+            "corner_radius": 40,
+            "padding": 1,
+            "border_size": 0,
+            "border_color": "#b7b7b7",
+            "margin_top": 6,
+            "margin_bottom": 0
           }
         },
         "icon_with_text_HCDQKF": {
@@ -369,7 +403,7 @@
             "date_format": "mm_dd",
             "days_labels": "Mon, Tue, Wed, Thu, Fri, Sat, Sun",
             "months_labels": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec",
-            "color_scheme": "inverse",
+            "color_scheme": "accent-1",
             "margin_top": 24,
             "margin_bottom": 24
           }
@@ -530,7 +564,7 @@
             "desktop_show_price_in_button": false,
             "desktop_transparent_bg": false,
             "mobile_show_image": false,
-            "mobile_show_title": true,
+            "mobile_show_title": false,
             "mobile_rating_stars": false,
             "mobile_show_price": true,
             "mobile_show_sale_badge": true,
@@ -542,19 +576,20 @@
         }
       },
       "block_order": [
+        "inventory_kgr4wg",
         "rating_stars_apKxNG",
         "judge_me_reviews_preview_badge_anbKAU",
         "title",
         "text_emAHpN",
         "trustpilot_stars_fyccD9",
         "price",
-        "inventory_kgr4wg",
         "description",
         "variant_picker",
         "subscription_options",
-        "review_avatars_q6zBRn",
         "text_Gj98nM",
+        "review_avatars_q6zBRn",
         "buy_buttons",
+        "text_4J6gGR",
         "icon_with_text_HCDQKF",
         "payment_badges_7wKb8d",
         "text_fNP8rH",
@@ -620,1012 +655,490 @@
         "desktop_padding_bottom": 36
       }
     },
-    "horizontal_ticker_WR66Kk": {
-      "type": "horizontal-ticker",
+    "clinically_proven_k6p7y6": {
+      "type": "ClinicallyProven",
       "blocks": {
-        "text_y4aiM4": {
-          "type": "text",
+        "stat_item_DLQT6t": {
+          "type": "stat_item",
           "settings": {
-            "title": "Rest Fast"
+            "subheading": "Sustained Energy",
+            "stat_value": "94%",
+            "description": "<p>Of users reported feeling consistent, crash-free energy throughout the day<br/></p>"
           }
         },
-        "text_XEwNYi": {
-          "type": "text",
+        "stat_item_HqE8Ji": {
+          "type": "stat_item",
           "settings": {
-            "title": "Anti Dopamine"
+            "subheading": "Improved Recovery",
+            "stat_value": "88%",
+            "description": "<p>Experienced better recovery and reduced daily fatigue<br/></p>"
           }
         },
-        "text_DJybf4": {
-          "type": "text",
+        "stat_item_CqbEXH": {
+          "type": "stat_item",
           "settings": {
-            "title": "Less Distraction"
+            "subheading": "Deeper Sleep",
+            "stat_value": "82",
+            "description": "<p>Reported falling asleep faster and waking up more refreshed<br/></p>"
           }
         },
-        "text_n63pCC": {
-          "type": "text",
+        "stat_item_RpThw9": {
+          "type": "stat_item",
           "settings": {
-            "title": "Achieve More!"
+            "subheading": "Sharper Focus",
+            "stat_value": "79%",
+            "description": "<p>Noticed improved mental clarity and sustained concentration<br/></p>"
           }
         }
       },
       "block_order": [
-        "text_y4aiM4",
-        "text_XEwNYi",
-        "text_DJybf4",
-        "text_n63pCC"
+        "stat_item_DLQT6t",
+        "stat_item_HqE8Ji",
+        "stat_item_CqbEXH",
+        "stat_item_RpThw9"
       ],
-      "name": "Horizontal Ticker",
+      "name": "Clinically Proven",
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "speed": 1.5,
-        "direction": "normal",
-        "stop_on_hover": false,
-        "mobile_spacing": 60,
-        "desktop_spacing": 100,
-        "color_scheme": "custom",
-        "mobile_text_size": 16,
-        "desktop_text_size": 18,
-        "italic_text": true,
-        "uppercase_text": true,
-        "bold_text": true,
-        "mobile_image_height": 26,
-        "desktop_image_height": 40,
-        "mobile_reviews_width": 300,
-        "desktop_reviews_width": 400,
-        "hidden_products": "",
-        "enable_specific_display": false,
-        "displayed_products": "",
-        "mobile_padding_top": 12,
-        "mobile_padding_bottom": 12,
-        "desktop_padding_top": 16,
-        "desktop_padding_bottom": 16,
-        "custom_colors_background": "#1a1a1a",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff"
+        "background_image": "shopify://shop_images/e11c080e6a3dfe568334967ed112b28b4af22f2f_1.webp",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/8bef0e18e4264e4a9310ec270d2c2830.mp4",
+        "overlay_color": "#6b46c1",
+        "overlay_opacity": 0.7,
+        "heading": "Clinically Backed. Transparently Tested.",
+        "main_text": "<p>Every formula is developed using evidence-based research and verified through independent third-party testing — so you know exactly what you’re using, every single day.<br/></p>",
+        "button_label": "Shop Now",
+        "button_link": "",
+        "source_note": "<p>Based on internal user studies and third-party ingredient testing. Individual results may vary.<br/></p>"
       }
     },
-    "rich_text_TMMnUC": {
-      "type": "rich-text",
+    "testimonial_grid": {
+      "type": "testimonial-grid-section",
       "blocks": {
-        "heading_hNYxHV": {
-          "type": "heading",
+        "testimonial_CT3Rw4": {
+          "type": "testimonial",
           "settings": {
-            "title": "<strong>Not an Energy patch!</strong>",
-            "title_highlight_color": "#ffffff",
-            "heading_size": "h1"
+            "name": "Fatima Hassan",
+            "role": "Working Mother, 33",
+            "review": "\"Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything the day throws at me. My energy levels are consistent all day long.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
           }
         },
-        "text_U34KNm": {
-          "type": "text",
+        "testimonial_3dyCnt": {
+          "type": "testimonial",
           "settings": {
-            "text": "<p>The first Anti-Dopamine Patch System for adults who are done wasting days.<br/></p>"
+            "name": "Khalid Al-Sabah",
+            "role": "Fitness Trainer, 31",
+            "review": "\"SURGE has completely transformed my morning routine. I wake up feeling energized and ready to tackle my day. My clients ask what changed!\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_4NnrJU": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg",
+            "name": "Dr. Omar Al-Zahra",
+            "role": "Medical Director, 38",
+            "review": "\"SURGE helps me maintain focus during long surgery days. I stick it on during my morning routine and stay sharp all day. As a doctor, I appreciate the natural approach.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Sarah": {
+          "type": "testimonial",
+          "settings": {
+            "name": "Sarah Johnson",
+            "role": "Marketing Manager, 28",
+            "review": "\"I was skeptical about patches vs coffee, but SURGE actually works better. No jitters, no crash, just steady energy from 8 AM to 6 PM. My productivity has never been higher.\"",
+            "badge_text": "★★★★★ SURGE USER",
+            "badge_color": "#1c8e8e"
+          }
+        },
+        "testimonial_Mike": {
+          "type": "testimonial",
+          "settings": {
+            "name": "Mike Chen",
+            "role": "Startup Founder, 32",
+            "review": "\"Running a startup means 16-hour days. SURGE keeps me alert and focused without the anxiety I used to get from energy drinks. DRIFT helps me wind down and get quality sleep. It's become my secret weapon.\"",
+            "badge_text": "★★★★★ SURGE & DRIFT USER",
+            "badge_color": "#1c8e8e"
           }
         }
       },
       "block_order": [
-        "heading_hNYxHV",
-        "text_U34KNm"
+        "testimonial_CT3Rw4",
+        "testimonial_3dyCnt",
+        "testimonial_4NnrJU",
+        "testimonial_Sarah",
+        "testimonial_Mike"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "Testimonial Grid",
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "full_width": true,
-        "mobile_narrow_width": false,
-        "color_scheme": "custom",
-        "padding_top": 32,
-        "padding_bottom": 32,
-        "custom_colors_background": "#1a1a1a",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#262b2b",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
+        "heading": "Already Transforming Daily Routines.",
+        "subheading": "Real people. Real results. Real patches.",
+        "bg_color": "#fcfeff",
+        "heading_color": "#0d0d33",
+        "subheading_color": "#666666",
+        "card_background": "#ffffff",
+        "badge_bg": "#1a1b4b",
+        "p_top": 80,
+        "p_bottom": 80
       }
     },
-    "image_with_text_mwgHBJ": {
-      "type": "image-with-text",
+    "card_slider_section_hyPDqT": {
+      "type": "card-slider-section",
       "blocks": {
-        "heading_ncCYVD": {
-          "type": "heading",
+        "card_Pyyx36": {
+          "type": "card",
           "settings": {
-            "title": "Your Day & Night Anti-Dopamine Duo.",
-            "title_highlight_color": "#262b2b",
-            "heading_size": "h1"
-          }
-        },
-        "text_b6DpaG": {
-          "type": "text",
-          "settings": {
-            "text": "<p>SURGE for focused output. DRIFT for real reset. Two patches that turn “I’ll do it later” into days that actually ship.<br/><br/>On <strong>SURGE</strong> days, today is not allowed to disappear into scrolling and half-work.<br/>At night, <strong>DRIFT</strong> helps your nervous system downshift, so you don’t carry the whole day’s chaos into tomorrow.<br/></p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_ncCYVD",
-        "text_b6DpaG"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "image": "shopify://shop_images/ChatGPT_Image_Nov_24_2025_05_41_06_PM.png",
-        "video_autoplay": true,
-        "video_loop": true,
-        "height": "adapt",
-        "color_scheme": "background-1",
-        "section_color_scheme": "background-1",
-        "full_desktop_width": false,
-        "content_layout": "no-overlap",
-        "desktop_media_width": 60,
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_full_media_width": false,
-        "mobile_direction": "normal",
-        "mobile_image_quanlity": "2",
-        "mobile_content_alignment": "left",
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 16,
-        "desktop_padding_top": 36,
-        "desktop_padding_bottom": 36,
-        "custom_colors_background": "#2e2a39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "custom_section_colors_background": "#ffffff",
-        "custom_section_gradient_background": ""
-      }
-    },
-    "icons_with_content_khibCw": {
-      "type": "icons-with-content",
-      "blocks": {
-        "image_ayJRA9": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Nov_24_2025_05_51_30_PM.png",
-            "atc_product": "",
-            "atc_skip_cart": false
-          }
-        },
-        "icon_LXy3X4": {
-          "type": "icon",
-          "settings": {
-            "icon": "check_circle",
-            "filled_icon": true,
+            "front_image": "shopify://shop_images/ezgif-1c16be4e7b5dee.gif",
             "title": "Protects focus",
-            "text": "<p>On SURGE days, you’re not starting 10 tasks and finishing none. You sit, focus, and ship.</p>"
+            "front_description": "On SURGE days",
+            "back_content": "<p>On SURGE days, you’re not starting 10 tasks and finishing none. You sit, focus, and ship.</p><p></p>",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "icon_dH6WmP": {
-          "type": "icon",
+        "card_MtcCRK": {
+          "type": "card",
           "settings": {
-            "icon": "check_circle",
-            "filled_icon": true,
+            "front_image": "shopify://shop_images/ezgif-14cc8c86a229a1.gif",
             "title": "Cuts scroll loops",
-            "text": "<p>Makes it easier to stay out of the “I’ll just check my phone” hole that eats your afternoons.</p>"
+            "front_description": "Makes it easier to stay out of the",
+            "back_content": "<p>Makes it easier to stay out of the “I’ll just check my phone” hole that eats your afternoons.</p><h3><br/><br/></h3>",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "icon_zRgAXX": {
-          "type": "icon",
+        "card_aRrVUH": {
+          "type": "card",
           "settings": {
-            "icon": "check_circle",
-            "filled_icon": true,
+            "front_image": "shopify://shop_images/Ondermax-surge-drift-without-pouches.png",
             "title": "Less dependence on caffeine",
-            "text": "<p>Stable mental clarity without chasing another coffee or energy drink every few hours.</p>"
+            "front_description": "Stable mental clarity without",
+            "back_content": "<p>Stable mental clarity without chasing another coffee or energy drink every few hours.</p><h3><br/><br/></h3>",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "icon_grByEe": {
-          "type": "icon",
+        "card_aa7Xr8": {
+          "type": "card",
           "settings": {
-            "icon": "check_circle",
-            "filled_icon": true,
+            "front_image": "shopify://shop_images/4_f67b46d8-9736-4f23-bc56-7aac35f9d2c0.png",
             "title": "Respects your future self",
-            "text": "<p>A simple ritual that rebuilds self-trust: you actually do what you said you’d do today.</p>"
+            "front_description": "A simple ritual that rebuilds",
+            "back_content": "<p>A simple ritual that rebuilds self-trust: you actually do what you said you’d do today.</p>",
+            "button_label": "",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "image_ayJRA9",
-        "icon_LXy3X4",
-        "icon_dH6WmP",
-        "icon_zRgAXX",
-        "icon_grByEe"
+        "card_Pyyx36",
+        "card_MtcCRK",
+        "card_aRrVUH",
+        "card_aa7Xr8"
       ],
-      "name": "Icons with content",
+      "name": "card-slider-section",
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "color_scheme": "background-1",
-        "icon_size": "m",
-        "icon_position": "next-to-title",
-        "icon_color": "accent-1",
-        "icon_heading_size": "h3",
-        "icon_text_alignment": "left",
-        "icons_desktop_layout": "2-columns",
-        "icons_mobile_layout": "1-column",
-        "desktop_content_alignment": "left",
-        "layout": "image_first",
-        "mobile_layout": "text_first",
-        "hide_content_on_mobile": false,
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "custom_colors_background": "#262b2b",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
-    "results_GyDnXi": {
-      "type": "results",
-      "blocks": {
-        "row_g9nGEk": {
-          "type": "row",
-          "settings": {
-            "percentage": 87,
-            "row_text": "<p>Reported <strong>no jitters or crash</strong> by day 3 with <strong>SURGE</strong>.</p>"
-          }
-        },
-        "row_B8WURh": {
-          "type": "row",
-          "settings": {
-            "percentage": 83,
-            "row_text": "<p>Fell asleep <strong>20–40% quicker</strong> within the first week using <strong>DRIFT</strong>.</p>"
-          }
-        },
-        "row_Xtf9qb": {
-          "type": "row",
-          "settings": {
-            "percentage": 93,
-            "row_text": "<p>Said Peel, Stick, Go: Effortless Style for Your Daily Routine</p>"
-          }
-        }
-      },
-      "block_order": [
-        "row_g9nGEk",
-        "row_B8WURh",
-        "row_Xtf9qb"
-      ],
-      "disabled": true,
-      "name": "Results",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "",
-        "title_highlight_color": "#1c8e8e",
-        "heading_size": "h1",
-        "text": "",
-        "image": "shopify://shop_images/1_5ddd135f-b7e2-477e-bb59-4bda7fecb476.png",
-        "video_muted_autoplay": true,
-        "color_scheme": "background-1",
-        "layout": "results_second",
-        "results_headline": "",
-        "results_title_highlight_color": "#6d388b",
-        "results_headline_size": "h2",
-        "results_text": "",
-        "results_headline_alignment": "left",
-        "caption": "<p>Survey data self-reported by 147 early customers, Jul–Oct 2025, UAE/GCC. Non-clinical pilot; outcomes vary.</p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "atc_button_label": "",
-        "atc_product": "",
-        "atc_skip_cart": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_accent": "#dd1d1d",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
-    "product_features_pCE7pX": {
-      "type": "product-features",
-      "blocks": {
-        "hotspot_UfH9dQ": {
-          "type": "hotspot",
-          "settings": {
-            "offset_x": 30,
-            "offset_y": 30,
-            "enable_mobile_position": false,
-            "mobile_offset_x": 30,
-            "mobile_offset_y": 30,
-            "title": "Clean Energy",
-            "text": "<p>Maintain clear, consistent focus without jitters or crashes.</p>",
-            "alignment": "center"
-          }
-        },
-        "hotspot_qxMAMB": {
-          "type": "hotspot",
-          "settings": {
-            "offset_x": 40,
-            "offset_y": 70,
-            "enable_mobile_position": false,
-            "mobile_offset_x": 30,
-            "mobile_offset_y": 30,
-            "title": "Doctor Formula",
-            "text": "<p>Optimize Your Health Routine with our Unique Blend of NAD+, Creatine, B Vitmains and Glutathione.</p>",
-            "alignment": "center"
-          }
-        },
-        "hotspot_8tybjn": {
-          "type": "hotspot",
-          "settings": {
-            "offset_x": 70,
-            "offset_y": 50,
-            "enable_mobile_position": false,
-            "mobile_offset_x": 30,
-            "mobile_offset_y": 30,
-            "title": "Deeper, Calmer Sleep",
-            "text": "<p>Fewer 3 AM wake-ups; more slow-wave time.</p>",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "hotspot_UfH9dQ",
-        "hotspot_qxMAMB",
-        "hotspot_8tybjn"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".hotspots-image-container--limited.hotspots-image-container--content-top .hotspots-image__content {max-width: 100%;}",
-        ".hotspots-image__content .rte {margin-top: 10px;}"
-      ],
-      "name": "Product features",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "Your Complete Day & Night Wellness Duo",
-        "title_highlight_color": "#6d388b",
-        "heading_size": "h1",
-        "text": "<p>Support focus, recovery, and better sleep with targeted patch technology</p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "atc_button_label": "",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "center",
-        "hide_content_on_mobile": false,
-        "mobile_content_position": "top",
-        "content_corner_radius": true,
-        "color_scheme": "background-1",
-        "section_color_scheme": "background-1",
-        "image": "shopify://shop_images/1_5ddd135f-b7e2-477e-bb59-4bda7fecb476-removebg-preview-removebg-preview.png",
-        "desktop_image_width": "limited",
-        "image_max_width": 400,
-        "full_page_width": false,
-        "image_corner_radius": false,
-        "hotspot_open_event": "hover",
-        "hotspots_color_scheme": "inverse",
-        "display_hotspots_animation": true,
-        "hotspot_content_color_scheme": "background-1",
-        "hotspot_image_size": "full",
-        "contain_hotspot_modal": false,
-        "hotspot_modal_desktop_width": 340,
-        "hotspot_modal_mobile_width": 200,
-        "bullet_points_color": "inverse",
-        "contain_bullet_points": false,
-        "bullet_point_desktop_width": 400,
-        "bullet_point_mobile_width": 60,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#2e2a39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "custom_section_colors_background": "#ffffff",
-        "custom_section_gradient_background": ""
-      }
-    },
-    "product_features_bb4Maw": {
-      "type": "product-features",
-      "blocks": {
-        "hotspot_VKqiXR": {
-          "type": "hotspot",
-          "settings": {
-            "offset_x": 36,
-            "offset_y": 36,
-            "enable_mobile_position": false,
-            "mobile_offset_x": 30,
-            "mobile_offset_y": 30,
-            "title": "1.",
-            "text": "<p>Apply SURGE on clean, dry skin for 4–8 hours.</p>",
-            "alignment": "center"
-          }
-        },
-        "hotspot_DHfqFM": {
-          "type": "hotspot",
-          "settings": {
-            "offset_x": 40,
-            "offset_y": 70,
-            "enable_mobile_position": false,
-            "mobile_offset_x": 30,
-            "mobile_offset_y": 30,
-            "title": "Feature",
-            "text": "<p>Highlight a specifit feature of your product.</p>",
-            "alignment": "center"
-          }
-        },
-        "hotspot_3G8W9B": {
-          "type": "hotspot",
-          "settings": {
-            "offset_x": 70,
-            "offset_y": 50,
-            "enable_mobile_position": false,
-            "mobile_offset_x": 30,
-            "mobile_offset_y": 30,
-            "title": "Feature",
-            "text": "<p>Highlight a specifit feature of your product.</p>",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "hotspot_VKqiXR",
-        "hotspot_DHfqFM",
-        "hotspot_3G8W9B"
-      ],
-      "disabled": true,
-      "name": "Product features",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "",
-        "title_highlight_color": "#6d388b",
-        "heading_size": "h1",
-        "text": "",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "atc_button_label": "",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "center",
-        "hide_content_on_mobile": false,
-        "mobile_content_position": "top",
-        "content_corner_radius": true,
-        "color_scheme": "background-1",
-        "section_color_scheme": "background-1",
-        "image": "shopify://shop_images/2_011be899-4785-4422-b5d6-4f0e65cbfdcb.png",
-        "desktop_image_width": "limited",
-        "image_max_width": 900,
-        "full_page_width": false,
-        "image_corner_radius": false,
-        "hotspot_open_event": "click",
-        "hotspots_color_scheme": "inverse",
-        "display_hotspots_animation": true,
-        "hotspot_content_color_scheme": "background-1",
-        "hotspot_image_size": "full",
-        "contain_hotspot_modal": false,
-        "hotspot_modal_desktop_width": 340,
-        "hotspot_modal_mobile_width": 200,
-        "bullet_points_color": "inverse",
-        "contain_bullet_points": false,
-        "bullet_point_desktop_width": 400,
-        "bullet_point_mobile_width": 60,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#2e2a39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "custom_section_colors_background": "#ffffff",
-        "custom_section_gradient_background": ""
-      }
-    },
-    "rich_text_TPNPXm": {
-      "type": "rich-text",
-      "blocks": {
-        "caption_NnJJy4": {
-          "type": "caption",
-          "settings": {
-            "caption": "Science, not hype.",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "heading_PdP4eB": {
-          "type": "heading",
-          "settings": {
-            "title": "Science-Backed Focus & Reset.",
-            "title_highlight_color": "#ffffff",
-            "heading_size": "h1"
-          }
-        },
-        "text_YGeaJw": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Each patch uses clinically studied ingredients that support healthy dopamine pathways, cellular energy, and sleep quality, without turning you into a wired zombie.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "caption_NnJJy4",
-        "heading_PdP4eB",
-        "text_YGeaJw"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "full_width": true,
-        "mobile_narrow_width": false,
-        "color_scheme": "custom",
-        "padding_top": 40,
-        "padding_bottom": 12,
-        "custom_colors_background": "#1a1a1a",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#262b2b",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
-    "science_backed": {
-      "type": "icon-with-text-blocks",
-      "blocks": {
-        "text_VwPtCh": {
-          "type": "text",
-          "settings": {
-            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 31 45\" height=\"45\" width=\"31\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.38623\" stroke=\"white\" d=\"M2.43958 20.9557L15.98 2.70391C17.041 1.27718 19.0231 2.16437 19.0231 4.06518V18.1925C19.0231 19.3326 19.8019 20.2536 20.7614 20.2536H27.3487C28.8454 20.2536 29.6423 22.3463 28.6535 23.6805L15.1131 41.93C14.0521 43.3568 12.07 42.4696 12.07 40.5688V26.4414C12.07 25.3014 11.2912 24.3803 10.3318 24.3803H3.74216C2.24544 24.3803 1.4508 22.2876 2.43958 20.9557Z\"></path>\n</svg>",
-            "title": "NAD+",
-            "desc": "<p>Supports cellular energy and healthy dopamine signaling, so your brain feels more stable and less “crashy”.</p>",
-            "show_benefit": true,
-            "benefit_text": "Energy Boost"
-          }
-        },
-        "text_kxbakH": {
-          "type": "text",
-          "settings": {
-            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
-            "title": "Glutathione",
-            "desc": "<p>Master antioxidant that helps your brain stay clear instead of wired-and-fried.</p>",
-            "show_benefit": true,
-            "benefit_text": "Recovery"
-          }
-        },
-        "text_JJ4JV8": {
-          "type": "text",
-          "settings": {
-            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
-            "title": "Creatine",
-            "desc": "<p>Backs up brain and muscle energy so your focus lasts longer than your coffee.</p>",
-            "show_benefit": true,
-            "benefit_text": "Performance"
-          }
-        },
-        "text_bVitamins": {
-          "type": "text",
-          "settings": {
-            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" height=\"24\" width=\"24\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2\" stroke=\"white\" d=\"M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z\"></path>\n</svg>",
-            "title": "B-Vitamins",
-            "desc": "<p>Key co-factors for mood, focus and stress resilience during heavy work days.</p>",
-            "show_benefit": true,
-            "benefit_text": "Mental Clarity"
-          }
-        },
-        "text_magnesium": {
-          "type": "text",
-          "settings": {
-            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 48 48\" height=\"48\" width=\"48\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2.5\" stroke=\"white\" d=\"M24 4L30 18H44L32 28L38 42L24 32L10 42L16 28L4 18H18L24 4Z\"></path>\n<circle cx=\"24\" cy=\"24\" r=\"3\" fill=\"white\" opacity=\"0.8\"></circle>\n</svg>",
-            "title": "Magnesium",
-            "desc": "<p>Helps your nervous system downshift out of “fight-or-scroll” mode at night.</p>",
-            "show_benefit": true,
-            "benefit_text": "Sleep Quality"
-          }
-        },
-        "text_melatonin": {
-          "type": "text",
-          "settings": {
-            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 48 48\" height=\"48\" width=\"48\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2.5\" stroke=\"white\" d=\"M24 4C12.954 4 4 12.954 4 24s8.954 20 20 20 20-8.954 20-20S35.046 4 24 4z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2.5\" stroke=\"white\" d=\"M24 8v16l8 8\"></path>\n<circle cx=\"24\" cy=\"24\" r=\"2\" fill=\"white\" opacity=\"0.9\"></circle>\n</svg>",
-            "title": "Melatonin",
-            "desc": "<p>Gentle support for your natural sleep rhythm, clear mornings, not heavy ones.</p>",
-            "show_benefit": true,
-            "benefit_text": "Sleep Cycle"
-          }
-        }
-      },
-      "block_order": [
-        "text_VwPtCh",
-        "text_kxbakH",
-        "text_JJ4JV8",
-        "text_bVitamins",
-        "text_magnesium",
-        "text_melatonin"
-      ],
-      "name": "Icon with text",
-      "settings": {
-        "heading": "",
+        "heading_regular": "Comprehensive Benefits",
+        "heading_italic": "*",
+        "descriptionvv": "",
         "subheading": "",
-        "bg_color": "#1a1a1a",
-        "show_badge": true,
-        "badge_text": "🔬 Created by Dr. Nedal Yassin",
-        "badge_style": "primary",
-        "badge_size": "badge--medium",
-        "show_stats": true,
-        "stat_1_number": "10,000+",
-        "stat_1_label": "Happy Customers",
-        "stat_2_number": "95%",
-        "stat_2_label": "Satisfaction Rate",
-        "stat_3_number": "30",
-        "stat_3_label": "Day Guarantee",
-        "p_top": 80,
-        "p_bottom": 80
+        "description": ""
       }
     },
-    "comparison_table": {
-      "type": "comparison-table",
+    "breakdown_lists_GbXtzy": {
+      "type": "BreakdownLists",
       "blocks": {
-        "row_1": {
-          "type": "row",
+        "breakdown_item_ctA3Ah": {
+          "type": "breakdown_item",
           "settings": {
-            "benefit": "<strong>All-day mental stability</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
+            "item_name": "Multivitamins, Minerals & Antioxidants",
+            "item_price": "$35 USD"
           }
         },
-        "row_2": {
-          "type": "row",
+        "breakdown_item_THdtTJ": {
+          "type": "breakdown_item",
           "settings": {
-            "benefit": "<strong>Supports deep-work blocks</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
+            "item_name": "Superfoods, Greens & Fruits",
+            "item_price": "$50 USD"
           }
         },
-        "row_3": {
-          "type": "row",
+        "breakdown_item_YNBRAc": {
+          "type": "breakdown_item",
           "settings": {
-            "benefit": "<strong>No jitters, no crash</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
+            "item_name": "Immunity",
+            "item_price": "$20 USD"
           }
         },
-        "row_4": {
-          "type": "row",
+        "breakdown_item_appbNz": {
+          "type": "breakdown_item",
           "settings": {
-            "benefit": "<strong>Helps reduce scrolling & mind-wandering</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
+            "item_name": "Electrolytes",
+            "item_price": "$40 USD"
           }
         },
-        "row_5": {
-          "type": "row",
+        "breakdown_item_fWkMBX": {
+          "type": "breakdown_item",
           "settings": {
-            "benefit": "Simple daily ritual (no mixing, no timing games)",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
+            "item_name": "Adaptogens & Super Mushrooms",
+            "item_price": "$30 USD"
+          }
+        },
+        "breakdown_item_q3nJ9g": {
+          "type": "breakdown_item",
+          "settings": {
+            "item_name": "Prebiotics, Probiotics & Postbiotics",
+            "item_price": "$40 USD"
+          }
+        },
+        "breakdown_item_BDhpPg": {
+          "type": "breakdown_item",
+          "settings": {
+            "item_name": "CoQ10 (Heart Vitality)",
+            "item_price": "$30 USD"
+          }
+        },
+        "breakdown_item_fxKfWg": {
+          "type": "breakdown_item",
+          "settings": {
+            "item_name": "MSM (Joint & Muscle Vitality)",
+            "item_price": "$25 USD"
+          }
+        },
+        "breakdown_item_BahaP6": {
+          "type": "breakdown_item",
+          "settings": {
+            "item_name": "Essential Amino Acids",
+            "item_price": "$20 USD"
           }
         }
       },
       "block_order": [
-        "row_1",
-        "row_2",
-        "row_3",
-        "row_4",
-        "row_5"
-      ],
-      "name": "Comparison Table",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "<strong>Why the Patch System Beats Coffee, Pills & Gummies.</strong>",
-        "title_highlight_color": "#ffffff",
-        "heading_size": "h1",
-        "text": "<p>Most products attack “low energy”.<br/>Your real problem is overstimulation and distraction.<br/><br/>Coffee and energy drinks give you a spike, then a crash.<br/>Focus pills can wire you up, but your phone still owns your attention.<br/>Late-night scrolling ruins your sleep, and the next day starts already lost.<br/><br/>SURGE & DRIFT do something different:<br/>steady support, calmer focus, and a simple ritual that decides how your day goes.</p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "atc_button_label": "",
-        "atc_product": "",
-        "atc_skip_cart": false,
-        "desktop_alignment": "center",
-        "mobile_alignment": "center",
-        "color_scheme": "custom",
-        "layout": "table_second",
-        "style": "modern",
-        "corner_radius": 16,
-        "number_of_competitors": 1,
-        "us_label": "Ondermax System",
-        "us_label_size": 18,
-        "logo_width": 90,
-        "mobile_logo_width": 60,
-        "others_label": "Pills, Coffee & Gummies",
-        "others_label_size": 18,
-        "others_logo_width": 90,
-        "others_mobile_logo_width": 60,
-        "others_2_label": "Competitor 2",
-        "others_2_label_size": 18,
-        "others_2_logo_width": 90,
-        "others_2_mobile_logo_width": 60,
-        "others_3_label": "Competitor 3",
-        "others_3_label_size": 18,
-        "others_3_logo_width": 90,
-        "others_3_mobile_logo_width": 60,
-        "checkmark_style": "regular",
-        "checkmark_color": "#53af01",
-        "checkmark_bg_color": "#53af01",
-        "x_style": "regular",
-        "x_color": "#121212",
-        "x_bg_color": "#dbdbdb",
-        "opposite_icon_colors": "original",
-        "highlighted_color_scheme": "accent-1",
-        "highlighted_separator_opacity": 40,
-        "highlighted_overlay_opacity": 20,
-        "other_cells_color_scheme": "background-1",
-        "regular_separator_opacity": 30,
-        "regular_overlay_opacity": 15,
-        "minimalistic_border_opacity": 40,
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "custom_colors_background": "#0d1320",
-        "custom_gradient_background": "linear-gradient(135deg, rgba(13, 19, 32, 1), rgba(26, 26, 26, 1) 30%, rgba(45, 27, 105, 1) 70%, rgba(74, 59, 138, 1) 100%)",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "custom_colors_highlighted_background": "#2e2a39",
-        "custom_colors_highlighted_text": "#ffffff",
-        "custom_colors_others_background": "#ffffff",
-        "custom_colors_others_text": "#2e2a39"
-      }
-    },
-    "custom_columns_pW9KD9": {
-      "type": "custom-columns",
-      "blocks": {
-        "heading_8gEjJP": {
-          "type": "heading",
-          "settings": {
-            "column": "col_1",
-            "visibility": "always-display",
-            "heading": "\"A Tool for Adults Who Are Done Wasting Days.\"",
-            "title_highlight_color": "#ffffff",
-            "heading_size": "h2",
-            "alignment": "left",
-            "mobile_alignment": "mobile-center",
-            "margin_top": 24,
-            "margin_bottom": 24
-          }
-        },
-        "richtext_PHLanE": {
-          "type": "richtext",
-          "settings": {
-            "column": "col_1",
-            "visibility": "always-display",
-            "text": "<p>I see the same story every week: smart people in their mid-30s who know exactly what they should be doing, but lose half their day to their phone and half-focus.<br/><br/>Ondermax doesn’t exist to make you feel superhuman.<br/>It exists so your brain finally supports the life you say you want.<br/><br/>SURGE & DRIFT are not a hack.<br/>They’re a small daily contract with yourself:<br/>today I focus, tonight I actually reset.</p>",
-            "text_style": "body",
-            "alignment": "left",
-            "mobile_alignment": "mobile-center",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
-        "richtext_wABJcC": {
-          "type": "richtext",
-          "settings": {
-            "column": "col_1",
-            "visibility": "always-display",
-            "text": "<p><em>Dr. Nedal Yassin</em></p>",
-            "text_style": "subtitle",
-            "alignment": "left",
-            "mobile_alignment": "mobile-center",
-            "margin_top": 20,
-            "margin_bottom": 24
-          }
-        }
-      },
-      "block_order": [
-        "heading_8gEjJP",
-        "richtext_PHLanE",
-        "richtext_wABJcC"
+        "breakdown_item_ctA3Ah",
+        "breakdown_item_THdtTJ",
+        "breakdown_item_YNBRAc",
+        "breakdown_item_appbNz",
+        "breakdown_item_fWkMBX",
+        "breakdown_item_q3nJ9g",
+        "breakdown_item_BDhpPg",
+        "breakdown_item_fxKfWg",
+        "breakdown_item_BahaP6"
       ],
       "disabled": true,
-      "name": "Custom columns",
+      "name": "Breakdown Lists Section",
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "color_scheme": "inverse",
-        "columns_count": 2,
-        "desktop_page_width": "desktop-full-page",
-        "column_gap_desktop": 40,
-        "row_gap_desktop": 40,
-        "desktop_vertical_alignment": "center",
-        "mobile_full_page": false,
-        "column_gap_mobile": 20,
-        "row_gap_mobile": 30,
-        "mobile_vertical_alignment": "center",
-        "col_1_desktop_width": 6,
-        "col_1_mobile_width": 4,
-        "col_1_visibility": "always-display",
-        "col_2_desktop_width": 6,
-        "col_2_mobile_width": 4,
-        "col_2_visibility": "always-display",
-        "col_3_desktop_width": 4,
-        "col_3_mobile_width": 4,
-        "col_3_visibility": "always-display",
-        "col_4_desktop_width": 4,
-        "col_4_mobile_width": 4,
-        "col_4_visibility": "always-display",
-        "col_5_desktop_width": 3,
-        "col_5_mobile_width": 4,
-        "col_5_visibility": "always-display",
-        "col_6_desktop_width": 3,
-        "col_6_mobile_width": 4,
-        "col_6_visibility": "always-display",
-        "padding_top": 32,
-        "padding_bottom": 32,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
+        "desktop_comparison_image": "shopify://shop_images/desktop_comparison-pill_2x_0da77b74-6605-4244-8e13-4c0e828ceb71.webp",
+        "mobile_comparison_image": "shopify://shop_images/mobile_comparison-pill_2x_6cee01aa-3c78-4fa8-89f6-0c9d6ed725cb.webp",
+        "desktop_box_image": "shopify://shop_images/young-woman-stretching-in-a-park.jpg",
+        "mobile_box_image": "shopify://shop_images/young-woman-stretching-in-a-park.jpg",
+        "desktop_heading": "Replace Multiple Supplements With Ondermax Patches",
+        "mobile_heading": "Simplify Your Routine With 2 Easy Patches",
+        "modal_button_text": "View Patch Ingredients",
+        "annual_savings_title": "ANNUAL SAVINGS",
+        "annual_savings_amount": "$1,500 - $2,000",
+        "annual_savings_per": "per year",
+        "annual_savings_footnote": "when switching to Ondermax Patches",
+        "compare_title": "Your Traditional Supplements",
+        "compare_price": "$155 USD",
+        "compare_title_2": "Ondermax Patches (SURGE & DRIFT)",
+        "compare_price_2": "$89 USD"
       }
     },
-    "custom_columns_bWxqwY": {
-      "type": "custom-columns",
+    "comparison_table_section_M97hdE": {
+      "type": "ComparisonTableSection",
+      "name": "Two Column Comparison Table",
+      "settings": {
+        "section_title": "How Ondermax Measures Up: A Competitive Comparison",
+        "section_description": "See why Ondermax’s transdermal patch system outperforms traditional pills, powders, and caffeine — designed to support clean energy, deep recovery, and steady focus without crash. You decide what works best for your daily performance:",
+        "background_color": "#8b5cf6",
+        "leftproduct_name": "Ondermax SURGE & DRIFT System",
+        "leftproduct_image": "shopify://shop_images/ChatGPT_Image_Dec_26_2025_09_33_12_AM_1_4335b1b7-4277-4bd9-b03c-5eb92d787dfa_medium-removebg-preview.png",
+        "left_items": "Transdermal Patch Delivery (Faster Absorption)|Clean Energy Without Jitters|Deep, Restorative Sleep Support|No Pills, No Mixing, No Timing Games|No Gut Irritation or Digestive Issues|Doctor Crafted & Science‑Backed Formula",
+        "rightproduct_name": "Traditional Pills & Powders",
+        "rightproduct_image": "shopify://shop_images/torso.png",
+        "right_items": "Requires Pills, Powders & Timing|May Cause Digestive Discomfort|Requires Complex Timing Schedules|Possible Pills Overload Daily Routine|Often Missing Key Bioactive Nutrients|Not Doctor Designed"
+      }
+    },
+    "trusted_by_EJGWCr": {
+      "type": "trusted-by",
       "blocks": {
-        "video_gxpMxc": {
-          "type": "video",
+        "slide_Cx3fYb": {
+          "type": "slide",
           "settings": {
-            "column": "col_1",
-            "visibility": "always-display",
-            "video": "shopify://files/videos/Untitled Project.mp4",
-            "thumbnail": "shopify://shop_images/Untitled_Project1.png",
+            "name": "Ahmed Al‑Rashid",
+            "role": "Software Engineer",
+            "quote": "\"SURGE gives me clean energy that lasts all day without the crash. Perfect for busy schedules and long work hours.\"",
+            "link": "shopify://products/high-energy-stack-copy",
+            "video": "",
+            "image": "shopify://shop_images/ae372d444c421b1514a2370571c987dbb569db5a.png"
+          }
+        },
+        "slide_k9kDFy": {
+          "type": "slide",
+          "settings": {
+            "name": "Fatima Hassan",
+            "role": "Working Mother",
+            "quote": "\"I fall asleep faster and wake up refreshed with DRIFT — no grogginess, just real sleep.",
+            "link": "shopify://products/high-energy-and-sleep-stack",
+            "video": "",
+            "image": "shopify://shop_images/bcc687cd830eb80c6045c84a30ee42678d0d87c7.png"
+          }
+        },
+        "slide_cgqFaJ": {
+          "type": "slide",
+          "settings": {
+            "name": "Zahra Al‑Sabah",
+            "role": "Fitness Trainer",
+            "quote": "\"Clean energy all day and deep\nnighttime recovery — my\nproductivity has skyrocketed.\"",
+            "link": "",
+            "video": "",
+            "image": "shopify://shop_images/238b8d265e7c44ab9535c74728dee3c9113fc0cd.png"
+          }
+        },
+        "slide_qeF76E": {
+          "type": "slide",
+          "settings": {
+            "name": "Dr. Omar Al‑Zahra",
+            "role": "Medical Director",
+            "quote": "DRIFT helps me unwind after stressful days — as a doctor, I appreciate the science and calm it brings.",
+            "link": "",
+            "video": "",
+            "image": "shopify://shop_images/6f163bc6b5b5b0abb1bc3f30e20a1c75dd3a30c0.png"
+          }
+        },
+        "slide_qjRTyX": {
+          "type": "slide",
+          "settings": {
+            "name": "Layla Al‑Mansouri",
+            "role": "Fitness Enthusiast",
+            "quote": "This system delivers both energy for workouts and restful sleep — exactly what I need.",
+            "link": "",
+            "video": "",
+            "image": "shopify://shop_images/32f7bc79a388b482a8e5ab80d06006a765e7b0cf.png"
+          }
+        },
+        "slide_VWx4qM": {
+          "type": "slide",
+          "settings": {
+            "name": "Nour Al‑Din",
+            "role": "Health Enthusiast",
+            "quote": "I feel calmer and more relaxed at night with DRIFT, and mornings are clear and focused.",
+            "link": "",
+            "video": "",
+            "image": "shopify://shop_images/471df78c9208940df4e41a20ed4d5822d81d6e8c.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Cx3fYb",
+        "slide_k9kDFy",
+        "slide_cgqFaJ",
+        "slide_qeF76E",
+        "slide_qjRTyX",
+        "slide_VWx4qM"
+      ],
+      "name": "Trusted By – Slider",
+      "settings": {
+        "heading": "Trusted by Athletes, Biohackers, Physicians, and Everyday Performers",
+        "subheading": "Hear from people who rely on Ondermax SURGE & DRIFT patches dail"
+      }
+    },
+    "product_object_ingredient_new_weLHKq": {
+      "type": "product-object-ingredient-new",
+      "blocks": {
+        "ingredient_H8KYCF": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "shopify://shop_images/ezgif-44da9df2171bad-bottom-cropped.webp",
+            "title": "Energy & Focus Compounds",
+            "short_text": "<p>Functional ingredients like NAD+, Creatine, and B-vitamins support sustained energy, sharper focus, and cellular performance—without caffeine or crashes.<br/></p>",
+            "long_text": "<p>The SURGE patch delivers clinically studied compounds through the skin for steady absorption throughout the day. This transdermal approach bypasses digestion, helping maintain consistent mental clarity, neurological support, and clean cellular energy when you need it most.<br/></p>",
+            "hidden": false
+          }
+        },
+        "ingredient_gn6Uzk": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "shopify://shop_images/ezgif-14cc8c86a229a1.gif",
+            "title": "Sleep & Nervous System Support",
+            "short_text": "<p>Magnesium, Melatonin, and calming botanicals work together to promote deeper sleep, faster recovery, and a refreshed morning wake-up.<br/></p>",
+            "long_text": "<p>The DRIFT patch is designed for nighttime use, supporting relaxation, nervous system balance, and restorative sleep cycles. By delivering ingredients gradually overnight, it helps improve sleep quality without morning grogginess or dependency.<br/></p>",
+            "hidden": false
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_H8KYCF",
+        "ingredient_gn6Uzk"
+      ],
+      "name": "Product Ingredients (Accordion)",
+      "settings": {
+        "bg_color": "#ffffff",
+        "desktop_image": "shopify://shop_images/IMG_0071.heic",
+        "mobile_image": "shopify://shop_images/IMG_0071.heic",
+        "heading": "Key Ingredients",
+        "description": "<p>Ondermax patches are powered by clinically studied ingredients designed for clean energy, mental clarity, and deep recovery — delivered through advanced transdermal technology for fast, consistent absorption.<br/><br/>SURGE features functional compounds like NAD+, Creatine, and essential B-vitamins to support cellular energy, focus, and performance without caffeine crashes. DRIFT complements your routine with Magnesium, Melatonin, and calming botanicals to promote deeper sleep, nervous system recovery, and next-day freshness.</p><p><br/>Every ingredient is carefully selected, precisely dosed, and formulated to work in harmony — helping your body perform optimally day and night, without pills, stimulants, or unnecessary fillers.<br/><br/><br/></p>",
+        "button_label": "See full ingredients",
+        "button_link": "",
+        "view_more_label": "View More"
+      }
+    },
+    "product_image_text_column_new_PXPRxy": {
+      "type": "product-image-text-column-new",
+      "blocks": {
+        "step_tA9n7m": {
+          "type": "step",
+          "settings": {
+            "text": "Step 1: Scoop out one serving of Daily Ultimate Essentials",
+            "video": "https://cdn.shopify.com/videos/c/o/v/8467779331a743448bd775e2738da75a.mp4",
+            "autoplay": true,
             "loop": true,
-            "muted_autoplay": true,
-            "display_play_btn": false,
-            "btn_animation": false,
-            "btn_color_scheme": "accent-1",
-            "display_sound_btn": false,
-            "sound_btn_color_scheme": "inverse",
-            "display_timeline": false,
-            "timeline_color": "accent-1",
-            "width": 60,
-            "alignment": "center",
-            "mobile_alignment": "center",
-            "border_radius": 18,
-            "margin_top": 6,
-            "margin_bottom": 6
+            "muted": true
           }
         },
-        "icon_with_text_yyxpgi": {
-          "type": "icon_with_text",
+        "step_ftnkH6": {
+          "type": "step",
           "settings": {
-            "column": "col_2",
-            "visibility": "always-display",
-            "icon": "shield",
-            "filled_icon": false,
-            "icon_size": "l",
-            "icon_position": "above",
-            "icon_color": "accent-1",
-            "icon_heading_size": "h2",
-            "icon_text_alignment": "center",
-            "title": "30-Day Money-Back Guarantee",
-            "text": "<p>Try SURGE + DRIFT for a month. If energy and sleep results are unsatisfactory, get a complete refund.<br/><br/>No questions asked!</p>",
-            "margin_top": 30,
-            "margin_bottom": 30
+            "text": "Step 2: Add 8 to 12oz of Water or Your Favorite Smoothie",
+            "video": "https://cdn.shopify.com/videos/c/o/v/8467779331a743448bd775e2738da75a.mp4",
+            "autoplay": true,
+            "loop": true,
+            "muted": true
+          }
+        },
+        "step_b6CMXk": {
+          "type": "step",
+          "settings": {
+            "text": "Step 3: Stir Well and Enjoy Daily",
+            "video": "https://cdn.shopify.com/videos/c/o/v/8467779331a743448bd775e2738da75a.mp4",
+            "autoplay": true,
+            "loop": true,
+            "muted": true
           }
         }
       },
       "block_order": [
-        "video_gxpMxc",
-        "icon_with_text_yyxpgi"
+        "step_tA9n7m",
+        "step_ftnkH6",
+        "step_b6CMXk"
       ],
-      "name": "Custom columns",
+      "disabled": true,
+      "name": "How to Enjoy (Steps)",
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "color_scheme": "inverse",
-        "columns_count": 2,
-        "desktop_page_width": "desktop-full-page",
-        "column_gap_desktop": 40,
-        "row_gap_desktop": 40,
-        "desktop_vertical_alignment": "center",
-        "mobile_full_page": false,
-        "column_gap_mobile": 20,
-        "row_gap_mobile": 30,
-        "mobile_vertical_alignment": "center",
-        "col_1_desktop_width": 6,
-        "col_1_mobile_width": 4,
-        "col_1_visibility": "always-display",
-        "col_2_desktop_width": 6,
-        "col_2_mobile_width": 4,
-        "col_2_visibility": "always-display",
-        "col_3_desktop_width": 4,
-        "col_3_mobile_width": 4,
-        "col_3_visibility": "always-display",
-        "col_4_desktop_width": 4,
-        "col_4_mobile_width": 4,
-        "col_4_visibility": "always-display",
-        "col_5_desktop_width": 3,
-        "col_5_mobile_width": 4,
-        "col_5_visibility": "always-display",
-        "col_6_desktop_width": 3,
-        "col_6_mobile_width": 4,
-        "col_6_visibility": "always-display",
-        "padding_top": 32,
-        "padding_bottom": 32,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
+        "bg_color": "#ffffff",
+        "heading": "How It Works"
       }
     },
-    "surge_day_only": {
-      "type": "two-products-sec",
-      "blocks": {
-        "text_78hKmU": {
-          "type": "text",
-          "settings": {
-            "bg_color": "#00908d",
-            "product": "surge-energy-patch-stack-preorder-ships-july-7-copy-1",
-            "pro_img": "shopify://shop_images/mock-up-new1_2dba329d-7295-4cc8-a516-f8adfb7237a8.png",
-            "pro_img_title": "surge",
-            "pro_img_bg_color": "#2fa9a7",
-            "pro_title": "All-Day Anti-Dopamine Focus.",
-            "pro_desc": "<p>NAD+ Creatine, B-Vitamins for sustained performance.</p>",
-            "atc_btn": "",
-            "atc_btn_link": "",
-            "show_btn_outline": false,
-            "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-sun w-16 h-16 text-yellow-300/30 animate-spin\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:14:14\" data-orchids-name=\"Sun\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M12 2v2\"></path><path d=\"M12 20v2\"></path><path d=\"m4.93 4.93 1.41 1.41\"></path><path d=\"m17.66 17.66 1.41 1.41\"></path><path d=\"M2 12h2\"></path><path d=\"M20 12h2\"></path><path d=\"m6.34 17.66-1.41 1.41\"></path><path d=\"m19.07 4.93-1.41 1.41\"></path></svg>",
-            "icon_animation": "bounce_rotate"
-          }
-        },
-        "text_yjkGqd": {
-          "type": "text",
-          "settings": {
-            "bg_color": "linear-gradient(306deg, rgba(127, 72, 176, 1) 1%, rgba(127, 72, 176, 1) 1%)",
-            "product": "high-energy-stack-copy",
-            "pro_img": "shopify://shop_images/mock-up-new2_53439dcb-7fe5-461f-bc80-ac8082ddacd6.png",
-            "pro_img_title": "Drift",
-            "pro_img_bg_color": "",
-            "pro_title": "All-Night Reset Without the Fog.",
-            "pro_desc": "<p>Magnesium, Melatonin for deeper rest and restoration.</p>",
-            "atc_btn": "",
-            "atc_btn_link": "",
-            "show_btn_outline": false,
-            "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-moon w-16 h-16 text-blue-100/30 animate-pulse\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:83:14\" data-orchids-name=\"Moon\"><path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\"></path></svg>",
-            "icon_animation": "bounce_rotate"
-          }
-        }
-      },
-      "block_order": [
-        "text_78hKmU",
-        "text_yjkGqd"
-      ],
-      "name": "SURGE Day Section",
+    "benefits_story_GA7YYb": {
+      "type": "benefits-story",
+      "disabled": true,
+      "name": "Benefits Story",
       "settings": {
-        "p_top": 80,
-        "p_bottom": 80
+        "heading": "How It Works",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "drift_night_only": {
@@ -1711,99 +1224,6 @@
         "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
         "custom_colors_text": "#121212"
-      }
-    },
-    "testimonial_grid": {
-      "type": "testimonial-grid-section",
-      "blocks": {
-        "testimonial_pWTDVU": {
-          "type": "testimonial",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg",
-            "name": "Ahmed Al-Rashid",
-            "role": "Software Engineer, 29",
-            "review": "I’m 37, software engineer full-time and have two kids. I used to lose every afternoon to my phone and the sofa. On SURGE days I actually finish my planning and still show up as a dad.",
-            "badge_text": "★★★★★ SURGE USER",
-            "badge_color": "#1c8e8e"
-          }
-        },
-        "testimonial_CT3Rw4": {
-          "type": "testimonial",
-          "disabled": true,
-          "settings": {
-            "name": "Fatima Hassan",
-            "role": "Working Mother, 33",
-            "review": "\"Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything the day throws at me. My energy levels are consistent all day long.\"",
-            "badge_text": "★★★★★ SURGE USER",
-            "badge_color": "#1c8e8e"
-          }
-        },
-        "testimonial_3dyCnt": {
-          "type": "testimonial",
-          "disabled": true,
-          "settings": {
-            "name": "Khalid Al-Sabah",
-            "role": "Fitness Trainer, 31",
-            "review": "\"SURGE has completely transformed my morning routine. I wake up feeling energized and ready to tackle my day. My clients ask what changed!\"",
-            "badge_text": "★★★★★ SURGE USER",
-            "badge_color": "#1c8e8e"
-          }
-        },
-        "testimonial_4NnrJU": {
-          "type": "testimonial",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg",
-            "name": "Dr. Omar Al-Zahra",
-            "role": "Medical Director, 38",
-            "review": "\"SURGE helps me maintain focus during long surgery days. I stick it on during my morning routine and stay sharp all day. As a doctor, I appreciate the natural approach.\"",
-            "badge_text": "★★★★★ SURGE USER",
-            "badge_color": "#1c8e8e"
-          }
-        },
-        "testimonial_Sarah": {
-          "type": "testimonial",
-          "disabled": true,
-          "settings": {
-            "name": "Sarah Johnson",
-            "role": "Marketing Manager, 28",
-            "review": "\"I was skeptical about patches vs coffee, but SURGE actually works better. No jitters, no crash, just steady energy from 8 AM to 6 PM. My productivity has never been higher.\"",
-            "badge_text": "★★★★★ SURGE USER",
-            "badge_color": "#1c8e8e"
-          }
-        },
-        "testimonial_Mike": {
-          "type": "testimonial",
-          "disabled": true,
-          "settings": {
-            "name": "Mike Chen",
-            "role": "Startup Founder, 32",
-            "review": "\"Running a startup means 16-hour days. SURGE keeps me alert and focused without the anxiety I used to get from energy drinks. DRIFT helps me wind down and get quality sleep. It's become my secret weapon.\"",
-            "badge_text": "★★★★★ SURGE & DRIFT USER",
-            "badge_color": "#1c8e8e"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_pWTDVU",
-        "testimonial_CT3Rw4",
-        "testimonial_3dyCnt",
-        "testimonial_4NnrJU",
-        "testimonial_Sarah",
-        "testimonial_Mike"
-      ],
-      "name": "Testimonial Grid",
-      "settings": {
-        "heading": "Join the Adults Who Still Believe in Real Work.",
-        "subheading": "Teachers, managers, founders and knowledge workers using the Anti-Dopamine Patch System as their quiet advantage.",
-        "bg_color": "#ffffff",
-        "heading_color": "#0d0d33",
-        "subheading_color": "#666666",
-        "card_background": "#ffffff",
-        "badge_bg": "#0d0d33",
-        "p_top": 80,
-        "p_bottom": 0
       }
     },
     "176405177790d8925f": {
@@ -1957,27 +1377,65 @@
         "btn": "BUY NOW!",
         "btn_subheading": "Read the questions first, then decide if the Anti-Dopamine Patch System is actually for you."
       }
+    },
+    "steps_with_cta_ra7Gye": {
+      "type": "steps-with-cta",
+      "blocks": {
+        "step_JETcBc": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/frist-step.jpg",
+            "title": "APPLY SURGE",
+            "text": "<p>Stick the SURGE patch to your skin in the morning for clean, sustained energy without the crash.</p>"
+          }
+        },
+        "step_dQYzQQ": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/sec-step.jpg",
+            "title": "APPLY DRIFT",
+            "text": "<p>Apply the DRIFT patch in the evening to promote deep, restorative sleep without grogginess in the morning.</p>"
+          }
+        },
+        "step_zHqjUK": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/3rd-step.jpg",
+            "title": "APPLY DRIFT",
+            "text": "<p>Apply the DRIFT patch in the evening to promote deep, restorative sleep without grogginess in the morning.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_JETcBc",
+        "step_dQYzQQ",
+        "step_zHqjUK"
+      ],
+      "name": "Steps with CTA",
+      "settings": {
+        "heading": "SIMPLE TO USE,<br> POWERFUL RESULTS",
+        "show_cta": true,
+        "cta_icon": "shopify://shop_images/Group.png",
+        "cta_heading": "CONSISTENCY IS KEY",
+        "cta_text": "<p>Users report noticeable improvements in energy, focus, and recovery within the first week. For full benefits, use daily with both SURGE and DRIFT patches over 4-8 weeks.</p>"
+      }
     }
   },
   "order": [
     "main",
-    "horizontal_ticker_WR66Kk",
-    "rich_text_TMMnUC",
-    "image_with_text_mwgHBJ",
-    "icons_with_content_khibCw",
-    "results_GyDnXi",
-    "product_features_pCE7pX",
-    "product_features_bb4Maw",
-    "rich_text_TPNPXm",
-    "science_backed",
-    "comparison_table",
-    "custom_columns_pW9KD9",
-    "custom_columns_bWxqwY",
-    "surge_day_only",
+    "clinically_proven_k6p7y6",
+    "testimonial_grid",
+    "card_slider_section_hyPDqT",
+    "breakdown_lists_GbXtzy",
+    "comparison_table_section_M97hdE",
+    "trusted_by_EJGWCr",
+    "product_object_ingredient_new_weLHKq",
+    "product_image_text_column_new_PXPRxy",
+    "benefits_story_GA7YYb",
     "drift_night_only",
     "static_image_grid",
-    "testimonial_grid",
     "176405177790d8925f",
-    "faq_section"
+    "faq_section",
+    "steps_with_cta_ra7Gye"
   ]
 }

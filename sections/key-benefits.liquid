@@ -1,0 +1,516 @@
+<style>/* Key Benefits Section Styles */
+.key-benefits-outer-wrapper {
+  background-color: #FFF;
+  padding: 80px 0;
+  width: 100%;
+}
+
+.key-benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.key-benefits__heading {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 400;
+  width: 100%;
+  max-width: 700px;
+  text-transform: uppercase;
+}
+
+.key-benefits__section-subheading {
+  font-size: 21px;
+  margin-bottom: 50px;
+  margin-top: 0;
+  text-align: center;
+  color: #505050;
+  line-height: 1.5;
+  max-width: 800px;
+  font-weight: 700;
+}
+
+.key-benefits__features {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.key-benefits__features-image {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-benefits__features-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+.key-benefits__features-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.key-benefits__features-heading {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.key-benefits__features-subheading {
+  font-size: 14px;
+  margin-bottom: 30px;
+  margin-top: 0;
+  color: #505050;
+  line-height: 1.5;
+}
+
+.key-benefits__features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.key-benefits__feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.key-benefits__feature-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.key-benefits__feature-content {
+  flex-grow: 1;
+}
+
+.key-benefits__feature-heading {
+  font-size: 16px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+  color: #9E0B0F;
+}
+
+.key-benefits__feature-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #505050;
+  margin: 0;
+}
+
+.key-benefits__feature-description p {
+  margin: 0;
+  margin-top: 8px;
+}
+
+.key-benefits__cta-container {
+  border: 1px solid black;
+  
+  padding: 5rem;
+  max-width: 1150px;
+  margin: 0px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+ background: var(--gradient-background);
+    --color-background: 26, 26, 46;
+    --gradient-background: linear-gradient(135deg, rgba(26, 26, 46, 1), rgba(22, 33, 62, 1) 25%, rgba(15, 52, 96, 1) 50%, rgba(83, 52, 131, 1) 75%, rgba(114, 9, 183, 1) 100%);
+  width: 100%;
+}
+
+.key-benefits__cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.key-benefits__cta-wrapper {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+
+.key-benefits__cta-icons-column {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.key-benefits__cta-content-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 2;
+  text-align: left;
+}
+
+.key-benefits__cta-icon {
+  margin-bottom: 0;
+}
+
+.key-benefits__cta-icon img {
+  max-width: 100px;
+  height: auto;
+  width: 100%;
+      filter: contrast(0);
+}
+
+.key-benefits__cta-heading {
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 500;
+  margin: 0;
+      color: white;
+}
+
+.key-benefits__cta-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 800px;
+  color:rgb(255, 255, 255);
+}
+
+.key-benefits__cta-button {
+  font-size: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  color:rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+.key-benefits__cta-button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 991px) {
+  .key-benefits-outer-wrapper {
+    padding: 60px 0;
+  }
+  
+  .key-benefits__heading {
+    font-size: 38px;
+  }
+  
+  .key-benefits__section-subheading {
+    font-size: 21px;
+    margin-bottom: 40px;
+  }
+  
+  .key-benefits__features {
+    gap: 30px;
+  }
+  
+  .key-benefits__cta-container {
+    padding: 4rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .key-benefits-outer-wrapper {
+    padding: 50px 0;
+  }
+  
+  .key-benefits {
+    padding: 0 20px;
+  }
+  
+  .key-benefits__heading {
+    font-size: 28px;
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+  
+  .key-benefits__section-subheading {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .key-benefits__features {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .key-benefits__features-image,
+  .key-benefits__features-content {
+    max-width: 100%;
+  }
+
+  .key-benefits__features-image img {
+    max-width: 300px;
+  }
+  
+  .key-benefits__feature-item {
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .key-benefits__feature-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .key-benefits__feature-icon img {
+    max-width: 20px;
+  }
+  
+  .key-benefits__cta-container {
+    padding: 3rem;
+  }
+  
+  .key-benefits__cta-heading {
+    font-size: 28px;
+  }
+  
+  .key-benefits__cta-description {
+    font-size: 14px;
+  }
+  
+  .key-benefits__cta-icon img {
+    max-width: 60px;
+  }
+
+  .key-benefits__cta-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .key-benefits__cta-icons-column {
+    justify-content: center;
+  }
+
+  .key-benefits__cta-content-column {
+    align-items: center;
+    text-align: center;
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .key-benefits-outer-wrapper {
+    padding: 40px 0;
+  }
+  
+  .key-benefits {
+    padding: 0 15px;
+  }
+  
+  .key-benefits__heading {
+    font-size: 24px;
+  }
+  
+  .key-benefits__section-subheading {
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+  
+  .key-benefits__features {
+    gap: 0px;
+  }
+  
+  .key-benefits__features-heading {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .key-benefits__feature-heading {
+    font-size: 15px;
+  }
+  
+  .key-benefits__feature-description {
+    font-size: 13px;
+  }
+  
+  .key-benefits__feature-description p {
+    margin-top: 5px;
+  }
+  
+  .key-benefits__feature-item {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .key-benefits__feature-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .key-benefits__cta-container {
+    padding: 2rem;
+  }
+  
+  .key-benefits__cta-heading {
+    font-size: 26px;
+  }
+  
+  .key-benefits__cta-description {
+    font-size: 13px;
+  }
+  
+  .key-benefits__cta-button {
+    font-size: 14px;
+  }
+  
+  .key-benefits__cta-icon img {
+    max-width: 50px;
+  }
+} </style>
+
+
+<div class="key-benefits-section">
+
+  <div class="key-benefits-outer-wrapper">
+    <div class="key-benefits">
+
+      <div class="key-benefits__cta-container">
+
+        <div class="key-benefits__cta-wrapper">
+
+          <!-- ICONS COLUMN -->
+          <div class="key-benefits__cta-icons-column">
+
+            {% if section.settings.icon_1 != blank %}
+              <div class="key-benefits__cta-icon">
+                <img
+                  src="{{ section.settings.icon_1 | image_url: width: 80 }}"
+                  alt="Icon 1"
+                  width="80"
+                  loading="lazy"
+                >
+              </div>
+            {% endif %}
+
+            {% if section.settings.icon_2 != blank %}
+              <div class="key-benefits__cta-icon">
+                <img
+                  src="{{ section.settings.icon_2 | image_url: width: 80 }}"
+                  alt="Icon 2"
+                  width="80"
+                  loading="lazy"
+                >
+              </div>
+            {% endif %}
+
+          </div>
+          <!-- END ICONS COLUMN -->
+
+          <!-- CONTENT COLUMN -->
+          <div class="key-benefits__cta-content-column">
+
+            {% if section.settings.heading != blank %}
+              <h3 class="key-benefits__cta-heading">
+                {{ section.settings.heading }}
+              </h3>
+            {% endif %}
+
+            {% if section.settings.description != blank %}
+              <div class="key-benefits__cta-description">
+                {{ section.settings.description }}
+              </div>
+            {% endif %}
+
+            {% if section.settings.button_label != blank %}
+              <a href="{{ section.settings.button_link }}" class=" button">
+                {{ section.settings.button_label }}
+              </a>
+            {% endif %}
+
+          </div>
+          <!-- END CONTENT COLUMN -->
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+  
+{% schema %}
+{
+  "name": "Key Benefits – NSF Sport",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon_1",
+      "label": "Icon 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_2",
+      "label": "Icon 2"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "NSF SPORT CERTIFIED"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Every ingredient in Daily Ultimate Essentials is third-party tested and NSF Certified for Sport, ensuring it's free from over 280 banned substances, heavy metals, and contaminants. Our rigorous quality standards exceed industry requirements, making our formula trusted by athletes and sports leagues, including WADA, NFL, MLB, NHL, and PGA.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "View Third-Party Testing Results"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "key-benefits",
+      "category": "key-benefits"
+    }
+  ]
+}
+{% endschema %}

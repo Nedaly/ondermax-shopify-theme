@@ -1,0 +1,284 @@
+{% schema %}
+{
+  "name": "Comparison Table",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "How IM8 Measures Up: A Competitive Comparison"
+    },
+    {
+      "type": "textarea",
+      "id": "section_description",
+      "label": "Description",
+      "default": "See why IM8 Daily Ultimate Essentials outperforms leading competitors..."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f9e9d8"
+    },
+
+{
+    "type": "text",
+    "id": "leftproduct_name",
+    "label": "Left Product Name"
+  },
+  {
+    "type": "image_picker",
+    "id": "leftproduct_image",
+    "label": "Left Product Image"
+  },
+
+
+  {
+      "type": "text",
+      "id": "left_items",
+      "label": "left Side Items (comma-separated)",
+      "default": "Clinical Dosed B Vitamins|High Absorption Minerals|Essential Nutrients|Clinical Dosed B Vitamins|30mcg Clinical Dosed Vitamin D3|40mcg Clinical Dosed Vitamin K2|100mg Clinical Dosed CoQ10|1000mg Clinical Dosed MSM|3mg Prebiotic fiber (50% more)|900mg Clinical Dosed Vitamin C (114% more)|4.2mg Clinical Dosed Riboflavin (110% more)|65mg Magnesium (150% more)|70mcg Clinical Dosed Selenium (250% more)|100mcg Clinical Dosed Chromium (300% more)|1mg Clinical Dosed Copper (413% more)|3mg Clinical Dosed Manganese (650% more)|50mcg Clinical Dosed Molybdenum|150mcg Clinical Dosed Iodine|10b CFU Probiotics|B coagulans BC99®, B subtilis DE111®|Postbiotics|FloraSMART® (25mg)|Cell Rejuvenation Technology 8®|Stevia-free (Fermented Sugarcane Extract)|No Refrigeration|Shelf-stable Probiotics|Branded Ingredients|Quatrefolic®"
+
+    },
+  {
+    "type": "text",
+    "id": "rightproduct_name",
+    "label": "Right Product Name"
+  },
+  {
+    "type": "image_picker",
+    "id": "rightproduct_image",
+    "label": "Right Product Image"
+  },
+
+  {
+  "type": "text",
+  "id": "right_items",
+  "label": "Right Side Items (use | to separate)",
+  "default": "Clinical Dosed B Vitamins|High Absorption Minerals|Essential Nutrients|Clinical Dosed B Vitamins|30mcg Clinical Dosed Vitamin D3|40mcg Clinical Dosed Vitamin K2|100mg Clinical Dosed CoQ10|1000mg Clinical Dosed MSM|3mg Prebiotic fiber (50% more)|900mg Clinical Dosed Vitamin C (114% more)|4.2mg Clinical Dosed Riboflavin (110% more)|65mg Magnesium (150% more)|70mcg Clinical Dosed Selenium (250% more)|100mcg Clinical Dosed Chromium (300% more)|1mg Clinical Dosed Copper (413% more)|3mg Clinical Dosed Manganese (650% more)|50mcg Clinical Dosed Molybdenum|150mcg Clinical Dosed Iodine|10b CFU Probiotics|B coagulans BC99®, B subtilis DE111®|Postbiotics|FloraSMART® (25mg)|Cell Rejuvenation Technology 8®|Stevia-free (Fermented Sugarcane Extract)|No Refrigeration|Shelf-stable Probiotics|Branded Ingredients|Quatrefolic®, AstaPure®, DE111®, Bacillus BC99®, VegD3™,FloraSmart™, Nutralga®, Astapure®"
+}
+
+  ],
+ 
+  "presets": [
+    {
+      "name": "Two Column Comparison Table"
+    }
+  ]
+}
+{% endschema %}
+
+<div id="shopify-section-template--17653238890663__custom_object_table_column_nqVJcQ" class="shopify-section Custom_object_table_column_new">
+
+<div class="Index_object_table_column_main_new" style="background:{{section.settings.background_color}};" id="green_powder_comparison">
+    <div class="Index_object_table_column_inner_new"><div class="page-width">
+          <div class="Index_object_table_column_mainoverlay_new">
+            <div class="Index_object_table_column_inneroverlay_new"><div class="Index_object_table_column_inneroverlay_maintitle_new" id="gold-standard">
+                  <div class="Common_title_new Index_object_table_column_inneroverlay_innertitle_new">
+                    <h2>{{ section.settings.section_title }}</h2>
+                    <div class="main_description_text">
+                        <p>{{ section.settings.section_description }}</p>
+                    
+                    </div>
+                    
+                    <h3 style="display:none">Comparison: IM8 vs. AG1. Superior Clinical Doses and Ingredient Transparency</h3>
+                  </div>
+                </div><div class="Index_object_table_column_inneroverlay_maintable_new">
+                  <div class="Index_object_table_column_inneroverlay_innertable_new"><div class="Index_object_table_column_inneroverlay_innertable_innerright_maincolumn_new">
+                        <div class="Index_object_table_column_inneroverlay_innertable_innerright_innercolumn_new"><div class="Index_object_table_column_inneroverlay_innertable_innerright_mainboths_new">
+                              <div class="Index_object_table_column_inneroverlay_innertable_innerright_innerboths_new"><div class="Index_object_table_detail_inneranswers_innertable_innerleft_innerboxs_boths_image_new">
+{% if section.settings.leftproduct_image %}
+      <img src="{{ section.settings.leftproduct_image | img_url: 'medium' }}" alt="{{ section.settings.leftproduct_name }}">
+    {% endif %}                                    </div>
+                                    <div class="Index_object_tabs_table_detail_inneranswers_innertable_innerleft_innerboxs_boths_texts_new">
+                                   {{ section.settings.leftproduct_name }}
+                                  </div></div>
+                            </div>
+                            
+                            <div class="Index_object_table_column_inneroverlay_innertable_innerright_mainloops_new">
+                              <div class="Index_object_table_column_inneroverlay_innertable_innerright_innerloops_new">
+                                
+{% assign items = section.settings.left_items | split: '|' %}
+{% for item in items %}
+      <div class="Index_object_table_column_inneroverlay_innertable_innerright_innerloops_mainboxs_new show">
+        <div class="Index_object_table_column_inneroverlay_innertable_innerright_innerloops_innerboxs_new">
+          <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="10.4883" cy="10.0002" rx="10" ry="9.7561" fill="#1c8e8e"></ellipse>
+            <path d="M6.44531 10.2079L9.54815 13.114C12.2077 9.79279 14.424 6.88672 14.424 6.88672" stroke="#EFEFEF" stroke-width="2" stroke-linecap="square"></path>
+          </svg>
+          <span class="highlight">{{ item | strip }}</span>
+        </div>
+      </div>
+    {% endfor %}
+
+
+                        
+                                    
+                                   </div>
+                            </div></div>
+                      </div><div class="Index_object_table_column_inneroverlay_innertable_innerright_maincolumn_new">
+                        <div class="Index_object_table_column_inneroverlay_innertable_innerright_innercolumn_new last_child"><div class="Index_object_table_column_inneroverlay_innertable_innerright_mainboths_new last_child">
+                              <div class="Index_object_table_column_inneroverlay_innertable_innerright_innerboths_new"><div class="Index_object_table_detail_inneranswers_innertable_innerleft_innerboxs_boths_image_new">
+{% if section.settings.rightproduct_image %}
+      <img src="{{ section.settings.rightproduct_image | img_url: 'medium' }}" alt="{{ section.settings.rightproduct_name }}">
+    {% endif %}                                    </div><div class="Index_object_tabs_table_detail_inneranswers_innertable_innerleft_innerboxs_boths_texts_new">
+{{ section.settings.rightproduct_name }}                                  </div></div>
+                            </div>
+                            
+                            
+                            <div class="Index_object_table_column_inneroverlay_innertable_innerright_mainloops_new">
+                              <div class="Index_object_table_column_inneroverlay_innertable_innerright_innerloops_new">
+                                
+                              
+
+                                    {% assign items = section.settings.right_items  | split: '|' %}
+{% for item in items %}
+     <div class="Index_object_table_column_inneroverlay_innertable_innerright_innerloops_mainboxs_new show">
+                                      <div class="Index_object_table_column_inneroverlay_innertable_innerright_innerloops_innerboxs_new">
+                                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"> <ellipse cx="10.4883" cy="10.0002" rx="10" ry="9.7561" fill="#1E3B32" fill-opacity="0.44"></ellipse> <path d="M6.82812 6.09766L14.1452 13.4147M6.82812 13.4147L14.1452 6.09766" stroke="white" stroke-width="2"></path> </svg><span class="ag1">{{ item | strip }}</span>
+                                      </div>
+                                    </div>
+    {% endfor %}
+                                    
+                                   </div>
+                            </div></div>
+                      </div></div><div class="Index_object_table_column_see_more" id="Index_object_table_column_see_more" style="display: none;">
+                      See More
+                    </div>
+                </div><div class="Index_object_table_column_inneroverlay_mainbutton_new"></div></div>
+          </div>
+        </div></div>
+  </div><style>
+  .shopify-section .Common_title_new Index_object_table_column_inneroverlay_innertitle_new h2 {
+    font-weight: 400;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // Handle "see more" button clicks
+    if (document.getElementById('Index_object_table_column_see_more')) {
+      document.getElementById('Index_object_table_column_see_more').addEventListener('click', function () {
+        const rows = document.querySelectorAll(
+          '.Index_object_table_column_inneroverlay_innertable_innerright_innerloops_mainboxs_new',
+        );
+        rows.forEach((row) => row.classList.remove('hide'));
+        const className = 'Index_object_table_column_inneroverlay_innertable_innerright_innercolumn_new';
+        const elements = document.getElementsByClassName(className);
+        for (var i = 0; i < elements.length; i++) {
+          elements[i].classList.remove('truncate');
+        }
+        this.style.display = 'none';
+        
+      });
+    }
+  });
+</script><style>
+  .Custom_object_table_column_new .Index_object_table_column_mainoverlay_new {
+    padding-top: 200px;
+    padding-bottom: 60px;
+  }
+
+  .Custom_object_table_column_new
+  .Index_object_table_column_inneroverlay_innertitle_new {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+  }
+
+  .Custom_object_table_column_new .Index_object_table_column_mainoverlay_new h2 {
+    font-size: 42px;
+    margin-bottom: 26px;
+    font-weight: 400;
+  }
+
+  .Custom_object_table_column_new 
+  .Index_object_table_column_inneroverlay_maintable_new {
+    margin-bottom: 80px;
+  }
+
+  .Custom_object_table_column_new .Index_object_table_column_mainoverlay_new .Index_object_table_column_main_new .Index_object_table_column_inner_new {
+    background-color: #F9E9D8;
+  }
+
+  .custom_footer_content_wrapper {
+    background-color: #A40011;
+    padding: 20px 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-weight: 500;
+  }
+
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .Custom_object_table_column_new .Index_object_table_column_mainoverlay_new {
+      padding-top: 120px;
+      padding-bottom: 40px;
+    }
+
+    .Custom_object_table_column_new
+    .Index_object_table_column_inneroverlay_innertitle_new {
+      max-width: 100%;
+      padding: 0 20px;
+      margin-bottom: 60px;
+    }
+
+    .Custom_object_table_column_new .Index_object_table_column_mainoverlay_new h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .Custom_object_table_column_new 
+    .Index_object_table_column_inneroverlay_maintable_new {
+      margin-bottom: 50px;
+    }
+
+    .custom_footer_content_wrapper {
+      padding: 15px 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      /* Ensure 20px of outer spacing on both sides on mobile */
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    
+    .custom_footer_content_wrapper .custom_footer_description,
+    .custom_footer_content_wrapper .custom_footer_description p {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .Custom_object_table_column_new .Index_object_table_column_mainoverlay_new {
+      padding-top: 80px;
+      padding-bottom: 30px;
+    }
+
+    .Custom_object_table_column_new .Index_object_table_column_mainoverlay_new h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .Custom_object_table_column_new
+    .Index_object_table_column_inneroverlay_innertitle_new {
+      margin-bottom: 40px;
+    }
+  }
+
+
+  .Custom_object_table_column_new .Index_object_table_column_mainoverlay_new h2 {
+ 
+    color: white;
+}
+
+.main_description_text{
+ 
+    color: white;
+}
+</style>
+
+</div>

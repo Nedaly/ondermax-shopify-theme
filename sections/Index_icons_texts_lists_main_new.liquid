@@ -1,0 +1,189 @@
+
+
+ <div class="Index_icons_texts_lists_main_new"
+     style="background: {{ section.settings.bg_color }}; padding-top: 0px; padding-bottom: 60px;">
+  <div class="page-width">
+
+    <div class="Index_icons_texts_lists_inner_new"
+         style="
+          background: url({{ section.settings.desktop_bg | image_url }}) no-repeat center center;
+          background-size: cover;
+         ">
+
+      <style>
+        @media(max-width:749px){
+          .Index_icons_texts_lists_inner_new {
+            background: url({{ section.settings.mobile_bg | image_url }}) no-repeat center center !important;
+            background-size: cover !important;
+          }
+        }
+      </style>
+
+      <div class="Index_icons_texts_lists_sides_new">
+
+        <!-- LEFT SIDE -->
+        <div class="Index_icons_texts_lists_sides_mainleft_new">
+          <div class="Index_icons_texts_lists_sides_innerleft_new">
+
+            <div class="Index_icons_texts_lists_sides_innerleft_maintitle_new">
+              <div class="Index_icons_texts_lists_sides_innerleft_innertitle_new">
+                <h3>{{ section.settings.main_title }}</h3>
+              </div>
+            </div>
+
+            <div class="Index_icons_texts_lists_sides_innerleft_mainboths_new">
+              <div class="Index_icons_texts_lists_sides_innerleft_innerboths_new">
+
+                {% if section.settings.left_icon_1 %}
+                <div class="Index_icons_texts_lists_sides_innerleft_innerboths_mainlogo_new">
+                  <div class="Index_icons_texts_lists_sides_innerleft_innerboths_innerlogo_new">
+                    <img src="{{ section.settings.left_icon_1 | image_url }}" class="Custom_image_new" loading="lazy">
+                  </div>
+                </div>
+                {% endif %}
+
+                {% if section.settings.left_icon_2 %}
+                <div class="Index_icons_texts_lists_sides_innerleft_innerboths_mainlogo_new">
+                  <div class="Index_icons_texts_lists_sides_innerleft_innerboths_innerlogo_new">
+                    <img src="{{ section.settings.left_icon_2 | image_url }}" class="Custom_image_new" loading="lazy">
+                  </div>
+                </div>
+                {% endif %}
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="Index_icons_texts_lists_sides_mainright_new">
+
+          <div class="Index_icons_texts_lists_sides_innerright_new">
+
+            {% for block in section.blocks %}
+              {% if block.type == 'bullet' %}
+              <div class="Index_icons_texts_lists_sides_innerright_maintexts_new">
+                <div class="Index_icons_texts_lists_sides_innerright_innertexts_new">
+                  {{ block.settings.text }}
+                </div>
+              </div>
+              {% endif %}
+            {% endfor %}
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COLLABORATORS -->
+      <div class="Index_icons_texts_lists_collaborator_container">
+
+        <div class="Index_icons_texts_lists_collaborator_title">
+          {{ section.settings.collab_heading }}
+        </div>
+
+        <div class="Index_icons_texts_lists_collaborator_logo_container">
+
+          {% for block in section.blocks %}
+            {% if block.type == 'collab' %}
+            <div class="Index_icons_texts_lists_collaborator_logo">
+              <a href="{{ block.settings.link }}" target="_blank">
+                <img
+                  src="{{ block.settings.logo | image_url: width: 200 }}"
+                  class="Collaborator_image"
+                  loading="lazy">
+              </a>
+            </div>
+            {% endif %}
+          {% endfor %}
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "IM8 Checks All Boxes",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_bg",
+      "label": "Desktop Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_bg",
+      "label": "Mobile Background Image"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Left Main Title",
+      "default": "IM8 checks <br>all the boxes"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_icon_1",
+      "label": "Left Icon 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_icon_2",
+      "label": "Left Icon 2"
+    },
+    {
+      "type": "text",
+      "id": "collab_heading",
+      "label": "Collaborator Title",
+      "default": "Our Collaborators"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "bullet",
+      "name": "Bullet Point",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Bullet Text"
+        }
+      ]
+    },
+    {
+      "type": "collab",
+      "name": "Collaborator Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Collaborator Logo"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Collaborator Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Index_icons_texts_lists_main_new",
+      "category": "Index_icons_texts_lists_main_new"
+    }
+  ]
+}
+{% endschema %}
+
