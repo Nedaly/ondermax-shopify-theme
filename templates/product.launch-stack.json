@@ -423,7 +423,7 @@
             "filled_icon": false,
             "collapse_icon": "carret",
             "display_top_border": true,
-            "open": true,
+            "open": false,
             "content": "{{ product.description }}",
             "page": "",
             "margin_top": 24,
@@ -433,13 +433,13 @@
         "collapsible_tab_QTDxQB": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "What's inside",
+            "heading": "What’s inside",
             "heading_size": "medium",
             "icon": "",
             "filled_icon": false,
             "collapse_icon": "carret",
             "display_top_border": true,
-            "open": true,
+            "open": false,
             "content": "<p>• <strong>NAD+</strong> – cellular energy & healthy dopamine support<br/>• <strong>Creatine</strong> – sustained brain & muscle performance<br/>• <strong>Magnesium</strong> – calming the nervous system & sleep support<br/>• <strong>Micro-Melatonin</strong> – easing into sleep without morning grogginess<br/><strong>No sugar • No dyes • Transparent formula</strong></p>",
             "page": "",
             "margin_top": 24,
@@ -455,7 +455,7 @@
             "filled_icon": false,
             "collapse_icon": "carret",
             "display_top_border": true,
-            "open": true,
+            "open": false,
             "content": "<p>• Calmer, more stable focus (less jitter, less crash)<br/>• Deeper, more restorative sleep with clearer mornings<br/>• Ultra-convenient: no pills, no mixing, no timing games<br/>• Dermatologically tested; sweat / workout friendly</p>",
             "page": "",
             "margin_top": 24,
@@ -471,7 +471,7 @@
             "filled_icon": false,
             "collapse_icon": "carret",
             "display_top_border": true,
-            "open": true,
+            "open": false,
             "content": "<p>AM – SURGE: Apply 1 patch to clean, dry skin (inner/upper arm or shoulder). Wear 4–8 hours on focus days.<br/>PM – DRIFT: Apply 1 patch 30–60 minutes before bed. Remove on wake-up.<br/>Tip: Rotate placement sites if your skin is sensitive.<br/><br/>WHAT YOU’LL FEEL<br/>• Day one: cleaner focus and more stable mental energy<br/>• 1–3 nights: deeper sleep and less morning fog<br/>• 3–4 weeks: more finished work, fewer wasted afternoons</p>",
             "page": "",
             "margin_top": 24,
@@ -678,7 +678,7 @@
           "type": "stat_item",
           "settings": {
             "subheading": "Deeper Sleep",
-            "stat_value": "82%",
+            "stat_value": "82",
             "description": "<p>Reported falling asleep faster and waking up more refreshed<br/></p>"
           }
         },
@@ -841,8 +841,8 @@
       ],
       "name": "card-slider-section",
       "settings": {
-        "heading_regular": "Why Optimizers Choose Ondermax",
-        "heading_italic": "",
+        "heading_regular": "Comprehensive Benefits",
+        "heading_italic": "*",
         "descriptionvv": "",
         "subheading": "",
         "description": ""
@@ -1401,8 +1401,8 @@
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/3rd-step.jpg",
-            "title": "WAKE REFRESHED",
-            "text": "<p>Wake up energized and ready to perform. Repeat daily for compounding results.</p>"
+            "title": "APPLY DRIFT",
+            "text": "<p>Apply the DRIFT patch in the evening to promote deep, restorative sleep without grogginess in the morning.</p>"
           }
         }
       },
