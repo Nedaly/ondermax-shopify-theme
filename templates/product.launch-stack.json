@@ -63,7 +63,7 @@
             "desktop_text_size": 14,
             "alignment": "left",
             "text_color": "#1c8e8e",
-            "text_1": "•<strong>Beat Distractions </strong>•<strong>Get more done </strong>•<strong>Wake clear</strong>",
+            "text_1": "•<strong>Steady energy by day </strong>•<strong>Deep recovery by night </strong>•<strong>No pills, no crashes</strong>",
             "text_2": "",
             "text_3": "",
             "icon_scale": 120,
@@ -423,7 +423,7 @@
             "filled_icon": false,
             "collapse_icon": "carret",
             "display_top_border": true,
-            "open": false,
+            "open": true,
             "content": "{{ product.description }}",
             "page": "",
             "margin_top": 24,
@@ -433,13 +433,13 @@
         "collapsible_tab_QTDxQB": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "What’s inside",
+            "heading": "What's inside",
             "heading_size": "medium",
             "icon": "",
             "filled_icon": false,
             "collapse_icon": "carret",
             "display_top_border": true,
-            "open": false,
+            "open": true,
             "content": "<p>• <strong>NAD+</strong> – cellular energy & healthy dopamine support<br/>• <strong>Creatine</strong> – sustained brain & muscle performance<br/>• <strong>Magnesium</strong> – calming the nervous system & sleep support<br/>• <strong>Micro-Melatonin</strong> – easing into sleep without morning grogginess<br/><strong>No sugar • No dyes • Transparent formula</strong></p>",
             "page": "",
             "margin_top": 24,
@@ -455,7 +455,7 @@
             "filled_icon": false,
             "collapse_icon": "carret",
             "display_top_border": true,
-            "open": false,
+            "open": true,
             "content": "<p>• Calmer, more stable focus (less jitter, less crash)<br/>• Deeper, more restorative sleep with clearer mornings<br/>• Ultra-convenient: no pills, no mixing, no timing games<br/>• Dermatologically tested; sweat / workout friendly</p>",
             "page": "",
             "margin_top": 24,
@@ -471,7 +471,7 @@
             "filled_icon": false,
             "collapse_icon": "carret",
             "display_top_border": true,
-            "open": false,
+            "open": true,
             "content": "<p>AM – SURGE: Apply 1 patch to clean, dry skin (inner/upper arm or shoulder). Wear 4–8 hours on focus days.<br/>PM – DRIFT: Apply 1 patch 30–60 minutes before bed. Remove on wake-up.<br/>Tip: Rotate placement sites if your skin is sensitive.<br/><br/>WHAT YOU’LL FEEL<br/>• Day one: cleaner focus and more stable mental energy<br/>• 1–3 nights: deeper sleep and less morning fog<br/>• 3–4 weeks: more finished work, fewer wasted afternoons</p>",
             "page": "",
             "margin_top": 24,
@@ -678,7 +678,7 @@
           "type": "stat_item",
           "settings": {
             "subheading": "Deeper Sleep",
-            "stat_value": "82",
+            "stat_value": "82%",
             "description": "<p>Reported falling asleep faster and waking up more refreshed<br/></p>"
           }
         },
@@ -792,8 +792,8 @@
           "type": "card",
           "settings": {
             "front_image": "shopify://shop_images/ezgif-1c16be4e7b5dee.gif",
-            "title": "Protects focus",
-            "front_description": "On SURGE days",
+            "title": "8+ Hours Steady Focus",
+            "front_description": "No afternoon energy crash",
             "back_content": "<p>On SURGE days, you’re not starting 10 tasks and finishing none. You sit, focus, and ship.</p><p></p>",
             "button_label": "",
             "button_link": ""
@@ -803,8 +803,8 @@
           "type": "card",
           "settings": {
             "front_image": "shopify://shop_images/ezgif-14cc8c86a229a1.gif",
-            "title": "Cuts scroll loops",
-            "front_description": "Makes it easier to stay out of the",
+            "title": "Reduces Distractions",
+            "front_description": "Stay locked in on deep work",
             "back_content": "<p>Makes it easier to stay out of the “I’ll just check my phone” hole that eats your afternoons.</p><h3><br/><br/></h3>",
             "button_label": "",
             "button_link": ""
@@ -814,8 +814,8 @@
           "type": "card",
           "settings": {
             "front_image": "shopify://shop_images/Ondermax-surge-drift-without-pouches.png",
-            "title": "Less dependence on caffeine",
-            "front_description": "Stable mental clarity without",
+            "title": "Clean Energy",
+            "front_description": "No jitters, no crash, no dependency",
             "back_content": "<p>Stable mental clarity without chasing another coffee or energy drink every few hours.</p><h3><br/><br/></h3>",
             "button_label": "",
             "button_link": ""
@@ -825,8 +825,8 @@
           "type": "card",
           "settings": {
             "front_image": "shopify://shop_images/4_f67b46d8-9736-4f23-bc56-7aac35f9d2c0.png",
-            "title": "Respects your future self",
-            "front_description": "A simple ritual that rebuilds",
+            "title": "Compounding Results",
+            "front_description": "Benefits increase over 4-8 weeks of use",
             "back_content": "<p>A simple ritual that rebuilds self-trust: you actually do what you said you’d do today.</p>",
             "button_label": "",
             "button_link": ""
@@ -841,8 +841,8 @@
       ],
       "name": "card-slider-section",
       "settings": {
-        "heading_regular": "Comprehensive Benefits",
-        "heading_italic": "*",
+        "heading_regular": "Why Optimizers Choose Ondermax",
+        "heading_italic": "",
         "descriptionvv": "",
         "subheading": "",
         "description": ""
@@ -1401,8 +1401,8 @@
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/3rd-step.jpg",
-            "title": "APPLY DRIFT",
-            "text": "<p>Apply the DRIFT patch in the evening to promote deep, restorative sleep without grogginess in the morning.</p>"
+            "title": "WAKE REFRESHED",
+            "text": "<p>Wake up energized and ready to perform. Repeat daily for compounding results.</p>"
           }
         }
       },
@@ -1429,13 +1429,13 @@
     "breakdown_lists_GbXtzy",
     "comparison_table_section_M97hdE",
     "trusted_by_EJGWCr",
+    "steps_with_cta_ra7Gye",
     "product_object_ingredient_new_weLHKq",
     "product_image_text_column_new_PXPRxy",
     "benefits_story_GA7YYb",
     "drift_night_only",
     "static_image_grid",
     "176405177790d8925f",
-    "faq_section",
-    "steps_with_cta_ra7Gye"
+    "faq_section"
   ]
 }
