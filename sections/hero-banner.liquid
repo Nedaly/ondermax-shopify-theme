@@ -1,0 +1,1445 @@
+ 
+ {% comment %}
+  Hero Banner With Text Section
+{% endcomment %}
+
+<section class="hero-banner-section">
+  <div class="hero-banner-grid">
+    <div class="hero-banner-grid__inner">
+
+      <!-- IMAGE -->
+      <div class="hero-banner-grid__media" style="
+    background-image: url('{{ section.settings.hero_image | image_url: width: 1500 }}');
+    background-size: 100%;
+    background-position: inherit;
+  "
+  fetchpriority="high">
+        <div class="hero-banner-grid__image">
+          <picture style="display:none;">
+            <source
+              media="(max-width: 749px)"
+              srcset="{{ section.settings.hero_image | image_url: width: 375 }} 375w,
+                      {{ section.settings.hero_image | image_url: width: 550 }} 550w,
+                      {{ section.settings.hero_image | image_url: width: 750 }} 750w"
+              sizes="100vw">
+
+            <source
+              media="(min-width: 750px)"
+              srcset="{{ section.settings.hero_image | image_url: width: 550 }} 550w,
+                      {{ section.settings.hero_image | image_url: width: 720 }} 720w,
+                      {{ section.settings.hero_image | image_url: width: 990 }} 990w,
+                      {{ section.settings.hero_image | image_url: width: 1100 }} 1100w,
+                      {{ section.settings.hero_image | image_url: width: 1500 }} 1500w"
+              sizes="(min-width: 990px) 50vw, 100vw">
+
+            <img
+              src="{{ section.settings.hero_image | image_url: width: 1500 }}"
+              alt="{{ section.settings.heading | escape }}"
+              loading="eager"
+              fetchpriority="high">
+          </picture>
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="hero-banner-grid__content">
+        <div class="hero-banner-grid__content-inner">
+
+          <!-- Heading -->
+          <div class="hero-banner-grid__heading">
+
+            {% if section.settings.show_trust %}
+<ul class="trust" aria-label="Trust indicators">
+  <li class="trust-item stars" aria-label="5 star rating">
+    <span style="color:black;">★★★★★ 4.7 • 15,000+ Optimizers</span>
+  </li>
+</ul>
+{% endif %}
+
+            <h1>
+              <span class="hero-banner-grid__heading-text">
+                {{ section.settings.heading }}
+              </span>
+
+              {% if section.settings.animated_text_list != blank %}
+                {% assign texts = section.settings.animated_text_list | split: "|" %}
+
+                <span class="italic-text-slider-viewport">
+                  <span class="italic-text-slider-reel">
+                    {% for text in texts %}
+                      <span class="italic-text-slider-item"><em>{{ text }}</em></span>
+                    {% endfor %}
+                    <!-- Repeat first item to loop smoothly -->
+                    <span class="italic-text-slider-item"><em>{{ texts.first }}</em></span>
+                  </span>
+                </span>
+              {% endif %}
+            </h1>
+          </div>
+
+          <!-- Description -->
+          <div class="hero-banner-grid__text rte">
+            {{ section.settings.description }}
+          </div>
+
+          <!-- Button -->
+          {% if section.settings.button_label != blank %}
+            <div class="hero-banner-grid__button">
+              <a href="{{ section.settings.button_link }}" class="button">
+                {{ section.settings.button_label }}
+              </a>
+            </div>
+            <p class="hero-banner-grid__guarantee">30-Day Results Guarantee • Free Worldwide Shipping</p>
+          {% endif %}
+
+          <!-- Bullet Points -->
+          {% if section.blocks.size > 0 %}
+            <div class="hero-banner-grid__bullet-points">
+              {% for block in section.blocks %}
+                <div class="hero-banner-grid__bullet-item" {{ block.shopify_attributes }}>
+                  <div class="hero-banner-grid__bullet-icon">
+                    {% if block.settings.icon != blank %}
+                      <img src="{{ block.settings.icon | image_url: width: 20 }}" width="20" height="20">
+                    {% endif %}
+                  </div>
+                  <div class="hero-banner-grid__bullet-title">
+                    {{ block.settings.text }}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+ 
+ 
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const viewport = document.querySelector('.italic-text-slider-viewport');
+    if (!viewport) return;
+
+    const reel = viewport.querySelector('.italic-text-slider-reel');
+    const items = reel.querySelectorAll('.italic-text-slider-item');
+    
+    if (!reel || !items || items.length === 0) {
+      if(viewport) viewport.classList.add('italic-text-slider-viewport--visible');
+      return;
+    }
+
+    let sliderInterval = null;
+    let lastWidth = window.innerWidth;
+    let resizeTimeout = null; // For debouncing resize
+    
+    function updateViewportWidth() {
+      if (!items.length || !viewport) return;
+      
+      items.forEach(item => {
+        item.style.width = ''; 
+      });
+      
+      let maxWidthBasedOnText = 0;
+      items.forEach(item => {
+        const itemWidth = item.scrollWidth;
+        maxWidthBasedOnText = Math.max(maxWidthBasedOnText, itemWidth);
+      });
+      
+      const desiredTextWidth = Math.max(maxWidthBasedOnText + 15, 100); // Buffer for text
+
+      let finalWidth;
+      const isDesktop = window.innerWidth >= 750;
+      // Respect CSS min-width, adjust default based on view. These are fallbacks if getComputedStyle fails or returns 0.
+      const cssViewportMinWidthFallback = isDesktop ? 150 : 200;
+      const cssViewportMinWidth = parseFloat(window.getComputedStyle(viewport).minWidth) || cssViewportMinWidthFallback;
+
+      if (isDesktop) {
+        let constraintContainer = viewport.closest('.hero-banner-grid__content-inner') || viewport.closest('.hero-banner-grid__content');
+        // Generous constraint for desktop, fallback to a large portion of window width if container not found.
+        let desktopConstraintWidth = window.innerWidth * 0.7; 
+        
+        if (constraintContainer) {
+            desktopConstraintWidth = constraintContainer.offsetWidth * 0.98; // Allow up to 98% of content area
+        }
+        // Prioritize desiredTextWidth unless it exceeds the generous desktopConstraintWidth.
+        finalWidth = Math.min(desiredTextWidth, desktopConstraintWidth);
+        finalWidth = Math.max(finalWidth, cssViewportMinWidth); // Ensure it respects the (potentially larger) CSS min-width.
+
+      } else { // Mobile
+        let constraintContainer = viewport.closest('.hero-banner-grid__content-inner') || viewport.closest('.hero-banner-grid__content');
+        let mobileConstraintWidth = window.innerWidth * 0.9; 
+
+        if (constraintContainer) {
+          mobileConstraintWidth = constraintContainer.offsetWidth * 0.95; 
+        }
+        
+        finalWidth = Math.min(desiredTextWidth, mobileConstraintWidth);
+        finalWidth = Math.max(finalWidth, cssViewportMinWidth);
+      }
+
+      viewport.style.width = `${finalWidth}px`;
+      items.forEach(item => {
+        item.style.width = `${finalWidth}px`;
+      });
+    }
+    
+    function initializeSlider() {
+      if (sliderInterval) {
+        clearInterval(sliderInterval);
+        sliderInterval = null;
+      }
+      if (reel) {
+        reel.style.transition = 'none';
+        reel.style.transform = 'translateY(0px)';
+        reel.offsetHeight; 
+      }
+
+      let actualUniqueItemsInReel = items.length;
+      if (items.length > 1 && items[0].textContent === items[items.length - 1].textContent) {
+          actualUniqueItemsInReel = items.length - 1; 
+      }
+
+      updateViewportWidth();
+      
+      if (actualUniqueItemsInReel <= 1) {
+        if (items.length > 0) {
+          const staticItem = items[0];
+          staticItem.style.height = ''; 
+          viewport.style.height = '';
+          
+          setTimeout(() => {
+            let staticItemHeight = staticItem.offsetHeight;
+            if (staticItemHeight <= 1) { 
+                const isMobile = window.innerWidth < 750;
+                const isSmallMobile = window.innerWidth < 375;
+                let emFallback = isSmallMobile ? '1.4em' : (isMobile ? '1.3em' : '1.2em');
+                viewport.style.height = emFallback;
+                staticItem.style.height = emFallback;
+            } else {
+                viewport.style.height = `${staticItemHeight}px`;
+                staticItem.style.height = `${staticItemHeight}px`;
+            }
+            viewport.classList.add('italic-text-slider-viewport--visible');
+          }, 75);
+        } else {
+          viewport.classList.add('italic-text-slider-viewport--visible');
+        }
+        return;
+      }
+
+      let currentIndex = 0;
+      
+      items.forEach(item => item.style.height = '');
+      if(reel) reel.style.height = '';
+      viewport.style.height = '';
+      
+      setTimeout(() => {
+        const itemElementForSizing = items[0];
+        let itemHeight = itemElementForSizing.offsetHeight;
+
+        if (itemHeight <= 1) { 
+            const isMobileView = window.innerWidth < 750;
+            const isSmallMobileView = window.innerWidth < 375;
+            let emFactor = 1.2;
+            if (isSmallMobileView) emFactor = 1.4;
+            else if (isMobileView) emFactor = 1.3;
+
+            let parentH1 = viewport.closest('h1');
+            let parentElementForFontSize = parentH1 || viewport; // Fallback to viewport itself if h1 not found
+            let parentFontSize = parseFloat(window.getComputedStyle(parentElementForFontSize).fontSize);
+            
+            if (isNaN(parentFontSize) || parentFontSize === 0) parentFontSize = 16; 
+            
+            itemHeight = parentFontSize * emFactor;
+
+            if (itemHeight <= 1) { 
+                console.warn('Hero Banner Slider: Fallback could not determine item height. Using em directly.');
+                const fallbackEmHeight = isSmallMobileView ? '1.4em' : (isMobileView ? '1.3em' : '1.2em');
+                viewport.style.height = fallbackEmHeight;
+                items.forEach(item => item.style.height = fallbackEmHeight);
+            }
+        }
+
+        if (itemHeight <= 1 && actualUniqueItemsInReel > 1) { 
+            viewport.classList.add('italic-text-slider-viewport--visible');
+            console.error("Hero Banner Slider: Cannot initialize animation due to zero item height after fallback.");
+            return; 
+        }
+        
+        const totalUniqueItemsForLoop = actualUniqueItemsInReel;
+        const animationDelay = 3000;
+        const transitionDurationMs = 800;
+
+        if(reel) reel.style.height = `${itemHeight * items.length}px`;
+        viewport.style.height = `${itemHeight}px`;
+        items.forEach(item => item.style.height = `${itemHeight}px`);
+        
+        if (reel) {
+            reel.style.transition = `transform 1.2s cubic-bezier(0.23, 1, 0.32, 1)`;
+        }
+        
+        // Initialize premium state system
+        updateItemStates();
+
+        function updateItemStates() {
+          // Remove all state classes first
+          items.forEach(item => {
+            item.classList.remove('active', 'entering', 'exiting');
+          });
+          
+          // Set states for premium fade transition
+          const currentItem = items[currentIndex];
+          const nextIndex = (currentIndex + 1) % totalUniqueItemsForLoop;
+          const nextItem = items[nextIndex];
+          const prevIndex = currentIndex === 0 ? totalUniqueItemsForLoop - 1 : currentIndex - 1;
+          const prevItem = items[prevIndex];
+          
+          // Set current item as active
+          if (currentItem) currentItem.classList.add('active');
+          
+          // Set next item as entering (for pre-loading the transition)
+          if (nextItem && nextItem !== currentItem) nextItem.classList.add('entering');
+          
+          // Set previous item as exiting (in case of overlap)
+          if (prevItem && prevItem !== currentItem) prevItem.classList.add('exiting');
+          
+          // Set all other items to default entering state
+          items.forEach((item, index) => {
+            if (index !== currentIndex && index !== nextIndex && index !== prevIndex) {
+              item.classList.add('entering');
+            }
+          });
+        }
+
+        function showNextItem() {
+          // Start transition by setting exiting state for current item
+          const currentItem = items[currentIndex];
+          if (currentItem) {
+            currentItem.classList.remove('active');
+            currentItem.classList.add('exiting');
+          }
+          
+          currentIndex++;
+          
+          // Check if we need to reset BEFORE starting the animation
+          if (currentIndex >= totalUniqueItemsForLoop) {
+            // Handle loop reset with SAME animation as normal slides
+            setTimeout(() => {
+              if(reel) {
+                // Reset reel position instantly (invisible to user)
+                reel.style.transition = 'none';
+                currentIndex = 0;
+                reel.style.transform = `translateY(0px)`;
+                reel.offsetHeight;
+                reel.style.transition = `transform 1.2s cubic-bezier(0.23, 1, 0.32, 1)`;
+                
+                // Set all items to proper states for animation
+                items.forEach(item => {
+                  item.classList.remove('active', 'entering', 'exiting');
+                });
+                
+                // Set first item to entering state (not active!)
+                const firstItem = items[0];
+                if (firstItem) {
+                  firstItem.classList.add('entering');
+                }
+                
+                // Set other items to entering
+                items.forEach((item, index) => {
+                  if (index > 0) {
+                    item.classList.add('entering');
+                  }
+                });
+                
+                // Now animate first item from entering → active (SAME as normal slides)
+                setTimeout(() => {
+                  if (firstItem) {
+                    firstItem.classList.remove('entering');
+                    firstItem.classList.add('active');
+                  }
+                  
+                  // Update states for next transition
+                  setTimeout(() => {
+                    updateItemStates();
+                  }, 200);
+                }, 150); // Same stagger timing as normal slides
+              }
+            }, 300);
+          } else {
+            // Normal animation logic only when NOT resetting
+            setTimeout(() => {
+              const newCurrentItem = items[currentIndex % items.length];
+              if (newCurrentItem) {
+                newCurrentItem.classList.remove('entering');
+                newCurrentItem.classList.add('active');
+              }
+              
+              // Update reel position with enhanced easing
+              if(reel) reel.style.transform = `translateY(-${currentIndex * itemHeight}px)`;
+              
+              // Update all item states for next transition
+              setTimeout(() => {
+                updateItemStates();
+              }, 200);
+            }, 150); // Stagger the incoming animation
+          }
+        }
+
+        if (totalUniqueItemsForLoop > 1) {
+          sliderInterval = setInterval(showNextItem, animationDelay);
+        }
+        viewport.classList.add('italic-text-slider-viewport--visible');
+      }, 75);
+    }
+    
+    function handleResize() {
+      const currentWidth = window.innerWidth;
+      const widthChangedSignificantly = Math.abs(lastWidth - currentWidth) > 10; // Slightly more sensitive
+      const breakpointCrossed = 
+        (lastWidth < 750 && currentWidth >= 750) || 
+        (lastWidth >= 750 && currentWidth < 750) ||
+        (lastWidth < 375 && currentWidth >= 375) ||
+        (lastWidth >= 375 && currentWidth < 375);
+        
+      if (widthChangedSignificantly || breakpointCrossed) {
+        lastWidth = currentWidth;
+        
+        if (sliderInterval) {
+          clearInterval(sliderInterval);
+          sliderInterval = null;
+        }
+        if (reel) {
+          reel.style.transition = 'none'; 
+          reel.style.transform = 'translateY(0px)'; 
+          reel.offsetHeight; 
+        }
+
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            initializeSlider(); 
+        }, 150); // Debounce initialization by 150ms
+      }
+    }
+    
+    setTimeout(() => {
+      initializeSlider();
+    }, 150);
+    
+    window.addEventListener('resize', handleResize);
+  });
+</script></div>
+<style>
+    .hero-banner-grid {
+    overflow: hidden;
+    position: relative;
+    min-height: 500px;
+    background-color: #FFFFFF; /* Set main background to white */
+}
+
+.hero-banner-grid::before,
+.hero-banner-grid::after {
+    content: '';
+    position: absolute;
+    border-radius: 50% 60% 40% 70% / 70% 50% 60% 30%; /* Base organic shape */
+    opacity: 0.55; 
+    filter: blur(45px); 
+    z-index: 0; 
+    will-change: transform, opacity, border-radius;
+}
+
+/* Secondary, complementary blob */
+.hero-banner-grid::before { 
+    width: 60vmax; 
+    height: 60vmax;
+    top: -10%; 
+    left: -20%; /* Starts more top-left, less aggressive */
+   background: radial-gradient(ellipse at center, #E8F3FF 50%, #D4E8FF 100%);
+    animation: morphBlobBefore 28s infinite linear alternate;
+    animation-delay: -2s; /* Offset animation */
+}
+
+/* Primary blob - starts bottom-right and expands */
+.hero-banner-grid::after { 
+    width: 50vmax; /* Starts smaller */
+    height: 50vmax; /* Starts smaller */
+    bottom: -25%; /* Positioned clearly in bottom-right */
+    right: -25%; 
+   background: radial-gradient(ellipse at center, #E8F3FF 50%, #D4E8FF 100%);
+    animation: morphBlobAfterExpand 25s infinite ease-in-out alternate; 
+}
+
+@keyframes morphBlobBefore { /* Animation for the secondary blob */
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(0.9);
+        border-radius: 50% 60% 40% 70% / 70% 50% 60% 30%;
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(10vmin, 5vmin) rotate(150deg) scale(1.1);
+        border-radius: 60% 40% 70% 50% / 50% 70% 40% 60%;
+        opacity: 0.65;
+    }
+    100% {
+        transform: translate(-5vmin, -10vmin) rotate(330deg) scale(0.9);
+        border-radius: 50% 60% 40% 70% / 70% 50% 60% 30%;
+        opacity: 0.5;
+    }
+}
+
+@keyframes morphBlobAfterExpand { /* Animation for the primary, expanding blob */
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(0.6); /* Starts small */
+        border-radius: 70% 30% 60% 40% / 60% 40% 70% 30%;
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-35vmin, -30vmin) rotate(-160deg) scale(2.2); /* Expands significantly and moves up-left */
+        border-radius: 40% 60% 30% 70% / 30% 70% 40% 60%;
+        opacity: 0.75;
+    }
+    100% {
+        transform: translate(-10vmin, -5vmin) rotate(-340deg) scale(0.8); /* Recedes slightly, different end point */
+        border-radius: 70% 30% 60% 40% / 60% 40% 70% 30%;
+        opacity: 0.6;
+    }
+}
+
+.hero-banner-grid__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding: 20px 0;
+}
+
+.hero-banner-grid__media {
+    height: 100%;
+    position: relative;
+    order: 1;
+}
+
+.hero-banner-grid__image {
+    height: 100%;
+    max-height: 360px;
+    overflow: hidden;
+    border-radius: 0px;
+    margin: 0 auto;
+    max-width: 100%;
+    position: relative;
+    /* Ensure minimum height to prevent content being too small */
+    min-height: 300px;
+
+}
+
+.hero-banner-grid__image img,
+.hero-banner-grid__video video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 0px;
+    object-fit: cover;
+    object-position: center; 
+}
+
+.hero-banner-grid__content {
+    padding: 20px;
+    order: 2;
+    text-align: center;
+}
+
+.hero-banner-grid__content-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 95%;
+}
+
+.hero-banner-grid__heading {
+    margin-bottom: 15px;
+}
+
+.hero-banner-grid__heading h1 {
+    font-size: calc(var(--font-heading-scale) * 2.6rem);
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    gap: 0.25em; /* Add gap between heading and italic text */
+}
+
+.hero-banner-grid__heading-text {
+    display: inline-block; /* Ensure it acts like inline text but can have margin/padding */
+    max-width: 100%;
+    font-weight: 400;
+}
+
+.hero-banner-grid__heading h1 em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.hero-banner-grid__text {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgb(var(--color-foreground));
+}
+
+.hero-banner-grid__button {
+    margin-bottom: 30px;
+}
+
+.hero-banner-grid__button .button {
+    min-width: 160px;
+    padding: 8px 30px;
+    font-size: 12px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.hero-banner-grid__guarantee {
+    font-size: 12px;
+    color: #666;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.hero-banner-grid__bullet-points {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+.hero-banner-grid__bullet-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.hero-banner-grid__bullet-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-banner-grid__bullet-icon img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-banner-grid__bullet-title {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: #50000B;
+}
+
+.hero-banner-grid__media .mobile_image, .hero-banner-grid__media .mobile_video {
+    display: block;
+}
+
+.hero-banner-grid__media .desktop_image, .hero-banner-grid__media .desktop_video {
+    display: none;
+}
+
+.hero-banner-grid__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Lighten and soften the media under the text area for readability */
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0.00) 0%,
+        rgba(255, 255, 255, 0.00) 38%,
+        rgba(255, 255, 255, 0.55) 70%,
+        rgba(255, 255, 255, 0.85) 100%
+    );
+    mix-blend-mode: normal;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@supports ((-webkit-backdrop-filter: blur(6px)) or (backdrop-filter: blur(6px))) {
+    .hero-banner-grid__overlay {
+        -webkit-backdrop-filter: blur(6px) saturate(1.02);
+        backdrop-filter: blur(6px) saturate(1.02);
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .hero-banner-grid__content-inner {
+        max-width: 500px;
+    }
+    
+    .hero-banner-grid__heading h1 {
+        font-size: calc(var(--font-heading-scale) * 2.4rem);
+    }
+    
+    .hero-banner-grid__content {
+        padding: 30px;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+.hero-banner-grid__image picture {display:block!important;}
+}
+
+@media screen and (min-width: 750px) {
+    .hero-banner-grid {
+        min-height: 550px;
+    }
+    
+    .hero-banner-grid__inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 0;
+    }
+    
+    .hero-banner-grid__content {
+        padding: 40px;
+        order: unset;
+        text-align: left;
+        position: relative;
+        z-index: 3; /* Above overlays */
+    }
+    
+    .hero-banner-grid__media {
+        order: unset;
+        height: 100%;
+    }
+    
+    .hero-banner-grid__image {
+        max-height: 100vh;
+        height: 100%;
+        min-height: 100vh; /* Ensure adequate height on desktop */
+    }
+    
+    .hero-banner-grid__content-inner {
+        margin: 0;
+    }
+    
+    .hero-banner-grid__bullet-points {
+        margin: 0;
+    }
+    
+    .hero-banner-grid__heading h1 {
+        font-size: calc(var(--font-heading-scale) * 3.2rem);
+    }
+    
+    .hero-banner-grid__text {
+        font-size: 14px;
+    }
+    
+    .hero-banner-grid__media .mobile_image, .hero-banner-grid__media .mobile_video {
+        display: none;
+    }
+    
+    .hero-banner-grid__media .desktop_image, .hero-banner-grid__media .desktop_video {
+        display: block;
+    }
+
+    .hero-banner-grid::before,
+    .hero-banner-grid::after {
+        content: '';
+        position: absolute;
+        opacity: 0.6; /* Base opacity, refined in keyframes */
+        filter: blur(45px); /* Premium soft blur */
+        z-index: 0; 
+        will-change: transform, opacity, border-radius;
+        /* Shapes will primarily operate within the right 50% */
+    }
+
+    /* More lively secondary blob */
+    .hero-banner-grid::before { 
+        width: 55vmax; 
+        height: 55vmax;
+        /* Initial position is less critical as animation dictates its dance */
+        top: -10%; 
+        right: -10%; 
+background: radial-gradient(ellipse at center, #5187c1 50%, #79abe4 100%);        animation: livelyBlobBefore 30s infinite ease-in-out alternate;
+        animation-delay: -1.5s; /* Staggered start */
+    }
+
+    /* More dynamic primary blob */
+    .hero-banner-grid::after { 
+        width: 60vmax; /* Slightly larger for more impact potential */
+        height: 60vmax;
+        /* Initial position is less critical */
+        bottom: -15%; 
+        right: -20%; 
+       background: radial-gradient(ellipse at center, #5187c1 50%, #79abe4 100%);
+        animation: livelyBlobAfter 28s infinite ease-in-out alternate; 
+    }
+
+    @keyframes livelyBlobBefore { 
+        0% {
+            transform: translate(5vmin, -5vmin) rotate(0deg) scale(0.7);
+            border-radius: 30% 70% 60% 40% / 50% 40% 70% 30%;
+            opacity: 0.5;
+        }
+        25% {
+            transform: translate(-20vmin, 15vmin) rotate(90deg) scale(1.0);
+            border-radius: 70% 30% 40% 60% / 60% 70% 30% 40%;
+            opacity: 0.65;
+        }
+        50% {
+            transform: translate(10vmin, -20vmin) rotate(180deg) scale(0.8);
+            border-radius: 40% 60% 30% 70% / 30% 50% 60% 40%;
+            opacity: 0.55;
+        }
+        75% {
+            transform: translate(-10vmin, 10vmin) rotate(270deg) scale(1.1);
+            border-radius: 60% 40% 70% 30% / 70% 30% 40% 60%;
+            opacity: 0.6;
+        }
+        100% {
+            transform: translate(5vmin, -5vmin) rotate(360deg) scale(0.7);
+            border-radius: 30% 70% 60% 40% / 50% 40% 70% 30%;
+            opacity: 0.5;
+        }
+    }
+
+    @keyframes livelyBlobAfter { 
+        0% {
+            transform: translate(-5vmin, 10vmin) rotate(45deg) scale(0.6);
+            border-radius: 60% 40% 50% 50% / 40% 60% 70% 30%;
+            opacity: 0.55;
+        }
+        25% {
+            transform: translate(25vmin, -20vmin) rotate(-120deg) scale(1.2); 
+            border-radius: 30% 70% 50% 50% / 70% 30% 60% 40%;
+            opacity: 0.7;
+        }
+        50% {
+            transform: translate(-30vmin, 25vmin) rotate(200deg) scale(0.75);
+            border-radius: 70% 30% 60% 40% / 50% 70% 30% 50%;
+            opacity: 0.6;
+        }
+        75% {
+            transform: translate(15vmin, -10vmin) rotate(-290deg) scale(1.1);
+            border-radius: 50% 50% 30% 70% / 30% 60% 40% 70%;
+            opacity: 0.65;
+        }
+        100% {
+            transform: translate(-5vmin, 10vmin) rotate(405deg) scale(0.6); /* 360 + 45 for seamless loop with start */
+            border-radius: 60% 40% 50% 50% / 40% 60% 70% 30%;
+            opacity: 0.55;
+        }
+    }
+
+    /* Desktop Overlay Adjustments */
+    .hero-banner-overlay__branding {
+        top: 10%;
+        left: 6%;
+        max-width: 40%;
+    }
+    
+    .signature-img {
+        height: clamp(60px, 6vw, 100px);
+    }
+    
+    .hero-banner-overlay__logo {
+        bottom: 10%;
+        width: 85%;
+    }
+    
+    .hero-banner-overlay__lion {
+        top: 12%;
+        left: 8%;
+        width: 100%;
+        height: 75%;
+        opacity: 0.25;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .hero-banner-grid {
+        min-height: 80vh;
+    }
+    
+    .hero-banner-grid__inner {
+        gap: 60px;
+      min-height: 88vh;
+    }
+    
+    .hero-banner-grid__content {
+        padding: 80px;
+                padding-top: 0px;
+    }
+    
+    .hero-banner-grid__heading h1 {
+        font-size: calc(var(--font-heading-scale) * 4rem);
+    }
+    
+    .hero-banner-grid__text {
+        font-size: 16px;
+        max-width: 480px;
+    }
+    
+    .hero-banner-grid__button .button {
+        padding: 10px 36px;
+        font-size: 14px;
+    }
+    
+    .hero-banner-grid__bullet-title {
+        font-size: 14px;
+    }
+    
+    /* Large Desktop Overlay Optimizations */
+    .hero-banner-overlay__branding {
+        top: 12%;
+        left: 8%;
+        max-width: 35%;
+    }
+    
+    .signature-img {
+        height: clamp(80px, 5vw, 120px);
+    }
+    
+    .hero-banner-overlay__logo {
+        bottom: 12%;
+        width: 80%;
+    }
+    
+    .hero-banner-overlay__lion {
+        top: 10%;
+        left: 10%;
+        width: 100%;
+        height: 80%;
+        opacity: 0.2;
+    }
+    
+    .hero-banner-overlay__athlete {
+        width: 100%;
+        right: 0;
+    }
+    
+    .hero-banner-overlay__lion {
+        width: 100%;
+        height: 85%;
+        top: 8%;
+        left: 2%;
+        opacity: 0.2;
+    }
+}
+
+@media screen and (max-width: 1365px) {
+    .hero-banner-grid__heading h1 {
+        font-size: calc(var(--font-heading-scale) * 3.5rem);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .hero-banner-grid__inner  {
+        padding: 0;
+        gap: 20px;
+    }
+
+    .hero-banner-grid__image,
+    .hero-banner-grid__image img,
+    .hero-banner-grid__video video {
+        border-radius: 0 0 8px 8px;
+    }
+    /* Mobile: shift gradient emphasis to center area for text */
+    .hero-banner-grid__overlay {
+        background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.00) 0%,
+            rgba(255, 255, 255, 0.00) 25%,
+            rgba(255, 255, 255, 0.65) 55%,
+            rgba(255, 255, 255, 0.9) 100%
+        );
+    }
+    
+    /* Ensure top-left content stays visible on mobile */
+    .hero-banner-grid__image img {
+        object-position: top left;
+        /* Adjust if needed - you can fine-tune this for mobile */
+    }
+    
+    /* Mobile Overlay Optimizations */
+    .hero-banner-overlay__branding {
+        top: 6%;
+        left: 3%;
+        max-width: 50%;
+    }
+    
+    .signature-img {
+        height: clamp(35px, 8vw, 60px);
+    }
+    
+    .hero-banner-overlay__logo {
+        bottom: 6%;
+        width: 95%;
+    }
+    
+    .hero-banner-overlay__lion {
+        top: 18%;
+        left: 2%;
+        width: 100%;
+        height: 65%;
+        opacity: 0.35;
+    }
+    
+    .hero-banner-overlay__athlete {
+        width: 100%;
+        right: 0;
+    }
+    
+    .hero-banner-overlay__lion {
+        width: 100%;
+        height: 80%;
+        top: 10%;
+        left: 0%;
+        opacity: 0.3;
+    }
+}
+
+/* Hero Banner Italic Text Slider - Premium Award-Winning Implementation */
+.italic-text-slider-viewport {
+  display: inline-block;
+  position: relative;
+  vertical-align: baseline;
+  height: 1.2em;
+  margin-left: 0;
+  overflow: hidden;
+  min-width: 150px;
+  width: auto;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.italic-text-slider-viewport--visible {
+  opacity: 1;
+}
+
+.italic-text-slider-reel {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+}
+
+.italic-text-slider-item {
+  display: block;
+  white-space: nowrap;
+  height: 1.2em;
+  line-height: 1.2em;
+  font-size: inherit;
+  font-weight: 400;
+  min-width: 150px;
+  padding: 0 2px;
+  
+  /* Premium fade transition system */
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: 
+    opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    filter 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, transform, filter;
+  
+  /* Text rendering optimizations */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Active item (currently visible) */
+.italic-text-slider-item.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0px) brightness(1);
+}
+
+/* Items entering from below */
+.italic-text-slider-item.entering {
+  opacity: 0;
+  transform: translateY(15px) scale(0.98);
+  filter: blur(1px) brightness(1.1);
+}
+
+/* Items exiting to above */
+.italic-text-slider-item.exiting {
+  opacity: 0;
+  transform: translateY(-15px) scale(0.98);
+  filter: blur(1px) brightness(0.9);
+}
+
+.italic-text-slider-item em {
+  font-style: italic;
+  color: inherit;
+  display: inline-block;
+  min-width: 1px;
+  
+  /* Premium text effects */
+  background: linear-gradient(135deg, currentColor 0%, currentColor 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  /* Subtle glow effect */
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile-specific adjustments for the italic text slider */
+@media screen and (max-width: 749px) {
+  .hero-banner-grid__heading h1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.1em;
+  }
+
+  .hero-banner-grid__heading {
+    margin-bottom: 0;
+}
+  
+  .italic-text-slider-item em {
+    font-size: 25px;
+  }
+  
+  .hero-banner-grid__heading-text {
+    margin-bottom: 0.2em;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+  }
+  
+  .italic-text-slider-viewport {
+    margin-left: 0;
+    margin-top: 0.2em;
+    height: 1.3em;
+    width: auto;
+    min-width: 200px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .italic-text-slider-item {
+    text-align: center;
+    height: 1.3em;
+    line-height: 1.3em;
+    width: 100%;
+    min-width: 200px;
+  }
+  
+  /* Enhanced mobile transition effects */
+  .italic-text-slider-item.entering {
+    transform: translateY(20px) scale(0.96);
+    filter: blur(1.5px) brightness(1.15);
+  }
+  
+  .italic-text-slider-item.exiting {
+    transform: translateY(-20px) scale(0.96);
+    filter: blur(1.5px) brightness(0.85);
+  }
+  
+  .italic-text-slider-reel {
+    width: 100%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: transform 1.0s cubic-bezier(0.23, 1, 0.32, 1); /* Slightly faster on mobile */
+  }
+  
+  .italic-text-slider-item em {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    /* Enhanced mobile text glow */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 375px) {
+  .hero-banner-grid__heading h1 {
+    font-size: calc(var(--font-heading-scale) * 2.2rem);
+  }
+  
+  /* Extra small screens - ensure branding content is visible */
+  .hero-banner-grid__image img {
+    object-position: 5% top; /* Slight adjustment for very small screens */
+  }
+
+  .italic-text-slider-viewport {
+    height: 1.4em;
+  }
+  
+  .italic-text-slider-item {
+    height: 1.4em;
+    line-height: 1.4em;
+  }
+  
+  /* Ultra-smooth transitions for small screens */
+  .italic-text-slider-item.entering {
+    transform: translateY(25px) scale(0.94);
+    filter: blur(2px) brightness(1.2);
+  }
+  
+  .italic-text-slider-item.exiting {
+    transform: translateY(-25px) scale(0.94);
+    filter: blur(2px) brightness(0.8);
+  }
+  
+  .italic-text-slider-reel {
+    transition: transform 0.9s cubic-bezier(0.23, 1, 0.32, 1); /* Even faster for small screens */
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .hero-banner-grid__content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-banner-grid__heading h1 {
+    font-size: calc(var(--font-heading-scale) * 3.2rem);
+  }
+}
+
+/* Hero Banner Overlay System */
+.hero-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    pointer-events: none; /* Allow clicks to pass through to underlying content */
+}
+
+/* Background Lion Logo */
+.hero-banner-overlay__lion {
+    position: absolute;
+    top: -5%;
+    left: 0%;
+    width: 105%;
+    height: 90%;
+    z-index: 1;
+    opacity: 0.25;
+}
+
+.hero-banner-overlay__lion img {
+    object-fit: contain;
+    max-width: 60%;
+}
+
+.hero-banner-overlay__signature img {
+    max-width: 180px;
+}
+
+.lion-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center left;
+    filter: brightness(0.6) sepia(1) hue-rotate(315deg) saturate(1.5);
+}
+
+/* Aryna Photo - Full Width to Show Complete Image */
+.hero-banner-overlay__athlete {
+    position: absolute;
+    width: 155%;
+    height: auto;
+    z-index: 5;
+    left: -15%;
+    bottom: 0;
+}
+
+.hero-banner-overlay__athlete img {
+    object-fit: contain;
+}
+
+.athlete-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center; /* Show athlete properly from right side */
+}
+
+/* Top Left Branding Area */
+.hero-banner-overlay__branding {
+    position: absolute;
+    top: 8%;
+    left: 4%;
+    z-index: 15;
+    max-width: 45%;
+}
+
+/* Signature */
+.hero-banner-overlay__signature {
+    margin-bottom: 1rem;
+}
+
+.signature-img {
+    width: auto;
+    height: clamp(40px, 8vw, 80px);
+    object-fit: contain;
+    filter: brightness(1.1) saturate(1.2); /* Enhance gold color */
+}
+
+/* Text content removed - included in signature image */
+
+/* Large IM8 Logo - Bottom */
+.hero-banner-overlay__logo {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    z-index: 20;
+}
+
+.im8-logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(1.1) saturate(1.1); /* Enhance gold colors */
+}
+
+@media screen and (max-width: 750px) {
+    .hero-banner-overlay__signature img {
+        max-width: 110px;
+    }
+
+    .hero-banner-overlay__branding {
+        top: 5%;
+    }
+
+  .hero-banner-grid__content {
+    padding-bottom: 10px;
+    
+            max-width: 100%;
+        width: 100%;
+  }
+
+    .hero-banner-overlay__athlete {
+        width: 130%;
+        left: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .hero-banner-grid__inner {
+      
+        flex-direction: column-reverse;
+        display: flex;
+    }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Hero Banner With Text",
+  "tag": "section",
+  "class": "hero-banner-section",
+
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+
+
+ {
+      "type": "checkbox",
+      "id": "show_trust",
+      "label": "Show trust indicators",
+      "default": true
+    },
+
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading Text",
+      "default": "The 24-Hour Optimization System for"
+    },
+    {
+      "type": "textarea",
+      "id": "animated_text_list",
+      "label": "Animated Text List (separate with |)",
+      "default": "Ambitious Minds | Peak Performers | High Achievers"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Replace 10+ daily supplements with 2 patches. Steady energy by day. Deep recovery by night. No pills. No crashes. Just results.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Shop Daily Ultimate Essentials"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "bullet",
+      "name": "Bullet Point",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Tick Icon"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Bullet Text",
+          "default": "30-Day Money Back Guarantee"
+        }
+      ]
+    }
+  ],
+
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Hero Banner",
+      "category": "Banner"
+    }
+  ]
+}
+{% endschema %}
+

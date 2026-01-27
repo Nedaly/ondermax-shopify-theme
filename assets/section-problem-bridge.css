@@ -1,0 +1,77 @@
+.problem-bridge__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.problem-bridge__container--center {
+  text-align: center;
+}
+
+.problem-bridge__container--left {
+  text-align: left;
+}
+
+.problem-bridge__heading {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: rgb(var(--color-foreground));
+}
+
+.problem-bridge__text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgb(var(--color-foreground));
+}
+
+.problem-bridge__highlight {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: rgb(var(--color-base-accent-1));
+}
+
+.problem-bridge__pain-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.problem-bridge__pain-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgb(var(--color-foreground));
+}
+
+.problem-bridge__pain-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+  color: currentColor;
+}
+
+@media screen and (max-width: 749px) {
+  .problem-bridge__heading {
+    font-size: 1.75rem;
+  }
+
+  .problem-bridge__text {
+    font-size: 1rem;
+  }
+
+  .problem-bridge__highlight {
+    font-size: 1.25rem;
+  }
+
+  .problem-bridge__pain-point {
+    font-size: 0.9375rem;
+  }
+}

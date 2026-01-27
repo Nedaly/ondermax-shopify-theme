@@ -1,0 +1,56 @@
+{%- liquid
+  assign style = style | default: 'full'
+  assign title = title | default: '30-Day Guarantee'
+  assign subtitle = subtitle | default: 'Money-back guarantee'
+-%}
+
+<div class="guarantee-badge guarantee-badge--{{ style }}">
+  {% if style == 'full' or style == 'compact' or style == 'icon-only' %}
+    <svg class="guarantee-badge__icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+    </svg>
+  {% endif %}
+  
+  {% if style == 'full' %}
+    <div class="guarantee-badge__content">
+      <div class="guarantee-badge__title">
+        {% capture __maybe %}{{ title | t }}{% endcapture %}
+        {% if __maybe contains 'Translation missing' %}
+          {{ title }}
+        {% else %}
+          {{ __maybe }}
+        {% endif %}
+      </div>
+      {% if subtitle != blank %}
+        <div class="guarantee-badge__subtitle">
+          {% capture __maybe %}{{ subtitle | t }}{% endcapture %}
+          {% if __maybe contains 'Translation missing' %}
+            {{ subtitle }}
+          {% else %}
+            {{ __maybe }}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  {% elsif style == 'compact' %}
+    <span class="guarantee-badge__text">
+      {% capture __maybe %}{{ title | t }}{% endcapture %}
+      {% if __maybe contains 'Translation missing' %}
+        {{ title }}
+      {% else %}
+        {{ __maybe }}
+      {% endif %}
+    </span>
+  {% elsif style == 'icon-only' %}
+    <span class="guarantee-badge__tooltip">
+      {% capture __maybe %}{{ title | t }}{% endcapture %}
+      {% if __maybe contains 'Translation missing' %}
+        {{ title }}
+      {% else %}
+        {{ __maybe }}
+      {% endif %}
+    </span>
+  {% endif %}
+</div>
+
+{{ 'component-guarantee-badge.css' | asset_url | stylesheet_tag }}

@@ -1,0 +1,250 @@
+<div class="Product_object_ingredient_main_new" style="background: {{ section.settings.bg_color }};">
+  <div class="Product_object_ingredient_inner_new">
+    <div class="Product_object_ingredient_mainsides_new">
+
+      <!-- LEFT SIDE -->
+      <div class="Product_object_ingredient_innersides_new">
+        <div class="Product_object_ingredient_innersides_mainleft_new">
+          <div class="Product_object_ingredient_innersides_innerleft_new">
+            <div class="Product_object_ingredient_innersides_innerleft_mainboths_new">
+              <div class="Product_object_ingredient_innersides_innerleft_innerboths_new">
+                <div class="Product_object_ingredient_innersides_innerleft_innerboths_videoimage_new">
+
+                  {% if section.settings.desktop_image %}
+                    <img
+                      src="{{ section.settings.desktop_image | image_url: width: 1400 }}"
+                      class="desktop_image_new"
+                      loading="lazy"
+                    >
+                  {% endif %}
+
+                  {% if section.settings.mobile_image %}
+                    <img
+                      src="{{ section.settings.mobile_image | image_url: width: 1400 }}"
+                      class="mobile_image_new"
+                      loading="lazy"
+                    >
+                  {% endif %}
+
+                </div>
+              </div>
+            </div>
+
+            <div class="Product_object_ingredient_innersides_innerleft_maintitle_new white_text_desktop">
+              <div class="Product_object_ingredient_innersides_innerleft_maintitle_inner_new">
+
+                <div class="Common_title_new Product_object_ingredient_innersides_innerleft_title_new">
+                  <h2>{{ section.settings.heading }}</h2>
+                </div>
+
+                <div class="Product_object_ingredient_innersides_innerleft_details_new">
+                  {{ section.settings.description }}
+                </div>
+
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="Product_object_ingredient_innersides_mainright_new">
+          <div class="Product_object_ingredient_innersides_innerright_new">
+            <div class="accordion product_object_ingredient_list">
+              <ul class="list-unstyled">
+
+                {% for block in section.blocks %}
+                  <li class="{% if block.settings.hidden %}hide_this_product{% endif %} {% if forloop.first %}open{% endif %}" {{ block.shopify_attributes }}>
+                    <div class="question">
+                      <div class="Product_object_ingredient_innersides_innerright_mainboxs_new">
+                        <div class="Product_object_ingredient_innersides_innerright_innerboxs_new">
+
+                          <div class="Product_object_ingredient_innersides_innerright_innerboxs_mainstatic_new">
+                            <div class="Product_object_ingredient_innersides_innerright_innerboxs_innerstatic_new">
+                              <div class="Product_object_ingredient_innersides_innerright_innerboxs_innerstatic_imagevideo_new">
+                                {% if block.settings.icon %}
+                                  <img
+                                    src="{{ block.settings.icon | image_url: width: 400 }}"
+                                    class="Static_image_new"
+                                    loading="lazy"
+                                  >
+                                {% endif %}
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="Product_object_ingredient_innersides_innerright_innerboxs_maindetail_new">
+                            <div class="Product_object_ingredient_innersides_innerright_innerboxs_innerdetail_new">
+                              <div class="Product_object_ingredient_innersides_innerright_innerboxs_innerdetail_title_new">
+                                {{ block.settings.title }}
+                              </div>
+                              <div class="Product_object_ingredient_innersides_innerright_innerboxs_innerdetail_texts_new">
+                                {{ block.settings.short_text }}
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="answer" {% if forloop.first %}style="display:block"{% endif %}>
+                      <div class="Product_object_ingredient_innersides_innerright_maininfos_new">
+                        <div class="Product_object_ingredient_innersides_innerright_innerinfos_new">
+                          {{ block.settings.long_text }}
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                {% endfor %}
+
+              </ul>
+
+              <!-- MOBILE BUTTONS --
+              <div class="Product_object_ingredient_innersides_innerleft_button_new Mobile_only_new see_full_ingerdient">
+                <a href="{{ section.settings.button_link }}" class="button">
+                  {{ section.settings.button_label }}
+                </a>
+              </div>-->
+
+              <div class="Product_object_ingredient_innersides_innerleft_button_new Mobile_only_new view_more_product">
+                <a href="javascript:void(0)" class="button view_more_product">
+                  {{ section.settings.view_more_label }}
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.product_object_ingredient_list .question').forEach(q => {
+    q.addEventListener('click', function () {
+      const li = this.closest('li');
+      const answer = li.querySelector('.answer');
+
+      document.querySelectorAll('.product_object_ingredient_list li').forEach(i => {
+        if (i !== li) {
+          i.classList.remove('open');
+          i.querySelector('.answer').style.display = 'none';
+        }
+      });
+
+      li.classList.toggle('open');
+      answer.style.display = li.classList.contains('open') ? 'block' : 'none';
+    });
+  });
+
+  document.querySelector('.view_more_product')?.addEventListener('click', function () {
+    document.querySelectorAll('.hide_this_product').forEach(el => {
+      el.classList.remove('hide_this_product');
+    });
+    this.style.display = 'none';
+  });
+});
+</script>
+{% schema %}
+{
+  "name": "Product Accordion",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Key Ingredients"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button text",
+      "default": "See full ingredients"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "view_more_label",
+      "label": "View more button text",
+      "default": "View More"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Ingredient Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "short_text",
+          "label": "Short description"
+        },
+        {
+          "type": "richtext",
+          "id": "long_text",
+          "label": "Expanded description"
+        },
+        {
+          "type": "checkbox",
+          "id": "hidden",
+          "label": "Hide initially (View More)",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Ingredients (Accordion)"
+    }
+  ]
+}
+{% endschema %}
+<style>
+/* Mobile only */
+@media screen and (max-width: 767px) {
+  .Product_object_ingredient_innersides_innerleft_maintitle_new {
+    background-color: #108474;
+  }
+}
+
+</style>

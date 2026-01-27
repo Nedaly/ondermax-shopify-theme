@@ -611,6 +611,12 @@
   filter: drop-shadow(0 2px 8px rgba(255, 215, 0, 0.7));
 }
 
+.trust-item.stars span {
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+}
+
 /* Sticky CTA */
 .cta-sticky {
   position: sticky;

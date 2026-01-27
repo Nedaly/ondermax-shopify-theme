@@ -1,0 +1,62 @@
+{%- liquid
+  assign product = product | default: product
+  assign show_on_mobile = show_on_mobile | default: true
+-%}
+
+{% if product and show_on_mobile %}
+  <div class="sticky-atc-mobile" data-sticky-atc>
+    <div class="page-width">
+      <div class="sticky-atc-mobile__content">
+        <div class="sticky-atc-mobile__info">
+          <div class="sticky-atc-mobile__title">{{ product.title }}</div>
+          <div class="sticky-atc-mobile__price">
+            {% if product.compare_at_price > product.price %}
+              <span class="price-item--sale">{{ product.price | money }}</span>
+              <span class="price-item--regular"><s>{{ product.compare_at_price | money }}</s></span>
+            {% else %}
+              <span class="price-item--regular">{{ product.price | money }}</span>
+            {% endif %}
+          </div>
+        </div>
+        <button type="button" class="sticky-atc-mobile__button button button--primary" data-sticky-atc-button>
+          {{ 'products.product.add_to_cart' | t }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {{ 'component-sticky-atc.css' | asset_url | stylesheet_tag }}
+
+  <script>
+    (function() {
+      const stickyAtc = document.querySelector('[data-sticky-atc]');
+      const mainAtc = document.querySelector('product-form[data-main="true"]') || document.querySelector('form[action*="/cart/add"]');
+      
+      if (!stickyAtc || !mainAtc) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            stickyAtc.classList.remove('sticky-atc-mobile--visible');
+          } else {
+            stickyAtc.classList.add('sticky-atc-mobile--visible');
+          }
+        });
+      }, {
+        rootMargin: '-100px 0px 0px 0px'
+      });
+
+      observer.observe(mainAtc);
+
+      const stickyButton = stickyAtc.querySelector('[data-sticky-atc-button]');
+      if (stickyButton) {
+        stickyButton.addEventListener('click', function() {
+          const mainButton = mainAtc.querySelector('button[type="submit"]') || mainAtc.querySelector('.button--primary');
+          if (mainButton) {
+            mainButton.click();
+          }
+        });
+      }
+    })();
+  </script>
+{% endif %}

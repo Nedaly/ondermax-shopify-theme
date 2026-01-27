@@ -1,6 +1,309 @@
 <!doctype html>  
 <html lang="{{ request.locale.iso_code }}" {% if request.locale.iso_code == 'he' or request.locale.iso_code == 'ar' %}dir="rtl"{% else %}dir="ltr"{% endif %} class="no-js">
   <head>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(
+    'a.button, button.button, input.button'
+  );
+
+  buttons.forEach(btn => {
+    // Prevent duplicate arrows
+    if (btn.querySelector('.js-arrow')) return;
+
+    const arrow = document.createElement('span');
+    arrow.className = 'js-arrow';
+    arrow.innerHTML = '&nbsp;→';
+
+    arrow.style.color = '#ffffff';
+    arrow.style.fontWeight = '600';
+    arrow.style.marginLeft = '8px';
+
+    btn.appendChild(arrow);
+  });
+});
+</script>
+
+
+<!-- === START: THIRD-PARTY SCRIPT BLOCKER === -->
+  <script>
+  // ===== GLOBAL FUNCTION STUBS (PREVENT ERRORS) =====
+  (function() {
+    // Prevent undefined errors for all common third-party APIs
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
+    window.fbq = window.fbq || function() { if (window.dataLayer) dataLayer.push(['fbq', arguments]); };
+    window.twq = window.twq || function() { };
+    window._q = window._q || [];
+    window._learnq = window._learnq || [];
+    window.snaptr = window.snaptr || function() { };
+    window.uetq = window.uetq || [];
+    window.klaviyo = window.klaviyo || [];
+    window._klOnsite = window._klOnsite || [];
+    
+    // Shopify review apps
+    window.JDGM = window.JDGM || {};
+    window.looxReady = window.looxReady || [];
+    window.stampedFn = window.stampedFn || [];
+    window.oke = window.oke || {};
+    window.oke._q = window.oke._q || [];
+    
+    // Chat widgets
+    window.Tawk_API = window.Tawk_API || {};
+    window.$zopim = window.$zopim || function() { };
+    window.drift = window.drift || [];
+    window.Intercom = window.Intercom || function() { };
+    window.intercomSettings = window.intercomSettings || {};
+    
+    // Social
+    window.FB = window.FB || {};
+    window.twttr = window.twttr || {};
+    window.PinUtils = window.PinUtils || {};
+    
+    // Ads
+    window.googletag = window.googletag || {};
+    window.googletag.cmd = window.googletag.cmd || [];
+    
+    // Initialize queues
+    window.thirdPartyQueue = {
+      analytics: [],
+      chat: [],
+      reviews: [],
+      ads: [],
+      social: []
+    };
+    
+    // ===== INTERCEPT ALL SCRIPT LOADING =====
+    const originalCreateElement = document.createElement;
+    const originalAppendChild = Node.prototype.appendChild;
+    const originalInsertBefore = Node.prototype.insertBefore;
+    
+    // Block list (scripts that should NEVER load immediately)
+    const blockPatterns = [
+      // Analytics & Tracking
+      'google-analytics.com/analytics.js',
+      'googletagmanager.com/gtag/js',
+      'googletagmanager.com/gtm.js',
+      'google.com/ads/',
+      'googleadservices.com/pagead/conversion',
+      'facebook.net/connect/',
+      'facebook.com/tr/',
+      'tiktok.com/analytics',
+      'snap.licdn.com',
+      'bat.bing.com/bat.js',
+      'linkedin.com/analytics',
+      'pinterest.com/ct.html',
+      'doubleclick.net',
+      
+      // Chat & Support
+      'tawk.to',
+      'zdassets.com',
+      'intercom.io',
+      'drift.com',
+      'salesforce.com',
+      'livechatinc.com',
+      'olark.com',
+      'tidio.chat',
+      
+      // Reviews
+      'judge.me',
+      'loox.io',
+      'stamped.io',
+      'okendo.io',
+      'reviews.co.uk',
+      'yotpo.com',
+      'trustpilot.com',
+      'productreviews.shopifyapps.com',
+      
+      // Social Widgets
+      'platform.twitter.com/widgets',
+      'apis.google.com/js/platform',
+      'assets.pinterest.com/js/pinit',
+      'connect.facebook.net/en_US/sdk',
+      'platform.instagram.com/en_US/embeds',
+      
+      // Ads & Retargeting
+      'googletagservices.com/tag/js/gpt',
+      'amazon-adsystem.com',
+      'criteo.com',
+      'taboola.com',
+      'outbrain.com',
+      'adroll.com',
+      
+      // Email Marketing
+      'klaviyo.com',
+      'mailchimp.com',
+      'omnisnippet1.com',
+      'privy.com',
+      'sumo.com',
+      
+      // Other
+      'hotjar.com',
+      'mouseflow.com',
+      'fullstory.com',
+      'crazyegg.com',
+      'segment.com',
+      'mixpanel.com'
+    ];
+    
+    // Allow list (Shopify essentials that load immediately)
+    const allowPatterns = [
+      'shopify.com/cdn/shopifycloud',
+      'cdn.shopify.com/shopifycloud/boomerang',
+      'cdn.shopify.com/s/trekkie.storefront',
+      'polyfill.io/v3/polyfill.min.js',
+      'code.jquery.com/jquery-',
+      'unpkg.com',
+      'cdn.jsdelivr.net/npm',
+      'your-custom-domain.com' // Add your own domains
+    ];
+    
+    // Intercept script creation
+    document.createElement = function(tagName) {
+      const element = originalCreateElement.call(document, tagName);
+      
+      if (tagName.toLowerCase() === 'script') {
+        const originalSrc = Object.getOwnPropertyDescriptor(HTMLScriptElement.prototype, 'src');
+        
+        Object.defineProperty(element, 'src', {
+          get: function() { return this._src || ''; },
+          set: function(value) {
+            this._src = value;
+            
+            // Check if this script should be blocked
+            const shouldBlock = blockPatterns.some(pattern => 
+              value && value.includes(pattern)
+            ) && !allowPatterns.some(pattern => 
+              value && value.includes(pattern)
+            );
+            
+            if (shouldBlock) {
+              console.log('🚫 Blocking third-party script:', value);
+              
+              // Store for later loading
+              const scriptData = {
+                src: value,
+                element: this,
+                attributes: {},
+                loaded: false
+              };
+              
+              // Copy all attributes
+              Array.from(this.attributes).forEach(attr => {
+                scriptData.attributes[attr.name] = attr.value;
+              });
+              
+              // Add to appropriate queue
+              if (value.includes('analytics') || value.includes('tagmanager')) {
+                window.thirdPartyQueue.analytics.push(scriptData);
+              } else if (value.includes('chat') || value.includes('tawk') || value.includes('intercom')) {
+                window.thirdPartyQueue.chat.push(scriptData);
+              } else if (value.includes('review') || value.includes('judge') || value.includes('loox')) {
+                window.thirdPartyQueue.reviews.push(scriptData);
+              } else if (value.includes('ads') || value.includes('doubleclick') || value.includes('criteo')) {
+                window.thirdPartyQueue.ads.push(scriptData);
+              } else {
+                window.thirdPartyQueue.social.push(scriptData);
+              }
+              
+              // Prevent actual loading
+              this.setAttribute('data-blocked', 'true');
+              this.setAttribute('data-queued', 'true');
+              
+              return;
+            }
+            
+            // Allow Shopify and essential scripts
+            if (originalSrc && originalSrc.set) {
+              originalSrc.set.call(this, value);
+            }
+          }
+        });
+      }
+      
+      return element;
+    };
+    
+    // Intercept script insertion
+    function interceptScriptInsertion(node) {
+      if (node.tagName && node.tagName.toLowerCase() === 'script') {
+        const src = node.src || node.getAttribute('src');
+        
+        if (src) {
+          const shouldBlock = blockPatterns.some(pattern => 
+            src.includes(pattern)
+          ) && !allowPatterns.some(pattern => 
+            src.includes(pattern)
+          );
+          
+          if (shouldBlock && !node.hasAttribute('data-processed')) {
+            node.setAttribute('data-processed', 'true');
+            node.setAttribute('data-blocked', 'true');
+            
+            // Store for later loading (similar to above)
+            const scriptData = {
+              src: src,
+              element: node,
+              attributes: {},
+              loaded: false
+            };
+            
+            Array.from(node.attributes).forEach(attr => {
+              scriptData.attributes[attr.name] = attr.value;
+            });
+            
+            // Queue based on type
+            if (src.includes('analytics')) {
+              window.thirdPartyQueue.analytics.push(scriptData);
+            } else if (src.includes('chat')) {
+              window.thirdPartyQueue.chat.push(scriptData);
+            } else {
+              window.thirdPartyQueue.reviews.push(scriptData);
+            }
+            
+            // Create a dummy script that doesn't load
+            const dummyScript = document.createElement('script');
+            dummyScript.setAttribute('data-dummy', 'true');
+            dummyScript.textContent = '// Script blocked for performance';
+            return dummyScript;
+          }
+        }
+      }
+      return node;
+    }
+    
+    Node.prototype.appendChild = function(node) {
+      const intercepted = interceptScriptInsertion(node);
+      return originalAppendChild.call(this, intercepted);
+    };
+    
+    Node.prototype.insertBefore = function(newNode, referenceNode) {
+      const intercepted = interceptScriptInsertion(newNode);
+      return originalInsertBefore.call(this, intercepted, referenceNode);
+    };
+    
+    console.log('✅ Third-party script blocker activated');
+  })();
+  </script>
+  <!-- === END: THIRD-PARTY SCRIPT BLOCKER === -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+@font-face {
+  font-family: "ABC Arizona Flare";
+  src: url("https://cdn.shopify.com/s/files/1/0930/5807/2907/files/ABCArizonaFlare-Medium.woff2?v=1765441458") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply ONLY to headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "ABC Arizona Flare", serif !important;
+}
+</style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -481,6 +784,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     {{ 'fonts-arabic.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
+
+     {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'ondermax.css' | asset_url | stylesheet_tag }}
     {{ 'omx-subscriptions.css' | asset_url | stylesheet_tag }}
     {% if is_rtl %}
@@ -621,7 +926,7 @@
 
   </head>
 
-  <body class="gradient link-btns--{{ settings.link_btn_hover }} action-btns--{{ settings.action_btn_hover }} omx-hide-appstle"{% if is_rtl %} data-rtl="true"{% endif %}>
+  <body class=" {{template.name}} gradient link-btns--{{ settings.link_btn_hover }} action-btns--{{ settings.action_btn_hover }} omx-hide-appstle"{% if is_rtl %} data-rtl="true"{% endif %}>
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -1262,6 +1567,351 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
+
+
+<style>
+  .index .card-slider__grid {
+
+  grid-template-columns: repeat(2, 1fr)!important;
+
+}
+
+@media screen and (min-width: 768px) {
+     .index .card-slider__card-image {
+        height: 100%;
+    }
+}
+
+</style>
+  <!-- === START: INTELLIGENT SCRIPT LOADER === -->
+  <script>
+  (function() {
+    'use strict';
+    
+    // ===== CONFIGURATION =====
+    const loadConfig = {
+      // When to load different script types
+      timing: {
+        analytics: 'loaded',      // After page load
+        reviews: 'visible',       // When element is visible
+        chat: 'interaction',      // On user interaction
+        ads: 'scroll',           // After scrolling
+        social: 'hover'          // On hover
+      },
+      
+      // Priority thresholds
+      thresholds: {
+        scroll: 300,            // Load ads after 300px scroll
+        timeout: 5000,          // Load all after 5 seconds (fallback)
+        visibleMargin: '100px'  // Load when within 100px of viewport
+      }
+    };
+    
+    // ===== LOADING FUNCTIONS =====
+    class ScriptLoader {
+      constructor() {
+        this.loadedCategories = new Set();
+        this.userInteracted = false;
+        this.init();
+      }
+      
+      init() {
+        this.setupObservers();
+        this.setupEventListeners();
+        this.startLoadingSequence();
+      }
+      
+      setupObservers() {
+        // Intersection Observer for visible elements
+        this.intersectionObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const element = entry.target;
+              const category = element.getAttribute('data-load-category');
+              if (category && !this.loadedCategories.has(category)) {
+                this.loadCategory(category);
+              }
+            }
+          });
+        }, {
+          rootMargin: loadConfig.thresholds.visibleMargin,
+          threshold: 0.1
+        });
+        
+        // Observe elements that trigger script loading
+        document.querySelectorAll('[data-trigger-scripts]').forEach(el => {
+          this.intersectionObserver.observe(el);
+        });
+      }
+      
+      setupEventListeners() {
+        // User interaction events
+        const interactionEvents = ['click', 'touchstart', 'keydown', 'mousemove'];
+        interactionEvents.forEach(event => {
+          window.addEventListener(event, () => {
+            this.userInteracted = true;
+            this.loadCategory('chat');
+            this.loadCategory('social');
+          }, { once: true, passive: true });
+        });
+        
+        // Scroll events
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > loadConfig.thresholds.scroll) {
+            this.loadCategory('ads');
+          }
+        }, { passive: true });
+        
+        // Hover events for social
+        document.addEventListener('mouseover', (e) => {
+          if (e.target.closest('[class*="share"], [class*="social"]')) {
+            this.loadCategory('social');
+          }
+        });
+        
+        // Page load event
+        window.addEventListener('load', () => {
+          setTimeout(() => this.loadCategory('analytics'), 1000);
+        });
+        
+        // Fallback: Load everything after timeout
+        setTimeout(() => {
+          this.loadAllRemaining();
+        }, loadConfig.thresholds.timeout);
+      }
+      
+      startLoadingSequence() {
+        // Load essential scripts immediately
+        this.loadEssentialScripts();
+        
+        // Setup triggers based on page type
+        this.setupPageSpecificTriggers();
+      }
+      
+      loadEssentialScripts() {
+        // These scripts load immediately (not blocked)
+        const essentials = [
+          // Add any essential scripts that bypassed the blocker
+        ];
+        
+        essentials.forEach(src => {
+          this.injectScript(src, 'essential');
+        });
+      }
+      
+      loadCategory(category) {
+        if (this.loadedCategories.has(category)) return;
+        
+        this.loadedCategories.add(category);
+        const queue = window.thirdPartyQueue[category] || [];
+        
+        console.log(`📦 Loading ${category} scripts (${queue.length} total)`);
+        
+        queue.forEach(scriptData => {
+          if (!scriptData.loaded) {
+            this.injectScript(scriptData.src, category, scriptData.attributes);
+            scriptData.loaded = true;
+          }
+        });
+      }
+      
+      loadAllRemaining() {
+        Object.keys(window.thirdPartyQueue).forEach(category => {
+          this.loadCategory(category);
+        });
+      }
+      
+      injectScript(src, category, attributes = {}) {
+        return new Promise((resolve) => {
+          if (document.querySelector(`script[src*="${this.extractDomain(src)}"]`)) {
+            console.log(`⚠️ ${category} script already loaded:`, src);
+            resolve();
+            return;
+          }
+          
+          console.log(`🚀 Injecting ${category} script:`, src);
+          
+          const script = document.createElement('script');
+          script.src = src;
+          script.async = true;
+          
+          // Copy attributes
+          Object.keys(attributes).forEach(key => {
+            if (key !== 'src' && key !== 'async' && key !== 'defer') {
+              script.setAttribute(key, attributes[key]);
+            }
+          });
+          
+          // Add tracking attributes
+          script.setAttribute('data-loaded-by', 'script-loader');
+          script.setAttribute('data-category', category);
+          script.setAttribute('data-loaded-at', Date.now());
+          
+          script.onload = () => {
+            console.log(`✅ ${category} script loaded:`, src);
+            resolve();
+          };
+          
+          script.onerror = () => {
+            console.warn(`❌ Failed to load ${category} script:`, src);
+            resolve();
+          };
+          
+          document.head.appendChild(script);
+        });
+      }
+      
+      extractDomain(url) {
+        try {
+          return new URL(url).hostname;
+        } catch {
+          return url.split('/')[2] || url;
+        }
+      }
+      
+      setupPageSpecificTriggers() {
+        // Product page triggers
+        if (document.querySelector('.product-single')) {
+          // Load reviews when product is visible
+          const productElement = document.querySelector('[data-product]') || 
+                                document.querySelector('.product-single');
+          if (productElement) {
+            productElement.setAttribute('data-trigger-scripts', 'reviews');
+            this.intersectionObserver.observe(productElement);
+          }
+        }
+        
+        // Cart page triggers
+        if (document.querySelector('.cart') || document.querySelector('[name="cart"]')) {
+          this.loadCategory('ads'); // Load retargeting on cart page
+        }
+        
+        // Checkout page
+        if (window.location.pathname.includes('/checkout')) {
+          // Load all analytics on checkout
+          setTimeout(() => {
+            this.loadCategory('analytics');
+            this.loadCategory('ads');
+          }, 500);
+        }
+      }
+    }
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        window.scriptLoader = new ScriptLoader();
+      });
+    } else {
+      window.scriptLoader = new ScriptLoader();
+    }
+    
+    // ===== UTILITY FUNCTIONS =====
+    // Manually trigger script loading from console or other scripts
+    window.loadThirdPartyScripts = function(category) {
+      if (window.scriptLoader) {
+        if (category) {
+          window.scriptLoader.loadCategory(category);
+        } else {
+          window.scriptLoader.loadAllRemaining();
+        }
+      }
+    };
+    
+    // Force load specific script (emergency)
+    window.loadScriptNow = function(src) {
+      const script = document.createElement('script');
+      script.src = src;
+      script.async = true;
+      document.head.appendChild(script);
+      console.log('🚨 Force-loaded script:', src);
+    };
+    
+  })();
+  </script>
+  <!-- === END: INTELLIGENT SCRIPT LOADER === -->
+
+  {% comment %} Add this to show loading status {% endcomment %}
+<style>
+  .script-loader-status {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 99999;
+    display: none;
+  }
+  .script-loader-status.visible {
+    display: block;
+  }
+  .script-loader-status .category {
+    margin: 2px 0;
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+  .script-loader-status .loaded {
+    background: #4CAF50;
+  }
+  .script-loader-status .pending {
+    background: #FF9800;
+  }
+</style>
+
+<div class="script-loader-status" id="loaderStatus">
+  <div>Script Loader Status:</div>
+  <div class="category pending" data-category="analytics">Analytics: Pending</div>
+  <div class="category pending" data-category="reviews">Reviews: Pending</div>
+  <div class="category pending" data-category="chat">Chat: Pending</div>
+  <div class="category pending" data-category="ads">Ads: Pending</div>
+</div>
+
+<script>
+// Update visual status
+document.addEventListener('DOMContentLoaded', function() {
+  const statusEl = document.getElementById('loaderStatus');
+  
+  if (window.scriptLoader) {
+    // Show status in development
+    if (window.location.hostname.includes('myshopify.com') || 
+        window.location.search.includes('debug=scripts')) {
+      statusEl.classList.add('visible');
+    }
+    
+    // Update status when categories load
+    const observer = {
+      loadedCategories: new Set(),
+      update: function(category) {
+        this.loadedCategories.add(category);
+        const el = statusEl.querySelector(`[data-category="${category}"]`);
+        if (el) {
+          el.classList.remove('pending');
+          el.classList.add('loaded');
+          el.textContent = `${category.charAt(0).toUpperCase() + category.slice(1)}: Loaded`;
+        }
+        
+        // Hide when all loaded
+        if (this.loadedCategories.size >= 4) {
+          setTimeout(() => {
+            statusEl.classList.remove('visible');
+          }, 2000);
+        }
+      }
+    };
+    
+    // Override loadCategory to update UI
+    const originalLoad = window.scriptLoader.loadCategory;
+    window.scriptLoader.loadCategory = function(category) {
+      originalLoad.call(this, category);
+      observer.update(category);
+    };
+  }
+});
+</script>
   </body>
 </html>

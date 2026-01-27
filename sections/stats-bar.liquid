@@ -1,0 +1,234 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .color-scheme-{{ section.id }}.color-custom {
+    --color-background: {{ section.settings.custom_colors_background.red }}, {{ section.settings.custom_colors_background.green }}, {{ section.settings.custom_colors_background.blue }};
+    --gradient-background: {% if section.settings.custom_gradient_background != blank %}{{ section.settings.custom_gradient_background }}{% else %}{{ section.settings.custom_colors_background }}{% endif %};
+    --color-foreground: {{ section.settings.custom_colors_text.red }}, {{ section.settings.custom_colors_text.green }}, {{ section.settings.custom_colors_text.blue }};
+  }
+{%- endstyle -%}
+
+<div class="stats-bar color-scheme-{{ section.id }} color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="stats-bar__grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'stat' %}
+          <div class="stats-bar__stat" {{ block.shopify_attributes }}>
+            <div class="stats-bar__number">
+              {% capture __maybe %}{{ block.settings.number | t }}{% endcapture %}
+              {% if __maybe contains 'Translation missing' %}
+                {{ block.settings.number }}
+              {% else %}
+                {{ __maybe }}
+              {% endif %}
+            </div>
+            <div class="stats-bar__label">
+              {% capture __maybe %}{{ block.settings.label | t }}{% endcapture %}
+              {% if __maybe contains 'Translation missing' %}
+                {{ block.settings.label }}
+              {% else %}
+                {{ __maybe }}
+              {% endif %}
+            </div>
+            {% if block.settings.sublabel != blank %}
+              <div class="stats-bar__sublabel">
+                {% capture __maybe %}{{ block.settings.sublabel | t }}{% endcapture %}
+                {% if __maybe contains 'Translation missing' %}
+                  {{ block.settings.sublabel }}
+                {% else %}
+                  {{ __maybe }}
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    
+    {% if section.settings.show_footnote and section.settings.footnote != blank %}
+      <div class="stats-bar__footnote">
+        {% capture __maybe %}{{ section.settings.footnote | t }}{% endcapture %}
+        {% if __maybe contains 'Translation missing' %}
+          {{ section.settings.footnote }}
+        {% else %}
+          {{ __maybe }}
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{{ 'section-stats-bar.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Stats Bar",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "Accent 1"
+        },
+        {
+          "value": "accent-2",
+          "label": "Accent 2"
+        },
+        {
+          "value": "background-1",
+          "label": "Background 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Background 2"
+        },
+        {
+          "value": "inverse",
+          "label": "Inverse"
+        },
+        {
+          "value": "custom",
+          "label": "Custom"
+        }
+      ],
+      "default": "accent-1",
+      "label": "Color scheme",
+      "info": "Custom color scheme is edited at the bottom of section settings."
+    },
+    {
+      "type": "textarea",
+      "id": "footnote",
+      "label": "Footnote",
+      "default": "Based on internal user studies. Individual results may vary."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_footnote",
+      "label": "Show footnote",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Custom color scheme"
+    },
+    {
+      "type": "color",
+      "id": "custom_colors_background",
+      "label": "Background",
+      "default": "#1a1a2e"
+    },
+    {
+      "type": "color_background",
+      "id": "custom_gradient_background",
+      "label": "Background gradient"
+    },
+    {
+      "type": "color",
+      "id": "custom_colors_text",
+      "label": "Text",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Stat",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "94%"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "reported crash-free energy"
+        },
+        {
+          "type": "text",
+          "id": "sublabel",
+          "label": "Sublabel (optional)",
+          "default": "(SURGE)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stats Bar",
+      "blocks": [
+        {
+          "type": "stat",
+          "settings": {
+            "number": "94%",
+            "label": "reported crash-free energy",
+            "sublabel": "(SURGE)"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "88%",
+            "label": "experienced improved recovery"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "82%",
+            "label": "reported falling asleep faster",
+            "sublabel": "(DRIFT)"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "79%",
+            "label": "noticed improved mental clarity"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

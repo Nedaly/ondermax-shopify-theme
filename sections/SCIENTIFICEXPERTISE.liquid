@@ -1,0 +1,823 @@
+
+<style>
+
+
+    .scientific-experts__quote-container {
+      
+        display: none!important;
+    }
+
+
+
+  .scientific-experts__card {
+ 
+    width: 334px;}
+
+@media screen and (min-width: 1200px) {
+    .scientific-experts__grid {
+        grid-template-columns: repeat(1, 1fr)!important;
+      
+    }
+}
+
+
+@media screen and (min-width: 990px) {
+    .scientific-experts {
+        padding: 30px 0 0px!important;
+    }
+}
+
+
+
+@media screen and (min-width: 750px) {
+    .scientific-experts {
+        padding: 0px 0!important;
+    }
+}
+
+    .scientific-experts{padding:50px 0;background-color:#fff;position:relative;width:100%}.scientific-experts__overlay{position:absolute;top:0;left:0;right:0;bottom:0;background-color:#000;z-index:1}.scientific-experts__inner{display:flex;flex-direction:column;align-items:center;position:relative;z-index:2;width:100%}.scientific-experts__header{text-align:center;max-width:95%;margin-bottom:40px}.scientific-experts__heading{margin-bottom:10px}.scientific-experts__heading h2{font-size:28px;line-height:1.2;margin:0}.scientific-experts__subheading p{font-size:16px;font-weight:400;font-family:var(--font-heading-family);margin:0}.scientific-experts__description{font-size:14px;line-height:1.6;color:rgb(var(--color-foreground))}.scientific-experts__grid{display:grid;grid-template-columns:1fr;gap:20px;width:100%;margin-bottom:40px;align-items:stretch}.scientific-experts__card{background-color:#fff5f5;border-radius:8px;overflow:hidden;transition:all .3s ease;border:1px solid #f0f0f0;display:flex;flex-direction:column}.scientific-experts__card:hover{border-color:#9e0b0f}.scientific-experts__card-inner{display:grid;grid-template-columns:40% 1fr;height:100%;min-height:180px}.scientific-experts__card-image{position:relative;overflow:hidden;width:100%;background-color:#f8e8e8;height:100%;max-height:none;flex-shrink:0}.scientific-experts__card-image img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top}.scientific-experts__card-content{padding:15px;
+      
+              background: linear-gradient(45deg, #1c8e8e, #2d9cdb, #4a2e8e, #6b46c1, #8b5cf6);
+        background-size: 300% 300%;
+        animation: gradientShift 4s ease-in-out infinite, pulseGlow 3s ease-in-out infinite;
+        color: #fff;
+        display:flex;flex-direction:column;justify-content:space-between;height:100%;flex-grow:1}.scientific-experts__card-info{flex-grow:1}.scientific-experts__card-title{margin-bottom:8px}.scientific-experts__card-title h3{font-size:13px;font-family:Aeonik,sans-serif;font-weight:700;margin:0;color:#ffffff}.scientific-experts__card-subtitle{margin-bottom:12px}.scientific-experts__card-subtitle p{font-size:12px;font-weight:400;color:#ffffff;line-height:135%;margin:0}.scientific-experts__card-icon{display:flex;justify-content:flex-end;align-items:center;margin-top:15px}.scientific-experts__open-popup-btn{background-color:transparent;border:none;border-radius:0;width:35px;height:35px;padding:0;cursor:pointer;display:flex;justify-content:center;align-items:center;transition:all .3s ease}.scientific-experts__open-popup-btn img{width:100%;height:100%;object-fit:contain;transition:transform .2s ease-in-out}.scientific-experts__open-popup-btn:hover img{transform:scale(1.1)}.scientific-experts__open-popup-btn:active img{transform:scale(.9)}.scientific-experts__open-popup-btn:hover{background-color:transparent;opacity:1}.scientific-experts__popups-container{position:relative;z-index:0;height:0;overflow:visible;pointer-events:none}.scientific-experts__popup{position:fixed;top:0;left:0;width:100%;height:100vh;z-index:10000;display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .3s cubic-bezier(.25,.46,.45,.94);pointer-events:none;view-transition-name:none!important;overflow:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);will-change:opacity}.scientific-experts__popup.active{opacity:1;pointer-events:auto}@media (max-width: 768px){.scientific-experts__popup{-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-perspective:1000px;perspective:1000px}}.scientific-experts__popup-overlay{position:absolute;top:0;left:0;width:100%;height:100vh;background-color:#000000bf;cursor:pointer;display:block!important}.scientific-experts__popup-content{position:relative;width:90%;height:100%;max-width:550px;max-height:60vh;background-color:#fff;border-radius:10px;overflow:hidden;padding:0;box-shadow:0 10px 30px #0003;z-index:1001;display:flex;flex-direction:column}.scientific-experts__popup-close{position:absolute;top:15px;right:15px;background:#ffffffb3;border:none;border-radius:50%;width:32px;height:32px;padding:0;cursor:pointer;color:#333;z-index:1002;transition:all .3s ease;display:flex;align-items:center;justify-content:center}.scientific-experts__popup-close svg{width:18px;height:18px}.scientific-experts__popup-close:hover{color:#000;background:#ffffffe6;transform:scale(1.1)}.scientific-experts__popup-image{width:100%;height:auto;max-height:35vh;overflow:hidden;flex-shrink:0;border-radius:10px 10px 0 0}.scientific-experts__popup-image img{width:100%;height:100%;object-fit:cover;display:block}.scientific-experts__popup-info{text-align:left;padding:30px 30px 80px;flex-grow:1;overflow-y:auto;margin-bottom:0}.scientific-experts__popup-title{font-size:24px;font-weight:400;margin:0 0 10px;color:#50000b}.scientific-experts__popup-subtitle{margin-bottom:15px}.scientific-experts__popup-subtitle p{font-size:16px;font-weight:500;color:#50000b;font-family:Aeonik,sans-serif;margin:0;line-height:150%}.scientific-experts__popup-description{margin-bottom:25px;font-size:15px;line-height:1.6;color:#50000b;text-align:left}.scientific-experts__popup-description p{margin-bottom:1em}.scientific-experts__popup-description p:last-child{margin-bottom:0}.scientific-experts__popup-button{margin-top:20px}.scientific-experts__popup-button .button{padding:12px 25px;font-size:14px;font-weight:600;text-decoration:none;display:inline-block;border-radius:50px;background-color:#9e0b0f;color:#fff;transition:all .3s ease;border:none}.scientific-experts__popup-button .button:hover{background-color:#700000;transform:translateY(-2px)}.scientific-experts__button{margin-top:20px}.scientific-experts__button .button{padding:12px 25px;font-size:14px;font-weight:600;text-decoration:none;display:inline-block;border-radius:4px;background-color:#50000b;color:#fff;transition:all .3s ease;border:2px solid #50000B}.scientific-experts__button .button--secondary{background-color:transparent;color:#50000b}.scientific-experts__button .button:hover{opacity:.9;transform:translateY(-2px)}.scientific-experts__quote-container{border:1px solid black;border-radius:10px;margin-top:2rem;margin-bottom:2rem;padding:2rem 1rem;max-width:95%;margin-left:auto;margin-right:auto;display:flex;align-items:center;justify-content:center;position:relative;background-color:#ffffff;overflow:hidden}.scientific-experts__quote-wrapper{text-align:center;max-width:90%;position:relative;z-index:2}.scientific-experts__quote-marks{position:relative;padding:.5rem 0;display:flex;flex-direction:column;align-items:center}.scientific-experts__quote-mark{position:absolute}.scientific-experts__quote-mark img{max-width:24px!important;}.scientific-experts__quote-mark--left{top:15%;left:0;transform:translate(-50%)}.scientific-experts__quote-mark--right{bottom:15%;right:0;transform:translate(50%)}.scientific-experts__quote-text{font-size:15px;line-height:1.5;font-weight:400;margin:0 auto;padding:0 25px;color:rgb(var(--color-foreground))}.scientific-experts__quote-author-details{color:rgb(var(--color-foreground))}.scientific-experts__quote-author-name{font-size:14px;font-weight:600;margin-top:10px}.scientific-experts__quote-author-position{font-size:14px;font-weight:400;line-height:1.5}.scientific-experts__instagram-link{color:inherit;text-decoration:none;font-size:14px;font-weight:400;transition:color .2s ease;font-style:italic}.scientific-experts__instagram-link:hover{color:#e4405f;text-decoration:none}.scientific-experts__quote-author{display:flex;align-items:center;justify-content:center;margin-top:25px}.scientific-experts__quote-author-bio-image-link{margin-right:30px;flex-shrink:0;line-height:0}.scientific-experts__quote-author-bio-image{width:80px;height:80px;border-radius:50%;object-fit:cover;display:block}.scientific-experts__quote-author-details{text-align:left}@media screen and (min-width: 550px){.scientific-experts{padding:60px 0}.scientific-experts__header{max-width:90%;margin-bottom:45px}.scientific-experts__heading h2{font-size:30px}.scientific-experts__subheading p{font-size:18px}.scientific-experts__description{font-size:15px}.scientific-experts__card-inner{min-height:180px}.scientific-experts__card-content{padding:20px}.scientific-experts__quote-container{padding:3rem 1.5rem;max-width:90%}.scientific-experts__quote-text{font-size:16px}.scientific-experts__quote-mark img{max-width:28px}.scientific-experts__quote-author-name,.scientific-experts__quote-author-position,.scientific-experts__instagram-link{font-size:16px}}@media screen and (min-width: 750px){.scientific-experts{padding:70px 0}.scientific-experts__header{max-width:80%;margin-bottom:50px}.scientific-experts__heading h2{font-size:32px}.scientific-experts__subheading p{font-size:20px}.scientific-experts__description{font-size:16px}.scientific-experts__card-content{padding:25px}.scientific-experts__card-title h3{font-size:16px}.scientific-experts__button .button{padding:15px 30px;font-size:16px}.scientific-experts__quote-container{padding:3.5rem 2rem;max-width:85%}.scientific-experts__quote-text{font-size:20px;padding:0 40px}.scientific-experts__quote-mark img{max-width:30px}}@media screen and (min-width: 990px){.scientific-experts{padding:30px 0 60px}.scientific-experts__header{max-width:820px;margin-bottom:60px}.scientific-experts__description{font-size:16px}.scientific-experts__card-inner{min-height:200px}.scientific-experts__quote-container{padding:4rem 1rem;max-width:1000px}.scientific-experts__quote-text{font-size:24px}.scientific-experts__quote-author-name,.scientific-experts__quote-author-position,.scientific-experts__instagram-link{font-size:1.6rem}.scientific-experts__quote-mark img{max-width:32px}.scientific-experts__quote-mark--left{top:25%}.scientific-experts__quote-mark--right{bottom:25%}.scientific-experts__popup-title{font-size:28px}.scientific-experts__popup-subtitle p{font-size:18px}.scientific-experts__popup-content{padding-bottom:0;display:flex;flex-direction:row;max-width:900px;max-height:550px}.scientific-experts__popup-image{width:40%;max-height:70vh}.scientific-experts__popup-info{width:60%}}@media screen and (max-width: 750px){.scientific-experts{padding:0rem 0rem 0rem;overflow-x:hidden}.scientific-experts__quote-text h2{font-size:16px}.scientific-experts__card{min-height:auto;max-height:none}.scientific-experts__card-inner{min-height:140px}.scientific-experts__card-title h3{font-size:14px}.scientific-experts__card-subtitle p{font-size:11px}.scientific-experts__card-content{padding:15px}.scientific-experts__card-icon{margin-top:10px}.scientific-experts__inner{width:100%;max-width:100%;padding:0 15px}.scientific-experts__quote-container{position:relative;margin-top:0rem;margin-bottom:2rem;width:100%;max-width:100%}}.scientific-experts__card-image-container{position:absolute;top:0;left:0;width:100%;height:100%}.scientific-experts__popup-learn-more-button{margin-top:0;padding:15px 30px;border-top:1px solid #eee;position:absolute;bottom:0;left:0;right:0;background-color:#fff;z-index:5;text-align:center}.scientific-experts__popup-learn-more-button .button{padding:12px 25px;font-size:14px;font-weight:600;text-decoration:none;display:inline-block;border-radius:50px;background-color:#9e0b0f;color:#fff;transition:all .3s ease;border:none}.scientific-experts__popup-learn-more-button .button:hover{background-color:#700000}@media screen and (max-width: 480px){.scientific-experts__card-inner{min-height:120px;grid-template-columns:35% 1fr}.scientific-experts__subheading p{font-size:13px}.scientific-experts__card-content{padding:10px}.scientific-experts__card-title h3{font-size:14px}.scientific-experts__card-subtitle p{font-size:10px;margin-bottom:5px}.scientific-experts__card-icon{margin-top:5px}.scientific-experts__open-popup-btn{width:30px;height:30px}.scientific-experts__popup-content{width:95%;max-height:75vh}.scientific-experts__popup-info{padding:20px 20px 70px}}@media screen and (min-width: 550px) and (max-width: 749px){.scientific-experts__grid{grid-template-columns:repeat(2,1fr);gap:20px}}@media screen and (min-width: 750px) and (max-width: 989px){.scientific-experts__grid{grid-template-columns:repeat(2,1fr);gap:25px}}@media screen and (min-width: 990px) and (max-width: 1199px){.scientific-experts__grid{grid-template-columns:repeat(3,1fr);gap:25px}}@media screen and (min-width: 1200px){.scientific-experts__grid{grid-template-columns:repeat(4,1fr);gap:30px}}@media screen and (max-width: 749px){.scientific-experts__popup-content{width:95%;max-height:calc(80vh - 40px);overflow:hidden}.scientific-experts__heading h2{font-size:24px}.scientific-experts__popup-image{height:auto;max-height:30vh}.scientific-experts__popup-info{padding:20px 20px 80px;text-align:left}.scientific-experts__popup-title{font-size:20px}.scientific-experts__popup-subtitle p{font-size:14px}.scientific-experts__popup-description{font-size:14px;text-align:left}.scientific-experts__popup-learn-more-button{padding:10px 20px}}
+/*# sourceMappingURL=/cdn/shop/t/121/assets/scientific-experts.css.map?v=77901252131418489471758102375 */
+</style>
+
+<div id="shopify-section-template--18635417976999__scientific_experts_qnEXLk" class="shopify-section scientific-experts-section">
+    
+    
+    
+ 
+<div class="scientific-experts">
+  
+  <div class="scientific-experts__inner ">
+    <div class="scientific-experts__header">
+      
+      <div class="scientific-experts__heading">
+          <h2>{{ section.settings.heading }}</h2>
+        </div>
+        <div class="scientific-experts__subheading">
+         <p>{{ section.settings.subheading }}</p>
+        </div>
+        <div class="scientific-experts__description">
+ <p>{{ section.settings.description }}</p>        </div>
+      
+      </div>
+
+
+<style>
+     .padding-template--27634704286027__profile_info_section_ykCnyb{
+        padding-top:75px;
+        padding-bottom:75px;
+    }
+
+    .profile_info{
+        background-color: #1a1a1a;
+    }
+
+    .profile_info .profile_info_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 7rem;
+    }
+
+    .profile_info .pil_profile {
+      border: 1px solid #303536;
+      border-radius: 20px;
+    }
+
+    .pil_profile_name {
+        align-self: center;
+        color: #fff;
+    }
+
+    .profile_info_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 50%;
+        align-items: center;
+        gap: 2.5rem;
+        height: 100%;
+        background: color-mix(in oklab, #191f1f 5%, transparent);
+        height: -webkit-fill-available;
+        border: 0px;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            /*background-color: #ffffff1a;*/
+        }
+    }
+
+    .profile_info_right {
+        flex: 50%;
+    }
+
+    .pil_name {
+        font-size: 25px;
+        font-family: 'Poppins';
+        letter-spacing: 0;
+        margin:0;
+        line-height: 100%;
+        margin-bottom: 0.8rem;
+        color: #cfcfcf;
+    }
+
+    .pil_role {
+        font-family: 'Poppins';
+        font-size: 20px;
+        letter-spacing: 0;
+        margin:0;
+        line-height: 100%;
+        color: #cfcfcfc7;
+    }
+
+    .pir_heading {
+        font-family: 'Poppins';
+        font-size: 72px;
+        font-weight: 600;
+        letter-spacing: -0.8px;
+        margin: 0;
+        line-height: 100%;
+        color: #fff;
+    }
+
+    .pir_about > * {
+        font-size: 30px;
+        letter-spacing: 0;
+        line-height: 1.6;
+        font-family: 'Poppins';
+        font-weight: 300;
+        margin: 0;
+        color: #cfcfcf;
+    }
+
+    .pir_name {
+        font-size: 30px;
+        letter-spacing: 0;
+        font-style: italic;
+        font-family: auto;
+        margin: 0;
+        color: #fff;
+        line-height: 100%;
+        margin-bottom: 0.8rem;
+    }
+
+    .pir_role {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 14px;
+        font-family: 'Poppins';
+        margin: 0;
+        color: #cfcfcf;
+    }
+
+    .pir_tags {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 2rem;
+        margin-top: 1rem;
+    }
+
+    .pir_tag {
+        letter-spacing: 0;
+        font-family: 'Poppins';
+        font-size: 16px;
+        color: #cfcfcf;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            background: #1c8e8e;
+            border-radius: 50%;
+            top: 50%;
+            left: -25px;
+            transform: translateY(-50%);
+            box-shadow: 0 0 6px 0px #1c8e8e;
+        }
+    }
+
+    .profile_info_right {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        padding-block: 2rem;
+    }
+
+    .pil_profile img {
+        margin-top: 1px;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    .pir_about {
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .pir_about p{
+        text-align: center;
+    }
+    @media screen and (min-width: 750px){
+        .padding-template--27634704286027__profile_info_section_ykCnyb{
+            padding-top:100px;
+            padding-bottom:100px;
+        }
+    }
+.profile_info .pir_tag {
+    font-weight: bold;
+    font-size: 1.5rem;
+    background: linear-gradient(
+    45deg,
+    #1c8e8e 0%,
+    #2d9cdb 25%,
+    #4a2e8e 50%,
+    #6b46c1 75%,
+    #8b5cf6 100%
+  );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textHighlight 3s ease-in-out infinite alternate;
+}
+
+@keyframes textHighlight {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+@media screen and ( max-width: 989px ){
+    .pir_heading{
+        font-size: 45px;
+    }
+    .profile_info .pir_tag{
+        font-size: 18px;
+    }
+}
+@media screen and ( max-width: 767px ){
+    .padding-template--27634704286027__profile_info_section_ykCnyb{
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+    .pir_heading{
+        font-size: 35px;
+    }
+    .profile_info_right {
+        gap: 2rem;
+        padding-block: 4rem;
+    }   
+    .pil_name, .pir_about > * {
+        font-size: 20px;
+    }
+    .pil_role{ font-size: 18px; }
+}
+</style>
+
+</div>
+
+
+        <div class="scientific-experts-section">
+
+
+    <div class="scientific-experts__grid">
+
+
+      
+
+      {% comment %} {%- for block in section.blocks -%}
+        <div class="scientific-experts__card" data-expert-id="metaobject-{{ forloop.index }}">
+          <div class="scientific-experts__card-inner">
+
+            <div class="scientific-experts__card-image">
+              <div class="scientific-experts__card-image-container">
+                {% if block.settings.image %}
+                  <img 
+                    src="{{ block.settings.image | img_url: '600x' }}"
+                    srcset="{{ block.settings.image | img_url: '400x' }} 400w,
+                            {{ block.settings.image | img_url: '600x' }} 600w"
+                    width="600"
+                    height="672"
+                    alt="{{ block.settings.name }}"
+                    loading="lazy"
+                  >
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="scientific-experts__card-content">
+              <div class="scientific-experts__card-info">
+
+                <div class="scientific-experts__card-title">
+                  <h3>{{ block.settings.name }}</h3>
+                </div>
+
+                <div class="scientific-experts__card-subtitle">
+                  <p>{{ block.settings.title }}</p>
+                </div>
+
+              </div>
+
+              <div class="scientific-experts__card-icon">
+                <button 
+                  type="button" 
+                  class="scientific-experts__open-popup-btn"
+                  aria-label="View details"
+                  data-expert-id="metaobject-{{ forloop.index }}"
+                >
+                 <img src="https://cdn.shopify.com/s/files/1/0930/5807/2907/files/svgviewer-output_7.svg?v=1766039167" alt="View details icon">
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      {%- endfor -%} {% endcomment %}
+
+    </div>
+
+  </div>
+
+        
+        
+      
+        
+        <!-- Metaobject popups -->
+   <div class="scientific-experts__popups-container">
+
+  {%- for block in section.blocks -%}
+    <div id="popup-metaobject-{{ forloop.index }}" 
+         class="scientific-experts__popup" 
+         role="dialog" 
+         aria-modal="true" 
+         aria-labelledby="popup-title-metaobject-{{ forloop.index }}"
+         aria-hidden="true">
+
+      <div class="scientific-experts__popup-overlay"></div>
+
+      <div class="scientific-experts__popup-content">
+
+        <button type="button" class="scientific-experts__popup-close" aria-label="Close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+
+        <div class="scientific-experts__popup-image">
+          {% if block.settings.popup_image %}
+            <img 
+              src="{{ block.settings.popup_image | img_url: '800x' }}"
+              srcset="{{ block.settings.popup_image | img_url: '400x' }} 400w,
+                      {{ block.settings.popup_image | img_url: '600x' }} 600w,
+                      {{ block.settings.popup_image | img_url: '800x' }} 800w"
+              width="800"
+              height="391"
+              loading="lazy"
+            >
+          {% endif %}
+        </div>
+
+        <div class="scientific-experts__popup-info">
+          <h2 id="popup-title-metaobject-{{ forloop.index }}" 
+              class="scientific-experts__popup-title">
+            {{ block.settings.name }}
+          </h2>
+
+          <div class="scientific-experts__popup-subtitle">
+            <div class="metafield-rich_text_field">
+              {{ block.settings.subtitle }}
+            </div>
+          </div>
+
+          <div class="scientific-experts__popup-description">
+            <div class="metafield-rich_text_field">
+              {{ block.settings.description }}
+            </div>
+          </div>
+
+          {% if block.settings.learn_more_link %}
+            <div class="scientific-experts__popup-learn-more-button">
+              <a href="{{ block.settings.learn_more_link }}" class="button">
+                Learn More
+              </a>
+            </div>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  {%- endfor -%}
+
+</div>
+
+
+
+        </div>
+      <div class="scientific-experts__quote-container">
+        
+        <div class="scientific-experts__quote-wrapper">
+          <div class="scientific-experts__quote-marks">
+            
+              <div class="scientific-experts__quote-mark scientific-experts__quote-mark--left">
+ {% if section.settings.left_quote_image != blank %}
+        <img 
+          src="{{ section.settings.left_quote_image | image_url: width: 100 }}" 
+          alt="Opening quote" 
+          width="100" 
+          height="85" 
+          loading="lazy"
+        >
+        {% endif %}              </div>
+            
+            
+            <div class="scientific-experts__quote-text">
+  <p>{{ section.settings.quote_text }}</p>            </div>
+            
+            
+              <div class="scientific-experts__quote-mark scientific-experts__quote-mark--right">
+ {% if section.settings.right_quote_image != blank %}
+        <img 
+          src="{{ section.settings.right_quote_image | image_url: width: 100 }}" 
+          alt="Closing quote" 
+          width="100" 
+          height="82" 
+          loading="lazy"
+        >
+        {% endif %}              </div>
+            
+          </div>
+          
+          
+            <div class="scientific-experts__quote-author">
+      
+                {% if section.settings.author_image != blank %}
+      <a href="{{ section.settings.author_link }}" class="scientific-experts__quote-author-bio-image-link">
+        <img 
+          src="{{ section.settings.author_image | image_url: width: 100 }}" 
+          alt="{{ section.settings.author_name }}" 
+          width="100" 
+          height="102" 
+          loading="lazy" 
+          class="scientific-experts__quote-author-bio-image"
+        >
+      </a>
+      {% endif %}
+              <div class="scientific-experts__quote-author-details">
+                
+                  <div class="scientific-experts__quote-author-name">
+                   — {{ section.settings.author_name }},
+                  </div>
+                
+                
+                
+                  <div class="scientific-experts__quote-author-position">
+                    {{ section.settings.author_position }}
+                  </div>
+                
+                
+                       {% if section.settings.instagram_handle != blank %}
+        <div class="scientific-experts__instagram-handle">
+          <a href="{{ section.settings.instagram_link }}" target="_blank" rel="noopener noreferrer" class="scientific-experts__instagram-link">
+            {{ section.settings.instagram_handle }}
+          </a>
+        </div>
+        {% endif %}
+
+                
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+</div>
+<div style="
+    width: 100%;
+" id="shopify-section-template--27634704286027__profile_info_section_ykCnyb" class="shopify-section"><div class="profile_info padding-template--27634704286027__profile_info_section_ykCnyb">
+    <div class="page-width">
+        <div class="profile_info_wrapper">
+            <div class="profile_info_left">
+                <div class="pil_profile">
+                    
+                        <img src="https://cdn.shopify.com/s/files/1/0930/5807/2907/files/image_2.png?v=1766757812" alt="" srcset="https://cdn.shopify.com/s/files/1/0930/5807/2907/files/image_2.png?v=1766757812" loading="lazy">
+                    
+                </div>
+                <div class="pil_info">
+                    <p class="pil_name">Dr. Nedal Yassin</p>
+                    <p class="pil_role">Chief Medical Officer</p>
+                </div>
+            </div>
+            <div class="profile_info_right">
+                <div class="pir_heading">Doctor Built.</div>
+                <div class="pir_about"><p>Clinically inspired patches for effortless optimization.</p></div>
+                <div class="pir_name_role">
+                <h4 class="pir_name">Dr. Nedal Yassin</h4>
+                <p class="pir_role">Founder &amp; Chief Medical Officer</p>
+                 <a href="/pages/about-us" style="color: white; text-decoration: underline;">Learn More</a>
+                </div>
+                <div class="pir_tags">
+                    
+                        <div class="pir_tag">Clinically inspired</div>
+                    
+                        <div class="pir_tag">Backed by science</div>
+                    
+                        <div class="pir_tag">Doctor formulated</div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all popup buttons, popups, and close buttons
+    const openButtons = document.querySelectorAll('.scientific-experts__open-popup-btn');
+    const popups = document.querySelectorAll('.scientific-experts__popup');
+    const closeButtons = document.querySelectorAll('.scientific-experts__popup-close');
+    const overlays = document.querySelectorAll('.scientific-experts__popup-overlay');
+    
+    // Store scroll position globally to avoid conflicts
+    let storedScrollTop = 0;
+    let storedScrollLeft = 0;
+    
+    // Function to open popup
+    function openPopup(popupId) {
+      const popup = document.getElementById(popupId);
+      if (!popup) return;
+      
+      // Store current scroll position (only needed for desktop focus restoration)
+      storedScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      storedScrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+      
+      // Move popup to body to ensure proper stacking
+      if (popup.parentNode !== document.body) {
+        document.body.appendChild(popup);
+      }
+      
+      // Simple body scroll lock - no position manipulation needed
+      document.body.style.overflow = 'hidden';
+      
+      // Set popup to visible state
+      popup.setAttribute('aria-hidden', 'false');
+      popup.style.display = 'flex';
+      
+      // Smooth fade in
+      requestAnimationFrame(() => {
+        popup.classList.add('active');
+      });
+      
+      // Set focus after animation (desktop only)
+      const isMobile = window.innerWidth <= 768 || 'ontouchstart' in window;
+      if (!isMobile) {
+        setTimeout(() => {
+          const closeBtn = popup.querySelector('.scientific-experts__popup-close');
+          if (closeBtn) {
+            closeBtn.focus({ preventScroll: true });
+          }
+        }, 350);
+      }
+    }
+    
+    // Enhanced close function with mobile-optimized fade
+    function closePopup(popup) {
+      if (!popup) return;
+      
+      const isMobile = window.innerWidth <= 768 || 'ontouchstart' in window;
+      
+      if (isMobile) {
+        // MOBILE: Simple fade with no scroll restoration
+        popup.style.pointerEvents = 'none';
+        popup.style.transition = 'opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        popup.style.opacity = '0';
+        popup.setAttribute('aria-hidden', 'true');
+        
+        setTimeout(() => {
+          // Simple cleanup - no position restoration needed
+          popup.style.display = 'none';
+          popup.classList.remove('active');
+          document.body.style.overflow = '';
+          
+          // Clean up popup styles
+          popup.style.opacity = '';
+          popup.style.transition = '';
+          popup.style.pointerEvents = '';
+        }, 350);
+        
+      } else {
+        // DESKTOP: Standard approach with focus restoration
+        popup.classList.remove('active');
+        popup.setAttribute('aria-hidden', 'true');
+        
+        setTimeout(() => {
+          document.body.style.overflow = '';
+          popup.style.display = 'none';
+          
+          const expertId = popup.id.replace('popup-', '');
+          const openBtn = document.querySelector(`.scientific-experts__open-popup-btn[data-expert-id="${expertId}"]`);
+          if (openBtn) {
+            setTimeout(() => {
+              openBtn.focus({ preventScroll: true });
+            }, 50);
+          }
+        }, 300);
+      }
+    }
+    
+    // Prevent rapid clicking issues
+    let clickCooldown = false;
+    
+    // Event listeners
+    openButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Prevent rapid clicking that can cause issues
+        if (clickCooldown) return;
+        clickCooldown = true;
+        setTimeout(() => clickCooldown = false, 500);
+        
+        const expertId = this.getAttribute('data-expert-id');
+        openPopup('popup-' + expertId);
+      });
+    });
+    
+    closeButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const popup = this.closest('.scientific-experts__popup');
+        closePopup(popup);
+      });
+    });
+    
+    overlays.forEach(overlay => {
+      overlay.addEventListener('click', function() {
+        const popup = this.closest('.scientific-experts__popup');
+        closePopup(popup);
+      });
+    });
+    
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const activePopup = document.querySelector('.scientific-experts__popup.active');
+        if (activePopup) {
+          closePopup(activePopup);
+        }
+      }
+    });
+    
+    // Focus trap
+    popups.forEach(popup => {
+      popup.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+          const focusableElements = popup.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+          const firstElement = focusableElements[0];
+          const lastElement = focusableElements[focusableElements.length - 1];
+          
+          if (e.shiftKey && document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+          } else if (!e.shiftKey && document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
+          }
+        }
+      });
+    });
+  });
+</script>
+
+ </div>
+
+{% schema %}
+{
+  "name": "Scientific Experts",
+  "settings": [ {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "BACKED BY WORLD-CLASS SCIENTIFIC EXPERTISE"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Meet the experts behind IM8's revolutionary formula"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Our Scientific Advisory Board brings together leading experts in nutrition, medicine, and performance science. This distinguished team has collaborated to develop a formula that represents the cutting edge of nutritional science."
+    },
+  
+   {
+      "type": "textarea",
+      "id": "quote_text",
+      "label": "Quote Text",
+      "default": "As a doctor, I’m passionate about science-backed nutrition. IM8’s commitment to third-party testing and rigorous clinical trials gives me complete confidence. I use it daily for trusted, optimal health support."
+    },
+    {
+      "type": "text",
+      "id": "author_name",
+      "label": "Author Name",
+      "default": "Dr. Amy Shah"
+    },
+    {
+      "type": "text",
+      "id": "author_position",
+      "label": "Author Position",
+      "default": "Double-Board Certified Physician & Host of Podcast “Save Yourself”"
+    },
+    {
+      "type": "image_picker",
+      "id": "author_image",
+      "label": "Author Image"
+    },
+    {
+      "type": "url",
+      "id": "author_link",
+      "label": "Author Link"
+    },
+    {
+      "type": "text",
+      "id": "instagram_handle",
+      "label": "Instagram Handle"
+    },
+    {
+      "type": "url",
+      "id": "instagram_link",
+      "label": "Instagram Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_quote_image",
+      "label": "Left Quote Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_quote_image",
+      "label": "Right Quote Image"
+    }
+  
+  ],
+  "blocks": [
+    {
+      "type": "expert",
+      "name": "Expert",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Card Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "popup_image",
+          "label": "Popup Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Expert Name"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Expert Title"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "Popup Subtitle"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Popup Description"
+        },
+        {
+          "type": "url",
+          "id": "learn_more_link",
+          "label": "Learn More Button Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "SCIENTIFICEXPERTISE",
+      "category": "SCIENTIFICEXPERTISE"
+    }
+  ]
+}
+{% endschema %}
