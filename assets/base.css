@@ -17633,6 +17633,13 @@ nav.header__inline-menu {
   text-decoration: none;
 }
 
+/* Fix: Ensure button label text is visible above pseudo-elements */
+.new-btn .button__label,
+.new-btn span {
+  position: relative;
+  z-index: 1;
+}
+
 /* CUSTOM CSS */
 
 :root {
