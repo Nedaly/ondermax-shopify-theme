@@ -17649,14 +17649,9 @@ button.new-btn,
 .action-btns--left button.new-btn,
 .action-btns--arrow button.new-btn,
 .cart-drawer .new-btn,
-.drawer__footer .new-btn,
-.action-btns--center button.button.new-btn:not([disabled]),
-.action-btns--left button.button.new-btn:not([disabled]),
-.action-btns--arrow button.button.new-btn:not([disabled]),
-body.action-btns--center button.new-btn.button.cart__checkout-button {
+.drawer__footer .new-btn {
   color: #fff !important;
-  background: linear-gradient(45deg, #1c8e8e 0%, #2d9cdb 25%, #4a2e8e 50%, #6b46c1 75%, #8b5cf6 100%) !important;
-  background-size: 300% 300% !important;
+  --color-button-text: 255, 255, 255 !important;
 }
 
 /* CUSTOM CSS */
