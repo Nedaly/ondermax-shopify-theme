@@ -17919,16 +17919,17 @@ cart-items .title,
     #22c55e,
     #4ade80,
     #86efac
-  );
+  ) !important;
 
-  background-size: 300% 300%;
+  background-size: 300% 300% !important;
   background-position: 0% 50%;
+  background-color: #16a34a !important;
 
   animation:
     gradientShift 4s ease-in-out infinite,
     pulseGlow 3s ease-in-out infinite;
 
-  color: #fff;
+  color: #fff !important;
   position: relative;
   overflow: hidden;
   border-radius: 50px;
