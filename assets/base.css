@@ -17638,6 +17638,14 @@ nav.header__inline-menu {
 .new-btn span {
   position: relative;
   z-index: 1;
+  color: #fff !important;
+}
+
+/* Force white text on new-btn buttons (overrides --color-button-text) */
+.new-btn.button,
+.new-btn.cart__checkout-button,
+button.new-btn {
+  color: #fff !important;
 }
 
 /* CUSTOM CSS */
