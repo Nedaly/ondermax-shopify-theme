@@ -9,538 +9,836 @@
  */
 {
   "sections": {
-    "hero": {
-      "type": "ondermax-hero",
-      "custom_css": [],
-      "settings": {
-        "kicker": "Take Control of Your 24 Hours",
-        "heading": "Real Results.",
-        "subheading": "Maximum Day.\n Awake when you want, asleep when you need.",
-        "use_video": true,
-        "video_cdn_url": "https://cdn.shopify.com/videos/c/o/v/6f036483135b4d3d8f375016a8ed00a5.mp4",
-        "fallback": "shopify://shop_images/Screenshot_1.png",
-        "image": "shopify://shop_images/Screenshot_1.png",
-        "overlay_strength": 30,
-        "primary_link": "shopify://products/high-energy-and-sleep-stack",
-        "primary_label": "Shop the Stack",
-        "secondary_link": "#shopify-section-template--26495401165131__benefits_story",
-        "secondary_label": "How it Works ↓",
-        "learn_anchor": "science-authority",
-        "enable_smooth_scroll": true,
-        "badge_enable": true,
-        "mobile_sticky_cta": false,
-        "sticky_label": "Shop now"
-      }
-    },
-    "image_slider_cgrJmQ": {
-      "type": "static-image-grid",
+    "hero_banner_XcNznx": {
+      "type": "hero-banner",
       "blocks": {
-        "image_slide_1": {
-          "type": "image_slide",
+        "bullet_7r3xPF": {
+          "type": "bullet",
           "settings": {
-            "link": "",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
+            "icon": "shopify://shop_images/svgviewer-output.svg",
+            "text": "Free Worldwide Shipping"
           }
         },
-        "image_slide_2": {
-          "type": "image_slide",
+        "bullet_9HBkQh": {
+          "type": "bullet",
           "settings": {
-            "link": "",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "image_slide_3": {
-          "type": "image_slide",
-          "settings": {
-            "link": "",
-            "description": "",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
+            "icon": "shopify://shop_images/svgviewer-output.svg",
+            "text": "30-Day Guarantee"
           }
         }
       },
       "block_order": [
-        "image_slide_1",
-        "image_slide_2",
-        "image_slide_3"
+        "bullet_7r3xPF",
+        "bullet_9HBkQh"
       ],
-      "disabled": true,
-      "name": "Static Image Grid",
+      "name": "Hero Banner",
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "",
-        "title_highlight_color": "#121212",
-        "heading_size": "h1",
-        "color_scheme": "background-1",
-        "desktop_border_radius": 0,
-        "mobile_border_radius": 0,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#121212"
+        "hero_image": "shopify://shop_images/main_image.jpg",
+        "show_trust": true,
+        "heading": "The 24-Hour Optimization System for",
+        "animated_text_list": "Ambitious Minds | Peak Performers | High Achievers",
+        "description": "<p>Replace 10+ daily supplements with 2 patches. Steady energy by day. Deep recovery by night. No pills. No crashes. Just results.</p>",
+        "button_label": "Shop The Stack",
+        "button_link": "shopify://products/high-energy-and-sleep-stack"
       }
     },
-    "multirow_custom_3RUXj3": {
-      "type": "multirow-custom",
+    "customswiperslider_JwYnBb": {
+      "type": "Customswiperslider",
       "blocks": {
-        "row_kjH9Gt": {
+        "slide_gwUeYY": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/110825_-_Acne_and_Insulin_-_Reel_Cover_7_1.png"
+          }
+        },
+        "slide_hB8CnW": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/nurse-helping-patient_472484d7-86d5-43f7-a1d8-4c7f485bd391.jpg"
+          }
+        },
+        "slide_9Nq3fM": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg"
+          }
+        },
+        "slide_UbTBUp": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/mobile-hero-surge.jpg"
+          }
+        },
+        "slide_UjCPqF": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg"
+          }
+        },
+        "slide_7EytLW": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg"
+          }
+        },
+        "slide_QkCmRt": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/nurse-helping-patient_472484d7-86d5-43f7-a1d8-4c7f485bd391.jpg"
+          }
+        },
+        "slide_9ncEAj": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg"
+          }
+        },
+        "slide_TqEkj8": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg"
+          }
+        },
+        "slide_keapKf": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {}
+        },
+        "slide_FN94TN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/2609b8769c846fd125994dabcc490d07931d0cbb.png"
+          }
+        },
+        "slide_fqkWaX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/0f121faf8dd34bd7695c761f52885d2f375b2d94.png"
+          }
+        },
+        "slide_KYfLpp": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1a259110c557fc2ea5b73b37c6038f5cffa96f46.png"
+          }
+        },
+        "slide_Xyh4gK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/647df9f788df27dae3764194126223acf72d1a9d.png"
+          }
+        },
+        "slide_UUzFFn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/8b277c2aa66d6a7815c7b442bc9a1703aff4cf15.png"
+          }
+        },
+        "slide_bneDi3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/8072b014d0829bf07967ab1145c56cafea4f62d3.png"
+          }
+        },
+        "slide_qczgRh": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/2609b8769c846fd125994dabcc490d07931d0cbb.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_gwUeYY",
+        "slide_hB8CnW",
+        "slide_9Nq3fM",
+        "slide_UbTBUp",
+        "slide_UjCPqF",
+        "slide_7EytLW",
+        "slide_QkCmRt",
+        "slide_9ncEAj",
+        "slide_TqEkj8",
+        "slide_keapKf",
+        "slide_FN94TN",
+        "slide_fqkWaX",
+        "slide_KYfLpp",
+        "slide_Xyh4gK",
+        "slide_UUzFFn",
+        "slide_bneDi3",
+        "slide_qczgRh"
+      ],
+      "name": "custom Swiper Slider",
+      "settings": {
+        "heading": "Trusted by <strong>15,000+</strong> happy customers for clean energy and deep rest"
+      }
+    },
+    "quote_and_logos_eABHwY": {
+      "type": "quote-and-logos",
+      "disabled": true,
+      "blocks": {
+        "quote_46n8BM": {
+          "type": "quote",
+          "settings": {
+            "quote": "\"We wanted to build one simple solution that supports energy, focus, recovery, and sleep — without pills or crashes.\"",
+            "author": "– Founder, Ondermax"
+          }
+        },
+        "logo_HeyT8U": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Forbes.avif"
+          }
+        },
+        "quote_npVfkU": {
+          "type": "quote",
+          "settings": {
+            "quote": "\"Ondermax patches fit seamlessly into my daily routine. Clean energy during the day and deeper sleep at night.\"",
+            "author": "– Verified Customer"
+          }
+        },
+        "logo_3EacTL": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Group_1000005052.avif"
+          }
+        },
+        "quote_bYbPcw": {
+          "type": "quote",
+          "settings": {
+            "quote": "\"A smarter alternative to supplements — fast-absorbing, effective, and easy to use.\"",
+            "author": "– Wellness Expert"
+          }
+        },
+        "logo_GktKcr": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/logo_nbctoday.avif"
+          }
+        }
+      },
+      "block_order": [
+        "quote_46n8BM",
+        "logo_HeyT8U",
+        "quote_npVfkU",
+        "logo_3EacTL",
+        "quote_bYbPcw",
+        "logo_GktKcr"
+      ],
+      "name": "Quote + Logos",
+      "settings": {
+        "subheading": "AS FEATURED IN",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "clinically_proven_k6p7y6": {
+      "type": "ClinicallyProven",
+      "blocks": {
+        "stat_item_DLQT6t": {
+          "type": "stat_item",
+          "settings": {
+            "subheading": "Crash-Free Energy",
+            "stat_value": "94%",
+            "description": "<p>of users report steady energy all day — no spikes, no crashes</p>"
+          }
+        },
+        "stat_item_HqE8Ji": {
+          "type": "stat_item",
+          "settings": {
+            "subheading": "Faster Recovery",
+            "stat_value": "88%",
+            "description": "<p>experience better recovery and less daily fatigue</p>"
+          }
+        },
+        "stat_item_CqbEXH": {
+          "type": "stat_item",
+          "settings": {
+            "subheading": "Fall Asleep Faster",
+            "stat_value": "82%",
+            "description": "<p>fall asleep faster and wake up actually refreshed</p>"
+          }
+        },
+        "stat_item_RpThw9": {
+          "type": "stat_item",
+          "settings": {
+            "subheading": "Mental Clarity",
+            "stat_value": "79%",
+            "description": "<p>notice sharper focus and sustained concentration</p>"
+          }
+        }
+      },
+      "block_order": [
+        "stat_item_DLQT6t",
+        "stat_item_HqE8Ji",
+        "stat_item_CqbEXH",
+        "stat_item_RpThw9"
+      ],
+      "name": "Clinically Proven",
+      "settings": {
+        "background_image": "shopify://shop_images/e11c080e6a3dfe568334967ed112b28b4af22f2f_1.webp",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/8bef0e18e4264e4a9310ec270d2c2830.mp4",
+        "overlay_color": "#6b46c1",
+        "overlay_opacity": 0.7,
+        "heading": "Clinically Backed. Transparently Tested.",
+        "main_text": "<p>Every formula is developed using evidence-based research and verified through independent third-party testing — so you know exactly what you’re using, every single day.<br/></p>",
+        "button_label": "Shop Now",
+        "button_link": "shopify://products/high-energy-and-sleep-stack",
+        "source_note": "<p>Based on internal user studies and third-party ingredient testing. Individual results may vary.<br/></p>"
+      }
+    },
+    "key_benefits_zXrmLh": {
+      "type": "key-benefits",
+      "name": "key-benefits",
+      "settings": {
+        "icon_1": "shopify://shop_images/NSF_Contents.svg",
+        "icon_2": "shopify://shop_images/NSF_Sport.svg",
+        "heading": "Clean. Tested. Trusted.",
+        "description": "<p>Every Ondermax formula is built with clinically researched ingredients and verified through independent third-party testing. We prioritize purity, transparency, and performance — ensuring each patch meets the highest quality standards with no unnecessary fillers, heavy metals, or contaminants.</p>",
+        "button_label": "Shop Now",
+        "button_link": "shopify://products/high-energy-and-sleep-stack"
+      }
+    },
+    "index_icons_texts_lists_main_new_NnmQXi": {
+      "type": "Index_icons_texts_lists_main_new",
+      "blocks": {
+        "bullet_DYBBrj": {
+          "type": "bullet",
+          "settings": {
+            "text": "100% Plant-Based"
+          }
+        },
+        "bullet_3mxByY": {
+          "type": "bullet",
+          "settings": {
+            "text": "Free from major allergens"
+          }
+        },
+        "bullet_NnJBwN": {
+          "type": "bullet",
+          "settings": {
+            "text": "Gluten-Free Formula"
+          }
+        },
+        "bullet_mBHEcr": {
+          "type": "bullet",
+          "settings": {
+            "text": "No artificial colors or flavors"
+          }
+        },
+        "bullet_t7gGEG": {
+          "type": "bullet",
+          "settings": {
+            "text": "No added sugar"
+          }
+        },
+        "collab_t8nigp": {
+          "type": "collab",
+          "settings": {
+            "logo": "shopify://shop_images/university-of-oxford-logo.svg",
+            "link": ""
+          }
+        },
+        "collab_xBAezL": {
+          "type": "collab",
+          "settings": {
+            "logo": "shopify://shop_images/university-of-oxford-logo.svg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "bullet_DYBBrj",
+        "bullet_3mxByY",
+        "bullet_NnJBwN",
+        "bullet_mBHEcr",
+        "bullet_t7gGEG",
+        "collab_t8nigp",
+        "collab_xBAezL"
+      ],
+      "disabled": true,
+      "name": "Index_icons_texts_lists_main_new",
+      "settings": {
+        "bg_color": "#ffffff",
+        "desktop_bg": "shopify://shop_images/heor-banner.png",
+        "main_title": "IM8 checks all the boxes",
+        "left_icon_1": "shopify://shop_images/Group_1000005030.svg",
+        "left_icon_2": "shopify://shop_images/Group_16012.svg",
+        "collab_heading": "Trusted by Leading Research Institutions"
+      }
+    },
+    "scientificexpertise_jDAihz": {
+      "type": "SCIENTIFICEXPERTISE",
+      "blocks": {
+        "expert_kV34eq": {
+          "type": "expert",
+          "settings": {
+            "image": "shopify://shop_images/c17b372fb02124ef0275eb385df4343dd851a996.png",
+            "popup_image": "shopify://shop_images/c17b372fb02124ef0275eb385df4343dd851a996.png",
+            "name": "Dr. Nedal Yassin",
+            "title": "Chief Medical Officer",
+            "subtitle": "<p>Chief Medical Officer<br/><br/><br/><br/></p>",
+            "description": "<p>Ondermax is a wellness performance brand built by Dr. Nedal Yassin — a medical doctor obsessed with biohacking, aesthetics, and longevity. We create science-backed, no-nonsense solutions for modern life. No pills. No fluff. Just results.<br/><br/><br/></p>",
+            "learn_more_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "expert_kV34eq"
+      ],
+      "name": "SCIENTIFICEXPERTISE",
+      "settings": {
+        "heading": "CLINICALLY INSPIRED, SCIENCE-BACKED PERFORMANCE",
+        "subheading": "Developed by experts for modern energy, focus, and recovery",
+        "description": "At Ondermax, our formulations are rooted in scientific principles and clinical insight. Led by Dr. Nedal Yassin — a medical doctor passionate about biohacking, longevity, and optimized performance — our patches are built on clinically studied ingredients designed to support sustained mental clarity, steady cellular energy, and deeper restorative sleep. Each component is precisely dosed for optimal performance with transdermal delivery, so you get fast, consistent benefits without pills, caffeine crashes, or unnecessary additives.",
+        "quote_text": "",
+        "author_name": "",
+        "author_position": "",
+        "author_link": "",
+        "instagram_handle": "",
+        "instagram_link": ""
+      }
+    },
+    "about_partner_detail_Brq6iN": {
+      "type": "AboutPartnerDetail",
+      "name": "About Partner Detail",
+      "settings": {
+        "background_color": "#f5eaea",
+        "heading": "From the Founder  Dr. Nedal Yassin",
+        "description": "<p>I'm Dr. Nedal Yassin. After years of prescribing supplements my patients couldn't stick to, I built what I wished existed: a simple system that actually works.<br/><br/>Two patches. 24 hours of optimization. No pills, no complexity, no guesswork.<br/><br/>Over 15,000 people now use Ondermax daily. The results speak for themselves.</p>",
+        "author_name": "Dr. Nedal Yassin",
+        "author_position": "Founder & Chief Medical Officer",
+        "video_poster": "shopify://shop_images/DR_image.jpg"
+      }
+    },
+    "card_slider_section_hyPDqT": {
+      "type": "card-slider-section",
+      "blocks": {
+        "card_Pyyx36": {
+          "type": "card",
+          "settings": {
+            "front_image": "shopify://shop_images/456e687a030a552136118b5b4da81ff58a0b575a.png",
+            "title": "SURGE Day Patch",
+            "front_description": "Clean, steady energy without pills",
+            "back_content": "<p>SURGE uses clinically inspired ingredients — including NAD+, Creatine, B‑Vitamins, and Glutathione — to support sustained energy, mental clarity, and focus throughout your day without jitters or crash.<br/></p>",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/high-energy-stack"
+          }
+        },
+        "card_MtcCRK": {
+          "type": "card",
+          "settings": {
+            "front_image": "shopify://shop_images/85e1c42c9350c618290a73e3c5c243ad517ac0bb.png",
+            "title": "DRIFT Night Patch",
+            "front_description": "Supports restful, refreshing sleep",
+            "back_content": "<p>DRIFT is formulated with micro‑dosed Melatonin and Magnesium Glycinate to help you fall asleep easier, stay asleep through the night, and wake up feeling refreshed without grogginess. <br/></p>",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/high-energy-stack-copy"
+          }
+        }
+      },
+      "block_order": [
+        "card_Pyyx36",
+        "card_MtcCRK"
+      ],
+      "name": "card-slider-section",
+      "settings": {
+        "heading_regular": "Replace Your Daily Supplements With",
+        "heading_italic": "One Simple Patch System",
+        "descriptionvv": "",
+        "header_image": "shopify://shop_images/frist-step.jpg",
+        "subheading": "Streamline Your Routine With Targeted Day & Night Support",
+        "description": "<p>Most health routines rely on multiple pills, powders, and drinks that only address a single aspect of wellness. Ondermax’s transdermal patch system combines targeted energy, focus, and rest support into a simple peel‑and‑stick ritual that fits your day — no pills, no crash, no complexity.<br/></p>"
+      }
+    },
+    "breakdown_lists_GbXtzy": {
+      "type": "BreakdownLists",
+      "blocks": {
+        "breakdown_item_ctA3Ah": {
+          "type": "breakdown_item",
+          "settings": {
+            "item_name": "Multivitamins & Minerals",
+            "item_price": "$45 USD"
+          }
+        },
+        "breakdown_item_THdtTJ": {
+          "type": "breakdown_item",
+          "settings": {
+            "item_name": "Energy & Focus Formulas",
+            "item_price": "$60 USD"
+          }
+        },
+        "breakdown_item_YNBRAc": {
+          "type": "breakdown_item",
+          "settings": {
+            "item_name": "Sleep & Recovery Formulas",
+            "item_price": "$50 USD"
+          }
+        },
+        "breakdown_item_DY3Riz": {
+          "type": "breakdown_item",
+          "settings": {
+            "item_name": "Adaptogens & Stress Support",
+            "item_price": "$35 USD"
+          }
+        },
+        "breakdown_item_TzUd7m": {
+          "type": "breakdown_item",
+          "settings": {
+            "item_name": "Electrolytes & Hydration Support",
+            "item_price": "$25 USD"
+          }
+        },
+        "breakdown_item_PdTQCf": {
+          "type": "breakdown_item",
+          "settings": {
+            "item_name": "Immunity & Antioxidant Support",
+            "item_price": "$30 USD"
+          }
+        },
+        "breakdown_item_q7nXmd": {
+          "type": "breakdown_item",
+          "settings": {
+            "item_name": "Digestive Support (Prebiotics & Probiotics)",
+            "item_price": "$40 USD"
+          }
+        }
+      },
+      "block_order": [
+        "breakdown_item_ctA3Ah",
+        "breakdown_item_THdtTJ",
+        "breakdown_item_YNBRAc",
+        "breakdown_item_DY3Riz",
+        "breakdown_item_TzUd7m",
+        "breakdown_item_PdTQCf",
+        "breakdown_item_q7nXmd"
+      ],
+      "disabled": true,
+      "name": "Breakdown Lists Section",
+      "settings": {
+        "desktop_comparison_image": "shopify://shop_images/desktop_comparison-pill_2x_0da77b74-6605-4244-8e13-4c0e828ceb71.webp",
+        "mobile_comparison_image": "shopify://shop_images/mobile_comparison-pill_2x_6cee01aa-3c78-4fa8-89f6-0c9d6ed725cb.webp",
+        "desktop_box_image": "shopify://shop_images/young-woman-stretching-in-a-park.jpg",
+        "mobile_box_image": "shopify://shop_images/young-woman-stretching-in-a-park.jpg",
+        "desktop_heading": "Replace Multiple Supplements With Ondermax Patches",
+        "mobile_heading": "Simplify Your Routine With 2 Easy Patches",
+        "modal_button_text": "View Patch Ingredients",
+        "annual_savings_title": "ANNUAL SAVINGS",
+        "annual_savings_amount": "$1,500 - $2,000",
+        "annual_savings_per": "per year",
+        "annual_savings_footnote": "when switching to Ondermax Patches",
+        "compare_title": "Your Traditional Supplements",
+        "compare_price": "$155 USD",
+        "compare_title_2": "Ondermax Patches (SURGE & DRIFT)",
+        "compare_price_2": "$89 USD"
+      }
+    },
+    "accordion_custom_BGMwrJ": {
+      "type": "accordion-custom",
+      "blocks": {
+        "accordion_item_g3JXgL": {
+          "type": "accordion_item",
+          "settings": {
+            "left_big_image": "shopify://shop_images/1.jpg",
+            "left_small_image": "shopify://shop_images/accordion-first.webp",
+            "emojis": "☀️",
+            "title": "Energy & Cellular Suppor",
+            "subtitle": "NAD+ & Creatine",
+            "right_icon": "shopify://shop_images/octagon-icon.svg",
+            "banner_text_1": "NAD+ (Nicotinamide Adenine Dinucleotide)",
+            "banner_text_2": "Creatine",
+            "description": "<p>NAD+ plays a central role in cellular energy production, helping convert nutrients into usable energy while supporting healthy dopamine signaling for mental clarity and focus. Creatine enhances both brain and muscle performance, helping you stay productive and alert throughout your day — without the spikes and crashes associated with caffeine or sugar.</p><h3><strong>Why It Matters</strong></h3><ul><li><strong>NAD+:</strong> Supports cellular energy and stable mental performance</li><li><strong>Creatine:</strong> Enhances sustained energy for both body and mind</li></ul>",
+            "richtext": ""
+          }
+        },
+        "accordion_item_AFiCJN": {
+          "type": "accordion_item",
+          "settings": {
+            "left_big_image": "shopify://shop_images/2_0c191fbb-cf46-4eac-9965-e1438b49b7b1.jpg",
+            "left_small_image": "shopify://shop_images/9.png",
+            "emojis": "☀️",
+            "title": "Focus & Brain Metabolism",
+            "subtitle": "B‑Vitamins",
+            "right_icon": "shopify://shop_images/octagon-icon.svg",
+            "banner_text_1": "Vitamin B Complex",
+            "banner_text_2": "",
+            "description": "<p>B‑Vitamins serve as essential cofactors in energy metabolism and neurotransmitter balance. By enhancing how your body processes nutrients into energy and supports mood stability, they contribute to clearer focus and stress resilience — especially during demanding work or study periods.</p><p></p>",
+            "richtext": ""
+          }
+        },
+        "accordion_item_gebe4y": {
+          "type": "accordion_item",
+          "settings": {
+            "left_big_image": "shopify://shop_images/3.jpg",
+            "emojis": "☀️",
+            "title": "Calming & Sleep Suppor",
+            "subtitle": "Magnesium & Melatonin",
+            "right_icon": "shopify://shop_images/octagon-icon.svg",
+            "banner_text_1": "Magnesium Glycinate",
+            "banner_text_2": "Micro‑Melatonin",
+            "description": "<p>This combo helps calm the nervous system and supports your natural sleep rhythm without grogginess in the morning. Magnesium supports muscle relaxation and nervous system balance, while melatonin gently cues your body to wind down for deeper, restorative sleep.<br/></p><h3><br/><strong>Why It Matters</strong></h3><p><strong><br/>Magnesium:</strong> Helps nervous system downshift</p><p><strong>Melatonin:</strong> Supports natural sleep timing<br/></p>",
+            "richtext": ""
+          }
+        },
+        "accordion_item_npTEJy": {
+          "type": "accordion_item",
+          "settings": {
+            "left_big_image": "shopify://shop_images/4.jpg",
+            "emojis": "☀️",
+            "title": "Antioxidant & Recovery Support",
+            "subtitle": "Glutathione",
+            "right_icon": "shopify://shop_images/octagon-icon.svg",
+            "banner_text_1": "Glutathione",
+            "banner_text_2": "",
+            "description": "<p>Glutathione is a master antioxidant that helps protect cells from oxidative stress and supports recovery after physical or mental exertion. Its presence in the patches contributes to clearer mental performance and helps with cellular repair processes. </p>",
+            "richtext": ""
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_g3JXgL",
+        "accordion_item_AFiCJN",
+        "accordion_item_gebe4y",
+        "accordion_item_npTEJy"
+      ],
+      "name": "Custom Accordion Section",
+      "settings": {
+        "main_heading": "Key Ingredients Supporting Your Day & Night Wellness",
+        "sub_heading": "Each ingredient in the SURGE & DRIFT patch system is selected to support steady energy, mental focus, calm recovery, and deep restful sleep without pills — using transdermal delivery for faster absorption and steadier effects.",
+        "bg_color": "#f5f5f5"
+      }
+    },
+    "feature_quote_section_QrprgV": {
+      "type": "feature-quote-section",
+      "blocks": {
+        "feature_item_4hmqpF": {
+          "type": "feature_item",
+          "settings": {
+            "text": "<p><strong>Simplified Routine -</strong> One SURGE or DRIFT patch daily instead of multiple pills and powders</p>"
+          }
+        },
+        "feature_item_n8FBiE": {
+          "type": "feature_item",
+          "settings": {
+            "text": "<p><strong>Consistent Absorption -</strong> Transdermal patches deliver nutrients steadily for optimal daily performance</p>"
+          }
+        },
+        "feature_item_RwV6qg": {
+          "type": "feature_item",
+          "settings": {
+            "text": "<p><strong>Scientifically Formulated -</strong> Ingredients combined to support energy, focus, recovery, and sleep</p>"
+          }
+        },
+        "feature_item_C3NJn9": {
+          "type": "feature_item",
+          "settings": {
+            "text": "<p><strong>Convenient Daily Use -</strong> Simple patches reduce pill fatigue and streamline your routine</p>"
+          }
+        },
+        "feature_item_MHDMLy": {
+          "type": "feature_item",
+          "settings": {
+            "text": "<p><strong>Expert-Backed -</strong> Developed by Dr. Nedal Yassin, focusing on biohacking, longevity, and practical health solutions</p>"
+          }
+        },
+        "feature_item_xQjBJM": {
+          "type": "feature_item",
+          "settings": {
+            "text": "<p><strong>Holistic Health Support -</strong> Targets energy, sleep, recovery, gut health, and overall wellness</p>"
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_4hmqpF",
+        "feature_item_n8FBiE",
+        "feature_item_RwV6qg",
+        "feature_item_C3NJn9",
+        "feature_item_MHDMLy",
+        "feature_item_xQjBJM"
+      ],
+      "name": "Feature Quote Section",
+      "settings": {
+        "main_image": "shopify://shop_images/BEYOND_COST_SAVINGS.png",
+        "heading": "BEYOND COST SAVINGS",
+        "quote_text": "<p>\"I used to take 10+ different supplements every day, often forgetting doses and spending over <strong>$250 monthly</strong>. Switching to Ondermax SURGE & DRIFT patches simplified my routine, improved my energy and focus, and I feel healthier overall. The convenience and results are amazing!\"</p>",
+        "author_name": "Alex R., Verified Customer",
+        "author_position": "(Health & Wellness Enthusiast)"
+      }
+    },
+    "comparison_table_section_M97hdE": {
+      "type": "ComparisonTableSection",
+      "name": "Two Column Comparison Table",
+      "settings": {
+        "section_title": "How Ondermax Measures Up: A Competitive Comparison",
+        "section_description": "See why Ondermax’s transdermal patch system outperforms traditional pills, powders, and caffeine — designed to support clean energy, deep recovery, and steady focus without crash. You decide what works best for your daily performance:",
+        "background_color": "#8b5cf6",
+        "leftproduct_name": "Ondermax SURGE & DRIFT System",
+        "leftproduct_image": "shopify://shop_images/ChatGPT_Image_Dec_26_2025_09_33_12_AM_1_4335b1b7-4277-4bd9-b03c-5eb92d787dfa.png",
+        "left_items": "Transdermal Patch Delivery (Faster Absorption)|Clean Energy Without Jitters|Deep, Restorative Sleep Support|No Pills, No Mixing, No Timing Games|No Gut Irritation or Digestive Issues|Doctor Crafted & Science‑Backed Formula",
+        "rightproduct_name": "Traditional Pills & Powders",
+        "rightproduct_image": "shopify://shop_images/torso.png",
+        "right_items": "Requires Pills, Powders & Timing|May Cause Digestive Discomfort|Requires Complex Timing Schedules|Possible Pills Overload Daily Routine|Often Missing Key Bioactive Nutrients|Not Doctor Designed"
+      }
+    },
+    "trusted_by_KyPghz": {
+      "type": "trusted-by",
+      "blocks": {
+        "slide_Cx3fYb": {
+          "type": "slide",
+          "settings": {
+            "name": "Ahmed Al‑Rashid",
+            "role": "Software Engineer",
+            "quote": "\"SURGE gives me clean energy that lasts all day without the crash. Perfect for busy schedules and long work hours.\"",
+            "link": "shopify://products/high-energy-stack-copy",
+            "video": "",
+            "image": "shopify://shop_images/ae372d444c421b1514a2370571c987dbb569db5a.png"
+          }
+        },
+        "slide_k9kDFy": {
+          "type": "slide",
+          "settings": {
+            "name": "Fatima Hassan",
+            "role": "Working Mother",
+            "quote": "\"I fall asleep faster and wake up refreshed with DRIFT — no grogginess, just real sleep.",
+            "link": "shopify://products/high-energy-and-sleep-stack",
+            "video": "",
+            "image": "shopify://shop_images/bcc687cd830eb80c6045c84a30ee42678d0d87c7.png"
+          }
+        },
+        "slide_cgqFaJ": {
+          "type": "slide",
+          "settings": {
+            "name": "Zahra Al‑Sabah",
+            "role": "Fitness Trainer",
+            "quote": "\"Clean energy all day and deep\nnighttime recovery — my\nproductivity has skyrocketed.\"",
+            "link": "",
+            "video": "",
+            "image": "shopify://shop_images/238b8d265e7c44ab9535c74728dee3c9113fc0cd.png"
+          }
+        },
+        "slide_qeF76E": {
+          "type": "slide",
+          "settings": {
+            "name": "Dr. Omar Al‑Zahra",
+            "role": "Medical Director",
+            "quote": "DRIFT helps me unwind after stressful days — as a doctor, I appreciate the science and calm it brings.",
+            "link": "",
+            "video": "",
+            "image": "shopify://shop_images/6f163bc6b5b5b0abb1bc3f30e20a1c75dd3a30c0.png"
+          }
+        },
+        "slide_qjRTyX": {
+          "type": "slide",
+          "settings": {
+            "name": "Layla Al‑Mansouri",
+            "role": "Fitness Enthusiast",
+            "quote": "This system delivers both energy for workouts and restful sleep — exactly what I need.",
+            "link": "",
+            "video": "",
+            "image": "shopify://shop_images/32f7bc79a388b482a8e5ab80d06006a765e7b0cf.png"
+          }
+        },
+        "slide_VWx4qM": {
+          "type": "slide",
+          "settings": {
+            "name": "Nour Al‑Din",
+            "role": "Health Enthusiast",
+            "quote": "I feel calmer and more relaxed at night with DRIFT, and mornings are clear and focused.",
+            "link": "",
+            "video": "",
+            "image": "shopify://shop_images/471df78c9208940df4e41a20ed4d5822d81d6e8c.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Cx3fYb",
+        "slide_k9kDFy",
+        "slide_cgqFaJ",
+        "slide_qeF76E",
+        "slide_qjRTyX",
+        "slide_VWx4qM"
+      ],
+      "name": "Trusted By – Slider",
+      "settings": {
+        "heading": "Trusted by Athletes, Biohackers, Physicians, and Everyday Performers",
+        "subheading": "Hear from people who rely on Ondermax SURGE & DRIFT patches dail"
+      }
+    },
+    "multirow_with_bullets_XzD4yb": {
+      "type": "multirow-with-bullets",
+      "blocks": {
+        "row_WxB6Qt": {
           "type": "row",
           "settings": {
-            "icon_svg": "<svg width=\"120\" height=\"120\" viewbox=\"0 0 88 88\" role=\"img\" aria-label=\"Apply in seconds\" focusable=\"false\">\n            <g class=\"hand\" stroke=\"#0C1113\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M26 50c2 10 12 18 24 18 8 0 12-4 12-9V36c0-3-5-3-5 0v11M46 28v17M38 30v15M30 36v9\"></path>\n            </g>\n            <g class=\"patch\" fill=\"url(#patch-gradient)\">\n              <rect x=\"22\" y=\"52\" rx=\"6\" ry=\"6\" width=\"28\" height=\"16\"></rect>\n              <rect class=\"peel\" x=\"44\" y=\"52\" rx=\"4\" ry=\"4\" width=\"8\" height=\"10\" fill=\"#fff\" opacity=\".65\"></rect>\n            </g>\n            <rect class=\"glint\" x=\"-40\" y=\"50\" width=\"36\" height=\"20\" fill=\"url(#gl-stick)\" opacity=\"0\"></rect>\n            <defs>\n              <lineargradient id=\"patch-gradient\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">\n                <stop offset=\"0%\" style=\"stop-color:#1C8E8E;stop-opacity:1\"></stop>\n                <stop offset=\"50%\" style=\"stop-color:#2BA5A5;stop-opacity:1\"></stop>\n                <stop offset=\"100%\" style=\"stop-color:#1C8E8E;stop-opacity:1\"></stop>\n              </lineargradient>\n              <lineargradient id=\"gl-stick\" x1=\"0\" x2=\"1\">\n                <stop offset=\"0\" stop-color=\"#fff\" stop-opacity=\"0\"></stop>\n                <stop offset=\"0.5\" stop-color=\"#fff\" stop-opacity=\"0.35\"></stop>\n                <stop offset=\"1\" stop-color=\"#fff\" stop-opacity=\"0\"></stop>\n              </lineargradient>\n            </defs>\n          </svg>",
-            "title": "Stick It",
-            "text": "Apply in seconds. No pills, no swallowing.",
-            "animation_type": "stick",
-            "image": "shopify://shop_images/ezgif-44da9df2171bad-bottom-cropped.webp",
-            "image_position": "left"
-          }
-        },
-        "row_ipYwba": {
-          "type": "row",
-          "settings": {
-            "icon_svg": "<svg width=\"120\" height=\"120\" viewbox=\"0 0 88 88\" role=\"img\" aria-label=\"Transdermal absorption\" focusable=\"false\">\n            <rect class=\"patch\" x=\"26\" y=\"18\" width=\"36\" height=\"14\" rx=\"7\" fill=\"url(#patch-gradient-2)\"></rect>\n            <rect class=\"skin\" x=\"14\" y=\"40\" width=\"60\" height=\"22\" rx=\"11\" fill=\"url(#skin-absorb)\"></rect>\n            <g class=\"p\">\n              <circle cx=\"44\" cy=\"32\" r=\"3\" fill=\"#fff\"></circle>\n              <circle cx=\"36\" cy=\"30\" r=\"2.5\" fill=\"#CFF3F3\"></circle>\n              <circle cx=\"52\" cy=\"30\" r=\"2.5\" fill=\"#CFF3F3\"></circle>\n              <circle cx=\"40\" cy=\"32\" r=\"2\" fill=\"#fff\"></circle>\n              <circle cx=\"48\" cy=\"32\" r=\"2\" fill=\"#fff\"></circle>\n            </g>\n            <defs>\n              <lineargradient id=\"patch-gradient-2\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">\n                <stop offset=\"0%\" style=\"stop-color:#1C8E8E;stop-opacity:1\"></stop>\n                <stop offset=\"50%\" style=\"stop-color:#2BA5A5;stop-opacity:1\"></stop>\n                <stop offset=\"100%\" style=\"stop-color:#1C8E8E;stop-opacity:1\"></stop>\n              </lineargradient>\n              <lineargradient id=\"skin-absorb\" x1=\"0\" x2=\"0\" y1=\"0\" y2=\"1\">\n                <stop offset=\"0\" stop-color=\"rgba(28,142,142,.14)\"></stop>\n                <stop offset=\"1\" stop-color=\"rgba(28,142,142,.04)\"></stop>\n              </lineargradient>\n            </defs>\n          </svg>",
-            "title": "Absorb It",
-            "text": "Transdermal delivery for faster absorption and steady release.",
-            "animation_type": "stick",
-            "image": "shopify://shop_images/ezgif-4f3a4bd575d738-bottom-cropped.webp",
-            "image_position": "right"
-          }
-        },
-        "row_YgaNBT": {
-          "type": "row",
-          "settings": {
-            "icon_svg": "<svg width=\"120\" height=\"120\" viewbox=\"0 0 88 88\" role=\"img\" aria-label=\"Feel great\" focusable=\"false\">\n            <g class=\"ring\" fill=\"none\" stroke=\"url(#heart-gradient)\" stroke-width=\"2\" opacity=\"0\">\n              <circle cx=\"44\" cy=\"44\" r=\"22\"></circle>\n            </g>\n            <path class=\"heart\" d=\"M44 60s-16-9.6-16-20a9 9 0 0 1 16-5 9 9 0 0 1 16 5c0 10.4-16 20-16 20z\" fill=\"url(#heart-gradient)\"></path>\n            <path class=\"smile\" d=\"M36 48q8 6 16 0\" stroke=\"#fff\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\" opacity=\"0\"></path>\n            <g class=\"sparkles\" fill=\"#fff\" opacity=\"0\">\n              <circle cx=\"26\" cy=\"36\" r=\"2\"></circle>\n              <circle cx=\"62\" cy=\"34\" r=\"1.8\"></circle>\n              <circle cx=\"60\" cy=\"56\" r=\"1.6\"></circle>\n            </g>\n            <defs>\n              <lineargradient id=\"heart-gradient\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">\n                <stop offset=\"0%\" style=\"stop-color:#1C8E8E;stop-opacity:1\"></stop>\n                <stop offset=\"50%\" style=\"stop-color:#2BA5A5;stop-opacity:1\"></stop>\n                <stop offset=\"100%\" style=\"stop-color:#1C8E8E;stop-opacity:1\"></stop>\n              </lineargradient>\n            </defs>\n          </svg>",
-            "title": "Feel It",
-            "text": "Clean energy by day. Deep recovery by night.",
-            "animation_type": "stick",
-            "image": "shopify://shop_images/ezgif-3a5ebe5105337b-bottom-cropped.webp",
-            "image_position": "left"
+            "name": "Dr. James DiNicolantonio",
+            "role": "Cardiovascular Research Scientist and Doctor of Pharmacy",
+            "video": "//im8health.com/cdn/shop/videos/c/vp/4227eb318d9744979a8b45cadc024308/4227eb318d9744979a8b45cadc024308.HD-720p-1.6Mbps-47607141.mp4?v=0",
+            "row_heading": "CoQ10 (100mg)",
+            "row_subheading": "Heart Health Support",
+            "text": "<p>Coenzyme Q10 is a powerful antioxidant that plays a crucial role in cellular energy production, particularly in the heart. IM8 includes a clinical dose of 100mg to support cardiovascular function and overall energy levels.<br/><br/></p>",
+            "bullets": "Supports heart muscle function|\n\nFeature icon\nHelps maintain healthy blood pressure|\n\nFeature icon\nEnhances cellular energy production",
+            "reverse": false
           }
         }
       },
       "block_order": [
-        "row_kjH9Gt",
-        "row_ipYwba",
-        "row_YgaNBT"
+        "row_WxB6Qt"
       ],
       "disabled": true,
-      "name": "Multirow Custom",
+      "name": "Multirow with Bullets (IM8)",
       "settings": {
-        "heading": "How It Works"
+        "heading": "Ingredients Spotlight: The Power Behind Ondermax",
+        "description": "<p>Our formula contains clinically dosed, science-backed ingredients designed to enhance energy, focus, recovery, and overall wellness. Here's a closer look at some key components:</p>"
       }
     },
-    "props": {
-      "type": "home-value-props",
-      "disabled": true,
-      "settings": {}
-    },
-    "benefits_story": {
-      "type": "benefits-story",
-      "settings": {
-        "heading": "How It Works",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "product_showcase_gifs_nHCk6i": {
-      "type": "product-showcase-gifs",
+    "steps_with_cta_ra7Gye": {
+      "type": "steps-with-cta",
       "blocks": {
-        "product_gif_46ija9": {
-          "type": "product_gif",
+        "step_JETcBc": {
+          "type": "step",
           "settings": {
-            "alt_text": "Product showcase"
+            "image": "shopify://shop_images/frist-step.jpg",
+            "title": "APPLY SURGE",
+            "text": "<p>Stick the SURGE patch to your skin in the morning for clean, sustained energy without the crash.</p>"
           }
         },
-        "product_gif_m68Y4A": {
-          "type": "product_gif",
+        "step_dQYzQQ": {
+          "type": "step",
           "settings": {
-            "alt_text": "Product showcase"
+            "image": "shopify://shop_images/sec-step.jpg",
+            "title": "APPLY DRIFT",
+            "text": "<p>Apply the DRIFT patch in the evening to promote deep, restorative sleep without grogginess in the morning.</p>"
+          }
+        },
+        "step_zHqjUK": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/3rd-step.jpg",
+            "title": "WAKE REFRESHED",
+            "text": "<p>Wake up energized and ready to perform. Repeat daily for compounding results.</p>"
           }
         }
       },
       "block_order": [
-        "product_gif_46ija9",
-        "product_gif_m68Y4A"
+        "step_JETcBc",
+        "step_dQYzQQ",
+        "step_zHqjUK"
       ],
-      "custom_css": [
-        "@media (min-width: 768px) {.product-showcase-gifs__grid {grid-template-columns: 1fr 1fr; }}"
-      ],
-      "name": "Product Showcase GIFs",
+      "name": "Steps with CTA",
       "settings": {
-        "background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "product_showcase_gifs": {
-      "type": "product-showcase-gifs",
-      "blocks": {
-        "gif_1": {
-          "type": "product_gif",
-          "settings": {
-            "alt_text": "Product showcase"
-          }
-        }
-      },
-      "block_order": [
-        "gif_1"
-      ],
-      "disabled": true,
-      "name": "Product Showcase GIFs",
-      "settings": {
-        "background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "testimonials_3EzwNj": {
-      "type": "testimonials",
-      "blocks": {
-        "column_d4g63A": {
-          "type": "column",
-          "settings": {
-            "star_rating": 5,
-            "title": "SURGE",
-            "text": "<p><strong>\"SURGE replaced my 3 cups of coffee — without the crash. As a software engineer working long hours, this gives me clean energy that lasts all day.\"</strong></p>",
-            "author": "<strong>Ahmed Al-Rashid</strong>"
-          }
-        },
-        "column_KEniVi": {
-          "type": "column",
-          "settings": {
-            "star_rating": 5,
-            "title": "DRIFT",
-            "text": "<p>\"I fall asleep faster and wake up fresher with <strong>DRIFT. As a working mother of three, I finally get the rest I need without feeling groggy.\"</strong></p>",
-            "author": "<strong>Fatima Hassan</strong>"
-          }
-        },
-        "column_BMU97e": {
-          "type": "column",
-          "settings": {
-            "star_rating": 5,
-            "title": "DRIFT",
-            "text": "<p><strong>\"Finally ditched all my pills. These patches just work. Natural ingredients, no side effects, and I sleep like a baby every night.\"</strong></p>",
-            "author": "<strong>Dr. Omar Al-Zahra</strong>"
-          }
-        },
-        "column_HxK7Yb": {
-          "type": "column",
-          "settings": {
-            "star_rating": 5,
-            "title": "SURGE",
-            "text": "<p><strong>\"Clean energy all day, perfect sleep at night. Love this system. My productivity has increased dramatically since using both patches.\"</strong></p>",
-            "author": "<strong>Khalid Al-Sabah</strong>"
-          }
-        },
-        "column_REhJax": {
-          "type": "column",
-          "settings": {
-            "star_rating": 5,
-            "title": "Best product I've tried!",
-            "text": "<p>Finally, something that works with my day AND night. As a fitness trainer, I need energy for workouts and recovery for sleep. This system delivers both perfectly.</p>",
-            "author": "<em><strong>Layla Al-Mansouri</strong></em>"
-          }
-        },
-        "column_fAANed": {
-          "type": "column",
-          "settings": {
-            "star_rating": 5,
-            "title": "Absolutely love this product!",
-            "text": "<p>DRIFT helps me unwind after a long day. I feel more calm and relaxed without feeling groggy in the morning. This is exactly what I needed! My husband even noticed how much more patient I am now.</p>",
-            "author": "<em><strong>Nour Al-Din</strong></em>"
-          }
-        }
-      },
-      "block_order": [
-        "column_d4g63A",
-        "column_KEniVi",
-        "column_BMU97e",
-        "column_HxK7Yb",
-        "column_REhJax",
-        "column_fAANed"
-      ],
-      "name": "Testimonials",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "<strong>What Real Users Are Saying</strong>",
-        "title_highlight_color": "#ffffff",
-        "heading_size": "h1",
-        "text": "<p>High performers choose Ondermax for effortless transformation.</p>",
-        "color_scheme": "custom",
-        "image_width": "full",
-        "image_ratio": "square",
-        "column_alignment": "center",
-        "show_stars": true,
-        "inactive_stars_style": "solid",
-        "star_color": "#ffd700",
-        "bg_star_color": "#ffd700",
-        "show_quotes": true,
-        "quotes_color_scheme": "accent-1",
-        "cards_color_scheme": "custom",
-        "type": "slide",
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "arrows_color_scheme": "inverse",
-        "transparent_arrows": true,
-        "dots_color_scheme": "background-1",
-        "desktop_full_page": false,
-        "columns_desktop": 2,
-        "slider_desktop": true,
-        "per_move_desktop": 1,
-        "desktop_spacing": 40,
-        "desktop_side_padding": 0,
-        "desktop_padding_calc": true,
-        "desktop_adaptive_height": false,
-        "desktop_dots_position": "under",
-        "desktop_arrows_position": "sides",
-        "slider_mobile": true,
-        "enable_mobile_preview": false,
-        "mobile_adaptive_height": false,
-        "mobile_dots_position": "under",
-        "mobile_arrows_position": "under",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "custom_colors_background": "#1a1a2e",
-        "custom_gradient_background": "linear-gradient(135deg, rgba(26, 26, 46, 1), rgba(22, 33, 62, 1) 25%, rgba(15, 52, 96, 1) 50%, rgba(83, 52, 131, 1) 75%, rgba(114, 9, 183, 1) 100%)",
-        "custom_colors_text": "#ffffff",
-        "custom_cards_colors_background": "#ffffff1a",
-        "custom_cards_gradient_background": "",
-        "custom_cards_colors_text": "#ffffff"
-      }
-    },
-    "single_product_gif": {
-      "type": "single-product-gif",
-      "disabled": true,
-      "name": "Single Product GIF",
-      "settings": {
-        "background_color": "#ffffff",
-        "alt_text": "Product showcase",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "result_count_8CDFa3": {
-      "type": "result-count",
-      "blocks": {
-        "text_zUEPbD": {
-          "type": "text",
-          "settings": {
-            "title": "500+",
-            "desc": "<p>patches shipped this month</p>"
-          }
-        },
-        "text_DbWnd6": {
-          "type": "text",
-          "settings": {
-            "title": "98%",
-            "desc": "<p>satisfaction</p>"
-          }
-        },
-        "text_EVN7Eq": {
-          "type": "text",
-          "settings": {
-            "title": "15k+",
-            "desc": "<p>happy customers</p>"
-          }
-        },
-        "text_WCDnnF": {
-          "type": "text",
-          "settings": {
-            "title": "180+",
-            "desc": "<p>countries</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_zUEPbD",
-        "text_DbWnd6",
-        "text_EVN7Eq",
-        "text_WCDnnF"
-      ],
-      "name": "Result count",
-      "settings": {
-        "heading": "Results Speak.",
-        "bg_color": "#1a1a1a",
-        "p_top": 80,
-        "p_bottom": 80
-      }
-    },
-    "icon_with_text_blocks_GERKNa": {
-      "type": "icon-with-text-blocks",
-      "blocks": {
-        "text_RUjkiP": {
-          "type": "text",
-          "settings": {
-            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 31 45\" height=\"45\" width=\"31\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.38623\" stroke=\"white\" d=\"M2.43958 20.9557L15.98 2.70391C17.041 1.27718 19.0231 2.16437 19.0231 4.06518V18.1925C19.0231 19.3326 19.8019 20.2536 20.7614 20.2536H27.3487C28.8454 20.2536 29.6423 22.3463 28.6535 23.6805L15.1131 41.93C14.0521 43.3568 12.07 42.4696 12.07 40.5688V26.4414C12.07 25.3014 11.2912 24.3803 10.3318 24.3803H3.74216C2.24544 24.3803 1.4508 22.2876 2.43958 20.9557Z\"></path>\n</svg>",
-            "title": "NAD+",
-            "desc": "<p>Cellular energy and anti-aging support</p>",
-            "show_benefit": false,
-            "benefit_text": "Clinically Proven"
-          }
-        },
-        "text_qNxfqp": {
-          "type": "text",
-          "settings": {
-            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
-            "title": "Glutathione",
-            "desc": "<p>Master antioxidant for recovery</p>",
-            "show_benefit": false,
-            "benefit_text": "Clinically Proven"
-          }
-        },
-        "text_hL3K3x": {
-          "type": "text",
-          "settings": {
-            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 51 51\" height=\"51\" width=\"51\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M25.4958 4.25C19.4396 4.25 15.5147 8.54038 10.8716 10.1044C8.9846 10.7419 8.03898 11.0585 7.6586 11.5069C7.2761 11.9531 7.16348 12.6098 6.94035 13.9188C4.54548 27.9353 9.77935 40.8935 22.2595 45.9383C23.6004 46.4801 24.2719 46.75 25.5022 46.75C26.7326 46.75 27.4062 46.478 28.7471 45.9361C41.2272 40.8935 46.4547 27.9353 44.0598 13.9188C43.8346 12.6098 43.7241 11.9531 43.3416 11.5048C42.9591 11.0564 42.0156 10.7398 40.1286 10.1044C35.4833 8.54038 31.5521 4.25 25.4958 4.25Z\"></path>\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.1875\" stroke=\"white\" d=\"M17.2742 23.6535L25.7721 13.156C26.4372 12.3337 27.6824 12.8458 27.6824 13.938V22.064C27.6824 22.7207 28.1712 23.2519 28.7747 23.2519H32.9057C33.8449 23.2519 34.3464 24.4547 33.7259 25.2218L25.2281 35.7193C24.5629 36.5417 23.3177 36.0295 23.3177 34.9373V26.8113C23.3177 26.1547 22.8289 25.6234 22.2254 25.6234H18.0944C17.1573 25.6234 16.6558 24.4207 17.2763 23.6535\"></path>\n</svg>",
-            "title": "Creatine",
-            "desc": "<p>Enhanced strenth and performance</p>",
-            "show_benefit": false,
-            "benefit_text": "Clinically Proven"
-          }
-        },
-        "text_PrEYJ8": {
-          "type": "text",
-          "settings": {
-            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 31 45\" height=\"45\" width=\"31\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.38623\" stroke=\"white\" d=\"M2.43958 20.9557L15.98 2.70391C17.041 1.27718 19.0231 2.16437 19.0231 4.06518V18.1925C19.0231 19.3326 19.8019 20.2536 20.7614 20.2536H27.3487C28.8454 20.2536 29.6423 22.3463 28.6535 23.6805L15.1131 41.93C14.0521 43.3568 12.07 42.4696 12.07 40.5688V26.4414C12.07 25.3014 11.2912 24.3803 10.3318 24.3803H3.74216C2.24544 24.3803 1.4508 22.2876 2.43958 20.9557Z\"></path>\n</svg>",
-            "title": "Magnesium",
-            "desc": "<p>Muscle function and relaxation</p>",
-            "show_benefit": false,
-            "benefit_text": "Clinically Proven"
-          }
-        },
-        "text_NjyLP3": {
-          "type": "text",
-          "settings": {
-            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 39 37\" height=\"37\" width=\"39\">\n<path stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"3.86111\" stroke=\"white\" d=\"M2 27.0972H36.75M2 34.8194H36.75M12.2242 27.0972C7.84572 24.3944 5.27808 19.207 5.97501 13.7455C6.83025 7.02717 12.3613 2.00193 18.9059 2V2.01158H19.4773C15.6336 5.71053 14.8884 11.7223 17.7051 16.3073C20.5218 20.8924 26.0953 22.7361 30.9583 20.6994C29.9029 23.3513 28.0235 25.594 25.5972 27.0972\"></path>\n</svg>",
-            "title": "Melatonin",
-            "desc": "<p>Natural sleep cycle regulation</p>",
-            "show_benefit": false,
-            "benefit_text": "Clinically Proven"
-          }
-        }
-      },
-      "block_order": [
-        "text_RUjkiP",
-        "text_qNxfqp",
-        "text_hL3K3x",
-        "text_PrEYJ8",
-        "text_NjyLP3"
-      ],
-      "name": "Icon with text",
-      "settings": {
-        "heading": "Science backed.",
-        "subheading": "Premium ingredients, precisely dosed for optimal performance.",
-        "bg_color": "#1a1a1a",
-        "show_badge": false,
-        "badge_text": "Science Backed",
-        "badge_style": "primary",
-        "badge_size": "badge--medium",
-        "show_stats": false,
-        "stat_1_number": "10,000+",
-        "stat_1_label": "Happy Customers",
-        "stat_2_number": "95%",
-        "stat_2_label": "Satisfaction Rate",
-        "stat_3_number": "30",
-        "stat_3_label": "Day Guarantee",
-        "p_top": 80,
-        "p_bottom": 80
-      }
-    },
-    "two_products_sec_pypD4z": {
-      "type": "two-products-sec",
-      "blocks": {
-        "text_GzBpnz": {
-          "type": "text",
-          "settings": {
-            "bg_color": "#00908d",
-            "product": "surge-energy-patch-stack-preorder-ships-july-7-copy-1",
-            "pro_img": "shopify://shop_images/mock-up-new1_2dba329d-7295-4cc8-a516-f8adfb7237a8.png",
-            "pro_img_title": "surge",
-            "pro_img_bg_color": "rgba(0,0,0,0)",
-            "pro_title": "All-Day Energy",
-            "pro_desc": "<p>NAD+ Creatine, B-Vitamins for sustained performance.</p>",
-            "atc_btn": "Shop Surge",
-            "atc_btn_link": "shopify://products/high-energy-stack",
-            "show_btn_outline": false,
-            "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-sun w-16 h-16 text-yellow-300/30 animate-spin\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:14:14\" data-orchids-name=\"Sun\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M12 2v2\"></path><path d=\"M12 20v2\"></path><path d=\"m4.93 4.93 1.41 1.41\"></path><path d=\"m17.66 17.66 1.41 1.41\"></path><path d=\"M2 12h2\"></path><path d=\"M20 12h2\"></path><path d=\"m6.34 17.66-1.41 1.41\"></path><path d=\"m19.07 4.93-1.41 1.41\"></path></svg>",
-            "icon_animation": "bounce_rotate"
-          }
-        },
-        "text_DkN7rF": {
-          "type": "text",
-          "settings": {
-            "bg_color": "linear-gradient(306deg, rgba(127, 72, 176, 1) 1%, rgba(127, 72, 176, 0.94) 9%, rgba(67, 48, 211, 0.96) 88%)",
-            "product": "surge-energy-patch-stack-preorder-ships-july-7-copy",
-            "pro_img": "shopify://shop_images/mock-up-new2_53439dcb-7fe5-461f-bc80-ac8082ddacd6.png",
-            "pro_img_title": "Drift",
-            "pro_img_bg_color": "rgba(0,0,0,0)",
-            "pro_title": "All-Night Rest",
-            "pro_desc": "<p>Magnesium, Melatonin for deeper rest and restoration.</p>",
-            "atc_btn": "Shop Drift",
-            "atc_btn_link": "shopify://products/high-energy-stack-copy",
-            "show_btn_outline": true,
-            "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-moon w-16 h-16 text-blue-100/30 animate-pulse\" aria-hidden=\"true\" data-orchids-id=\"src/components/sections/split-product-showcase.tsx:83:14\" data-orchids-name=\"Moon\"><path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\"></path></svg>",
-            "icon_animation": "pulse_bounce"
-          }
-        }
-      },
-      "block_order": [
-        "text_GzBpnz",
-        "text_DkN7rF"
-      ],
-      "custom_css": [],
-      "name": "Two products section",
-      "settings": {
-        "p_top": 75,
-        "p_bottom": 75
-      }
-    },
-    "profile_info_section_ykCnyb": {
-      "type": "profile-info-section",
-      "blocks": {
-        "text_YBWJWN": {
-          "type": "text",
-          "settings": {
-            "tag_text": "Clinically inspired"
-          }
-        },
-        "text_G4EaEN": {
-          "type": "text",
-          "settings": {
-            "tag_text": "Backed by science"
-          }
-        },
-        "text_8EMxTF": {
-          "type": "text",
-          "settings": {
-            "tag_text": "Doctor formulated"
-          }
-        }
-      },
-      "block_order": [
-        "text_YBWJWN",
-        "text_G4EaEN",
-        "text_8EMxTF"
-      ],
-      "name": "Profile information",
-      "settings": {
-        "bg_color": "#1a1a1a",
-        "profile_name": "Dr. NY",
-        "profile_img": "shopify://shop_images/110825_-_Acne_and_Insulin_-_Reel_Cover_7_1.png",
-        "name": "Dr. Nedal Yassin",
-        "role": "Chief Medical Officer",
-        "heading": "Doctor Built.",
-        "about": "<p>Clinically inspired patches for effortless optimization.</p>",
-        "r_name": "Dr. Nedal Yassin",
-        "r_role": "Founder & Chief Medical Officer",
-        "p_top": 100,
-        "p_bottom": 100
+        "heading": "SIMPLE TO USE,<br> POWERFUL RESULTS",
+        "show_cta": true,
+        "cta_icon": "shopify://shop_images/Group.png",
+        "cta_heading": "CONSISTENCY IS KEY",
+        "cta_text": "<p>Users report noticeable improvements in energy, focus, and recovery within the first week. For full benefits, use daily with both SURGE and DRIFT patches over 4-8 weeks.</p>"
       }
     },
     "testimonial_grid_section_Bk6fah": {
@@ -549,7 +847,7 @@
         "testimonial_qq8xkd": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
+            "image": "shopify://shop_images/4d9b0a5c42819410485a69f651a4973dfed26fc5.png",
             "name": "Ahmed Al-Rashid",
             "role": "Software Engineer, 29",
             "review": "\"SURGE gives me that clean energy boost I need for my 6 AM workouts. No crash, just sustained focus all morning. Perfect for my busy schedule.\"",
@@ -560,7 +858,7 @@
         "testimonial_9FjfA6": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify://shop_images/photo-1507003211169-0a1dd7228f2d.jpg",
+            "image": "shopify://shop_images/6389f81b3fd9b00195cd5d91455f2b0f7a6a8d88.png",
             "name": "Khalid Al-Sabah",
             "role": "Fitness Trainer, 31",
             "review": "\"DRIFT has completely transformed my recovery. I wake up feeling like I actually slept 8 hours instead of tossing and turning. My clients ask what changed!\"",
@@ -571,7 +869,7 @@
         "testimonial_qdA48g": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify://shop_images/photo-1438761681033-6461ffad8d80.jpg",
+            "image": "shopify://shop_images/ab1b4fe80940cb18a9889d9059fa1546ae967e5a.png",
             "name": "Fatima Hassan",
             "role": "Working Mother, 33",
             "review": "\"Between work and kids, I needed something simple. Just stick SURGE on and I'm ready to tackle anything the day throws at me. My energy levels are consistent all day long.\"",
@@ -582,7 +880,7 @@
         "testimonial_zAqFnP": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify://shop_images/photo-1472099645785-5658abf4ff4e.jpg",
+            "image": "shopify://shop_images/1fb4d1bfc755e4e0613daac009754a1cbaa6d072.png",
             "name": "Dr. Omar Al-Zahra",
             "role": "Medical Director, 38",
             "review": "\"DRIFT helps me wind down from high-stress days. I stick it on during my evening routine and sleep like a baby. As a doctor, I appreciate the natural approach.\"",
@@ -713,43 +1011,26 @@
         "btn": "SHOP NOW",
         "btn_subheading": ""
       }
-    },
-    "mosaic_gallery_tBUXFG": {
-      "type": "mosaic-gallery",
-      "blocks": {
-        "image_QxtVcG": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_0071.heic"
-          }
-        }
-      },
-      "block_order": [
-        "image_QxtVcG"
-      ],
-      "disabled": true,
-      "name": "Mosaic Gallery",
-      "settings": {
-        "grid_gap": 0
-      }
     }
   },
   "order": [
-    "hero",
-    "image_slider_cgrJmQ",
-    "multirow_custom_3RUXj3",
-    "props",
-    "benefits_story",
-    "product_showcase_gifs_nHCk6i",
-    "product_showcase_gifs",
-    "testimonials_3EzwNj",
-    "single_product_gif",
-    "result_count_8CDFa3",
-    "icon_with_text_blocks_GERKNa",
-    "two_products_sec_pypD4z",
-    "profile_info_section_ykCnyb",
+    "hero_banner_XcNznx",
+    "customswiperslider_JwYnBb",
+    "quote_and_logos_eABHwY",
+    "clinically_proven_k6p7y6",
+    "key_benefits_zXrmLh",
+    "index_icons_texts_lists_main_new_NnmQXi",
+    "scientificexpertise_jDAihz",
+    "about_partner_detail_Brq6iN",
+    "card_slider_section_hyPDqT",
+    "breakdown_lists_GbXtzy",
+    "accordion_custom_BGMwrJ",
+    "feature_quote_section_QrprgV",
+    "comparison_table_section_M97hdE",
+    "trusted_by_KyPghz",
+    "multirow_with_bullets_XzD4yb",
+    "steps_with_cta_ra7Gye",
     "testimonial_grid_section_Bk6fah",
-    "collapsible_content_XGKDTp",
-    "mosaic_gallery_tBUXFG"
+    "collapsible_content_XGKDTp"
   ]
 }

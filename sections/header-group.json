@@ -17,19 +17,19 @@
         "sections--18060430639399__2c2ec774-3430-481f-b927-e9c035b9d24e-1679250655d32e639c-0": {
           "type": "text",
           "settings": {
-            "title": "⚡ 20% OFF TODAY – Use Code: PATCH20"
+            "title": "⚡ 20% OFF + FREE Deep Work Protocol Guide ($47 value) — Code: PATCH20"
           }
         },
         "text_ajxCTX": {
           "type": "text",
           "settings": {
-            "title": "⚡ 20% OFF TODAY – Use Code: PATCH20"
+            "title": "⚡ 20% OFF + FREE Deep Work Protocol Guide ($47 value) — Code: PATCH20"
           }
         },
         "text_c3jgi6": {
           "type": "text",
           "settings": {
-            "title": "⚡ 20% OFF TODAY – Use Code: PATCH20"
+            "title": "⚡ 20% OFF + FREE Deep Work Protocol Guide ($47 value) — Code: PATCH20"
           }
         }
       },
@@ -38,7 +38,6 @@
         "text_ajxCTX",
         "text_c3jgi6"
       ],
-      "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -67,86 +66,6 @@
         "custom_colors_background": "#1c8e8e",
         "custom_gradient_background": "",
         "custom_colors_text": "#ffffff"
-      }
-    },
-    "fe1c8c67-b84c-4466-a515-70df3134c1c0": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement_JYxgwz": {
-          "type": "announcement",
-          "settings": {
-            "text": "announcements.motivational",
-            "text_alignment": "center",
-            "mobile_text_size": 10,
-            "desktop_text_size": 12,
-            "icons": "",
-            "icon": "",
-            "filled_icon": false,
-            "mobile_icon_size": 20,
-            "desktop_icon_size": 26,
-            "desktop_layout": "horizontal",
-            "mobile_layout": "horizontal",
-            "hidden_products": "",
-            "enable_specific_display": false,
-            "displayed_products": ""
-          }
-        }
-      },
-      "block_order": [
-        "announcement_JYxgwz"
-      ],
-      "settings": {
-        "visibility": "always-display",
-        "columns_desktop": 1,
-        "columns_mobile": 1,
-        "desktop_spacing": 32,
-        "mobile_spacing": 8,
-        "show_separator": false,
-        "color_scheme": "custom",
-        "slider_mobile": true,
-        "slider_desktop": false,
-        "type": "loop",
-        "autoplay": true,
-        "autoplay_speed": 3.5,
-        "hidden_products": "",
-        "enable_specific_display": false,
-        "displayed_products": "",
-        "padding_top": 10,
-        "padding_bottom": 10,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#1a1a1a"
-      }
-    },
-    "header": {
-      "type": "header",
-      "custom_css": [
-        ".header__menu-item span {font-size: 18px; font-weight: 600;}"
-      ],
-      "settings": {
-        "sticky_header_type": "none",
-        "show_line_separator": true,
-        "color_scheme": "background-1",
-        "logo_link": "/",
-        "logo_position": "middle-left",
-        "menu": "new-menu",
-        "menu_type_desktop": "dropdown",
-        "new-button": "Shop The Stack",
-        "btn_link": "shopify://products/high-energy-and-sleep-stack",
-        "highlight_active_link": false,
-        "highlighted_link_color_scheme": "accent-1",
-        "products_mega_menu_links": "",
-        "products_mega_menu_display_collection_products": true,
-        "products_mega_menu_display_collection_images": true,
-        "products_mega_menu_display_collection_images_on_mobile": true,
-        "mobile_menu_title": "Menu",
-        "secondary_menu": "",
-        "menu_color_scheme": "background-1",
-        "mobile_logo_position": "center",
-        "display_search": false,
-        "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     },
     "custom_announcement_bar_dCPTkf": {
@@ -184,12 +103,93 @@
       "settings": {
         "slider_speed": 3000
       }
+    },
+    "fe1c8c67-b84c-4466-a515-70df3134c1c0": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_JYxgwz": {
+          "type": "announcement",
+          "settings": {
+            "text": "announcements.motivational",
+            "text_alignment": "center",
+            "mobile_text_size": 10,
+            "desktop_text_size": 12,
+            "icons": "",
+            "icon": "",
+            "filled_icon": false,
+            "mobile_icon_size": 20,
+            "desktop_icon_size": 26,
+            "desktop_layout": "horizontal",
+            "mobile_layout": "horizontal",
+            "hidden_products": "",
+            "enable_specific_display": false,
+            "displayed_products": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_JYxgwz"
+      ],
+      "disabled": true,
+      "settings": {
+        "visibility": "always-display",
+        "columns_desktop": 1,
+        "columns_mobile": 1,
+        "desktop_spacing": 32,
+        "mobile_spacing": 8,
+        "show_separator": false,
+        "color_scheme": "custom",
+        "slider_mobile": false,
+        "slider_desktop": false,
+        "type": "loop",
+        "autoplay": true,
+        "autoplay_speed": 3.5,
+        "hidden_products": "",
+        "enable_specific_display": false,
+        "displayed_products": "",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#1a1a1a"
+      }
+    },
+    "header": {
+      "type": "header",
+      "custom_css": [
+        ".header__menu-item span {font-size: 16px; font-weight: 600;}"
+      ],
+      "settings": {
+        "sticky_header_type": "none",
+        "show_line_separator": true,
+        "color_scheme": "background-1",
+        "logo_link": "/",
+        "logo_position": "top-left",
+        "menu": "new-menu-copy",
+        "menu_type_desktop": "dropdown",
+        "new-button": "Shop The Stack",
+        "btn_link": "shopify://products/high-energy-and-sleep-stack",
+        "highlight_active_link": true,
+        "highlighted_link_color_scheme": "accent-1",
+        "products_mega_menu_links": "",
+        "products_mega_menu_display_collection_products": true,
+        "products_mega_menu_display_collection_images": true,
+        "products_mega_menu_display_collection_images_on_mobile": true,
+        "mobile_menu_title": "Menu",
+        "secondary_menu": "",
+        "menu_color_scheme": "background-1",
+        "mobile_logo_position": "center",
+        "display_search": false,
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "2c2ec774-3430-481f-b927-e9c035b9d24e",
+    "custom_announcement_bar_dCPTkf",
     "fe1c8c67-b84c-4466-a515-70df3134c1c0",
-    "header",
-    "custom_announcement_bar_dCPTkf"
+    "header"
   ]
 }

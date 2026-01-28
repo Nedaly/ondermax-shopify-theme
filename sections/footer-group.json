@@ -14,33 +14,12 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "brand_information_LxRPny": {
-          "type": "brand_information",
-          "settings": {
-            "show_social": true,
-            "width_desktop": 3,
-            "width_mobile": "2",
-            "newsletter_heading": "Stay Updated"
-          }
-        },
-        "fc645871-d789-4cfa-8584-4f8a29b6ce92": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Logo-05_1.png",
-            "image_width": 250,
-            "alignment": "center",
-            "url": "",
-            "width_desktop": 2,
-            "width_mobile": "2"
-          }
-        },
         "link_list_CU7ReU": {
           "type": "link_list",
           "settings": {
             "heading": "Policies",
             "menu": "terms-condition",
-            "width_desktop": 3,
+            "width_desktop": 1,
             "width_mobile": "2"
           }
         },
@@ -49,42 +28,34 @@
           "settings": {
             "heading": "Information",
             "menu": "main-menu",
-            "width_desktop": 3,
+            "width_desktop": 1,
             "width_mobile": "1"
           }
         },
-        "tags_eqMnFp": {
-          "type": "tags",
+        "link_list_XhMrAq": {
+          "type": "link_list",
           "settings": {
-            "tag_icon1": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-shield w-5 h-5\" aria-hidden=\"true\"><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"></path></svg>",
-            "tag_text1": "SSL Secured",
-            "tag_icon2": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-lock w-5 h-5\" aria-hidden=\"true\"><rect width=\"18\" height=\"11\" x=\"3\" y=\"11\" rx=\"2\" ry=\"2\"></rect><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"></path></svg>",
-            "tag_text2": "256-bit Encryption",
-            "tag_icon3": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-credit-card w-5 h-5\" aria-hidden=\"true\"><rect width=\"20\" height=\"14\" x=\"2\" y=\"5\" rx=\"2\"></rect><line x1=\"2\" x2=\"22\" y1=\"10\" y2=\"10\"></line></svg>",
-            "tag_text3": "Secure Payments"
+            "heading": "Quick links",
+            "menu": "main-menu",
+            "width_desktop": 1,
+            "width_mobile": "2"
           }
         },
-        "24f208fd-0898-43eb-af23-d74f8420ab37": {
-          "type": "email_signup",
-          "disabled": true,
+        "brand_information_LxRPny": {
+          "type": "brand_information",
           "settings": {
-            "heading": "",
-            "subtext": "",
-            "button_type": "solid",
-            "button_label": "Sign up",
-            "button_style_secondary": false,
-            "width_desktop": 4,
-            "width_mobile": "2"
+            "show_social": true,
+            "width_desktop": 1,
+            "width_mobile": "2",
+            "newsletter_heading": "Stay Updated"
           }
         }
       },
       "block_order": [
-        "brand_information_LxRPny",
-        "fc645871-d789-4cfa-8584-4f8a29b6ce92",
         "link_list_CU7ReU",
         "1c647602-cc00-4009-a058-976435c8ee9e",
-        "tags_eqMnFp",
-        "24f208fd-0898-43eb-af23-d74f8420ab37"
+        "link_list_XhMrAq",
+        "brand_information_LxRPny"
       ],
       "custom_css": [],
       "settings": {
@@ -109,5 +80,7 @@
       }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }

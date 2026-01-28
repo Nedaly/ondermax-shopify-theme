@@ -1,0 +1,536 @@
+<style>
+.image-with-text .grid{margin-bottom:0}.image-with-text .grid__item{position:relative;margin-bottom:10px;border-radius:16px 16px 0 0}.image-with-text__text ul li{list-style-position:outside;margin-left:1em}@media screen and (min-width: 750px){.image-with-text__grid--reverse{flex-direction:row-reverse}}.image-with-text__media{min-height:100%;overflow:visible;margin-bottom:30px}.image-with-text__media--small{height:19.4rem}.image-with-text__media--medium{height:29.6rem}.image-with-text__media--large{height:43.5rem}@media screen and (min-width: 750px){.image-with-text__media--small{height:31.4rem}.image-with-text__media--medium{height:46rem}.image-with-text__media--large{height:69.5rem}}.image-with-text__media--placeholder{position:relative;overflow:hidden}.image-with-text__media--placeholder:after{content:"";position:absolute;background:rgba(var(--color-foreground),.04)}.image-with-text__media--placeholder.image-with-text__media--adapt{height:20rem}@media screen and (min-width: 750px){.image-with-text__media--placeholder.image-with-text__media--adapt{height:30rem}}.image-with-text__media--placeholder>svg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:100%;height:100%;fill:currentColor}.image-with-text__media--placeholder:is(.animate--ambient,.animate--zoom-in)>svg{top:0;left:0;transform:translate(0)}.image-with-text__content{align-items:flex-start;display:flex;flex-direction:column;height:100%;justify-content:center;align-self:center;position:relative;z-index:1}.image-with-text .grid__item:after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}.image-with-text:not(.image-with-text--overlap) .image-with-text__media-item:after{border-radius:var(--media-radius);box-shadow:var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow),var(--media-shadow-opacity))}.image-with-text:not(.image-with-text--overlap) .image-with-text__text-item:after{border-radius:var(--text-boxes-radius);box-shadow:var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow),var(--text-boxes-shadow-opacity))}.image-with-text .image-with-text__media-item>*{border-radius:var(--media-radius);overflow:hidden;box-shadow:var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow),var(--media-shadow-opacity))}.image-with-text .global-media-settings{overflow:hidden!important}.image-with-text .image-with-text__text-item>*{border-radius:var(--text-boxes-radius);overflow:hidden;box-shadow:var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow),var(--text-boxes-shadow-opacity))}.image-with-text:not(.image-with-text--overlap) .image-with-text__media-item>*,.image-with-text:not(.image-with-text--overlap) .image-with-text__text-item>*{box-shadow:none}@media screen and (max-width: 749px){.image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__media-item:after,.image-with-text.collapse-corners:not(.image-with-text--overlap) .grid__item .image-with-text__media,.image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__media img,.image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__media .placeholder-svg{border-bottom-right-radius:0;border-bottom-left-radius:0}.image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__text-item:after,.image-with-text.collapse-corners:not(.image-with-text--overlap) .grid__item .image-with-text__content{border-top-left-radius:0;border-top-right-radius:0}.image-with-text.collapse-borders:not(.image-with-text--overlap) .image-with-text__content{border-top:0}}.image-with-text__content--mobile-right>*{align-self:flex-end;text-align:right}.image-with-text__content--mobile-center>*{align-self:center;text-align:center}.image-with-text--overlap .image-with-text__content{width:90%;margin:-3rem auto 0}@media screen and (min-width: 750px){.image-with-text__grid--reverse .image-with-text__content{margin-left:auto}.image-with-text__content--bottom{justify-content:flex-end;align-self:flex-end}.image-with-text__content--top{justify-content:flex-start;align-self:flex-start}.image-with-text__content--desktop-right>*{align-self:flex-end;text-align:right}.image-with-text__content--desktop-left>*{align-self:flex-start;text-align:left}.image-with-text__content--desktop-center>*{align-self:center;text-align:center}.image-with-text--overlap .image-with-text__text-item{display:flex;padding:3rem 0}.image-with-text--overlap .image-with-text__content{height:auto;width:calc(100% + 4rem);min-width:calc(100% + 4rem);margin-top:0;margin-left:-4rem}.image-with-text--overlap .image-with-text__grid--reverse .image-with-text__content{margin-left:0;margin-right:-4rem}.image-with-text--overlap .image-with-text__grid--reverse .image-with-text__text-item{justify-content:flex-end}.image-with-text--overlap .image-with-text__media-item--top{align-self:flex-start}.image-with-text--overlap .image-with-text__media-item--middle{align-self:center}.image-with-text--overlap .image-with-text__media-item--bottom{align-self:flex-end}.image-with-text__media-item--small,.image-with-text__media-item--large+.image-with-text__text-item{flex-grow:0}.image-with-text.collapse-corners:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__media-item:after,.image-with-text.collapse-corners:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__media,.image-with-text.collapse-corners:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__media img,.image-with-text.collapse-corners:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__media .placeholder-svg,.image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__text-item:after,.image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__content,.image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__content:after{border-top-right-radius:0;border-bottom-right-radius:0}.image-with-text.collapse-corners:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__text-item:after,.image-with-text.collapse-corners:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__content,.image-with-text.collapse-corners:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__content:after,.image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__media-item:after,.image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__media,.image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__media img,.image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__media .placeholder-svg{border-top-left-radius:0;border-bottom-left-radius:0}.image-with-text.collapse-borders:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__content{border-left:0}.image-with-text.collapse-borders:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__content{border-right:0}}.image-with-text:not(.collapse-corners,.image-with-text--overlap) .image-with-text__media-item{z-index:2}.image-with-text.image-with-text--overlap .backround-transparent,.image-with-text:not(.image-with-text--overlap) .background-transparent{background:transparent}.image-with-text .gradient{transform:perspective(0)}.image-with-text__content{border-radius:var(--text-boxes-radius);box-shadow:var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow),var(--text-boxes-shadow-opacity));word-break:break-word}.image-with-text__content>*+*{margin-top:1rem}.image-with-text__content>.image-with-text__text:empty~a{margin-top:1rem}.image-with-text__content>:first-child:is(.image-with-text__heading),.image-with-text__text--caption+.image-with-text__heading,.image-with-text__text--caption:first-child{margin-top:0}.image-with-text__content :last-child:is(.image-with-text__heading),.image-with-text__text--caption{margin-bottom:0}.image-with-text__content .button+.image-with-text__text{margin-top:2rem}.image-with-text__content .image-with-text__text+.button{margin-top:3rem}.image-with-text__heading{margin-bottom:0}.image-with-text__text p{margin-top:0;margin-bottom:1rem}@media screen and (max-width: 749px){.collapse-padding .image-with-text__grid .image-with-text__content{padding-left:0;padding-right:0;padding-bottom:0}}@media screen and (min-width: 750px){.collapse-padding .image-with-text__grid:not(.image-with-text__grid--reverse) .image-with-text__content:not(.image-with-text__content--desktop-center){padding-right:0}.collapse-padding .image-with-text__grid--reverse .image-with-text__content:not(.image-with-text__content--desktop-center){padding-left:0}}@supports not (inset: 10px){.image-with-text .grid{margin-left:0}}
+/*# sourceMappingURL=/cdn/shop/t/121/assets/component-image-with-text.css.map?v=61117194060338301381758795170 */
+
+
+.multirow-with-bullets{padding:100px 0}.multirow-with-bullets.gradient{position:relative;overflow:hidden}.multirow-with-bullets.gradient:before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:0;pointer-events:none;
+--tb-purple: #8b5cf6;
+--tb-blue: #2d9cdb;
+
+background: 
+  radial-gradient(1200px 640px at 50% 92%, rgba(139, 92, 246, 0.55) 0%, rgba(45, 156, 219, 0.28) 40%, rgba(139, 92, 246, 0.12) 60%, rgba(45, 156, 219, 0.05) 75%, transparent 90%),
+  radial-gradient(900px 900px at 86% 20%, rgba(45, 156, 219, 0.5) 0%, rgba(139, 92, 246, 0.26) 38%, rgba(45, 156, 219, 0.12) 62%, transparent 80%),
+  radial-gradient(820px 820px at 92% 55%, rgba(139, 92, 246, 0.45) 0%, rgba(45, 156, 219, 0.22) 40%, rgba(139, 92, 246, 0.1) 62%, transparent 82%),
+  radial-gradient(1200px 640px at 12% -8%, rgba(45, 156, 219, 0.3) 0%, rgba(139, 92, 246, 0.16) 38%, rgba(45, 156, 219, 0.07) 58%, transparent 84%),
+  #fff;
+    
+    background-repeat:no-repeat}.multirow-with-bullets__heading{font-size:40px;line-height:1.2;text-align:center;font-weight:400;margin:0;text-transform:uppercase;max-width:550px}.multirow-with-bullets__inner{display:flex;flex-direction:column;align-items:center;padding:0 20px;position:relative;z-index:2}.multirow-with-bullets__description{font-size:16px;line-height:1.5;margin-bottom:50px;text-align:center;max-width:700px;margin-left:auto;margin-right:auto}.bullet-points-title{font-size:16px;margin-bottom:20px;margin-top:25px;color:#9e0b0f;font-weight:700;font-family:Aeonik,sans-serif}.bullet-points-list{list-style:none;padding:0;margin:20px 0 0}.bullet-point-item{display:flex;align-items:flex-start;gap:15px;margin-bottom:16px}.bullet-point-icon{display:flex;align-items:center;flex-shrink:0}body .bullet-point-icon img{width:24px;height:24px;flex-shrink:0;margin-top:2px;object-fit:contain!important}.bullet-point-content{flex-grow:1;font-size:14px;line-height:1.5}.multirow-with-bullets .image-with-text h2,.multirow-with-bullets .image-with-text p{margin:0}.multirow-with-bullets .image-with-text .row-heading{font-size:24px;font-family:ABC Arizona Flare,sans-serif;font-weight:500;margin-bottom:10px}.multirow-with-bullets .image-with-text .row-subheading{font-weight:700;font-family:Aeonik,sans-serif}.multirow-with-bullets .image-with-text__subtitle{font-weight:700;margin:0 0 8px;font-size:14px}.multirow-with-bullets .image-with-text p{font-size:16px;font-weight:400;line-height:150%}.multirow-with-bullets .image-with-text{background-color:#fff;border-radius:16px;overflow:hidden;position:relative;z-index:1}.video-click-play-overlay .video-overlay-meta{transition:opacity .45s ease,transform .45s ease,filter .45s ease;opacity:1;transform:translateY(0);filter:none}.video-click-play-overlay.video-overlay--hidden .video-overlay-meta{opacity:0;transform:translateY(-6px);filter:blur(1px)}.multirow-with-bullets .image-with-text .content-container{background-color:transparent!important;border-radius:0;padding:0 30px 30px!important}.multirow-with-bullets .image-with-text .image-with-text__media{border-radius:16px 16px 0 0!important;overflow:hidden}.multirow-with-bullets .image-with-text .image-with-text__video,.multirow-with-bullets .image-with-text .image-with-text-image,.multirow-with-bullets .image-with-text .explicit-video-poster{border-radius:16px 16px 0 0!important}.multirow-with-bullets .image-with-text .video-click-play-overlay{border-radius:16px 16px 0 0}.multirow__inner--horizontal{display:grid;grid-template-columns:repeat(3,1fr);align-items:stretch}.image-with-text__media-item{position:relative;overflow:hidden;max-height:400px}.image-with-text__media{position:relative;overflow:hidden;max-height:400px;height:400px;display:flex;align-items:center;justify-content:center;z-index:1}.image-with-text__media--adapt{height:400px!important;padding-bottom:0!important}.image-with-text__media--video-wrapper{position:relative;width:100%;height:100%;cursor:pointer;max-height:400px}.image-with-text__media--video-wrapper{position:relative}.image-with-text__video{position:relative;width:100%!important;height:100%!important;max-height:400px!important;object-fit:cover;z-index:1;display:block!important;cursor:pointer}.video-click-play-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:transparent;display:block;z-index:10;cursor:pointer;opacity:1;transition:opacity .25s ease;pointer-events:auto}.video-click-play-overlay:before{content:"";position:absolute;top:-10px;left:50%;transform:translate(-50%) rotate(-6.178deg);width:623.238px;height:129px;border-radius:623.238px;background:#fffc;filter:blur(50px);pointer-events:none;z-index:0;transition:opacity .25s ease}.video-click-play-overlay.video-overlay--hidden{opacity:.5;pointer-events:auto;transition:opacity .25s ease;background-color:#0000}.video-click-play-overlay.video-overlay--hidden:before{opacity:0}.video-click-play-overlay.video-play-active .video-click-play-overlay__icon,.video-click-play-overlay.video-play-active .play_icon_new{opacity:.85}.video-click-play-overlay.video-overlay--hidden .video-click-play-overlay__icon,.video-click-play-overlay.video-overlay--hidden .play_icon_new,.video-click-play-overlay.video-overlay--hidden .video-overlay-meta{opacity:0}.video-click-play-overlay .play_icon_new{position:absolute;right:16px;bottom:16px;display:inline-flex;align-items:center;justify-content:center;width:auto!important;height:auto!important;transform:none!important}.video-click-play-overlay .play_icon_new svg{width:48px;height:48px;max-width:48px;max-height:48px;transition:transform .25s ease,opacity .25s ease}.video-click-play-overlay:hover .play_icon_new svg{transform:scale(1.06)}.video-overlay-meta{position:absolute;left:20px;top:20px;text-shadow:none;z-index:1}.video-overlay-name{font-family:ABC Arizona Flare,sans-serif;font-size:26px;font-weight:600;letter-spacing:.2px;text-transform:uppercase;line-height:100%}.video-overlay-role{font-family:Aeonik,sans-serif;font-size:14px;opacity:.9;margin-top:2px;font-weight:500;line-height:150%}.video-click-play-overlay:hover.video-play-active .video-click-play-overlay__icon{opacity:1}.image-with-text-poster-image,.image-with-text-image{object-fit:cover;width:100%;height:100%;max-height:400px;display:block}.placeholder-svg{width:100%;height:100%;max-height:400px;background-color:#f6f6f6}.image-with-text--stacked-content-item{display:flex;flex-direction:column;overflow:hidden}.image-with-text__item-stacker{display:flex;flex-direction:column;flex-grow:1;width:100%}.image-with-text__item-stacker .image-with-text__media-item{width:100%}.image-with-text__item-stacker .image-with-text__text-item{width:100%;display:flex;flex-direction:column;flex-grow:1}.image-with-text__item-stacker .image-with-text__content{padding:20px;display:flex;flex-direction:column;flex-grow:1;background-color:transparent!important}.image-with-text__item-stacker .button{margin-top:auto}@media screen and (max-width: 991px){.multirow-with-bullets{padding:50px 0}.multirow-with-bullets .image-with-text p{font-size:14px}.multirow-with-bullets__heading{font-size:36px;max-width:500px}.multirow-with-bullets__description{font-size:15px;margin-bottom:30px;max-width:700px}.multirow-with-bullets .image-with-text .row-heading{font-size:28px}.bullet-points-title{font-size:15px;margin-bottom:18px}.multirow__inner--horizontal{grid-template-columns:repeat(2,1fr)}}@media screen and (max-width: 749px){.multirow-with-bullets{padding:40px 0}.multirow-with-bullets__description p{margin:0}body .multirow-with-bullets .image-with-text .content-container{padding:0 20px 20px!important}.video-overlay-name{font-size:21px}.video-overlay-meta{width:calc(100% - 40px)}.video-overlay-role{font-size:13px;line-height:130%}.multirow-with-bullets__inner{padding:0 15px}.multirow-with-bullets__heading{font-size:30px;margin-bottom:15px;max-width:440px}.multirow-with-bullets__description{font-size:14px;margin-bottom:30px;max-width:550px}.multirow-with-bullets .image-with-text .row-heading{font-size:24px}.multirow-with-bullets .image-with-text p{font-size:15px}.bullet-points-title{font-size:14px;margin-top:20px;margin-bottom:15px}.bullet-point-item{gap:12px;margin-bottom:15px}.bullet-point-icon img{width:20px;height:20px}.bullet-point-content{font-size:13px}.multirow__inner--horizontal{grid-template-columns:1fr}.image-with-text--stacked-content-item .image-with-text__media img{height:250px}}@media screen and (max-width: 480px){.multirow-with-bullets{padding:30px 0}.multirow-with-bullets__inner{padding:0 12px}.multirow-with-bullets__heading{font-size:26px;max-width:380px}.multirow-with-bullets__description{font-size:13px;margin-bottom:30px}.multirow-with-bullets .image-with-text .row-heading{font-size:22px;margin-bottom:8px}.multirow-with-bullets .image-with-text p{font-size:14px}.bullet-points-title{font-size:13px;margin-top:15px;margin-bottom:12px}.bullet-point-item{gap:10px;margin-bottom:12px}.bullet-point-icon img{width:18px;height:18px;margin-top:1px}.bullet-point-content{font-size:12px}}.image-with-text__media--video-wrapper .explicit-video-poster{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover!important;z-index:2;opacity:1;transition:opacity .6s cubic-bezier(.4,0,.2,1);transform:scale(1)}.image-with-text__media--video-wrapper .video-default-poster{filter:brightness(.95) contrast(1.05)}.explicit-video-poster--hidden{opacity:0!important;transform:scale(1)!important;pointer-events:none}
+/*# sourceMappingURL=/cdn/shop/t/121/assets/multirow-with-bullets.css.map?v=13480614947424670671761065424 */
+
+
+</style>
+
+
+
+<div id="shopify-section-template--17653238890663__multirow_with_bullets_XGYVVr" class="shopify-section section">
+    
+
+<style data-shopify="">.section-template--17653238890663__multirow_with_bullets_XGYVVr-padding {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  /* Apply gap to the multirow item container, which is always horizontal now */
+  #shopify-section-template--17653238890663__multirow_with_bullets_XGYVVr .multirow__inner--horizontal {
+    gap: 20px;
+  }
+
+  /* Optional: cap image height on mobile to 200px */
+  
+  /* When the limiter is OFF, revert to the normal mobile sizing (min-height 300px) */
+  @media screen and (max-width: 749px) {
+    #shopify-section-template--17653238890663__multirow_with_bullets_XGYVVr .image-with-text__media-item { max-height: none !important; min-height: 300px !important; }
+    #shopify-section-template--17653238890663__multirow_with_bullets_XGYVVr .image-with-text__media { height: auto !important; min-height: 300px !important; }
+    #shopify-section-template--17653238890663__multirow_with_bullets_XGYVVr .image-with-text__media--video-wrapper { height: 100% !important; min-height: 300px !important; }
+    #shopify-section-template--17653238890663__multirow_with_bullets_XGYVVr .image-with-text__media.image-with-text__media--adapt { height: auto !important; padding-bottom: 0 !important; min-height: 300px !important; margin-bottom: 0 !important; }
+    #shopify-section-template--17653238890663__multirow_with_bullets_XGYVVr .image-with-text-image,
+    #shopify-section-template--17653238890663__multirow_with_bullets_XGYVVr .image-with-text-poster-image,
+    #shopify-section-template--17653238890663__multirow_with_bullets_XGYVVr .placeholder-svg { height: auto !important; max-height: none !important; }
+    #shopify-section-template--17653238890663__multirow_with_bullets_XGYVVr .image-with-text__video,
+    #shopify-section-template--17653238890663__multirow_with_bullets_XGYVVr .explicit-video-poster { height: 100% !important; max-height: none !important; }
+  }
+  
+
+  /* Mobile description alignment control */
+  @media screen and (max-width: 749px) {
+    #shopify-section-template--17653238890663__multirow_with_bullets_XGYVVr .multirow-with-bullets__description {
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-template--17653238890663__multirow_with_bullets_XGYVVr-padding {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    #shopify-section-template--17653238890663__multirow_with_bullets_XGYVVr .multirow__inner--horizontal {
+      gap: 40px;
+    }
+  }</style><div class="multirow-with-bullets section-template--17653238890663__multirow_with_bullets_XGYVVr-padding gradient color-scheme-1">
+  <div class="multirow-with-bullets__inner page-width">
+    
+      {% if section.settings.heading != blank %}
+      <h2 class="multirow-with-bullets__heading">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+    
+    
+      <div class="multirow-with-bullets__description">
+        <p>  {{ section.settings.description }}</p></div>
+    
+  </div>
+  
+  <div class="multirow__inner page-width multirow__inner--horizontal"><style>
+        .row_kjxB8N .image-with-text__media {min-height: 350px}
+        .row_kjxB8N .global-media-settings{
+          border: 0!important;
+        }
+        .row_kjxB8N img{
+          
+            object-fit: contain!important;
+          
+          
+        }
+        .row_kjxB8N {
+          
+          
+        }
+        .row_kjxB8N .image-with-text__heading {
+          
+        }
+        @media screen and (max-width: 1023px) {
+          /* Reduce default mobile min-height when limited; otherwise respect per-block/mobile height and remove caps */
+          .row_kjxB8N .image-with-text__media { min-height: 300px; height: auto; max-height: none; }
+          .row_kjxB8N .image-with-text__media--video-wrapper { min-height: 300px; height: 100%; max-height: none; }
+          .row_kjxB8N .image-with-text-image,
+          .row_kjxB8N .image-with-text-poster-image { height: auto; max-height: none; }
+          .row_kjxB8N .image-with-text__video,
+          .row_kjxB8N .explicit-video-poster { height: 100%; max-height: none; }
+          .row_kjxB8N {
+            
+            
+          }
+        }
+        @media screen and (max-width: 749px) {
+          
+        }
+      </style>
+ {% for block in section.blocks %}
+      <div class="image-with-text isolate collapse-padding
+        {% if block.settings.reverse %} image-with-text--reverse{% endif %}"
+        {{ block.shopify_attributes }}>
+
+        <div class="image-with-text__grid grid grid--gapless grid--1-col grid--2-col-tablet
+          {% if block.settings.reverse %} image-with-text__grid--reverse{% endif %}">
+
+          <!-- MEDIA -->
+          <div class="image-with-text__media-item grid__item">
+            <div class="image-with-text__media image-with-text__media--adapt global-media-settings image-with-text__media--has-video">
+
+              <div class="image-with-text__media--video-wrapper">
+
+                {% if block.settings.poster != blank %}
+                  <img
+                    src="{{ block.settings.poster | image_url: width: 1920 }}"
+                    class="explicit-video-poster"
+                    loading="lazy"
+                    alt="{{ block.settings.name }}"
+                  >
+                {% endif %}
+
+                {% if block.settings.video != blank %}
+                  <video
+                    id="Video-{{ section.id }}-{{ block.id }}"
+                    class="image-with-text__video"
+                    playsinline
+                    preload="metadata"
+                  >
+                    <source src="{{ block.settings.video }}" type="video/mp4">
+                  </video>
+                {% endif %}
+
+                <div class="video-click-play-overlay"
+                     data-video-id="Video-{{ section.id }}-{{ block.id }}">
+
+                  <div class="video-overlay-meta">
+                    <div class="video-overlay-name">{{ block.settings.name }}</div>
+                    <div class="video-overlay-role">{{ block.settings.role }}</div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="image-with-text__text-item ">
+            <div class="image-with-text__content image-with-text__content--middle" style="
+    padding-left: 18px;
+    padding-top: 10px;
+">
+
+              <div class="image-with-text__heading h1">
+                <p class="row-heading">{{ block.settings.row_heading }}</p>
+                <p class="row-subheading">{{ block.settings.row_subheading }}</p>
+              </div>
+
+              <div class="image-with-text__text rte body">
+                {{ block.settings.text }}
+              </div>
+
+              {% if block.settings.bullets != blank %}
+                <ul class="bullet-points-list">
+                  {% assign bullet_items = block.settings.bullets | split: '|' %}
+                  {% for item in bullet_items %}
+                    <li class="bullet-point-item">
+                      <div class="bullet-point-icon">
+                        <img src="https://cdn.shopify.com/s/files/1/0930/5807/2907/files/svgviewer-output.svg?v=1765949173" width="24" height="24">
+                      </div>
+                      <div class="bullet-point-content">
+                        <p>{{ item }}</p>
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    {% endfor %}
+
+      
+      
+      
+      <style>
+        .row_MXfXgj .image-with-text__media {min-height: 350px}
+        .row_MXfXgj .global-media-settings{
+          border: 0!important;
+        }
+        .row_MXfXgj img{
+          
+            object-fit: contain!important;
+          
+          
+        }
+        .row_MXfXgj {
+          
+          
+        }
+        .row_MXfXgj .image-with-text__heading {
+          
+        }
+        @media screen and (max-width: 1023px) {
+          /* Reduce default mobile min-height when limited; otherwise respect per-block/mobile height and remove caps */
+          .row_MXfXgj .image-with-text__media { min-height: 300px; height: auto; max-height: none; }
+          .row_MXfXgj .image-with-text__media--video-wrapper { min-height: 300px; height: 100%; max-height: none; }
+          .row_MXfXgj .image-with-text-image,
+          .row_MXfXgj .image-with-text-poster-image { height: auto; max-height: none; }
+          .row_MXfXgj .image-with-text__video,
+          .row_MXfXgj .explicit-video-poster { height: 100%; max-height: none; }
+          .row_MXfXgj {
+            
+            
+          }
+        }
+        @media screen and (max-width: 749px) {
+          
+        }
+      </style>
+      <style>
+        .row_jKYGBi .image-with-text__media {min-height: 400px}
+        .row_jKYGBi .global-media-settings{
+          border: 0!important;
+        }
+        .row_jKYGBi img{
+          
+            object-fit: cover!important;
+          
+          
+        }
+        .row_jKYGBi {
+          
+          
+        }
+        .row_jKYGBi .image-with-text__heading {
+          
+        }
+        @media screen and (max-width: 1023px) {
+          /* Reduce default mobile min-height when limited; otherwise respect per-block/mobile height and remove caps */
+          .row_jKYGBi .image-with-text__media { min-height: 300px; height: auto; max-height: none; }
+          .row_jKYGBi .image-with-text__media--video-wrapper { min-height: 300px; height: 100%; max-height: none; }
+          .row_jKYGBi .image-with-text-image,
+          .row_jKYGBi .image-with-text-poster-image { height: auto; max-height: none; }
+          .row_jKYGBi .image-with-text__video,
+          .row_jKYGBi .explicit-video-poster { height: 100%; max-height: none; }
+          .row_jKYGBi {
+            
+            
+          }
+        }
+        @media screen and (max-width: 749px) {
+          
+        }
+      </style>
+</div>
+</div><script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add `.row-subheading` class to the paragraph immediately following a `.row-heading`
+      document.querySelectorAll('.multirow-with-bullets .image-with-text__heading').forEach(function(headingWrap){
+        // Look for a child with class `row-heading` and mark its next element as subheading if it's a paragraph
+        var rowHeading = headingWrap.querySelector('.row-heading');
+        if (rowHeading) {
+          var next = rowHeading.nextElementSibling;
+          if (next && next.tagName === 'P') {
+            next.classList.add('row-subheading');
+          }
+        }
+      });
+      // Simple direct approach to handle video click overlays
+      const videoOverlays = document.querySelectorAll('.video-click-play-overlay');
+
+      function setOverlayIcon(overlay, svgHtml){
+        const existingIcon = overlay.querySelector('.play_icon_new');
+        if (existingIcon) {
+          existingIcon.outerHTML = svgHtml;
+        } else {
+          overlay.insertAdjacentHTML('beforeend', svgHtml);
+        }
+      }
+      
+      // Play and pause templates reusing octagon play visual
+      const playSvgTemplate = `<div class='play_icon_new'>
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="play_icon">
+          <g clip-path="url(#clip0_2591_34021)">
+            <path d="M32 0L54.6306 9.36937L64 32L54.6306 54.6306L32 64L9.36937 54.6306L0 32L9.36937 9.36937L32 0Z" fill="white"/>
+            <path d="M24 19V45L44 32L24 19Z" fill="#8b5cf6"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_2591_34021"><rect width="64" height="64" fill="white"/></clipPath>
+          </defs>
+        </svg>
+      </div>`;
+      const pauseSvgTemplate = `<div class='play_icon_new'>
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="play_icon">
+          <g clip-path="url(#clip0_2591_34021)">
+            <path d="M32 0L54.6306 9.36937L64 32L54.6306 54.6306L32 64L9.36937 54.6306L0 32L9.36937 9.36937L32 0Z" fill="white"/>
+            <rect x="26" y="21" width="6" height="22" fill="#8b5cf6"/>
+            <rect x="36" y="21" width="6" height="22" fill="#8b5cf6"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_2591_34021"><rect width="64" height="64" fill="white"/></clipPath>
+          </defs>
+        </svg>
+      </div>`;
+      
+      videoOverlays.forEach(overlay => {
+        // Set initial play icon
+        setOverlayIcon(overlay, playSvgTemplate);
+        
+        // Ensure the overlay is visible initially
+        overlay.classList.remove('video-overlay--hidden');
+        
+        overlay.addEventListener('click', function() {
+          const videoId = this.getAttribute('data-video-id');
+          const video = document.getElementById(videoId);
+          const videoWrapper = video ? video.closest('.image-with-text__media--video-wrapper') : null;
+          const card = videoWrapper ? videoWrapper.closest('.image-with-text') : null;
+          const explicitPoster = videoWrapper ? videoWrapper.querySelector('.explicit-video-poster') : null;
+          
+          if (video) {
+            // Pause all other videos first
+            document.querySelectorAll('.image-with-text__video').forEach(v => {
+              if (v !== video) {
+                v.pause();
+                // Show overlays for other videos and set play icon
+                const otherOverlay = document.querySelector(`[data-video-id="${v.id}"]`);
+                const otherVideoWrapper = v.closest('.image-with-text__media--video-wrapper');
+                const otherExplicitPoster = otherVideoWrapper ? otherVideoWrapper.querySelector('.explicit-video-poster') : null;
+
+                if (otherOverlay) {
+                  setOverlayIcon(otherOverlay, playSvgTemplate);
+                  otherOverlay.classList.remove('video-overlay--hidden');
+                  otherOverlay.classList.remove('video-play-active');
+                }
+                if (otherExplicitPoster) {
+                  otherExplicitPoster.classList.remove('explicit-video-poster--hidden');
+                }
+              }
+            });
+            
+            // Toggle play/pause when overlay is clicked
+            if (video.paused) {
+              // Ensure video isn't muted if that's the intention
+              if (!video.hasAttribute('muted')) {
+                video.muted = false;
+              }
+              
+              // Start fading out the poster immediately for premium feel
+              if (explicitPoster) {
+                explicitPoster.classList.add('explicit-video-poster--hidden');
+              }
+              
+              // Play the video
+              video.play();
+              
+              // Change to pause icon and animate meta out subtly
+              setOverlayIcon(this, pauseSvgTemplate);
+              this.classList.add('video-play-active');
+              this.classList.add('video-overlay--hidden');
+              if (card) { card.classList.add('playing'); card.classList.remove('paused'); }
+              
+              // The overlay stays visible but with reduced opacity
+              setTimeout(() => {
+                this.classList.add('video-overlay--hidden');
+              }, 400);
+
+            } else {
+              // Pause the video
+              video.pause();
+              
+              // Change back to play icon and make fully visible
+              setOverlayIcon(this, playSvgTemplate);
+              this.classList.remove('video-play-active');
+              this.classList.remove('video-overlay--hidden');
+              if (card) { card.classList.add('paused'); card.classList.remove('playing'); }
+
+              // Show poster with a slight delay for smooth transition
+              if (explicitPoster) {
+                setTimeout(() => {
+                  explicitPoster.classList.remove('explicit-video-poster--hidden');
+                }, 100);
+              }
+            }
+          }
+        });
+      });
+      
+      // Handle video events
+      document.querySelectorAll('.image-with-text__video').forEach(video => {
+        const videoWrapper = video.closest('.image-with-text__media--video-wrapper');
+        const card = videoWrapper ? videoWrapper.closest('.image-with-text') : null;
+        const explicitPoster = videoWrapper ? videoWrapper.querySelector('.explicit-video-poster') : null;
+
+        // When video ends, show the overlay with play icon and the explicit poster
+        video.addEventListener('ended', function() {
+          const overlay = document.querySelector(`[data-video-id="${this.id}"]`);
+          if (overlay) {
+            setOverlayIcon(overlay, playSvgTemplate);
+            overlay.classList.remove('video-play-active');
+            overlay.classList.remove('video-overlay--hidden');
+          }
+          if (card) { card.classList.add('paused'); card.classList.remove('playing'); }
+          if (explicitPoster) {
+            setTimeout(() => {
+              explicitPoster.classList.remove('explicit-video-poster--hidden');
+            }, 200);
+          }
+        });
+
+        // When video starts playing (e.g. via controls), hide explicit poster and update icon
+        video.addEventListener('play', function() {
+          const overlay = document.querySelector(`[data-video-id="${this.id}"]`);
+          if (overlay) {
+            setOverlayIcon(overlay, pauseSvgTemplate);
+            overlay.classList.add('video-play-active');
+            overlay.classList.add('video-overlay--hidden');
+          }
+          if (card) { card.classList.add('playing'); card.classList.remove('paused'); }
+          if (explicitPoster) {
+            explicitPoster.classList.add('explicit-video-poster--hidden');
+          }
+        });
+
+        // When video is paused (e.g. via controls), show explicit poster and update icon
+        video.addEventListener('pause', function() {
+          const overlay = document.querySelector(`[data-video-id="${this.id}"]`);
+          if (overlay && !this.ended) { // Do not revert icon if pause is due to video ending
+            setOverlayIcon(overlay, playSvgTemplate);
+            overlay.classList.remove('video-play-active');
+            overlay.classList.remove('video-overlay--hidden');
+          }
+          if (card && !this.ended) { card.classList.add('paused'); card.classList.remove('playing'); }
+          if (explicitPoster && !this.ended) {
+            setTimeout(() => {
+              explicitPoster.classList.remove('explicit-video-poster--hidden');
+            }, 100);
+          }
+        });
+        
+        // Also add click directly to video to toggle play/pause
+        video.addEventListener('click', function(e) {
+          e.preventDefault();
+          const overlay = document.querySelector(`[data-video-id="${this.id}"]`);
+          if (overlay) {
+            // Trigger the overlay click to handle play/pause
+            overlay.click();
+          }
+        });
+      });
+    });
+  </script> </div>
+
+
+
+
+  {% schema %}
+{
+  "name": "Multirow with Bullets ",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Section Description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Row",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Person Name" },
+        { "type": "text", "id": "role", "label": "Person Role" },
+
+        { "type": "image_picker", "id": "poster", "label": "Video Poster" },
+        { "type": "text", "id": "video", "label": "Video URL (MP4)" },
+
+        { "type": "text", "id": "row_heading", "label": "Row Heading" },
+        { "type": "text", "id": "row_subheading", "label": "Row Subheading" },
+        { "type": "richtext", "id": "text", "label": "Description" },
+
+        {
+          "type": "textarea",
+          "id": "bullets",
+          "label": "Bullet Points (use | to separate)"
+        },
+
+        {
+          "type": "checkbox",
+          "id": "reverse",
+          "label": "Reverse Layout (Image Right)",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multirow with Bullets (IM8)",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+

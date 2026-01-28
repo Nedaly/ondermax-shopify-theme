@@ -587,110 +587,58 @@
         "desktop_padding_bottom": 36
       }
     },
-    "horizontal_ticker_WR66Kk": {
-      "type": "horizontal-ticker",
+    "clinically_proven_kGqRLp": {
+      "type": "ClinicallyProven",
       "blocks": {
-        "text_y4aiM4": {
-          "type": "text",
+        "stat_item_yt6t6c": {
+          "type": "stat_item",
           "settings": {
-            "title": "Rest Fast"
+            "subheading": "More Energy",
+            "stat_value": "95%",
+            "description": "<p>Of participants experienced better digestion and less bloating</p>"
           }
         },
-        "text_XEwNYi": {
-          "type": "text",
+        "stat_item_a9jeTV": {
+          "type": "stat_item",
           "settings": {
-            "title": "Anti Dopamine"
+            "subheading": "A Healthier Gut",
+            "stat_value": "85%",
+            "description": "<p>Of participants experienced better digestion and less bloating</p>"
           }
         },
-        "text_DJybf4": {
-          "type": "text",
+        "stat_item_Tadcdp": {
+          "type": "stat_item",
           "settings": {
-            "title": "Less Distraction"
+            "subheading": "Sleep Better",
+            "stat_value": "80%",
+            "description": "<p>Participants reported getting better sleep<br/><br/></p>"
           }
         },
-        "text_n63pCC": {
-          "type": "text",
+        "stat_item_iApwFM": {
+          "type": "stat_item",
           "settings": {
-            "title": "Achieve More!"
+            "subheading": "Perform Sharper",
+            "stat_value": "75%",
+            "description": "<p>Of participants noticed sharper focus and improved mental clarity<br/></p>"
           }
         }
       },
       "block_order": [
-        "text_y4aiM4",
-        "text_XEwNYi",
-        "text_DJybf4",
-        "text_n63pCC"
+        "stat_item_yt6t6c",
+        "stat_item_a9jeTV",
+        "stat_item_Tadcdp",
+        "stat_item_iApwFM"
       ],
-      "name": "Horizontal Ticker",
+      "name": "Clinically Proven",
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "speed": 1.5,
-        "direction": "normal",
-        "stop_on_hover": false,
-        "mobile_spacing": 60,
-        "desktop_spacing": 100,
-        "color_scheme": "custom",
-        "mobile_text_size": 16,
-        "desktop_text_size": 18,
-        "italic_text": true,
-        "uppercase_text": true,
-        "bold_text": true,
-        "mobile_image_height": 26,
-        "desktop_image_height": 40,
-        "mobile_reviews_width": 300,
-        "desktop_reviews_width": 400,
-        "hidden_products": "",
-        "enable_specific_display": false,
-        "displayed_products": "",
-        "mobile_padding_top": 12,
-        "mobile_padding_bottom": 12,
-        "desktop_padding_top": 16,
-        "desktop_padding_bottom": 16,
-        "custom_colors_background": "#1a1a1a",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff"
-      }
-    },
-    "rich_text_TMMnUC": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_hNYxHV": {
-          "type": "heading",
-          "settings": {
-            "title": "<strong>Not an Energy patch!</strong>",
-            "title_highlight_color": "#ffffff",
-            "heading_size": "h1"
-          }
-        },
-        "text_U34KNm": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The first Anti-Dopamine Patch System for adults who are done wasting days.<br/></p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_hNYxHV",
-        "text_U34KNm"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "full_width": true,
-        "mobile_narrow_width": false,
-        "color_scheme": "custom",
-        "padding_top": 32,
-        "padding_bottom": 32,
-        "custom_colors_background": "#1a1a1a",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#262b2b",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
+        "video_url": "//cdn.shopify.com/s/files/video.mp4",
+        "overlay_color": "#6b46c1",
+        "overlay_opacity": 0.7,
+        "heading": "Clinically Proven. Third-Party Tested.",
+        "main_text": "<p>Every ingredient and dosage is third-party tested. This guarantees that you know exactly what you're putting into your body.</p>",
+        "button_label": "View Third Party Results",
+        "button_link": "",
+        "source_note": "<p>Results based on a 12-Week Randomized, Controlled, Clinical Trial conducted by the San Francisco Research Institute.</p>"
       }
     },
     "image_with_text_mwgHBJ": {
@@ -1922,8 +1870,7 @@
   },
   "order": [
     "main",
-    "horizontal_ticker_WR66Kk",
-    "rich_text_TMMnUC",
+    "clinically_proven_kGqRLp",
     "image_with_text_mwgHBJ",
     "icons_with_content_khibCw",
     "results_GyDnXi",

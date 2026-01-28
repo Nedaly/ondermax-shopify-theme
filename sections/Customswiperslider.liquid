@@ -1,0 +1,284 @@
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const carouselSwiper = new Swiper('.carousel-section__slider', {
+      slidesPerView: 5,            // Number of slides visible on desktop
+      spaceBetween: 20,             // Gap between slides
+      loop: true,                   // Infinite loop
+      speed: 5000,                  // Continuous speed
+      autoplay: {
+        delay: 0,                   // No delay between slides
+        disableOnInteraction: false,
+      },
+      freeMode: true,               // Smooth continuous scrolling
+      freeModeMomentum: false,      // Prevent slowing after swipe
+      grabCursor: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,        // Mobile: show 1 slide
+        },
+        768: {
+          slidesPerView: 3,        // Tablet
+        },
+        1024: {
+          slidesPerView: 5,        // Desktop
+        }
+      },
+      loopedSlides: 50,             // Number of duplicated slides for seamless loop
+    });
+  });
+</script>
+
+
+<div class="carousel-section-container">
+  
+  <div class="carousel-section">
+    <div class="carousel-section__inner page-width">
+
+      {% if section.settings.heading != blank %}
+        <div class="carousel-section__heading" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+          <h2>{{ section.settings.heading }}</h2>
+        </div>
+      {% endif %}
+
+      <div class="carousel-section__container">
+        <div class="carousel-section__slider swiper">
+          <div class="swiper-wrapper">
+
+            {% for block in section.blocks %}
+              <div class="swiper-slide carousel-section__slide-image">
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image | img_url: '500x' }}" loading="lazy" alt="">
+                {% endif %}
+              </div>
+            {% endfor %}
+{% for block in section.blocks %}
+              <div class="swiper-slide carousel-section__slide-image">
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image | img_url: '500x' }}" loading="lazy" alt="">
+                {% endif %}
+              </div>
+            {% endfor %}
+
+            {% for block in section.blocks %}
+              <div class="swiper-slide carousel-section__slide-image">
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image | img_url: '500x' }}" loading="lazy" alt="">
+                {% endif %}
+              </div>
+            {% endfor %}
+
+
+            {% for block in section.blocks %}
+              <div class="swiper-slide carousel-section__slide-image">
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image | img_url: '500x' }}" loading="lazy" alt="">
+                {% endif %}
+              </div>
+            {% endfor %}
+
+            {% for block in section.blocks %}
+              <div class="swiper-slide carousel-section__slide-image">
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image | img_url: '500x' }}" loading="lazy" alt="">
+                {% endif %}
+              </div>
+            {% endfor %}
+            {% for block in section.blocks %}
+              <div class="swiper-slide carousel-section__slide-image">
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image | img_url: '500x' }}" loading="lazy" alt="">
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<style>
+.carousel-section__slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+@media screen and (min-width: 769px) {
+
+.carousel-section__inner {
+  max-width: 100%;
+  padding: 0;
+}
+
+}
+    .carousel-section {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-section__container {
+  width: 100%;
+  overflow: visible;
+  padding: 0;
+}
+
+
+
+.carousel-section__slider {
+  width: 100%;
+}
+
+.carousel-section__slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+  will-change: transform;
+}
+
+.carousel-section__slider .swiper-slide img {
+  width: 100%;
+  display: block;
+}
+
+.swiper-slide {
+  opacity: 1 !important;
+  transition: opacity 0ms !important;
+}
+.carousel-section {
+  padding: 60px 0;
+  overflow: hidden;
+  
+}
+
+.carousel-section__inner {
+  position: relative;
+}
+
+.carousel-section__heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.carousel-section__heading h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.carousel-section__container {
+  position: relative;
+}
+
+.carousel-section__slider {
+  width: 100%;
+  overflow: visible;
+}
+
+.carousel-section__slide {
+  width: 246px;
+  box-sizing: border-box;
+}
+
+.carousel-section__slide-image {
+  width: 100%;
+ 
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-section__slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: center;
+}
+
+@media screen and (max-width: 749px) {
+  .carousel-section {
+    padding: 0px 0;
+  }
+
+
+.carousel-section-container  {
+    padding-top: 60px;
+}
+
+
+
+  .carousel-section__slide-image {
+  height: 330px;
+}
+
+  
+  .carousel-section__heading h2 {
+    font-size: 24px;
+  }
+} 
+
+@media screen and (max-width: 480px) {
+  .carousel-section__heading h2 {
+    font-size: 22px;
+  }
+}
+</style>
+
+<style>
+/* REQUIRED for continuous autoplay */
+.carousel-section__slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Carousel Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Over 510,000 customer purchases—fueling more than 15 million servings worldwide"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Slide Image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "custom Swiper Slider",
+      "category": "Swiper Slider"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+

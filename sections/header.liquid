@@ -1,4 +1,27 @@
+
+
+
+
 <style>
+
+
+.button span {
+display:none;
+    z-index: 2;
+    font-size: 26px;
+   
+    position: absolute;
+    right: 23px;
+       
+}
+
+
+
+.button:hover span {
+display:block!important;
+   
+}
+
   header-drawer {
     justify-self: start;
   }
@@ -6,7 +29,17 @@
   @media screen and (max-width: 749px) {
     header-drawer {
       margin-left: 0;
+              width: fit-content;
     }
+
+.button span {
+
+        top: 5%;
+}
+
+
+
+
   }
 
   .header__heading-link.media { 
@@ -115,25 +148,26 @@
               /* height: 50px; */
       padding-top:5px;
       padding-bottom: 5px;
-      display: flex;
+      /* display: flex; */
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       position: relative;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
     
     .header__heading-link.media {
-      max-height: 56px;
+      /* max-height: 56px;
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      z-index: 5;
+      z-index: 5; */
     }
     
     .header__heading-link.media img {
       max-height: 56px;
       width: auto;
+              position: static !important;
     }
     
     header-drawer {
@@ -144,7 +178,7 @@
       z-index: 10;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     header-drawer .header__icon {
@@ -423,9 +457,7 @@
               </li>
             {%- endfor -%}
           </ul>
-          <span class="new-btn small-hide">
-            <a href="{{ section.settings.btn_link }}">{{ section.settings.new-button }}</a>
-          </span>
+          
         </nav>
       {% else %}
         <nav class="header__inline-menu small-hide">
@@ -562,6 +594,25 @@
     {%- endif -%}
 
     <div class="header__icons">
+
+      {% comment %} <nav class="header__inline-menu small-hide">
+  <ul class="list-menu list-menu--inline" role="list">
+    {% for link in linklists['how-it-works'].links %}
+      <li>
+        <a href="{{ link.url }}"
+           class="header__menu-item header__menu-item--main list-menu__item link link--text focus-inset">
+          <span style="
+    font-size: 16px;
+">{{ link.title }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav> {% endcomment %}
+
+      {% comment %} <span class="new-btn small-hide">
+            <a href="{{ section.settings.btn_link }}">{{ section.settings.new-button }}</a>
+          </span> {% endcomment %}
       <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
