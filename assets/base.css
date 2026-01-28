@@ -17641,11 +17641,17 @@ nav.header__inline-menu {
   color: #fff !important;
 }
 
-/* Force white text on new-btn buttons (overrides --color-button-text) */
+/* Force white text on new-btn buttons - override action-btns hover animations */
 .new-btn.button,
 .new-btn.cart__checkout-button,
-button.new-btn {
+button.new-btn,
+.action-btns--center button.new-btn,
+.action-btns--left button.new-btn,
+.action-btns--arrow button.new-btn,
+.cart-drawer .new-btn,
+.drawer__footer .new-btn {
   color: #fff !important;
+  --color-button-text: 255, 255, 255 !important;
 }
 
 /* CUSTOM CSS */
