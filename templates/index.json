@@ -33,7 +33,7 @@
       ],
       "name": "Hero Banner",
       "settings": {
-        "hero_image": "shopify://shop_images/main_image.jpg",
+        "hero_image": "shopify://shop_images/main-photo-desk.png",
         "show_trust": true,
         "heading": "The 24-Hour Optimization System for",
         "animated_text_list": "Ambitious Minds | Peak Performers | High Achievers",
@@ -183,7 +183,6 @@
     },
     "quote_and_logos_eABHwY": {
       "type": "quote-and-logos",
-      "disabled": true,
       "blocks": {
         "quote_46n8BM": {
           "type": "quote",
@@ -233,6 +232,7 @@
         "quote_bYbPcw",
         "logo_GktKcr"
       ],
+      "disabled": true,
       "name": "Quote + Logos",
       "settings": {
         "subheading": "AS FEATURED IN",
@@ -416,7 +416,7 @@
         "description": "<p>I'm Dr. Nedal Yassin. After years of prescribing supplements my patients couldn't stick to, I built what I wished existed: a simple system that actually works.<br/><br/>Two patches. 24 hours of optimization. No pills, no complexity, no guesswork.<br/><br/>Over 15,000 people now use Ondermax daily. The results speak for themselves.</p>",
         "author_name": "Dr. Nedal Yassin",
         "author_position": "Founder & Chief Medical Officer",
-        "video_poster": "shopify://shop_images/DR_image.jpg"
+        "video_poster": "shopify://shop_images/Untitled-1.png"
       }
     },
     "card_slider_section_hyPDqT": {

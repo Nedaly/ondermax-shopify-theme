@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -782,7 +791,7 @@
         "card_Pyyx36": {
           "type": "card",
           "settings": {
-            "front_image": "shopify://shop_images/ezgif-1c16be4e7b5dee.gif",
+            "front_image": "shopify://shop_images/Image-1.png",
             "title": "8+ Hours Steady Focus",
             "front_description": "No afternoon energy crash",
             "back_content": "<p>On SURGE days, you’re not starting 10 tasks and finishing none. You sit, focus, and ship.</p><p></p>",
@@ -793,7 +802,7 @@
         "card_MtcCRK": {
           "type": "card",
           "settings": {
-            "front_image": "shopify://shop_images/ezgif-14cc8c86a229a1.gif",
+            "front_image": "shopify://shop_images/Image-2.png",
             "title": "Reduces Distractions",
             "front_description": "Stay locked in on deep work",
             "back_content": "<p>Makes it easier to stay out of the “I’ll just check my phone” hole that eats your afternoons.</p><h3><br/><br/></h3>",
@@ -804,7 +813,7 @@
         "card_aRrVUH": {
           "type": "card",
           "settings": {
-            "front_image": "shopify://shop_images/Ondermax-surge-drift-without-pouches.png",
+            "front_image": "shopify://shop_images/Image-3.png",
             "title": "Clean Energy",
             "front_description": "No jitters, no crash, no dependency",
             "back_content": "<p>Stable mental clarity without chasing another coffee or energy drink every few hours.</p><h3><br/><br/></h3>",
@@ -815,7 +824,7 @@
         "card_aa7Xr8": {
           "type": "card",
           "settings": {
-            "front_image": "shopify://shop_images/4_f67b46d8-9736-4f23-bc56-7aac35f9d2c0.png",
+            "front_image": "shopify://shop_images/Image_4.png",
             "title": "Compounding Results",
             "front_description": "Benefits increase over 4-8 weeks of use",
             "back_content": "<p>A simple ritual that rebuilds self-trust: you actually do what you said you’d do today.</p>",
@@ -1036,13 +1045,55 @@
         "subheading": "Hear from people who rely on Ondermax SURGE & DRIFT patches dail"
       }
     },
+    "steps_with_cta_ra7Gye": {
+      "type": "steps-with-cta",
+      "blocks": {
+        "step_JETcBc": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/frist-step.jpg",
+            "title": "APPLY SURGE",
+            "text": "<p>Stick the SURGE patch to your skin in the morning for clean, sustained energy without the crash.</p>"
+          }
+        },
+        "step_dQYzQQ": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/sec-step.jpg",
+            "title": "APPLY DRIFT",
+            "text": "<p>Apply the DRIFT patch in the evening to promote deep, restorative sleep without grogginess in the morning.</p>"
+          }
+        },
+        "step_zHqjUK": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/3rd-step.jpg",
+            "title": "WAKE REFRESHED",
+            "text": "<p>Wake up energized and ready to perform. Repeat daily for compounding results.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_JETcBc",
+        "step_dQYzQQ",
+        "step_zHqjUK"
+      ],
+      "name": "Steps with CTA",
+      "settings": {
+        "heading": "SIMPLE TO USE,<br> POWERFUL RESULTS",
+        "show_cta": true,
+        "cta_icon": "shopify://shop_images/Group.png",
+        "cta_heading": "CONSISTENCY IS KEY",
+        "cta_text": "<p>Users report noticeable improvements in energy, focus, and recovery within the first week. For full benefits, use daily with both SURGE and DRIFT patches over 4-8 weeks.</p>"
+      }
+    },
     "product_object_ingredient_new_weLHKq": {
       "type": "product-object-ingredient-new",
       "blocks": {
         "ingredient_H8KYCF": {
           "type": "ingredient",
           "settings": {
-            "icon": "shopify://shop_images/ezgif-44da9df2171bad-bottom-cropped.webp",
+            "icon": "shopify://shop_images/main_image.jpg",
             "title": "Energy & Focus Compounds",
             "short_text": "<p>Functional ingredients like NAD+, Creatine, and B-vitamins support sustained energy, sharper focus, and cellular performance—without caffeine or crashes.<br/></p>",
             "long_text": "<p>The SURGE patch delivers clinically studied compounds through the skin for steady absorption throughout the day. This transdermal approach bypasses digestion, helping maintain consistent mental clarity, neurological support, and clean cellular energy when you need it most.<br/></p>",
@@ -1052,7 +1103,7 @@
         "ingredient_gn6Uzk": {
           "type": "ingredient",
           "settings": {
-            "icon": "shopify://shop_images/ezgif-14cc8c86a229a1.gif",
+            "icon": "shopify://shop_images/step_2.png",
             "title": "Sleep & Nervous System Support",
             "short_text": "<p>Magnesium, Melatonin, and calming botanicals work together to promote deeper sleep, faster recovery, and a refreshed morning wake-up.<br/></p>",
             "long_text": "<p>The DRIFT patch is designed for nighttime use, supporting relaxation, nervous system balance, and restorative sleep cycles. By delivering ingredients gradually overnight, it helps improve sleep quality without morning grogginess or dependency.<br/></p>",
@@ -1067,10 +1118,10 @@
       "name": "Product Ingredients (Accordion)",
       "settings": {
         "bg_color": "#ffffff",
-        "desktop_image": "shopify://shop_images/IMG_0071.heic",
+        "desktop_image": "shopify://shop_images/Yoga.png",
         "mobile_image": "shopify://shop_images/IMG_0071.heic",
-        "heading": "Key Ingredients",
-        "description": "<p>Ondermax patches are powered by clinically studied ingredients designed for clean energy, mental clarity, and deep recovery — delivered through advanced transdermal technology for fast, consistent absorption.<br/><br/>SURGE features functional compounds like NAD+, Creatine, and essential B-vitamins to support cellular energy, focus, and performance without caffeine crashes. DRIFT complements your routine with Magnesium, Melatonin, and calming botanicals to promote deeper sleep, nervous system recovery, and next-day freshness.</p><p><br/>Every ingredient is carefully selected, precisely dosed, and formulated to work in harmony — helping your body perform optimally day and night, without pills, stimulants, or unnecessary fillers.<br/><br/><br/></p>",
+        "heading": "",
+        "description": "",
         "button_label": "See full ingredients",
         "button_link": "",
         "view_more_label": "View More"
@@ -1367,48 +1418,6 @@
         "btn_url": "#pdp-top",
         "btn": "BUY NOW!",
         "btn_subheading": "Read the questions first, then decide if the Anti-Dopamine Patch System is actually for you."
-      }
-    },
-    "steps_with_cta_ra7Gye": {
-      "type": "steps-with-cta",
-      "blocks": {
-        "step_JETcBc": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/frist-step.jpg",
-            "title": "APPLY SURGE",
-            "text": "<p>Stick the SURGE patch to your skin in the morning for clean, sustained energy without the crash.</p>"
-          }
-        },
-        "step_dQYzQQ": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/sec-step.jpg",
-            "title": "APPLY DRIFT",
-            "text": "<p>Apply the DRIFT patch in the evening to promote deep, restorative sleep without grogginess in the morning.</p>"
-          }
-        },
-        "step_zHqjUK": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/3rd-step.jpg",
-            "title": "WAKE REFRESHED",
-            "text": "<p>Wake up energized and ready to perform. Repeat daily for compounding results.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "step_JETcBc",
-        "step_dQYzQQ",
-        "step_zHqjUK"
-      ],
-      "name": "Steps with CTA",
-      "settings": {
-        "heading": "SIMPLE TO USE,<br> POWERFUL RESULTS",
-        "show_cta": true,
-        "cta_icon": "shopify://shop_images/Group.png",
-        "cta_heading": "CONSISTENCY IS KEY",
-        "cta_text": "<p>Users report noticeable improvements in energy, focus, and recovery within the first week. For full benefits, use daily with both SURGE and DRIFT patches over 4-8 weeks.</p>"
       }
     }
   },
