@@ -592,14 +592,18 @@
               </div>
             {% when 'checkout_btn' %}
               <style>
-                {% if block.settings.enable_custom_color %}
-                  #CartDrawer-Checkout {
-                    --color-button: {{ block.settings.custom_color.red }}, {{ block.settings.custom_color.green }}, {{ block.settings.custom_color.blue }};
-                  }
-                {% endif %}
                 #CartDrawer-Checkout {
                   --icon-scale: {{ block.settings.icon_scale | divided_by: 100.0 }}em;
                   --icon-spacing: {{ block.settings.icon_spacing }}px;
+                  min-height: 60px;
+                  background-image: linear-gradient(45deg, #0f9b8e, #16a34a, #22c55e, #4ade80, #86efac) !important;
+                  background-size: 300% 300% !important;
+                  background-position: 0% 50%;
+                  background-color: #16a34a !important;
+                  color: #fff !important;
+                }
+                #CartDrawer-Checkout .button__label {
+                  color: #fff !important;
                 }
                 {% if block.settings.prefix_icon != blank %}
                   #CartDrawer-Checkout .button__label::before {
@@ -622,7 +626,7 @@
                 <button
                   type="submit"
                   id="CartDrawer-Checkout"
-                  class="cart__checkout-button button{% if block.settings.prefix_icon != blank %} button--prefix-icon{% endif %}{% if block.settings.suffix_icon != blank %} button--suffix-icon{% endif %}"
+                  class="cart__checkout-button button button--tertiary{% if block.settings.prefix_icon != blank %} button--prefix-icon{% endif %}{% if block.settings.suffix_icon != blank %} button--suffix-icon{% endif %}"
                   name="checkout"
                   form="CartDrawer-Form"
                   {% if cart == empty %}
