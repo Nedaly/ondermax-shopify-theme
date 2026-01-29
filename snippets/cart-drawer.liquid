@@ -645,14 +645,15 @@
                 <button
                   type="submit"
                   id="CartDrawer-Checkout"
-                  class="cart__checkout-button button button--tertiary{% if block.settings.prefix_icon != blank %} button--prefix-icon{% endif %}{% if block.settings.suffix_icon != blank %} button--suffix-icon{% endif %}"
+                  class="cart__checkout-button"
                   name="checkout"
                   form="CartDrawer-Form"
+                  style="background: #16a34a; color: #fff; border: none; border-radius: 50px; min-height: 60px; width: 100%; font-size: 1.6rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center;"
                   {% if cart == empty %}
                     disabled
                   {% endif %}
                 >
-                  <span class='button__label'>
+                  <span class='button__label' style="color: #fff !important;">
                     {{ 'sections.cart.checkout' | t }}
                     {% if block.settings.display_price %}
                       • {{ cart.total_price | money }}
