@@ -592,29 +592,48 @@
               </div>
             {% when 'checkout_btn' %}
               <style>
-                #CartDrawer-Checkout {
+                #CartDrawer-Checkout,
+                #CartDrawer-Checkout:hover,
+                #CartDrawer-Checkout:focus,
+                #CartDrawer-Checkout:active {
                   --icon-scale: {{ block.settings.icon_scale | divided_by: 100.0 }}em;
                   --icon-spacing: {{ block.settings.icon_spacing }}px;
                   min-height: 60px;
-                  background-image: linear-gradient(45deg, #0f9b8e, #16a34a, #22c55e, #4ade80, #86efac) !important;
-                  background-size: 300% 300% !important;
-                  background-position: 0% 50%;
+                  background: #16a34a !important;
+                  background-image: none !important;
                   background-color: #16a34a !important;
                   color: #fff !important;
+                  border: none !important;
+                  border-radius: 50px !important;
+                  display: flex !important;
+                  align-items: center !important;
+                  justify-content: center !important;
+                  text-align: center !important;
+                  transition: none !important;
+                  animation: none !important;
                 }
-                #CartDrawer-Checkout .button__label {
+                #CartDrawer-Checkout:hover {
+                  background: #15803d !important;
+                  background-color: #15803d !important;
+                }
+                #CartDrawer-Checkout::before,
+                #CartDrawer-Checkout::after,
+                #CartDrawer-Checkout:hover::before,
+                #CartDrawer-Checkout:hover::after {
+                  display: none !important;
+                  content: none !important;
+                  background: none !important;
+                }
+                #CartDrawer-Checkout .button__label,
+                #CartDrawer-Checkout:hover .button__label {
                   color: #fff !important;
+                  position: static !important;
+                  transform: none !important;
+                  opacity: 1 !important;
+                  visibility: visible !important;
+                  transition: none !important;
+                  animation: none !important;
                 }
-                {% if block.settings.prefix_icon != blank %}
-                  #CartDrawer-Checkout .button__label::before {
-                    background-image: url('{{ block.settings.prefix_icon | image_url }}');
-                  }
-                {% endif %}
-                {% if block.settings.suffix_icon != blank %}
-                  #CartDrawer-Checkout .button__label::after {
-                    background-image: url('{{ block.settings.suffix_icon | image_url }}');
-                  }
-                {% endif %}
               </style>
               <div class="cart__ctas" style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;" {{ block.shopify_attributes }}>
                 <noscript>
